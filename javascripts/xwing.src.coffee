@@ -2288,7 +2288,7 @@ class exportObj.SquadBuilder
         @tooltip_currently_displaying = null
         @randomizer_options =
             sources: null
-            points: 200
+            points: 20
             bid_goal: 5
             ships_or_upgrades: 3
             ship_limit: 0
@@ -2373,7 +2373,7 @@ class exportObj.SquadBuilder
         exportObj.translate('ui', what, args)
 
     setupUI: ->
-        DEFAULT_RANDOMIZER_POINTS = 200
+        DEFAULT_RANDOMIZER_POINTS = 20
         DEFAULT_RANDOMIZER_TIMEOUT_SEC = 4
         DEFAULT_RANDOMIZER_BID_GOAL = 5
         DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES = 3
@@ -4161,7 +4161,12 @@ class exportObj.SquadBuilder
         if filter_func != @dfl_filter_func
             available_upgrades = (upgrade for upgrade in available_upgrades when filter_func(upgrade))
 
-        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (not upgrade.unique? or upgrade not in @uniques_in_use['Upgrade']) and (not (ship? and upgrade.restrictions?) or ship.restriction_check(upgrade.restrictions, this_upgrade_obj)) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
+        current_upgrade_points = 0
+        for upgrade in upgrades_in_use
+            current_upgrade_points += this_upgrade_obj.getPoints(upgrade)
+        console.log "upgrade points total: #{current_upgrade_points}"
+
+        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (not upgrade.unique? or upgrade not in @uniques_in_use['Upgrade']) and (ship.restriction_check((if upgrade.restrictions then upgrade.restrictions else undefined), current_upgrade_points, upgrade.points)) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
         
         
 
@@ -5152,7 +5157,7 @@ class exportObj.SquadBuilder
         () =>
             @_randomizerLoopBody(data)
 
-    randomSquad: (max_points=200, allowed_sources=null, timeout_ms=1000, bid_goal=5, ship_limit=0, ships_or_upgrades=3, collection_only=true, fill_zero_pts=false) ->
+    randomSquad: (max_points=20, allowed_sources=null, timeout_ms=1000, bid_goal=5, ship_limit=0, ships_or_upgrades=3, collection_only=true, fill_zero_pts=false) ->
         @backend_status.fadeOut 'slow'
         @suppress_automatic_new_ship = true
         
@@ -5501,7 +5506,7 @@ class exportObj.SquadBuilder
                 success = true
                 error = ""
 
-                serialized_squad = "v8ZsZ200Z" # serialization version 7, standard squad, 200 points
+                serialized_squad = "v9ZsZ20Z" # serialization v9, extended squad, 20 points
                 # serialization schema SHIPID:UPGRADEID,UPGRADEID,...,UPGRADEID:;SHIPID:UPGRADEID,...
 
                 for pilot in xws.pilots
@@ -5884,8 +5889,6 @@ class Ship
     getPoints: ->
         if not @builder.isQuickbuild
             points = @pilot?.points ? 0
-            for upgrade in @upgrades
-                points += upgrade.getPoints()
             @points_container.find('span').text points
             if points > 0
                 @points_container.fadeTo 'fast', 1
@@ -6670,14 +6673,18 @@ class Ship
                 return false # no need to check anything further, as we do not exist anymore 
             # everything is limited in X-Wing 2.0, so we need to check if any upgrade is equipped more than once
             equipped_upgrades = []
+            current_upgrade_points = 0
+            for upgrade in @upgrades
+                current_upgrade_points += upgrade.getPoints()
+            console.log "upgrade points total: #{current_upgrade_points}"
+
             for upgrade in @upgrades
                 func = upgrade?.data?.validation_func ? undefined
                 if func?
                     func_result = upgrade?.data?.validation_func(this, upgrade)
-                else if upgrade?.data?.restrictions
-                    func_result = @restriction_check(upgrade.data.restrictions, upgrade)
-                # check if either a) validation func not met or b) upgrade already equipped (in 2.0 everything is limited) or c) upgrade is not available (e.g. not Hyperspace legal)
-                # ignore those checks if this is a quickbuild squad, as quickbuild does whatever it wants to do...
+                func_result = @restriction_check((if upgrade.data.restrictions then upgrade.data.restrictions else undefined), upgrade, current_upgrade_points, upgrade.getPoints())
+                # check if either a) validation func not met or b) upgrade already equipped or c) upgrade is not available (e.g. not format legal)
+                # ignore those checks if this is a quickbuild squad
                 if ((func_result? and not func_result) or (upgrade?.data? and (upgrade.data in equipped_upgrades or (upgrade.data.faction? and not @builder.isOurFaction(upgrade.data.faction,@pilot.faction)) or not @builder.isItemAvailable(upgrade.data)))) and not @builder.isQuickbuild
                     #console.log "Invalid upgrade: #{upgrade?.data?.name}"
                     upgrade.setById null
@@ -6708,68 +6715,72 @@ class Ship
             return true unless upgrade.isOccupied()
         false
 
-    restriction_check: (restrictions, upgrade_obj) ->
+    restriction_check: (restrictions, upgrade_obj, current_upgrade_points, points) ->
         effective_stats = @effectiveStats()
-        for r in restrictions
-            if r[0] == "orUnique"
-                if @checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))
-                    return true
-            switch r[0]
-                when "Base"  
-                    switch r[1]
-                        when "Small"
-                            if @data.medium? or @data.large? or @data.huge? then return false
-                        when "Small or Medium"
-                            if @data.large? or @data.huge? then return false
-                        when "Medium" 
-                            if not (@data.medium?) then return false
-                        when "Medium or Large"
-                            if not (@data.medium? or @data.large?) then return false
-                        when "Large" 
-                            if not (@data.large?) then return false
-                        when "Huge" 
-                            if not (@data.huge?) then return false
-                        when "Standard" 
-                            if @data.huge? then return false
-                when "Action"
-                    if r[1].startsWith("W-")
-                        w = r[1].substring(2)
-                        if w not in effective_stats.actions then return false
-                    else
-                        check = false
-                        for action in effective_stats.actions
-                            if action.includes(r[1]) and not action.includes(">")
-                                check = true
-                        if check is false then return false
-                when "Keyword"
-                    if not (@checkKeyword(r[1])) then return false
-                when "Equipped"
-                    if not ((@doesSlotExist(r[1]) and not @hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]))) then return false
-                when "Slot"
-                    if not @hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]) then return false
-                when "AttackArc"
-                    if not @data.attackb? then return false
-                when "ShieldsGreaterThan"
-                    if not (@data.shields > r[1]) then return false
-                when "EnergyGreatterThan"
-                    if not (effective_stats.energy > r[1]) then return false
-                when "InitiativeGreaterThan"
-                    if not (@pilot.skill > r[1]) then return false
-                when "InitiativeLessThan"
-                    if not (@pilot.skill < r[1]) then return false
-                when "AgilityEquals"
-                    if not (effective_stats.agility == r[1]) then return false
-                when "isUnique"
-                    if r[1] != @pilot.unique? then return false
-                when "Format"
-                    switch r[1]
-                        when "Epic"
-                            if not (@data.name in exportObj.epicExclusionsList) then return false
-                        when "Standard"
-                            if @data.name in exportObj.epicExclusionsList then return false
-                when "Faction"
-                    if @pilot.faction != r[1] then return false
-        return true
+        if @pilot.pointsupg? and (@pilot.pointsupg - current_upgrade_points < points)
+            return true
+        else
+            if restrictions?
+                for r in restrictions
+                    if r[0] == "orUnique"
+                        if @checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))
+                            return true
+                    switch r[0]
+                        when "Base"  
+                            switch r[1]
+                                when "Small"
+                                    if @data.medium? or @data.large? or @data.huge? then return false
+                                when "Small or Medium"
+                                    if @data.large? or @data.huge? then return false
+                                when "Medium" 
+                                    if not (@data.medium?) then return false
+                                when "Medium or Large"
+                                    if not (@data.medium? or @data.large?) then return false
+                                when "Large" 
+                                    if not (@data.large?) then return false
+                                when "Huge" 
+                                    if not (@data.huge?) then return false
+                                when "Standard" 
+                                    if @data.huge? then return false
+                        when "Action"
+                            if r[1].startsWith("W-")
+                                w = r[1].substring(2)
+                                if w not in effective_stats.actions then return false
+                            else
+                                check = false
+                                for action in effective_stats.actions
+                                    if action.includes(r[1]) and not action.includes(">")
+                                        check = true
+                                if check is false then return false
+                        when "Keyword"
+                            if not (@checkKeyword(r[1])) then return false
+                        when "Equipped"
+                            if not ((@doesSlotExist(r[1]) and not @hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]))) then return false
+                        when "Slot"
+                            if not @hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]) then return false
+                        when "AttackArc"
+                            if not @data.attackb? then return false
+                        when "ShieldsGreaterThan"
+                            if not (@data.shields > r[1]) then return false
+                        when "EnergyGreatterThan"
+                            if not (effective_stats.energy > r[1]) then return false
+                        when "InitiativeGreaterThan"
+                            if not (@pilot.skill > r[1]) then return false
+                        when "InitiativeLessThan"
+                            if not (@pilot.skill < r[1]) then return false
+                        when "AgilityEquals"
+                            if not (effective_stats.agility == r[1]) then return false
+                        when "isUnique"
+                            if r[1] != @pilot.unique? then return false
+                        when "Format"
+                            switch r[1]
+                                when "Epic"
+                                    if not (@data.name in exportObj.epicExclusionsList) then return false
+                                when "Standard"
+                                    if @data.name in exportObj.epicExclusionsList then return false
+                        when "Faction"
+                            if @pilot.faction != r[1] then return false
+            return true
 
     doesSlotExist: (slot) ->
         for upgrade in @upgrades

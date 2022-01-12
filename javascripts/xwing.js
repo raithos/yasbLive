@@ -2754,7 +2754,7 @@ exportObj.SquadBuilder = (function() {
     this.tooltip_currently_displaying = null;
     this.randomizer_options = {
       sources: null,
-      points: 200,
+      points: 20,
       bid_goal: 5,
       ships_or_upgrades: 3,
       ship_limit: 0,
@@ -2848,7 +2848,7 @@ exportObj.SquadBuilder = (function() {
 
   SquadBuilder.prototype.setupUI = function() {
     var DEFAULT_RANDOMIZER_BID_GOAL, DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, opt, _i, _len, _ref;
-    DEFAULT_RANDOMIZER_POINTS = 200;
+    DEFAULT_RANDOMIZER_POINTS = 20;
     DEFAULT_RANDOMIZER_TIMEOUT_SEC = 4;
     DEFAULT_RANDOMIZER_BID_GOAL = 5;
     DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES = 3;
@@ -4717,7 +4717,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.getAvailableUpgradesIncluding = function(slot, include_upgrade, ship, this_upgrade_obj, term, filter_func, sorted) {
-    var available_upgrades, eligible_upgrades, equipped_upgrade, retval, upgrade, upgrade_name, upgrades_in_use, _i, _j, _len, _len1, _ref, _results;
+    var available_upgrades, current_upgrade_points, eligible_upgrades, equipped_upgrade, retval, upgrade, upgrade_name, upgrades_in_use, _i, _j, _k, _len, _len1, _len2, _ref, _results;
     if (term == null) {
       term = '';
     }
@@ -4762,41 +4762,47 @@ exportObj.SquadBuilder = (function() {
         return _results;
       })();
     }
+    current_upgrade_points = 0;
+    for (_i = 0, _len = upgrades_in_use.length; _i < _len; _i++) {
+      upgrade = upgrades_in_use[_i];
+      current_upgrade_points += this_upgrade_obj.getPoints(upgrade);
+    }
+    console.log("upgrade points total: " + current_upgrade_points);
     eligible_upgrades = (function() {
       var _ref, _results;
       _results = [];
       for (upgrade_name in available_upgrades) {
         upgrade = available_upgrades[upgrade_name];
-        if (((upgrade.unique == null) || __indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && (!((ship != null) && (upgrade.restrictions != null)) || ship.restriction_check(upgrade.restrictions, this_upgrade_obj)) && __indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((_ref = upgrade.slot, __indexOf.call(this.uniques_in_use['Slot'], _ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
+        if (((upgrade.unique == null) || __indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && (ship.restriction_check((upgrade.restrictions ? upgrade.restrictions : void 0), current_upgrade_points, upgrade.points)) && __indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((_ref = upgrade.slot, __indexOf.call(this.uniques_in_use['Slot'], _ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
           _results.push(upgrade);
         }
       }
       return _results;
     }).call(this);
     _ref = (function() {
-      var _j, _len, _ref, _results;
+      var _k, _len1, _ref, _results;
       _ref = ship.upgrades;
       _results = [];
-      for (_j = 0, _len = _ref.length; _j < _len; _j++) {
-        upgrade = _ref[_j];
+      for (_k = 0, _len1 = _ref.length; _k < _len1; _k++) {
+        upgrade = _ref[_k];
         if ((upgrade != null ? upgrade.data : void 0) != null) {
           _results.push(upgrade.data);
         }
       }
       return _results;
     })();
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      equipped_upgrade = _ref[_i];
+    for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
+      equipped_upgrade = _ref[_j];
       eligible_upgrades.removeItem(equipped_upgrade);
     }
     if ((include_upgrade != null) && (this.matcher(include_upgrade.name, term) || (include_upgrade.display_name && this.matcher(include_upgrade.display_name, term)))) {
       eligible_upgrades.push(include_upgrade);
     }
     retval = (function() {
-      var _j, _len1, _results;
+      var _k, _len2, _results;
       _results = [];
-      for (_j = 0, _len1 = available_upgrades.length; _j < _len1; _j++) {
-        upgrade = available_upgrades[_j];
+      for (_k = 0, _len2 = available_upgrades.length; _k < _len2; _k++) {
+        upgrade = available_upgrades[_k];
         _results.push({
           id: upgrade.id,
           text: "" + (upgrade.display_name ? upgrade.display_name : upgrade.name) + " (" + (this_upgrade_obj.getPoints(upgrade)) + (upgrade.pointsarray ? '*' : '') + ")",
@@ -4813,8 +4819,8 @@ exportObj.SquadBuilder = (function() {
     }
     if (typeof this_upgrade_obj === "function" ? this_upgrade_obj(typeof adjustment_func !== "undefined" && adjustment_func !== null) : void 0) {
       _results = [];
-      for (_j = 0, _len1 = retval.length; _j < _len1; _j++) {
-        upgrade = retval[_j];
+      for (_k = 0, _len2 = retval.length; _k < _len2; _k++) {
+        upgrade = retval[_k];
         _results.push(this_upgrade_obj.adjustment_func(upgrade));
       }
       return _results;
@@ -5953,7 +5959,7 @@ exportObj.SquadBuilder = (function() {
   SquadBuilder.prototype.randomSquad = function(max_points, allowed_sources, timeout_ms, bid_goal, ship_limit, ships_or_upgrades, collection_only, fill_zero_pts) {
     var data, stopHandler;
     if (max_points == null) {
-      max_points = 200;
+      max_points = 20;
     }
     if (allowed_sources == null) {
       allowed_sources = null;
@@ -6492,7 +6498,7 @@ exportObj.SquadBuilder = (function() {
         this.removeAllShips();
         success = true;
         error = "";
-        serialized_squad = "v8ZsZ200Z";
+        serialized_squad = "v9ZsZ20Z";
         _ref = xws.pilots;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           pilot = _ref[_i];
@@ -6608,7 +6614,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5605
+                  lineno: 5610
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6835,7 +6841,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5724
+                          lineno: 5729
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6885,7 +6891,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5757
+                                  lineno: 5762
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -6983,7 +6989,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5815
+                      lineno: 5820
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7067,7 +7073,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5851
+                lineno: 5856
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7136,7 +7142,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5880
+              lineno: 5885
             }));
           }
         }
@@ -7150,14 +7156,9 @@ Ship = (function() {
   };
 
   Ship.prototype.getPoints = function() {
-    var points, quickbuild, threat, upgrade, _i, _len, _ref, _ref1, _ref2, _ref3;
+    var points, quickbuild, threat, _ref, _ref1, _ref2;
     if (!this.builder.isQuickbuild) {
       points = (_ref = (_ref1 = this.pilot) != null ? _ref1.points : void 0) != null ? _ref : 0;
-      _ref2 = this.upgrades;
-      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
-        upgrade = _ref2[_i];
-        points += upgrade.getPoints();
-      }
       this.points_container.find('span').text(points);
       if (points > 0) {
         this.points_container.fadeTo('fast', 1);
@@ -7167,7 +7168,7 @@ Ship = (function() {
       return points;
     } else {
       quickbuild = exportObj.quickbuildsById[this.quickbuildId];
-      threat = this.primary ? (_ref3 = quickbuild != null ? quickbuild.threat : void 0) != null ? _ref3 : 0 : 0;
+      threat = this.primary ? (_ref2 = quickbuild != null ? quickbuild.threat : void 0) != null ? _ref2 : 0 : 0;
       if ((quickbuild != null ? quickbuild.wingleader : void 0) != null) {
         threat = quickbuild.threat[quickbuild.wingmates.indexOf(this.wingmates.length)];
       }
@@ -7228,7 +7229,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 5936
+                lineno: 5939
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8077,7 +8078,7 @@ Ship = (function() {
   };
 
   Ship.prototype.validate = function() {
-    var addCommand, equipped_upgrades, func, func_result, i, max_checks, pilot_func, unchanged, upgrade, valid, _i, _j, _k, _l, _len, _len1, _ref, _ref1, _ref10, _ref11, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+    var addCommand, current_upgrade_points, equipped_upgrades, func, func_result, i, max_checks, pilot_func, unchanged, upgrade, valid, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref, _ref1, _ref10, _ref11, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
     if (this.pilot == null) {
       return true;
     }
@@ -8118,15 +8119,21 @@ Ship = (function() {
         return false;
       }
       equipped_upgrades = [];
+      current_upgrade_points = 0;
       _ref6 = this.upgrades;
       for (_l = 0, _len1 = _ref6.length; _l < _len1; _l++) {
         upgrade = _ref6[_l];
-        func = (_ref7 = upgrade != null ? (_ref8 = upgrade.data) != null ? _ref8.validation_func : void 0 : void 0) != null ? _ref7 : void 0;
+        current_upgrade_points += upgrade.getPoints();
+      }
+      console.log("upgrade points total: " + current_upgrade_points);
+      _ref7 = this.upgrades;
+      for (_m = 0, _len2 = _ref7.length; _m < _len2; _m++) {
+        upgrade = _ref7[_m];
+        func = (_ref8 = upgrade != null ? (_ref9 = upgrade.data) != null ? _ref9.validation_func : void 0 : void 0) != null ? _ref8 : void 0;
         if (func != null) {
-          func_result = upgrade != null ? (_ref9 = upgrade.data) != null ? _ref9.validation_func(this, upgrade) : void 0 : void 0;
-        } else if (upgrade != null ? (_ref10 = upgrade.data) != null ? _ref10.restrictions : void 0 : void 0) {
-          func_result = this.restriction_check(upgrade.data.restrictions, upgrade);
+          func_result = upgrade != null ? (_ref10 = upgrade.data) != null ? _ref10.validation_func(this, upgrade) : void 0 : void 0;
         }
+        func_result = this.restriction_check((upgrade.data.restrictions ? upgrade.data.restrictions : void 0), upgrade, current_upgrade_points, upgrade.getPoints());
         if ((((func_result != null) && !func_result) || (((upgrade != null ? upgrade.data : void 0) != null) && ((_ref11 = upgrade.data, __indexOf.call(equipped_upgrades, _ref11) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !this.builder.isQuickbuild) {
           upgrade.setById(null);
           valid = false;
@@ -8175,145 +8182,151 @@ Ship = (function() {
     return false;
   };
 
-  Ship.prototype.restriction_check = function(restrictions, upgrade_obj) {
+  Ship.prototype.restriction_check = function(restrictions, upgrade_obj, current_upgrade_points, points) {
     var action, check, effective_stats, r, w, _i, _j, _len, _len1, _ref, _ref1, _ref2;
     effective_stats = this.effectiveStats();
-    for (_i = 0, _len = restrictions.length; _i < _len; _i++) {
-      r = restrictions[_i];
-      if (r[0] === "orUnique") {
-        if (this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
-          return true;
+    if ((this.pilot.pointsupg != null) && (this.pilot.pointsupg - current_upgrade_points < points)) {
+      return true;
+    } else {
+      if (restrictions != null) {
+        for (_i = 0, _len = restrictions.length; _i < _len; _i++) {
+          r = restrictions[_i];
+          if (r[0] === "orUnique") {
+            if (this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
+              return true;
+            }
+          }
+          switch (r[0]) {
+            case "Base":
+              switch (r[1]) {
+                case "Small":
+                  if ((this.data.medium != null) || (this.data.large != null) || (this.data.huge != null)) {
+                    return false;
+                  }
+                  break;
+                case "Small or Medium":
+                  if ((this.data.large != null) || (this.data.huge != null)) {
+                    return false;
+                  }
+                  break;
+                case "Medium":
+                  if (!(this.data.medium != null)) {
+                    return false;
+                  }
+                  break;
+                case "Medium or Large":
+                  if (!((this.data.medium != null) || (this.data.large != null))) {
+                    return false;
+                  }
+                  break;
+                case "Large":
+                  if (!(this.data.large != null)) {
+                    return false;
+                  }
+                  break;
+                case "Huge":
+                  if (!(this.data.huge != null)) {
+                    return false;
+                  }
+                  break;
+                case "Standard":
+                  if (this.data.huge != null) {
+                    return false;
+                  }
+              }
+              break;
+            case "Action":
+              if (r[1].startsWith("W-")) {
+                w = r[1].substring(2);
+                if (__indexOf.call(effective_stats.actions, w) < 0) {
+                  return false;
+                }
+              } else {
+                check = false;
+                _ref = effective_stats.actions;
+                for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
+                  action = _ref[_j];
+                  if (action.includes(r[1]) && !action.includes(">")) {
+                    check = true;
+                  }
+                }
+                if (check === false) {
+                  return false;
+                }
+              }
+              break;
+            case "Keyword":
+              if (!(this.checkKeyword(r[1]))) {
+                return false;
+              }
+              break;
+            case "Equipped":
+              if (!(this.doesSlotExist(r[1]) && !this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]))) {
+                return false;
+              }
+              break;
+            case "Slot":
+              if (!this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1])) {
+                return false;
+              }
+              break;
+            case "AttackArc":
+              if (this.data.attackb == null) {
+                return false;
+              }
+              break;
+            case "ShieldsGreaterThan":
+              if (!(this.data.shields > r[1])) {
+                return false;
+              }
+              break;
+            case "EnergyGreatterThan":
+              if (!(effective_stats.energy > r[1])) {
+                return false;
+              }
+              break;
+            case "InitiativeGreaterThan":
+              if (!(this.pilot.skill > r[1])) {
+                return false;
+              }
+              break;
+            case "InitiativeLessThan":
+              if (!(this.pilot.skill < r[1])) {
+                return false;
+              }
+              break;
+            case "AgilityEquals":
+              if (!(effective_stats.agility === r[1])) {
+                return false;
+              }
+              break;
+            case "isUnique":
+              if (r[1] !== (this.pilot.unique != null)) {
+                return false;
+              }
+              break;
+            case "Format":
+              switch (r[1]) {
+                case "Epic":
+                  if (!(_ref1 = this.data.name, __indexOf.call(exportObj.epicExclusionsList, _ref1) >= 0)) {
+                    return false;
+                  }
+                  break;
+                case "Standard":
+                  if (_ref2 = this.data.name, __indexOf.call(exportObj.epicExclusionsList, _ref2) >= 0) {
+                    return false;
+                  }
+              }
+              break;
+            case "Faction":
+              if (this.pilot.faction !== r[1]) {
+                return false;
+              }
+          }
         }
       }
-      switch (r[0]) {
-        case "Base":
-          switch (r[1]) {
-            case "Small":
-              if ((this.data.medium != null) || (this.data.large != null) || (this.data.huge != null)) {
-                return false;
-              }
-              break;
-            case "Small or Medium":
-              if ((this.data.large != null) || (this.data.huge != null)) {
-                return false;
-              }
-              break;
-            case "Medium":
-              if (!(this.data.medium != null)) {
-                return false;
-              }
-              break;
-            case "Medium or Large":
-              if (!((this.data.medium != null) || (this.data.large != null))) {
-                return false;
-              }
-              break;
-            case "Large":
-              if (!(this.data.large != null)) {
-                return false;
-              }
-              break;
-            case "Huge":
-              if (!(this.data.huge != null)) {
-                return false;
-              }
-              break;
-            case "Standard":
-              if (this.data.huge != null) {
-                return false;
-              }
-          }
-          break;
-        case "Action":
-          if (r[1].startsWith("W-")) {
-            w = r[1].substring(2);
-            if (__indexOf.call(effective_stats.actions, w) < 0) {
-              return false;
-            }
-          } else {
-            check = false;
-            _ref = effective_stats.actions;
-            for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
-              action = _ref[_j];
-              if (action.includes(r[1]) && !action.includes(">")) {
-                check = true;
-              }
-            }
-            if (check === false) {
-              return false;
-            }
-          }
-          break;
-        case "Keyword":
-          if (!(this.checkKeyword(r[1]))) {
-            return false;
-          }
-          break;
-        case "Equipped":
-          if (!(this.doesSlotExist(r[1]) && !this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]))) {
-            return false;
-          }
-          break;
-        case "Slot":
-          if (!this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1])) {
-            return false;
-          }
-          break;
-        case "AttackArc":
-          if (this.data.attackb == null) {
-            return false;
-          }
-          break;
-        case "ShieldsGreaterThan":
-          if (!(this.data.shields > r[1])) {
-            return false;
-          }
-          break;
-        case "EnergyGreatterThan":
-          if (!(effective_stats.energy > r[1])) {
-            return false;
-          }
-          break;
-        case "InitiativeGreaterThan":
-          if (!(this.pilot.skill > r[1])) {
-            return false;
-          }
-          break;
-        case "InitiativeLessThan":
-          if (!(this.pilot.skill < r[1])) {
-            return false;
-          }
-          break;
-        case "AgilityEquals":
-          if (!(effective_stats.agility === r[1])) {
-            return false;
-          }
-          break;
-        case "isUnique":
-          if (r[1] !== (this.pilot.unique != null)) {
-            return false;
-          }
-          break;
-        case "Format":
-          switch (r[1]) {
-            case "Epic":
-              if (!(_ref1 = this.data.name, __indexOf.call(exportObj.epicExclusionsList, _ref1) >= 0)) {
-                return false;
-              }
-              break;
-            case "Standard":
-              if (_ref2 = this.data.name, __indexOf.call(exportObj.epicExclusionsList, _ref2) >= 0) {
-                return false;
-              }
-          }
-          break;
-        case "Faction":
-          if (this.pilot.faction !== r[1]) {
-            return false;
-          }
-      }
+      return true;
     }
-    return true;
   };
 
   Ship.prototype.doesSlotExist = function(slot) {
@@ -8509,7 +8522,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6876
+                lineno: 6887
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8668,7 +8681,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 6970
+                  lineno: 6981
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8695,7 +8708,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 6977
+                      lineno: 6988
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8839,7 +8852,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7052
+            lineno: 7063
           }));
         }
         __iced_deferrals._fulfill();

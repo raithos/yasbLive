@@ -1048,7 +1048,7 @@ exportObj.basicCardData = function() {
         keyword: ["Partisan"],
         skill: 1,
         points: 38,
-        pointsup: 10,
+        pointsupg: 10,
         slots: ["Illicit", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Blue Squadron Escort",
@@ -1057,6 +1057,7 @@ exportObj.basicCardData = function() {
         ship: "X-Wing",
         skill: 2,
         points: 38,
+        pointsupg: 10,
         slots: ["Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Red Squadron Veteran",
