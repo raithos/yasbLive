@@ -1,6 +1,5 @@
 var displayName, exportObj, sortWithoutQuotes, _base,
   __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
-  __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
   __hasProp = {}.hasOwnProperty;
 
 exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
@@ -170,7 +169,8 @@ exportObj.basicCardData = function() {
         hull: 4,
         shields: 4,
         actions: ["Focus", "R-> Barrel Roll", "Lock", "Barrel Roll"],
-        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 1, 1, 1, 3, 0, 0, 0, 3, 3], [2, 2, 1, 2, 2, 3, 0, 0, 0, 0], [0, 3, 1, 3, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 0, 0]]
+        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 1, 1, 1, 3, 0, 0, 0, 3, 3], [2, 2, 1, 2, 2, 3, 0, 0, 0, 0], [0, 3, 1, 3, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 0, 0]],
+        autoequip: ['Stabilized S-Foils']
       },
       "TIE Bomber": {
         name: "TIE Bomber",
@@ -709,7 +709,8 @@ exportObj.basicCardData = function() {
         shields: 0,
         keyword: ["Networked Calculations"],
         actions: ["Calculate", "Lock", "Barrel Roll", "R-> Calculate"],
-        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 2, 3, 0, 0, 0, 0], [1, 2, 1, 2, 1, 0, 0, 0, 3, 3], [2, 3, 1, 3, 2, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0]]
+        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 2, 3, 0, 0, 0, 0], [1, 2, 1, 2, 1, 0, 0, 0, 3, 3], [2, 3, 1, 3, 2, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0]],
+        autoequip: ['Grappling Struts']
       },
       "Belbullab-22 Starfighter": {
         name: "Belbullab-22 Starfighter",
@@ -743,7 +744,8 @@ exportObj.basicCardData = function() {
         shields: 0,
         keyword: ["Networked Calculations"],
         actions: ["Calculate", "Lock", "Barrel Roll", "R-> Lock", "R-Reload"],
-        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 3, 2, 3, 2, 0, 0, 0, 0, 0], [1, 2, 1, 2, 1, 3, 0, 0, 3, 3], [2, 0, 1, 0, 2, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 0, 0]]
+        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 3, 2, 3, 2, 0, 0, 0, 0, 0], [1, 2, 1, 2, 1, 3, 0, 0, 3, 3], [2, 0, 1, 0, 2, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 0, 0]],
+        autoequip: ['Landing Struts']
       },
       "Resistance Transport Pod": {
         name: "Resistance Transport Pod",
@@ -833,7 +835,8 @@ exportObj.basicCardData = function() {
         hull: 5,
         shields: 3,
         actions: ["Calculate", "Lock", "R-Barrel Roll", "Reload", "R-> Calculate"],
-        maneuvers: [[0, 0, 3, 0, 0, 0, 0, 0, 0, 0], [0, 3, 1, 3, 0, 0, 0, 0, 0, 0], [1, 2, 1, 2, 1, 0, 0, 0, 0, 0], [2, 3, 2, 3, 2, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 0, 0]]
+        maneuvers: [[0, 0, 3, 0, 0, 0, 0, 0, 0, 0], [0, 3, 1, 3, 0, 0, 0, 0, 0, 0], [1, 2, 1, 2, 1, 0, 0, 0, 0, 0], [2, 3, 2, 3, 2, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0, 0, 0, 0]],
+        autoequip: ['Repulsorlift Stabilizers']
       },
       "LAAT/i Gunship": {
         name: "LAAT/i Gunship",
@@ -857,7 +860,8 @@ exportObj.basicCardData = function() {
         shields: 0,
         medium: true,
         actions: ["Focus", "Reinforce", "Lock", "R-Barrel Roll", "Rotate Arc", "R-> Calculate"],
-        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 2, 1, 2, 3, 0, 0, 0, 0, 0], [2, 1, 1, 1, 2, 0, 0, 0, 0, 0], [3, 2, 2, 2, 3, 0, 0, 0, 3, 3], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 2, 1, 2, 3, 0, 0, 0, 0, 0], [2, 1, 1, 1, 2, 0, 0, 0, 0, 0], [3, 2, 2, 2, 3, 0, 0, 0, 3, 3], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+        autoequip: ['Maneuver-Assist MGK-300']
       },
       "Droid Tri-Fighter": {
         name: "Droid Tri-Fighter",
@@ -881,7 +885,8 @@ exportObj.basicCardData = function() {
         shields: 2,
         keyword: ["TIE"],
         actions: ["Focus", "Lock", "R-Barrel Roll", "Boost", "R-> Lock"],
-        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 3, 0, 3, 2, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 3, 0, 0, 0, 0], [2, 2, 1, 2, 2, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 3, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0]]
+        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 3, 0, 3, 2, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 3, 0, 0, 0, 0], [2, 2, 1, 2, 2, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 3, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0]],
+        autoequip: ['Alpha-3E "Esk"']
       },
       "Eta-2 Actis": {
         name: "Eta-2 Actis",
@@ -904,6 +909,41 @@ exportObj.basicCardData = function() {
         shields: 2,
         actions: [],
         maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+      },
+      "BTA-NR2 Y-Wing": {
+        name: "BTA-NR2 Y-Wing",
+        xws: "BTA-NR2 Y-Wing".canonicalize(),
+        factions: ["Resistance"],
+        attack: 2,
+        agility: 1,
+        hull: 4,
+        shields: 3,
+        actions: ["Focus", "R-Lock", "R-Barrel Roll", "R-Boost"],
+        maneuvers: [[0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 0, 0], [2, 2, 1, 2, 2, 0], [3, 2, 1, 2, 3, 0], [0, 0, 3, 0, 0, 0], [0, 0, 0, 0, 0, 3]]
+      },
+      "TIE/WI Whisper": {
+        name: "TIE/WI Whisper",
+        xws: "TIE/Wi Whisper Modified Interceptor".canonicalize(),
+        factions: ["First Order"],
+        attackbull: 3,
+        attackt: 2,
+        agility: 2,
+        hull: 3,
+        shields: 2,
+        actions: ["Focus", "> Rotate Arc", "Evade", "Lock", "Barrel Roll", "> Rotate Arc", "Boost", "> Rotate Arc"],
+        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 2, 0, 0, 0, 0, 0], [2, 1, 1, 1, 2, 0, 0, 0, 0, 0], [2, 1, 1, 1, 2, 0, 3, 3, 0, 0], [0, 0, 1, 0, 0, 3, 0, 0, 0, 0], [0, 0, 1, 0, 0, 3, 0, 0, 0, 0]],
+        autoequip: ["Enhanced Jamming Suite"]
+      },
+      "TIE/Se Bomber": {
+        name: "TIE/Se Bomber",
+        xws: "TIE/Se Bomber".canonicalize(),
+        factions: ["First Order"],
+        attack: 2,
+        agility: 2,
+        hull: 4,
+        shields: 2,
+        actions: ["Focus", "Lock", "Barrel Roll", "R-> Lock", "R-Boost", "Reload", "R-> Evade"],
+        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [3, 2, 1, 2, 3, 0, 0, 0, 0, 0], [2, 2, 1, 2, 2, 0, 0, 0, 0, 0], [2, 2, 1, 2, 2, 0, 3, 3, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
       },
       "CR90 Corellian Corvette": {
         name: "CR90 Corellian Corvette",
@@ -995,7 +1035,8 @@ exportObj.basicCardData = function() {
         energy: 3,
         energyrecurr: 2,
         actions: ["Focus", "R-Evade", "R-Reinforce", "Lock", "R-Coordinate"],
-        maneuvers: [[0, 3, 3, 3, 0], [0, 2, 1, 2, 0], [0, 2, 1, 2, 0], [0, 3, 2, 3, 0], [0, 0, 3, 0, 0], [0, 0, 3, 0, 0]]
+        maneuvers: [[0, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0], [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 3, 0], [0, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+        autoequip: ['Tractor Tentacles']
       }
     },
     pilotsById: [
@@ -1004,8 +1045,10 @@ exportObj.basicCardData = function() {
         id: 0,
         faction: "Rebel Alliance",
         ship: "X-Wing",
+        keyword: ["Partisan"],
         skill: 1,
         points: 38,
+        pointsup: 10,
         slots: ["Illicit", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Blue Squadron Escort",
@@ -1041,7 +1084,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         keyword: ["Light Side"],
         force: 2,
-        points: 61,
+        points: 60,
         slots: ["Force", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Wedge Antilles",
@@ -1089,7 +1132,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "X-Wing",
         skill: 5,
-        points: 47,
+        points: 46,
         slots: ["Talent", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Leevan Tenza",
@@ -1098,7 +1141,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "X-Wing",
         skill: 3,
-        points: 43,
+        points: 41,
         keyword: ["Partisan"],
         slots: ["Illicit", "Talent", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
@@ -1112,7 +1155,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "X-Wing",
         skill: 4,
-        points: 45,
+        points: 43,
         keyword: ["Partisan"],
         slots: ["Illicit", "Talent", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
@@ -1124,8 +1167,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "TIE Fighter",
         skill: 3,
-        points: 28,
-        keyword: ["Mandalorian", "Spectre"],
+        points: 26,
+        keyword: ["Spectre"],
         slots: ["Talent", "Modification"]
       }, {
         name: "Ezra Bridger (TIE Fighter)",
@@ -1138,7 +1181,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         keyword: ["Light Side"],
         force: 1,
-        points: 28,
+        points: 26,
         keyword: ["Light Side", "Spectre"],
         slots: ["Force", "Modification"]
       }, {
@@ -1150,7 +1193,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "TIE Fighter",
         skill: 2,
-        points: 23,
+        points: 22,
         keyword: ["Spectre"],
         slots: ["Modification"]
       }, {
@@ -1160,7 +1203,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "TIE Fighter",
         skill: 2,
-        points: 28,
+        points: 26,
         keyword: ["Clone"],
         slots: ["Modification"],
         applies_condition: 'Suppressive Fire'.canonicalize()
@@ -1180,7 +1223,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "K-Wing",
         skill: 3,
-        points: 44,
+        points: 43,
         slots: ["Torpedo", "Missile", "Missile", "Gunner", "Crew", "Device", "Device", "Modification"]
       }, {
         name: "empty",
@@ -1201,8 +1244,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "E-Wing",
         skill: 5,
-        points: 62,
-        slots: ["Talent", "Sensor", "Torpedo", "Astromech", "Modification"]
+        points: 59,
+        slots: ["Talent", "Tech", "Sensor", "Torpedo", "Astromech", "Modification"]
       }, {
         name: "Gavin Darklighter",
         id: 22,
@@ -1210,8 +1253,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "E-Wing",
         skill: 4,
-        points: 60,
-        slots: ["Talent", "Sensor", "Torpedo", "Astromech", "Modification"]
+        points: 55,
+        slots: ["Talent", "Tech", "Sensor", "Torpedo", "Astromech", "Modification"]
       }, {
         name: "Rogue Squadron Escort",
         id: 23,
@@ -1219,15 +1262,15 @@ exportObj.basicCardData = function() {
         ship: "E-Wing",
         skill: 4,
         points: 51,
-        slots: ["Talent", "Sensor", "Torpedo", "Astromech", "Modification"]
+        slots: ["Talent", "Tech", "Sensor", "Torpedo", "Astromech", "Modification"]
       }, {
         name: "Knave Squadron Escort",
         id: 24,
         faction: "Rebel Alliance",
         ship: "E-Wing",
         skill: 2,
-        points: 49,
-        slots: ["Sensor", "Torpedo", "Astromech", "Modification"]
+        points: 48,
+        slots: ["Tech", "Sensor", "Torpedo", "Astromech", "Modification"]
       }, {
         name: "Norra Wexley (Y-Wing)",
         id: 25,
@@ -1237,8 +1280,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "Y-Wing",
         skill: 5,
-        points: 41,
-        slots: ["Talent", "Turret", "Torpedo", "Astromech", "Modification", "Device", "Gunner"]
+        points: 40,
+        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Modification", "Device"]
       }, {
         name: "Horton Salm",
         id: 26,
@@ -1246,8 +1289,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "Y-Wing",
         skill: 4,
-        points: 37,
-        slots: ["Talent", "Turret", "Torpedo", "Astromech", "Modification", "Device", "Gunner"]
+        points: 36,
+        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Modification", "Device"]
       }, {
         name: '"Dutch" Vander',
         id: 27,
@@ -1256,7 +1299,7 @@ exportObj.basicCardData = function() {
         ship: "Y-Wing",
         skill: 4,
         points: 40,
-        slots: ["Talent", "Turret", "Torpedo", "Astromech", "Modification", "Device", "Gunner"]
+        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Modification", "Device"]
       }, {
         name: "Evaan Verlaine",
         id: 28,
@@ -1264,24 +1307,24 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "Y-Wing",
         skill: 3,
-        points: 35,
-        slots: ["Talent", "Turret", "Torpedo", "Astromech", "Modification", "Device", "Gunner"]
+        points: 34,
+        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Modification", "Device"]
       }, {
         name: "Gold Squadron Veteran",
         id: 29,
         faction: "Rebel Alliance",
         ship: "Y-Wing",
         skill: 3,
-        points: 32,
-        slots: ["Talent", "Turret", "Torpedo", "Astromech", "Modification", "Device", "Gunner"]
+        points: 31,
+        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Modification", "Device"]
       }, {
         name: "Gray Squadron Bomber",
         id: 30,
         faction: "Rebel Alliance",
         ship: "Y-Wing",
         skill: 2,
-        points: 30,
-        slots: ["Turret", "Torpedo", "Astromech", "Modification", "Device", "Gunner"]
+        points: 29,
+        slots: ["Turret", "Torpedo", "Missile", "Astromech", "Modification", "Device"]
       }, {
         name: "Bodhi Rook",
         id: 31,
@@ -1328,7 +1371,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 52,
         keyword: ["Partisan"],
-        slots: ["Talent", "Sensor", "Crew", "Crew", "Modification", "Configuration", "Illicit"]
+        slots: ["Talent", "Sensor", "Crew", "Crew", "Illicit", "Modification", "Configuration"]
       }, {
         name: "Benthic Two Tubes",
         id: 36,
@@ -1338,7 +1381,7 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 46,
         keyword: ["Partisan"],
-        slots: ["Illicit", "Sensor", "Crew", "Crew", "Modification", "Configuration"]
+        slots: ["Sensor", "Crew", "Crew", "Illicit", "Modification", "Configuration"]
       }, {
         name: "Blue Squadron Scout",
         id: 37,
@@ -1355,7 +1398,7 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 43,
         keyword: ["Partisan"],
-        slots: ["Illicit", "Sensor", "Crew", "Crew", "Modification", "Configuration"]
+        slots: ["Sensor", "Crew", "Crew", "Illicit", "Modification", "Configuration"]
       }, {
         name: "Dash Rendar",
         id: 39,
@@ -1363,8 +1406,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "YT-2400",
         skill: 5,
-        points: 85,
-        slots: ["Talent", "Missile", "Gunner", "Crew", "Modification", "Title", "Illicit"]
+        points: 79,
+        slots: ["Talent", "Missile", "Crew", "Crew", "Modification", "Title", "Illicit"]
       }, {
         name: '"Leebo"',
         id: 40,
@@ -1372,9 +1415,9 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "YT-2400",
         skill: 3,
-        points: 76,
+        points: 72,
         keyword: ["Droid"],
-        slots: ["Talent", "Missile", "Gunner", "Modification", "Title", "Illicit"]
+        slots: ["Talent", "Missile", "Modification", "Title", "Illicit", "Illicit"]
       }, {
         name: "Wild Space Fringer",
         id: 41,
@@ -1382,7 +1425,7 @@ exportObj.basicCardData = function() {
         ship: "YT-2400",
         skill: 1,
         points: 72,
-        slots: ["Missile", "Gunner", "Crew", "Modification", "Title", "Illicit"]
+        slots: ["Missile", "Crew", "Crew", "Modification", "Title", "Illicit"]
       }, {
         name: "Han Solo",
         id: 42,
@@ -1498,7 +1541,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "Z-95 Headhunter",
         skill: 5,
-        points: 36,
+        points: 35,
         slots: ["Talent", "Missile", "Modification"]
       }, {
         name: "Lieutenant Blount",
@@ -1507,7 +1550,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "Z-95 Headhunter",
         skill: 4,
-        points: 30,
+        points: 29,
         slots: ["Talent", "Missile", "Modification"]
       }, {
         name: "Tala Squadron Pilot",
@@ -1515,7 +1558,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "Z-95 Headhunter",
         skill: 2,
-        points: 24,
+        points: 23,
         slots: ["Talent", "Missile", "Modification"]
       }, {
         name: "Bandit Squadron Pilot",
@@ -1560,7 +1603,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "VCX-100",
         skill: 5,
-        points: 72,
+        points: 69,
         keyword: ["Spectre"],
         slots: ["Talent", "Sensor", "Torpedo", "Turret", "Crew", "Crew", "Modification", "Gunner", "Title"]
       }, {
@@ -1570,9 +1613,9 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "VCX-100",
         skill: 3,
-        keyword: ["Spectre"],
+        keyword: ["Light Side", "Jedi", "Spectre"],
         force: 2,
-        points: 76,
+        points: 73,
         slots: ["Force", "Sensor", "Torpedo", "Turret", "Crew", "Crew", "Modification", "Gunner", "Title"]
       }, {
         name: '"Chopper"',
@@ -1581,7 +1624,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "VCX-100",
         skill: 2,
-        points: 67,
+        points: 66,
         keyword: ["Droid", "Spectre"],
         slots: ["Torpedo", "Sensor", "Turret", "Crew", "Crew", "Modification", "Gunner", "Title"]
       }, {
@@ -1590,7 +1633,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "VCX-100",
         skill: 2,
-        points: 67,
+        points: 68,
         slots: ["Torpedo", "Sensor", "Turret", "Crew", "Crew", "Modification", "Gunner", "Title"]
       }, {
         name: "Hera Syndulla",
@@ -1631,7 +1674,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "Attack Shuttle",
         skill: 2,
-        points: 32,
+        points: 33,
         keyword: ["Spectre"],
         slots: ["Talent", "Crew", "Modification", "Turret", "Title"]
       }, {
@@ -1642,8 +1685,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "Sheathipede-Class Shuttle",
         skill: 6,
-        points: 50,
-        keyword: ["Mandalorian"],
+        points: 47,
+        keyword: ["Mandalorian", "Spectre"],
         slots: ["Talent", "Crew", "Modification", "Astromech", "Title"]
       }, {
         name: "Ezra Bridger (Sheathipede)",
@@ -1696,7 +1739,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "B-Wing",
         skill: 4,
-        points: 48,
+        points: 49,
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Torpedo", "Modification", "Configuration", "Title"]
       }, {
         name: "Blade Squadron Veteran",
@@ -1721,7 +1764,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "ARC-170",
         skill: 5,
-        points: 55,
+        points: 53,
         slots: ["Talent", "Torpedo", "Crew", "Gunner", "Astromech", "Modification"]
       }, {
         name: "Shara Bey",
@@ -1748,7 +1791,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "ARC-170",
         skill: 3,
-        points: 46,
+        points: 45,
         slots: ["Talent", "Torpedo", "Crew", "Gunner", "Astromech", "Modification"]
       }, {
         name: "IG-88A",
@@ -1757,7 +1800,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Aggressor",
         skill: 4,
-        points: 66,
+        points: 65,
         keyword: ["Bounty Hunter", "Droid"],
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -1767,7 +1810,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Aggressor",
         skill: 4,
-        points: 62,
+        points: 61,
         keyword: ["Bounty Hunter", "Droid"],
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -1777,7 +1820,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Aggressor",
         skill: 4,
-        points: 63,
+        points: 62,
         keyword: ["Bounty Hunter", "Droid"],
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -1787,7 +1830,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Aggressor",
         skill: 4,
-        points: 62,
+        points: 61,
         keyword: ["Bounty Hunter", "Droid"],
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -1797,8 +1840,8 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Y-Wing",
         skill: 5,
-        points: 43,
-        slots: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Illicit", "Modification"]
+        points: 41,
+        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Device", "Illicit", "Modification"]
       }, {
         name: "Drea Renthal",
         id: 86,
@@ -1807,23 +1850,23 @@ exportObj.basicCardData = function() {
         ship: "Y-Wing",
         skill: 4,
         points: 46,
-        slots: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Illicit", "Modification"]
+        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Device", "Illicit", "Modification"]
       }, {
         name: "Hired Gun",
         id: 87,
         faction: "Scum and Villainy",
         ship: "Y-Wing",
         skill: 2,
-        points: 32,
-        slots: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Illicit", "Modification"]
+        points: 31,
+        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Device", "Illicit", "Modification"]
       }, {
         name: "Crymorah Goon",
         id: 88,
         faction: "Scum and Villainy",
         ship: "Y-Wing",
         skill: 1,
-        points: 30,
-        slots: ["Turret", "Torpedo", "Gunner", "Astromech", "Device", "Illicit", "Modification"]
+        points: 29,
+        slots: ["Turret", "Torpedo", "Missile", "Astromech", "Device", "Illicit", "Modification"]
       }, {
         name: "Han Solo (Scum)",
         id: 89,
@@ -1932,7 +1975,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Fang Fighter",
         skill: 4,
-        points: 54,
+        points: 53,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Torpedo", "Modification"]
       }, {
@@ -1970,7 +2013,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Firespray-31",
         skill: 5,
-        points: 86,
+        points: 85,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Missile", "Device", "Illicit", "Modification", "Modification", "Title"]
       }, {
@@ -1989,7 +2032,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Firespray-31",
         skill: 4,
-        points: 72,
+        points: 68,
         slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"]
       }, {
         name: "Koshka Frost",
@@ -2220,6 +2263,7 @@ exportObj.basicCardData = function() {
         ship: "M12-L Kimogila Fighter",
         skill: 4,
         points: 48,
+        keyword: ["Bounty Hunter"],
         slots: ["Talent", "Torpedo", "Missile", "Astromech", "Illicit", "Modification"]
       }, {
         name: "Dalan Oberos",
@@ -2230,6 +2274,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         charge: 2,
         points: 45,
+        keyword: ["Bounty Hunter"],
         slots: ["Talent", "Torpedo", "Missile", "Astromech", "Illicit", "Modification"]
       }, {
         name: "Cartel Executioner",
@@ -2308,7 +2353,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "M3-A Interceptor",
         skill: 1,
-        points: 25,
+        points: 27,
         slots: ["Modification", "HardpointShip"]
       }, {
         name: "Constable Zuvio",
@@ -2355,7 +2400,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         charge: 1,
         recurring: 1,
-        points: 47,
+        points: 45,
         slots: ["Talent", "Turret", "Crew", "Gunner", "Device", "Device", "Modification", "Title"]
       }, {
         name: "Sol Sixxa",
@@ -2364,7 +2409,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Scurrg H-6 Bomber",
         skill: 3,
-        points: 46,
+        points: 44,
         slots: ["Talent", "Turret", "Crew", "Gunner", "Device", "Device", "Modification", "Title"]
       }, {
         name: "Lok Revenant",
@@ -2372,7 +2417,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Scurrg H-6 Bomber",
         skill: 2,
-        points: 45,
+        points: 43,
         slots: ["Turret", "Crew", "Gunner", "Device", "Device", "Modification", "Title"]
       }, {
         name: "Guri",
@@ -2381,9 +2426,9 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "StarViper",
         skill: 5,
-        points: 64,
+        points: 60,
         keyword: ["Droid"],
-        slots: ["Talent", "Sensor", "Torpedo", "Modification", "Title"]
+        slots: ["Talent", "Tech", "Torpedo", "Modification", "Title"]
       }, {
         name: "Prince Xizor",
         id: 148,
@@ -2391,8 +2436,8 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "StarViper",
         skill: 4,
-        points: 54,
-        slots: ["Talent", "Sensor", "Torpedo", "Modification", "Title"]
+        points: 51,
+        slots: ["Talent", "Tech", "Torpedo", "Modification", "Title"]
       }, {
         name: "Dalan Oberos (StarViper)",
         canonical_name: 'Dalan Oberos'.canonicalize(),
@@ -2402,17 +2447,17 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "StarViper",
         skill: 4,
-        points: 54,
+        points: 51,
         keyword: ["Bounty Hunter"],
-        slots: ["Talent", "Sensor", "Torpedo", "Modification", "Title"]
+        slots: ["Talent", "Tech", "Torpedo", "Modification", "Title"]
       }, {
         name: "Black Sun Assassin",
         id: 150,
         faction: "Scum and Villainy",
         ship: "StarViper",
         skill: 3,
-        points: 48,
-        slots: ["Talent", "Sensor", "Torpedo", "Modification", "Title"]
+        points: 49,
+        slots: ["Talent", "Tech", "Torpedo", "Modification", "Title"]
       }, {
         name: "Black Sun Enforcer",
         id: 151,
@@ -2420,7 +2465,7 @@ exportObj.basicCardData = function() {
         ship: "StarViper",
         skill: 2,
         points: 45,
-        slots: ["Sensor", "Torpedo", "Modification", "Title"]
+        slots: ["Tech", "Torpedo", "Modification", "Title"]
       }, {
         name: "Moralo Eval",
         id: 152,
@@ -2429,7 +2474,7 @@ exportObj.basicCardData = function() {
         ship: "YV-666",
         skill: 4,
         charge: 2,
-        points: 66,
+        points: 64,
         slots: ["Talent", "Cannon", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
         name: "Bossk",
@@ -2448,7 +2493,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "YV-666",
         skill: 3,
-        points: 56,
+        points: 55,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
@@ -2466,7 +2511,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Z-95 Headhunter",
         skill: 4,
-        points: 29,
+        points: 28,
         slots: ["Talent", "Missile", "Illicit", "Modification"]
       }, {
         name: "Kaa'to Leeachos",
@@ -2475,7 +2520,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Z-95 Headhunter",
         skill: 3,
-        points: 25,
+        points: 24,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Missile", "Illicit", "Modification"]
       }, {
@@ -2484,7 +2529,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Z-95 Headhunter",
         skill: 3,
-        points: 24,
+        points: 23,
         slots: ["Talent", "Missile", "Illicit", "Modification"]
       }, {
         name: "Binayre Pirate",
@@ -2501,7 +2546,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Z-95 Headhunter",
         skill: "*",
-        points: 6,
+        points: 4,
         slots: ["Missile", "Illicit", "Modification"],
         restrictions: [["Unique", "Hound's Tooth"]],
         restriction_func: function(ship) {
@@ -2556,7 +2601,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "Alpha-Class Star Wing",
         skill: 3,
-        points: 36,
+        points: 33,
         slots: ["Talent", "Sensor", "Torpedo", "Missile", "Modification", "Configuration"]
       }, {
         name: "Rho Squadron Pilot",
@@ -2581,7 +2626,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "Lambda-Class Shuttle",
         skill: 4,
-        points: 48,
+        points: 47,
         slots: ["Sensor", "Cannon", "Crew", "Crew", "Modification", "Title"]
       }, {
         name: "Lieutenant Sai",
@@ -2590,7 +2635,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "Lambda-Class Shuttle",
         skill: 3,
-        points: 47,
+        points: 46,
         slots: ["Sensor", "Cannon", "Crew", "Crew", "Modification", "Title"]
       }, {
         name: "Colonel Jendon",
@@ -2608,7 +2653,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "Lambda-Class Shuttle",
         skill: 1,
-        points: 43,
+        points: 41,
         slots: ["Sensor", "Cannon", "Crew", "Crew", "Modification", "Title"]
       }, {
         name: "Grand Inquisitor",
@@ -2638,7 +2683,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Advanced Prototype",
         skill: 3,
-        points: 36,
+        points: 39,
         force: 1,
         keyword: ["Dark Side"],
         slots: ["Force", "Sensor", "Missile"]
@@ -2648,7 +2693,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Advanced Prototype",
         skill: 3,
-        points: 28,
+        points: 31,
         slots: ["Talent", "Sensor", "Missile"]
       }, {
         name: "Darth Vader",
@@ -2668,7 +2713,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Advanced",
         skill: 5,
-        points: 45,
+        points: 44,
         slots: ["Talent", "Sensor", "Missile", "Modification"]
       }, {
         name: "Ved Foslo",
@@ -2677,7 +2722,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Advanced",
         skill: 4,
-        points: 44,
+        points: 43,
         slots: ["Talent", "Sensor", "Missile", "Modification"]
       }, {
         name: "Zertik Strom",
@@ -2686,7 +2731,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Advanced",
         skill: 3,
-        points: 41,
+        points: 40,
         slots: ["Sensor", "Missile", "Modification"]
       }, {
         name: "Storm Squadron Ace",
@@ -2711,7 +2756,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Interceptor",
         skill: 6,
-        points: 54,
+        points: 53,
         slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Turr Phennir",
@@ -2728,7 +2773,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Interceptor",
         skill: 4,
-        points: 35,
+        points: 36,
         slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Alpha Squadron Pilot",
@@ -2736,7 +2781,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Interceptor",
         skill: 1,
-        points: 31,
+        points: 32,
         slots: ["Modification", "Modification", "Configuration"]
       }, {
         name: "Major Vermeil",
@@ -2763,7 +2808,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Reaper",
         skill: 2,
-        points: 45,
+        points: 42,
         slots: ["Crew", "Crew", "Modification"]
       }, {
         name: "Scarif Base Pilot",
@@ -2780,7 +2825,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Aggressor",
         skill: 4,
-        points: 30,
+        points: 29,
         slots: ["Talent", "Turret", "Missile", "Missile", "Gunner", "Modification"]
       }, {
         name: '"Double Edge"',
@@ -2874,7 +2919,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Defender",
         skill: 1,
-        points: 68,
+        points: 67,
         slots: ["Sensor", "Cannon", "Missile", "Configuration"]
       }, {
         name: '"Whisper"',
@@ -2900,7 +2945,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Phantom",
         skill: 4,
-        points: 48,
+        points: 49,
         slots: ["Talent", "Sensor", "Gunner", "Modification"]
       }, {
         name: "Imdaar Test Pilot",
@@ -2969,7 +3014,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Striker",
         skill: 4,
-        points: 43,
+        points: 41,
         slots: ["Talent", "Gunner", "Device", "Modification"]
       }, {
         name: '"Pure Sabacc"',
@@ -2978,7 +3023,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Striker",
         skill: 4,
-        points: 43,
+        points: 42,
         slots: ["Talent", "Gunner", "Device", "Modification"]
       }, {
         name: '"Duchess"',
@@ -2995,7 +3040,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Striker",
         skill: 3,
-        points: 33,
+        points: 34,
         slots: ["Talent", "Gunner", "Device", "Modification"]
       }, {
         name: "Planetary Sentinel",
@@ -3003,7 +3048,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Striker",
         skill: 1,
-        points: 31,
+        points: 32,
         slots: ["Gunner", "Device", "Modification"]
       }, {
         name: "Rear Admiral Chiraneau",
@@ -3012,7 +3057,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "VT-49 Decimator",
         skill: 5,
-        points: 76,
+        points: 75,
         slots: ["Talent", "Torpedo", "Crew", "Crew", "Crew", "Gunner", "Device", "Modification", "Title"]
       }, {
         name: "Captain Oicunn",
@@ -3021,7 +3066,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "VT-49 Decimator",
         skill: 3,
-        points: 74,
+        points: 71,
         slots: ["Talent", "Torpedo", "Crew", "Crew", "Crew", "Gunner", "Device", "Modification", "Title"]
       }, {
         name: "Patrol Leader",
@@ -3038,7 +3083,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Fighter",
         skill: 5,
-        points: 44,
+        points: 41,
         slots: ["Talent", "Modification"]
       }, {
         name: "Iden Versio",
@@ -3057,7 +3102,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Fighter",
         skill: 5,
-        points: 30,
+        points: 28,
         slots: ["Talent", "Modification"]
       }, {
         name: '"Scourge" Skutu',
@@ -3066,7 +3111,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Fighter",
         skill: 5,
-        points: 30,
+        points: 28,
         slots: ["Talent", "Modification"]
       }, {
         name: '"Wampa"',
@@ -3086,7 +3131,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Fighter",
         skill: 4,
-        points: 29,
+        points: 27,
         slots: ["Talent", "Modification"]
       }, {
         name: "Gideon Hask",
@@ -3095,7 +3140,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Fighter",
         skill: 4,
-        points: 29,
+        points: 27,
         slots: ["Talent", "Modification"]
       }, {
         name: "Seyn Marana",
@@ -3104,7 +3149,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Fighter",
         skill: 4,
-        points: 29,
+        points: 27,
         slots: ["Talent", "Modification"]
       }, {
         name: "Valen Rudor",
@@ -3113,7 +3158,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Fighter",
         skill: 3,
-        points: 26,
+        points: 24,
         slots: ["Talent", "Modification"]
       }, {
         name: '"Night Beast"',
@@ -3122,7 +3167,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Fighter",
         skill: 2,
-        points: 25,
+        points: 23,
         slots: ["Modification"]
       }, {
         name: "Black Squadron Ace",
@@ -3163,7 +3208,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 6,
-        points: 62,
+        points: 61,
         charge: 1,
         recurring: 1,
         slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
@@ -3177,7 +3222,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/FO Fighter",
         skill: 6,
-        points: 42,
+        points: 35,
         slots: ["Talent", "Tech", "Modification"]
       }, {
         name: '"Longshot"',
@@ -3207,7 +3252,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         force: 2,
         keyword: ["Dark Side"],
-        points: 76,
+        points: 77,
         applies_condition: 'I\'ll Show You the Dark Side'.canonicalize(),
         slots: ["Force", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
@@ -3217,7 +3262,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/VN Silencer",
         skill: 5,
-        points: 63,
+        points: 61,
         slots: ["Talent", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
         name: "Lieutenant Dormitz",
@@ -3226,7 +3271,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "Upsilon-Class Command Shuttle",
         skill: 2,
-        points: 66,
+        points: 73,
         slots: ["Tech", "Tech", "Crew", "Crew", "Crew", "Cannon", "Sensor", "Modification"]
       }, {
         name: "L'ulo L'ampar",
@@ -3235,7 +3280,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "RZ-2 A-Wing",
         skill: 5,
-        points: 42,
+        points: 40,
         slots: ["Talent", "Talent", "Missile", "Tech"]
       }, {
         name: "Tallissan Lintra",
@@ -3259,7 +3304,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/SF Fighter",
         skill: 4,
-        points: 38,
+        points: 36,
         slots: ["Talent", "Tech", "Missile", "Gunner", "Sensor", "Modification"]
       }, {
         name: '"Quickdraw"',
@@ -3270,7 +3315,7 @@ exportObj.basicCardData = function() {
         skill: 6,
         charge: 1,
         recurring: 1,
-        points: 47,
+        points: 44,
         slots: ["Talent", "Tech", "Missile", "Gunner", "Sensor", "Modification"]
       }, {
         name: "Rey",
@@ -3329,7 +3374,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Mining Guild TIE Fighter",
         skill: 3,
-        points: 30,
+        points: 28,
         slots: ["Talent", "Modification"]
       }, {
         name: "Finch Dallow",
@@ -3338,7 +3383,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "MG-100 StarFortress",
         skill: 4,
-        points: 56,
+        points: 55,
         slots: ["Sensor", "Tech", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Major Stridan",
@@ -3356,7 +3401,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 4,
-        points: 50,
+        points: 47,
         slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
       }, {
         name: "Joph Seastriker",
@@ -3365,7 +3410,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 3,
-        points: 48,
+        points: 46,
         slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
       }, {
         name: "Lieutenant Bastian",
@@ -3383,7 +3428,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 1,
-        points: 47,
+        points: 45,
         slots: ["Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
       }, {
         name: "Black Squadron Ace (T-70)",
@@ -3451,7 +3496,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/FO Fighter",
         skill: 3,
-        points: 31,
+        points: 30,
         slots: ["Talent", "Tech", "Modification"]
       }, {
         name: '"Static"',
@@ -3460,7 +3505,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/FO Fighter",
         skill: 4,
-        points: 33,
+        points: 31,
         slots: ["Talent", "Tech", "Modification"]
       }, {
         name: "Lieutenant Rivas",
@@ -3469,7 +3514,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/FO Fighter",
         skill: 1,
-        points: 27,
+        points: 28,
         slots: ["Tech", "Modification"]
       }, {
         name: "Commander Malarus",
@@ -3478,7 +3523,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/FO Fighter",
         skill: 5,
-        points: 38,
+        points: 33,
         charge: 2,
         slots: ["Talent", "Tech", "Modification"]
       }, {
@@ -3487,7 +3532,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/FO Fighter",
         skill: 3,
-        points: 28,
+        points: 29,
         slots: ["Talent", "Tech", "Modification"]
       }, {
         name: "Zeta Squadron Pilot",
@@ -3495,7 +3540,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/FO Fighter",
         skill: 2,
-        points: 26,
+        points: 27,
         slots: ["Tech", "Modification"]
       }, {
         name: "Epsilon Squadron Cadet",
@@ -3503,7 +3548,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/FO Fighter",
         skill: 1,
-        points: 25,
+        points: 26,
         slots: ["Tech", "Modification"]
       }, {
         name: "Greer Sonnel",
@@ -3532,7 +3577,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         force: 3,
         keyword: ["Dark Side", "Sith"],
-        points: 65,
+        points: 64,
         slots: ["Force", "Cannon", "Torpedo", "Crew", "Crew", "Device", "Modification", "Title", "Tactical Relay"]
       }, {
         name: "Anakin Skywalker",
@@ -3542,7 +3587,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 6,
         force: 3,
-        points: 61,
+        points: 59,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Configuration", "Modification"]
       }, {
@@ -3553,7 +3598,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 4,
         force: 2,
-        points: 42,
+        points: 40,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Configuration", "Modification"]
       }, {
@@ -3564,7 +3609,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 4,
         force: 1,
-        points: 38,
+        points: 36,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Configuration", "Modification"]
       }, {
@@ -3575,7 +3620,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 3,
         force: 2,
-        points: 43,
+        points: 41,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Configuration", "Modification"]
       }, {
@@ -3585,7 +3630,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 3,
         force: 1,
-        points: 37,
+        points: 36,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Configuration", "Modification"]
       }, {
@@ -3596,7 +3641,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 5,
         force: 3,
-        points: 49,
+        points: 47,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Configuration", "Modification"]
       }, {
@@ -3605,7 +3650,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 1,
-        points: 20,
+        points: 21,
         keyword: ["Droid"],
         slots: ["Missile", "Configuration", "Modification"]
       }, {
@@ -3615,7 +3660,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "ARC-170",
         skill: 3,
-        points: 54,
+        points: 53,
         keyword: ["Clone"],
         slots: ["Torpedo", "Crew", "Gunner", "Astromech", "Modification"]
       }, {
@@ -3655,7 +3700,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/VN Silencer",
         skill: 4,
-        points: 57,
+        points: 56,
         slots: ["Talent", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
         name: "Omega Squadron Expert",
@@ -3663,7 +3708,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/SF Fighter",
         skill: 3,
-        points: 34,
+        points: 33,
         slots: ["Talent", "Tech", "Missile", "Gunner", "Sensor", "Modification"]
       }, {
         name: "Sienar-Jaemus Engineer",
@@ -3671,7 +3716,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/VN Silencer",
         skill: 1,
-        points: 48,
+        points: 50,
         slots: ["Tech", "Torpedo", "Missile", "Configuration"]
       }, {
         name: "First Order Test Pilot",
@@ -3716,7 +3761,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "MG-100 StarFortress",
         skill: 1,
-        points: 52,
+        points: 51,
         slots: ["Sensor", "Tech", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Ben Teene",
@@ -3735,7 +3780,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "MG-100 StarFortress",
         skill: 3,
-        points: 56,
+        points: 55,
         slots: ["Sensor", "Tech", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Vennie",
@@ -3744,7 +3789,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "MG-100 StarFortress",
         skill: 2,
-        points: 54,
+        points: 53,
         slots: ["Sensor", "Tech", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Resistance Sympathizer",
@@ -3772,7 +3817,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 4,
-        points: 52,
+        points: 49,
         slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
       }, {
         name: "Nien Nunb",
@@ -3781,7 +3826,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 5,
-        points: 55,
+        points: 54,
         slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
       }, {
         name: "Ello Asty",
@@ -3790,7 +3835,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 5,
-        points: 54,
+        points: 53,
         slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
       }, {
         name: "Green Squadron Expert",
@@ -3815,7 +3860,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Mining Guild TIE Fighter",
         skill: 4,
-        points: 32,
+        points: 29,
         slots: ["Talent", "Modification"]
       }, {
         name: "Overseer Yushyn",
@@ -3826,7 +3871,7 @@ exportObj.basicCardData = function() {
         skill: 2,
         charge: 1,
         recurring: 1,
-        points: 26,
+        points: 24,
         slots: ["Modification"]
       }, {
         name: "Mining Guild Sentry",
@@ -3878,7 +3923,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 3,
-        points: 23,
+        points: 24,
         max_per_squad: 3,
         keyword: ["Droid"],
         slots: ["Missile", "Configuration", "Modification"]
@@ -3888,7 +3933,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 1,
-        points: 21,
+        points: 22,
         max_per_squad: 2,
         keyword: ["Droid"],
         slots: ["Missile", "Configuration", "Modification"]
@@ -3898,7 +3943,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 3,
-        points: 26,
+        points: 23,
         unique: true,
         keyword: ["Droid"],
         slots: ["Missile", "Configuration", "Modification"]
@@ -3910,7 +3955,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 5,
         force: 2,
-        points: 45,
+        points: 43,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Configuration", "Modification"]
       }, {
@@ -3921,7 +3966,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 4,
         force: 2,
-        points: 42,
+        points: 40,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Configuration", "Modification"]
       }, {
@@ -3932,7 +3977,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 4,
         force: 3,
-        points: 46,
+        points: 44,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Configuration", "Modification"]
       }, {
@@ -3942,7 +3987,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "V-19 Torrent",
         skill: 4,
-        points: 30,
+        points: 29,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Modification"]
       }, {
@@ -3952,7 +3997,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "V-19 Torrent",
         skill: 5,
-        points: 30,
+        points: 29,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Modification"]
       }, {
@@ -3962,7 +4007,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "V-19 Torrent",
         skill: 3,
-        points: 28,
+        points: 27,
         keyword: ["Clone"],
         slots: ["Missile", "Modification"]
       }, {
@@ -3972,7 +4017,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "V-19 Torrent",
         skill: 3,
-        points: 29,
+        points: 28,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Modification"]
       }, {
@@ -3982,7 +4027,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "V-19 Torrent",
         skill: 2,
-        points: 27,
+        points: 26,
         keyword: ["Clone"],
         slots: ["Missile", "Modification"]
       }, {
@@ -4030,7 +4075,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Hyena-Class Droid Bomber",
         skill: 1,
-        points: 25,
+        points: 26,
         keyword: ["Droid"],
         slots: ["Torpedo", "Missile", "Device", "Modification", "Configuration"]
       }, {
@@ -4041,7 +4086,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         max_per_squad: 3,
         keyword: ["Droid"],
-        points: 29,
+        points: 30,
         slots: ["Sensor", "Device", "Device", "Modification", "Configuration"]
       }, {
         name: "DBS-404",
@@ -4050,7 +4095,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Hyena-Class Droid Bomber",
         skill: 4,
-        points: 30,
+        points: 31,
         keyword: ["Droid"],
         slots: ["Torpedo", "Missile", "Device", "Modification", "Configuration"]
       }, {
@@ -4059,7 +4104,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Hyena-Class Droid Bomber",
         skill: 3,
-        points: 28,
+        points: 29,
         keyword: ["Droid"],
         slots: ["Torpedo", "Missile", "Device", "Modification", "Configuration"]
       }, {
@@ -4082,7 +4127,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Hyena-Class Droid Bomber",
         skill: 1,
-        points: 28,
+        points: 29,
         keyword: ["Droid"],
         slots: ["Sensor", "Missile", "Missile", "Modification", "Configuration"]
       }, {
@@ -4092,7 +4137,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Naboo Royal N-1 Starfighter",
         skill: 1,
-        points: 42,
+        points: 41,
         applies_condition: 'Decoyed'.canonicalize(),
         slots: ["Sensor", "Astromech", "Torpedo"]
       }, {
@@ -4103,7 +4148,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Naboo Royal N-1 Starfighter",
         skill: 3,
-        points: 38,
+        points: 36,
         slots: ["Talent", "Sensor", "Astromech", "Torpedo"]
       }, {
         name: "Padmé Amidala",
@@ -4113,7 +4158,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Naboo Royal N-1 Starfighter",
         skill: 4,
-        points: 44,
+        points: 43,
         slots: ["Talent", "Sensor", "Astromech", "Torpedo"]
       }, {
         name: "Ric Olié",
@@ -4123,7 +4168,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Naboo Royal N-1 Starfighter",
         skill: 5,
-        points: 45,
+        points: 44,
         slots: ["Talent", "Sensor", "Astromech", "Torpedo"]
       }, {
         name: "Count Dooku",
@@ -4152,7 +4197,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Sith Infiltrator",
         skill: 2,
-        points: 51,
+        points: 50,
         slots: ["Cannon", "Torpedo", "Crew", "Crew", "Device", "Modification", "Title", "Tactical Relay"]
       }, {
         name: "DFS-311",
@@ -4183,7 +4228,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "ARC-170",
         skill: 3,
-        points: 48,
+        points: 47,
         keyword: ["Clone"],
         slots: ["Torpedo", "Crew", "Gunner", "Astromech", "Modification"]
       }, {
@@ -4221,7 +4266,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 3,
-        points: 22,
+        points: 21,
         keyword: ["Droid"],
         slots: ["Missile", "Configuration", "Modification"]
       }, {
@@ -4239,7 +4284,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "Resistance Transport Pod",
         skill: 3,
-        points: 25,
+        points: 28,
         slots: ["Talent", "Tech", "Crew", "Modification"]
       }, {
         name: "Logistics Division Pilot",
@@ -4247,8 +4292,8 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "Resistance Transport",
         skill: 1,
-        points: 32,
-        slots: ["Tech", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
+        points: 34,
+        slots: ["Tech", "Cannon", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
       }, {
         name: "Pammich Nerro Goode",
         id: 347,
@@ -4256,8 +4301,8 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "Resistance Transport",
         skill: 3,
-        points: 34,
-        slots: ["Tech", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
+        points: 35,
+        slots: ["Tech", "Cannon", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
       }, {
         name: "Vi Moradi",
         id: 348,
@@ -4285,7 +4330,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "Resistance Transport Pod",
         skill: 2,
-        points: 30,
+        points: 32,
         slots: ["Talent", "Tech", "Crew", "Modification"]
       }, {
         name: "Cova Nell",
@@ -4295,7 +4340,7 @@ exportObj.basicCardData = function() {
         ship: "Resistance Transport",
         skill: 4,
         points: 38,
-        slots: ["Talent", "Tech", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
+        slots: ["Talent", "Tech", "Cannon", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
       }, {
         name: "Nodin Chavdri",
         id: 352,
@@ -4303,15 +4348,15 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "Resistance Transport",
         skill: 2,
-        points: 35,
-        slots: ["Tech", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
+        points: 37,
+        slots: ["Tech", "Cannon", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
       }, {
         name: "Stalgasin Hive Guard",
         id: 353,
         faction: "Separatist Alliance",
         ship: "Nantex-Class Starfighter",
         skill: 3,
-        points: 33,
+        points: 35,
         slots: ["Talent"]
       }, {
         name: "Petranaki Arena Ace",
@@ -4319,7 +4364,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Nantex-Class Starfighter",
         skill: 4,
-        points: 35,
+        points: 37,
         slots: ["Talent", "Talent"]
       }, {
         name: "Gorgol",
@@ -4346,7 +4391,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Nantex-Class Starfighter",
         skill: 6,
-        points: 45,
+        points: 44,
         slots: ["Talent", "Talent"]
       }, {
         name: "Berwer Kret",
@@ -4367,7 +4412,7 @@ exportObj.basicCardData = function() {
         ship: "BTL-B Y-Wing",
         skill: 6,
         force: 3,
-        points: 53,
+        points: 50,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"]
       }, {
@@ -4385,7 +4430,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "BTL-B Y-Wing",
         skill: 2,
-        points: 29,
+        points: 30,
         keyword: ["Clone"],
         slots: ["Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"]
       }, {
@@ -4425,7 +4470,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "BTL-B Y-Wing",
         skill: 4,
-        points: 42,
+        points: 41,
         keyword: ["Clone"],
         slots: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"]
       }, {
@@ -4437,7 +4482,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "BTL-B Y-Wing",
         skill: 5,
-        points: 40,
+        points: 39,
         keyword: ["Clone"],
         slots: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"]
       }, {
@@ -4447,7 +4492,7 @@ exportObj.basicCardData = function() {
         ship: "CR90 Corellian Corvette",
         skill: 8,
         engagement: 0,
-        points: 146,
+        points: 131,
         slots: ["Command", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Team", "Cargo"]
       }, {
         name: "Alderaanian Guard",
@@ -4456,7 +4501,7 @@ exportObj.basicCardData = function() {
         ship: "CR90 Corellian Corvette",
         skill: 8,
         engagement: 0,
-        points: 146,
+        points: 134,
         slots: ["Command", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Team", "Cargo", "Title"]
       }, {
         name: "Outer Rim Patrol",
@@ -4465,8 +4510,8 @@ exportObj.basicCardData = function() {
         ship: "Raider-class Corvette",
         skill: 8,
         engagement: 0,
-        points: 146,
-        slots: ["Command", "Torpedo", "Missile", "Hardpoint", "Hardpoint", "Crew", "Team", "Team", "Cargo", "Title"]
+        points: 134,
+        slots: ["Command", "Torpedo", "Missile", "Hardpoint", "Hardpoint", "Crew", "Crew", "Team", "Team", "Cargo", "Title"]
       }, {
         name: "First Order Collaborators",
         id: 370,
@@ -4474,8 +4519,8 @@ exportObj.basicCardData = function() {
         ship: "Raider-class Corvette",
         skill: 8,
         engagement: 0,
-        points: 146,
-        slots: ["Command", "Torpedo", "Missile", "Hardpoint", "Hardpoint", "Crew", "Team", "Team", "Cargo"]
+        points: 131,
+        slots: ["Command", "Torpedo", "Missile", "Hardpoint", "Hardpoint", "Crew", "Crew", "Team", "Team", "Cargo"]
       }, {
         name: "Echo Base Evacuees",
         id: 371,
@@ -4483,7 +4528,7 @@ exportObj.basicCardData = function() {
         ship: "GR-75 Medium Transport",
         skill: 7,
         engagement: 1,
-        points: 55,
+        points: 65,
         slots: ["Command", "Hardpoint", "Turret", "Crew", "Crew", "Team", "Cargo", "Cargo", "Title"]
       }, {
         name: "New Republic Volunteers",
@@ -4492,7 +4537,7 @@ exportObj.basicCardData = function() {
         ship: "GR-75 Medium Transport",
         skill: 7,
         engagement: 1,
-        points: 55,
+        points: 65,
         slots: ["Command", "Hardpoint", "Turret", "Crew", "Crew", "Team", "Cargo", "Cargo"]
       }, {
         name: "Outer Rim Garrison",
@@ -4501,7 +4546,7 @@ exportObj.basicCardData = function() {
         ship: "Gozanti-class Cruiser",
         skill: 7,
         engagement: 1,
-        points: 60,
+        points: 67,
         slots: ["Command", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Cargo", "Title"]
       }, {
         name: "First Order Sympathizers",
@@ -4510,7 +4555,7 @@ exportObj.basicCardData = function() {
         ship: "Gozanti-class Cruiser",
         skill: 7,
         engagement: 1,
-        points: 60,
+        points: 67,
         slots: ["Command", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Cargo"]
       }, {
         name: "Separatist Privateers",
@@ -4519,7 +4564,7 @@ exportObj.basicCardData = function() {
         ship: "C-ROC Cruiser",
         skill: 7,
         engagement: 1,
-        points: 58,
+        points: 63,
         slots: ["Command", "Hardpoint", "Crew", "Crew", "Tactical Relay", "Team", "Cargo", "Device", "Configuration"]
       }, {
         name: "Syndicate Smugglers",
@@ -4528,7 +4573,7 @@ exportObj.basicCardData = function() {
         ship: "C-ROC Cruiser",
         skill: 7,
         engagement: 1,
-        points: 58,
+        points: 63,
         slots: ["Command", "Hardpoint", "Crew", "Crew", "Team", "Cargo", "Device", "Illicit", "Title", "Configuration"]
       }, {
         name: "Jarek Yeager",
@@ -4537,7 +4582,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "Fireball",
         skill: 5,
-        points: 32,
+        points: 31,
         slots: ["Talent", "Missile", "Astromech", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Kazuda Xiono",
@@ -4546,7 +4591,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "Fireball",
         skill: 4,
-        points: 39,
+        points: 38,
         slots: ["Talent", "Missile", "Astromech", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "R1-J5",
@@ -4555,7 +4600,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "Fireball",
         skill: 1,
-        points: 28,
+        points: 27,
         keyword: ["Droid"],
         slots: ["Missile", "Crew", "Illicit", "Modification", "Modification", "Title"]
       }, {
@@ -4573,7 +4618,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 6,
         ship: "TIE/Ba Interceptor",
-        points: 55,
+        points: 54,
         slots: ["Talent", "Tech", "Missile", "Modification"]
       }, {
         name: '"Holo"',
@@ -4591,7 +4636,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 4,
         ship: "TIE/Ba Interceptor",
-        points: 48,
+        points: 45,
         slots: ["Talent", "Tech", "Missile", "Modification"]
       }, {
         name: "First Order Provocateur",
@@ -4608,7 +4653,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 4,
         ship: "TIE/SF Fighter",
-        points: 38,
+        points: 34,
         slots: ["Talent", "Tech", "Missile", "Gunner", "Sensor", "Modification"]
       }, {
         name: '"Rush"',
@@ -4646,7 +4691,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 5,
         ship: "MG-100 StarFortress",
-        points: 56,
+        points: 55,
         charge: 1,
         recurring: 1,
         slots: ["Talent", "Sensor", "Tech", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
@@ -4667,7 +4712,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 5,
         ship: "B-Wing",
-        points: 50,
+        points: 45,
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Torpedo", "Modification", "Configuration", "Title"]
       }, {
         name: "Alexsandr Kallus",
@@ -4677,6 +4722,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         ship: "VCX-100",
         points: 68,
+        keyword: ["Spectre"],
         slots: ["Talent", "Torpedo", "Sensor", "Turret", "Crew", "Crew", "Modification", "Gunner", "Title"]
       }, {
         name: "Leia Organa",
@@ -4685,6 +4731,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 5,
         ship: "YT-1300",
+        keyword: ["Light Side"],
         points: 77,
         force: 1,
         slots: ["Force", "Missile", "Gunner", "Crew", "Crew", "Modification", "Modification", "Title"]
@@ -4696,7 +4743,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         keyword: ["Dark Side"],
         ship: "TIE Advanced Prototype",
-        points: 42,
+        points: 44,
         force: 2,
         slots: ["Force", "Sensor", "Missile"]
       }, {
@@ -4706,7 +4753,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 2,
         ship: "TIE Striker",
-        points: 34,
+        points: 32,
         slots: ["Talent", "Gunner", "Device", "Modification"]
       }, {
         name: "Morna Kee",
@@ -4715,7 +4762,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 4,
         ship: "VT-49 Decimator",
-        points: 75,
+        points: 73,
         charge: 3,
         slots: ["Talent", "Torpedo", "Crew", "Crew", "Crew", "Gunner", "Device", "Modification", "Title"]
       }, {
@@ -4736,7 +4783,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 4,
         ship: "Z-95 Headhunter",
-        points: 28,
+        points: 27,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Missile", "Illicit", "Modification"]
       }, {
@@ -4765,7 +4812,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         skill: 2,
         ship: "Xi-class Light Shuttle",
-        points: 38,
+        points: 35,
         slots: ["Tech", "Tech", "Crew", "Crew", "Modification"]
       }, {
         name: "Agent Terex",
@@ -4774,7 +4821,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 3,
         ship: "Xi-class Light Shuttle",
-        points: 42,
+        points: 38,
         slots: ["Talent", "Tech", "Tech", "Crew", "Crew", "Illicit", "Illicit", "Illicit", "Modification"]
       }, {
         name: "Gideon Hask (Xi Shuttle)",
@@ -4796,7 +4843,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 5,
         ship: "Xi-class Light Shuttle",
-        points: 45,
+        points: 44,
         slots: ["Talent", "Tech", "Tech", "Crew", "Crew", "Modification"]
       }, {
         name: "Baktoid Drone",
@@ -4804,7 +4851,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         skill: 1,
         ship: "HMP Droid Gunship",
-        points: 34,
+        points: 37,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Tactical Relay", "Crew", "Device", "Modification", "Configuration"]
       }, {
@@ -4813,7 +4860,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         skill: "*",
         ship: "Syliure-class Hyperspace Ring",
-        points: 5,
+        points: 2,
         slots: ["Hyperdrive"]
       }, {
         name: "Separatist Predator",
@@ -4821,7 +4868,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         skill: 3,
         ship: "HMP Droid Gunship",
-        points: 36,
+        points: 38,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Tactical Relay", "Crew", "Device", "Modification", "Configuration"]
       }, {
@@ -4831,7 +4878,7 @@ exportObj.basicCardData = function() {
         skill: 2,
         max_per_squad: 2,
         ship: "HMP Droid Gunship",
-        points: 35,
+        points: 38,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Cannon", "Cannon", "Tactical Relay", "Modification", "Configuration"]
       }, {
@@ -4841,7 +4888,7 @@ exportObj.basicCardData = function() {
         skill: 1,
         unique: true,
         ship: "HMP Droid Gunship",
-        points: 35,
+        points: 38,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Tactical Relay", "Crew", "Device", "Modification", "Configuration"]
       }, {
@@ -4851,7 +4898,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         unique: true,
         ship: "HMP Droid Gunship",
-        points: 42,
+        points: 39,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Tactical Relay", "Crew", "Device", "Modification", "Configuration"]
       }, {
@@ -4872,7 +4919,7 @@ exportObj.basicCardData = function() {
         charge: 2,
         recurring: 1,
         ship: "LAAT/i Gunship",
-        points: 49,
+        points: 47,
         keyword: ["Clone"],
         slots: ["Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -4884,7 +4931,7 @@ exportObj.basicCardData = function() {
         charge: 2,
         recurring: 1,
         ship: "LAAT/i Gunship",
-        points: 50,
+        points: 48,
         keyword: ["Clone"],
         slots: ["Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -4896,7 +4943,7 @@ exportObj.basicCardData = function() {
         charge: 2,
         recurring: 1,
         ship: "LAAT/i Gunship",
-        points: 54,
+        points: 52,
         keyword: ["Clone"],
         slots: ["Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -4908,7 +4955,7 @@ exportObj.basicCardData = function() {
         recurring: 1,
         unique: true,
         ship: "LAAT/i Gunship",
-        points: 54,
+        points: 51,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -4925,7 +4972,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         skill: 3,
         ship: "TIE/rb Heavy",
-        points: 36,
+        points: 35,
         slots: ["Talent", "Cannon", "Cannon", "Modification", "Modification", "Configuration"]
       }, {
         name: "Lyttan Dree",
@@ -4934,7 +4981,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         unique: true,
         ship: "TIE/rb Heavy",
-        points: 37,
+        points: 36,
         slots: ["Cannon", "Cannon", "Modification", "Modification", "Configuration"]
       }, {
         name: '"Rampage"',
@@ -4943,7 +4990,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         unique: true,
         ship: "TIE/rb Heavy",
-        points: 39,
+        points: 38,
         slots: ["Talent", "Cannon", "Cannon", "Modification", "Modification", "Configuration"]
       }, {
         name: "Fearsome Predator",
@@ -4952,7 +4999,7 @@ exportObj.basicCardData = function() {
         max_per_squad: 3,
         skill: 3,
         ship: "Droid Tri-Fighter",
-        points: 38,
+        points: 36,
         slots: ["Talent", "Sensor", "Missile", "Modification", "Configuration"],
         applies_condition: 'Fearful Prey'.canonicalize()
       }, {
@@ -4962,7 +5009,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         unique: true,
         ship: "Droid Tri-Fighter",
-        points: 38,
+        points: 36,
         slots: ["Talent", "Sensor", "Missile", "Modification", "Configuration"]
       }, {
         name: "DIS-T81",
@@ -4971,7 +5018,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         unique: true,
         ship: "Droid Tri-Fighter",
-        points: 40,
+        points: 37,
         slots: ["Talent", "Sensor", "Missile", "Modification", "Configuration"]
       }, {
         name: "Phlac-Arphocc Prototype",
@@ -4980,7 +5027,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         max_per_squad: 2,
         ship: "Droid Tri-Fighter",
-        points: 41,
+        points: 38,
         slots: ["Talent", "Sensor", "Missile", "Modification", "Configuration"]
       }, {
         name: "Colicoid Interceptor",
@@ -4988,7 +5035,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         skill: 1,
         ship: "Droid Tri-Fighter",
-        points: 35,
+        points: 34,
         slots: ["Sensor", "Missile", "Modification", "Configuration"]
       }, {
         name: "Separatist Interceptor",
@@ -4996,7 +5043,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         skill: 3,
         ship: "Droid Tri-Fighter",
-        points: 37,
+        points: 35,
         slots: ["Talent", "Sensor", "Missile", "Modification", "Configuration"]
       }, {
         name: "Separatist Racketeer",
@@ -5004,7 +5051,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         skill: 2,
         ship: "Firespray-31",
-        points: 64,
+        points: 63,
         slots: ["Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"]
       }, {
         name: "Boba Fett (Separatist)",
@@ -5016,6 +5063,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         ship: "Firespray-31",
         points: 70,
+        keyword: ["Bounty Hunter"],
         slots: ["Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"]
       }, {
         name: "Zam Wesell",
@@ -5025,7 +5073,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         charge: 4,
         ship: "Firespray-31",
-        points: 76,
+        points: 84,
+        keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"],
         applies_condition: ['You\'d Better Mean Business'.canonicalize(), 'You Should Thank Me'.canonicalize()]
       }, {
@@ -5035,7 +5084,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         unique: true,
         ship: "Firespray-31",
-        points: 79,
+        points: 80,
+        keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"]
       }, {
         name: "Loyalist Volunteer",
@@ -5043,7 +5093,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         skill: 2,
         ship: "Nimbus-class V-Wing",
-        points: 27,
+        points: 26,
         slots: ["Astromech", "Modification", "Configuration"]
       }, {
         name: "Shadow Squadron Escort",
@@ -5051,7 +5101,8 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         skill: 3,
         ship: "Nimbus-class V-Wing",
-        points: 29,
+        points: 28,
+        keyword: ["Clone"],
         slots: ["Talent", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Wilhuff Tarkin",
@@ -5060,7 +5111,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         unique: true,
         ship: "Nimbus-class V-Wing",
-        points: 34,
+        points: 31,
         slots: ["Talent", "Astromech", "Modification", "Configuration"]
       }, {
         name: '"Klick"',
@@ -5069,9 +5120,10 @@ exportObj.basicCardData = function() {
         skill: 4,
         unique: true,
         ship: "Nimbus-class V-Wing",
-        points: 32,
+        points: 31,
         charge: 1,
         recurring: 1,
+        keyword: ["Clone"],
         slots: ["Talent", "Astromech", "Modification", "Configuration"]
       }, {
         name: '"Contrail"',
@@ -5080,7 +5132,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         unique: true,
         ship: "Nimbus-class V-Wing",
-        points: 33,
+        points: 32,
+        keyword: ["Clone"],
         slots: ["Talent", "Astromech", "Modification", "Configuration"]
       }, {
         name: '"Odd Ball" (V-Wing)',
@@ -5091,7 +5144,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         unique: true,
         ship: "Nimbus-class V-Wing",
-        points: 32,
+        points: 31,
+        keyword: ["Clone"],
         slots: ["Talent", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Jedi General",
@@ -5102,7 +5156,7 @@ exportObj.basicCardData = function() {
         points: 41,
         force: 2,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Cannon", "Astromech", "Modification"]
+        slots: ["Force", "Astromech", "Modification"]
       }, {
         name: "Yoda",
         id: 437,
@@ -5110,10 +5164,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         unique: true,
         ship: "Eta-2 Actis",
-        points: 48,
+        points: 45,
         force: 3,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Force", "Cannon", "Astromech", "Modification"]
+        slots: ["Force", "Force", "Astromech", "Modification"]
       }, {
         name: "Shaak Ti",
         id: 438,
@@ -5121,10 +5175,10 @@ exportObj.basicCardData = function() {
         skill: 4,
         unique: true,
         ship: "Eta-2 Actis",
-        points: 44,
+        points: 43,
         force: 2,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Talent", "Cannon", "Astromech", "Modification"]
+        slots: ["Force", "Talent", "Astromech", "Modification"]
       }, {
         name: "Aayla Secura",
         id: 439,
@@ -5132,10 +5186,10 @@ exportObj.basicCardData = function() {
         skill: 5,
         unique: true,
         ship: "Eta-2 Actis",
-        points: 51,
+        points: 48,
         force: 2,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Talent", "Cannon", "Astromech", "Modification"]
+        slots: ["Force", "Talent", "Astromech", "Modification"]
       }, {
         name: "Obi-Wan Kenobi (Eta-2)",
         canonical_name: 'Obi-Wan Kenobi'.canonicalize(),
@@ -5146,9 +5200,9 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "Eta-2 Actis",
         force: 3,
-        points: 49,
+        points: 48,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Talent", "Cannon", "Astromech", "Modification"]
+        slots: ["Force", "Talent", "Astromech", "Modification"]
       }, {
         name: "Anakin Skywalker (Eta-2)",
         canonical_name: 'Anakin Skywalker'.canonicalize(),
@@ -5159,9 +5213,9 @@ exportObj.basicCardData = function() {
         unique: true,
         force: 3,
         ship: "Eta-2 Actis",
-        points: 56,
+        points: 51,
         keyword: ["Jedi", "Light Side", "Dark Side"],
-        slots: ["Force", "Talent", "Cannon", "Astromech", "Modification"]
+        slots: ["Force", "Talent", "Astromech", "Modification"]
       }, {
         name: "Poe Dameron (HoH)",
         canonical_name: 'Poe Dameron'.canonicalize(),
@@ -5171,7 +5225,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 6,
-        points: 60,
+        points: 55,
         charge: 2,
         recurring: 1,
         slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
@@ -5193,7 +5247,7 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 1,
         ship: "RZ-2 A-Wing",
-        points: 32,
+        points: 33,
         slots: ["Talent", "Missile", "Tech"]
       }, {
         name: "Suralinda Javos",
@@ -5229,7 +5283,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 2,
-        points: 49,
+        points: 47,
         slots: ["Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
       }, {
         name: "C'ai Threnalli",
@@ -5238,47 +5292,54 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-Wing",
         skill: 4,
-        points: 48,
+        points: 46,
         slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Title", "HardpointShip"]
       }, {
         name: "Hera Syndulla (B-Wing)",
         canonical_name: 'Hera Syndulla'.canonicalize(),
+        xws: "herasyndulla-asf01bwing",
         id: 450,
         unique: true,
         faction: "Rebel Alliance",
+        keyword: ["Spectre"],
         ship: "B-Wing",
         skill: 6,
-        points: 200,
+        points: 48,
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Torpedo", "Modification", "Configuration", "Title"]
       }, {
         name: "Hera Syndulla (A-Wing)",
         canonical_name: 'Hera Syndulla'.canonicalize(),
+        xws: "herasyndulla-rz1awing",
         id: 451,
         unique: true,
         faction: "Rebel Alliance",
         ship: "A-Wing",
+        keyword: ["Spectre"],
         skill: 6,
-        points: 200,
+        points: 48,
         slots: ["Talent", "Talent", "Missile", "Configuration"]
       }, {
         name: "Wedge Antilles (A-Wing)",
         canonical_name: 'Wedge Antilles'.canonicalize(),
+        xws: "wedgeantilles-rz1awing",
         id: 452,
         unique: true,
         faction: "Rebel Alliance",
         ship: "A-Wing",
         skill: 4,
-        points: 200,
+        points: 35,
         slots: ["Talent", "Talent", "Missile", "Configuration"]
       }, {
         name: "Sabine Wren (A-Wing)",
         canonical_name: 'Sabine Wren'.canonicalize(),
+        xws: "sabinewren-rz1awing",
         id: 453,
         unique: true,
         faction: "Rebel Alliance",
+        keyword: ["Mandalorian"],
         ship: "A-Wing",
         skill: 3,
-        points: 200,
+        points: 35,
         slots: ["Talent", "Talent", "Missile", "Configuration"]
       }, {
         name: "Vult Skerris",
@@ -5289,7 +5350,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         charge: 1,
         recurring: -1,
-        points: 200,
+        points: 77,
         slots: ["Talent", "Sensor", "Cannon", "Missile", "Configuration"]
       }, {
         name: "Ciena Ree",
@@ -5298,28 +5359,31 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Interceptor",
         skill: 6,
-        points: 200,
+        points: 48,
         slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Gideon Hask (TIE Interceptor)",
         canonical_name: 'Gideon Hask'.canonicalize(),
+        xws: "gideonhask-tieininterceptor",
         id: 456,
         unique: true,
         faction: "Galactic Empire",
         ship: "TIE Interceptor",
         skill: 4,
-        points: 200,
+        points: 48,
         slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Kanan Jarrus (HWK-290)",
         canonical_name: 'Kanan Jarrus'.canonicalize(),
+        xws: "kananjarrus-hwk290lightfreighter",
         id: 457,
         unique: true,
         faction: "Scum and Villainy",
+        keyword: ["Light Side", "Jedi"],
         ship: "HWK-290",
         skill: 3,
         force: 1,
-        points: 200,
+        points: 42,
         slots: ["Force", "Crew", "Device", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Leema Kai",
@@ -5328,8 +5392,8 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Y-Wing",
         skill: 5,
-        points: 200,
-        slots: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Illicit", "Modification"]
+        points: 39,
+        slots: ["Talent", "Tech", "Turret", "Torpedo", "Missile", "Astromech", "Device"]
       }, {
         name: "Arliz Hadrassian",
         id: 459,
@@ -5337,8 +5401,8 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Y-Wing",
         skill: 4,
-        points: 200,
-        slots: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Illicit", "Modification"]
+        points: 38,
+        slots: ["Talent", "Tech", "Turret", "Torpedo", "Missile", "Astromech", "Device"]
       }, {
         name: "Padric",
         id: 460,
@@ -5346,8 +5410,8 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Y-Wing",
         skill: 3,
-        points: 200,
-        slots: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Illicit", "Modification"]
+        points: 36,
+        slots: ["Talent", "Tech", "Turret", "Torpedo", "Missile", "Astromech", "Device"]
       }, {
         name: "Derek Klivian",
         id: 461,
@@ -5355,29 +5419,32 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "A-Wing",
         skill: 3,
-        points: 200,
+        points: 30,
         slots: ["Talent", "Talent", "Missile", "Configuration"]
       }, {
         name: "Shara Bey (A-Wing)",
         canonical_name: 'Shara Bey'.canonicalize(),
+        xws: "sharabey-rz1awing",
         id: 462,
         unique: true,
         faction: "Rebel Alliance",
         ship: "A-Wing",
         skill: 4,
-        points: 200,
+        points: 32,
         slots: ["Talent", "Talent", "Missile", "Configuration"]
       }, {
         name: "Ahsoka Tano (A-Wing)",
         canonical_name: 'Ahsoka Tano'.canonicalize(),
+        xws: "ahsokatano-rz1awing",
         id: 463,
         unique: true,
         faction: "Rebel Alliance",
         ship: "A-Wing",
+        keyword: ["Light Side"],
         skill: 5,
         force: 3,
-        points: 200,
-        slots: ["Force", "Talent", "Missile", "Configuration"]
+        points: 49,
+        slots: ["Force", "Force", "Missile", "Configuration"]
       }, {
         name: "Netrem Pollard",
         id: 464,
@@ -5385,7 +5452,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "B-Wing",
         skill: 3,
-        points: 200,
+        points: 43,
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Torpedo", "Modification", "Configuration", "Title"]
       }, {
         name: "Commandant Goran",
@@ -5394,7 +5461,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Interceptor",
         skill: 4,
-        points: 200,
+        points: 43,
         slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Nash Windrider",
@@ -5403,8 +5470,10 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Interceptor",
         skill: 2,
-        points: 200,
-        slots: ["Modification", "Modification", "Configuration"]
+        charge: 1,
+        recurring: 1,
+        points: 41,
+        slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Lieutenant Lorrir",
         id: 467,
@@ -5412,29 +5481,34 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Interceptor",
         skill: 3,
-        points: 200,
+        points: 39,
         slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Vult Skerris (TIE Interceptor)",
         canonical_name: 'Vult Skerris'.canonicalize(),
+        xws: "vultskerris-tieininterceptor",
         id: 468,
         unique: true,
         faction: "Galactic Empire",
         ship: "TIE Interceptor",
         skill: 5,
-        points: 200,
+        charge: 1,
+        recurring: -1,
+        points: 43,
         slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Darth Vader (TIE Defender)",
         canonical_name: 'Darth Vader'.canonicalize(),
+        xws: "darthvader-tieddefender",
         id: 469,
         unique: true,
         faction: "Galactic Empire",
         ship: "TIE Defender",
+        keyword: ["Dark Side", "Sith"],
         skill: 6,
         force: 3,
-        points: 200,
-        slots: ["Force", "Talent", "Cannon", "Missile", "Configuration"]
+        points: 112,
+        slots: ["Force", "Cannon", "Missile", "Configuration"]
       }, {
         name: "Captain Dobbs",
         id: 470,
@@ -5442,24 +5516,24 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Defender",
         skill: 3,
-        points: 200,
+        points: 73,
         slots: ["Talent", "Sensor", "Cannon", "Missile", "Configuration"]
       }, {
-        name: "Jinta Security Officer",
+        name: "Jinata Security Officer",
         id: 471,
         faction: "Scum and Villainy",
         ship: "Y-Wing",
         skill: 2,
-        points: 200,
-        slots: ["Turret", "Torpedo", "Gunner", "Astromech", "Device", "Illicit", "Modification"]
+        points: 30,
+        slots: ["Tech", "Turret", "Torpedo", "Missile", "Astromech", "Device"]
       }, {
         name: "Amaxine Warrior",
         id: 472,
         faction: "Scum and Villainy",
         ship: "Y-Wing",
         skill: 3,
-        points: 200,
-        slots: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Illicit", "Modification"]
+        points: 33,
+        slots: ["Talent", "Tech", "Turret", "Torpedo", "Missile", "Astromech", "Device"]
       }, {
         name: "Gamut Key",
         id: 473,
@@ -5469,10 +5543,11 @@ exportObj.basicCardData = function() {
         skill: 3,
         charge: 2,
         recurring: 1,
-        points: 200,
+        points: 34,
         slots: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Tápusk",
+        xws: "tapusk",
         id: 474,
         unique: true,
         faction: "Scum and Villainy",
@@ -5480,8 +5555,228 @@ exportObj.basicCardData = function() {
         skill: 5,
         charge: 2,
         recurring: 1,
-        points: 200,
+        points: 36,
         slots: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification", "Title"]
+      }, {
+        name: "Colicoid Destroyer",
+        id: 475,
+        faction: "Separatist Alliance",
+        ship: "Trident-class Assault Ship",
+        skill: 8,
+        engagement: 0,
+        points: 85,
+        slots: ["Command", "Torpedo", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Title"]
+      }, {
+        name: "Lawless Pirates",
+        id: 476,
+        faction: "Scum and Villainy",
+        ship: "Trident-class Assault Ship",
+        skill: 8,
+        engagement: 0,
+        points: 85,
+        slots: ["Command", "Torpedo", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Title"]
+      }, {
+        name: "Zorii Bliss",
+        id: 477,
+        unique: true,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 5,
+        points: 40,
+        charge: 1,
+        recurring: 1,
+        slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Illicit", "Configuration"]
+      }, {
+        name: "Teza Nasz",
+        id: 478,
+        unique: true,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 4,
+        points: 37,
+        slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+      }, {
+        name: "Wilsa Teshlo",
+        id: 479,
+        unique: true,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 4,
+        points: 34,
+        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+      }, {
+        name: "Shasa Zaro",
+        id: 480,
+        unique: true,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 3,
+        points: 33,
+        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+      }, {
+        name: "Lega Fossang",
+        id: 481,
+        unique: true,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 3,
+        points: 33,
+        slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+      }, {
+        name: "Aftab Ackbar",
+        id: 482,
+        unique: true,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 2,
+        points: 34,
+        slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+      }, {
+        name: "Corus Kapellim",
+        id: 483,
+        unique: true,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 1,
+        points: 33,
+        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Illicit", "Configuration"]
+      }, {
+        name: "C'ai Threnalli (Y-Wing)",
+        canonical_name: 'C\'ai Threnalli'.canonicalize(),
+        xws: "caithrenalli-btanr2ywing",
+        id: 484,
+        unique: true,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 2,
+        points: 34,
+        slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+      }, {
+        name: "New Republic Patrol",
+        id: 485,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 3,
+        points: 32,
+        slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+      }, {
+        name: "Kijimi Spice Runner",
+        id: 486,
+        faction: "Resistance",
+        ship: "BTA-NR2 Y-Wing",
+        skill: 2,
+        points: 31,
+        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Illicit", "Configuration"]
+      }, {
+        name: "Kylo Ren (TIE Whisper)",
+        canonical_name: 'Kylo Ren'.canonicalize(),
+        xws: "kyloren-tiewiwhispermodifiedinterceptor",
+        id: 487,
+        unique: true,
+        faction: "First Order",
+        ship: "TIE/WI Whisper",
+        keyword: ["Dark Side", "Light Side"],
+        skill: 5,
+        force: 3,
+        points: 63,
+        slots: ["Force", "Talent", "Missile", "Tech", "Tech", "Configuration"]
+      }, {
+        name: '"Wrath"',
+        id: 488,
+        unique: true,
+        faction: "First Order",
+        ship: "TIE/WI Whisper",
+        skill: 5,
+        points: 53,
+        slots: ["Talent", "Missile", "Tech", "Tech", "Configuration"]
+      }, {
+        name: '"Nightfall"',
+        id: 489,
+        unique: true,
+        faction: "First Order",
+        ship: "TIE/WI Whisper",
+        skill: 4,
+        points: 49,
+        slots: ["Talent", "Talent", "Missile", "Tech", "Tech", "Configuration"]
+      }, {
+        name: '"Whirlwind"',
+        id: 490,
+        unique: true,
+        faction: "First Order",
+        ship: "TIE/WI Whisper",
+        skill: 3,
+        points: 47,
+        slots: ["Talent", "Talent", "Missile", "Tech", "Tech", "Configuration"]
+      }, {
+        name: "709th Legion Ace",
+        id: 491,
+        faction: "First Order",
+        ship: "TIE/WI Whisper",
+        skill: 4,
+        points: 47,
+        slots: ["Talent", "Talent", "Missile", "Tech", "Tech", "Configuration"]
+      }, {
+        name: "Red Fury Zealot",
+        id: 492,
+        faction: "First Order",
+        ship: "TIE/WI Whisper",
+        skill: 2,
+        points: 44,
+        slots: ["Talent", "Missile", "Tech", "Tech", "Configuration"]
+      }, {
+        name: '"Breach"',
+        id: 493,
+        unique: true,
+        faction: "First Order",
+        ship: "TIE/Se Bomber",
+        skill: 5,
+        points: 36,
+        slots: ["Talent", "Tech", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
+      }, {
+        name: '"Scorch" (TIE/Se Bomber)',
+        canonical_name: '"Scorch"'.canonicalize(),
+        xws: "scorch-tiesebomber",
+        id: 494,
+        unique: true,
+        faction: "First Order",
+        ship: "TIE/Se Bomber",
+        skill: 4,
+        points: 35,
+        slots: ["Talent", "Tech", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
+      }, {
+        name: '"Dread"',
+        id: 495,
+        unique: true,
+        faction: "First Order",
+        ship: "TIE/Se Bomber",
+        skill: 3,
+        points: 32,
+        slots: ["Tech", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
+      }, {
+        name: '"Grudge"',
+        id: 496,
+        unique: true,
+        faction: "First Order",
+        ship: "TIE/Se Bomber",
+        skill: 2,
+        points: 36,
+        slots: ["Tech", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
+      }, {
+        name: "First Order Cadet",
+        id: 497,
+        faction: "First Order",
+        ship: "TIE/Se Bomber",
+        skill: 3,
+        points: 32,
+        slots: ["Talent", "Tech", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
+      }, {
+        name: "Sienar-Jaemus Test Pilot",
+        id: 498,
+        faction: "First Order",
+        ship: "TIE/Se Bomber",
+        skill: 2,
+        points: 31,
+        slots: ["Tech", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
       }
     ],
     upgradesById: [
@@ -5504,7 +5799,7 @@ exportObj.basicCardData = function() {
         name: "R2 Astromech",
         id: 2,
         slot: "Astromech",
-        pointsarray: [3, 4, 5, 8],
+        pointsarray: [3, 3, 5, 8],
         variableagility: true,
         charge: 2
       }, {
@@ -5580,7 +5875,7 @@ exportObj.basicCardData = function() {
         name: "Heavy Laser Cannon",
         id: 10,
         slot: "Cannon",
-        points: 5,
+        points: 4,
         attackbull: 4,
         range: "2-3"
       }, {
@@ -5608,7 +5903,7 @@ exportObj.basicCardData = function() {
         name: "Admiral Sloane",
         id: 14,
         slot: "Crew",
-        points: 12,
+        points: 16,
         unique: true,
         faction: "Galactic Empire"
       }, {
@@ -5623,7 +5918,7 @@ exportObj.basicCardData = function() {
         name: "Boba Fett",
         id: 16,
         slot: "Crew",
-        points: 4,
+        points: 2,
         unique: true,
         faction: "Scum and Villainy"
       }, {
@@ -5637,7 +5932,7 @@ exportObj.basicCardData = function() {
         name: "C-3PO",
         id: 18,
         slot: "Crew",
-        points: 8,
+        points: 7,
         unique: true,
         faction: "Rebel Alliance",
         modifier_func: function(stats) {
@@ -5673,7 +5968,7 @@ exportObj.basicCardData = function() {
         id: 22,
         slot: "Crew",
         xws: "chewbacca-crew",
-        points: 4,
+        points: 3,
         unique: true,
         faction: "Scum and Villainy"
       }, {
@@ -5689,7 +5984,7 @@ exportObj.basicCardData = function() {
         name: "Ciena Ree",
         id: 24,
         slot: "Crew",
-        points: 6,
+        points: 4,
         unique: true,
         faction: "Galactic Empire",
         restrictions: [["Action", "Coordinate"]]
@@ -5740,7 +6035,7 @@ exportObj.basicCardData = function() {
         name: "Emperor Palpatine",
         id: 29,
         slot: "Crew",
-        points: 11,
+        points: 12,
         force: 1,
         unique: true,
         faction: "Galactic Empire",
@@ -5768,7 +6063,7 @@ exportObj.basicCardData = function() {
         name: 'GNK "Gonk" Droid',
         id: 32,
         slot: "Crew",
-        points: 8,
+        points: 5,
         charge: 1
       }, {
         name: "Grand Inquisitor",
@@ -5821,13 +6116,13 @@ exportObj.basicCardData = function() {
         name: "ISB Slicer",
         id: 38,
         slot: "Crew",
-        points: 3,
+        points: 1,
         faction: "Galactic Empire"
       }, {
         name: "Jabba the Hutt",
         id: 39,
         slot: "Crew",
-        points: 6,
+        points: 11,
         unique: true,
         faction: "Scum and Villainy",
         charge: 4,
@@ -5840,14 +6135,13 @@ exportObj.basicCardData = function() {
         name: "Jyn Erso",
         id: 40,
         slot: "Crew",
-        points: 2,
+        points: 3,
         unique: true,
         faction: "Rebel Alliance"
       }, {
         name: "Kanan Jarrus",
         id: 41,
         slot: "Crew",
-        keyword: ["Light Side"],
         points: 12,
         force: 1,
         unique: true,
@@ -5907,9 +6201,9 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         points: 10,
         unique: true,
+        keyword: ["Dark Side"],
         faction: ["Scum and Villainy", "Rebel Alliance"],
         force: 1,
-        keyword: ["Dark Side"],
         restrictions: [["orUnique", "Ezra Bridger"], ["Faction", "Scum and Villainy"]],
         modifier_func: function(stats) {
           return stats.force += 1;
@@ -5925,7 +6219,7 @@ exportObj.basicCardData = function() {
         name: "Moff Jerjerrod",
         id: 50,
         slot: "Crew",
-        points: 8,
+        points: 7,
         unique: true,
         faction: "Galactic Empire",
         charge: 2,
@@ -5935,7 +6229,7 @@ exportObj.basicCardData = function() {
         name: "Magva Yarro",
         id: 51,
         slot: "Crew",
-        points: 7,
+        points: 5,
         unique: true,
         faction: "Rebel Alliance"
       }, {
@@ -5968,7 +6262,7 @@ exportObj.basicCardData = function() {
         name: "Novice Technician",
         id: 53,
         slot: "Crew",
-        points: 4
+        points: 2
       }, {
         name: "Perceptive Copilot",
         id: 54,
@@ -6025,7 +6319,7 @@ exportObj.basicCardData = function() {
         name: "Tactical Officer",
         id: 61,
         slot: "Crew",
-        points: 6,
+        points: 3,
         restrictions: [["Action", "R-Coordinate"]],
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'Coordinate') < 0) {
@@ -6129,18 +6423,17 @@ exportObj.basicCardData = function() {
         name: "Sense",
         id: 75,
         slot: "Force",
-        points: 5
+        points: 6
       }, {
         name: "Agile Gunner",
         id: 76,
         slot: "Gunner",
-        pointsarray: [6, 5, 4, 3],
-        variablebase: true
+        points: 3
       }, {
         name: "Bistan",
         id: 77,
         slot: "Gunner",
-        points: 10,
+        points: 8,
         unique: true,
         faction: "Rebel Alliance"
       }, {
@@ -6171,7 +6464,7 @@ exportObj.basicCardData = function() {
         name: "Ezra Bridger",
         id: 81,
         slot: "Gunner",
-        points: 12,
+        points: 10,
         force: 1,
         unique: true,
         faction: "Rebel Alliance",
@@ -6203,7 +6496,7 @@ exportObj.basicCardData = function() {
         id: 84,
         slot: "Gunner",
         xws: "hansolo",
-        points: 12,
+        points: 10,
         unique: true,
         faction: "Rebel Alliance"
       }, {
@@ -6211,14 +6504,14 @@ exportObj.basicCardData = function() {
         id: 85,
         slot: "Gunner",
         xws: "hansolo-gunner",
-        points: 10,
+        points: 9,
         unique: true,
         faction: "Scum and Villainy"
       }, {
         name: "Hotshot Gunner",
         id: 86,
         slot: "Gunner",
-        points: 7
+        points: 6
       }, {
         name: "Luke Skywalker",
         id: 87,
@@ -6239,20 +6532,20 @@ exportObj.basicCardData = function() {
         name: "Veteran Tail Gunner",
         id: 89,
         slot: "Gunner",
-        points: 4,
+        points: 2,
         restrictions: [["AttackArc", "Rear Arc"]]
       }, {
         name: "Veteran Turret Gunner",
         id: 90,
         slot: "Gunner",
-        pointsarray: [11, 8, 7, 7],
+        pointsarray: [9, 8, 7, 7],
         variablebase: true,
         restrictions: [["Action", "Rotate Arc"]]
       }, {
         name: "Cloaking Device",
         id: 91,
         slot: "Illicit",
-        points: 4,
+        points: 3,
         unique: true,
         charge: 2,
         restrictions: [["Base", "Small or Medium"]]
@@ -6284,6 +6577,7 @@ exportObj.basicCardData = function() {
         slot: "Illicit",
         points: 4,
         charge: 1,
+        applies_condition: 'Loose Cargo'.canonicalize(),
         restrictions: [["Base", "Medium or Large"]]
       }, {
         name: "Barrage Rockets",
@@ -6348,7 +6642,7 @@ exportObj.basicCardData = function() {
         name: "Ablative Plating",
         id: 103,
         slot: "Modification",
-        points: 6,
+        points: 4,
         charge: 2,
         restrictions: [["Base", "Medium or Large"]]
       }, {
@@ -6374,7 +6668,7 @@ exportObj.basicCardData = function() {
         name: "Engine Upgrade",
         id: 107,
         slot: "Modification",
-        pointsarray: [2, 4, 7],
+        pointsarray: [3, 4, 7],
         variablebase: true,
         restrictions: [["Action", "R-Boost"]],
         modifier_func: function(stats) {
@@ -6391,7 +6685,7 @@ exportObj.basicCardData = function() {
         name: "Static Discharge Vanes",
         id: 109,
         slot: "Modification",
-        points: 6
+        points: 5
       }, {
         name: "Tactical Scrambler",
         id: 110,
@@ -6402,7 +6696,8 @@ exportObj.basicCardData = function() {
         name: "Advanced Sensors",
         id: 111,
         slot: "Sensor",
-        points: 10
+        pointsarray: [13, 11, 9],
+        variablebase: true
       }, {
         name: "Collision Detector",
         id: 112,
@@ -6436,12 +6731,12 @@ exportObj.basicCardData = function() {
         id: 117,
         slot: "Talent",
         points: 2,
-        restrictions: [["Action", "Boost"], ["Base", "Small"]]
+        restrictions: [["Action", "W-Boost"], ["Base", "Small"]]
       }, {
         name: "Debris Gambit",
         id: 118,
         slot: "Talent",
-        points: 4,
+        points: 3,
         restrictions: [["Base", "Small or Medium"]],
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'R-Evade') < 0) {
@@ -6452,7 +6747,7 @@ exportObj.basicCardData = function() {
         name: "Elusive",
         id: 119,
         slot: "Talent",
-        points: 3,
+        points: 2,
         charge: 1,
         restrictions: [["Base", "Small or Medium"]]
       }, {
@@ -6482,7 +6777,7 @@ exportObj.basicCardData = function() {
         name: "Juke",
         id: 123,
         slot: "Talent",
-        points: 7,
+        points: 6,
         restrictions: [["Base", "Small or Medium"]]
       }, {
         name: "Lone Wolf",
@@ -6517,7 +6812,7 @@ exportObj.basicCardData = function() {
         name: "Saturation Salvo",
         id: 129,
         slot: "Talent",
-        points: 4,
+        points: 3,
         restrictions: [["Action", "Reload"]]
       }, {
         name: "Selfless",
@@ -6797,7 +7092,7 @@ exportObj.basicCardData = function() {
         name: "Outrider",
         id: 157,
         slot: "Title",
-        points: 14,
+        points: 6,
         unique: true,
         faction: "Rebel Alliance",
         ship: "YT-2400"
@@ -6846,7 +7141,7 @@ exportObj.basicCardData = function() {
         name: "ST-321",
         id: 162,
         slot: "Title",
-        points: 4,
+        points: 3,
         unique: true,
         faction: "Galactic Empire",
         ship: "Lambda-Class Shuttle"
@@ -6915,7 +7210,7 @@ exportObj.basicCardData = function() {
         slot: "Title",
         unique: true,
         charge: 1,
-        points: 5,
+        points: 4,
         faction: "Resistance",
         ship: "T-70 X-Wing",
         modifier_func: function(stats) {
@@ -6927,8 +7222,7 @@ exportObj.basicCardData = function() {
         name: "Heroic",
         id: 172,
         slot: "Talent",
-        pointsarray: [1, 1, 1, 2],
-        variableagility: true,
+        points: 2,
         faction: "Resistance"
       }, {
         name: "Rose Tico",
@@ -6963,7 +7257,7 @@ exportObj.basicCardData = function() {
         name: "Targeting Synchronizer",
         id: 177,
         slot: "Tech",
-        points: 4,
+        points: 3,
         restrictions: [["Action", "Lock"]]
       }, {
         name: "Primed Thrusters",
@@ -6976,7 +7270,7 @@ exportObj.basicCardData = function() {
         name: "Kylo Ren",
         id: 179,
         slot: "Crew",
-        points: 11,
+        points: 9,
         force: 1,
         faction: "First Order",
         unique: true,
@@ -6988,7 +7282,7 @@ exportObj.basicCardData = function() {
         name: "General Hux",
         id: 180,
         slot: "Crew",
-        points: 6,
+        points: 3,
         unique: true,
         faction: "First Order",
         restrictions: [["Action", "Coordinate"]]
@@ -6996,7 +7290,7 @@ exportObj.basicCardData = function() {
         name: "Fanatical",
         id: 181,
         slot: "Talent",
-        points: 2,
+        points: 1,
         faction: "First Order"
       }, {
         name: "Special Forces Gunner",
@@ -7045,7 +7339,7 @@ exportObj.basicCardData = function() {
         id: 187,
         slot: "Gunner",
         xws: "rey-gunner",
-        points: 13,
+        points: 10,
         unique: true,
         force: 1,
         faction: "Resistance",
@@ -7117,14 +7411,14 @@ exportObj.basicCardData = function() {
         name: "Petty Officer Thanisson",
         id: 194,
         slot: "Crew",
-        points: 4,
+        points: 3,
         unique: true,
         faction: "First Order"
       }, {
         name: "BB-8",
         id: 195,
         slot: "Astromech",
-        pointsarray: [2, 3, 4, 5, 6, 7, 8],
+        pointsarray: [1, 2, 3, 4, 5, 6, 7],
         variableinit: true,
         charge: 2,
         unique: true,
@@ -7141,14 +7435,14 @@ exportObj.basicCardData = function() {
         name: "M9-G8",
         id: 197,
         slot: "Astromech",
-        points: 6,
+        points: 5,
         unique: true,
         faction: "Resistance"
       }, {
         name: "Ferrosphere Paint",
         id: 198,
         slot: "Tech",
-        points: 4,
+        points: 3,
         faction: "Resistance"
       }, {
         name: "Brilliant Evasion",
@@ -7160,7 +7454,7 @@ exportObj.basicCardData = function() {
         id: 200,
         slot: "Configuration",
         ship: "Delta-7 Aethersprite",
-        pointsarray: [0, 0, 1, 2, 3, 4, 5],
+        pointsarray: [2, 2, 3, 4, 5, 6, 7],
         variableinit: true,
         restrictions: [["Slot", "Modification"]],
         validation_func: function(ship, upgrade_obj) {
@@ -7172,7 +7466,7 @@ exportObj.basicCardData = function() {
         id: 201,
         slot: "Configuration",
         ship: "Delta-7 Aethersprite",
-        pointsarray: [4, 4, 8, 12, 16, 20, 24],
+        pointsarray: [6, 6, 10, 14, 17, 20, 24],
         variableinit: true,
         modifier_func: function(stats) {
           stats.attack += 1;
@@ -7195,8 +7489,7 @@ exportObj.basicCardData = function() {
         name: "Hate",
         id: 204,
         slot: "Force",
-        pointsarray: [3, 6, 9],
-        variablebase: true,
+        points: 4,
         restrictions: [["Keyword", "Dark Side"]]
       }, {
         name: "R5-X3",
@@ -7223,7 +7516,7 @@ exportObj.basicCardData = function() {
         id: 208,
         ship: "Vulture-class Droid Fighter",
         slot: "Configuration",
-        points: 1
+        points: 0
       }, {
         name: "Energy-Shell Charges",
         id: 209,
@@ -7281,7 +7574,8 @@ exportObj.basicCardData = function() {
         id: 215,
         slot: "Modification",
         charge: 1,
-        points: 4,
+        points: 3,
+        applies_condition: 'Spare Parts'.canonicalize(),
         restrictions: [["Equipped", "Astromech"]]
       }, {
         name: "Scimitar",
@@ -7290,7 +7584,7 @@ exportObj.basicCardData = function() {
         ship: "Sith Infiltrator",
         slot: "Title",
         faction: "Separatist Alliance",
-        points: 4,
+        points: 3,
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'R-Cloak') < 0) {
             stats.actions.push('R-Cloak');
@@ -7320,7 +7614,7 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         force: 1,
         faction: "Separatist Alliance",
-        points: 10,
+        points: 14,
         modifier_func: function(stats) {
           return stats.force += 1;
         }
@@ -7356,7 +7650,7 @@ exportObj.basicCardData = function() {
         slot: "Tactical Relay",
         solitary: true,
         faction: "Separatist Alliance",
-        points: 11,
+        points: 10,
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'Calculate') < 0) {
             return stats.actions.push('Calculate');
@@ -7399,7 +7693,7 @@ exportObj.basicCardData = function() {
         charge: 1,
         slot: "Gunner",
         faction: "Galactic Republic",
-        points: 9
+        points: 8
       }, {
         name: "Treacherous",
         id: 228,
@@ -7422,18 +7716,16 @@ exportObj.basicCardData = function() {
         name: "GA-97",
         id: 230,
         slot: "Crew",
-        points: 6,
+        points: 5,
         charge: 5,
         recurring: 1,
         faction: "Resistance",
         unique: true,
+        applies_condition: 'It\'s The Resistance'.canonicalize(),
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'Calculate') < 0) {
-            stats.actions.push('Calculate');
+            return stats.actions.push('Calculate');
           }
-          return {
-            applies_condition: 'It\'s the Resistance'.canonicalize()
-          };
         }
       }, {
         name: "Kaydel Connix",
@@ -7446,7 +7738,7 @@ exportObj.basicCardData = function() {
         name: "Autoblasters",
         id: 232,
         slot: "Cannon",
-        points: 3,
+        points: 4,
         attack: 2,
         range: "1-2"
       }, {
@@ -7454,7 +7746,7 @@ exportObj.basicCardData = function() {
         id: 233,
         unique: true,
         slot: "Astromech",
-        points: 5,
+        points: 3,
         faction: "Galactic Republic"
       }, {
         name: "Plasma Torpedoes",
@@ -7470,7 +7762,7 @@ exportObj.basicCardData = function() {
         id: 235,
         unique: true,
         slot: "Device",
-        points: 10,
+        points: 8,
         charge: 1,
         restrictions: [["Action", "Reload"], ["Slot", "Modification"]],
         validation_func: function(ship, upgrade_obj) {
@@ -7488,7 +7780,7 @@ exportObj.basicCardData = function() {
         id: 237,
         ship: "Hyena-Class Droid Bomber",
         slot: "Configuration",
-        points: 1
+        points: 0
       }, {
         name: "Diamond-Boron Missiles",
         id: 238,
@@ -7518,7 +7810,7 @@ exportObj.basicCardData = function() {
         slot: "Sensor",
         charge: 1,
         recurring: 1,
-        pointsarray: [2, 2, 2, 2, 2, 4, 6, 8, 10],
+        pointsarray: [4, 4, 4, 4, 5, 6, 7],
         variableinit: true
       }, {
         name: "R2-A6",
@@ -7549,7 +7841,7 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         faction: "Resistance",
         force: 1,
-        points: 17,
+        points: 16,
         restrictions: [["Slot", "Crew"]],
         validation_func: function(ship, upgrade_obj) {
           return upgrade_obj.occupiesAnUpgradeSlot(upgrade_obj.slot);
@@ -7584,7 +7876,7 @@ exportObj.basicCardData = function() {
         name: "Angled Deflectors",
         id: 247,
         slot: "Modification",
-        pointsarray: [6, 3, 2, 1],
+        pointsarray: [6, 3, 1, 1],
         variableagility: true,
         restrictions: [["ShieldsGreaterThan", 0], ["Base", "Small or Medium"]],
         modifier_func: function(stats) {
@@ -7620,7 +7912,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Foresight",
         slot: "Force",
-        points: 4,
+        points: 5,
         id: 251,
         attackbull: 2,
         range: "1-3",
@@ -7651,7 +7943,7 @@ exportObj.basicCardData = function() {
         unique: true,
         slot: "Crew",
         xws: "c3po-republic",
-        points: 8,
+        points: 7,
         faction: "Galactic Republic",
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'Calculate') < 0) {
@@ -7668,7 +7960,7 @@ exportObj.basicCardData = function() {
         name: "Snap Shot",
         id: 256,
         slot: "Talent",
-        pointsarray: [7, 8, 9, 12],
+        pointsarray: [7, 8, 9, 10],
         variablebase: true,
         attack: 2,
         range: "2",
@@ -7701,7 +7993,7 @@ exportObj.basicCardData = function() {
         name: "Dreadnought Hunter",
         id: 260,
         slot: "Command",
-        points: 6,
+        points: 3,
         max_per_squad: 2,
         restrictions: [["Base", "Small"], ["InitiativeGreaterThan", 3]]
       }, {
@@ -7735,6 +8027,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         slot: "Command",
         points: 8,
+        charge: 4,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
         validation_func: function(ship, upgrade_obj) {
           return upgrade_obj.occupiesAnUpgradeSlot("Crew");
@@ -7746,7 +8039,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Rebel Alliance",
         slot: "Command",
-        points: 6,
+        points: 4,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
         validation_func: function(ship, upgrade_obj) {
           return upgrade_obj.occupiesAnUpgradeSlot("Crew");
@@ -7758,7 +8051,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Rebel Alliance",
         slot: "Command",
-        points: 4,
+        points: 3,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
         validation_func: function(ship, upgrade_obj) {
           return upgrade_obj.occupiesAnUpgradeSlot("Crew");
@@ -7769,7 +8062,7 @@ exportObj.basicCardData = function() {
         id: 266,
         unique: true,
         slot: "Command",
-        points: 12,
+        points: 8,
         faction: "Rebel Alliance",
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
         validation_func: function(ship, upgrade_obj) {
@@ -7815,7 +8108,7 @@ exportObj.basicCardData = function() {
         name: "Targeting Battery",
         id: 270,
         slot: "Hardpoint",
-        points: 6,
+        points: 5,
         attackt: 3,
         range: "2-5",
         modifier_func: function(stats) {
@@ -7844,7 +8137,7 @@ exportObj.basicCardData = function() {
         name: "Turbolaser Battery",
         id: 273,
         slot: "Hardpoint",
-        points: 13,
+        points: 10,
         attackt: 3,
         range: "3-5",
         restrictions: [["EnergyGreatterThan", 4]],
@@ -7878,7 +8171,7 @@ exportObj.basicCardData = function() {
         name: "Comms Team",
         id: 276,
         slot: "Team",
-        points: 8,
+        points: 7,
         modifier_func: function(stats) {
           stats.actions.push('*Coordinate');
           stats.actions.push('> Calculate');
@@ -7898,7 +8191,7 @@ exportObj.basicCardData = function() {
         name: "Gunnery Specialists",
         id: 278,
         slot: "Team",
-        points: 8,
+        points: 5,
         modifier_func: function(stats) {
           stats.actions.push('*Rotate Arc');
           return stats.actions.push('> Calculate');
@@ -7918,7 +8211,7 @@ exportObj.basicCardData = function() {
         name: "Ordnance Team",
         id: 280,
         slot: "Team",
-        points: 4,
+        points: 2,
         modifier_func: function(stats) {
           stats.actions.push('*Reload');
           return stats.actions.push('> Calculate');
@@ -7927,7 +8220,7 @@ exportObj.basicCardData = function() {
         name: "Sensor Experts",
         id: 281,
         slot: "Team",
-        points: 10,
+        points: 6,
         modifier_func: function(stats) {
           stats.actions.push('*Lock');
           return stats.actions.push('> Calculate');
@@ -7936,12 +8229,12 @@ exportObj.basicCardData = function() {
         name: "Adaptive Shields",
         id: 282,
         slot: "Cargo",
-        points: 10
+        points: 5
       }, {
         name: "Boosted Scanners",
         id: 283,
         slot: "Cargo",
-        points: 8
+        points: 7
       }, {
         id: 284,
         skip: true
@@ -7968,6 +8261,7 @@ exportObj.basicCardData = function() {
         id: 288,
         slot: "Illicit",
         points: 3,
+        unique: true,
         restrictions: [["Base", "Huge"]]
       }, {
         name: "Scanner Baffler",
@@ -7982,7 +8276,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "CR90 Corellian Corvette",
         faction: "Rebel Alliance",
-        points: 8,
+        points: 4,
         modifier_func: function(stats) {
           stats.shields -= 2;
           stats.actions.push('*Evade');
@@ -8006,7 +8300,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "CR90 Corellian Corvette",
         faction: "Rebel Alliance",
-        points: 6,
+        points: 4,
         modifier_func: function(stats) {
           stats.shields += 1;
           return stats.energy -= 1;
@@ -8029,7 +8323,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "CR90 Corellian Corvette",
         faction: "Rebel Alliance",
-        points: 6,
+        points: 5,
         confersAddons: [
           {
             type: exportObj.Upgrade,
@@ -8086,7 +8380,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "Raider-class Corvette",
         faction: "Galactic Empire",
-        points: 7,
+        points: 5,
         modifier_func: function(stats) {
           stats.shields -= 2;
           return stats.hull += 2;
@@ -8144,7 +8438,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "Gozanti-class Cruiser",
         faction: "Galactic Empire",
-        points: 5,
+        points: 8,
         modifier_func: function(stats) {
           stats.shields -= 1;
           return stats.energy += 2;
@@ -8192,7 +8486,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "Gozanti-class Cruiser",
         faction: "Galactic Empire",
-        points: 8,
+        points: 7,
         confersAddons: [
           {
             type: exportObj.Upgrade,
@@ -8272,7 +8566,7 @@ exportObj.basicCardData = function() {
         slot: "Configuration",
         ship: "C-ROC Cruiser",
         max_per_squad: 2,
-        points: 15,
+        points: 6,
         modifier_func: function(stats) {
           stats.hull += 2;
           stats.shields -= 2;
@@ -8336,7 +8630,7 @@ exportObj.basicCardData = function() {
         id: 313,
         slot: "Configuration",
         ship: "B-Wing",
-        points: 2,
+        points: 0,
         modifier_func: function(stats) {
           stats.actions.push('*Barrel Roll');
           stats.actions.push('R-> Evade');
@@ -8350,7 +8644,7 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         faction: "Rebel Alliance",
         unique: true,
-        points: 7,
+        points: 6,
         modifier_func: function(stats) {
           stats.actions.push('Calculate');
           return stats.actions.push('Jam');
@@ -8362,7 +8656,7 @@ exportObj.basicCardData = function() {
         ship: "Fireball",
         faction: "Resistance",
         unique: true,
-        points: 2
+        points: 1
       }, {
         name: "Cluster Mines",
         id: 316,
@@ -8374,14 +8668,14 @@ exportObj.basicCardData = function() {
         name: "Ion Bombs",
         id: 317,
         slot: "Device",
-        points: 3,
+        points: 4,
         charge: 2,
         applies_condition: 'Ion Bomb'.canonicalize()
       }, {
         name: "Deuterium Power Cells",
         id: 318,
         slot: "Tech",
-        points: 9,
+        points: 8,
         charge: 2,
         faction: "First Order",
         restrictions: [["Slot", "Modification"]],
@@ -8416,7 +8710,7 @@ exportObj.basicCardData = function() {
         unique: true,
         force: 2,
         faction: "Galactic Republic",
-        points: 15,
+        points: 12,
         modifier_func: function(stats) {
           stats.force += 2;
           if (__indexOf.call(stats.actions, 'F-Coordinate') < 0) {
@@ -8429,7 +8723,7 @@ exportObj.basicCardData = function() {
         slot: "Configuration",
         ship: "HMP Droid Gunship",
         faction: "Separatist Alliance",
-        points: 3
+        points: 0
       }, {
         name: "Agent Terex",
         id: 324,
@@ -8444,7 +8738,7 @@ exportObj.basicCardData = function() {
         unique: true,
         force: 1,
         faction: "Galactic Republic",
-        points: 10,
+        points: 9,
         modifier_func: function(stats) {
           stats.force += 1;
           if (__indexOf.call(stats.actions, 'F-Reinforce') < 0) {
@@ -8455,7 +8749,7 @@ exportObj.basicCardData = function() {
         name: "Multi-Missile Pods",
         id: 326,
         slot: "Missile",
-        points: 6,
+        points: 4,
         attackf: 2,
         range: "1-2",
         rangebonus: true,
@@ -8472,7 +8766,7 @@ exportObj.basicCardData = function() {
         unique: true,
         force: 1,
         faction: "Galactic Republic",
-        points: 9,
+        points: 8,
         modifier_func: function(stats) {
           stats.force += 1;
           if (__indexOf.call(stats.actions, 'F-Evade') < 0) {
@@ -8486,7 +8780,7 @@ exportObj.basicCardData = function() {
         unique: true,
         force: 1,
         faction: "Galactic Republic",
-        points: 16,
+        points: 14,
         modifier_func: function(stats) {
           stats.force += 1;
           stats.actions.push('*Focus');
@@ -8498,7 +8792,7 @@ exportObj.basicCardData = function() {
         slot: "Configuration",
         ship: "TIE/rb Heavy",
         faction: "Galactic Empire",
-        points: 2,
+        points: 0,
         modifier_func: function(stats) {
           var turn, _i, _results;
           stats.actions.push('Calculate');
@@ -8520,7 +8814,7 @@ exportObj.basicCardData = function() {
         name: "Ion Limiter Override",
         id: 330,
         slot: "Talent",
-        points: 3,
+        points: 2,
         restrictions: [["Keyword", "TIE"]]
       }, {
         name: "Marg Sabl Closure",
@@ -8537,13 +8831,13 @@ exportObj.basicCardData = function() {
         rangebonus: true,
         max_per_squad: 2,
         charge: 2,
-        points: 2
+        points: 4
       }, {
         name: "Hondo Ohnaka",
         id: 333,
         unique: true,
         slot: "Crew",
-        points: 6
+        points: 5
       }, {
         name: "Boba Fett (Separatist)",
         canonical_name: 'Boba Fett'.canonicalize(),
@@ -8559,7 +8853,7 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         unique: true,
         faction: ["Scum and Villainy", "Separatist Alliance"],
-        points: 7
+        points: 6
       }, {
         name: "Zam Wesell",
         id: 336,
@@ -8567,14 +8861,14 @@ exportObj.basicCardData = function() {
         unique: true,
         charge: 2,
         faction: ["Scum and Villainy", "Separatist Alliance"],
-        points: 4,
+        points: 11,
         applies_condition: ['You\'d Better Mean Business'.canonicalize(), 'You Should Thank Me'.canonicalize()]
       }, {
         name: 'Alpha-3B "Besh"',
         id: 337,
         slot: "Configuration",
         ship: "Nimbus-class V-Wing",
-        points: 2,
+        points: 1,
         confersAddons: [
           {
             type: exportObj.Upgrade,
@@ -8585,7 +8879,7 @@ exportObj.basicCardData = function() {
         name: "Precision Ion Engines",
         id: 338,
         slot: "Modification",
-        points: 3,
+        points: 2,
         charge: 2,
         restrictions: [["Keyword", "TIE"], ["AgilityEquals", 3]]
       }, {
@@ -8593,7 +8887,7 @@ exportObj.basicCardData = function() {
         id: 339,
         slot: "Device",
         charge: 4,
-        points: 3,
+        points: 5,
         applies_condition: 'Thermal Detonator'.canonicalize()
       }, {
         name: "R2-D2 (Republic)",
@@ -8601,6 +8895,7 @@ exportObj.basicCardData = function() {
         id: 340,
         charge: 2,
         unique: true,
+        xws: "r2d2-republic",
         faction: "Galactic Republic",
         slot: "Astromech",
         pointsarray: [4, 6, 8, 10],
@@ -8608,7 +8903,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Extreme Maneuvers",
         id: 341,
-        points: 4,
+        points: 5,
         slot: "Force",
         restrictions: [["Action", "Boost"], ["Base", "Small"]]
       }, {
@@ -8650,7 +8945,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "First Order",
         slot: "Crew",
-        points: 7
+        points: 6
       }, {
         name: "Automated Target Priority",
         id: 348,
@@ -8670,9 +8965,7 @@ exportObj.basicCardData = function() {
         name: "Suppressive Gunner",
         id: 350,
         slot: "Gunner",
-        points: 8,
-        pointsarray: [8, 7, 6, 3],
-        variablebase: true
+        points: 7
       }, {
         name: "Ghost Company",
         id: 351,
@@ -8720,7 +9013,7 @@ exportObj.basicCardData = function() {
         name: "Synced Laser Cannons",
         id: 354,
         slot: "Cannon",
-        points: 6,
+        points: 7,
         attack: 3,
         range: "2-3",
         restrictions: [["Slot", "Cannon"]],
@@ -8741,7 +9034,7 @@ exportObj.basicCardData = function() {
         slot: "Configuration",
         ship: "TIE/rb Heavy",
         faction: "Galactic Empire",
-        points: 3,
+        points: 1,
         modifier_func: function(stats) {
           stats.actions.push('Calculate');
           stats.actions.push('*Rotate Arc');
@@ -8758,6 +9051,7 @@ exportObj.basicCardData = function() {
         canonical_name: 'R2-D2'.canonicalize(),
         id: 358,
         slot: "Astromech",
+        xws: "r2d2-resistance",
         points: 6,
         unique: true,
         charge: 4,
@@ -8772,7 +9066,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Underslung Blaster Cannon",
         id: 360,
-        points: 3,
+        points: 2,
         slot: "Cannon",
         attackt: 2,
         range: "1",
@@ -8787,13 +9081,13 @@ exportObj.basicCardData = function() {
       }, {
         name: "Jedi Commander",
         id: 361,
-        points: 5,
+        points: 4,
         ship: ["Eta-2 Actis", "Delta-7 Aethersprite"],
         slot: "Command"
       }, {
         name: "Syliure-31 Hyperdrive",
         id: 362,
-        points: 0,
+        points: 3,
         slot: "Hyperdrive",
         ship: "Syliure-class Hyperspace Ring"
       }, {
@@ -8801,7 +9095,7 @@ exportObj.basicCardData = function() {
         id: 363,
         slot: "Configuration",
         ship: "Nimbus-class V-Wing",
-        points: 1,
+        points: 0,
         charge: 2,
         recurring: 1
       }, {
@@ -8815,7 +9109,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Q7 Astromech",
         id: 365,
-        points: 4,
+        points: 3,
         slot: "Astromech",
         faction: "Galactic Republic"
       }, {
@@ -8833,19 +9127,19 @@ exportObj.basicCardData = function() {
       }, {
         name: "Independent Calculations",
         id: 367,
-        points: 4,
+        points: 0,
         standardized: true,
         slot: "Modification",
         restrictions: [["Keyword", "Networked Calculations"]]
       }, {
         name: "Weapons Systems Officer",
         id: 368,
-        points: 7,
+        points: 5,
         slot: "Gunner"
       }, {
         name: "False Transponder Codes",
         id: 369,
-        points: 2,
+        points: 3,
         charge: 1,
         slot: "Illicit"
       }, {
@@ -8867,14 +9161,14 @@ exportObj.basicCardData = function() {
       }, {
         name: "Vectored Cannons (RZ-1)",
         id: 371,
-        points: 200,
+        points: 0,
         slot: "Configuration",
         standardized: true,
         restrictions: [["Keyword", "Vectored Thrusters"]]
       }, {
         name: "B6 Blade Wing Prototype",
         id: 372,
-        points: 200,
+        points: 1,
         unique: true,
         slot: "Title",
         ship: "B-Wing",
@@ -8888,7 +9182,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "TIE Defender Elite",
         id: 373,
-        points: 200,
+        points: 0,
         slot: "Configuration",
         faction: "Galactic Empire",
         ship: "TIE Defender",
@@ -8918,33 +9212,34 @@ exportObj.basicCardData = function() {
       }, {
         name: "Sensitive Controls",
         id: 374,
-        points: 200,
+        points: 0,
         slot: "Configuration",
         standardized: true,
         restrictions: [["Keyword", "Autothrusters"]]
       }, {
         name: "Cutthroat",
         id: 375,
-        points: 200,
+        points: 2,
         slot: "Talent",
         faction: "Scum and Villainy"
       }, {
         name: "Tierfon Belly Run",
         id: 376,
-        points: 200,
+        points: 1,
         slot: "Talent",
-        ship: "Y-Wing"
+        restrictions: [["Keyword", "Y-Wing"]]
       }, {
         name: "B6 Blade Wing Prototype (Epic)",
         canonical_name: 'B6 Blade Wing Prototype'.canonicalize(),
+        xws: "b6bladewingprototype-command",
         id: 377,
-        points: 200,
+        points: 4,
         unique: true,
         slot: "Command",
         ship: "B-Wing",
         faction: "Rebel Alliance",
         attack: 3,
-        range: 2 - 4,
+        range: "2-4",
         confersAddons: [
           {
             type: exportObj.Upgrade,
@@ -8958,41 +9253,44 @@ exportObj.basicCardData = function() {
       }, {
         name: "Hopeful",
         id: 378,
-        points: 200,
+        points: 1,
         slot: "Talent",
         faction: "Rebel Alliance"
       }, {
         name: "Sabine Wren (Gunner)",
         canonical_name: 'Sabine Wren'.canonicalize(),
+        xws: "sabinewren-gunner",
         id: 379,
-        points: 200,
+        points: 2,
         unique: true,
         slot: "Gunner",
         faction: "Rebel Alliance"
       }, {
         name: "Phoenix Squadron",
         id: 380,
-        points: 200,
+        points: 4,
         unique: true,
         slot: "Command",
-        faction: "Rebel Alliance"
+        faction: "Rebel Alliance",
+        ship: "VCX-100"
       }, {
         name: "Disciplined",
         id: 381,
-        points: 200,
+        points: 2,
         slot: "Talent",
         faction: "Galactic Empire"
       }, {
         name: "Skystrike Academy Class",
         id: 382,
-        points: 200,
+        points: 3,
         max_per_squad: 2,
         slot: "Command",
-        faction: "Galactic Empire"
+        faction: "Galactic Empire",
+        ship: ["TIE Fighter", "TIE Interceptor"]
       }, {
         name: "Shadow Wing",
         id: 383,
-        points: 200,
+        points: 4,
         unique: true,
         slot: "Command",
         faction: "Galactic Empire",
@@ -9000,22 +9298,22 @@ exportObj.basicCardData = function() {
       }, {
         name: "In It For The Money",
         id: 384,
-        points: 200,
+        points: 1,
         slot: "Command",
         faction: "Scum and Villainy",
-        restrictions: [["isUnique", true], ["Format", "Standard"]]
+        restrictions: [["isUnique", true], ["Base", "Standard"]]
       }, {
         name: "Bounty",
         id: 385,
-        points: 200,
+        points: 1,
         slot: "Command",
         faction: "Scum and Villainy",
-        restrictions: [["isUnique", true], ["Format", "Standard"]]
+        restrictions: [["isUnique", true], ["Base", "Standard"]]
       }, {
         name: "Gamut Key",
         id: 386,
         unique: true,
-        points: 200,
+        points: 6,
         slot: "Crew",
         charge: 2,
         recurring: 1,
@@ -9023,10 +9321,377 @@ exportObj.basicCardData = function() {
       }, {
         name: "Interloper Turn",
         id: 387,
-        points: 200,
+        points: 1,
         slot: "Talent",
         recurring: 1,
         ship: "TIE Defender"
+      }, {
+        name: "Protectorate Gleb",
+        id: 388,
+        unique: true,
+        points: 6,
+        slot: "Crew",
+        faction: ["Galactic Empire", "First Order", "Scum and Villainy"],
+        modifier_func: function(stats) {
+          if (__indexOf.call(stats.actions, 'R-Coordinate') < 0) {
+            return stats.actions.push('R-Coordinate');
+          }
+        }
+      }, {
+        name: "R4-B11",
+        id: 389,
+        points: 3,
+        unique: true,
+        slot: "Astromech",
+        faction: "Scum and Villainy"
+      }, {
+        name: "Asajj Ventress (Command)",
+        canonical_name: 'Asajj Ventress'.canonicalize(),
+        id: 390,
+        unique: true,
+        slot: "Command",
+        points: 8,
+        faction: ["Scum and Villainy", "Separatist Alliance"],
+        restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"],
+        force: 1,
+        modifier_func: function(stats) {
+          stats.force += 1;
+          stats.actions.push('*Focus');
+          return stats.actions.push('F-> Coordinate');
+        }
+      }, {
+        name: "General Grievous (Command)",
+        canonical_name: 'General Grievous'.canonicalize(),
+        id: 391,
+        unique: true,
+        slot: "Command",
+        points: 5,
+        faction: "Separatist Alliance",
+        restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"]
+      }, {
+        name: "Hondo Ohnaka (Command)",
+        canonical_name: 'Hondo Ohnaka'.canonicalize(),
+        id: 392,
+        unique: true,
+        slot: "Command",
+        points: 7,
+        charge: 2,
+        restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"],
+        modifier_func: function(stats) {
+          stats.actions.push('*Coordinate');
+          return stats.actions.push('R-> Jam');
+        }
+      }, {
+        name: "Mar Tuuk",
+        id: 393,
+        unique: true,
+        slot: "Command",
+        points: 4,
+        faction: "Separatist Alliance",
+        restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"]
+      }, {
+        name: "Riff Tamson",
+        id: 394,
+        unique: true,
+        slot: "Command",
+        points: 6,
+        faction: "Separatist Alliance",
+        restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"]
+      }, {
+        name: "Zealous Captain",
+        id: 395,
+        unique: true,
+        slot: "Command",
+        points: 4,
+        restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"]
+      }, {
+        name: "Tractor Tentacles",
+        id: 396,
+        slot: "Hardpoint",
+        points: 0,
+        attackb: 2,
+        range: "1-2",
+        rangebonus: true,
+        ship: "Trident-class Assault Ship",
+        restrictions: [["Base", "Huge"]]
+      }, {
+        name: "Drill Beak",
+        id: 397,
+        slot: "Hardpoint",
+        points: 4,
+        attackb: 3,
+        range: "0-1",
+        rangebonus: true,
+        ship: "Trident-class Assault Ship",
+        restrictions: [["Slot", "Cargo"], ["Base", "Huge"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Cargo");
+        },
+        also_occupies_upgrades: ["Cargo"]
+      }, {
+        name: "Enhanced Propulsion",
+        id: 398,
+        slot: "Hardpoint",
+        points: 6,
+        ship: "Trident-class Assault Ship",
+        restrictions: [["Slot", "Cargo"], ["Base", "Huge"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Cargo");
+        },
+        also_occupies_upgrades: ["Cargo"]
+      }, {
+        name: "Proton Cannon Battery",
+        id: 399,
+        slot: "Hardpoint",
+        points: 10,
+        attackbull: 4,
+        range: "2-5",
+        restrictions: [["Slot", "Cargo"], ["Base", "Huge"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Cargo");
+        },
+        also_occupies_upgrades: ["Cargo"]
+      }, {
+        name: "Droid Crew",
+        id: 400,
+        slot: "Team",
+        points: 5,
+        faction: "Separatist Alliance",
+        modifier_func: function(stats) {
+          stats.actions.push('*Calculate');
+          return stats.actions.push('R-> Lock');
+        }
+      }, {
+        name: "Tractor Technicians",
+        id: 401,
+        slot: "Team",
+        points: 2
+      }, {
+        name: "Corsair Crew",
+        id: 402,
+        slot: "Team",
+        points: 5,
+        faction: "Scum and Villainy",
+        restrictions: [["Slot", "Gunner"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Gunner");
+        },
+        also_occupies_upgrades: ["Gunner"]
+      }, {
+        name: "Grappler",
+        id: 403,
+        unique: true,
+        slot: "Title",
+        ship: "Trident-class Assault Ship",
+        points: 3,
+        modifier_func: function(stats) {
+          stats.hull += 2;
+          return stats.shields -= 1;
+        }
+      }, {
+        name: "Nautolan's Revenge",
+        id: 404,
+        unique: true,
+        slot: "Title",
+        points: 2,
+        ship: "Trident-class Assault Ship",
+        faction: "Scum and Villainy",
+        modifier_func: function(stats) {
+          stats.hull -= 2;
+          stats.shields += 1;
+          return stats.energy += 1;
+        }
+      }, {
+        name: "Neimoidian Grasp",
+        id: 405,
+        unique: true,
+        slot: "Title",
+        points: 5,
+        ship: "Trident-class Assault Ship",
+        faction: "Separatist Alliance",
+        modifier_func: function(stats) {
+          return stats.shields -= 2;
+        }
+      }, {
+        name: "Trident",
+        id: 406,
+        unique: true,
+        slot: "Title",
+        points: 4,
+        ship: "Trident-class Assault Ship",
+        faction: "Separatist Alliance",
+        modifier_func: function(stats) {
+          return stats.energy += 1;
+        }
+      }, {
+        name: "Tracking Torpedoes",
+        id: 407,
+        slot: "Torpedo",
+        points: 8,
+        attack: 4,
+        charge: 3,
+        applies_condition: 'Tracking Torpedoes'.canonicalize(),
+        restrictions: [["Base", "Huge"]]
+      }, {
+        name: "L4E-R5",
+        id: 408,
+        unique: true,
+        slot: "Astromech",
+        points: 4,
+        faction: "Resistance",
+        restrictions: [["Action", "Rotate Arc"]],
+        modifier_func: function(stats) {
+          stats.actions.push('*Rotate Arc');
+          return stats.actions.push('> Calculate');
+        }
+      }, {
+        name: "Wartime Loadout",
+        id: 409,
+        slot: "Configuration",
+        points: 4,
+        ship: "BTA-NR2 Y-Wing",
+        standardized: true,
+        restrictions: [["Slot", "Modification"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Modification");
+        },
+        also_occupies_upgrades: ["Modification"],
+        modifier_func: function(stats) {
+          stats.actions.push('Lock');
+          stats.actions.push('Reload');
+          return stats.shields += 2;
+        },
+        confersAddons: [
+          {
+            type: exportObj.Upgrade,
+            slot: 'Torpedo'
+          }, {
+            type: exportObj.Upgrade,
+            slot: 'Missile'
+          }
+        ]
+      }, {
+        name: "Watchful Astromech",
+        id: 410,
+        slot: "Astromech",
+        points: 2
+      }, {
+        name: "Overtuned Modulators",
+        id: 411,
+        slot: "Illicit",
+        points: 3,
+        charge: 1
+      }, {
+        name: "DT-798",
+        id: 412,
+        unique: true,
+        faction: "First Order",
+        slot: "Gunner",
+        points: 5
+      }, {
+        name: "Enhanced Jamming Suite",
+        id: 413,
+        slot: "Configuration",
+        points: 0,
+        ship: "TIE/WI Whisper",
+        restrictions: [["Slot", "Tech"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Tech");
+        },
+        also_occupies_upgrades: ["Tech"],
+        modifier_func: function(stats) {
+          stats.actions.push('*Focus');
+          stats.actions.push('> Jam');
+          stats.actions.push('*Barrel Roll');
+          stats.actions.push('> Jam');
+          stats.actions.push('*Boost');
+          stats.actions.push('> Jam');
+          return stats.actions.push('Jam');
+        }
+      }, {
+        name: "First Order Ordnance Tech",
+        id: 414,
+        faction: "First Order",
+        slot: "Gunner",
+        points: 3,
+        modifier_func: function(stats) {
+          stats.actions.push('*Reload');
+          return stats.actions.push('> Lock');
+        }
+      }, {
+        name: "Sensor Scramblers",
+        id: 415,
+        ship: ["TIE/VN Silencer", "TIE/WI Whisper"],
+        slot: "Tech",
+        points: 1
+      }, {
+        name: "Babu Frik",
+        unique: true,
+        id: 416,
+        faction: ["Scum and Villainy", "Resistance"],
+        slot: "Illicit",
+        points: 7,
+        charge: 3
+      }, {
+        name: "Compassion",
+        id: 417,
+        points: 1,
+        slot: "Force",
+        restrictions: [["Keyword", "Light Side"]]
+      }, {
+        name: "Malice",
+        id: 418,
+        points: 6,
+        slot: "Force",
+        restrictions: [["Keyword", "Dark Side"]]
+      }, {
+        name: "Shattering Shot",
+        id: 419,
+        points: 3,
+        slot: "Force"
+      }, {
+        name: "Electro-Chaff Missiles",
+        id: 420,
+        points: 4,
+        slot: "Missile",
+        max_per_squad: 2,
+        charge: 1,
+        restrictions: [["Slot", "Device"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Device");
+        },
+        also_occupies_upgrades: ["Device"],
+        applies_condition: 'Electro-Chaff Cloud'.canonicalize()
+      }, {
+        name: "Feedback Ping",
+        id: 421,
+        points: 1,
+        slot: "Talent",
+        restrictions: [["Keyword", "TIE"], ["Action", "Reload"]]
       }
     ],
     conditionsById: [
@@ -9119,6 +9784,15 @@ exportObj.basicCardData = function() {
       }, {
         name: 'You\'d Better Mean Business',
         id: 26
+      }, {
+        name: 'Spare Parts',
+        id: 27
+      }, {
+        name: 'Electro-Chaff Cloud',
+        id: 28
+      }, {
+        name: 'Tracking Torpedoes',
+        id: 29
       }
     ],
     quickbuildsById: [
@@ -10168,7 +10842,6 @@ exportObj.basicCardData = function() {
         pilot: "Cavern Angels Zealot",
         ship: "X-Wing",
         threat: 2,
-        keyword: ["Partisan"],
         upgrades: ["R2 Astromech", "Deadman's Switch", "Servomotor S-Foils"]
       }, {
         id: 149,
@@ -11798,7 +12471,7 @@ exportObj.basicCardData = function() {
         wingmates: [2, 3, 4, 5],
         suffix: " and his wing",
         upgrades: ["Veteran Wing Leader", "Synchronized Console", "Brilliant Evasion", "Delta-7B"],
-        linkedId: 374,
+        wingmateId: 374,
         wingleader: true
       }, {
         id: 374,
@@ -12036,7 +12709,7 @@ exportObj.basicCardData = function() {
         wingmates: [2, 3, 4, 5],
         suffix: " and his wing",
         upgrades: ["Agent of the Empire", "Fire-Control System", "Supernatural Reflexes", "Cluster Missiles"],
-        linkedId: 407,
+        wingmateId: 407,
         wingleader: true
       }, {
         id: 407,
@@ -12057,7 +12730,7 @@ exportObj.basicCardData = function() {
         wingmates: [2, 3, 4, 5],
         suffix: " and his wing",
         upgrades: ["Veteran Wing Leader", "Targeting Synchronizer", "BB-8", "Black One"],
-        linkedId: 409,
+        wingmateId: 409,
         wingleader: true
       }, {
         id: 409,
@@ -12078,7 +12751,7 @@ exportObj.basicCardData = function() {
         wingmates: [2, 3],
         suffix: " and his wing",
         upgrades: ["First Order Elite", "Heightened Perception", "Dreadnought Hunter", "Proton Torpedoes"],
-        linkedId: 411,
+        wingmateId: 411,
         wingleader: true
       }, {
         id: 411,
@@ -12099,7 +12772,7 @@ exportObj.basicCardData = function() {
         wingmates: [2, 3, 4, 5],
         suffix: " and his wing",
         upgrades: ["Veteran Wing Leader", "Kraken", "Predator", "Soulless One"],
-        linkedId: 413,
+        wingmateId: 413,
         wingleader: true
       }, {
         id: 413,
@@ -12120,7 +12793,7 @@ exportObj.basicCardData = function() {
         wingmates: [2, 3, 4, 5],
         suffix: " and his wing",
         upgrades: ["Veteran Wing Leader", "Proton Torpedoes", "Instinctive Aim", "R2-D2", "Servomotor S-Foils"],
-        linkedId: 415,
+        wingmateId: 415,
         wingleader: true
       }, {
         id: 415,
@@ -12141,7 +12814,7 @@ exportObj.basicCardData = function() {
         wingmates: [2, 3, 4, 5],
         suffix: " and his wing",
         upgrades: ["Veteran Wing Leader", "Fearless", "Daredevil", "Afterburners"],
-        linkedId: 417,
+        wingmateId: 417,
         wingleader: true
       }, {
         id: 417,
@@ -12467,21 +13140,21 @@ exportObj.basicCardData = function() {
         pilot: "Lyttan Dree",
         ship: "TIE/rb Heavy",
         threat: 2,
-        upgrades: ["Deadye Shot", "Ion Cannon", "Heavy Laser Cannon", "Maneuver-Assists MGK-300"]
+        upgrades: ["Deadeye Shot", "Ion Cannon", "Heavy Laser Cannon", "Maneuver-Assist MGK-300"]
       }, {
         id: 463,
         faction: "Galactic Empire",
         pilot: "Onyx Squadron Sentry",
         ship: "TIE/rb Heavy",
         threat: 2,
-        upgrades: ["Ion Limiter Override", "Shield Upgrade", "Heavy Laser Cannon", "Maneuver-Assists MGK-300"]
+        upgrades: ["Ion Limiter Override", "Shield Upgrade", "Heavy Laser Cannon", "Maneuver-Assist MGK-300"]
       }, {
         id: 464,
         faction: "Galactic Empire",
         pilot: '"Rampage"',
         ship: "TIE/rb Heavy",
         threat: 3,
-        upgrades: ["Predator", "Afterburners", "Maneuver-Assists MGK-300", "Synced Laser Cannons", "Ablative Plating"]
+        upgrades: ["Predator", "Afterburners", "Maneuver-Assist MGK-300", "Synced Laser Cannons", "Ablative Plating"]
       }, {
         id: 465,
         faction: "Galactic Republic",
@@ -12513,9 +13186,9 @@ exportObj.basicCardData = function() {
         id: 469,
         faction: "Galactic Republic",
         pilot: '"Klick"',
-        ship: "Eta-2 Actis",
+        ship: "Nimbus-class V-Wing",
         threat: 4,
-        upgrades: ["R3 Astromech", "Thermal Detonators", 'Alpha-3E "Besh"']
+        upgrades: ["R3 Astromech", "Thermal Detonators", 'Alpha-3B "Besh"']
       }, {
         id: 470,
         faction: "Galactic Republic",
@@ -12526,65 +13199,65 @@ exportObj.basicCardData = function() {
       }, {
         id: 471,
         faction: "Galactic Republic",
-        pilot: '"Anakin Skywalker"',
+        pilot: "Anakin Skywalker (Eta-2)",
         ship: "Eta-2 Actis",
         threat: 4,
         upgrades: ["Marg Sabl Closure", "Extreme Maneuvers", "R2-D2 (Republic)", "Afterburners", "Shield Upgrade"]
       }, {
         id: 472,
         faction: "Galactic Republic",
-        pilot: '"Yoda"',
+        pilot: "Yoda",
         ship: "Eta-2 Actis",
         threat: 3,
         upgrades: ["Heightened Perception", "Patience", "Sense", "R2-D2 (Republic)"]
       }, {
         id: 473,
         faction: "Galactic Republic",
-        pilot: '"Obi-Wan Kenobi"',
+        pilot: "Obi-Wan Kenobi (Eta-2)",
         ship: "Eta-2 Actis",
         threat: 2,
         upgrades: ["Marg Sabl Closure", "Patience", "R5 Astromech", "Hull Upgrade"]
       }, {
         id: 474,
         faction: "Galactic Republic",
-        pilot: '"Aayla Sakura"',
+        pilot: "Aayla Secura",
         ship: "Eta-2 Actis",
         threat: 3,
         upgrades: ["Predator", "Supernatural Reflexes", "R3 Astromech"]
       }, {
         id: 475,
         faction: "Galactic Republic",
-        pilot: '"Shaak Ti"',
+        pilot: "Shaak Ti",
         ship: "Eta-2 Actis",
         threat: 2,
         upgrades: ["Elusive", "Patience"]
       }, {
         id: 476,
         faction: "Galactic Republic",
-        pilot: '"Jedi General"',
-        ship: "ETA-2 Actis",
+        pilot: "Jedi General",
+        ship: "Eta-2 Actis",
         threat: 2,
         upgrades: ["Marg Sabl Closure", "Extreme Maneuvers"]
       }, {
         id: 477,
         faction: "Galactic Republic",
-        pilot: "Aayla Sakura",
+        pilot: "Aayla Secura",
         ship: "Eta-2 Actis",
         threat: [5, 7, 8, 9],
         wingmates: [2, 3, 4, 5],
         suffix: " and her wing",
         upgrades: ["Jedi Commander", "Supernatural Reflexes", "Q7 Astromech"],
-        linkedId: 474,
+        wingmateId: 478,
         wingleader: true
       }, {
         id: 478,
         faction: "Galactic Republic",
-        pilot: "Shadow Squadron Pilot",
+        pilot: "Shadow Squadron Escort",
         ship: "Nimbus-class V-Wing",
-        suffix: ", Aayla Sakura's wing",
+        suffix: ", Aayla Secura's wing",
         threat: '*',
         upgrades: ["Q7 Astromech", 'Alpha-3B "Besh"'],
-        linkedId: 470,
+        linkedId: 477,
         wingmate: true
       }, {
         id: 479,
@@ -12593,6 +13266,884 @@ exportObj.basicCardData = function() {
         ship: "YT-1300",
         threat: 5,
         upgrades: ["C-3PO", "Leia Organa", "Chewbacca", "Rigged Cargo Chute", "Millennium Falcon"]
+      }, {
+        id: 480,
+        faction: "Rebel Alliance",
+        pilot: "Blade Squadron Veteran",
+        ship: "B-Wing",
+        threat: 2,
+        upgrades: ["Predator", "Jamming Beam", "Ion Cannon"]
+      }, {
+        id: 481,
+        faction: "Rebel Alliance",
+        pilot: "Blue Squadron Pilot",
+        ship: "B-Wing",
+        threat: 2,
+        upgrades: ["Fire-Control System", "Adv. Proton Torpedoes"]
+      }, {
+        id: 482,
+        faction: "Rebel Alliance",
+        pilot: "Blue Squadron Pilot",
+        ship: "B-Wing",
+        threat: 2,
+        upgrades: ["Passive Sensors", "Stabilized S-Foils", "Autoblasters"]
+      }, {
+        id: 483,
+        faction: "Rebel Alliance",
+        pilot: "Netrem Pollard",
+        ship: "B-Wing",
+        threat: 2,
+        upgrades: ["Debris Gambit", "Stabilized S-Foils", "Autoblasters"]
+      }, {
+        id: 484,
+        faction: "Rebel Alliance",
+        pilot: "Ten Numb",
+        ship: "B-Wing",
+        threat: 2,
+        upgrades: ["Elusive", "Electronic Baffle"]
+      }, {
+        id: 485,
+        faction: "Rebel Alliance",
+        pilot: "Blade Squadron Veteran",
+        ship: "B-Wing",
+        threat: 3,
+        upgrades: ["Saturation Salvo", "Plasma Torpedoes", "Stabilized S-Foils", "Passive Sensors", "Shield Upgrade", "Synced Laser Cannons"]
+      }, {
+        id: 486,
+        faction: "Rebel Alliance",
+        pilot: "Braylen Stramm",
+        ship: "B-Wing",
+        threat: 3,
+        upgrades: ["Squad Leader", "Jamming Beam", "Heavy Laser Cannon", "Electronic Baffle"]
+      }, {
+        id: 487,
+        faction: "Rebel Alliance",
+        pilot: "Hera Syndulla (B-Wing)",
+        ship: "B-Wing",
+        threat: 3,
+        upgrades: ["B6 Blade Wing Prototype (Epic)", "Passive Sensors", "Deadeye Shot", "Sabine Wren (Gunner)"]
+      }, {
+        id: 488,
+        faction: "Rebel Alliance",
+        pilot: "Phoenix Squadron Pilot",
+        ship: "A-Wing",
+        threat: 1,
+        upgrades: ["Hopeful"]
+      }, {
+        id: 489,
+        faction: "Rebel Alliance",
+        pilot: "Phoenix Squadron Pilot",
+        ship: "A-Wing",
+        threat: 1,
+        upgrades: ["Elusive"]
+      }, {
+        id: 490,
+        faction: "Rebel Alliance",
+        pilot: "Phoenix Squadron Pilot",
+        ship: "A-Wing",
+        threat: 1,
+        upgrades: ["Marg Sabl Closure"]
+      }, {
+        id: 491,
+        faction: "Rebel Alliance",
+        pilot: "Ahsoka Tano (A-Wing)",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Marg Sabl Closure", "Patience", "Sense"]
+      }, {
+        id: 492,
+        faction: "Rebel Alliance",
+        pilot: "Arvel Crynyd",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Intimidation", "Concussion Missiles", "Juke"]
+      }, {
+        id: 493,
+        faction: "Rebel Alliance",
+        pilot: "Derek Klivian",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Elusive", "Mag-Pulse Warheads"]
+      }, {
+        id: 494,
+        faction: "Rebel Alliance",
+        pilot: "Green Squadron Pilot",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Juke", "Outmaneuver", "Hull Upgrade"]
+      }, {
+        id: 495,
+        faction: "Rebel Alliance",
+        pilot: "Green Squadron Pilot",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Starbird Slash", "Vectored Cannons (RZ-1)", "Mag-Pulse Warheads"]
+      }, {
+        id: 496,
+        faction: "Rebel Alliance",
+        pilot: "Hera Syndulla (A-Wing)",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Hopeful"]
+      }, {
+        id: 497,
+        faction: "Rebel Alliance",
+        pilot: "Jake Farrell",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Cluster Missiles", "Outmaneuver"]
+      }, {
+        id: 498,
+        faction: "Rebel Alliance",
+        pilot: "Jake Farrell",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Daredevil", "Proton Rockets", "Juke"]
+      }, {
+        id: 499,
+        faction: "Rebel Alliance",
+        pilot: "Phoenix Squadron Pilot",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Daredevil", "Proton Rockets", "Afterburners"]
+      }, {
+        id: 500,
+        faction: "Rebel Alliance",
+        pilot: "Sabine Wren (A-Wing)",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Outmaneuver"]
+      }, {
+        id: 501,
+        faction: "Rebel Alliance",
+        pilot: "Shara Bey (A-Wing)",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Marg Sabl Closure", "Vectored Cannons (RZ-1)", "Starbird Slash"]
+      }, {
+        id: 502,
+        faction: "Rebel Alliance",
+        pilot: "Wedge Antilles (A-Wing)",
+        ship: "A-Wing",
+        threat: 2,
+        upgrades: ["Deadeye Shot", "XX-23 S-Thread Tracers"]
+      }, {
+        id: 503,
+        faction: "Rebel Alliance",
+        pilot: "Hera Syndulla",
+        ship: "VCX-100",
+        threat: [6, 7, 8, 9],
+        wingmates: [1, 2, 3, 4],
+        suffix: " + Phantom and her wing",
+        upgrades: ["Phoenix Squadron", "Sabine Wren (Gunner)", "Dorsal Turret", "Ghost"],
+        wingmateId: 504,
+        wingleader: true,
+        linkedId: 505
+      }, {
+        id: 504,
+        faction: "Rebel Alliance",
+        pilot: "Phoenix Squadron Pilot",
+        ship: "A-Wing",
+        suffix: ", Heras wing",
+        threat: '*',
+        upgrades: ["Hopeful"],
+        linkedId: 503,
+        wingmate: true
+      }, {
+        id: 505,
+        faction: "Rebel Alliance",
+        pilot: '"Zeb" Orrelios (Sheathipede)',
+        ship: "Sheathipede-Class Shuttle",
+        suffix: ", Heras wing",
+        threat: '*',
+        upgrades: ['"Chopper" (Crew)', "Phantom"],
+        linkedId: 503
+      }, {
+        id: 506,
+        faction: "Galactic Empire",
+        pilot: "Captain Dobbs",
+        ship: "TIE Defender",
+        threat: 3,
+        upgrades: ["Disciplined", "TIE Defender Elite", "Tractor Beam"]
+      }, {
+        id: 507,
+        faction: "Galactic Empire",
+        pilot: "Delta Squadron Pilot",
+        ship: "TIE Defender",
+        threat: 3,
+        upgrades: ["Ion Cannon"]
+      }, {
+        id: 508,
+        faction: "Galactic Empire",
+        pilot: "Delta Squadron Pilot",
+        ship: "TIE Defender",
+        threat: 3,
+        upgrades: ["Autoblasters", "TIE Defender Elite"]
+      }, {
+        id: 509,
+        faction: "Galactic Empire",
+        pilot: "Onyx Squadron Ace",
+        ship: "TIE Defender",
+        threat: 3,
+        upgrades: ["Interloper Turn", "TIE Defender Elite", "Tractor Beam"]
+      }, {
+        id: 510,
+        faction: "Galactic Empire",
+        pilot: "Colonel Vessery",
+        ship: "TIE Defender",
+        threat: 4,
+        upgrades: ["Outmaneuver", "TIE Defender Elite", "Tractor Beam"]
+      }, {
+        id: 511,
+        faction: "Galactic Empire",
+        pilot: "Countess Ryad",
+        ship: "TIE Defender",
+        threat: 4,
+        upgrades: ["Predator", "Advanced Sensors", "Tractor Beam", "Ion Missiles"]
+      }, {
+        id: 512,
+        faction: "Galactic Empire",
+        pilot: "Onyx Squadron Ace",
+        ship: "TIE Defender",
+        threat: 4,
+        upgrades: ["Outmaneuver", "Advanced Sensors", "Shield Upgrade"]
+      }, {
+        id: 513,
+        faction: "Galactic Empire",
+        pilot: "Rexler Brath",
+        ship: "TIE Defender",
+        threat: 4,
+        upgrades: ["Elusive", "Advanced Sensors", "Ion Missiles"]
+      }, {
+        id: 514,
+        faction: "Galactic Empire",
+        pilot: "Vult Skerris",
+        ship: "TIE Defender",
+        threat: 4,
+        upgrades: ["Daredevil", "Mag-Pulse Warheads", "Predator", "TIE Defender Elite"]
+      }, {
+        id: 515,
+        faction: "Galactic Empire",
+        pilot: "Darth Vader (TIE Defender)",
+        ship: "TIE Defender",
+        threat: 5,
+        upgrades: ["Sense", "Mag-Pulse Warheads", "TIE Defender Elite"]
+      }, {
+        id: 516,
+        faction: "Galactic Empire",
+        pilot: "Alpha Squadron Pilot",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Hull Upgrade", "Shield Upgrade"]
+      }, {
+        id: 517,
+        faction: "Galactic Empire",
+        pilot: "Alpha Squadron Pilot",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Disciplined", "Sensitive Controls", "Static Discharge Vanes"]
+      }, {
+        id: 518,
+        faction: "Galactic Empire",
+        pilot: "Alpha Squadron Pilot",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Shield Upgrade", "Sensitive Controls", "Targeting Computer"]
+      }, {
+        id: 519,
+        faction: "Galactic Empire",
+        pilot: "Ciena Ree",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Disciplined", "Sensitive Controls"]
+      }, {
+        id: 520,
+        faction: "Galactic Empire",
+        pilot: "Commandant Goran",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Disciplined", "Sensitive Controls", "Marg Sabl Closure"]
+      }, {
+        id: 521,
+        faction: "Galactic Empire",
+        pilot: "Lieutenant Lorrir",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Outmaneuver", "Sensitive Controls"]
+      }, {
+        id: 522,
+        faction: "Galactic Empire",
+        pilot: "Nash Windrider",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Daredevil", "Sensitive Controls", "Shield Upgrade"]
+      }, {
+        id: 523,
+        faction: "Galactic Empire",
+        pilot: "Saber Squadron Ace",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Predator", "Shield Upgrade"]
+      }, {
+        id: 524,
+        faction: "Galactic Empire",
+        pilot: "Saber Squadron Ace",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Daredevil", "Sensitive Controls", "Targeting Computer"]
+      }, {
+        id: 525,
+        faction: "Galactic Empire",
+        pilot: "Turr Phennir",
+        ship: "TIE Interceptor",
+        threat: 2,
+        upgrades: ["Outmaneuver"]
+      }, {
+        id: 526,
+        faction: "Galactic Empire",
+        pilot: "Gideon Hask (TIE Interceptor)",
+        ship: "TIE Interceptor",
+        threat: 3,
+        upgrades: ["Disciplined", "Sensitive Controls", "Targeting Computer", "Elusive", "Shield Upgrade"]
+      }, {
+        id: 527,
+        faction: "Galactic Empire",
+        pilot: "Soontir Fel",
+        ship: "TIE Interceptor",
+        threat: 3,
+        upgrades: ["Daredevil", "Afterburners", "Predator", "Shield Upgrade"]
+      }, {
+        id: 528,
+        faction: "Galactic Empire",
+        pilot: "Vult Skerris (TIE Interceptor)",
+        ship: "TIE Interceptor",
+        threat: 3,
+        upgrades: ["Daredevil", "Elusive", "Predator", "Sensitive Controls"]
+      }, {
+        id: 529,
+        faction: "Galactic Empire",
+        pilot: "Commandant Goran",
+        ship: "TIE Interceptor",
+        threat: [4, 5, 6, 7],
+        wingmates: [2, 3, 4, 5],
+        suffix: " and his wing",
+        upgrades: ["Skystrike Academy Class", "Disciplined", "Marg Sabl Closure", "Sensitive Controls"],
+        wingmateId: 530,
+        wingleader: true
+      }, {
+        id: 530,
+        faction: "Galactic Republic",
+        pilot: "Academy Pilot",
+        ship: "TIE Fighter",
+        suffix: ", Commandant Gorans wing",
+        threat: '*',
+        upgrades: ["Disciplined"],
+        linkedId: 529,
+        wingmate: true
+      }, {
+        id: 531,
+        faction: "Scum and Villainy",
+        pilot: "Gamut Key",
+        ship: "HWK-290",
+        threat: 2,
+        upgrades: ["Elusive", "Engine Upgrade", "False Transponder Codes"]
+      }, {
+        id: 532,
+        faction: "Scum and Villainy",
+        pilot: "Kanan Jarrus (HWK-290)",
+        ship: "HWK-290",
+        threat: 2,
+        upgrades: ["Patience", "Thermal Detonators"]
+      }, {
+        id: 533,
+        faction: "Scum and Villainy",
+        pilot: "Spice Runner",
+        ship: "HWK-290",
+        threat: 2,
+        upgrades: ["Hondo Ohnaka", "Concussion Bombs", "Engine Upgrade", "False Transponder Codes"]
+      }, {
+        id: 534,
+        faction: "Scum and Villainy",
+        pilot: "Tápusk",
+        ship: "HWK-290",
+        threat: 2,
+        upgrades: ["Cutthroat", "Gamut Key"]
+      }, {
+        id: 535,
+        faction: "Scum and Villainy",
+        pilot: "Amaxine Warrior",
+        ship: "Y-Wing",
+        threat: 2,
+        upgrades: ["Cutthroat", "Thermal Detonators", "R5 Astromech"]
+      }, {
+        id: 536,
+        faction: "Scum and Villainy",
+        pilot: "Arliz Hadrassian",
+        ship: "Y-Wing",
+        threat: 2,
+        upgrades: ["Predator", "R5-TK", "Suppressive Gunner", "Thermal Detonators"]
+      }, {
+        id: 537,
+        faction: "Scum and Villainy",
+        pilot: "Jinata Security Officer",
+        ship: "Y-Wing",
+        threat: 2,
+        upgrades: ["Automated Target Priority", "Weapons Systems Officer", "Proton Torpedoes", "R3 Astromech"]
+      }, {
+        id: 538,
+        faction: "Scum and Villainy",
+        pilot: "Padric",
+        ship: "Y-Wing",
+        threat: 2,
+        upgrades: ["Dorsal Turret", "Thermal Detonators", '"Genius"']
+      }, {
+        id: 539,
+        faction: "Scum and Villainy",
+        pilot: "Leema Kai",
+        ship: "Y-Wing",
+        threat: 3,
+        upgrades: ["Marg Sabl Closure", "Plasma Torpedoes", "Saturation Salvo", "Weapons Systems Officer", "Targeting Synchronizer", "R4-B11", "Ion Cannon Turret", "Concussion Bombs"]
+      }, {
+        id: 540,
+        faction: "Resistance",
+        pilot: "Blue Squadron Rookie",
+        ship: "T-70 X-Wing",
+        threat: 2,
+        upgrades: ["Automated Target Priority", "R2 Astromech", "Integrated S-Foils"]
+      }, {
+        id: 541,
+        faction: "Resistance",
+        pilot: "Nimi Chireen",
+        ship: "T-70 X-Wing",
+        threat: 2,
+        upgrades: ["Automated Target Priority", "Ion Cannon", "Integrated S-Foils"]
+      }, {
+        id: 542,
+        faction: "Resistance",
+        pilot: "Red Squadron Expert",
+        ship: "T-70 X-Wing",
+        threat: 2,
+        upgrades: ["Predator", "Underslung Blaster Cannon", "Integrated S-Foils"]
+      }, {
+        id: 543,
+        faction: "Resistance",
+        pilot: "Black Squadron Ace (T-70)",
+        ship: "T-70 X-Wing",
+        threat: 3,
+        upgrades: ["Deadeye Shot", "R3 Astromech", "Proton Torpedoes", "Afterburners", "Primed Thrusters", "Integrated S-Foils"]
+      }, {
+        id: 544,
+        faction: "Resistance",
+        pilot: "C'ai Threnalli",
+        ship: "T-70 X-Wing",
+        threat: 3,
+        upgrades: ["Backwards Tailslide", "R4 Astromech", "Proton Torpedoes", "Primed Thrusters", "Integrated S-Foils"]
+      }, {
+        id: 545,
+        faction: "Resistance",
+        pilot: "Poe Dameron (HoH)",
+        ship: "T-70 X-Wing",
+        threat: 3,
+        upgrades: ["Backwards Tailslide", "R2-D2 (Resistance)", "Black One", "Overdrive Thruster", "Integrated S-Foils", "Daredevil"]
+      }, {
+        id: 546,
+        faction: "Resistance",
+        pilot: "Temmin Wexley (HoH)",
+        ship: "T-70 X-Wing",
+        threat: 3,
+        upgrades: ["Snap Shot", "R6-D8", "Underslung Blaster Cannon", "Integrated S-Foils", "Hull Upgrade"]
+      }, {
+        id: 547,
+        faction: "Resistance",
+        pilot: "Blue Squadron Recruit",
+        ship: "RZ-2 A-Wing",
+        threat: 2,
+        upgrades: ["Snap Shot", "Concussion Missiles", "Automated Target Priority"]
+      }, {
+        id: 548,
+        faction: "Resistance",
+        pilot: "Green Squadron Expert",
+        ship: "RZ-2 A-Wing",
+        threat: 2,
+        upgrades: ["Snap Shot", "Afterburners", "Primed Thrusters"]
+      }, {
+        id: 549,
+        faction: "Resistance",
+        pilot: "Merl Cobben",
+        ship: "RZ-2 A-Wing",
+        threat: 2,
+        upgrades: ["Deadeye Shot", "Predator", "Automated Target Priority", "Shield Upgrade"]
+      }, {
+        id: 550,
+        faction: "Resistance",
+        pilot: "Seftin Vanik",
+        ship: "RZ-2 A-Wing",
+        threat: 2,
+        upgrades: ["Daredevil", "Snap Shot", "Hull Upgrade"]
+      }, {
+        id: 551,
+        faction: "Resistance",
+        pilot: "Suralinda Javos",
+        ship: "RZ-2 A-Wing",
+        threat: 2,
+        upgrades: ["Starbird Slash", "Snap Shot", "Shield Upgrade", "Ion Missiles"]
+      }, {
+        id: 552,
+        faction: "Resistance",
+        pilot: "Wrobie Tyce",
+        ship: "RZ-2 A-Wing",
+        threat: 2,
+        upgrades: ["Starbird Slash", "Elusive", "Concussion Missiles"]
+      }, {
+        id: 553,
+        faction: "Resistance",
+        pilot: "Wrobie Tyce",
+        ship: "RZ-2 A-Wing",
+        threat: 2,
+        upgrades: ["Starbird Slash", "Elusive", "Concussion Missiles"]
+      }, {
+        id: 554,
+        faction: "Separatist Alliance",
+        pilot: "Baktoid Drone",
+        ship: "HMP Droid Gunship",
+        threat: 2,
+        upgrades: ["Delayed Fuses", "Concussion Bombs", "Ion Missiles", "Repulsorlift Stabilizers"]
+      }, {
+        id: 555,
+        faction: "Separatist Alliance",
+        pilot: "DGS-047",
+        ship: "HMP Droid Gunship",
+        threat: 2,
+        upgrades: ["Delayed Fuses", "Concussion Bombs", "Ion Missiles", "Repulsorlift Stabilizers"]
+      }, {
+        id: 556,
+        faction: "Separatist Alliance",
+        pilot: "Geonosian Prototype",
+        ship: "HMP Droid Gunship",
+        threat: 2,
+        upgrades: ["Synced Laser Cannons", "Ion Missiles", "Repulsorlift Stabilizers"]
+      }, {
+        id: 557,
+        faction: "Separatist Alliance",
+        pilot: "Onderon Oppressor",
+        ship: "HMP Droid Gunship",
+        threat: 2,
+        upgrades: ["Multi-Missile Pods", "Repulsorlift Stabilizers"]
+      }, {
+        id: 558,
+        faction: "Separatist Alliance",
+        pilot: "Separatist Predator",
+        ship: "HMP Droid Gunship",
+        threat: 2,
+        upgrades: ["Multi-Missile Pods", "Concussion Bombs", "Hull Upgrade"]
+      }, {
+        id: 559,
+        faction: "Separatist Alliance",
+        pilot: "DGS-286",
+        ship: "HMP Droid Gunship",
+        threat: 3,
+        upgrades: ["Multi-Missile Pods", "Concussion Bombs", "Shield Upgrade", "Afterburners", "Kalani", "Repulsorlift Stabilizers"]
+      }, {
+        id: 560,
+        faction: "Galactic Republic",
+        pilot: "212th Battalion Pilot",
+        ship: "LAAT/i Gunship",
+        threat: 3,
+        upgrades: ["Multi-Missile Pods", "Shield Upgrade", "Suppressive Gunner", "Ghost Company"]
+      }, {
+        id: 561,
+        faction: "Galactic Republic",
+        pilot: '"Hawk"',
+        ship: "LAAT/i Gunship",
+        threat: 3,
+        upgrades: ["Deadeye Shot", "Yoda", "Ion Missiles", "Clone Captain Rex", '"Fives"']
+      }, {
+        id: 562,
+        faction: "Galactic Republic",
+        pilot: '"Warthog"',
+        ship: "LAAT/i Gunship",
+        threat: 3,
+        upgrades: ["Wolfpack", "Multi-Missile Pods", "Plo Koon", "Suppressive Gunner"]
+      }, {
+        id: 563,
+        faction: "Galactic Republic",
+        pilot: '"Hound"',
+        ship: "LAAT/i Gunship",
+        threat: 4,
+        upgrades: ["Concussion Missiles", "Aayla Secura", "Kit Fisto", "Suppressive Gunner", "Hull Upgrade", "Agile Gunner"]
+      }, {
+        id: 564,
+        faction: "Separatist Alliance",
+        pilot: "Zam Wesell",
+        ship: "Firespray-31",
+        threat: 4,
+        upgrades: ["Deadeye Shot", "Jango Fett", "False Transponder Codes", "Hotshot Gunner", "Slave I"]
+      }, {
+        id: 565,
+        faction: "Separatist Alliance",
+        pilot: "Separatist Racketeer",
+        ship: "Firespray-31",
+        threat: 3,
+        upgrades: ["Jamming Beam", "Thermal Detonators", "Suppressive Gunner", "Ablative Plating"]
+      }, {
+        id: 566,
+        faction: "Separatist Alliance",
+        pilot: "Jango Fett",
+        ship: "Firespray-31",
+        threat: 4,
+        upgrades: ["Zam Wesell", "False Transponder Codes", "Boba Fett", "Slave I"]
+      }, {
+        id: 567,
+        faction: "Separatist Alliance",
+        pilot: "Boba Fett (Separatist)",
+        ship: "Firespray-31",
+        threat: 3,
+        upgrades: ["Debris Gambit", "Hondo Ohnaka", "Slave I"]
+      }, {
+        id: 568,
+        faction: "Separatist Alliance",
+        pilot: "Colicoid Interceptor",
+        ship: "Droid Tri-Fighter",
+        threat: 2,
+        upgrades: ["Fire-Control System", "Independent Calculations", "Hull Upgrade"]
+      }, {
+        id: 569,
+        faction: "Separatist Alliance",
+        pilot: "DIS-347",
+        ship: "Droid Tri-Fighter",
+        threat: 2,
+        upgrades: ["Fire-Control System", "Independent Calculations", "Elusive"]
+      }, {
+        id: 570,
+        faction: "Separatist Alliance",
+        pilot: "DIS-T81",
+        ship: "Droid Tri-Fighter",
+        threat: 2,
+        upgrades: ["Marg Sabl Closure", "Discord Missiles"]
+      }, {
+        id: 571,
+        faction: "Separatist Alliance",
+        pilot: "Fearsome Predator",
+        ship: "Droid Tri-Fighter",
+        threat: 2,
+        upgrades: ["Fire-Control System", "Intercept Booster"]
+      }, {
+        id: 572,
+        faction: "Separatist Alliance",
+        pilot: "Phlac-Arphocc Prototype",
+        ship: "Droid Tri-Fighter",
+        threat: 2,
+        upgrades: ["XX-23 S-Thread Tracers", "Intercept Booster"]
+      }, {
+        id: 573,
+        faction: "Separatist Alliance",
+        pilot: "Separatist Interceptor",
+        ship: "Droid Tri-Fighter",
+        threat: 2,
+        upgrades: ["Outmaneuver", "Discord Missiles", "Intercept Booster"]
+      }, {
+        id: 574,
+        faction: "Galactic Empire",
+        pilot: "Delta Squadron Pilot",
+        ship: "TIE Defender",
+        threat: 3,
+        upgrades: ["Tractor Beam", "Ion Missiles"]
+      }, {
+        id: 575,
+        faction: "Scum and Villainy",
+        pilot: "Lawless Pirates",
+        ship: "Trident-class Assault Ship",
+        threat: 9,
+        upgrades: ["Zealous Captain", "Tractor Tentacles", "Proton Cannon Battery", "Novice Technician", "Corsair Crew", "Tibanna Reserves", "Nautolan's Revenge"]
+      }, {
+        id: 576,
+        faction: "Scum and Villainy",
+        pilot: "Lawless Pirates",
+        ship: "Trident-class Assault Ship",
+        threat: 10,
+        upgrades: ["Hondo Ohnaka (Command)", "Tractor Tentacles", "Drill Beak", "Seasoned Navigator", "Corsair Crew", "Gunnery Specialists", "Boosted Scanners", "Grappler"]
+      }, {
+        id: 577,
+        faction: "Separatist Alliance",
+        pilot: "Colicoid Destroyer",
+        ship: "Trident-class Assault Ship",
+        threat: 8,
+        upgrades: ["Tractor Tentacles", "Drill Beak", "Optimized Power Core"]
+      }, {
+        id: 578,
+        faction: "Separatist Alliance",
+        pilot: "Colicoid Destroyer",
+        ship: "Trident-class Assault Ship",
+        threat: 9,
+        upgrades: ["Asajj Ventress (Command)", "Tractor Tentacles", "Enhanced Propulsion", "Seasoned Navigator", "Droid Crew", "Tractor Technicians", "Trident"]
+      }, {
+        id: 579,
+        faction: "Separatist Alliance",
+        pilot: "Colicoid Destroyer",
+        ship: "Trident-class Assault Ship",
+        threat: 10,
+        upgrades: ["Riff Tamson", "Tractor Tentacles", "Proton Cannon Battery", "Proton Torpedoes", "Novice Technician", "Hotshot Gunner", "Droid Crew", "Gunnery Specialists", "Tibanna Reserves", "Neimoidian Grasp"]
+      }, {
+        id: 580,
+        faction: "Galactic Empire",
+        pilot: "Onyx Squadron Sentry",
+        ship: "TIE/rb Heavy",
+        threat: 3,
+        upgrades: ["Ablative Plating", "Target-Assist MGK-300", "Ion Limiter Override", "Synced Laser Cannons"]
+      }, {
+        id: 581,
+        faction: "First Order",
+        pilot: "Kylo Ren (TIE Whisper)",
+        ship: "TIE/WI Whisper",
+        threat: 3,
+        upgrades: ["Predator", "Cluster Missiles", "Malice", "Enhanced Jamming Suite"]
+      }, {
+        id: 582,
+        faction: "First Order",
+        pilot: '"Wrath"',
+        ship: "TIE/WI Whisper",
+        threat: 3,
+        upgrades: ["Elusive", "Enhanced Jamming Suite", "Proton Rockets"]
+      }, {
+        id: 583,
+        faction: "First Order",
+        pilot: '"Whirlwind"',
+        ship: "TIE/WI Whisper",
+        threat: 3,
+        upgrades: ["Elusive", "Sensor Scramblers", "Ion Limiter Override", "Proton Rockets", "Hull Upgrade"]
+      }, {
+        id: 584,
+        faction: "First Order",
+        pilot: "709th Legion Ace",
+        ship: "TIE/WI Whisper",
+        threat: 3,
+        upgrades: ["Predator", "Enhanced Jamming Suite", "Homing Missiles"]
+      }, {
+        id: 585,
+        faction: "First Order",
+        pilot: '"Nightfall"',
+        ship: "TIE/WI Whisper",
+        threat: 2,
+        upgrades: ["Ion Limiter Override", "Sensor Scramblers"]
+      }, {
+        id: 586,
+        faction: "First Order",
+        pilot: "Red Fury Zealot",
+        ship: "TIE/WI Whisper",
+        threat: 2,
+        upgrades: ["Predator", "Enhanced Jamming Suite"]
+      }, {
+        id: 587,
+        faction: "First Order",
+        pilot: '"Breach"',
+        ship: "TIE/Se Bomber",
+        threat: 3,
+        upgrades: ["Elusive", "Proton Torpedoes", "Advanced Optics", "Engine Upgrade"]
+      }, {
+        id: 588,
+        faction: "First Order",
+        pilot: '"Scorch"',
+        ship: "TIE/Se Bomber",
+        threat: 3,
+        upgrades: ["Predator", "Suppressive Gunner", "Electro-Chaff Missiles", "Shield Upgrade"]
+      }, {
+        id: 589,
+        faction: "First Order",
+        pilot: '"Dread"',
+        ship: "TIE/Se Bomber",
+        threat: 3,
+        upgrades: ["Feedback Ping", "Concussion Bombs", "Primed Thrusters", "DT-798", "Delayed Fuses"]
+      }, {
+        id: 590,
+        faction: "First Order",
+        pilot: '"Grudge"',
+        ship: "TIE/Se Bomber",
+        threat: 3,
+        upgrades: ["Outmaneuver", "Proton Rockets", "Ion Torpedoes", "Engine Upgrade"]
+      }, {
+        id: 591,
+        faction: "First Order",
+        pilot: "First Order Cadet",
+        ship: "TIE/Se Bomber",
+        threat: 2,
+        upgrades: ["Feedback Ping", "Concussion Bombs", "First Order Ordnance Tech"]
+      }, {
+        id: 592,
+        faction: "First Order",
+        pilot: "Sienar-Jaemus Test Pilot",
+        ship: "TIE/Se Bomber",
+        threat: 2,
+        upgrades: ["Cluster Missiles", "Suppressive Gunner"]
+      }, {
+        id: 593,
+        faction: "Resistance",
+        pilot: "Zorii Bliss",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 3,
+        upgrades: ["Outmaneuver", "Babu Frik", "Proton Torpedoes", "Wartime Loadout", "R3 Astromech"]
+      }, {
+        id: 594,
+        faction: "Resistance",
+        pilot: "Teza Nasz",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 3,
+        upgrades: ["Expert Handling", "Delayed Fuses", "R2 Astromech", "Engine Upgrade", "Ion Cannon Turret", "Concussion Bombs"]
+      }, {
+        id: 595,
+        faction: "Resistance",
+        pilot: "Lega Fossang",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 2,
+        upgrades: ["Proton Torpedoes", "Wartime Loadout", "L4E-R5"]
+      }, {
+        id: 596,
+        faction: "Resistance",
+        pilot: "Shasa Zaro",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 2,
+        upgrades: ["Ion Cannon Turret", "Concussion Bombs", "Watchful Astromech", "Wartime Loadout"]
+      }, {
+        id: 597,
+        faction: "Resistance",
+        pilot: "C'ai Threnalli",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 2,
+        upgrades: ["Expert Handling", "Targeting Computer", "R2 Astromech", "Hull Upgrade", "Engine Upgrade"]
+      }, {
+        id: 598,
+        faction: "Resistance",
+        pilot: "Aftab Ackbar",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 2,
+        upgrades: ["Elusive", "Wartime Loadout", "Electro-Chaff Missiles"]
+      }, {
+        id: 599,
+        faction: "Resistance",
+        pilot: "Corus Kapellim",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 2,
+        upgrades: ["Ion Cannon Turret", "Engine Upgrade", "Overtuned Modulators", "Targeting Computer"]
+      }, {
+        id: 600,
+        faction: "Resistance",
+        pilot: "New Republic Patrol",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 2,
+        upgrades: ["Outmaneuver", "Shield Upgrade", "Ion Cannon Turret", "Targeting Computer", "R3 Astromech"]
+      }, {
+        id: 601,
+        faction: "Resistance",
+        pilot: "Kijimi Spice Runner",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 2,
+        upgrades: ["Tierfon Belly Run", "Engine Upgrade", "Ion Cannon Turret", "Targeting Computer", "Overtuned Modulators"]
+      }, {
+        id: 602,
+        faction: "Resistance",
+        pilot: "Wilsa Teshlo",
+        ship: "BTA-NR2 Y-Wing",
+        threat: 3,
+        upgrades: ["Predator", "Engine Upgrade", "R3 Astromech", "Targeting Computer", "Ion Cannon Turret"]
       }
     ]
   };
@@ -12824,6 +14375,7 @@ exportObj.setupTranslationCardData = function(pilot_translations, upgrade_transl
       } catch (_error) {
         e = _error;
         console.error("Cannot find translation for attribute " + field + " for upgrade " + upgrade_name + ". Please report this Issue. ");
+        throw e;
       }
     }
   }
@@ -12837,6 +14389,7 @@ exportObj.setupTranslationCardData = function(pilot_translations, upgrade_transl
       } catch (_error) {
         e = _error;
         console.error("Cannot find translation for attribute " + field + " for condition " + condition_name + ". Please report this Issue. ");
+        throw e;
       }
     }
   }
@@ -12853,7 +14406,8 @@ exportObj.setupTranslationCardData = function(pilot_translations, upgrade_transl
           _results1.push(exportObj.pilots[pilot_name][field] = translation);
         } catch (_error) {
           e = _error;
-          _results1.push(console.error("Cannot find translation for attribute " + field + " for pilot " + pilot_name + ". Please report this Issue. "));
+          console.error("Cannot find translation for attribute " + field + " for pilot " + pilot_name + ". Please report this Issue. ");
+          throw e;
         }
       }
       return _results1;
@@ -12942,6 +14496,9 @@ exportObj.hyperspaceShipInclusions = [
     name: 'Firespray-31',
     faction: 'Scum and Villainy'
   }, {
+    name: 'Y-Wing',
+    faction: 'Scum and Villainy'
+  }, {
     name: 'Mining Guild TIE Fighter',
     faction: 'Scum and Villainy'
   }, {
@@ -12966,6 +14523,9 @@ exportObj.hyperspaceShipInclusions = [
     name: 'Z-95 Headhunter',
     faction: 'Scum and Villainy'
   }, {
+    name: 'HWK-290',
+    faction: 'Scum and Villainy'
+  }, {
     name: 'Fireball',
     faction: 'Resistance'
   }, {
@@ -12973,6 +14533,9 @@ exportObj.hyperspaceShipInclusions = [
     faction: 'Resistance'
   }, {
     name: 'RZ-2 A-Wing',
+    faction: 'Resistance'
+  }, {
+    name: 'BTA-NR2 Y-Wing',
     faction: 'Resistance'
   }, {
     name: 'Resistance Transport',
@@ -12991,6 +14554,12 @@ exportObj.hyperspaceShipInclusions = [
     faction: 'First Order'
   }, {
     name: 'TIE/SF Fighter',
+    faction: 'First Order'
+  }, {
+    name: 'TIE/Se Bomber',
+    faction: 'First Order'
+  }, {
+    name: 'TIE/WI Whisper',
     faction: 'First Order'
   }, {
     name: 'Xi-class Light Shuttle',
@@ -13046,11 +14615,11 @@ exportObj.hyperspaceShipInclusions = [
   }
 ];
 
-exportObj.hyperspacePilotExclusions = ['Wedge Antilles', 'Biggs Darklighter', 'Kullbee Sperado', 'Cavern Angels Zealot', 'Outer Rim Smuggler', '"Chopper"', 'Lothal Rebel', 'Fenn Rau (Sheathipede)', 'AP-5', 'Black Squadron Ace', 'Obsidian Squadron Pilot', 'Academy Pilot', 'Soontir Fel', 'Turr Phennir', 'Scarif Base Pilot', 'Grand Inquisitor', 'Fifth Brother', 'Seventh Sister', 'Scarif Base Pilot', 'Colonel Vessery', 'Countess Ryad', 'Rexler Brath', '"Rampage"', 'Lyttan Dree', '"Duchess"', '"Countdown"', '"Pure Sabacc"', '"Vagabond"', 'Darth Vader', 'Maarek Stele', 'Ved Foslo', 'Zertik Strom', 'Rear Admiral Chiraneau', 'Morna Kee', 'Captain Oicunn', 'Boba Fett', 'Kath Scarlet', 'Emon Azzameen', 'Koshka Frost', 'Krassis Trelix', 'Skull Squadron Pilot', 'Zealous Recruit', 'Foreman Proach', 'Captain Seevor', 'Freighter Captain', 'Trandoshan Slaver', "N'dru Suhlak", 'Bossk (Z-95 Headhunter)', "Kaa'to Leeachos", 'Nashtah Pup', 'Green Squadron Expert', 'Blue Squadron Recruit', 'Cova Nell', 'Pammich Nerro Goode', 'Nodin Chavdri', 'Kazuda Xiono', 'Jarek Yeager', 'R1-J5', 'Black Squadron Ace (T-70)', 'Red Squadron Expert', 'Blue Squadron Rookie', '"Quickdraw"', '"Backdraft"', 'Captain Phasma', 'Lieutenant LeHuse', 'First Order Test Pilot', 'Sienar-Jaemus Engineer', 'First Order Provocateur', 'Omega Squadron Ace', 'Zeta Squadron Pilot', 'Epsilon Squadron Cadet', 'First Order Courier', '"Sinker"', '"Wolffe"', '"Odd Ball" (ARC-170)', '"Jag"', 'Shadow Squadron Veteran', 'Red Squadron Bomber', 'Anakin Skywalker', 'Obi-Wan Kenobi', 'Mace Windu', 'Plo Koon', 'Ahsoka Tano', 'Luminara Unduli', 'Saesee Tiin', 'Barriss Offee', 'Jedi General', '212th Battalion Pilot', 'Bravo Flight Officer', 'Blue Squadron Protector', 'Gold Squadron Trooper', '"Odd Ball" (V-Wing)', 'Wilhuff Tarkin', '"Contrail"', '"Klick"', 'Darth Maul', 'Count Dooku', '0-66', 'Skakoan Ace', 'Feethan Ottraw Autopilot', 'Phlac-Arphocc Prototype', 'DIS-T81', 'Fearsome Predator', 'DIS-347', 'Separatist Racketeer', 'Separatist Predator', 'Baktoid Drone', 'Separatist Bomber', 'Techno Union Bomber', 'Petranaki Arena Ace', 'Stalgasin Hive Guard'];
+exportObj.hyperspacePilotExclusions = ['Wedge Antilles', 'Biggs Darklighter', 'Kullbee Sperado', 'Cavern Angels Zealot', 'Outer Rim Smuggler', '"Chopper"', 'Lothal Rebel', 'Fenn Rau (Sheathipede)', 'AP-5', 'Hera Syndulla (B-Wing)', 'Netrem Pollard', 'Green Squadron Pilot', 'Phoenix Squadron Pilot', 'Black Squadron Ace', 'Obsidian Squadron Pilot', 'Academy Pilot', 'Saber Squadron Ace', 'Alpha Squadron Pilot', 'Scarif Base Pilot', 'Grand Inquisitor', 'Fifth Brother', 'Seventh Sister', 'Scarif Base Pilot', 'Darth Vader (TIE Defender)', 'Colonel Vessery', 'Vult Skerris', 'Countess Ryad', 'Captain Dobbs', 'Rexler Brath', '"Rampage"', 'Lyttan Dree', '"Duchess"', '"Countdown"', '"Pure Sabacc"', '"Vagabond"', 'Darth Vader', 'Maarek Stele', 'Ved Foslo', 'Zertik Strom', 'Rear Admiral Chiraneau', 'Morna Kee', 'Captain Oicunn', 'Drea Renthal', 'Kavil', 'Leema Kai', 'Arliz Hadrassian', 'Padric', 'Hired Gun', 'Crymorah Goon', 'Boba Fett', 'Kath Scarlet', 'Emon Azzameen', 'Koshka Frost', 'Krassis Trelix', 'Skull Squadron Pilot', 'Zealous Recruit', 'Spice Runner', 'Contracted Scout', 'Tansarii Point Veteran', 'Cartel Spacer', 'Mining Guild Surveyor', 'Mining Guild Sentry', 'Freighter Captain', 'Trandoshan Slaver', "N'dru Suhlak", 'Bossk (Z-95 Headhunter)', "Kaa'to Leeachos", 'Nashtah Pup', 'Green Squadron Expert', 'Blue Squadron Recruit', 'Cova Nell', 'Pammich Nerro Goode', 'Nodin Chavdri', 'Kazuda Xiono', 'Jarek Yeager', 'R1-J5', 'Black Squadron Ace (T-70)', 'Red Squadron Expert', 'Blue Squadron Rookie', '"Quickdraw"', '"Backdraft"', 'Captain Phasma', 'Lieutenant LeHuse', 'First Order Test Pilot', 'Sienar-Jaemus Engineer', 'First Order Provocateur', 'Omega Squadron Ace', 'Zeta Squadron Pilot', 'Epsilon Squadron Cadet', 'First Order Courier', '"Sinker"', '"Wolffe"', '"Odd Ball" (ARC-170)', '"Jag"', 'Shadow Squadron Veteran', 'Red Squadron Bomber', 'Anakin Skywalker', 'Obi-Wan Kenobi', 'Mace Windu', 'Plo Koon', 'Ahsoka Tano', 'Luminara Unduli', 'Saesee Tiin', 'Barriss Offee', 'Jedi General', '212th Battalion Pilot', 'Bravo Flight Officer', 'Blue Squadron Protector', 'Gold Squadron Trooper', '"Odd Ball" (V-Wing)', 'Wilhuff Tarkin', '"Contrail"', '"Klick"', 'Darth Maul', 'Count Dooku', '0-66', 'Skakoan Ace', 'Feethan Ottraw Autopilot', 'Phlac-Arphocc Prototype', 'DIS-T81', 'Fearsome Predator', 'DIS-347', 'Separatist Racketeer', 'Separatist Predator', 'Baktoid Drone', 'Separatist Bomber', 'Techno Union Bomber', 'Petranaki Arena Ace', 'Stalgasin Hive Guard'];
 
-exportObj.hyperspaceUpgradeExclusions = ['Jyn Erso', 'Bistan', 'Ezra Bridger', '"Chopper" (Astromech)', 'Pivot Wing', '"Chopper" (Crew)', '"Zeb" Orrelios', 'Baze Malbus', 'Cassian Andor', 'Hera Syndulla', 'Jyn Erso', 'K-2SO', 'Kanan Jarrus', 'Lando Calrissian', 'Leia Organa', 'Magva Yarro', 'Maul', 'R2-D2 (Crew)', 'Sabine Wren', 'Saw Gerrera', 'Bistan', 'Ezra Bridger', 'Han Solo', 'Luke Skywalker', 'Modly Crow', 'Outrider', 'Admiral Sloane', 'Ciena Ree', 'Darth Vader', 'Director Krennic', 'Grand Inquisitor', 'Grand Moff Tarkin', 'Minister Tua', 'Moff Jerjerrod', 'Seventh Sister', 'ISB Slicer', 'Fifth Brother', 'ST-321', '"Genius"', '0-0-0', '4-LOM', 'Cad Bane', 'Cikatro Vizago', 'IG-88D', 'Chewbacca (Scum)', 'Ketsu Onyo', 'Lando Calrissian (Scum)', 'Maul', 'Unkar Plutt', 'Zuckuss', 'Jabba the Hutt', 'Dengar', 'Han Solo (Scum)', 'Fearless', 'Havoc', 'Mist Hunter', 'Modly Crow', 'Shadow Caster', 'Slave I', 'Virago', 'IG-2000', 'M9-G8', 'R2-HA', 'R5-X3', 'BB Astromech', 'Chewbacca (Resistance)', 'GA-97', 'Han Solo (Resistance)', 'Kaydel Connix', 'Finn', 'Paige Tico', 'Rey', 'Heroic', "Rey's Millennium Falcon", 'Captain Phasma', 'General Hux', 'Kylo Ren', 'Petty Officer Thanisson', 'Supreme Leader Snoke', 'Biohexacrypt Codes', 'Hyperspace Tracking Data', 'R2-A6', 'R2-C4', 'R4-P17', 'R4-P Astromech', 'C1-10P', 'Chancellor Palpatine', 'Battle Meditation', 'Ahsoka Tano', 'Clone Commander Cody', 'Seventh Fleet Gunner', 'Chancellor Palpatine', 'General Grievous', 'Discord Missiles', 'TA-175', 'TV-94', 'Ensnare', 'R5 Astromech', 'Autoblasters', 'Heavy Laser Cannon', 'Jamming Beam', 'Informant', 'GNK "Gonk" Droid', 'Perceptive Copilot', 'Tactical Officer', 'Brilliant Evasion', 'Precognitive Reflexes', 'Predictive Shot', 'Sense', 'Supernatural Reflexes', 'Hotshot Gunner', 'Veteran Tail Gunner', 'Veteran Turret Gunner', 'Cloaking Device', 'Coaxiium Hyperfuel', 'Feedback Array', 'Inertial Dampeners', 'Cluster Missiles', 'Cluster Missiles', 'Homing Missiles', 'Ion Missiles', 'Barrage Rockets', 'Ablative Plating', 'Advanced SLAM', 'Afterburners', 'Delayed Fuses', 'Munitions Failsafe', 'Shield Upgrade', 'Spare Parts Canisters', 'Static Discharge Vanes', 'Stealth Device', 'Tactical Scrambler', 'Targeting Computer', 'Ion Bombs', 'Proton Bombs', 'Proximity Mines', 'Seismic Charges', 'Electro-Proton Bomb', 'Bomblet Generator', 'Advanced Sensors', 'Collision Detector', 'Trajectory Simulator', 'Lone Wolf', 'Squad Leader', 'Composure', 'Crack Shot', 'Debris Gambit', 'Elusive', 'Intimidation', 'Marksmanship', 'Outmaneuver', 'Saturation Salvo', 'Swarm Tactics', 'Trick Shot', 'Advanced Optics', 'Pattern Analyzer', 'Plasma Torpedoes'];
+exportObj.hyperspaceUpgradeExclusions = ['Jyn Erso', 'Bistan', 'Ezra Bridger', '"Chopper" (Astromech)', 'Pivot Wing', '"Chopper" (Crew)', '"Zeb" Orrelios', 'Baze Malbus', 'Cassian Andor', 'Hera Syndulla', 'Jyn Erso', 'K-2SO', 'Kanan Jarrus', 'Lando Calrissian', 'Leia Organa', 'Magva Yarro', 'Maul', 'R2-D2 (Crew)', 'Sabine Wren', 'Saw Gerrera', 'Bistan', 'Ezra Bridger', 'Han Solo', 'Luke Skywalker', 'Outrider', 'Admiral Sloane', 'Ciena Ree', 'Director Krennic', 'Grand Inquisitor', 'Grand Moff Tarkin', 'Minister Tua', 'Moff Jerjerrod', 'Seventh Sister', 'ISB Slicer', 'Fifth Brother', 'ST-321', '"Genius"', '4-LOM', 'Cad Bane', 'Cikatro Vizago', 'IG-88D', 'Chewbacca (Scum)', 'Ketsu Onyo', 'Lando Calrissian (Scum)', 'Maul', 'Unkar Plutt', 'Zuckuss', 'Jabba the Hutt', 'Dengar', 'Han Solo (Scum)', 'Fearless', 'Havoc', 'Mist Hunter', 'Shadow Caster', 'Slave I', 'Virago', 'IG-2000', 'M9-G8', 'R2-HA', 'R5-X3', 'BB Astromech', 'Chewbacca (Resistance)', 'GA-97', 'Han Solo (Resistance)', 'Kaydel Connix', 'Finn', 'Paige Tico', 'Rey', 'Heroic', "Rey's Millennium Falcon", 'Captain Phasma', 'General Hux', 'Kylo Ren', 'Petty Officer Thanisson', 'Supreme Leader Snoke', 'Biohexacrypt Codes', 'Hyperspace Tracking Data', 'R2-A6', 'R2-C4', 'R4-P17', 'R4-P Astromech', 'C1-10P', 'Chancellor Palpatine', 'Battle Meditation', 'Ahsoka Tano', 'Clone Commander Cody', 'Seventh Fleet Gunner', 'Chancellor Palpatine', 'General Grievous', 'Discord Missiles', 'TA-175', 'TV-94', 'Ensnare', 'R5 Astromech', 'Autoblasters', 'Heavy Laser Cannon', 'Jamming Beam', 'Informant', 'GNK "Gonk" Droid', 'Perceptive Copilot', 'Tactical Officer', 'Brilliant Evasion', 'Precognitive Reflexes', 'Predictive Shot', 'Sense', 'Supernatural Reflexes', 'Hotshot Gunner', 'Veteran Tail Gunner', 'Veteran Turret Gunner', 'Cloaking Device', 'Coaxium Hyperfuel', 'Feedback Array', 'Inertial Dampeners', 'Cluster Missiles', 'Cluster Missiles', 'Homing Missiles', 'Ion Missiles', 'Barrage Rockets', 'Ablative Plating', 'Advanced SLAM', 'Afterburners', 'Delayed Fuses', 'Munitions Failsafe', 'Shield Upgrade', 'Spare Parts Canisters', 'Static Discharge Vanes', 'Stealth Device', 'Tactical Scrambler', 'Targeting Computer', 'Ion Bombs', 'Proton Bombs', 'Proximity Mines', 'Seismic Charges', 'Electro-Proton Bomb', 'Bomblet Generator', 'Advanced Sensors', 'Collision Detector', 'Trajectory Simulator', 'Lone Wolf', 'Squad Leader', 'Composure', 'Crack Shot', 'Debris Gambit', 'Elusive', 'Intimidation', 'Marksmanship', 'Outmaneuver', 'Saturation Salvo', 'Swarm Tactics', 'Trick Shot', 'Advanced Optics', 'Pattern Analyzer', 'Plasma Torpedoes'];
 
-exportObj.epicExclusionsList = ['CR90 Corellian Corvette', 'Raider-class Corvette', 'GR-75 Medium Transport', 'Gozanti-class Cruiser', 'C-ROC Cruiser', 'Syliure-class Hyperspace Ring'];
+exportObj.epicExclusionsList = ['CR90 Corellian Corvette', 'Raider-class Corvette', 'GR-75 Medium Transport', 'Gozanti-class Cruiser', 'C-ROC Cruiser', 'Syliure-class Hyperspace Ring', 'Trident-class Assault Ship'];
 
 exportObj.epicExclusions = function(data) {
   var _ref, _ref1;
@@ -13090,6 +14659,27 @@ exportObj.hyperspaceCheck = function(data, faction, shipCheck) {
   }
 };
 
+exportObj.hyperspaceCheckBrowser = function(data, faction, type) {
+  var ship, _i, _len, _ref, _ref1, _ref2, _ref3;
+  if (faction == null) {
+    faction = '';
+  }
+  if (type === 'Pilot') {
+    return _ref = data.name, __indexOf.call(exportObj.hyperspacePilotExclusions, _ref) < 0;
+  } else if (type === 'Ship') {
+    _ref1 = exportObj.hyperspaceShipInclusions;
+    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+      ship = _ref1[_i];
+      if (ship.faction === faction && (data.name === ship.name || data.ship === ship.name || (Array.isArray(data.ship) && (_ref2 = ship.name, __indexOf.call(data.ship, _ref2) >= 0)))) {
+        return true;
+      }
+    }
+    return false;
+  } else {
+    return _ref3 = data.name, __indexOf.call(exportObj.hyperspaceUpgradeExclusions, _ref3) < 0;
+  }
+};
+
 if (exportObj.codeToLanguage == null) {
   exportObj.codeToLanguage = {};
 }
@@ -13113,7 +14703,7 @@ exportObj.translations.English = {
     "Torpedo": '<i class="xwing-miniatures-font xwing-miniatures-font-torpedo"></i>',
     "Turret": '<i class="xwing-miniatures-font xwing-miniatures-font-turret"></i>',
     "Illicit": '<i class="xwing-miniatures-font xwing-miniatures-font-illicit"></i>',
-    "Configuration": '<i class="xwing-miniatures-font xwing-miniatures-font-configuration"></i>',
+    "Configuration": '<i class="xwing-miniatures-font xwing-miniatures-font-config"></i>',
     "Modification": '<i class="xwing-miniatures-font xwing-miniatures-font-modification"></i>',
     "Gunner": '<i class="xwing-miniatures-font xwing-miniatures-font-gunner"></i>',
     "Device": '<i class="xwing-miniatures-font xwing-miniatures-font-device"></i>',
@@ -13138,7 +14728,7 @@ exportObj.translations.English = {
   faction: {
     "Rebel Alliance": "Rebel Alliance",
     "Galactic Empire": "Galactic Empire",
-    "Scum and Villany": "Scum and Villany",
+    "Scum and Villainy": "Scum and Villainy",
     "Resistance": "Resistance",
     "First Order": "First Order",
     "Galactic Republic": "Galactic Republic",
@@ -13164,7 +14754,11 @@ exportObj.translations.English = {
     "Device": "Payload",
     "Tech": "Tech",
     "Title": "Title",
-    "Tactical Relay": "Tactical Relay"
+    "Tactical Relay": "Tactical Relay",
+    "Command": "Command",
+    "Hyperdrive": "Hyperdrive",
+    "Team": "Team",
+    "Cargo": "Cargo"
   },
   sources: {
     "Second Edition Core Set": "Second Edition Core Set",
@@ -13179,84 +14773,100 @@ exportObj.translations.English = {
     "Fang Fighter Expansion Pack": "Fang Fighter Expansion Pack",
     "Lando's Millennium Falcon Expansion Pack": "Lando's Millennium Falcon Expansion Pack",
     "Saw's Renegades Expansion Pack": "Saw's Renegades Expansion Pack",
-    "TIE Reaper Expansion Pack": "TIE Reaper Expansion Pack"
+    "TIE Reaper Expansion Pack": "TIE Reaper Expansion Pack",
+    "ARC-170 Starfighter Expansion": "ARC-170 Starfighter Expansion",
+    "Loose Ships": "Loose Ships",
+    "Fugitives and Collaborators Squadron Pack": "Fugitives and Collaborators Squadron Pack",
+    "First Order Conversion Kit": "First Order Conversion Kit",
+    "M3-A Interceptor Expansion Pack": "M3-A Interceptor Expansion Pack"
   },
   ui: {
-    shipSelectorPlaceholder: "Select a ship",
-    pilotSelectorPlaceholder: "Select a pilot",
-    upgradePlaceholder: function(translator, language, slot) {
-      return "No " + (translator(language, 'slot', slot)) + " Upgrade";
+    "shipSelectorPlaceholder": "Select a ship",
+    "pilotSelectorPlaceholder": "Select a pilot",
+    upgradePlaceholder: function(translator, slot) {
+      return "No " + (translator('slot', slot)) + " Upgrade";
     },
-    modificationPlaceholder: "No Modification",
-    titlePlaceholder: "No Title",
-    upgradeHeader: function(translator, language, slot) {
-      return "" + (translator(language, 'slot', slot)) + " Upgrade";
+    "modificationPlaceholder": "No Modification",
+    "titlePlaceholder": "No Title",
+    upgradeHeader: function(translator, slot) {
+      return "" + (translator('slot', slot)) + " Upgrade";
     },
-    unreleased: "unreleased",
-    epic: "epic",
-    limited: "limited"
-  },
-  byCSSSelector: {
-    '.unreleased-content-used .translated': 'This squad uses unreleased content!',
-    '.loading-failed-container .translated': 'It appears that you followed a broken link. No squad could be loaded!',
-    '.collection-invalid .translated': 'You cannot field this list with your collection!',
-    '.ship-number-invalid-container .translated': 'A tournament legal squad must contain 2-8 ships!',
-    '.game-type-selector option[value="standard"]': 'Extended',
-    '.game-type-selector option[value="hyperspace"]': 'Hyperspace',
-    '.game-type-selector option[value="epic"]': 'Epic',
-    '.game-type-selector option[value="quickbuild"]': 'Quick Build',
-    '.xwing-card-browser option[value="name"]': 'Name',
-    '.xwing-card-browser option[value="source"]': 'Source',
-    '.xwing-card-browser option[value="type-by-points"]': 'Type (by Points)',
-    '.xwing-card-browser option[value="type-by-name"]': 'Type (by Name)',
-    '.xwing-card-browser .translate.select-a-card': 'Select a card from the list at the left.',
-    '.xwing-card-browser .translate.sort-cards-by': 'Sort cards by',
-    '.info-well .info-ship td.info-header': 'Ship',
-    '.info-well .info-skill td.info-header': 'Initiative',
-    '.info-well .info-actions td.info-header': 'Actions',
-    '.info-well .info-upgrades td.info-header': 'Upgrades',
-    '.info-well .info-range td.info-header': 'Range',
-    '.info-well .info-sources.info-header': 'Sources',
-    '.clear-squad': '<i class="fa fa-plus-circle"></i>&nbsp;New Squad',
-    '.save-list': '<i class="far fa-save"></i>&nbsp;Save',
-    '.save-list-as': '<i class="far fa-file"></i>&nbsp;Save as…',
-    '.delete-list': '<i class="fa fa-trash"></i>&nbsp;Delete',
-    '.backend-list-my-squads': '<i class="fa fa-download"></i>&nbsp;Load Squad',
-    '.import-squad': '<i class="fa fa-file-import"></i>&nbsp;Import',
-    '.view-as-text': '<span class="d-none d-lg-block"><i class="fa fa-print"></i>&nbsp;Print/Export List</span><span class="d-lg-none"><i class="fa fa-print"></i></span>',
-    '.collection': '<span class="d-none d-lg-block"><i class="fa fa-folder-open"></i> Your Collection</span><span class="d-lg-none"><i class="fa fa-folder-open"></i></span>',
-    '.randomize': '<span class="d-none d-lg-block"><i class="fa fa-random"></i> Randomize!</span><span class="d-lg-none"><i class="fa fa-random"></i></span>',
-    '.randomize-options': 'Randomizer options…',
-    '.notes-container .notes-name': 'Squad Notes:',
-    '.notes-container .tag-name': 'Tag:',
-    '.bbcode-list': 'Copy the BBCode below and paste it into your forum post.<textarea></textarea><button class="btn btn-copy">Copy</button>',
-    '.html-list': '<textarea></textarea><button class="btn btn-copy">Copy</button>',
-    '.vertical-space-checkbox': "Add space for cards <input type=\"checkbox\" class=\"toggle-vertical-space\" />",
-    '.color-print-checkbox': "Print color <input type=\"checkbox\" class=\"toggle-color-print\" checked=\"checked\" />",
-    '.print-list': '<i class="fa fa-print"></i>&nbsp;Print',
-    '.do-randomize': 'Randomize!',
-    '#browserTab': 'Card Browser',
-    '#aboutTab': 'About',
-    '.choose-obstacles': '<i class="fa fa-cloud"></i>&nbsp;Choose Obstacles',
-    '.choose-obstacles-description': 'Choose up to three obstacles to include in the permalink for use in external programs. (Support for displaying which obstacles were selected in the printout is not yet supported.)',
-    '.coreasteroid0-select': 'Core Asteroid 0',
-    '.coreasteroid1-select': 'Core Asteroid 1',
-    '.coreasteroid2-select': 'Core Asteroid 2',
-    '.coreasteroid3-select': 'Core Asteroid 3',
-    '.coreasteroid4-select': 'Core Asteroid 4',
-    '.coreasteroid5-select': 'Core Asteroid 5',
-    '.yt2400debris0-select': 'YT2400 Debris 0',
-    '.yt2400debris1-select': 'YT2400 Debris 1',
-    '.yt2400debris2-select': 'YT2400 Debris 2',
-    '.vt49decimatordebris0-select': 'VT49 Debris 0',
-    '.vt49decimatordebris1-select': 'VT49 Debris 1',
-    '.vt49decimatordebris2-select': 'VT49 Debris 2',
-    '.core2asteroid0-select': 'Force Awakens Asteroid 0',
-    '.core2asteroid1-select': 'Force Awakens Asteroid 1',
-    '.core2asteroid2-select': 'Force Awakens Asteroid 2',
-    '.core2asteroid3-select': 'Force Awakens Asteroid 3',
-    '.core2asteroid4-select': 'Force Awakens Asteroid 4',
-    '.core2asteroid5-select': 'Force Awakens Asteroid 5'
+    "unreleased": "unreleased",
+    "epic": "epic",
+    "Quickbuild": "Quick Build",
+    "limited": "limited",
+    "Unreleased content warning": "This squad uses unreleased content!",
+    "Broken squad link warning": "It appears that you followed a broken link. No squad could be loaded!",
+    "Collection warning": "You cannot field this list with your collection!",
+    "Ship number warning": "A tournament legal squad must contain 2-8 ships!",
+    "Multi-Faction warning": "Multi-Faction Lists are NEVER tournament legal!",
+    "XWS Import Dialog": "Import your list via XWS into YASB.<br><i>XWS is a common format to share lists between applications.</i>",
+    "Copy below simple text": "<p>Copy the below and paste it elsewhere.</p>",
+    "Copy below markdown": "<p>Copy the below and paste it into your reddit post.</p><p>Make sure that the post editor is set to markdown mode.</p>",
+    "Copy below TTS": "<p>Copy the below and paste it into the Tabletop Simulator.</p>",
+    "Copy below BBCode": "<p>Copy the BBCode below and paste it into your forum post.</p>",
+    "Copy below HTML": "<p>Copy the below and paste it elsewhere.</p>",
+    "Copy below XWS": "<p>Copy and paste this into an XWS-compliant application.</p>",
+    "Use INI prefix": "Put INI as prefix in front of names.",
+    "Choose obstacles dialog": "Choose up to three obstacles, to include in the permalink for use in external programs",
+    "Mark obstacles": "Mark the three obstacles you are using.",
+    "Scan QR-Code": "Scan to open this list in the builder",
+    "View in YASB": "View in Yet Another Squad Builder 2.0",
+    "YASB advertisment": "YASB 2.0 is a simple, fast, and easy to use squad builder for X-Wing Miniatures by Fantasy Flight Games.",
+    collectionContentShips: function(translator, number) {
+      return "You have " + number + " ship " + (number === 1 ? 'model' : 'models') + " in your collection.";
+    },
+    collectionContentShipsAndPilots: function(translator, data) {
+      return "You have " + data[0] + " ship " + (data[0] === 1 ? 'model' : 'models') + " and " + data[1] + " pilot " + (data[1] === 1 ? 'card' : 'cards') + " in your collection.";
+    },
+    collectionContentUpgrades: function(translator, number) {
+      return "You have " + number + " in your collection.";
+    },
+    varPointCostsPoints: function(translator, points) {
+      return "<b>Point cost:</b> " + points + " when ";
+    },
+    varPointCostsConditionAgility: function(translator, values) {
+      return "agility is " + values;
+    },
+    varPointCostsConditionIni: function(translator, values) {
+      return "initiative is " + values;
+    },
+    varPointCostsConditionBase: function(translator, values) {
+      return "base size is small, medium, large or huge";
+    },
+    "Missing Item List:": "To field this squad you need the following additional items:",
+    pilotFlyingShip: function(translator, pilot, ship) {
+      return "Pilot " + pilot + " flying " + ship;
+    },
+    "Placeholder Textsearch Browser": "Search for name, text or ship",
+    noXYselected: function(translator, xy) {
+      return "No " + (translator('ui', xy)) + " selected";
+    },
+    "Select a card": "Select a card from the list at the left.",
+    yourXYsquads: function(translator, faction) {
+      return "Your " + (translator('faction', faction)) + " Squads";
+    },
+    reallyDeleteSquadXY: function(translator, squadname) {
+      return "Really delete " + squadname + "?";
+    },
+    "No saved squads": "Nothing to see here. Go save a squad!",
+    "name required": "A name is required",
+    "Name in use": "You already have a squad with that name",
+    "select OAuth provider": "Select one of the OAuth providers below to log in and start saving squads.",
+    "OAuth explanation": "<p>\n    <a href=\"http://en.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> is an authorization system which lets you prove your identity at a web site without having to create a new account.  Instead, you tell some provider with whom you already have an account (e.g. Google or Facebook) to prove to this web site that you say who you are.  That way, the next time you visit, this site remembers that you're that user from Google.\n</p>\n<p>\n    The best part about this is that you don't have to come up with a new username and password to remember.  And don't worry, I'm not collecting any data from the providers about you.  I've tried to set the scope of data to be as small as possible, but some places send a bunch of data at minimum.  I throw it away.  All I look at is a unique identifier (usually some giant number).\n</p>\n<p>\n    For more information, check out this <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">introduction to OAuth</a>.\n</p>",
+    "Continue to OAuth provider": "This will open a new window to let you authenticate with the chosen provider. You may have to allow pop ups for this site.",
+    "iOS requires cross-site control": "Due to a new feature in iOS systems OAuth won't work unless you enable \"cross-site control\".",
+    "login in progress": "OAuth login is in progress. Please finish authorization at the specified provider using the window that was just created.",
+    "Squads reloaded": "All squads of that faction have been reloaded.",
+    "Sure to delete?": "Are you sure you want to delete this squad?",
+    "Unsaved Changes Warning": "You have not saved changes to this squad.  Do you want to go back and save?",
+    adds: function(translator, data) {
+      return "Adds: " + (translator('ui', data));
+    },
+    removes: function(translator, data) {
+      return "Removes: " + (translator('ui', data));
+    },
+    "Less upgrades": "Fewer upgrades"
   },
   singular: {
     'pilots': 'Pilot',
@@ -13273,6 +14883,9 @@ exportObj.translations.English = {
   rulestypes: {
     'glossary': 'Glossary',
     'faq': 'FAQ'
+  },
+  action: {
+    'Boost': 'Boost'
   }
 };
 
@@ -13281,7 +14894,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.English = function() {
-  var condition_translations, pilot_translations, upgrade_translations;
+  var condition_translations, data, name, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'English';
   exportObj.renameShip("YT-1300", "Modified YT-1300 Light Freighter");
   exportObj.renameShip("StarViper", "StarViper-class Attack Platform");
@@ -13321,15 +14934,15 @@ exportObj.cardLoaders.English = function() {
   exportObj.renameShip("Z-95 Headhunter", "Z-95-AF4 Headhunter");
   exportObj.renameShip("M12-L Kimogila Fighter", "M12-L Kimogila Fighter");
   exportObj.renameShip("E-Wing", "E-Wing");
-  exportObj.renameShip("TIE Interceptor", "TIE Interceptor");
+  exportObj.renameShip("TIE Interceptor", "TIE/in Interceptor");
   exportObj.renameShip("Lancer-Class Pursuit Craft", "Lancer-class Pursuit Craft");
   exportObj.renameShip("TIE Reaper", "TIE Reaper");
   exportObj.renameShip("M3-A Interceptor", "M3-A Interceptor");
   exportObj.renameShip("JumpMaster 5000", "JumpMaster 5000");
   exportObj.renameShip("Customized YT-1300", "Customized YT-1300 Light Freighter");
   exportObj.renameShip("Escape Craft", "Escape Craft");
-  exportObj.renameShip("TIE/FO Fighter", "TIE/FO Fighter");
-  exportObj.renameShip("TIE/SF Fighter", "TIE/SF Fighter");
+  exportObj.renameShip("TIE/FO Fighter", "TIE/fo Fighter");
+  exportObj.renameShip("TIE/SF Fighter", "TIE/sf Fighter");
   exportObj.renameShip("Upsilon-Class Command Shuttle", "Upsilon-Class Command Shuttle");
   exportObj.renameShip("TIE/VN Silencer", "TIE/vn Silencer");
   exportObj.renameShip("T-70 X-Wing", "T-70 X-Wing");
@@ -13337,6 +14950,9 @@ exportObj.cardLoaders.English = function() {
   exportObj.renameShip("MG-100 StarFortress", "MG-100 StarFortress");
   exportObj.renameShip("Mining Guild TIE Fighter", "Mining Guild TIE Fighter");
   exportObj.renameShip("Scavenged YT-1300", "Scavenged YT-1300");
+  exportObj.renameShip("TIE/WI Whisper", "TIE/wi Whisper Modified Interceptor");
+  exportObj.renameShip("TIE/Se Bomber", "TIE/se Bomber");
+  exportObj.renameShip("TIE/Ba Interceptor", "TIE/ba Interceptor");
   pilot_translations = {
     "0-66": {
       display_name: "0-66",
@@ -14897,7 +16513,7 @@ exportObj.cardLoaders.English = function() {
       text: "At the start of the End Phase, you may spend any number of %FORCE% to choose that many friendly ships at range 0-2. Each chosen ship does not remove 1 focus or evade token during this End Phase. %LINEBREAK% <strong>Intuitive Controls:</strong> During the System Phase, you may perform a purple %BARRELROLL% or purple %BOOST% action."
     },
     "Aayla Secura": {
-      text: "While and enemy ship in your %FRONTARC% at range 0-1 performs an attack, the defender may change 1 blank result to a %FOCUS% result. %LINEBREAK% <strong>Intuitive Controls:</strong> During the System Phase, you may perform a purple %BARRELROLL% or purple %BOOST% action."
+      text: "While an enemy ship in your %FRONTARC% at range 0-1 performs an attack, the defender may change 1 blank result to a %FOCUS% result. %LINEBREAK% <strong>Intuitive Controls:</strong> During the System Phase, you may perform a purple %BARRELROLL% or purple %BOOST% action."
     },
     "Obi-Wan Kenobi (Eta-2)": {
       display_name: "Obi-Wan Kenobi",
@@ -14972,7 +16588,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Commander Malarus (Xi Shuttle)": {
       display_name: "Commander Malarus",
-      text: "While a friendly ship at range 0-2 performs a primary attack, if it has 1 or more blank results, that ship <b>must</b> gain 1 strain token to reroll 1 blank result, if able."
+      text: "While a friendly ship at range 0-2 performs a primary attack, before the Modify Dice step, if it has 1 or more blank results, that ship <b>must</b> gain 1 strain token to reroll 1 blank result, if able. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"
     },
     "Gideon Hask (Xi Shuttle)": {
       display_name: "Gideon Hask",
@@ -15009,14 +16625,14 @@ exportObj.cardLoaders.English = function() {
     },
     "Hera Syndulla (B-Wing)": {
       display_name: "Hera Syndulla",
-      text: "While another friendly ship at range 1-2 defends or performs an attack, you may transfer 1 of your focus tokens, evade tokens, or locks to that ship."
+      text: "While another friendly ship at range 1-2 defends or performs an attack, during a Modify Dice step, you may transfer 1 of your focus tokens, evade tokens, or locks to that ship. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"
     },
     "Netrem Pollard": {
       text: "After you barrel roll, you may choose 1 friendly ship that is not stressed at range 0-1. That ship gain's 1 stress token, then you rotate 180º."
     },
     "Hera Syndulla (A-Wing)": {
       display_name: "Hera Syndulla",
-      text: "While another friendly ship at range 1-2 defends or performs an attack, you may transfer 1 of your focus tokens, evade tokens, or locks to that ship.%LINEBREAK%<strong>Vectored Thrusters:</strong> After you perform an action, you may perform a red %BOOST% action."
+      text: "While another friendly ship at range 1-2 defends or performs an attack, during a Modify Dice step, you may transfer 1 of your focus tokens, evade tokens, or locks to that ship.%LINEBREAK%<strong>Vectored Thrusters:</strong> After you perform an action, you may perform a red %BOOST% action. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"
     },
     "Wedge Antilles (A-Wing)": {
       display_name: "Wedge Antilles",
@@ -15039,7 +16655,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Darth Vader (TIE Defender)": {
       display_name: "Darth Vader",
-      text: "You cannot spend %FORCE% charges except while attacking. %LINEBREAK% When you perform an attack, you may spend 1 %FORCE% to change 1 blank result to a %HIT% result. %LINEBREAK%<strong>Full Throttle:</strong> After you fully execute a speed 3-5 maneuver, you may perform an %EVADE% action."
+      text: "You cannot spend %FORCE% except while attacking. %LINEBREAK% While you perform an attack, you may spend 1 %FORCE% to change 1 blank result to a %HIT% result. %LINEBREAK%<strong>Full Throttle:</strong> After you fully execute a speed 3-5 maneuver, you may perform an %EVADE% action."
     },
     "Captain Dobbs": {
       text: "While another friendly ship at range 0-1 defends, before the Neutralize Results step, if you are in the attack arc and are not ionized, you may gain 1 ion token to cancel 1 %HIT% result. %LINEBREAK%<strong>Full Throttle:</strong> After you fully execute a speed 3-5 maneuver, you may perform an %EVADE% action."
@@ -15065,7 +16681,7 @@ exportObj.cardLoaders.English = function() {
       text: "After you perform an attack, if the defender was destroyed, gain 1 stress token. %LINEBREAK% After a friendly ship at range 0-3 is destroyed, remove 1 stress token. %LINEBREAK%<strong>Autothrusters:</strong> After you perform an action, you may perform a red %BARRELROLL% or red %BOOST% action."
     },
     "Lieutenant Lorrir": {
-      text: "While you barrel roll, you must use the, you <b>must</b> use the (%BANKLEFT% or %BANKRIGHT%) template instead of the %STRAIGHT% template. %LINEBREAK%<strong>Autothrusters:</strong> After you perform an action, you may perform a red %BARRELROLL% or red %BOOST% action."
+      text: "While you barrel roll, you <b>must</b> use the (%BANKLEFT% or %BANKRIGHT%) template instead of the %STRAIGHT% template. %LINEBREAK%<strong>Autothrusters:</strong> After you perform an action, you may perform a red %BARRELROLL% or red %BOOST% action."
     },
     "Kanan Jarrus (HWK-290)": {
       display_name: "Kanan Jarrus",
@@ -15078,13 +16694,82 @@ exportObj.cardLoaders.English = function() {
       text: "At the start of the End Phase, you may spend 2 %CHARGE% to choose yourself or a ship in your %SINGLETURRETARC% with 1 or more circular tokens. During the End Phase, circular tokens are not removed from that ship."
     },
     "Arliz Hadrassian": {
-      text: "While you perform a %FRONTARC% attafck, if you are damaged, you may change 1 of your %FOCUS% results to a %CRIT% result. %LINEBREAK% While you defend, if you are damanged, you <b>must</b> change 1 of your %FOCUS% results to a blank result."
+      text: "While you perform a %FRONTARC% attack, if you are damaged,before the Modify Dice step, you may change 1 of your %FOCUS% results to a %CRIT% result. %LINEBREAK% While you defend, if you are damaged, you <b>must</b> change 1 of your %FOCUS% results to a blank result. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"
     },
     "Leema Kai": {
-      text: "Before you engage, if you are not in any ship's %FRONTARC%, you may acquire a lock on an enemy ship in your %FULLFRONTARC%."
+      text: "Before you engage, if you are not in any enemy ship's %FRONTARC%, you may acquire a lock on an enemy ship in your %FULLFRONTARC%."
     },
     "Padric": {
       text: "After a friendly device that you have locked detonates, each enemy ship at range 0-1 of that device gains 1 strain token."
+    },
+    "New Republic Patrol": {
+      text: "%LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "Kijimi Spice Runner": {
+      text: "%LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "Corus Kapellim": {
+      text: "Before you engage, you may choose 1 ship in your firing arc at range 0-1. If you do, transfer 1 green token from that ship to yourself. %LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "C'ai Threnalli (Y-Wing)": {
+      display_name: "C'ai Threnalli",
+      text: "After you fully execute a maneuver, if you moved through a friendly ship, you may perform an %EVADE% action. %LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "Lega Fossang": {
+      text: "While you perform a primary or %TURRET% attack, you may reroll 1 attack die for each friendly device or calculating friendly ship in the attack arc. %LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "Shasa Zaro": {
+      text: "After you defend, you may choose a friendly ship in your %FULLREARARC% at range 0-2 and 1 of your green tokens. If you do, that ship gains a matching token. %LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "Teza Nasz": {
+      text: "While a friendly ship at range 0-2 performs an attack, if the defender has a ship friendly to the attacker in each of its side arcs (%LEFTARC% or %RIGHTARC%), the attacker may reroll 1 attack die. %LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "Wilsa Teshlo": {
+      text: "After you perform an attack, if the defender was dealt a faceup damage card, the defender gains 1 strain token unless it chooses 1 non-recurring %CHARGE% from 1 of its equipped upgrades and loses that %CHARGE%. %LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "Aftab Ackbar": {
+      text: "After you execute a red basic maneuver or perform a red action, if you have exactly 1 stress token, you may gain 1 strain token to remove that stress token. %LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "Zorii Bliss": {
+      text: "After a ship at range 1 performs an action during its Perform Action step, if that action is on your action bar, you may spend 1 %CHARGE% to perform that action, treating it as red.%LINEBREAK%<strong>Intuitive Interface:</strong> After you perform an action added to your action bar by a %TALENT%, %ILLICIT%, or %MODIFICATION% upgrade, you may perform a %CALCULATE% action."
+    },
+    "Kylo Ren (TIE Whisper)": {
+      display_name: "Kylo Ren",
+      text: "Before an enemy ship in your %BULLSEYEARC% is dealt a facedown damage card, you may spend 1 %FORCE%. If you do, that damage card is dealt face up instead. %LINEBREAK%<strong>Heavy Weapon Turret:</strong> You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You <b>must</b> treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%."
+    },
+    '"Wrath"': {
+      text: "After you perform a %BULLSEYEARC% attack, if you have 1 or more non-lock red or orange tokens, you may perform a bonus attack against a different target. %LINEBREAK%<strong>Heavy Weapon Turret:</strong> You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You <b>must</b> treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%."
+    },
+    '"Nightfall"': {
+      text: "After you fully execute a maneuver or perform a %BOOST% action, each ship you moved through gains 2 jam tokens. %LINEBREAK%<strong>Heavy Weapon Turret:</strong> You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You <b>must</b> treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%."
+    },
+    '"Whirlwind"': {
+      text: "Before you engage, you may remove any number of jam tokens, then you may gain 1 focus token for each enemy ship that has you in its %FRONTARC%. %LINEBREAK%<strong>Heavy Weapon Turret:</strong> You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You <b>must</b> treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%."
+    },
+    "709th Legion Ace": {
+      text: "%LINEBREAK%<strong>Heavy Weapon Turret:</strong> You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You <b>must</b> treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%."
+    },
+    "Red Fury Zealot": {
+      text: "%LINEBREAK%<strong>Heavy Weapon Turret:</strong> You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. You <b>must</b> treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%."
+    },
+    "Sienar-Jaemus Test Pilot": {
+      text: "%LINEBREAK%<strong>Pursuit Thrusters:</strong> During the System Phase, you may perform a %BOOST% action."
+    },
+    "First Order Cadet": {
+      text: "%LINEBREAK%<strong>Pursuit Thrusters:</strong> During the System Phase, you may perform a %BOOST% action."
+    },
+    '"Grudge"': {
+      text: "While a friendly bomb or mine at range 0-2 detonates, each time attack dice are rolled to resolve its effect, you may reroll up to 1 of those dice. %LINEBREAK%<strong>Pursuit Thrusters:</strong> During the System Phase, you may perform a %BOOST% action."
+    },
+    '"Dread"': {
+      text: "After you reload, each ship in your %BULLSEYEARC% gains 1 deplete token. %LINEBREAK%<strong>Pursuit Thrusters:</strong> During the System Phase, you may perform a %BOOST% action."
+    },
+    '"Scorch" (TIE/Se Bomber)': {
+      display_name: '"Scorch"',
+      text: "While a friendly ship at range 0-1 performs a primary attack, it may spend 1 %HIT% result. If it does, after defending, the defender gains 1 strain token. %LINEBREAK%<strong>Pursuit Thrusters:</strong> During the System Phase, you may perform a %BOOST% action."
+    },
+    '"Breach"': {
+      text: "After you fully execute a maneuver or perform a %BOOST% action, if you moved through an enemy ship, you may acquire a lock on that ship. %LINEBREAK%<strong>Pursuit Thrusters:</strong> During the System Phase, you may perform a %BOOST% action."
     },
     "Republic Judiciary": {
       display_name: "Republic Judiciary",
@@ -15125,6 +16810,14 @@ exportObj.cardLoaders.English = function() {
     "Syndicate Smugglers": {
       display_name: "Syndicate Smugglers",
       text: "<i class = flavor_text>Vessels like the C-ROC Cruiser allow criminal operations across the Outer Rim to move massive amounts of illicit materials, or project power that can bully small colonies into compliance.</i> %LINEBREAK% <strong>Overdrive Burners:</strong> While you defend, if your revealed maneuver is speed 3-5, roll 1 additional defense die."
+    },
+    "Colicoid Destroyer": {
+      display_name: "Colicoid Destroyer",
+      text: "<i class = flavor_text>Designed by the Colicoid Creation Nest and equipped with powerful tentacles and a massive drill to tear through the hull of even the toughest starships and fortifications, the Trident-class Assault Ship is a terrifying testament to the threat posed by the Separatist Alliance.</i> %LINEBREAK% <strong>Tractor Grasp:</strong> After you perform a <b>Tractor Tentacles</b> attack that hits, the defender gains 1 tractor token."
+    },
+    "Lawless Pirates": {
+      display_name: "Lawless Pirates",
+      text: "<i class = flavor_text>The Separatist Alliance has close ties to certain mercenaries and criminal groups and, as the war rages on, its technology sometimes finds its way into unsavory hands.</i> %LINEBREAK% <strong>Tractor Grasp:</strong> After you perform a <b>Tractor Tentacles</b> attack that hits, the defender gains 1 tractor token."
     }
   };
   upgrade_translations = {
@@ -15441,7 +17134,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Discord Missiles": {
       display_name: "Discord Missiles",
-      text: "At the start of the Engagement Phase, you may spend 1&nbsp;calculate token and 1&nbsp;%CHARGE% to launch 1&nbsp;buzz droid swarm using the [3&nbsp;%BANKLEFT%], [3&nbsp;%STRAIGHT%], or [3&nbsp;%BANKRIGHT%] template.%LINEBREAK%This card’s %CHARGE% cannot be recovered."
+      text: "At the start of the Engagement Phase, you may spend 1&nbsp;calculate token and 1 %CHARGE% to launch 1 buzz droid swarm using the [3 %BANKLEFT%], [3 %STRAIGHT%], or [3 %BANKRIGHT%] template.%LINEBREAK%This card’s %CHARGE% cannot be recovered."
     },
     "Dorsal Turret": {
       display_name: "Dorsal Turret",
@@ -15595,7 +17288,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Ion Bombs": {
       display_name: "Ion Bombs",
-      text: "During the System Phase, you may spend 1 %CHARGE% to drop an Ion Bomb using the [1 %STRAIGHT%] template."
+      text: "<strong>Bomb</strong>%LINEBREAK% During the System Phase, you may spend 1 %CHARGE% to drop an Ion Bomb using the [1 %STRAIGHT%] template."
     },
     "ISB Slicer": {
       display_name: "ISB Slicer",
@@ -16165,7 +17858,7 @@ exportObj.cardLoaders.English = function() {
       text: "<strong>Proud Tradition</strong>%LINEBREAK%<strong>Setup:</strong> Equip this side faceup. %LINEBREAK% While you have 2 or fewer stress tokens, you may perform %FOCUS% actions even while stressed. After you perform an attack, if you are stressed, the defender may spend 1 focus token or suffer 1 %CRIT% damage to flip this card. %LINEBREAK% <strong>False Tradition</strong>%LINEBREAK% Treat your %FOCUS% actions as red."
     },
     "Cluster Mines": {
-      text: "During the System Phase, you may spend 1 %CHARGE% to drop a Cluster Mine set using the [1 %STRAIGHT%] template. %LINEBREAK% This card's %CHARGE% cannot be recovered."
+      text: "<strong>Mine</strong>%LINEBREAK% During the System Phase, you may spend 1 %CHARGE% to drop a Cluster Mine set using the [1 %STRAIGHT%] template. %LINEBREAK% This card's %CHARGE% cannot be recovered."
     },
     "Kaz's Fireball": {
       text: "<strong>Setup:</strong> When you resolve <strong>Explosion with Wings</strong>, you may search the damage deck and choose a damage card with the <b>Ship</b> trait: you are dealt that card instead. Then, shuffle the damage deck. %LINEBREAK% You can perform actions of damage cards even while ionized."
@@ -16196,9 +17889,6 @@ exportObj.cardLoaders.English = function() {
     },
     "Plo Koon": {
       text: "At the start of the End Phase, if you are reinforced, you may choose 1 friendly ship at range 0 or in your %LEFTARC% or %RIGHTARC% at range 1. That ship removes 1 deplete or strain token, or repairs 1 faceup damage card."
-    },
-    "Aayla Secura": {
-      text: "While an enemy ship in your %BULLSEYEARC% performs an attack, if the defender is friendly and at range 0-2, the defender may change 1 blank result to a %FOCUS% result."
     },
     "Repulsorlift Stabilizers": {
       text: "<strong>Inactive: Setup:</strong> Equip this side faceup. Reduce the difficulty of your straight (%STRAIGHT%) maneuvers. %LINEBREAK% After you fully execute a maneuver, you may flip this card. %LINEBREAK%<strong>Active: </strong> After you reveal a bank (%BANKLEFT% or %BANKRIGHT%) or turn (%TURNLEFT% or %TURNRIGHT%), you <b>must</b> perform that maneuver as a slideslip, then flip this card. %LINEBREAK% After you fully execute a non-sideslip maneuver, you may flip this card."
@@ -16232,6 +17922,9 @@ exportObj.cardLoaders.English = function() {
     },
     "R2-D2 (Republic)": {
       text: "After you activate, you may spend 1 %CHARGE% and gain 1 deplete token to repair 1 damage card, recover 1 shield or remove 1 device at range 0-1."
+    },
+    "Aayla Secura": {
+      text: "While an enemy ship in your %BULLSEYEARC% performs an attack, if the defender is friendly and at range 0-2, the defender may change 1 blank result to a %FOCUS% result."
     },
     "Patience": {
       text: "At the start of the Engagement Phase, if there is an enemy ship in your %FRONTARC%, you may gain 1 deplete token to recover 1 %FORCE%."
@@ -16267,7 +17960,7 @@ exportObj.cardLoaders.English = function() {
       text: "<strong>Setup:</strong> After placing forces, choose an enemy ship. It gains 2 stress tokens. %LINEBREAK% While you defend, if the attacker is stressed, you may reroll 1 defense die."
     },
     "Commander Malarus": {
-      text: "<strong>Setup:</strong> Equip this side face up. %LINEBREAK% While a friendly non-limited ship at range 0-1 performs a primary attack, that ship may reroll 1 blank result. If it does and the attack does not hit, you <b>must</b> flip thiss card. %LINEBREAK%<strong>Perfected:</strong> While you perform an attack, if the defender is in your %BULLSEYEARC%, you <b>must</b> convert all %FOCUS% results to %HIT% results and gain 1 stress token. Then, if you have 2 or more stress tokens, suffer 1 %HIT% damage."
+      text: "<strong>Setup:</strong> Equip this side face up. %LINEBREAK% While a friendly non-limited ship at range 0-1 performs a primary attack, that ship may reroll 1 blank result. If it does and the attack does not hit, you <b>must</b> flip this card. %LINEBREAK%<strong>Perfected:</strong> While you perform an attack, if the defender is in your %BULLSEYEARC%, you <b>must</b> convert all %FOCUS% results to %HIT% results and gain 1 stress token. Then, if you have 2 or more stress tokens, suffer 1 %HIT% damage."
     },
     "Automated Target Priority": {
       text: "While you perform an attack, you <b>must</b> choose a defender at the closest valid attack range. %LINEBREAK% After you perform an attack that missed, place 1 calculate token on this card. %LINEBREAK% Before you engage, you may remove 1 calculate token from this card to gain a matching token."
@@ -16285,7 +17978,7 @@ exportObj.cardLoaders.English = function() {
       text: "While you perform a primary attack, before rolling attack dice, you may spend 2 charges. If you do, your %CRIT% results inflict ion tokens instead of damage."
     },
     "Thermal Detonators": {
-      text: "During the System Phase, you may spend up to 2 %CHARGE% to drop that many Thermal Detonators using the [1 %STRAIGHT%] or [2 %STRAIGHT%] template. Each must be placed using a different template. %LINEBREAK% When you reload this card, recover 1 additional %CHARGE%."
+      text: "<strong>Bomb</strong>%LINEBREAK% During the System Phase, you may spend up to 2 %CHARGE% to drop that many Thermal Detonators using the [1 %STRAIGHT%] or [2 %STRAIGHT%] template. Each must be placed using a different template. %LINEBREAK% When you reload this card, recover 1 additional %CHARGE%."
     },
     "R7-A7": {
       text: "While you perform an attack, you may spend 1 %CHARGE% to change 1 %HIT% result to a %CRIT% result."
@@ -16335,7 +18028,7 @@ exportObj.cardLoaders.English = function() {
       text: "Attack (%LOCK%): Gain 1 ion token to perform this attack. If this attack hits, the defender suffers 1 additional %HIT%/%CRIT% damage for each matching uncanceled result after the first."
     },
     "TIE Defender Elite": {
-      text: "Decrease the difficulty of your turn (%TURNLEFT% or %TURNRIGHT%) maneuvers. Increase the difficulty of your Koiogran Turn (%KTURN%) maneuvers. Replace your <strong>Full Throttle</strong> ship ability with the following: %LINEBREAK% <strong>Advanced Fire Control:</strong> After you perform a %CANNON% or %MISSILE% attack, if you have a lock on the defender, you may perform a bonus primary attack agaisnt the defender."
+      text: "Decrease the difficulty of your turn (%TURNLEFT% or %TURNRIGHT%) maneuvers. Increase the difficulty of your Koiogran Turn (%KTURN%) maneuvers. Replace your <strong>Full Throttle</strong> ship ability with the following: %LINEBREAK% <strong>Advanced Fire Control:</strong> After you perform a %CANNON% or %MISSILE% attack, if you have a lock on the defender, you may perform a bonus primary attack against the defender."
     },
     "Sensitive Controls": {
       text: "Replace your <strong>Autothrusters</strong> ship ability with the following: %LINEBREAK%<strong>Sensitive Controls:</strong> During the System Phase, you may perform a red %BARRELROLL% or red %BOOST% action."
@@ -16350,7 +18043,7 @@ exportObj.cardLoaders.English = function() {
       text: " "
     },
     "Phoenix Squadron": {
-      text: "<strong>Setup Side:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You are a <b>wing leader</b>. ...  %LINEBREAK% After you are placed, flip this card. %LINEBREAK% <strong>Play Side:</strong>%LINEBREAK% At the start of the Planning Phase, 1 of your wingmates that is docked with you may join your wing without gaining a stress token. %LINEBREAK% While you or your Attack Shuttle wingmate or Sheathipede-class wingmate defends, up to 2 of your RZ-1 A-Wing wingmates in the attack arc may each suffer 1 %HIT%/%CRIT% damage to cancel 1 matching result."
+      text: "<strong>Setup Side:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You are a <b>wing leader</b>. Your wingmates must be 2-5 of the following: %LINEBREAK% - 0-1 Attack Shuttle %LINEBREAK% - 0-1 Sheathipede-class Shuttle %LINEBREAK% - 0-5 RZ-1 A-wings %LINEBREAK% After you are placed, flip this card. %LINEBREAK% <strong>Play Side:</strong>%LINEBREAK% At the start of the Planning Phase, 1 of your wingmates that is docked with you may join your wing without gaining a stress token. %LINEBREAK% While you or your Attack Shuttle wingmate or Sheathipede-class wingmate defends, up to 2 of your RZ-1 A-Wing wingmates in the attack arc may each suffer 1 %HIT%/%CRIT% damage to cancel 1 matching result."
     },
     "Hopeful": {
       text: "After another friendly ship at range 0-3 is destroyed, if that ship is limited or has the <strong>Hopeful</strong> upgrade, you may perform a %FOCUS% or %BOOST% action."
@@ -16366,7 +18059,7 @@ exportObj.cardLoaders.English = function() {
       text: "<strong>Setup Side:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You are a <b>wing leader</b>. Your wingmates must be 2-5 other ships of your type. %LINEBREAK% After you are placed, flip this card. %LINEBREAK% <strong>Play Side:</strong>%LINEBREAK% Your wingmates can perform %BARRELROLL% or %BOOST% actions. If they do, they voluntarily split from the wing. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may each suffer 1 %HIT%/%CRIT% damage to cancel 1 matching result."
     },
     "Skystrike Academy Class": {
-      text: "<strong>Setup Side:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You are a <b>wing leader</b>. ... %LINEBREAK% <strong>Play Side:</strong>%LINEBREAK% After you barrel roll or boost, each of your wingmates is forced to split from the wing %LINEBREAK% While you defend, up to 5 of your wingmates in the attack arc may each suffer 1 %HIT%/%CRIT% damage to cancel 1 matching result."
+      text: "<strong>Setup Side:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You are a <b>wing leader</b>. Your wingmates must be 2-5 TIE/ln FIghters with initiative lower than yours. %LINEBREAK% After you are placed, flip this card. %LINEBREAK% <strong>Play Side:</strong>%LINEBREAK% After you barrel roll or boost, each of your wingmates is forced to split from the wing %LINEBREAK% While you defend, up to 5 of your wingmates in the attack arc may each suffer 1 %HIT%/%CRIT% damage to cancel 1 matching result."
     },
     "In It For The Money": {
       text: "<strong>In It For The Money:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You can be included in Republic, Rebel, and Resistance squads. %LINEBREAK% After an allied limited ship in your squad is destroyed, gain 1 focus token and flip this card. %LINEBREAK% <strong>In It For Your Rebellion:</strong>%LINEBREAK% Non-Scum ships in your squad are treated as friendly instead of allied."
@@ -16379,6 +18072,51 @@ exportObj.cardLoaders.English = function() {
     },
     "Interloper Turn": {
       text: "Before you execute a speed 1-2 turn (%TURNLEFT% or %TURNRIGHT%) or speed 1-2 Koiogran Turn (%KTURN%), if you are at range 0-1 of an asteroid, structure, or huge ship, you may gain 1 tractor token."
+    },
+    "Protectorate Gleb": {
+      text: "After you coordinate a friendly ship, you may transfer 1 orange or red token to the ship you coordinated. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added restriction stipulating friendly ship</i>"
+    },
+    "R4-B11": {
+      text: "While you perform an attack, you may remove 1 orange or red token from the defender to reroll any number of defense dice."
+    },
+    "Wartime Loadout": {
+      text: "Gain 1 %TORPEDO% slot and 1 %MISSILE% slot. Replace your ship ability with the following: %LINEBREAK%<strong>Devastating Barrage:</strong> While you perform a %TORPEDO% or %MISSILE% attack, if the defender is in your %BULLSEYEARC%, your %CRIT% results cannot be cancelled by %EVADE% results."
+    },
+    "Watchful Astromech": {
+      text: "After you perform a %RELOAD% or %ROTATEARC% action, if you are in an enemy ship's firing arc, you may perform a red %CALCULATE% action."
+    },
+    "L4E-R5": {
+      text: "At the start of the Engagement Phase, you may transfer 1 calculate token to a friendly ship in your firing arc."
+    },
+    "Overtuned Modulators": {
+      text: "During the System Phase, if you are not stressed, you may spend 1 %CHARGE% to gain 3 calculate tokens. %LINEBREAK% During the End Phase, if your %CHARGE% is inactive, for each green token you remove, gain 1 strain token."
+    },
+    "Sensor Scramblers": {
+      text: "<strong>Setup:</strong> Gain 1 Cloak token. %LINEBREAK% While you are cloaked, other ships cannot acquire locks on you. %LINEBREAK% During the End Phase, if you are cloaked and there is an enemy ship at range 0-3, you must decloak. If you do and that decloak fails, lose 1 cloak token."
+    },
+    "Enhanced Jamming Suite": {
+      text: "While you jam, you can choose yourself or another friendly ship. %LINEBREAK% While you defend, if the attacker has no green tokens or there is a jammed ship in the attack arc, you may roll 1 additional defence die."
+    },
+    "Compassion": {
+      text: "Before another friendly ship at range 0-2 would be dealt a faceup <b>Pilot</b> or <b>Crew</b> damage card, you may spend 1 %FORCE%. If you do, that damage card is discarded instead, and you are dealt 1 facedown damage card. Then, if  you have 2 or more damage cards, recover 2 %FORCE%."
+    },
+    "Malice": {
+      text: "While you perform an attack, you may spend 1 %FORCE% to change 1 %FOCUS% or %HIT% result to a %CRIT% result. If you do, after you perform that attack, if the defender was dealt 1 or more faceup <b>Pilot</b> or <b>Crew</b> damage cards, recover 2 %FORCE%."
+    },
+    "Shattering Shot": {
+      text: "While you perform an attack, if the attack is obstructed by an obstacle or the defender is at range 0 of an obstacle, you may spend 1 %FORCE% to add 1 %FOCUS% result."
+    },
+    "DT-798": {
+      text: "At the start of the Engagement Phase, you may choose a friendly ship in your firing arc. If you do, that ship gains 1 strain token. %LINEBREAK% While you perform an attack, you may reroll up to 1 die for each ship in the attack arc with 1 or more non-lock red or orange tokens."
+    },
+    "Feedback Ping": {
+      text: "After an enemy ship executes a maneuver, if it is at range 0-1 of a friendly device, you may acquire a lock on that ship, ignoring range restrictions."
+    },
+    "Electro-Chaff Missiles": {
+      text: "During the System Phase, you may spend 1 %CHARGE% from this card to launch 1 electro-chaff cloud using the [3 %BANKLEFT%], [3 %BANKRIGHT%], or [4 %STRAIGHT%] template. %LINEBREAK% This card’s %CHARGE% cannot be recovered.."
+    },
+    "Babu Frik": {
+      text: "Before you would gain a non-lock red or orange token, you may spend 1 %CHARGE% to place it on this card instead. During the System Phase, if there are 1 or more tokens on this card, you <b>must</b> spend 1 %CHARGE%. If you cannot, remove those tokens and gain matching tokens."
     },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
@@ -16587,6 +18325,78 @@ exportObj.cardLoaders.English = function() {
     "Corsair Refit": {
       display_name: "Corsair Refit",
       text: "Bonus Attack: Spend 1 %ENERGY% to perform a %CANNON%, %TURRET%, or %MISSILE% attack."
+    },
+    "Enhanced Propulsion": {
+      display_name: "Enhanced Propulsion",
+      text: "<strong>Setup:</strong> Equip this side faceup.%LINEBREAK% At the start of the End Phase, you may spend 2 %ENERGY% to execute a white [2 %STRAIGHT%], [1 %BANKLEFT%], or [1 %BANKRIGHT%] maneuver. %LINEBREAK% "
+    },
+    "Drill Beak": {
+      display_name: "Drill Beak",
+      text: "<strong>Setup:</strong> Equip this side faceup.%LINEBREAK% You can preform this attack at range 0.\n%LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. If the attack range is 0, change all %HIT% results to %CRIT% results."
+    },
+    "Tractor Tentacles": {
+      display_name: "Tractor Tentacles",
+      text: "<strong>Setup:</strong> Equip this side faceup.\n%LINEBREAK% <strong>Bonus Attack</strong> %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%."
+    },
+    "Tracking Torpedoes": {
+      display_name: "Tracking Torpedoes",
+      text: "During the System Phase, you may spend up to 3 %CHARGE% to launch that many tracking torpedoes using the [%BANKLEFT% 3], [%STRAIGHT% 4], and [%BANKRIGHT% 3] templates. Each device must use a seperate tempalte. Then each device may acquire a lock on an object you have locked, ignoring range restrictions.%LINEBREAK% This card's %CHARGE% cannot be recovered."
+    },
+    "Proton Cannon Battery": {
+      display_name: "Proton Cannon Battery",
+      text: "<strong>Setup:</strong> Equip this side faceup.\n%LINEBREAK% <strong>Bonus Attack:</strong> Change 1 %HIT% result to a %CRIT% result. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. Change 1 %HIT% result to a %CRIT% result."
+    },
+    "Tractor Technicians": {
+      display_name: "Tractor Technicians",
+      text: "During the End Phase, each other ship at range 0-1 cannot remove its tractor tokens. %LINEBREAK% Before a tractored enemy ship at range 0-1 reveals its dial, you may spend 1 %ENERGY%. If you do, while that ship executes its maneuver this activation, it reduces the speed of that maneuver by 1, to a minimum of 1."
+    },
+    "Asajj Ventress (Command)": {
+      display_name: "Asajj Ventress",
+      text: "During the System Phase, you may spend 1 %FORCE%. IF you do, each enemy ship in your %FRONTARC% at range 0-1 gains 1 strain token unless it chooses to gain 1 jam token."
+    },
+    "Hondo Ohnaka (Command)": {
+      display_name: "Hondo Ohnaka",
+      text: "During the System Phase, you may spend 1 %CHARGE% and choose 1 friendly shiop at range 0-1. Move 1 Victory Token or Objective Token from its ship card to your ship card, or from your ship card to its ship card."
+    },
+    "Zealous Captain": {
+      display_name: "Zealous Captain",
+      text: "During the Engagement Phase, at initiative 4, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack."
+    },
+    "General Grievous (Command)": {
+      display_name: "General Grievous",
+      text: "During the Engagement Phase, at initiative 4, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack. %LINEBREAK% You can perform attacks against friendly ships. %LINEBREAK% After you perform an attack, if the defender was destroyed, each friendly ship at range 0-2 of it may perform a %CALCULATE% action."
+    },
+    "Mar Tuuk": {
+      display_name: "Mar Tuuk",
+      text: "<strong>Setup:</strong> After placing forces, choose 1 friendly wing of ships with %CALCULATE% on their action bars and place that wing in reserve. %LINEBREAK% During the End Phase, you may place that wing within your deployment area or beyond range 2 of any enemy shp. Then you may choose 1 enemy ship at range 0-1 of you; each ship in that wing acquires a lock on it."
+    },
+    "Riff Tamson": {
+      display_name: "Riff Tamson",
+      text: "During the Engagement Phase, at initiative 5, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack. %LINEBREAK% After you perform an attack, if the defender was dealt 1 or more faceup damage cards, it gains 2 strain tokens."
+    },
+    "Corsair Crew": {
+      display_name: "Corsair Crew",
+      text: "While you perform an attack against a standard ship, you may spend 1 %HIT% result. If you do, the defender gains 1 deplete token."
+    },
+    "Grappler": {
+      display_name: "Grappler",
+      text: "While you perform a <b>Drill Beak</b> attack, at range 1, if the defender is tractored, treat it as being range 0 instead."
+    },
+    "Nautolan's Revenge": {
+      display_name: "Nautolan's Revenge",
+      text: "Before you engage, you may spend up to 2 calculate tokens. If you do, recover that many %ENERGY%."
+    },
+    "Droid Crew": {
+      display_name: "Droid Crew",
+      text: "While you perform a white %FOCUS% action, treat it as red instead. %LINEBREAK% At the start of the End Phase, repair all of your faceup <b>Crew</b> damage cards."
+    },
+    "Trident": {
+      display_name: "Trident",
+      text: "After you overlap a ship or a ship overlaps you, if it is not tractored, you may spend 1 %ENERGY%. If you do, it gains 3 tractor tokens."
+    },
+    "Neimoidian Grasp": {
+      display_name: "Neimoidian Grasp",
+      text: "After you perform an attack, you may perform a red  %EVADE% action. While you defend, if you are evading, you may roll 1 addtional defense die."
     }
   };
   condition_translations = {
@@ -16609,55 +18419,64 @@ exportObj.cardLoaders.English = function() {
       text: ' When this card is assigned, if there is no faceup damage card on it, the player who assigned it searches the damage deck for 1 Pilot damage card and places it faceup on this card. Then shuffle the damage deck. When you would suffer 1 %CRIT% damage, you are instead dealt the faceup damage card on this card. Then, remove this card. '
     },
     'Proton Bomb': {
-      text: '(Bomb Token) - At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 suffers 1 %CRIT% damage.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
+      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 suffers 1 %CRIT% damage.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
     },
     'Seismic Charge': {
-      text: '(Bomb Token) - At the end of the Activation Phase this device detonates. When this device detonates, choose 1 obstacle at range 0–1. Each ship and remote at range 0–1 of the obstacle suffers 1 %HIT% damage. Then remove that obstacle.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i> '
+      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, choose 1 obstacle at range 0–1. Each ship and remote at range 0–1 of the obstacle suffers 1 %HIT% damage. Then remove that obstacle.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i> '
     },
     'Bomblet': {
-      text: '(Bomb Token) - At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0–1 rolls 2 attack dice. Each ship and remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
+      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0–1 rolls 2 attack dice. Each ship and remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
     },
     'Loose Cargo': {
-      text: '(Debris Token) - Loose cargo is a debris cloud.'
+      text: '<strong>Types:</strong> Obstacle, Placed %LINEBREAK% Loose cargo is a debris cloud.'
+    },
+    'Spare Parts': {
+      text: '<strong>Types:</strong> Obstacle, Placed %LINEBREAK% Spare parts is a debris cloud. %LINEBREAK% When this object is dropped, fit the tab between the ship’s rear guides.'
     },
     'Conner Net': {
-      text: '(Mine Token) - After a ship overlaps or moves through this device, it detonates. When this device detonates, the ship suffers 1 %HIT% damage and gains 3 ion tokens.'
+      text: '<strong>Types:</strong> Device, Mine %LINEBREAK% After a ship overlaps or moves through this device, it detonates. When this device detonates, the ship suffers 1 %HIT% damage and gains 3 ion tokens.'
     },
     'Proximity Mine': {
-      text: '(Mine Token) - After a ship overlaps or moves through this device, it detonates. When this device detonates, that ship rolls 2 attack dice. That ship then suffers 1 %HIT% plus 1 %HIT%/%CRIT% damage for each matching result.%LINEBREAK%<i>Errata (since rules reference 1.0.2): Added: "1 %HIT% plus"</i>'
+      text: '<strong>Types:</strong> Device, Mine %LINEBREAK% After a ship overlaps or moves through this device, it detonates. When this device detonates, that ship rolls 2 attack dice. That ship then suffers 1 %HIT% plus 1 %HIT%/%CRIT% damage for each matching result.%LINEBREAK%<i>Errata (since rules reference 1.0.2): Added: "1 %HIT% plus"</i>'
     },
     'DRK-1 Probe Droid': {
-      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 1 %LINEBREAK% (Remote) - <strong>System Phase:</strong> The DRK-1 probe droid’s controlling player may choose a [2 %BANKLEFT%], [2 %STRAIGHT%] or [2 %BANKRIGHT%] template and any set of the DRK-1’s guides. The player then relocates the remote, placing the DRK-1 at the other end of the template. It can be placed overlapping an object this way. %LINEBREAK%If the DRK-1 overlaps a ship, use the position marker to denote the ship’s position, then place the ship on top of the remote. %LINEBREAK%<strong>Activation, Engagement, and End Phase:</strong> No effect. %LINEBREAK%<strong>Other Rules:</strong> While a ship locks an object or jams an enemy ship, it may measure range from a friendly DRK-1 probe droid. After an enemy ship executes a maneuver that causes it to overlap a DRK-1 probe droid, the ship’s controller rolls 1 attack die. On a %FOCUS% result, the DRK-1 probe droid suffers 1 %HIT% damage.'
+      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK%  <strong>System Phase:</strong> The DRK-1 probe droid’s controlling player may choose a [2 %BANKLEFT%], [2 %STRAIGHT%] or [2 %BANKRIGHT%] template and any set of the DRK-1’s guides. The player then relocates the remote, placing the DRK-1 at the other end of the template. It can be placed overlapping an object this way. %LINEBREAK%If the DRK-1 overlaps a ship, use the position marker to denote the ship’s position, then place the ship on top of the remote. %LINEBREAK%<strong>Activation, Engagement, and End Phase:</strong> No effect. %LINEBREAK%<strong>Other Rules:</strong> While a ship locks an object or jams an enemy ship, it may measure range from a friendly DRK-1 probe droid. After an enemy ship executes a maneuver that causes it to overlap a DRK-1 probe droid, the ship’s controller rolls 1 attack die. On a %FOCUS% result, the DRK-1 probe droid suffers 1 %HIT% damage.'
     },
     'Buzz Droid Swarm': {
-      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 1 %LINEBREAK% (Remote) - <strong>System, Activation, and End Phase:</strong> No effect. %LINEBREAK%<strong>Engagement Phase:</strong> When you engage, each enemy ship at range 0 of the buzz droid swarm suffers 1 %CRIT% damage. %LINEBREAK%<strong>Other Rules:</strong> After an enemy ship overlaps or moves through a buzz droid swarm, the swarm’s controlling player relocates it by aligning the tab to that ship’s front or rear guides (this ship is at range 0 of the swarm). The swarm cannot be aligned to a set of the ship’s guides if doing so would cause it to overlap an object. If the swarm cannot be placed at a chosen set of guides, its controlling player must align it to the other set of the ship’s guides. If it cannot be aligned to the other set, the swarm and the enemy ship that overlapped or moved through it each suffer 1 %HIT% damage.'
+      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>System, Activation, and End Phase:</strong> No effect. %LINEBREAK%<strong>Engagement Phase:</strong> When you engage, each enemy ship at range 0 of the buzz droid swarm suffers 1 %CRIT% damage. %LINEBREAK%<strong>Other Rules:</strong> After an enemy ship overlaps or moves through a buzz droid swarm, the swarm’s controlling player relocates it by aligning the tab to that ship’s front or rear guides (this ship is at range 0 of the swarm). The swarm cannot be aligned to a set of the ship’s guides if doing so would cause it to overlap an object. If the swarm cannot be placed at a chosen set of guides, its controlling player must align it to the other set of the ship’s guides. If it cannot be aligned to the other set, the swarm and the enemy ship that overlapped or moved through it each suffer 1 %HIT% damage.'
     },
     'It\'s the Resistance': {
       text: '<strong>Setup:</strong> Start in reserve. %LINEBREAK% When you deploy, you are placed within range 1 of any table edge and beyond range 3 of any enemy ship. %LINEBREAK% At the start of the round, if all of the friendly <strong>GA-97</strong>\'s %CHARGE% are active, you <strong>must</strong> deploy. Then remove this card. After the friendly <strong>GA-97</strong> is destroyed, you <strong>must</strong> deploy. Then gain 1 disarm token and remove this card.'
     },
     'Electro-Proton Bomb': {
-      text: '(Bomb Token) - At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0–2 rolls 4 attack dice. Each ship loses 1 shield for each blank result, gains 1 ion token for each %FOCUS%/%HIT% result, and gains 1 disarm token for each %CRIT% result. Each remote at range 0–1 loses 1 shield for each blank result and suffers 1 damage for each %FOCUS%/%HIT% result.'
+      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK%  At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0–2 rolls 4 attack dice. Each ship loses 1 shield for each blank result, gains 1 ion token for each %FOCUS%/%HIT% result, and gains 1 disarm token for each %CRIT% result. Each remote at range 0–1 loses 1 shield for each blank result and suffers 1 damage for each %FOCUS%/%HIT% result.'
     },
     'Decoyed': {
       text: 'While you defend, each friendly <strong>Naboo Handmaiden</strong> in the attack arc may spend 1 evade token to change one of your results to an %EVADE% result. %LINEBREAK% If you are a Naboo Royal N-1 Starfighter, each friendly <strong>Naboo Handmaiden</strong> in the attack arc may spend 1 evade token to add 1 %EVADE% result instead.'
     },
     'Compromising Intel': {
-      text: 'During the System Phase, if the enemy <strong>Vi Morandi</strong> is at range 0-3, flip your dial faceup. %LINEBREAK% While you defend or perform an attack against the enemy <strong>Vi Morandi</strong>, you cannot spend focus tokens.'
+      text: 'During the System Phase, if the enemy <strong>Vi Moradi</strong> is at range 0-3, flip your dial faceup. %LINEBREAK% While you defend or perform an attack against the enemy <strong>Vi Moradi</strong>, you cannot spend focus tokens.'
     },
     'Cluster Mine': {
-      text: '(Mine Tokens) - A Cluster Mine Set consists of 3 individual Cluster Mine devices. %LINEBREAK% When a Cluster Mines set is placed, the center Cluster Mine is placed as normal, then two additional Cluster Mines are placed in the recesses as shown. %LINEBREAK% After a ship overlaps or moves through any individual Cluster Mine, it detonates. Other Cluster Mines in the set that were not overlapped or moved through do not detonate. %LINEBREAK% When each of these devices detonates, that ship rolls 2 attack dice. That ship then suffers 1 %HIT%/%CRIT% damage for each matching result.'
+      text: '<strong>Types:</strong> Device, Mine %LINEBREAK%   A Cluster Mine Set consists of 3 individual Cluster Mine devices. %LINEBREAK% When a Cluster Mines set is placed, the center Cluster Mine is placed as normal, then two additional Cluster Mines are placed in the recesses as shown. %LINEBREAK% After a ship overlaps or moves through any individual Cluster Mine, it detonates. Other Cluster Mines in the set that were not overlapped or moved through do not detonate. %LINEBREAK% When each of these devices detonates, that ship rolls 2 attack dice. That ship then suffers 1 %HIT%/%CRIT% damage for each matching result.'
     },
     'Ion Bomb': {
-      text: '(Bomb Token) - At the end of the Activation Phase, this device detonates. When this device detonates, each ship at range 0–1 gains 3 ion tokens, and each remote at range 0–1 suffers 1 %HIT% damage.'
+      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship at range 0–1 gains 3 ion tokens, and each remote at range 0–1 suffers 1 %HIT% damage.'
     },
     'Concussion Bomb': {
-      text: '(Bomb Token) - At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 is dealt 1 facedown damage card. Then, each ship at range 0–1 must expose 1 damage card unless it chooses to gain 1 strain token.'
+      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 is dealt 1 facedown damage card. Then, each ship at range 0–1 must expose 1 damage card unless it chooses to gain 1 strain token.'
     },
     'Thermal Detonator': {
-      text: '(Bomb Token) - At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 rolls 1 attack die. Each ship gains 1 strain token for each %FOCUS% result, and each ship and remote suffers 1 %HIT%/%CRIT% damage for each matching result.'
+      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 rolls 1 attack die. Each ship gains 1 strain token for each %FOCUS% result, and each ship and remote suffers 1 %HIT%/%CRIT% damage for each matching result.'
     },
     'Sensor Buoy': {
-      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 2 %LINEBREAK% (Remote) - Sensor buoys are remotes that come in pairs (one red, and one blue, each with its own remote card), and are placed by the <strong>Sensor Buoy Suite</strong> upgrade card. Beyond being remotes and interacting with that card, they have no additional rules.'
+      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% Sensor buoys are remotes that come in pairs (one red, and one blue, each with its own remote card), and are placed by the <strong>Sensor Buoy Suite</strong> upgrade card. Beyond being remotes and interacting with that card, they have no additional rules.'
+    },
+    'Electro-Chaff Cloud': {
+      text: 'An electro-chaff cloud is a device and an obstacle. %LINEBREAK% During the End Phase, remove each electro-chaff cloud with no fuse markers, then remove one fuse marker from each electro-chaff cloud. An electro-chaff cloud can never have more than one fuse token.'
+    },
+    'Tracking Torpedoes': {
+      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 3 %LINEBREAK% <strong>System Phase:</strong> At this remote\'s initiative, its controlling player relocates this remote forward using the [3 %BANKLEFT%], [3 %BANKRIGHT%], or [4 %STRAIGHT%] template. %LINEBREAK% <strong>Activation Phase:</strong> No effect. %LINEBREAK% <strong>Engagement Phase:</strong> At this remote’s initiative, if an object on which it has a lock is in its %FRONTARC% at range 0–1, this remote detonates. End Phase: During the End Phase, if this remote does not have a lock on any object, this remote must acquire a lock on an object in its %FRONTARC% at range 1–3, if able. %LINEBREAK% <strong>Other Rules:</strong> After this remote is destroyed, roll 1 attack die. On a %HIT% or %CRIT% result, this remote detonates. %LINEBREAK% When this remote detonates, each ship, remote, and structure at range 0 or in its %FRONTARC% at range 1 rolls 4 attack dice and suffers 1 damage for each matching %HIT% or %CRIT% result.'
     },
     'Fearful Prey': {
       text: 'After you defend against an enemy <strong>Fearsome Predator</strong>, if you did not spend at least 1 green token during the attack, gain 1 strain token.'
@@ -16669,6 +18488,24 @@ exportObj.cardLoaders.English = function() {
       text: 'This condition is assigned facedown. Reveal it after you defend. %LINEBREAK% After you defend, you may spend 2 %CHARGE% from <strong>Zam Wesell</strong>. If you do, perform a bonus attack against the attacker. %LINEBREAK% At the end of the Engagement Phase, if this card is facedown and you are in an enemy ship\'s firing arc, you may reveal this card. If you do, <strong>Zam Wesell</strong> recovers 2 %CHARGE%. %LINEBREAK% At the start of the System Phase, remove this condition.'
     }
   };
+  for (name in pilot_translations) {
+    data = pilot_translations[name];
+    if (data.display_name == null) {
+      data['display_name'] = name;
+    }
+  }
+  for (name in upgrade_translations) {
+    data = upgrade_translations[name];
+    if (data.display_name == null) {
+      data['display_name'] = name;
+    }
+  }
+  for (name in condition_translations) {
+    data = condition_translations[name];
+    if (data.display_name == null) {
+      data['display_name'] = name;
+    }
+  }
   return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
 };
 
@@ -17172,7 +19009,7 @@ exportObj.manifestByExpansion = {
     }, {
       name: 'Blue Squadron Scout',
       type: 'pilot',
-      count: 2
+      count: 1
     }, {
       name: 'Esege Tuketu',
       type: 'pilot',
@@ -17244,7 +19081,7 @@ exportObj.manifestByExpansion = {
     }, {
       name: 'Wild Space Fringer',
       type: 'pilot',
-      count: 1
+      count: 2
     }, {
       name: 'Crack Shot',
       type: 'upgrade',
@@ -17456,11 +19293,11 @@ exportObj.manifestByExpansion = {
     }, {
       name: 'Seasoned Navigator',
       type: 'upgrade',
-      count: 1
+      count: 2
     }, {
       name: 'Tactical Officer',
       type: 'upgrade',
-      count: 1
+      count: 2
     }, {
       name: '"Zeb" Orrelios',
       type: 'upgrade',
@@ -21413,10 +23250,6 @@ exportObj.manifestByExpansion = {
       type: 'upgrade',
       count: 1
     }, {
-      name: 'Collision Detector',
-      type: 'upgrade',
-      count: 1
-    }, {
       name: 'Adv. Proton Torpedoes',
       type: 'upgrade',
       count: 1
@@ -23515,6 +25348,876 @@ exportObj.manifestByExpansion = {
       count: 1
     }
   ],
+  "Phoenix Cell Squadron Pack": [
+    {
+      name: 'A-Wing',
+      type: 'ship',
+      count: 2
+    }, {
+      name: 'B-Wing',
+      type: 'ship',
+      count: 1
+    }, {
+      name: 'Hera Syndulla (B-Wing)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Netrem Pollard',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Blade Squadron Veteran',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Blue Squadron Pilot',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Hera Syndulla (A-Wing)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Ahsoka Tano (A-Wing)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Wedge Antilles (A-Wing)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Sabine Wren (A-Wing)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Shara Bey (A-Wing)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Derek Klivian',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Green Squadron Pilot',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Phoenix Squadron Pilot',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Phoenix Squadron',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Deadeye Shot',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Debris Gambit',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Hopeful',
+      type: 'upgrade',
+      count: 3
+    }, {
+      name: 'Marg Sabl Closure',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Saturation Salvo',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Starbird Slash',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Tierfon Belly Run',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Extreme Maneuvers',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Instinctive Aim',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Patience',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Sense',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Passive Sensors',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Autoblasters',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Synced Laser Cannons',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Plasma Torpedoes',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Mag-Pulse Warheads',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'XX-23 S-Thread Tracers',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Sabine Wren (Gunner)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Suppressive Gunner',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Weapons Systems Officer',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'B6 Blade Wing Prototype (Epic)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'B6 Blade Wing Prototype',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Stabilized S-Foils',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Vectored Cannons (RZ-1)',
+      type: 'upgrade',
+      count: 4
+    }
+  ],
+  "Skystrike Academy Squadron Pack": [
+    {
+      name: 'TIE Interceptor',
+      type: 'ship',
+      count: 2
+    }, {
+      name: 'TIE Defender',
+      type: 'ship',
+      count: 1
+    }, {
+      name: 'Ciena Ree',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Vult Skerris (TIE Interceptor)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Commandant Goran',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Gideon Hask (TIE Interceptor)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Lieutenant Lorrir',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Nash Windrider',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Saber Squadron Ace',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Alpha Squadron Pilot',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Darth Vader (TIE Defender)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Vult Skerris',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Captain Dobbs',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Onyx Squadron Ace',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Delta Squadron Pilot',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Shadow Wing',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Skystrike Academy Class',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Composure',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Daredevil',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Marg Sabl Closure',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Disciplined',
+      type: 'upgrade',
+      count: 4
+    }, {
+      name: 'Interloper Turn',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Extreme Maneuvers',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Instinctive Aim',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Sense',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Passive Sensors',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Autoblasters',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Tractor Beam',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Mag-Pulse Warheads',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'XX-23 S-Thread Tracers',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Hull Upgrade',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Precision Ion Engines',
+      type: 'upgrade',
+      count: 3
+    }, {
+      name: 'Shield Upgrade',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Static Discharge Vanes',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Targeting Computer',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Sensitive Controls',
+      type: 'upgrade',
+      count: 4
+    }, {
+      name: 'TIE Defender Elite',
+      type: 'upgrade',
+      count: 2
+    }
+  ],
+  "Fugitives and Collaborators Squadron Pack": [
+    {
+      name: 'Y-Wing',
+      type: 'ship',
+      count: 2
+    }, {
+      name: 'HWK-290',
+      type: 'ship',
+      count: 1
+    }, {
+      name: 'Leema Kai',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Arliz Hadrassian',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Padric',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Amaxine Warrior',
+      type: 'pilot',
+      count: 3
+    }, {
+      name: 'Jinata Security Officer',
+      type: 'pilot',
+      count: 3
+    }, {
+      name: 'Gamut Key',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Kanan Jarrus (HWK-290)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Tápusk',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Spice Runner',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Bounty',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'In It For The Money',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Cutthroat',
+      type: 'upgrade',
+      count: 3
+    }, {
+      name: 'Deadeye Shot',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Marg Sabl Closure',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Saturation Salvo',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Tierfon Belly Run',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Extreme Maneuvers',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Patience',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Automated Target Priority',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Targeting Synchronizer',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Dorsal Turret',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Ion Cannon Turret',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Plasma Torpedoes',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Gamut Key',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Hondo Ohnaka',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Jango Fett',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Protectorate Gleb',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Zam Wesell',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Boba Fett (Separatist)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Suppressive Gunner',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Weapons Systems Officer',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: '"Genius"',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'R4-B11',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'R5-TK',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Concussion Bombs',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Thermal Detonators',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'False Transponder Codes',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Engine Upgrade',
+      type: 'upgrade',
+      count: 1
+    }
+  ],
+  "Fury of the First Order": [
+    {
+      name: 'TIE/Se Bomber',
+      type: 'ship',
+      count: 2
+    }, {
+      name: 'TIE/WI Whisper',
+      type: 'ship',
+      count: 1
+    }, {
+      name: 'Kylo Ren (TIE Whisper)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Nightfall"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Whirlwind"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Wrath"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '709th Legion Ace',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Red Fury Zealot',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Breach"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Dread"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Grudge"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Scorch" (TIE/Se Bomber)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'First Order Cadet',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Sienar-Jaemus Test Pilot',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Feedback Ping',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Ion Limiter Override',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Compassion',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Malice',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Shattering Shot',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Advanced Optics',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Primed Thrusters',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Sensor Scramblers',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Ion Torpedoes',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Cluster Missiles',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Homing Missiles',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Proton Rockets',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Electro-Chaff Missiles',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'DT-798',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'First Order Ordnance Tech',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Suppressive Gunner',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Concussion Bombs',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Delayed Fuses',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Engine Upgrade',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Enhanced Jamming Suite',
+      type: 'upgrade',
+      count: 1
+    }
+  ],
+  "BTA-NR2 Y-Wing Pack": [
+    {
+      name: 'BTA-NR2 Y-Wing',
+      type: 'ship',
+      count: 2
+    }, {
+      name: 'Aftab Ackbar',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: "C'ai Threnalli (Y-Wing)",
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Corus Kapellim',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Lega Fossang',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Shasa Zaro',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Teza Nasz',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Wilsa Teshlo',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Zorii Bliss',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'New Republic Patrol',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Kijimi Spice Runner',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Babu Frik',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Concussion Bombs',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Delayed Fuses',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Electro-Chaff Missiles',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Engine Upgrade',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Expert Handling',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Ion Cannon Turret',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Tierfon Belly Run',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'L4E-R5',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Overtuned Modulators',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Wartime Loadout',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Watchful Astromech',
+      type: 'upgrade',
+      count: 2
+    }
+  ],
+  "Trident-class Assault Ship Expansion Pack": [
+    {
+      name: 'Trident-class Assault Ship',
+      type: 'ship',
+      count: 1
+    }, {
+      name: 'Colicoid Destroyer',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Lawless Pirates',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Strategic Commander',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Stalwart Captain',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Asajj Ventress (Command)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Zealous Captain',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Hondo Ohnaka (Command)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'General Grievous (Command)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Mar Tuuk',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Riff Tamson',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Tractor Tentacles',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Ion Cannon Battery',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Targeting Battery',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Ordnance Tubes',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Point-Defense Battery',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Drill Beak',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Enhanced Propulsion',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Proton Cannon Battery',
+      type: 'upgrade',
+      count: 3
+    }, {
+      name: 'Tracking Torpedoes',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Novice Technician',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Seasoned Navigator',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Hotshot Gunner',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Agile Gunner',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Corsair Crew',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Tractor Technicians',
+      type: 'upgrade',
+      count: 3
+    }, {
+      name: 'Droid Crew',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Bombardment Specialists',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Comms Team',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Damage Control Team',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Gunnery Specialists',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Ordnance Team',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Sensor Experts',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Adaptive Shields',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Optimized Power Core',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Tibanna Reserves',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Grappler',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: "Nautolan's Revenge",
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Neimoidian Grasp',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Trident',
+      type: 'upgrade',
+      count: 1
+    }
+  ],
   "Hotshots and Aces Reinforcements Pack": [
     {
       name: 'Gina Moonsong',
@@ -23855,7 +26558,6 @@ exportObj.manifestByExpansion = {
 
 exportObj.Collection = (function() {
   function Collection(args) {
-    this.onLanguageChange = __bind(this.onLanguageChange, this);
     var _ref, _ref1, _ref2;
     this.expansions = (_ref = args.expansions) != null ? _ref : {};
     this.singletons = (_ref1 = args.singletons) != null ? _ref1 : {};
@@ -24167,7 +26869,7 @@ exportObj.Collection = (function() {
           return _this.modal_status.fadeOut(1000);
         });
       };
-    })(this)).on('xwing:languageChanged', this.onLanguageChange).on('xwing:CollectionCheck', this.onCollectionCheckSet);
+    })(this)).on('xwing:CollectionCheck', this.onCollectionCheckSet);
     $(this.modal.find('input.expansion-count').change((function(_this) {
       return function(e) {
         var target, val;
@@ -24229,29 +26931,6 @@ exportObj.Collection = (function() {
     }
   };
 
-  Collection.prototype.onLanguageChange = function(e, language) {
-    this.language = language;
-    if (language !== this.old_language) {
-      this.old_language = language;
-      return (function(_this) {
-        return function(language) {
-          _this.modal.find('.expansion-name').each(function() {
-            return $(this).text(exportObj.translate(language, 'sources', $(this).data('name')));
-          });
-          _this.modal.find('.ship-name').each(function() {
-            return $(this).text((exportObj.ships[$(this).data('name')].display_name ? exportObj.ships[$(this).data('name')].display_name : $(this).data('name')));
-          });
-          _this.modal.find('.pilot-name').each(function() {
-            return $(this).text((exportObj.pilots[$(this).data('name')].display_name ? exportObj.pilots[$(this).data('name')].display_name : $(this).data('name')));
-          });
-          return _this.modal.find('.upgrade-name').each(function() {
-            return $(this).text((exportObj.upgrades[$(this).data('name')].display_name ? exportObj.upgrades[$(this).data('name')].display_name : $(this).data('name')));
-          });
-        };
-      })(this)(language);
-    }
-  };
-
   return Collection;
 
 })();
@@ -24261,8 +26940,8 @@ exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
 exportObj.rulesEntries = function() {
   return {
     version: {
-      number: "1.3.0",
-      date: "11/27/20"
+      number: "1.3.2",
+      date: "10/12/21"
     },
     glossary: {
       "ABILITIES": {
@@ -24403,7 +27082,7 @@ exportObj.rulesEntries = function() {
       },
       "DEVICE": {
         name: "Device",
-        text: "Devices are objects that exist in the play area and are represented by cardboard markers. Certain cards allow a ship to add a specific type of device to the play area and provide additional rules for how that device behaves. There are a number of ways for a device to enter or change location in the play area. Some provide specific instructions for how to place a device in the play area, while others use one or more of the following processes: <br><br>To <strong>drop</strong> a device, follow the steps below: <br>1. Take the template indicated on the upgrade card. <br>2. Set the template between the ship’s rear guides. <br>3. Place the device indicated on the upgrade card into the play area and slide the guides of the device into the opposite end of the template. Then remove the template. <br><br>To <strong>launch</strong> a device, follow the steps below: <br>1. Take the template indicated on the upgrade card. <br>2. Set the template between the ship’s front guides. <br>3. Place the device indicated on the upgrade card into the play area and slide the guides of the device into the opposite end of the template. Then remove the template. <br><br>To <strong>relocate</strong> a device, do the following: <br>• Pick up and replace the device as described in the effect that relocated it. This can involve a template, or might place the device at a ship’s guides. <br>• A device that relocates does not count as moving through or overlapping obstacles. <br><br>Some devices can detonate. When a device <strong>detonates</strong>, a number of effects trigger depending on the type of device. After resolving these effects, remove that device. <br>• See Appendix for examples of dropping and launching. <br>• One side of each device has a white boarder to help distinguish which player it belongs to. <br>• Most devices are placed during the System Phase. Each ship can place a device only once per System Phase. <br>• Most devices have an associated upgrade card that lets the player spend %CHARGE% to place that device. Many of these cards are payload (%DEVICE%) upgrades. <br>• When an effect instructs a ship to place a device associated with a different card (e.g. “drop 1 bomb”), that ship must pay all costs (such as spending %CHARGE%) and place the device as its associated card dictates. Other effects can modify how it is placed (e.g. the TIE Bomber’s Nimble Bomber ship ability) as normal. <br>• Each ship cannot place a device during the same phase that it decloaked. <br>• Devices are not obstacles but are objects. <br>• If a device is placed overlapping a ship, it is placed under the ship’s base. <br>• If a device that detonates when overlapped is placed under more than one ship’s base, it detonates instantly and the player placing the device chooses which ship it affects. <br>• The guides on a device count as part of the device for the purposes of measuring range to or from it as well as overlapping and moving through it. <br>• A device cannot be placed so that a portion of the device would be outside the play area. If this would happen, play is reversed to before the device was placed—the device is not placed, any charges spent and other costs paid are recovered, and the player can choose to not place that device. <br>• If a ship partially executes a maneuver, only the portion of the template that is between the starting and final position of the ship is counted for the purpose of moving through or overlapping a device. Ignore the portion of the template that the ship moved backward along when resolving the maneuver."
+        text: "Devices are objects that exist in the play area and are represented by cardboard markers. Certain cards allow a ship to add a specific type of device to the play area and provide additional rules for how that device behaves. There are a number of ways for a device to enter or change location in the play area. Some provide specific instructions for how to place a device in the play area, while others use one or more of the following processes: <br><br>To <strong>drop</strong> a device, follow the steps below: <br>1. Take the template indicated on the upgrade card. <br>2. Set the template between the ship’s rear guides. <br>3. Place the device indicated on the upgrade card into the play area and slide the guides of the device into the opposite end of the template. Then remove the template. <br><br>To <strong>launch</strong> a device, follow the steps below: <br>1. Take the template indicated on the upgrade card. <br>2. Set the template between the ship’s front guides. <br>3. Place the device indicated on the upgrade card into the play area and slide the guides of the device into the opposite end of the template. Then remove the template. <br><br>To <strong>relocate</strong> a device, do the following: <br>• Pick up and replace the device as described in the effect that relocated it. This can involve a template, or might place the device at a ship’s guides. <br>• A device that relocates does not count as moving through or overlapping obstacles. <br><br>Some devices can detonate. When a device <strong>detonates</strong>, a number of effects trigger depending on the type of device. After resolving these effects, remove that device. <br>• See Appendix for examples of dropping and launching. <br>• One side of each device has a white boarder to help distinguish which player it belongs to. <br>• Most devices are placed during the System Phase. Each ship can place a device only once per System Phase. <br>• Most devices have an associated upgrade card that lets the player spend %CHARGE% to place that device. Many of these cards are payload (%DEVICE%) upgrades. <br>• When an effect instructs a ship to place a device associated with a different card (e.g. “drop 1 bomb”), that ship must pay all costs (such as spending %CHARGE%) and place the device as its associated card dictates. Other effects can modify how it is placed (e.g. the TIE Bomber’s Nimble Bomber ship ability) as normal. <br>• Each ship cannot place a device and decloak in the same phase. <br>• Devices are not obstacles, unless otherwise stated, but are objects.. <br>• If a device is placed overlapping a ship, it is placed under the ship’s base. <br>• If a device that detonates when overlapped is placed under more than one ship’s base, it detonates instantly and the player placing the device chooses which ship it affects. <br>• The guides on a device count as part of the device for the purposes of measuring range to or from it as well as overlapping and moving through it. <br>• A device cannot be placed so that a portion of the device would be outside the play area. If this would happen, play is reversed to before the device was placed—the device is not placed, any charges spent and other costs paid are recovered, and the player can choose to not place that device. <br>• If a ship partially executes a maneuver, only the portion of the template that is between the starting and final position of the ship is counted for the purpose of moving through or overlapping a device. Ignore the portion of the template that the ship moved backward along when resolving the maneuver."
       },
       "DIAL": {
         name: "Dial",
@@ -24475,7 +27154,7 @@ exportObj.rulesEntries = function() {
       },
       "FLEE": {
         name: "Flee",
-        text: "A ship <strong>flees</strong> if any part of its base is outside the play area after it executes a maneuver. A ship that flees is removed from the game. <br>• While a ship moves, the ship does not flee if only the template is outside the play area. <br>• Before a fleeing ship is removed from the game, the only effects it resolves before being removed from the game are effects that trigger when it flees. <br>• A ship cannot flee while resolving a boost, barrel roll, decloak, or SLAM. <br>• Partially executing a maneuver can cause a ship to flee if any part of its base is outside the play area after the maneuver."
+        text: "A ship <strong>flees</strong> if any part of its base is outside the play area at any time. A ship that flees is removed from the game. <br>• While a ship moves, the ship does not flee if only the template is outside the play area. <br>• Before a fleeing ship is removed from the game, the only effects it resolves before being removed from the game are effects that trigger when it flees. <br>• A ship cannot flee while resolving a boost, barrel roll, decloak, or SLAM. <br>• Partially executing a maneuver can cause a ship to flee if any part of its base is outside the play area after the maneuver."
       },
       "FOCUS": {
         name: "Focus",
@@ -24495,7 +27174,7 @@ exportObj.rulesEntries = function() {
       },
       "FUSE MARKER": {
         name: "Fuse Marker",
-        text: "A device is <strong>fused</strong> while it has at least one fuse marker. When a device would detonate, if it is fused, one fuse marker is removed from that device instead, and that device does not detonate. When a fused obstacle would be removed, one fuse marker is removed from that obstacle instead, and that obstacle is not removed."
+        text: "A device or obstacle is <strong>fused</strong> while it has at least one fuse marker. When a device would detonate, if it is fused, one fuse marker is removed from that device instead, and that device does not detonate. When a fused obstacle would be removed, one fuse marker is removed from that obstacle instead, and that obstacle is not removed."
       },
       "GAME MODE": {
         name: "Game Mode",
@@ -24519,7 +27198,7 @@ exportObj.rulesEntries = function() {
       },
       "ION": {
         name: "Ion",
-        text: "A ship is <strong>ionized</strong> while it has a number of ion tokens relative to its size: at least one for a small ship, at least two for a medium ship, and at least three for a large ship. Ion tokens are red tokens. <br><br>During the Planning Phase an ionized ship is not assigned a dial. <br><br>During the Activation Phase, an ionized ship that did not have a dial assigned to it during the Planning Phase activates as follows: <br><br>1. The ship skips its Reveal Dial step. <br>2. During the Execute Maneuver step, the ionized ship executes the <strong>ion maneuver</strong>. The ion maneuver is a blue [1 %STRAIGHT%] maneuver. The bearing, difficulty, and speed of this maneuver cannot be changed unless an ability explicitly affects the ion maneuver. <br>3. During the Perform Action step, the ship can perform only the %FOCUS% action. <br>4. After the ship finishes this activation, it removes all of its ion tokens. <br><br>Additionally: <br>• An ionized ship cannot perform any action except the %FOCUS% action. <br>• Some special weapons inflict ion tokens instead of dealing damage. <br>• If a ship becomes ionized after the Planning Phase (and therefore has been assigned a dial) but before it has activated during the Activation Phase, it activates as normal. During the next Planning Phase, if the ship is still ionized, it is not assigned a dial and proceeds with the ion maneuver during the Activation Phase. <br>• Since an ionized ship does not have a dial assigned to it and does not reveal its dial, it cannot resolve any effects that trigger after it reveals its dial."
+        text: "A ship is <strong>ionized</strong> while it has a number of ion tokens relative to its size: at least one for a small ship, at least two for a medium ship, and at least three for a large ship. Ion tokens are red tokens. <br><br>During the Planning Phase an ionized ship is not assigned a dial. Secretly set a maneuver on the ship's dial, and place the dial facedown on the ship's card.<br><br>During the Activation Phase, an ionized ship that did not have a dial assigned to it during the Planning Phase activates as follows: <br><br>1. The ship skips its Reveal Dial step. <br>2. During the Execute Maneuver step, the ionized ship executes the <strong>ion maneuver</strong>. The ion maneuver is a blue [1 %STRAIGHT%] maneuver. The bearing, difficulty, and speed of this maneuver cannot be changed unless an ability explicitly affects the ion maneuver. <br>3. During the Perform Action step, the ship can perform only the %FOCUS% action. <br>4. After the ship finishes this activation, it removes all of its ion tokens. <br><br>Additionally: <br>• An ionized ship cannot perform any action except the %FOCUS% action. <br>• Some special weapons inflict ion tokens instead of dealing damage. <br>• If a ship becomes ionized after the Planning Phase (and therefore has been assigned a dial) but before it has activated during the Activation Phase, it activates as normal. During the next Planning Phase, if the ship is still ionized, it is not assigned a dial and proceeds with the ion maneuver during the Activation Phase. <br>• Since an ionized ship does not have a dial assigned to it and does not reveal its dial, it cannot resolve any effects that trigger after it reveals its dial. <br>• If a ship that was ionized during the Planning Phase is no longer ionized at the beginning of its activation, assign the ship the facedown maneuver dial from its card. The ship then activates as normal."
       },
       "INFLICT": {
         name: "Inflict",
@@ -24591,7 +27270,7 @@ exportObj.rulesEntries = function() {
       },
       "OBSTRUCTED": {
         name: "Obstructed",
-        text: "An attack is <strong>obstructed</strong> if the attacker measures range through an object. If a ship or device obstructs an attack, there is no inherent effect. If an obstacle obstructs an attack, there is an additional effect. <br>• If at least one asteroid, debris cloud, or gas cloud obstructs an attack, the defender rolls one additional defense die during the Roll Defense Dice step. <br>• If at least one gas cloud obstructs an attack, the defender may change 1 blank result to an %EVADE% result. <br>• The attacker measures from the closest point of its base to the closest point of the defender’s base that is in the attack arc, therefore the attacker cannot measure range from or to another point in order to avoid measuring through an object. <br>◊ If multiple points are at equal distance from the attacker (for example, if the attacker and defender are parallel), the attacker chooses one of those lines for measuring range. In the example, the X-wing can choose to make this attack be obstructed or not."
+        text: "An attack is <strong>obstructed</strong> if the attacker measures range through an object. If a ship or device obstructs an attack, there is no inherent effect. If an obstacle obstructs an attack, there is an additional effect. <br>• If at least one obstacle obstructs an attack, the defender rolls one additional defense die during the Roll Defense Dice step. <br>• The attacker measures from the closest point of its base to the closest point of the defender’s base that is in the attack arc, therefore the attacker cannot measure range from or to another point in order to avoid measuring through an object. <br>◊ If multiple points are at equal distance from the attacker (for example, if the attacker and defender are parallel), the attacker chooses one of those lines for measuring range from or to another point in order to avoid measuring through an object. <br>◊ If multiple points are at equal distance from the attack (for example if the attacker and defender are parallel), the attacker chooses one of those lines for measuring range. In the example, the X-wing can choose to make this attack be obstructed or not."
       },
       "OVERLAP": {
         name: "Overlap",
@@ -24607,7 +27286,7 @@ exportObj.rulesEntries = function() {
       },
       "PLANNING PHASE": {
         name: "Planning Phase",
-        text: "The Planning Phase is the first phase of the round. During the Planning Phase, each player secretly sets a maneuver for each of their ships. To set a ship’s maneuver, the player takes a dial matching the ship’s type and rotates the dial until the arrow points at the desired maneuver. Then the dial is placed facedown in the play area next to the matching ship. <br><br>The phase ends when each ship has a dial assigned to it and both players agree to proceed to the System Phase. <br>• Players can assign their dials in any order. <br>• Players are allowed to change their selections on their dials as long as the phase has not ended. <br>• A player must inform their opponent if they wish to touch or look at one of their dials during the System or Activation Phase. <br>• Ionized ships are not assigned dials."
+        text: "The Planning Phase is the first phase of the round. During the Planning Phase, each player secretly sets a maneuver for each of their ships. To set a ship’s maneuver, the player takes a dial matching the ship’s type and rotates the dial until the arrow points at the desired maneuver. Then the dial is placed facedown in the play area next to the matching ship. <br><br>The phase ends when each ship has a dial assigned to it and both players agree to proceed to the System Phase. <br>• Players can assign their dials in any order. <br>• Players are allowed to change their selections on their dials as long as the phase has not ended. <br>• A player must inform their opponent if they wish to touch or look at one of their dials during the System or Activation Phase. <br>• Ionized ships are not assigned dials. <br>• If a player forgets to set a maneuver dial for a ship during the Planning Phase, during its activation the ship gains a stress, then performs a stress maneuver. The stress maneuver is a white [%STRAIGHT% 2] maneuver."
       },
       "PLAY AREA": {
         name: "Play Area",
@@ -24627,7 +27306,7 @@ exportObj.rulesEntries = function() {
       },
       "RANGE": {
         name: "Range",
-        text: "The <strong>range</strong> is the distance between two objects as measured by the range ruler. The range ruler is divided into three numbered range bands. <br><br>To measure range between two objects, place the range ruler over the point of the first object that is closest to the second object, then aim the other end of the ruler toward the point of the second object that is closest to the first object. The ships are <strong>at</strong> the range that corresponds to the range band that isover the closest point of the second object. <br><br>While measuring <strong>attack range</strong> for an attack, the attacker measures from their attack arc to the closest point of the target ship that is <strong>in</strong> the attacker’s attack arc. <br>• The following terms are used concerning range: <br>◊ <strong>Range #–#:</strong> The range includes all of the range bands from the minimum to the maximum specified. <br>◊ <strong>At:</strong> An object is at a specified range if the closest point of it is inside that range. <br>◊ <strong>Within:</strong> An object is within a specified range if the entirety of it is inside that range. <br>◊ <strong>Beyond:</strong> An object is beyond a specified range if no part of it is between the specified range and the object range is being measured from. <br><br>• While measuring range to a ship, range is measured to the closest point of the ship’s base, not its ship token nor the miniature itself. <br>• While measuring range to a non-ship object, range is measured to the point of that object that is closest to the ship’s base. <br>• While measuring range, players use a single edge of the range ruler; the width and thickness of the ruler are irrelevant. <br>• Range 0 does not appear on the range ruler, but is used for describing the range of objects that are physically touching. <br>◊ After a ship partially executes a maneuver, it is at range 0 of the last ship it overlapped. <br>◊ An object is at range 0 of an obstacle or device if it is physically on top of it. <br>◊ A ship is at range 0 of another ship if it is physically touching another ship. <br>◊ If two ships are at range 0 of each other, they remain at range 0 until one of the ships moves in a way that results in their bases no longer being in physical contact. <br>◊ Although rare, it is possible for a ship to move in such a way that it is at range 0 of another ship (in physical contact with it) without having overlapped it."
+        text: "The <strong>range</strong> is the distance between two objects as measured by the range ruler. The range ruler is divided into three numbered range bands. <br><br>To measure range between two objects, place the range ruler over the point of the first object that is closest to the second object, then aim the other end of the ruler toward the point of the second object that is closest to the first object. The ships are <strong>at</strong> the range that corresponds to the range band that isover the closest point of the second object. <br><br>While measuring <strong>attack range</strong> for an attack, the attacker measures from their attack arc to the closest point of the target ship that is <strong>in</strong> the attacker’s attack arc. <br>• The following terms are used concerning range: <br>◊ <strong>Range #–#:</strong> The range includes all of the range bands from the minimum to the maximum specified. <br>◊ <strong>At:</strong> An object is at a specified range if the closest point of it is inside that range. <br>◊ <strong>Within:</strong> An object is within a specified range if the entirety of it is inside that range. <br>◊ <strong>Beyond:</strong> An object is beyond a specified range if no part of it is between the specified range and the object range is being measured from. <br><br>• While measuring range to a ship, range is measured to the closest point of the ship’s base, not its ship token nor the miniature itself. <br>• While measuring range to a non-ship object, range is measured to the point of that object that is closest to the ship’s base. <br>• While measuring range, players use a single edge of the range ruler; the width and thickness of the ruler are irrelevant. <br>• Range 0 does not appear on the range ruler, but is used for describing the range of objects that are physically touching. <br>◊ After a ship partially executes a maneuver, it is at range 0 of the last ship it overlapped. <br>◊ An object is at range 0 of an obstacle or device if it is physically on top of it. <br>◊ A ship is at range 0 of another ship if it is physically touching another ship. <br>◊ If two ships are at range 0 of each other, they remain at range 0 until one of the ships moves or rotates in a way that results in their bases no longer being in physical contact. <br>◊ Although rare, it is possible for a ship to move in such a way that it is at range 0 of another ship (in physical contact with it) without having overlapped it."
       },
       "REMOVED FROM THE GAME": {
         name: "Removed From The Game",
@@ -24679,7 +27358,7 @@ exportObj.rulesEntries = function() {
       },
       "REMOTES": {
         name: "Remotes",
-        text: "Remotes are devices that have initiative, agility, and hull values, and can be attacked. Ships can move through, overlap, or be at range 0 of remotes. <br><br><h5>Attacking Remotes</h5> A remote can be declared as the defender. While attacking a remote, treat it as a ship, with the following exceptions and notes: <br>• Effects that refer to “friendly ships” or \"allied ships\" do not apply to a remote. <br>• Effects that refer to “enemy ships” only apply to a remote if the attacker is the source of the effect. <br>• If a remote has printed arcs and center lines, these arcs extend from range 0–3. A ship can be in these arcs or zones as it would be with another ship. <br>• If a remote does not have a midway line, a ship cannot be in front of, behind, or flanking it. <br>• If a remote does not have any arcs, a ship cannot be in or outside of any of that remote’s arcs. <br>• An attack made against a remote can be obstructed and range bonuses are applied to it as normal. <br>• If a remote does not have specified size, it is neither smaller nor larger than a ship for the purposes of effects. <br><br><h5>Damaging Remotes</h5> If a remote suffers one or more  %HIT%/%CRIT% damage, deal that many facedown damage cards to it. If it has a number of damage cards greater than or equal to its hull value, it is destroyed. After a remote is destroyed, remove it from the play area and shuffle any damage cards assigned to it back into the damage deck. If the attack occurred at the same initiative as the remote’s initiative, it is removed after all effects at that initiative are resolved, per Simultaneous Fire. <br><br><h5>Using Remotes</h5> A remote resolves effects during the System Phase, activates during the Activation Phase, and engages during the Engagement Phase at its listed initiative value, resolving any effects specified on its card for these phases. During any other phase, it resolves any abilities listed on its remote card that apply during that phase. Additionally, the following apply to remotes: <br>• A remote cannot perform actions or be assigned tokens except for locks. <br>• A remote can be assigned markers or counters if an effect instructs it— place these on its remote card. <br>• If an effect  instructs a player to place that a remote on a ship card, pick it up and place it on the relevant ship card. It can be affected only by game effects that return it to the play area. Its damage cards are not removed. <br>• Some devices cause damage to remotes, as described in their individual entries. If a device does not state that it affects remotes, it does not affect remotes. <br><br><h5>Relocating Remotes</h5> If an effect <strong>relocates</strong> a remote, its controlling player picks it up and places it in the new location as instructed by the effect. Additionally: <br>• An effect might instruct a player to relocate a remote <strong>forward</strong> using a specific template (or a choice of several templates). To do this, the player places the listed template at the remote's front guides, picks up the remote, and places the remote's rear guides at the other end of the template, similar to moving a ship. <br>• If a remote would be relocated such that any part of it is outside of the play area, it flees in the same manner as a ship, and is removed."
+        text: "Remotes are devices that have initiative, agility, and hull values, and can be attacked. Ships can move through, overlap, or be at range 0 of remotes. <br><br><h5>Attacking Remotes</h5> A remote can be declared as the defender. While attacking a remote, treat it as a ship, with the following exceptions and notes: <br>• Effects that refer to “friendly ships” or \"allied ships\" do not apply to a remote. <br>• Effects that refer to “enemy ships” only apply to a remote if the attacker is the source of the effect. <br>• If a remote has printed arcs and center lines, these arcs extend from range 0–3. A ship can be in these arcs or zones as it would be with another ship. <br>• If a remote does not have a midway line, a ship cannot be in front of, behind, or flanking it. <br>• If a remote does not have any arcs, a ship cannot be in or outside of any of that remote’s arcs. <br>• An attack made against a remote can be obstructed and range bonuses are applied to it as normal. <br>• If a remote does not have specified size, it is neither smaller nor larger than a ship for the purposes of effects. <br><br><h5>Damaging Remotes</h5> If a remote suffers one or more %HIT%/%CRIT% damage, deal that many facedown damage cards to it. If it has a number of damage cards greater than or equal to its hull value, it is destroyed. After a remote is destroyed, remove it from the play area and shuffle any damage cards assigned to it back into the damage deck. If the attack occurred at the same initiative as the remote’s initiative, it is removed after all effects at that initiative are resolved, per Simultaneous Fire. <br><br><h5>Using Remotes</h5> A remote resolves effects during the System Phase, activates during the Activation Phase, and engages during the Engagement Phase at its listed initiative value, resolving any effects specified on its card for these phases. During any other phase, it resolves any abilities listed on its remote card that apply during that phase. Additionally, the following apply to remotes: <br>• A remote cannot perform actions or be assigned tokens except for locks. <br>• A remote can be assigned markers or counters if an effect instructs it— place these on its remote card. <br>• If an effect  instructs a player to place that a remote on a ship card, pick it up and place it on the relevant ship card. It can be affected only by game effects that return it to the play area. Its damage cards are not removed. <br>• Some devices cause damage to remotes, as described in their individual entries. If a device does not state that it affects remotes, it does not affect remotes. <br><br><h5>Relocating Remotes</h5> If an effect <strong>relocates</strong> a remote, its controlling player picks it up and places it in the new location as instructed by the effect. Additionally: <br>• An effect might instruct a player to relocate a remote <strong>forward</strong> using a specific template (or a choice of several templates). To do this, the player places the listed template at the remote's front guides, picks up the remote, and places the remote's rear guides at the other end of the template, similar to moving a ship. <br>• If a remote would be relocated such that any part of it is outside of the play area, it flees in the same manner as a ship, and is removed."
       },
       "SEGNOR’S LOOP": {
         name: "Segnor's Loop",
@@ -24832,6 +27511,22 @@ exportObj.rulesEntries = function() {
       "WINNING THE GAME": {
         name: "Winning the Game",
         text: "The game ends at the end of a round if all of a player’s ships are removed from the game. The player with no ships remaining loses, and the player with at least one ship remaining wins. If both players’ last remaining ships are destroyed in the same round, the game ends in a draw."
+      },
+      "ELECTRO-CHAFF CLOUD": {
+        name: "Electro-Chaff Cloud",
+        text: "An electro-chaff cloud has the following effects on ships: <br>• While a ship is at range 0 of an electro-chaff cloud, it cannot be locked, jammed, or coordinated by other ships. <br>• While a ship executes a maneuver, if it moves through or overlaps an electro-chaff cloud, it executes its maneuver as normal. Then, it gains one jam token and breaks all locks on it. Then, the ship skips its Perform Action step this round. <br>• While a ship is not executing a maneuver, if it moves through or overlaps an electro-chaff cloud, it gains one jam token and breaks all locks on it."
+      },
+      "LIMITED 2 (••) AND 3 (•••)": {
+        name: "Limited 2 (••) and 3 (•••)",
+        text: "As explained in the Core Rulebook, limited cards are marked with a number of bullets (“•”) equal to their limited value before their name. The core set contains numerous cards which are marked with a single bullet (“•”) that denotes them as limited 1. <br><br> If a card has two bullets (“••”) before its name, it is limited 2, and a player cannot field more than two cards with this name; if a card has three bullets (“•••”), it is limited 3, and a player cannot field more than three cards with this name, and so forth."
+      },
+      "MINIATURES": {
+        name: "Miniatures",
+        text: "Each player must have the miniatures for each ship in their squad. Players are allowed to customize their miniatures as they like but must follow these guidelines: <br>• The miniature must be made from a majority of miniature parts from the Star Wars: X-Wing miniatures line. <br>• The miniature must be easily identifiable as the ship it represents <br>• Players may not customize a miniature in such a way that any part of the miniature represents the intellectual property of any party except Lucasfilm, including: copyrighted logos, symbols, iconic elements, or other iconography. <br>• The size or pose of a customized miniature cannot interfere with gameplay. <br>• Miniatures must always be attached to a Star Wars: X-Wing base that is the appropriate size and shape of the original miniature. If two or more miniatures in play could potentially touch, causing conflict with movement or placement of ships, players must adjust the number ofplastic pegs to increase or decrease height until the ship miniatures are not touching. <br>• Each ship card has a ship type centered at the bottom of the card. Players may use any Star Wars: X-Wing miniature that represents the same ship model as the pilot in their squadron, so long as it is easily recognizable as the ship it represents and has the appropriate ship token fitted in the ship’s base. Example: The Customized YT-1300 Light Freighter miniature may be used to represent a Scavenged YT-1300 if the Escape Craft piece is removed and an appropriate ship token is fitted to the ship’s base."
+      },
+      "PURPLE ACTIONS": {
+        name: "Purple Actions",
+        text: "As a cost to perform a purple action, the ship performing the action must spend 1 %FORCE%."
       }
     },
     faq: {
@@ -24873,11 +27568,11 @@ exportObj.rulesEntries = function() {
       },
       "ABILITIES AND THE ABILITY QUEUE": {
         name: "Abilities and the Ability Queue",
-        text: "<strong>Q: What makes an effect an \"ability?\"</strong> <br><br>A: An ability is text from a card a player controls (such a ship card, upgrade card, damage card, remote card, device, condition card, etc). <br><br>A few abilities are constant (such as the \"Gain a %FRONTARC% primary weapon with a value of '3'\" portion of Moldy Crow). Constant abilities are not resolved via the ability queue. <br><br>Most abilities are triggered, occurring only at a specified timing window (such as the \"During the End Phase, do not remove up to 2 focus tokens\" portion of Moldy Crow). Triggered abilities are resolved via the ability queue. <br><br>Each triggered ability has the following parts: <br>A timing (when the ability is added to the ability queue) <br>An effect (what the ability does) <br>Additionally, an ability can have one or more of the following: <br>One or more requirements the ship must meet <br>One or more costs the ship must pay <br>A text box can contain multiple abilities if there are multiple constant abilities or triggers that can add an ability to the queue (as in the Moldy Crow example). <br><br><strong>Q: What is meant by a requirement for an ability?</strong> <br><br>A: A requirement for an ability is a conditional if-statement, such as \"if you are tractored\" or \"if the defender is in your bullseye arc.\" A ship being inarc at range for an attack made as part of a triggered ability, such as Snap Shot or Foresight, is also a requirement for that ability. <br><br>If an ability's requirements are not met at the time the ability would be added to the queue, it cannot be added to the queue. <br><br>If the ability's requirements are not met at the time the ability would be resolved from the queue, the ability is not resolved and is instead removed from the queue. <br><br>If an ability instructs you to make a choice, such as choosing a ship, that is not itself a requirement to initiate an ability. <br><br><strong>Q: When is the cost for an ability paid?</strong> <br><br>A: The cost for an ability is paid when the ability is resolved. An ability cannot be added to the queue if its cost could not be paid at the time it is added. <br><br>If an ability's cost cannot be paid when it would be resolved from the queue, the ability is not resolved and is instead removed from the queue. The ability's cost is not paid. <br><br>An ability can have multiple costs. If it does, all costs must be paid to resolve it. If all costs cannot be paid, no costs are paid and the ability is removed from the queue and not resolved.<br><br><strong>Q: Are optional abilities added to the ability queue automatically when they are triggered, or does a player make their choice by adding the ability to the queue?</strong> <br><br>A: They are added to the ability queue automatically when they are triggered as long as they meet the requirements to be added. <br><br>For example, Afterburners and Fine-Tuned Controls are both optional abilities that are added to the ability queue \"after you fully execute a maneuver.\" A Delta-7 Aethersprite equipped with Afterburners would add both abilities to the queue in an order of its player's choosing. <br><br>Note that at an ability can be added to the queue only if the requirements for it could be met. For instance, if Afterburners had no active %CHARGE% remaining, or if the Delta-7 Aethersprite had no active %FORCE% after it executed the maneuver, those abilities could not be added, respectively. <br><br><strong>Q: Are optional abilities added to the ability queue mandatory once they have been added?</strong> <br><br>A: No. When an ability is reached in the ability queue, the player makes the relevant choices for that ability, including whether or not to use it. For example, if a Delta-7 Aethersprite queues Fine-Tuned Controls and then Afterburners after it fully executes a maneuver, when the queue reaches Fine-Tuned Controls, its player makes the choice whether to pay the costs to resolve the ability, then does so. Then, when the queue reaches Afterburners, its player makes the choice whether to pay the costs to resolve the ability, then resolves it and makes any choices included in the ability. <br><br>Q: How are abilities that \"may choose a ship\" (e.g. K-2SO [%CREW%] or Darth Vader [%CREW%]) resolved when they are reached in the ability queue? <br><br>A: When an ability that \"may choose a ship\" is reached in the ability queue, before paying costs, the ship's player may measure range to any number of ships. Then, that player may choose a ship from among the valid options as defined by the ability, or choose no ship. If they choose no ship, the costs for the ability are not paid, and the ability is removed from the queue without resolving."
+        text: "<strong>Q: What makes an effect an \"ability?\"</strong> <br><br>A: An ability is text from a card a player controls (such a ship card, upgrade card, damage card, remote card, device, condition card, etc). <br><br>A few abilities are constant (such as the \"Gain a %FRONTARC% primary weapon with a value of '3'\" portion of Moldy Crow). Constant abilities are not resolved via the ability queue. <br><br>Most abilities are triggered, occurring only at a specified timing window (such as the \"During the End Phase, do not remove up to 2 focus tokens\" portion of Moldy Crow). Triggered abilities are resolved via the ability queue. <br><br>Each triggered ability has the following parts: <br>A timing (when the ability is added to the ability queue) <br>An effect (what the ability does) <br>Additionally, an ability can have one or more of the following: <br>One or more requirements the ship must meet <br>One or more costs the ship must pay <br>A text box can contain multiple abilities if there are multiple constant abilities or triggers that can add an ability to the queue (as in the Moldy Crow example). <br><br><strong>Q: What is meant by a requirement for an ability?</strong> <br><br>A: A requirement for an ability is a conditional if-statement, such as \"if you are tractored\" or \"if the defender is in your bullseye arc.\" A ship being inarc at range for an attack made as part of a triggered ability, such as Snap Shot or Foresight, is also a requirement for that ability. <br><br>If an ability's requirements are not met at the time the ability would be added to the queue, it cannot be added to the queue. <br><br>If the ability's requirements are not met at the time the ability would be resolved from the queue, the ability is not resolved and is instead removed from the queue. <br><br>If an ability instructs you to make a choice, such as choosing a ship, that is not itself a requirement to initiate an ability. <br><br><strong>Q: When is the cost for an ability paid?</strong> <br><br>A: The cost for an ability is paid when the ability is resolved. An ability cannot be added to the queue if its cost could not be paid at the time it is added. <br><br>If an ability's cost cannot be paid when it would be resolved from the queue, the ability is not resolved and is instead removed from the queue. The ability's cost is not paid. <br><br>An ability can have multiple costs. If it does, all costs must be paid to resolve it. If all costs cannot be paid, no costs are paid and the ability is removed from the queue and not resolved.<br><br><strong>Q: Are optional abilities added to the ability queue automatically when they are triggered, or does a player make their choice by adding the ability to the queue?</strong> <br><br>A: They are added to the ability queue automatically when they are triggered as long as they meet the requirements to be added. Players are not required to declare each ability as it enters the queue. However, if a player does not resolve an ability during the appropriate timing window, the opportunity to do so is lost.<br><br>For example, Afterburners and Fine-Tuned Controls are both optional abilities that are added to the ability queue \"after you fully execute a maneuver.\" A Delta-7 Aethersprite equipped with Afterburners would add both abilities to the queue in an order of its player's choosing. <br><br>Note that at an ability can be added to the queue only if the requirements for it could be met. For instance, if Afterburners had no active %CHARGE% remaining, or if the Delta-7 Aethersprite had no active %FORCE% after it executed the maneuver, those abilities could not be added, respectively. <br><br><strong>Q: Are optional abilities added to the ability queue mandatory once they have been added?</strong> <br><br>A: No. When an ability is reached in the ability queue, the player makes the relevant choices for that ability, including whether or not to use it. For example, if a Delta-7 Aethersprite queues Fine-Tuned Controls and then Afterburners after it fully executes a maneuver, when the queue reaches Fine-Tuned Controls, its player makes the choice whether to pay the costs to resolve the ability, then does so. Then, when the queue reaches Afterburners, its player makes the choice whether to pay the costs to resolve the ability, then resolves it and makes any choices included in the ability. <br><br>Q: How are abilities that \"may choose a ship\" (e.g. K-2SO [%CREW%] or Darth Vader [%CREW%]) resolved when they are reached in the ability queue? <br><br>A: When an ability that \"may choose a ship\" is reached in the ability queue, before paying costs, the ship's player may measure range to any number of ships. Then, that player may choose a ship from among the valid options as defined by the ability, or choose no ship. If they choose no ship, the costs for the ability are not paid, and the ability is removed from the queue without resolving."
       },
       "SPECIFIC CARD QUESTIONS": {
         name: "Specific Card Questions",
-        text: "<strong>Q: Can Cikatro Vizago [%CREW%] exchange an %ILLICIT% upgrade card onto a ship that could not normally equip it (such as equipping a Stealth Device to a Z-95 Headhunter and then exchanging it with a Rigged Cargo Chute on a YV-666)?</strong> <br><br>A: No. Cikatro Vizago cannot move the Rigged Cargo Chute to the Z-95 due to the Z-95 not meeting the “Medium or large ship” restriction on Rigged Cargo Chute, as described in Upgrade Cards. <br><br><strong>Q: When attacking with a weapon with the ordnance icon (such as Proton Rockets) or defending against an attack with the ordnance icon, can Grand Inquisitor [TIE/Advanced v1] apply the range bonus?</strong> <br><br>A: No. <br><br><strong>Q: Is Han Solo [Rebel, %GUNNER%]’s additional attack a bonus attack?</strong> <br><br>A: Yes. Anything that permits an attack outside of the standard attack allowed to a ship when it engages is a bonus attack. <br><br><strong>Q: If a ship with Han Solo [Rebel, %GUNNER%] is made to engage at initiative 7 (through Roark Garnet [HWK-290], Heightened Reflexes [%FORCEPOWER%], etc.), must it perform Han Solo’s bonus attack first?</strong> <br><br>A: Yes. Han Solo [Rebel, %GUNNER%]’s effect occurs at initiative 7 before any ship at that initiative engages (including the one to which Han Solo is equipped), so Han Solo’s bonus attack is always performed first. This means that it cannot perform Han Solo’s bonus attack and then perform a subsequent attack from the same turret arc. <br><br><strong>Q: How do effects that “prevent damage” such as Iden Versio interact with effects such as Ion Cannon and Tractor Beam that “inflict [ion, tractor, jam, etc] tokens instead of dealing damage”?</strong> <br><br>A: If an effect uses %HIT%/CRIT% results for an effect instead of dealing damage (such as inflicting ion, tractor, or jam tokens), that effect cannot be prevented by an effect that “prevents damage.” <br><br>Note that Iden Versio can prevent the 1 damage that an Ion Cannon deals before inflicting ion tokens, but this does not prevent Iden Versio from gaining the subsequent ion tokens. <br><br><strong>Q: When the Nashtah Pup deploys, does it gain charges equal to the charge limit from the ship card with the Hound’s Tooth?</strong> <br><br>A: No, when the Nashtah Pup deploys via emergency deployment, it gains the number of active and inactive charges that the ship with the Hound’s Tooth had before it was destroyed. <br><br><strong>Q: Does the Autopilot Drone [Escape Craft]’s ability trigger if it is destroyed by another method other than running out of charges?</strong> <br><br>A: No. <br><br><strong>Q: If a ship with Cloaking Device [%ILLICIT%] rolls a focus result and then fails while attempting to decloak, what happens?</strong> <br><br>A: The ship does not remove its cloak token. <br><br> strong>Q: Can a ship use Elusive [%TALENT%] to recover charges on other upgrades by fully executing red maneuvers?</strong> <br><br>A: No. Elusive and other effects that refer to recovering charges only apply to the charges of that specific card, unless the effect explicitly states otherwise (such as Chopper [Rebel, Crew]). <br><br><strong>Q: Does Kavil (Scum, BTL-A4 Y-wing) roll an additional attack die when attacking with a turret weapon when the turret arc indicator is set to his front arc?</strong> <br><br>A: Yes. Additionally, note that Kavil would roll an additional attack die when performing an attack that specifies bullseye arc, even though the target is also by definition in his front arc. <br><br><strong>Q: If Lieutenant Sai [Lambda-class Shuttle] coordinates a ship and it performs an action followed by a linked action, can Lieutenant Sai perform the linked action instead of the initial action?</strong><br><br>A: No. Lieutenant Sai can only perform the initial action. <br><br><strong>Q: Airen Cracken [Z-95 Headhunter]’s pilot ability allows another friendly ship to “perform an action, treating it as red.” Can that ship choose to perform a red action, treating it as red? Can it choose to perform a purple action, treating it as red?</strong> <br><br>A: It can perform a red action, treating it as red. However, because purple is more difficult than red, it cannot perform a purple action, treating it as red. <br><br><strong>Q: Does the StarViper-class Attack Platform’s ship ability (Microthrusters) apply to the barrel roll that results from becoming tractored?</strong> <br><br>A: Microthrusters does affect this barrel roll. The player whose effect assigned the tractor token determines the direction and position of the template. <br><br><strong>Q: Do TIE Strikers (and Reapers) skip their perform action step if they overlap an asteroid or another ship with their Aileron’s ability maneuver?</strong> <br><br>A: No. It is only during the Execute Maneuver step that a ship skips its Perform Action step for overlapping a ship or obstacle. <br><br><strong>Q: Can a TIE Advanced x1 that rolled 1 additional die from Advanced Targeting Computer spend the lock later in the attack? If it does, can it change 1 %HIT% into a %CRIT%?</strong> <br><br>A: While performing an attack, a TIE Advanced x1 can spend its lock to reroll attack dice after rolling 1 additional die. <br><br>It can also change 1 %HIT% result to a %CRIT% result and then spend the lock to reroll attack dice. However, note that it cannot change 1 %HIT% result to a %CRIT% result after spending the lock, as it no longer has the defender locked. <br><br><strong>Q: After being destroyed, can “Deathfire” [TIE Bomber] launch a device that cannot normally be launched?</strong> <br><br>A: No. <br><br><strong>Q: If \"Deathfire\" [TIE Bomber] (or a ship with Paige Tico [%GUNNER%] equipped) placed a device during the System Phase, can that ship drop a bomb after being destroyed?</strong> <br><br>A: Yes. A ship can only place a device once during the System Phase, but it can drop an additional bomb as instructed by its pilot (or upgrade) ability. Note however that some cards that can place devices at times other than the System Phase (such as Edon Kappehl [MG-100 Starfortress] and “Genius” [%ASTROMECH%]) contain the text “If you have not dropped or launched a bomb this round,” which would prevent them from placing a subsequent device if they had placed one in the System Phase. <br><br><strong>Q: What ship’s initiative does Listening Device condition assigned by Informant [%CREW%] trigger at?</strong> <br><br>A: Listening Device’s effect triggers at the initiative of the ship that has the condition. <br><br><strong>Q: If a ship would gain a disarm token as part of paying the cost of an effect, such as Foreman Proach [Modified TIE/ln Fighter] or Quinn Jast [M3-A Interceptor], but Overseer Yushyn [Modified TIE/ln Fighter] causes them to gain a stress token instead, does the effect still resolve?</strong> <br><br>A: Yes. Overseer Yushyn [Modified TIE/ln Fighter]’s ability is a replacement effect, and if it replaces part of the cost a ship would pay to resolve an effect (in this case, the disarm token that ship would gain), that effect still resolves (see page 2, “Paying Costs”). <br><br>Note that abilities that would resolve “after a ship gains a disarm token” still do not resolve, as this is a timing window that has not occurred, rather than a cost that has been replaced. <br><br><strong>Q: If an attack made with Plasma Torpedoes [%TORPEDO%] hits, when does the defender lose a shield?</strong> <br><br>A: It is determined that the attack hit at the end of Step 4: Neutralize Results. Therefore, the ship loses the shield at the end of Step 4: Neutralize Results and before Step 5: Deal Damage. <br><br><strong>Q: What happens if a ship transfers its own lock to itself (such as by using Admiral Holdo [%CREW%])?</strong> <br><br>A: A ship cannot have a lock on itself (see Lock), so that lock breaks. <br><br><strong>Q: When an effect checks the difficulty of your revealed maneuver (such as Cova Nell’s pilot ability), do any effects that alter the difficulty of your maneuvers (such as R4 Astromech [%ASTROMECH%] or Leia Organa [Resistance, %CREW% %CREW%] apply?</strong> <br><br>A: No. The difficulty of a revealed maneuver matches its printed color. The speed and bearing of a revealed maneuver also match their printed value and type, respectively. <br><br><strong>Q: When an effect (such as Seasoned Navigator) instructs a ship to set its dial to a different maneuver \"after you reveal your dial,\" is the ship's revealed maneuver the one that was on the dial when it was revealed or the new maneuver to which it is set?</strong> <br><br>A: The ship's revealed maneuver is the one to which its dial is physically set. If an effect such as Seasoned Navigator physically sets the dial to a new maneuver, the new maneuver is the ship's revealed maneuver. If multiple effects set the dial, the revealed maneuver is the final maneuver on the dial after all effects that set it have been resolved. <br><br><strong>Q: If a ship is affected by Padmé Amidala’s pilot ability and it modifies 1 of its %FOCUS% results, can Emperor Palpatine [%CREW%, Empire]’s ability be used to modify a second %FOCUS% result?</strong> <br><br>A: No. Emperor Palpatine’s ability calls for the die to be modified “as though that ship had spent 1 %FORCE%,” so this ability does not allow for a second modification. <br><br><strong>Q: If an effect applies a maximum to the number of dice rolled (e.g. Seventh Fleet Gunner [%GUNNER%] or Predictive Shot [%FORCEPOWER%]) and another effect instructs it to roll additional dice in excess of this maximum, does the order in which the effects were applied matter?</strong> <br><br>A: No. Once an effect sets a maximum number of dice that can be rolled (“roll 1 additional die, to a maximum of X” or “the defender cannot roll more than X defense dice”), that maximum is applied at Step 2a: Roll Attack Dice or Step 2b: Roll Defense Dice (see Attack) after all effects that cause the ship to roll additional or fewer dice have been applied. <br><br><strong>Q: If a ship with agility 0 (such as the VCX-100) is subject to one effect that would cause it to roll 1 fewer defense die and another effect that would cause it to roll 1 additional defense die, does the order in which these effects are applied change how many defense dice it rolls?</strong> <br><br>A: No. Whichever effect is applied first, it rolls 0 defense dice. If the reduction is applied first, its defense pool becomes “–1 dice” (negative 1 defense dice), then the positive modifier is applied, bringing it back to 0. On the other hand, if the increase is applied first, the decrease subsequently reduces it back to 0. <br><br>Note that after modifiers are applied but before dice are rolled, there is a default minimum of 0 dice (see Attack). Therefore if a ship would roll fewer than 0 dice due to the modifiers that have been applied, it always rolls 0 defense dice instead. <br><br><strong>Q: If a ship with agility 0 (such as the VCX-100) is strained and defends against an attack at attack range 1 (for which it would normally roll 0 defense die), does it remove the strain token?</strong> <br><br>A: Yes. Although it cannot be made to roll fewer than 0 defense dice due to the intrinsic minimum, the effect of “roll 1 fewer defense die” is applied (see Attack), and so the strain token is removed. <br><br><strong>Q: If a ship that is equipped with Kanan Jarrus [Crew] uses Inertial Dampeners [Illicit] to perform a white stationary maneuver, in which order to Kanan's ability and the \"gain 1 stress token\" portion of Inertial Dampeners' ability occur?</strong> <br><br>A: Both abilities have the same timing window: after the ship executes the maneuver. Thus, after the ship executes the white stationary maneuver, if the player chooses to spend one Force charge to activate Kanan, two abilities enter the ability queue: Inertial Dampeners' \"gain 1 stress token\" and Kanan Jarrus' \"remove 1 stress token.\" The player who controls both effects determines the order they enter the queue, and then the abilities resolve in that order. If a player wants the ship to gain and then remove a stress token, Inertial Dampeners' ability should be placed into the queue before Kanan's ability. <br><br><strong>Q: Dalan Oberos [M12-L Kimogila]'s pilot ability reads \"At the start of the Engagement Phase, you may choose 1 shielded enemy ship in your bullseye arc and spend 1 charge. If you do, that ship loses 1 shield and you recover 1 shield.\" Must both \"that ship loses 1 shield\" and \"you recover 1 shield\" be able to resolve for either to resolve?</strong> <br><br>A: Yes. \"That ship loses 1 shield and you recover 1 shield\" is a single effect, and so both parts must be able to resolve for either to occur. <br><br><strong>Q: Do Paige Tico [%GUNNER%] and \"Deathfire\" [TIE Bomber]'s abilities supersede the \"one device per round\" limitation?</strong> <br><br>A: Yes. These abilities allow one ship to drop a second device in the same round (at the relevant timing windows), as they do not include the \"if you have not dropped or launched a device this round\" limitation (as included on Edon Kappehl). <br><br><strong>Q: If an effect says that a ship \"loses a shield\" (or \"loses shields\"), has that ship suffered damage?</strong> <br><br>A: No. While suffering damage does cause a ship to lose shields (if applicable), if an effect causes a ship to lose one or more shields directly, it has not suffered damage. <br><br><strong>Q: How is Han Solo [Rebel, Modified YT-1300]'s ability categorized? Is it a dice modification? Is it a reroll? What is its timing window?</strong> <br><br>A: Han Solo's ability is treated as a dice modification effect that is not a reroll. Because it is a dice modification effect, when attacking or defending, it triggers during the Modify Dice step. Note, however, that it can also affect other die rolls, such as the roll to determine if a ship suffers damage from overlapping or moving through an asteroid. \n<br><br><strong>Q: How does Han Solo [Rebel, Modified YT-1300]'s ability interact with C-3PO [Rebel, Crew]?</strong> <br><br>A: The \"if you do and you roll exactly that many evade results...\" portion of C-3PO's ability triggers occurs after the dice are rolled, before the Modify Dice step. Thus, Han Solo's effect occurs after C-3PO's effect has been resolved. If using Han Solo after using C-3PO, the added die must be rerolled. <br><br><strong>Q: How does Han Solo [Rebel, Modified YT-1300]'s ability interact with \"Midnight\" [TIE/fo Fighter]?</strong> <br><br>A: \"Midnight\" prevents dice modification. Because Han Solo's ability is a dice modification effect, \"Midnight\" prevents it from being used. <br><br><strong>Q: If a ship executes a stationary maneuver in arc at range 2 of an enemy ship with Snap Shot equipped (or in the bullseye arc of an enemy ship with Foresight equipped), can the ship with Snap Shot (or Foresight) perform the bonus attack?</strong> <br><br>A: Yes. <br><br><strong>Q: While \"Scourge\" Skutu performs an attack using Snap Shot, if the defender is in \"Scourge\" Skutu's bullseye arc, does \"Scourge\" Skutu add an additional attack die?</strong> <br><br>A: Yes. <br><br><strong>Q: If a ship with the Fine-Tuned Controls ship ability (or another ability that triggers \"after you execute/fully execute a maneuver\") fully executes a maneuver in arc at range 2 of a ship equipped with Snap Shot, how is this resolved?</strong> <br><br>A: This is resolved one of several ways depending on which player is first player. <br><br>In all cases, both abilities (\"After you fully execute a maneuver, you may spend 1 force charge to perform a boost or barrel roll action\" and \"After an enemy ship executes a maneuver, you may perform this attack against it as a bonus attack\") are added to the ability queue. <br><br>If the first player controls the ship with Fine-Tune Controls, that player resolves this ability before Snap Shot is resolved. If, after performing a boost or barrel roll, the ship with Fine-Tuned Controls is no longer in range or arc to be chosen as a target for Snap Shot, Snap Shot cannot be resolved and is removed from the queue. <br><br>If the second player controls the ship with Fine-Tuned Controls, their opponent resolves Snap Shot first. <br><br><strong>Q: How do abilities that alter the speed, difficulty, and/or bearing of a maneuver that a ship reveals during its Reveal Dial step and executes during its Execute Maneuver step resolve? For example, if Hera Syndulla [Attack Shuttle] is equipped with R4 Astromech and Seasoned Navigator, and also has the Damaged Engine Damage Card, what happens?</strong> <br><br>A: R4 Astromech and Damaged Engine (and other constant effects that alter the difficulty of a maneuver, such as Nien Nunb [Crew], L3-37's Programming, and Leia Organa [Rebel and Resistance, Crew]) apply only during the Execute Maneuver step, for effects that trigger \"before a ship executes a maneuver\" (e.g. BB Astromech), and for effects that trigger \"after that ship executes a maneuver\" (e.g. Elusive). <br><br>So, after Hera's dial is revealed, Hera's player may add Hera's pilot ability and Seasoned Navigator's ability to the ability queue in either order. Both abilities resolve, and if Seasoned Navigator's ability is resolved, the difficulty of the maneuver is increased during the Execute Maneuver step (i.e. the difficulty has not yet been increased when Hera's pilot ability is resolved). <br><br>Then, during the Execute Maneuver step, all abilities that alter the difficulty of the maneuver are cumulative as normal. <br><br>Note that abilities that alter a maneuver without causing the ship to select a new maneuver on its dial do not affect the ship's \"revealed maneuver\" as referenced by abilities such as Ric Olié's pilot ability. <br><br><strong>Q: After a Nantex-class starfighter executes its maneuver, if it uses its Pinpoint Tractor Array ship ability to assign a tractor token to itself so that it can rotate its turret arc, and then it barrel rolls itself over a debris field as a result of becoming tractored, giving it a stress token, how does this resolve?</strong> <br><br>A: After a Nantex-class starfighter executes its maneuver, it has the option to add an ability in the queue with the effect of \"gain 1 tractor token to perform a %ROTATEARC% action.\" <br><br>When this ability resolves, the Nantex-class starfighter pays the cost (\"gain 1 tractor token\") to resolve this effect. The Nantex-class starfighter gains 1 tractor token, then performs the rotate action. Note that it does not resolve the game effect of becoming tractored (which triggers after the first time a ship becomes tractored each round) until after it fully resolves the ability by completing the rotate action. <br><br>Once the ability is fully resolved, the game effect that triggers after a ship becomes tractored is applied to the Nantex-class starfighter (before any other abilities on the queue are resolved), prompting the Nantex-class starfighter's player to move it, if they desire. If they do and this movement takes the Nantex-class starfighter onto a debris cloud, it resolves the effects of moving through or overlapping the debris cloud, including gaining 1 stress token. <br><br>Finally, any other abilities on the queue are then resolved in order. <br><br><strong>Q: Can Snap Shot or Foresight be chosen as a special weapon to be used for a ship's attack during the Engagement Phase?</strong> <br><br>A: Yes. The phrase \"after an enemy ship executes a maneuver, you may perform this attack against it as a bonus attack\" allows the attack to be used as a bonus attack under the specified circumstances, but does not disqualify it from being used during the Engagement Phase. <br><br><strong>Q: Do abilities that reference upgrades of a specific type (such as Captain Jonus' pilot ability) affect upgrades with multiple types including that type?</strong> <br><br>A: Yes. For example, Captain Jonus' pilot ability can be used with a friendly ship's Barrage Rockets [%MISSILE% %MISSILE%], and Paige Tico [%GUNNER%]'s ability can be used with Electro-Proton Bomb [%DEVICE% %MODIFICATION%]. Each of these upgrades has the qualifying type (%MISSILE% for Barrage Rockets and %DEVICE% for Electro-Proton Bomb) in addition to its other type. <br><br>Note that the Weapon Hardpoint ability does not behave this way, as it grants a special upgrade slot. <br><br><strong>Q: When searching for a damage card with Kaz's Fireball [%TITLE%], must you show that card to your opponent?</strong> <br><br>A: No. You are not required to show the card to your opponent. <br><br><strong>Q: Can a Fireball use its \"Explosion with Wings\" ship ability without any facedown damage card to pay the cost of \"exposing 1 damage card\" to resolve the effect of \"remov[ing] 1 disarm token\"?</strong> <br><br>A: No. As exposing a damage card is a cost for removing the damage card, if the cost cannot be payed, the effect cannot be resolved. <br><br><strong>Q: If \"Rush\" becomes damaged during the Engagement Phase before the initiative 2 step, causing its initiative to become \"6\", what happens?</strong><br><br>A: \"Rush\" engages at the current initiative step, after all other ships at thatstep have engaged. <br><br><strong>Q: Does the Mining Guild TIE's Notched Stabilizers ship ability allow it to barrel roll through or onto asteroids? <br><br>A: Yes. <br><br>Q: Can Hondo Ohnaka (%CREW%) coordinate an enemy ship? If so, who chooses the action that ship performs?</strong> <br><br>A: Yes, Hondo can coordinate an enemy ship this way. When Hondo does so, the controller of the coordinated ship chooses the action. <br><br><strong>Q: When does Count Dooku (%CREW%)'s ability take effect?</strong> <br><br>A: Count Dooku's ability takes effect after the dice are rolled (before the Modify Dice step during an attack, or before other dice modification effects are applied for dice rolled at any other time). <br><br><strong>Q: What happens when two players use Count Dooku (%CREW%) on the same dice roll?</strong> <br><br>A: The first player's Count Dooku takes effect: if the roll does not contain the result the first player named, the ship's controlling player must choose one result and change it to the named result. <br><br>Then the second player's Count Dooku takes effect: if the roll does not contain the result the second player named,.the ship's controlling player must choose one result and change it to the named result. <br><br>This can potentially mean that the same die is modified twice this way. <br><br><strong>Q: Can the difficulty of a purple maneuver be reduced or increased?</strong> <br><br>A: No. However, effects can cause you to \"treat the maneuver as [a different color].\" <br><br><strong>Q: At what step of Setup does the \"Explosion with Wings\" (Fireball) occur?</strong> <br><br>A: During Step 6: Prepare Other Components, after the damage deck has been shuffled. <br><br><strong>Q: How does Chewbacca (Resistance, %CREW%) interact with the \"Explosion with Wings\" ship ability?</strong> <br><br>A: Chewbacca (Resistance, %CREW%)'s \"Setup: Lose 1 %CHARGE%\" ability occurs after the ship equipped with Chewbacca is placed during Step 5: Place Forces. <br><br>\"Explosion with Wings\" causes a ship to be dealt a damage card during Step 6: Prepare Other Components. <br><br>However, triggered abilities that do not have the \"Setup:\" header or explicitly mention a timing during Setup do not trigger during Setup. Thus, the second ability in Chewbacca's text (\"After a friendly ship at range 0–3 is dealt 1 damage card, recover 1 %CHARGE%\", which does not mention setup nor have the header, does not trigger from \"Explosion with Wings.\" <br><br><strong>Q: Can \"Holo\" (TIE/ba Interceptor)'s ship ability transfer a red lock token that has been assigned to \"Holo\" to a friendly ship?</strong> <br><br>A: Yes. That red token is included under \"your tokens,\" so Holo can transfer it. <br><br><strong>Q: Can \"Holo\" (TIE/ba Interceptor)'s ship ability transfer a red lock token that has been assigned to another ship by \"Holo\" to a friendly ship?</strong> <br><br>A: No. \"Holo\" (TIE/ba Inteceptor)'s lock is a red token assigned to another ship. It is not considered \"your token\" for the purposes of that ability (or other abilities that refer to \"your token). However, it is \"Holo\" (TIE/ba Inteceptor)'s lock, and is considered \"your lock\" for the purposes of any abilities that refer to \"your lock.\" <br><br><strong>Q: After Leia Organa (Resistance, %CREW%) reduces the difficulty of a ship's maneuver, if the reduced difficulty is blue, can the ship use BB Astromech to perform a %BARRELROLL%?</strong> <br><br>A: Yes. Leia Organa (Resistance, %CREW%) has an ability that occurs after the dial is revealed, and BB Astromech's ability is resolved subsequently, before the ship executes its maneuver. <br><br><strong>Q: What does \"closest valid attack range\" as mentioned on Automated Target Priority mean exactly?</strong> \n<br><br>A: The \"closest valid attack range\" is the closest attack range for a given attack that has one or more potential valid defenders. A valid defender is a ship at the proper attack range in arc that meets the requirements for the chosen attack (such as Attack [%LOCK%]). <br><br>For example, consider a TIE/sf fighter equipped with Concussion Missiles that has one enemy ship in its %FRONTARC% at range 0, one enemy ship outside its %FRONTARC% at range 1, two enemy ships in its %FRONTARC% at range 2, and one enemy ship in its %FRONTARC% at range 3 (on which it has a lock). Its %SINGLETURRETARC% is in its %FRONTARC%. <br><br>The TIE/sf fighter measures range (determining the above information) and chooses a weapon as normal.<br><br>If it chooses its primary weapon, it determines the closest valid attack range as follows: <br><br>Range 0: Range 0 is not a valid attack range for its primary weapon, so the enemy ship in its %FRONTARC% at range 0 cannot be selected. <br><br>Range 1: The enemy ship outside its %FRONTARC% at attack range 1 is not in arc, so it cannot be selected. As there are no potential valid defenders at range 1, range 1 is not a valid attack range. <br><br>Range 2: There are 2 enemy ships in its 󲈫 at range 2. The attack does not have any special requirements. Thus, range 2 is a valid attack range. The attacking player can choose either of these two ships as the defender, regardless of which one is physically closer. <br><br>Range 3: There was at least one valid target at range 2, so range 3 cannot be the closest valid attack range. It cannot choose the ship in its %FRONTARC% at range 3. <br><br>It chooses its Concussion Missiles, it determines the closest valid attack range as follows: <br><br>Range 0: Range 0 is not a valid attack range for Concussion Missiles, so the enemy ship in its %FRONTARC% at range 0 cannot be selected. <br><br>Range 1: Range 1 is not a valid attack range for Concussion Missiles. Even if the enemy ship at range 1 was in arc, could not be selected. <br><br>Range 2: There are 2 enemy ships in its %FRONTARC% at range 2. However, Concussion Missiles has a special requirement of Attack (%LOCK%), and the attacker does not have a lock on either ship at range 2. Thus, range 2 is not a valid attack range for Concussion Missiles. <br><br>Range 3: There is an enemy ship in the attacker's %FRONTARC% at range 3, on which the attacker has a lock. Thus, attack range 3 is a valid attack range, and the ship at range 3 can be selected as the defender. <br><br>Note that if the TIE/sf had two locks, one on the ship at range 2 and the other on the ship at range 3, Range 2 would be the closest valid attack range and thus it would be required to choose the ship on which it had a lock at Range 2. <br><br><strong>Q: After an enemy ship executes a maneuver, if it is in multiple friendly ships’ bullseye arcs, how many times can Kalani (%TACTICALRELAY%) be triggered?</strong> <br><br>A: One time. <br><br><strong>Q: Do effects that apply “while you perform an attack” (such as Fire-Control System) remain in effect during the Aftermath step of the attack?</strong> <br><br>A: No. The Aftermath step occurs after every attack, but it is not part of the attack. Note that this means that a bonus attack performed during the Aftermath step is not subject to any “while you perform an attack” effects from the original attack. <br><br><strong>Q: When a ship is instructed to gain two or more tokens from a single effect (such as Admiral Sloane), does this resolve as a single instance of gaining two or more tokens or as two or more separate instances of gaining one token?</strong> <br><br>A: It resolves as a single instance of gaining two or more tokens. Thus, if a ship is instructed to gain two or more tokens from a single effect like Admiral Sloane, this only triggers abilities that occur “after you gain a token” once. <br><br><strong>Q: Can Major Rhymer perform a %TORPEDO% or %MISSILE% attack at attack range 0?</strong> <br><br>A: Yes. Major Rhymer's pilot ability supersedes the base rule that ships cannot perform attacks at range 0. <br><br><strong>Q: If a ship equipped with Thermal Detonators (%DEVICE%) chooses to drop two Thermal Detonators, does this count as one or two instances of dropping devices?</strong> <br><br>A: Unlike Cluster Mines (%DEVICE%), Thermal Detonators are dropped one at a time, and each Thermal Detonator dropped counts as a single instance of dropping a device. This means that: <br><br>• After Paige Tico (MG-100 Starfortress) drops each Thermal Detonator, she may spend 1 %CHARGE% to drop one additional Thermal Detonator. As she has only one charge, this normally means she can drop a maximum of 3 Thermal Detonators. <br><br>• After a ship with Paige Tico (%GUNNER%) is destroyed, that ship may drop one Thermal Detonator. <br><br>• Abilities that trigger after dropping a device trigger after each Thermal Detonator is dropped. In terms of sequence, the first Thermal Detonator is dropped, any abilities that trigger from this (such as Deathrain [TIE/ca Punisher] or Delayed Fuses [%MODIFICATION%]) are added to the queue and resolve, and then the second Thermal Detonator is dropped, and any abilities that trigger from this are added to the queue and resolved. <br><br>• Trajectory Simulator (%SENSOR%) can be used for up to one Thermal Detonator, but as the two devices must be dropped (or launched) with different templates, both cannot be launched this way. <br><br><strong>Q: Are left bank (or turn) and right bank (or turn) templates of the same speed considered different templates?</strong> <br><br>A: Yes. Even though these templates are resolved with the same physical tool, they are considered different templates. <br><br>For example, the [3 %TURNLEFT%] and [3 %TURNRIGHT%], which use the same physical tool, flipped over), they are considered different templates. Thus, if an effect requires you to choose \"two different templates,\" you may select the [3 %TURNLEFT%] template and the [3 %TURNRIGHT%] template. <br><br><strong>Q: What is a structure as mentioned on Marg-Sabl Closure (%TALENT%)?</strong> <br><br>A: A structure is a... wait a second, I can't tell you that yet! You'll have to wait and see."
+        text: "<strong>Q: Can Cikatro Vizago [%CREW%] exchange an %ILLICIT% upgrade card onto a ship that could not normally equip it (such as equipping a Stealth Device to a Z-95 Headhunter and then exchanging it with a Rigged Cargo Chute on a YV-666)?</strong> <br><br>A: No. Cikatro Vizago cannot move the Rigged Cargo Chute to the Z-95 due to the Z-95 not meeting the “Medium or large ship” restriction on Rigged Cargo Chute, as described in Upgrade Cards. <br><br><strong>Q: When attacking with a weapon with the ordnance icon (such as Proton Rockets) or defending against an attack with the ordnance icon, can Grand Inquisitor [TIE/Advanced v1] apply the range bonus?</strong> <br><br>A: No. <br><br><strong>Q: Is Han Solo [Rebel, %GUNNER%]’s additional attack a bonus attack?</strong> <br><br>A: Yes. Anything that permits an attack outside of the standard attack allowed to a ship when it engages is a bonus attack. <br><br><strong>Q: If a ship with Han Solo [Rebel, %GUNNER%] is made to engage at initiative 7 (through Roark Garnet [HWK-290], Heightened Reflexes [%FORCEPOWER%], etc.), must it perform Han Solo’s bonus attack first?</strong> <br><br>A: Yes. Han Solo [Rebel, %GUNNER%]’s effect occurs at initiative 7 before any ship at that initiative engages (including the one to which Han Solo is equipped), so Han Solo’s bonus attack is always performed first. This means that it cannot perform Han Solo’s bonus attack and then perform a subsequent attack from the same turret arc. <br><br><strong>Q: How do effects that “prevent damage” such as Iden Versio interact with effects such as Ion Cannon and Tractor Beam that “inflict [ion, tractor, jam, etc] tokens instead of dealing damage”?</strong> <br><br>A: If an effect uses %HIT%/%CRIT% results for an effect instead of dealing damage (such as inflicting ion, tractor, or jam tokens), that effect cannot be prevented by an effect that “prevents damage.” <br><br>Note that Iden Versio can prevent the 1 damage that an Ion Cannon deals before inflicting ion tokens, but this does not prevent Iden Versio from gaining the subsequent ion tokens. <br><br><strong>Q: When the Nashtah Pup deploys, does it gain charges equal to the charge limit from the ship card with the Hound’s Tooth?</strong> <br><br>A: No, when the Nashtah Pup deploys via emergency deployment, it gains the number of active and inactive charges that the ship with the Hound’s Tooth had before it was destroyed. <br><br><strong>Q: Does the Autopilot Drone [Escape Craft]’s ability trigger if it is destroyed by another method other than running out of charges?</strong> <br><br>A: No. <br><br><strong>Q: If a ship with Cloaking Device [%ILLICIT%] rolls a focus result and then fails while attempting to decloak, what happens?</strong> <br><br>A: The ship does not remove its cloak token. <br><br><strong>Q: Can a ship use Elusive [%TALENT%] to recover charges on other upgrades by fully executing red maneuvers?</strong> <br><br>A: No. Elusive and other effects that refer to recovering charges only apply to the charges of that specific card, unless the effect explicitly states otherwise (such as Chopper [Rebel, Crew]). <br><br><strong>Q: Does Kavil (Scum, BTL-A4 Y-wing) roll an additional attack die when attacking with a turret weapon when the turret arc indicator is set to his front arc?</strong> <br><br>A: Yes. Additionally, note that Kavil would roll an additional attack die when performing an attack that specifies bullseye arc, even though the target is also by definition in his front arc. <br><br><strong>Q: If Lieutenant Sai [Lambda-class Shuttle] coordinates a ship and it performs an action followed by a linked action, can Lieutenant Sai perform the linked action instead of the initial action?</strong><br><br>A: No. Lieutenant Sai can only perform the initial action. <br><br><strong>Q: Airen Cracken [Z-95 Headhunter]’s pilot ability allows another friendly ship to “perform an action, treating it as red.” Can that ship choose to perform a red action, treating it as red? Can it choose to perform a purple action, treating it as red?</strong> <br><br>A: It can perform a red action, treating it as red. However, because purple is more difficult than red, it cannot perform a purple action, treating it as red. <br><br><strong>Q: Does the StarViper-class Attack Platform’s ship ability (Microthrusters) apply to the barrel roll that results from becoming tractored?</strong> <br><br>A: Microthrusters does affect this barrel roll. The player whose effect assigned the tractor token determines the direction and position of the template. <br><br><strong>Q: Do TIE Strikers (and Reapers) skip their perform action step if they overlap an asteroid or another ship with their Aileron’s ability maneuver?</strong> <br><br>A: No. It is only during the Execute Maneuver step that a ship skips its Perform Action step for overlapping a ship or obstacle. <br><br><strong>Q: Can a TIE Advanced x1 that rolled 1 additional die from Advanced Targeting Computer spend the lock later in the attack? If it does, can it change 1 %HIT% into a %CRIT%?</strong> <br><br>A: While performing an attack, a TIE Advanced x1 can spend its lock to reroll attack dice after rolling 1 additional die. <br><br>It can also change 1 %HIT% result to a %CRIT% result and then spend the lock to reroll attack dice. However, note that it cannot change 1 %HIT% result to a %CRIT% result after spending the lock, as it no longer has the defender locked. <br><br><strong>Q: After being destroyed, can “Deathfire” [TIE Bomber] launch a device that cannot normally be launched?</strong> <br><br>A: No. <br><br><strong>Q: If \"Deathfire\" [TIE Bomber] (or a ship with Paige Tico [%GUNNER%] equipped) placed a device during the System Phase, can that ship drop a bomb after being destroyed?</strong> <br><br>A: Yes. A ship can only place a device once during the System Phase, but it can drop an additional bomb as instructed by its pilot (or upgrade) ability. Note however that some cards that can place devices at times other than the System Phase (such as Edon Kappehl [MG-100 Starfortress] and “Genius” [%ASTROMECH%]) contain the text “If you have not dropped or launched a bomb this round,” which would prevent them from placing a subsequent device if they had placed one in the System Phase. <br><br><strong>Q: What ship’s initiative does Listening Device condition assigned by Informant [%CREW%] trigger at?</strong> <br><br>A: Listening Device’s effect triggers at the initiative of the ship that has the condition. <br><br><strong>Q: If a ship would gain a disarm token as part of paying the cost of an effect, such as Foreman Proach [Modified TIE/ln Fighter] or Quinn Jast [M3-A Interceptor], but Overseer Yushyn [Modified TIE/ln Fighter] causes them to gain a stress token instead, does the effect still resolve?</strong> <br><br>A: Yes. Overseer Yushyn [Modified TIE/ln Fighter]’s ability is a replacement effect, and if it replaces part of the cost a ship would pay to resolve an effect (in this case, the disarm token that ship would gain), that effect still resolves (see page 2, “Paying Costs”). <br><br>Note that abilities that would resolve “after a ship gains a disarm token” still do not resolve, as this is a timing window that has not occurred, rather than a cost that has been replaced. <br><br><strong>Q: If an attack made with Plasma Torpedoes [%TORPEDO%] hits, when does the defender lose a shield?</strong> <br><br>A: It is determined that the attack hit at the end of Step 4: Neutralize Results. Therefore, the ship loses the shield at the end of Step 4: Neutralize Results and before Step 5: Deal Damage. <br><br><strong>Q: What happens if a ship transfers its own lock to itself (such as by using Admiral Holdo [%CREW%])?</strong> <br><br>A: A ship cannot have a lock on itself (see Lock), so that lock breaks. <br><br><strong>Q: When an effect checks the difficulty of your revealed maneuver (such as Cova Nell’s pilot ability), do any effects that alter the difficulty of your maneuvers (such as R4 Astromech [%ASTROMECH%] or Leia Organa [Resistance, %CREW% %CREW%] apply?</strong> <br><br>A: No. The difficulty of a revealed maneuver matches its printed color. The speed and bearing of a revealed maneuver also match their printed value and type, respectively. <br><br><strong>Q: When an effect (such as Seasoned Navigator) instructs a ship to set its dial to a different maneuver \"after you reveal your dial,\" is the ship's revealed maneuver the one that was on the dial when it was revealed or the new maneuver to which it is set?</strong> <br><br>A: The ship's revealed maneuver is the one to which its dial is physically set. If an effect such as Seasoned Navigator physically sets the dial to a new maneuver, the new maneuver is the ship's revealed maneuver. If multiple effects set the dial, the revealed maneuver is the final maneuver on the dial after all effects that set it have been resolved. <br><br><strong>Q: If a ship is affected by Padmé Amidala’s pilot ability and it modifies 1 of its %FOCUS% results, can Emperor Palpatine [%CREW%, Empire]’s ability be used to modify a second %FOCUS% result?</strong> <br><br>A: Yes. The ship equipped with Emperor Palpatine (Crew) is modifying that ship’s second focus result, and not that ship itself. <br><br><strong>Q: If an effect applies a maximum to the number of dice rolled (e.g. Seventh Fleet Gunner [%GUNNER%] or Predictive Shot [%FORCEPOWER%]) and another effect instructs it to roll additional dice in excess of this maximum, does the order in which the effects were applied matter?</strong> <br><br>A: No. Once an effect sets a maximum number of dice that can be rolled (“roll 1 additional die, to a maximum of X” or “the defender cannot roll more than X defense dice”), that maximum is applied at Step 2a: Roll Attack Dice or Step 2b: Roll Defense Dice (see Attack) after all effects that cause the ship to roll additional or fewer dice have been applied. <br><br><strong>Q: If a ship with agility 0 (such as the VCX-100) is subject to one effect that would cause it to roll 1 fewer defense die and another effect that would cause it to roll 1 additional defense die, does the order in which these effects are applied change how many defense dice it rolls?</strong> <br><br>A: No. Whichever effect is applied first, it rolls 0 defense dice. If the reduction is applied first, its defense pool becomes “–1 dice” (negative 1 defense dice), then the positive modifier is applied, bringing it back to 0. On the other hand, if the increase is applied first, the decrease subsequently reduces it back to 0. <br><br>Note that after modifiers are applied but before dice are rolled, there is a default minimum of 0 dice (see Attack). Therefore if a ship would roll fewer than 0 dice due to the modifiers that have been applied, it always rolls 0 defense dice instead. <br><br><strong>Q: If a ship with agility 0 (such as the VCX-100) is strained and defends against an attack at attack range 1 (for which it would normally roll 0 defense die), does it remove the strain token?</strong> <br><br>A: Yes. Although it cannot be made to roll fewer than 0 defense dice due to the intrinsic minimum, the effect of “roll 1 fewer defense die” is applied (see Attack), and so the strain token is removed. <br><br><strong>Q: If a ship that is equipped with Kanan Jarrus [Crew] uses Inertial Dampeners [Illicit] to perform a white stationary maneuver, in which order to Kanan's ability and the \"gain 1 stress token\" portion of Inertial Dampeners' ability occur?</strong> <br><br>A: Both abilities have the same timing window: after the ship executes the maneuver. Thus, after the ship executes the white stationary maneuver, if the player chooses to spend one Force charge to activate Kanan, two abilities enter the ability queue: Inertial Dampeners' \"gain 1 stress token\" and Kanan Jarrus' \"remove 1 stress token.\" The player who controls both effects determines the order they enter the queue, and then the abilities resolve in that order. If a player wants the ship to gain and then remove a stress token, Inertial Dampeners' ability should be placed into the queue before Kanan's ability. <br><br><strong>Q: Dalan Oberos [M12-L Kimogila]'s pilot ability reads \"At the start of the Engagement Phase, you may choose 1 shielded enemy ship in your bullseye arc and spend 1 charge. If you do, that ship loses 1 shield and you recover 1 shield.\" Must both \"that ship loses 1 shield\" and \"you recover 1 shield\" be able to resolve for either to resolve?</strong> <br><br>A: Yes. \"That ship loses 1 shield and you recover 1 shield\" is a single effect, and so both parts must be able to resolve for either to occur. <br><br><strong>Q: Do Paige Tico [%GUNNER%] and \"Deathfire\" [TIE Bomber]'s abilities supersede the \"one device per round\" limitation?</strong> <br><br>A: Yes. These abilities allow one ship to drop a second device in the same round (at the relevant timing windows), as they do not include the \"if you have not dropped or launched a device this round\" limitation (as included on Edon Kappehl). <br><br><strong>Q: If an effect says that a ship \"loses a shield\" (or \"loses shields\"), has that ship suffered damage?</strong> <br><br>A: No. While suffering damage does cause a ship to lose shields (if applicable), if an effect causes a ship to lose one or more shields directly, it has not suffered damage. <br><br><strong>Q: How is Han Solo [Rebel, Modified YT-1300]'s ability categorized? Is it a dice modification? Is it a reroll? What is its timing window?</strong> <br><br>A: Han Solo's ability is treated as a dice modification effect that is not a reroll. Because it is a dice modification effect, when attacking or defending, it triggers during the Modify Dice step. Note, however, that it can also affect other die rolls, such as the roll to determine if a ship suffers damage from overlapping or moving through an asteroid. \n<br><br><strong>Q: How does Han Solo [Rebel, Modified YT-1300]'s ability interact with C-3PO [Rebel, Crew]?</strong> <br><br>A: The \"if you do and you roll exactly that many evade results...\" portion of C-3PO's ability triggers occurs after the dice are rolled, before the Modify Dice step. Thus, Han Solo's effect occurs after C-3PO's effect has been resolved. If using Han Solo after using C-3PO, the added die must be rerolled. <br><br><strong>Q: How does Han Solo [Rebel, Modified YT-1300]'s ability interact with \"Midnight\" [TIE/fo Fighter]?</strong> <br><br>A: \"Midnight\" prevents dice modification. Because Han Solo's ability is a dice modification effect, \"Midnight\" prevents it from being used. <br><br><strong>Q: If a ship executes a stationary maneuver in arc at range 2 of an enemy ship with Snap Shot equipped (or in the bullseye arc of an enemy ship with Foresight equipped), can the ship with Snap Shot (or Foresight) perform the bonus attack?</strong> <br><br>A: Yes. <br><br><strong>Q: While \"Scourge\" Skutu performs an attack using Snap Shot, if the defender is in \"Scourge\" Skutu's bullseye arc, does \"Scourge\" Skutu add an additional attack die?</strong> <br><br>A: Yes. <br><br><strong>Q: If a ship with the Fine-Tuned Controls ship ability (or another ability that triggers \"after you execute/fully execute a maneuver\") fully executes a maneuver in arc at range 2 of a ship equipped with Snap Shot, how is this resolved?</strong> <br><br>A: This is resolved one of several ways depending on which player is first player. <br><br>In all cases, both abilities (\"After you fully execute a maneuver, you may spend 1 force charge to perform a boost or barrel roll action\" and \"After an enemy ship executes a maneuver, you may perform this attack against it as a bonus attack\") are added to the ability queue. <br><br>If the first player controls the ship with Fine-Tune Controls, that player resolves this ability before Snap Shot is resolved. If, after performing a boost or barrel roll, the ship with Fine-Tuned Controls is no longer in range or arc to be chosen as a target for Snap Shot, Snap Shot cannot be resolved and is removed from the queue. <br><br>If the second player controls the ship with Fine-Tuned Controls, their opponent resolves Snap Shot first. <br><br><strong>Q: How do abilities that alter the speed, difficulty, and/or bearing of a maneuver that a ship reveals during its Reveal Dial step and executes during its Execute Maneuver step resolve? For example, if Hera Syndulla [Attack Shuttle] is equipped with R4 Astromech and Seasoned Navigator, and also has the Damaged Engine Damage Card, what happens?</strong> <br><br>A: R4 Astromech and Damaged Engine (and other constant effects that alter the difficulty of a maneuver, such as Nien Nunb [Crew], L3-37's Programming, and Leia Organa [Rebel and Resistance, Crew]) apply only during the Execute Maneuver step, for effects that trigger \"before a ship executes a maneuver\" (e.g. BB Astromech), and for effects that trigger \"after that ship executes a maneuver\" (e.g. Elusive). <br><br>So, after Hera's dial is revealed, Hera's player may add Hera's pilot ability and Seasoned Navigator's ability to the ability queue in either order. Both abilities resolve, and if Seasoned Navigator's ability is resolved, the difficulty of the maneuver is increased during the Execute Maneuver step (i.e. the difficulty has not yet been increased when Hera's pilot ability is resolved). <br><br>Then, during the Execute Maneuver step, all abilities that alter the difficulty of the maneuver are cumulative as normal. <br><br>Note that abilities that alter a maneuver without causing the ship to select a new maneuver on its dial do not affect the ship's \"revealed maneuver\" as referenced by abilities such as Ric Olié's pilot ability. <br><br><strong>Q: After a Nantex-class starfighter executes its maneuver, if it uses its Pinpoint Tractor Array ship ability to assign a tractor token to itself so that it can rotate its turret arc, and then it barrel rolls itself over a debris field as a result of becoming tractored, giving it a stress token, how does this resolve?</strong> <br><br>A: After a Nantex-class starfighter executes its maneuver, it has the option to add an ability in the queue with the effect of \"gain 1 tractor token to perform a %ROTATEARC% action.\" <br><br>When this ability resolves, the Nantex-class starfighter pays the cost (\"gain 1 tractor token\") to resolve this effect. The Nantex-class starfighter gains 1 tractor token, then performs the rotate action. Note that it does not resolve the game effect of becoming tractored (which triggers after the first time a ship becomes tractored each round) until after it fully resolves the ability by completing the rotate action. <br><br>Once the ability is fully resolved, the game effect that triggers after a ship becomes tractored is applied to the Nantex-class starfighter (before any other abilities on the queue are resolved), prompting the Nantex-class starfighter's player to move it, if they desire. If they do and this movement takes the Nantex-class starfighter onto a debris cloud, it resolves the effects of moving through or overlapping the debris cloud, including gaining 1 stress token. <br><br>Finally, any other abilities on the queue are then resolved in order. <br><br><strong>Q: Can Snap Shot or Foresight be chosen as a special weapon to be used for a ship's attack during the Engagement Phase?</strong> <br><br>A: Yes. The phrase \"after an enemy ship executes a maneuver, you may perform this attack against it as a bonus attack\" allows the attack to be used as a bonus attack under the specified circumstances, but does not disqualify it from being used during the Engagement Phase. <br><br><strong>Q: Do abilities that reference upgrades of a specific type (such as Captain Jonus' pilot ability) affect upgrades with multiple types including that type?</strong> <br><br>A: Yes. For example, Captain Jonus' pilot ability can be used with a friendly ship's Barrage Rockets [%MISSILE% %MISSILE%], and Paige Tico [%GUNNER%]'s ability can be used with Electro-Proton Bomb [%DEVICE% %MODIFICATION%]. Each of these upgrades has the qualifying type (%MISSILE% for Barrage Rockets and %DEVICE% for Electro-Proton Bomb) in addition to its other type. <br><br>Note that the Weapon Hardpoint ability does not behave this way, as it grants a special upgrade slot. <br><br><strong>Q: When searching for a damage card with Kaz's Fireball [%TITLE%], must you show that card to your opponent?</strong> <br><br>A: No. You are not required to show the card to your opponent. <br><br><strong>Q: Can a Fireball use its \"Explosion with Wings\" ship ability without any facedown damage card to pay the cost of \"exposing 1 damage card\" to resolve the effect of \"remov[ing] 1 disarm token\"?</strong> <br><br>A: No. As exposing a damage card is a cost for removing the damage card, if the cost cannot be payed, the effect cannot be resolved. <br><br><strong>Q: If \"Rush\" becomes damaged during the Engagement Phase before the initiative 2 step, causing its initiative to become \"6\", what happens?</strong><br><br>A: \"Rush\" engages at the current initiative step, after all other ships at thatstep have engaged. <br><br><strong>Q: Does the Mining Guild TIE's Notched Stabilizers ship ability allow it to barrel roll through or onto asteroids? <br><br>A: Yes. <br><br>Q: Can Hondo Ohnaka (%CREW%) coordinate an enemy ship? If so, who chooses the action that ship performs?</strong> <br><br>A: Yes, Hondo can coordinate an enemy ship this way. When Hondo does so, the controller of the coordinated ship chooses the action. <br><br><strong>Q: When does Count Dooku (%CREW%)'s ability take effect?</strong> <br><br>A: Count Dooku's ability takes effect after the dice are rolled (before the Modify Dice step during an attack, or before other dice modification effects are applied for dice rolled at any other time). <br><br><strong>Q: What happens when two players use Count Dooku (%CREW%) on the same dice roll?</strong> <br><br>A: The first player's Count Dooku takes effect: if the roll does not contain the result the first player named, the ship's controlling player must choose one result and change it to the named result. <br><br>Then the second player's Count Dooku takes effect: if the roll does not contain the result the second player named,.the ship's controlling player must choose one result and change it to the named result. <br><br>This can potentially mean that the same die is modified twice this way. <br><br><strong>Q: Can the difficulty of a purple maneuver be reduced or increased?</strong> <br><br>A: No. However, effects can cause you to \"treat the maneuver as [a different color].\" <br><br><strong>Q: At what step of Setup does the \"Explosion with Wings\" (Fireball) occur?</strong> <br><br>A: During Step 6: Prepare Other Components, after the damage deck has been shuffled. <br><br><strong>Q: How does Chewbacca (Resistance, %CREW%) interact with the \"Explosion with Wings\" ship ability?</strong> <br><br>A: Chewbacca (Resistance, %CREW%)'s \"Setup: Lose 1 %CHARGE%\" ability occurs after the ship equipped with Chewbacca is placed during Step 5: Place Forces. <br><br>\"Explosion with Wings\" causes a ship to be dealt a damage card during Step 6: Prepare Other Components. <br><br>However, triggered abilities that do not have the \"Setup:\" header or explicitly mention a timing during Setup do not trigger during Setup. Thus, the second ability in Chewbacca's text (\"After a friendly ship at range 0–3 is dealt 1 damage card, recover 1 %CHARGE%\", which does not mention setup nor have the header, does not trigger from \"Explosion with Wings.\" <br><br><strong>Q: Can \"Holo\" (TIE/ba Interceptor)'s ship ability transfer a red lock token that has been assigned to \"Holo\" to a friendly ship?</strong> <br><br>A: Yes. That red token is included under \"your tokens,\" so Holo can transfer it. <br><br><strong>Q: Can \"Holo\" (TIE/ba Interceptor)'s ship ability transfer a red lock token that has been assigned to another ship by \"Holo\" to a friendly ship?</strong> <br><br>A: No. \"Holo\" (TIE/ba Inteceptor)'s lock is a red token assigned to another ship. It is not considered \"your token\" for the purposes of that ability (or other abilities that refer to \"your token). However, it is \"Holo\" (TIE/ba Inteceptor)'s lock, and is considered \"your lock\" for the purposes of any abilities that refer to \"your lock.\" <br><br><strong>Q: After Leia Organa (Resistance, %CREW%) reduces the difficulty of a ship's maneuver, if the reduced difficulty is blue, can the ship use BB Astromech to perform a %BARRELROLL%?</strong> <br><br>A: Yes. Leia Organa (Resistance, %CREW%) has an ability that occurs after the dial is revealed, and BB Astromech's ability is resolved subsequently, before the ship executes its maneuver. <br><br><strong>Q: What does \"closest valid attack range\" as mentioned on Automated Target Priority mean exactly?</strong> \n<br><br>A: The \"closest valid attack range\" is the closest attack range for a given attack that has one or more potential valid defenders. A valid defender is a ship at the proper attack range in arc that meets the requirements for the chosen attack (such as Attack [%LOCK%]). <br><br>For example, consider a TIE/sf fighter equipped with Concussion Missiles that has one enemy ship in its %FRONTARC% at range 0, one enemy ship outside its %FRONTARC% at range 1, two enemy ships in its %FRONTARC% at range 2, and one enemy ship in its %FRONTARC% at range 3 (on which it has a lock). Its %SINGLETURRETARC% is in its %FRONTARC%. <br><br>The TIE/sf fighter measures range (determining the above information) and chooses a weapon as normal.<br><br>If it chooses its primary weapon, it determines the closest valid attack range as follows: <br><br>Range 0: Range 0 is not a valid attack range for its primary weapon, so the enemy ship in its %FRONTARC% at range 0 cannot be selected. <br><br>Range 1: The enemy ship outside its %FRONTARC% at attack range 1 is not in arc, so it cannot be selected. As there are no potential valid defenders at range 1, range 1 is not a valid attack range. <br><br>Range 2: There are 2 enemy ships in its 󲈫 at range 2. The attack does not have any special requirements. Thus, range 2 is a valid attack range. The attacking player can choose either of these two ships as the defender, regardless of which one is physically closer. <br><br>Range 3: There was at least one valid target at range 2, so range 3 cannot be the closest valid attack range. It cannot choose the ship in its %FRONTARC% at range 3. <br><br>It chooses its Concussion Missiles, it determines the closest valid attack range as follows: <br><br>Range 0: Range 0 is not a valid attack range for Concussion Missiles, so the enemy ship in its %FRONTARC% at range 0 cannot be selected. <br><br>Range 1: Range 1 is not a valid attack range for Concussion Missiles. Even if the enemy ship at range 1 was in arc, could not be selected. <br><br>Range 2: There are 2 enemy ships in its %FRONTARC% at range 2. However, Concussion Missiles has a special requirement of Attack (%LOCK%), and the attacker does not have a lock on either ship at range 2. Thus, range 2 is not a valid attack range for Concussion Missiles. <br><br>Range 3: There is an enemy ship in the attacker's %FRONTARC% at range 3, on which the attacker has a lock. Thus, attack range 3 is a valid attack range, and the ship at range 3 can be selected as the defender. <br><br>Note that if the TIE/sf had two locks, one on the ship at range 2 and the other on the ship at range 3, Range 2 would be the closest valid attack range and thus it would be required to choose the ship on which it had a lock at Range 2. <br><br><strong>Q: After an enemy ship executes a maneuver, if it is in multiple friendly ships’ bullseye arcs, how many times can Kalani (%TACTICALRELAY%) be triggered?</strong> <br><br>A: One time. <br><br><strong>Q: Do effects that apply “while you perform an attack” (such as Fire-Control System) remain in effect during the Aftermath step of the attack?</strong> <br><br>A: No. The Aftermath step occurs after every attack, but it is not part of the attack. Note that this means that a bonus attack performed during the Aftermath step is not subject to any “while you perform an attack” effects from the original attack. <br><br><strong>Q: When a ship is instructed to gain two or more tokens from a single effect (such as Admiral Sloane), does this resolve as a single instance of gaining two or more tokens or as two or more separate instances of gaining one token?</strong> <br><br>A: It resolves as a single instance of gaining two or more tokens. Thus, if a ship is instructed to gain two or more tokens from a single effect like Admiral Sloane, this only triggers abilities that occur “after you gain a token” once. <br><br><strong>Q: Can Major Rhymer perform a %TORPEDO% or %MISSILE% attack at attack range 0?</strong> <br><br>A: Yes. Major Rhymer's pilot ability supersedes the base rule that ships cannot perform attacks at range 0. <br><br><strong>Q: If a ship equipped with Thermal Detonators (%DEVICE%) chooses to drop two Thermal Detonators, does this count as one or two instances of dropping devices?</strong> <br><br>A: Unlike Cluster Mines (%DEVICE%), Thermal Detonators are dropped one at a time, and each Thermal Detonator dropped counts as a single instance of dropping a device. This means that: <br><br>• After Paige Tico (MG-100 Starfortress) drops each Thermal Detonator, she may spend 1 %CHARGE% to drop one additional Thermal Detonator. As she has only one charge, this normally means she can drop a maximum of 3 Thermal Detonators. <br><br>• After a ship with Paige Tico (%GUNNER%) is destroyed, that ship may drop one Thermal Detonator. <br><br>• Abilities that trigger after dropping a device trigger after each Thermal Detonator is dropped. In terms of sequence, the first Thermal Detonator is dropped, any abilities that trigger from this (such as Deathrain [TIE/ca Punisher] or Delayed Fuses [%MODIFICATION%]) are added to the queue and resolve, and then the second Thermal Detonator is dropped, and any abilities that trigger from this are added to the queue and resolved. <br><br>• Trajectory Simulator (%SENSOR%) can be used for up to one Thermal Detonator, but as the two devices must be dropped (or launched) with different templates, both cannot be launched this way. <br><br><strong>Q: Are left bank (or turn) and right bank (or turn) templates of the same speed considered different templates?</strong> <br><br>A: Yes. Even though these templates are resolved with the same physical tool, they are considered different templates. <br><br>For example, the [3 %TURNLEFT%] and [3 %TURNRIGHT%], which use the same physical tool, flipped over), they are considered different templates. Thus, if an effect requires you to choose \"two different templates,\" you may select the [3 %TURNLEFT%] template and the [3 %TURNRIGHT%] template. <br><br><strong>Q: What is a structure as mentioned on Marg-Sabl Closure (%TALENT%)?</strong> <br><br>A: A structure is a... wait a second, I can't tell you that yet! You'll have to wait and see."
       }
     }
   };

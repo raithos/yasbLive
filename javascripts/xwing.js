@@ -4,7 +4,7 @@
     Stephen Kim <raithos@gmail.com>
     https://raithos.github.io
  */
-var DFL_LANGUAGE, GenericAddon, SERIALIZATION_CODE_TO_CLASS, SPEC_URL, SQUAD_DISPLAY_NAME_MAX_LENGTH, Ship, TYPES, URL_BASE, builders, byName, byPoints, conditionToHTML, exportObj, getPrimaryFaction, statAndEffectiveStat,
+var DFL_LANGUAGE, GenericAddon, SERIALIZATION_CODE_TO_CLASS, SHOW_DEBUG_OUT_MISSING_TRANSLATIONS, SPEC_URL, SQUAD_DISPLAY_NAME_MAX_LENGTH, SQUAD_TO_XWS_URL, Ship, TYPES, URL_BASE, all, builders, byName, byPoints, conditionToHTML, exportObj, getPrimaryFaction, statAndEffectiveStat,
   __slice = [].slice,
   __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
   __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
@@ -205,16 +205,9 @@ exportObj.SquadBuilderBackend = (function() {
     return this.save(data.serialized, data.id, data.name, faction, data.additional_data, cb);
   };
 
-  SquadBuilderBackend.prototype.list = function(builder, all) {
+  SquadBuilderBackend.prototype.list = function(builder) {
     var list_ul, loading_pane, tag_list, url;
-    if (all == null) {
-      all = false;
-    }
-    if (all) {
-      this.squad_list_modal.find('.modal-header .squad-list-header-placeholder').text("Everyone's " + builder.faction + " Squads");
-    } else {
-      this.squad_list_modal.find('.modal-header .squad-list-header-placeholder').text("Your " + builder.faction + " Squads");
-    }
+    this.squad_list_modal.find('.modal-header .squad-list-header-placeholder').text(exportObj.translate('ui', "yourXYsquads", builder.faction));
     list_ul = $(this.squad_list_modal.find('ul.squad-list'));
     list_ul.text('');
     list_ul.hide();
@@ -224,7 +217,7 @@ exportObj.SquadBuilderBackend = (function() {
     this.squad_list_modal.modal('show');
     this.number_of_selected_squads_to_be_deleted = 0;
     tag_list = [];
-    url = all ? "" + this.server + "/all" : "" + this.server + "/squads/list";
+    url = "" + this.server + "/squads/list";
     return $.get(url, (function(_this) {
       return function(data, textStatus, jqXHR) {
         var hasNotArchivedSquads, li, squad, tag, tag_array, tag_button, tag_entry, tagclean, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
@@ -250,7 +243,7 @@ exportObj.SquadBuilderBackend = (function() {
           } else {
             hasNotArchivedSquads = true;
           }
-          li.append($.trim("<div class=\"row\">\n    <div class=\"col-md-9\">\n        <h4>" + squad.name + "</h4>\n    </div>\n    <div class=\"col-md-3\">\n        <h5>" + ((_ref5 = squad.additional_data) != null ? _ref5.points : void 0) + " Points</h5>\n    </div>\n</div>\n<div class=\"row squad-description\">\n    <div class=\"col-md-9\">\n        " + ((_ref6 = squad.additional_data) != null ? _ref6.description : void 0) + "\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-modal convert-squad\"><i class=\"xwing-miniatures-font xwing-miniatures-font-first-player-1\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-modal load-squad\"><i class=\"fa fa-download\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-danger delete-squad\"><i class=\"fa fa-times\"></i></button>\n    </div>\n</div>\n<div class=\"row squad-convert-confirm\">\n    <div class=\"col-md-9\">\n        Convert to Extended?\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-danger confirm-convert-squad\">Convert</button>\n        &nbsp;\n        <button class=\"btn btn-modal cancel-convert-squad\">Cancel</button>\n    </div>\n</div>\n<div class=\"row squad-delete-confirm\">\n    <div class=\"col-md-9\">\n        Really delete <em>" + squad.name + "</em>?\n    </div>\n    <div class=\"col-md-3\">\n        <button class=\"btn btn-danger confirm-delete-squad\">Delete</button>\n        &nbsp;\n        <button class=\"btn btn-modal cancel-delete-squad\">Cancel</button>\n    </div>\n</div>"));
+          li.append($.trim("<div class=\"row\">\n    <div class=\"col-md-9\">\n        <h4>" + squad.name + "</h4>\n    </div>\n    <div class=\"col-md-3\">\n        <h5>" + ((_ref5 = squad.additional_data) != null ? _ref5.points : void 0) + " " + (exportObj.translate('ui', "Points")) + "</h5>\n    </div>\n</div>\n<div class=\"row squad-description\">\n    <div class=\"col-md-9\">\n        " + ((_ref6 = squad.additional_data) != null ? _ref6.description : void 0) + "\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-modal convert-squad\"><i class=\"xwing-miniatures-font xwing-miniatures-font-first-player-1\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-modal load-squad\"><i class=\"fa fa-download\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-danger delete-squad\"><i class=\"fa fa-times\"></i></button>\n    </div>\n</div>\n<div class=\"row squad-convert-confirm\">\n    <div class=\"col-md-9 translated\" defaultText=\"Convert to Extended?\">\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-danger confirm-convert-squad translated\" defaultText=\"Convert\"></button>\n        &nbsp;\n        <button class=\"btn btn-modal cancel-convert-squad translated\" defaultText=\"Cancel\"></button>\n    </div>\n</div>\n<div class=\"row squad-delete-confirm\">\n    <div class=\"col-md-9\">\n        " + (exportObj.translate('ui', 'reallyDeleteSquadXY', "<em>" + squad.name + "</em>")) + "\n    </div>\n    <div class=\"col-md-3\">\n        <button class=\"btn btn-danger confirm-delete-squad translated\" defaultText=\"Delete\"></button>\n        &nbsp;\n        <button class=\"btn btn-modal cancel-delete-squad translated\" defaultText=\"Cancel\"></button>\n    </div>\n</div>"));
           li.find('.squad-convert-confirm').hide();
           li.find('.squad-delete-confirm').hide();
           if (squad.serialized.search(/v\d+Zh/) === -1) {
@@ -303,21 +296,6 @@ exportObj.SquadBuilderBackend = (function() {
                 return li.html($.trim("Error converting " + (li.data('squad').name) + ": <em>" + results.error + "</em>"));
               }
             });
-          });
-          li.find('button.load-squad').click(function(e) {
-            var button;
-            e.preventDefault();
-            button = $(e.target);
-            li = button.closest('li');
-            builder = li.data('builder');
-            _this.squad_list_modal.modal('hide');
-            if (builder.current_squad.dirty) {
-              return _this.warnUnsaved(builder, function() {
-                return builder.container.trigger('xwing-backend:squadLoadRequested', li.data('squad'));
-              });
-            } else {
-              return builder.container.trigger('xwing-backend:squadLoadRequested', li.data('squad'));
-            }
           });
           li.find('button.load-squad').click(function(e) {
             var button;
@@ -393,7 +371,7 @@ exportObj.SquadBuilderBackend = (function() {
           });
         }
         if (!hasNotArchivedSquads) {
-          list_ul.append($.trim("<li>Nothing to see here. Go save a squad!</li>"));
+          list_ul.append($.trim("<li class=\"translated\" defaultText=\"No saved squads\"></li>"));
         }
         _this.squad_list_tags.empty();
         for (_k = 0, _len2 = tag_list.length; _k < _len2; _k++) {
@@ -430,6 +408,7 @@ exportObj.SquadBuilderBackend = (function() {
             });
           });
         }
+        exportObj.translateUIElements(list_ul);
         loading_pane.fadeOut('fast');
         return list_ul.fadeIn('fast');
       };
@@ -441,7 +420,7 @@ exportObj.SquadBuilderBackend = (function() {
     if (cb == null) {
       cb = $.noop;
     }
-    $(this.auth_status.find('.payload')).text('Checking auth status...');
+    $(this.auth_status.find('.payload')).text(exportObj.translate('ui', 'Checking auth status...'));
     this.auth_status.show();
     old_auth_state = this.authenticated;
     return $.ajax({
@@ -485,7 +464,7 @@ exportObj.SquadBuilderBackend = (function() {
     if (cb == null) {
       cb = $.noop;
     }
-    $(this.auth_status.find('.payload')).text('Logging out...');
+    $(this.auth_status.find('.payload')).text(exportObj.translate('ui', 'Logging out...'));
     this.auth_status.show();
     return $.get("" + this.server + "/auth/logout", (function(_this) {
       return function(data, textStatus, jqXHR) {
@@ -517,7 +496,7 @@ exportObj.SquadBuilderBackend = (function() {
     name = $.trim(this.save_as_input.val());
     if (name.length === 0) {
       this.name_availability_container.text('');
-      return this.name_availability_container.append($.trim("<i class=\"fa fa-thumbs-down\"></i> A name is required"));
+      return this.name_availability_container.append($.trim("<i class=\"fa fa-thumbs-down\"></i> " + (exportObj.translate('ui', "name required"))));
     } else {
       return $.post("" + this.server + "/squads/namecheck", {
         name: name
@@ -525,10 +504,10 @@ exportObj.SquadBuilderBackend = (function() {
         return function(data) {
           _this.name_availability_container.text('');
           if (data.available) {
-            _this.name_availability_container.append($.trim("<i class=\"fa fa-thumbs-up\"></i> Name is available"));
+            _this.name_availability_container.append($.trim("<i class=\"fa fa-thumbs-up\"></i> " + (exportObj.translate('ui', "Name is available"))));
             return _this.save_as_save_button.removeClass('disabled');
           } else {
-            _this.name_availability_container.append($.trim("<i class=\"fa fa-thumbs-down\"></i> You already have a squad with that name"));
+            _this.name_availability_container.append($.trim("<i class=\"fa fa-thumbs-down\"></i> " + (exportObj.translate('ui', "Name in use"))));
             return _this.save_as_save_button.addClass('disabled');
           }
         };
@@ -555,7 +534,7 @@ exportObj.SquadBuilderBackend = (function() {
     this.login_modal.tabindex = "-1";
     this.login_modal.role = "dialog";
     $(document.body).append(this.login_modal);
-    this.login_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>Log in with OAuth</h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <p>\n                Select one of the OAuth providers below to log in and start saving squads.\n                <a class=\"login-help\" href=\"#\">What's this?</a>\n            </p>\n            <div class=\"well well-small oauth-explanation\">\n                <p>\n                    <a href=\"http://en.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> is an authorization system which lets you prove your identity at a web site without having to create a new account.  Instead, you tell some provider with whom you already have an account (e.g. Google or Facebook) to prove to this web site that you say who you are.  That way, the next time you visit, this site remembers that you're that user from Google.\n                </p>\n                <p>\n                    The best part about this is that you don't have to come up with a new username and password to remember.  And don't worry, I'm not collecting any data from the providers about you.  I've tried to set the scope of data to be as small as possible, but some places send a bunch of data at minimum.  I throw it away.  All I look at is a unique identifier (usually some giant number).\n                </p>\n                <p>\n                    For more information, check out this <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">introduction to OAuth</a>.\n                </p>\n                <button class=\"btn btn-modal\">Got it!</button>\n            </div>\n            <ul class=\"login-providers inline\"></ul>\n            <p>\n                This will open a new window to let you authenticate with the chosen provider.  You may have to allow pop ups for this site.  (Sorry.)\n            </p>\n            <p class=\"login-in-progress\">\n                <em>OAuth login is in progress.  Please finish authorization at the specified provider using the window that was just created.</em>\n            </p>\n        </div>\n    </div>\n</div>"));
+    this.login_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"Log in with OAuth\"></h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <p>\n                <span class=\"translated\" defaultText=\"select OAuth provider\"></span>\n                <a class=\"login-help translated\" href=\"#\" defaultText=\"What's this?\"></a>\n            </p>\n            <div class=\"well well-small oauth-explanation\">\n                <span class=\"translated\" defaultText=\"OAuth explanation\"></span>\n                <button class=\"btn btn-modal translated\" defaultText=\"Got it!\"></button>\n            </div>\n            <ul class=\"login-providers inline\"></ul>\n            <p class=\"translated\" defaultText=\"Continue to OAuth provider\"></p>\n            <p class=\"translated\" defaultText=\"iOS requires cross-site control\"></p>\n            <p class=\"login-in-progress\">\n                <em class=\"translated\" defaultText=\"login in progress\"></em>\n            </p>\n        </div>\n    </div>\n</div>"));
     oauth_explanation = $(this.login_modal.find('.oauth-explanation'));
     oauth_explanation.hide();
     this.login_modal.find('.login-in-progress').hide();
@@ -597,21 +576,24 @@ exportObj.SquadBuilderBackend = (function() {
         return _this.ui_ready = true;
       };
     })(this));
+    exportObj.translateUIElements(this.login_modal);
     this.reload_done_modal = $(document.createElement('DIV'));
     this.reload_done_modal.addClass('modal fade d-print-none');
     this.reload_done_modal.tabindex = "-1";
     this.reload_done_modal.role = "dialog";
     $(document.body).append(this.reload_done_modal);
-    this.reload_done_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>Reload Done</h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <p>All squads of that faction have been reloaded.</p>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-modal btn-primary\" aria-hidden=\"true\" data-dismiss=\"modal\">Well done!</button>\n        </div>\n    </div>\n</div>"));
+    this.reload_done_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>Reload Done</h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <p class=\"translated\" defaultText=\"Squads reloaded\"></p>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-modal btn-primary translated\" aria-hidden=\"true\" data-dismiss=\"modal\" defaultText=\"Well done!\"></button>\n        </div>\n    </div>\n</div>"));
+    exportObj.translateUIElements(this.reload_done_modal);
     this.squad_list_modal = $(document.createElement('DIV'));
     this.squad_list_modal.addClass('modal fade d-print-none squad-list');
     this.squad_list_modal.tabindex = "-1";
     this.squad_list_modal.role = "dialog";
     $(document.body).append(this.squad_list_modal);
-    this.squad_list_modal.append($.trim("<div class=\"modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"squad-list-header-placeholder d-none d-lg-block\"></h3>\n            <h4 class=\"squad-list-header-placeholder d-lg-none\"></h4>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <ul class=\"squad-list\"></ul>\n            <p class=\"pagination-centered squad-list-loading\">\n                <i class=\"fa fa-spinner fa-spin fa-3x\"></i>\n                <br />\n                Fetching squads...\n            </p>\n        </div>\n        <div class=\"modal-footer\">\n            <div class=\"btn-group delete-multiple-squads full-row\">\n                <button class=\"btn btn-modal select-all\">Select All</button>\n                <button class=\"btn btn-modal archive-selected\">Archive Selected</button>\n                <button class=\"btn btn-modal btn-danger delete-selected\">Delete Selected</button>\n            </div>\n            <div class=\"btn-group squad-display-mode full-row\">\n                <button class=\"btn btn-modal btn-inverse show-all-squads\">All</button>\n                <button class=\"btn btn-modal show-extended-squads\"><span class=\"d-none d-lg-block\">Extended</span><span class=\"d-lg-none\">Ext</span></button>\n                <button class=\"btn btn-modal show-hyperspace-squads\"><span class=\"d-none d-lg-block\">Hyperspace</span><span class=\"d-lg-none\">Hyper</span></button>\n                <button class=\"btn btn-modal show-quickbuild-squads\"><span class=\"d-none d-lg-block\">Quickbuild</span><span class=\"d-lg-none\">QB</span></button>\n                <button class=\"btn btn-modal show-epic-squads\">Epic</button>\n                <button class=\"btn btn-modal show-archived-squads\">Archived</button>\n                <button class=\"btn btn-modal reload-all\">Reload Squads (Long!)</button>\n            </div>\n            <div class=\"btn-group tags-display full-row\">\n            </div>\n        </div>\n    </div>\n</div>"));
+    this.squad_list_modal.append($.trim("<div class=\"modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"squad-list-header-placeholder d-none d-lg-block\"></h3>\n            <h4 class=\"squad-list-header-placeholder d-lg-none\"></h4>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <ul class=\"squad-list\"></ul>\n            <p class=\"pagination-centered squad-list-loading\">\n                <i class=\"fa fa-spinner fa-spin fa-3x\"></i>\n                <br />\n                <span class=\"translated\" defaultText=\"Fetching squads...\"></span>\n            </p>\n        </div>\n        <div class=\"modal-footer\">\n            <div class=\"btn-group delete-multiple-squads full-row\">\n                <button class=\"btn btn-modal select-all translated\" defaultText=\"Select All\"></button>\n                <button class=\"btn btn-modal archive-selected translated\" defaultText=\"Archive Selected\"></button>\n                <button class=\"btn btn-modal btn-danger delete-selected translated\" defaultText=\"Delete Selected\"></button>\n            </div>\n            <div class=\"btn-group squad-display-mode full-row\">\n                <button class=\"btn btn-modal btn-inverse show-all-squads translated\" defaultText=\"All\"></button>\n                <button class=\"btn btn-modal show-extended-squads\"><span class=\"d-none d-lg-block translated\" defaultText=\"Extended\"></span><span class=\"d-lg-none translated\" defaultText=\"Ext\"></span></button>\n                <button class=\"btn btn-modal show-hyperspace-squads\"><span class=\"d-none d-lg-block translated\" defaultText=\"Hyperspace\"></span><span class=\"d-lg-none translated\" defaultText=\"Hyper\"></span></button>\n                <button class=\"btn btn-modal show-quickbuild-squads\"><span class=\"d-none d-lg-block translated\" defaultText=\"Quickbuild\"></span><span class=\"d-lg-none translated\" defaultText=\"QB\"></span></button>\n                <button class=\"btn btn-modal show-epic-squads translated\" defaultText=\"Epic\"></button>\n                <button class=\"btn btn-modal show-archived-squads translated\" defaultText=\"Archived\"></button>\n                <button class=\"btn btn-modal reload-all translated\" defaultText=\"Recalculate Points\"></button>\n            </div>\n            <div class=\"btn-group tags-display full-row\">\n            </div>\n        </div>\n    </div>\n</div>"));
     this.squad_list_modal.find('ul.squad-list').hide();
     this.squad_list_tags = $(this.squad_list_modal.find('div.tags-display'));
     this.squad_list_modal.find('div.delete-multiple-squads').hide();
+    exportObj.translateUIElements(this.squad_list_modal);
     this.delete_selected_button = $(this.squad_list_modal.find('button.delete-selected'));
     this.delete_selected_button.click((function(_this) {
       return function(e) {
@@ -626,7 +608,7 @@ exportObj.SquadBuilderBackend = (function() {
             _results.push((function(li) {
               li.find('.cancel-delete-squad').fadeOut('fast');
               li.find('.confirm-delete-squad').addClass('disabled');
-              li.find('.confirm-delete-squad').text('Deleting...');
+              li.find('.confirm-delete-squad').text(exportObj.translate('ui', 'Deleting...'));
               return _this["delete"](li.data('squad').id, function(results) {
                 if (results.success) {
                   li.slideUp('fast', function() {
@@ -661,13 +643,13 @@ exportObj.SquadBuilderBackend = (function() {
           if (li.data('selectedForDeletion')) {
             _results.push((function(li) {
               li.find('.confirm-delete-squad').addClass('disabled');
-              li.find('.confirm-delete-squad').text('Archiving...');
+              li.find('.confirm-delete-squad').text(exportObj.translate('ui', 'Archiving...'));
               return _this.archive(li.data('squad'), li.data('builder').faction, function(results) {
                 if (results.success) {
                   li.slideUp('fast', function() {
                     $(li).hide();
                     $(li).find('.confirm-delete-squad').removeClass('disabled');
-                    $(li).find('.confirm-delete-squad').text('Delete');
+                    $(li).find('.confirm-delete-squad').text(exportObj.translate('ui', 'Delete'));
                     $(li).data('selectedForDeletion', false);
                     return $(li).find('.squad-delete-confirm').fadeOut('fast', function() {
                       return $(li).find('.squad-description').fadeIn('fast');
@@ -845,7 +827,7 @@ exportObj.SquadBuilderBackend = (function() {
     this.save_as_modal.tabindex = "-1";
     this.save_as_modal.role = "dialog";
     $(document.body).append(this.save_as_modal);
-    this.save_as_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>Save Squad As...</h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <label for=\"xw-be-squad-save-as\">\n                New Squad Name\n                <input id=\"xw-be-squad-save-as\"></input>\n            </label>\n            <span class=\"name-availability\"></span>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-primary save\" aria-hidden=\"true\">Save</button>\n        </div>\n    </div>\n</div>"));
+    this.save_as_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"Save Squad As...\"></h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <label for=\"xw-be-squad-save-as\">\n                <span class=\"translated\" defaultText=\"New Squad Name\"></span>\n                <input id=\"xw-be-squad-save-as\"></input>\n            </label>\n            <span class=\"name-availability\"></span>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-primary save translated\" aria-hidden=\"true\" defaultText=\"Save\"></button>\n        </div>\n    </div>\n</div>"));
     this.save_as_modal.on('shown', (function(_this) {
       return function() {
         return window.setTimeout(function() {
@@ -875,7 +857,7 @@ exportObj.SquadBuilderBackend = (function() {
             tag: builder.getTag()
           };
           builder.backend_save_list_as_button.addClass('disabled');
-          builder.backend_status.html($.trim("<i class=\"fa fa-sync fa-spin\"></i>&nbsp;Saving squad..."));
+          builder.backend_status.html($.trim("<i class=\"fa fa-sync fa-spin\"></i>&nbsp;" + (exportObj.translate('ui', 'Saving squad...'))));
           builder.backend_status.show();
           new_name = $.trim(_this.save_as_input.val());
           return _this.save(builder.serialize(), null, new_name, builder.faction, additional_data, function(results) {
@@ -883,9 +865,9 @@ exportObj.SquadBuilderBackend = (function() {
               builder.current_squad.id = results.id;
               builder.current_squad.name = new_name;
               builder.current_squad.dirty = false;
-              builder.container.trigger('xwing-backend:squadDirtinessChanged');
               builder.container.trigger('xwing-backend:squadNameChanged');
-              builder.backend_status.html($.trim("<i class=\"fa fa-check\"></i>&nbsp;New squad saved successfully."));
+              builder.container.trigger('xwing-backend:squadDirtinessChanged');
+              builder.backend_status.html($.trim("<i class=\"fa fa-check\"></i>&nbsp;" + (exportObj.translate('ui', 'New squad saved successfully.'))));
             } else {
               builder.backend_status.html($.trim("<i class=\"fa fa-exclamation-circle\"></i>&nbsp;" + results.error));
             }
@@ -903,7 +885,7 @@ exportObj.SquadBuilderBackend = (function() {
           return false;
         } else {
           _this.name_availability_container.text('');
-          _this.name_availability_container.append($.trim("<i class=\"fa fa-spin fa-spinner\"></i> Checking name availability..."));
+          _this.name_availability_container.append($.trim("<i class=\"fa fa-spin fa-spinner\"></i> " + (exportObj.translate('ui', 'Checking name availability...'))));
           timer = _this.save_as_modal.data('timer');
           if (timer != null) {
             window.clearInterval(timer);
@@ -913,12 +895,13 @@ exportObj.SquadBuilderBackend = (function() {
       };
     })(this));
     this.name_availability_container = $(this.save_as_modal.find('.name-availability'));
+    exportObj.translateUIElements(this.squad_list_modal);
     this.delete_modal = $(document.createElement('DIV'));
     this.delete_modal.addClass('modal fade d-print-none');
     this.delete_modal.tabindex = "-1";
     this.delete_modal.role = "dialog";
     $(document.body).append(this.delete_modal);
-    this.delete_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>Really Delete <span class=\"squad-name-placeholder\"></span>?</h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <p>Are you sure you want to delete this squad?</p>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-danger delete\" aria-hidden=\"true\">Yes, Delete <i class=\"squad-name-placeholder\"></i></button>\n            <button class=\"btn btn-modal\" data-dismiss=\"modal\" aria-hidden=\"true\">Never Mind</button>\n        </div>\n    </div>\n</div>"));
+    this.delete_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3><span class=\"translated\" defaultText=\"Really Delete\"></span> <span class=\"squad-name-placeholder\"></span>?</h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <p class=\"translated\" defaultText=\"Sure to delete?\"></p>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-danger delete\" aria-hidden=\"true\"><span class=\"translated\" defaultText=\"Yes, Delete\"></span> <i class=\"squad-name-placeholder\"></i></button>\n            <button class=\"btn btn-modal translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Never Mind\"></button>\n        </div>\n    </div>\n</div>"));
     this.delete_name_container = $(this.delete_modal.find('.squad-name-placeholder'));
     this.delete_button = $(this.delete_modal.find('button.delete'));
     this.delete_button.click((function(_this) {
@@ -926,7 +909,7 @@ exportObj.SquadBuilderBackend = (function() {
         var builder;
         e.preventDefault();
         builder = _this.delete_modal.data('builder');
-        builder.backend_status.html($.trim("<i class=\"fa fa-sync fa-spin\"></i>&nbsp;Deleting squad..."));
+        builder.backend_status.html($.trim("<i class=\"fa fa-sync fa-spin\"></i>&nbsp;" + (exportObj.translate('ui', "Deleting squad..."))));
         builder.backend_status.show();
         builder.backend_delete_list_button.addClass('disabled');
         _this.delete_modal.modal('hide');
@@ -935,7 +918,7 @@ exportObj.SquadBuilderBackend = (function() {
             builder.resetCurrentSquad();
             builder.current_squad.dirty = true;
             builder.container.trigger('xwing-backend:squadDirtinessChanged');
-            return builder.backend_status.html($.trim("<i class=\"fa fa-check\"></i>&nbsp;Squad deleted."));
+            return builder.backend_status.html($.trim("<i class=\"fa fa-check\"></i>&nbsp;" + (exportObj.translate('ui', "Squad deleted."))));
           } else {
             builder.backend_status.html($.trim("<i class=\"fa fa-exclamation-circle\"></i>&nbsp;" + results.error));
             return builder.backend_delete_list_button.removeClass('disabled');
@@ -943,14 +926,15 @@ exportObj.SquadBuilderBackend = (function() {
         });
       };
     })(this));
+    exportObj.translateUIElements(this.delete_modal);
     this.unsaved_modal = $(document.createElement('DIV'));
     this.unsaved_modal.addClass('modal fade d-print-none');
     this.unsaved_modal.tabindex = "-1";
     this.unsaved_modal.role = "dialog";
     $(document.body).append(this.unsaved_modal);
-    this.unsaved_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>Unsaved Changes</h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <p>You have not saved changes to this squad.  Do you want to go back and save?</p>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-modal btn-primary\" aria-hidden=\"true\" data-dismiss=\"modal\">Go Back</button>\n            <button class=\"btn btn-danger discard\" aria-hidden=\"true\">Discard Changes</button>\n        </div>\n    </div>\n</div>"));
+    this.unsaved_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"Unsaved Changes\"></h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <p class=\"translated\" defaultText=\"Unsaved Changes Warning\"></p>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-modal btn-primary translated\" aria-hidden=\"true\" data-dismiss=\"modal\" defaultText=\"Go Back\"></button>\n            <button class=\"btn btn-danger discard translated\" aria-hidden=\"true\" defaultText=\"Discard Changes\"></button>\n        </div>\n    </div>\n</div>"));
     this.unsaved_discard_button = $(this.unsaved_modal.find('button.discard'));
-    return this.unsaved_discard_button.click((function(_this) {
+    this.unsaved_discard_button.click((function(_this) {
       return function(e) {
         e.preventDefault();
         _this.unsaved_modal.data('builder').current_squad.dirty = false;
@@ -958,6 +942,7 @@ exportObj.SquadBuilderBackend = (function() {
         return _this.unsaved_modal.modal('hide');
       };
     })(this));
+    return exportObj.translateUIElements(this.unsaved_modal);
   };
 
   SquadBuilderBackend.prototype.setupHandlers = function() {
@@ -1074,7 +1059,7 @@ exportObj.SquadBuilderBackend = (function() {
       cb = $.noop;
     }
     if ((settings != null ? settings.language : void 0) != null) {
-      return __iced_k(cb(settings.language));
+      return __iced_k(cb(settings.language, 10));
     } else {
       (function(_this) {
         return (function(__iced_k) {
@@ -1088,28 +1073,32 @@ exportObj.SquadBuilderBackend = (function() {
                 return headers = arguments[0];
               };
             })(),
-            lineno: 962
+            lineno: 959
           }));
           __iced_deferrals._fulfill();
         });
       })(this)((function(_this) {
         return function() {
-          var _i, _len, _ref, _ref1, _ref2;
+          var _i, _len, _ref, _ref1;
           if ((typeof headers !== "undefined" && headers !== null ? headers.HTTP_ACCEPT_LANGUAGE : void 0) != null) {
             _ref = headers.HTTP_ACCEPT_LANGUAGE.split(',');
             for (_i = 0, _len = _ref.length; _i < _len; _i++) {
               language_range = _ref[_i];
               _ref1 = language_range.split(';'), language_tag = _ref1[0], quality = _ref1[1];
               if (language_tag === '*') {
-                cb('English');
+                cb('English', -0.5);
               } else {
                 language_code = language_tag.split('-')[0];
-                cb((_ref2 = exportObj.codeToLanguage[language_code]) != null ? _ref2 : 'English');
+                if (langc in exportObj.codeToLanguage) {
+                  cb(exportObj.codeToLanguage[language_code], 8);
+                } else {
+                  cb('English', -1);
+                }
               }
               break;
             }
           } else {
-            cb('English');
+            cb('English', -1);
           }
           return __iced_k();
         };
@@ -1210,9 +1199,10 @@ String.prototype.capitalize = function() {
 
 exportObj.CardBrowser = (function() {
   function CardBrowser(args) {
+    var _ref;
     this.container = $(args.container);
     this.currently_selected = null;
-    this.language = 'English';
+    this.language = (_ref = exportObj.currentLanguage) != null ? _ref : 'English';
     this.prepareData();
     this.setupUI();
     this.setupHandlers();
@@ -1220,13 +1210,13 @@ exportObj.CardBrowser = (function() {
 
   CardBrowser.prototype.setupUI = function() {
     var action, faction, factionless_option, linkedaction, opt, pilot, slot, _i, _j, _len, _len1, _ref, _ref1, _ref2;
-    this.container.append($.trim("<div class=\"container-fluid xwing-card-browser\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"card card-search-container\">\n            <h5 class=\"card-title\">Card Search</h5>\n                <div class=\"advanced-search-container\">\n                    <div class = \"card search-container general-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version\">General</h6>\n                        <label class = \"text-search advanced-search-label\">\n                        <strong>Textsearch: </strong>\n                            <input type=\"search\" placeholder=\"Search for name, text or ship\" class = \"card-search-text\">\n                        </label>\n                        <div class= \"advanced-search-faction-selection-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong>Factions: </strong>\n                                <select class=\"advanced-search-selection faction-selection\" multiple=\"1\" data-placeholder=\"All factions\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-point-selection-container\">\n                            <strong>Point costs:</strong>\n                            <label class = \"advanced-search-label set-minimum-points\">\n                                from <input type=\"number\" class=\"minimum-point-cost advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-points\">\n                                to <input type=\"number\" class=\"maximum-point-cost advanced-search-number-input\" value=\"200\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-collection-container\">\n                            <strong>Owned copies:</strong>\n                            <label class = \"advanced-search-label set-minimum-owned-copies\">\n                                from <input type=\"number\" class=\"minimum-owned-copies advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-owened-copies\">\n                                to <input type=\"number\" class=\"maximum-owned-copies advanced-search-number-input\" value=\"100\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-misc-container\">\n                            <strong>Misc:</strong>\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"unique-checkbox advanced-search-checkbox\" /> Is unique\n                            </label>\n                            <label class = \"advanced-search-label toggle-non-unique\">\n                                <input type=\"checkbox\" class=\"non-unique-checkbox advanced-search-checkbox\" /> Is not unique\n                            </label>\n                            <label class = \"advanced-search-label toggle-hyperspace\">\n                                <input type=\"checkbox\" class=\"hyperspace-checkbox advanced-search-checkbox\" /> Hyperspace legal\n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container ship-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version\">Ships and Pilots</h6>\n                        <div class = \"advanced-search-slot-available-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong>Slots: </strong>\n                                <select class=\"advanced-search-selection slot-available-selection\" multiple=\"1\" data-placeholder=\"No slots selected\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"duplicate-slots-checkbox advanced-search-checkbox\" /> Has multiple of the chosen slots\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-actions-available-container\">\n                            <label class = \"advanced-search-label select-available-actions\">\n                                <strong>Actions: </strong>\n                                <select class=\"advanced-search-selection action-available-selection\" multiple=\"1\" data-placeholder=\"No actions selected\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-linkedactions-available-container\">\n                            <label class = \"advanced-search-label select-available-linkedactions\">\n                                <strong>Linked actions: </strong>\n                                <select class=\"advanced-search-selection linkedaction-available-selection\" multiple=\"1\" data-placeholder=\"No actions selected\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-ini-container\">\n                            <strong>Initiative:</strong>\n                            <label class = \"advanced-search-label set-minimum-ini\">\n                                from <input type=\"number\" class=\"minimum-ini advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-ini\">\n                                to <input type=\"number\" class=\"maximum-ini advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-hull-container\">\n                            <strong>Hull:</strong>\n                            <label class = \"advanced-search-label set-minimum-hull\">\n                                from <input type=\"number\" class=\"minimum-hull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-hull\">\n                                to <input type=\"number\" class=\"maximum-hull advanced-search-number-input\" value=\"12\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-shields-container\">\n                            <strong>Shields:</strong>\n                            <label class = \"advanced-search-label set-minimum-shields\">\n                                from <input type=\"number\" class=\"minimum-shields advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-shields\">\n                                to <input type=\"number\" class=\"maximum-shields advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-agility-container\">\n                            <strong>Agility:</strong>\n                            <label class = \"advanced-search-label set-minimum-agility\">\n                                from <input type=\"number\" class=\"minimum-agility advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-agility\">\n                                to <input type=\"number\" class=\"maximum-agility advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-base-size-container\">\n                            <strong>Base size:</strong>\n                            <label class = \"advanced-search-label toggle-small-base\">\n                                <input type=\"checkbox\" class=\"small-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> Small\n                            </label>\n                            <label class = \"advanced-search-label toggle-medium-base\">\n                                <input type=\"checkbox\" class=\"medium-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> Medium\n                            </label>\n                            <label class = \"advanced-search-label toggle-large-base\">\n                                <input type=\"checkbox\" class=\"large-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> Large\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attack-container\">\n                            <strong>Attack  <i class=\"xwing-miniatures-font xwing-miniatures-font-frontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attack\">\n                                from <input type=\"number\" class=\"minimum-attack advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attack\">\n                                to <input type=\"number\" class=\"maximum-attack advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackt-container\">\n                            <strong>Attack  <i class=\"xwing-miniatures-font xwing-miniatures-font-singleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackt\">\n                                from <input type=\"number\" class=\"minimum-attackt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackt\">\n                                to <input type=\"number\" class=\"maximum-attackt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackdt-container\">\n                            <strong>Attack <i class=\"xwing-miniatures-font xwing-miniatures-font-doubleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackdt\">\n                                from <input type=\"number\" class=\"minimum-attackdt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackdt\">\n                                to <input type=\"number\" class=\"maximum-attackdt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackf-container\">\n                            <strong>Attack <i class=\"xwing-miniatures-font xwing-miniatures-font-fullfrontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackf\">\n                                from <input type=\"number\" class=\"minimum-attackf advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackf\">\n                                to <input type=\"number\" class=\"maximum-attackf advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackb-container\">\n                            <strong>Attack <i class=\"xwing-miniatures-font xwing-miniatures-font-reararc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackb\">\n                                from <input type=\"number\" class=\"minimum-attackb advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackb\">\n                                to <input type=\"number\" class=\"maximum-attackb advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackbull-container\">\n                            <strong>Attack <i class=\"xwing-miniatures-font xwing-miniatures-font-bullseyearc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackbull\">\n                                from <input type=\"number\" class=\"minimum-attackbull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackbull\">\n                                to <input type=\"number\" class=\"maximum-attackbull advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container other-stuff-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version\">Other Stuff</h6>\n                        <div class = \"advanced-search-slot-used-container\">\n                            <label class = \"advanced-search-label select-used-slots\">\n                                <strong>Used slot: </strong>\n                                <select class=\"advanced-search-selection slot-used-selection\" multiple=\"1\" data-placeholder=\"No slots selected\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-slot-used-second-slot-container\">\n                            <label class = \"advanced-search-label select-used-second-slots\">\n                                <strong>Used second slot: </strong>\n                                <select class=\"advanced-search-selection slot-used-second-selection\" multiple=\"1\" data-placeholder=\"No slots selected\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-a-second-slot\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-a-second-slot-checkbox\" /> Show only upgrades with a second slot\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-charge-container\">\n                            <strong>Charges:</strong>\n                            <label class = \"advanced-search-label set-minimum-charge\">\n                                from <input type=\"number\" class=\"minimum-charge advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-charge\">\n                                to <input type=\"number\" class=\"maximum-charge advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-recurring-charge-checkbox\" checked=\"checked\"/> Recurring\n                            </label>\n                            <label class = \"advanced-search-label has-not-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-not-recurring-charge-checkbox\" checked=\"checked\"/> Not recurring\n                            </label>\n                        <div class = \"advanced-search-force-container\">\n                            <strong>Force:</strong>\n                            <label class = \"advanced-search-label set-minimum-force\">\n                                from <input type=\"number\" class=\"minimum-force advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-force\">\n                                to <input type=\"number\" class=\"maximum-force advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-4 card-selecting-area\">\n            <span class=\"translate sort-cards-by\">Sort cards by</span>: <select class=\"sort-by\">\n                <option value=\"name\">Name</option>\n                <option value=\"source\">Source</option>\n                <option value=\"type-by-points\">Type (by Points)</option>\n                <option value=\"type-by-name\" selected=\"1\">Type (by Name)</option>\n            </select>\n            <div class=\"card-selector-container\">\n\n            </div>\n            <br>\n            <div class=\"card-viewer-conditions-container\">\n            </div>\n        </div>\n        <div class=\"col-md-4\">\n            <div class=\"card card-viewer-placeholder info-well\">\n                <p class=\"translate select-a-card\">Select a card from the list at the left.</p>\n            </div>\n            <div class=\"card card-viewer-container\">\n            </div>\n        </div>\n    </div>\n</div>"));
+    this.container.append($.trim("<div class=\"container-fluid xwing-card-browser\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"card card-search-container\">\n            <h5 class=\"card-title translated\" defaultText=\"Card Search\"></h5>\n                <div class=\"advanced-search-container\">\n                    <div class = \"card search-container general-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"General\"></h6>\n                        <label class = \"text-search advanced-search-label\">\n                        <strong class=\"translated\" defaultText=\"Textsearch:\"></strong>\n                            <input type=\"search\" placeholder=\"" + (exportObj.translate('ui', "Placeholder Textsearch Browser")) + "\" class = \"card-search-text\">\n                        </label>\n                        <div class= \"advanced-search-faction-selection-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Factions:\"></strong>\n                                <select class=\"advanced-search-selection faction-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "All factions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-point-selection-container\">\n                            <strong class=\"translated\" defaultText=\"Point costs:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-points\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-point-cost advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-points\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-point-cost advanced-search-number-input\" value=\"200\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-collection-container\">\n                            <strong class=\"translated\" defaultText=\"Owned copies:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-owned-copies\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-owned-copies advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-owened-copies\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-owned-copies advanced-search-number-input\" value=\"100\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-misc-container\">\n                            <strong class=\"translated\" defaultText=\"Misc:\"></strong>\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-non-unique\">\n                                <input type=\"checkbox\" class=\"non-unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is not unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-hyperspace\">\n                                <input type=\"checkbox\" class=\"hyperspace-checkbox advanced-search-checkbox\" />  <span class=\"translated\" defaultText=\"Hyperspace legal\"></span>\n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container ship-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Ships and Pilots\"></h6>\n                        <div class = \"advanced-search-slot-available-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Slots:\"></strong>\n                                <select class=\"advanced-search-selection slot-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"duplicate-slots-checkbox advanced-search-checkbox\" /> " + (exportObj.translate('ui', "Has multiple of the chosen slots")) + "\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-actions-available-container\">\n                            <label class = \"advanced-search-label select-available-actions\">\n                                <strong class=\"translated\" defaultText=\"Actions:\"></strong>\n                                <select class=\"advanced-search-selection action-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-linkedactions-available-container\">\n                            <label class = \"advanced-search-label select-available-linkedactions\">\n                                <strong class=\"translated\" defaultText=\"Linked actions:\"></strong>\n                                <select class=\"advanced-search-selection linkedaction-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-ini-container\">\n                            <strong class=\"translated\" defaultText=\"Initiative:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-ini\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-ini advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-ini\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-ini advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-hull-container\">\n                            <strong class=\"translated\" defaultText=\"Hull:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-hull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-hull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-hull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-hull advanced-search-number-input\" value=\"12\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-shields-container\">\n                            <strong class=\"translated\" defaultText=\"Shields:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-shields\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-shields advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-shields\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-shields advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-agility-container\">\n                            <strong class=\"translated\" defaultText=\"Agility:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-agility\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-agility advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-agility\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-agility advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-base-size-container\">\n                            <strong class=\"translated\" defaultText=\"Base size:\"></strong>\n                            <label class = \"advanced-search-label toggle-small-base\">\n                                <input type=\"checkbox\" class=\"small-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Small\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-medium-base\">\n                                <input type=\"checkbox\" class=\"medium-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Medium\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-large-base\">\n                                <input type=\"checkbox\" class=\"large-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Large\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attack-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-frontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attack\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attack advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attack\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attack advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-singleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackdt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-doubleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackdt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackdt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackdt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackdt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackf-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-fullfrontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackf\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackf advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackf\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackf advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackb-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-reararc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackb\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackb advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackb\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackb advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackbull-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-bullseyearc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackbull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackbull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackbull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackbull advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container other-stuff-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Other Stuff\"></h6>\n                        <div class = \"advanced-search-slot-used-container\">\n                            <label class = \"advanced-search-label select-used-slots\">\n                                <strong class=\"translated\" defaultText=\"Used slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-slot-used-second-slot-container\">\n                            <label class = \"advanced-search-label select-used-second-slots\">\n                                <strong class=\"translated\" defaultText=\"Used double-slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-second-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-a-second-slot\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-a-second-slot-checkbox\" /> <span class=\"translated\" defaultText=\"Only upgrades requiring multiple slots\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-charge-container\">\n                            <strong class=\"translated\" defaultText=\"Charges:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-charge\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-charge advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-charge\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-charge advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Recurring\"></span>\n                            </label>\n                            <label class = \"advanced-search-label has-not-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-not-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Not recurring\"></span>\n                            </label>\n                        <div class = \"advanced-search-force-container\">\n                            <strong class=\"translated\" defaultText=\"Force:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-force\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-force advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-force\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-force advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-4 card-selecting-area\">\n            <span class=\"translate sort-cards-by\" defaultText=\"Sort cards by\"></span><span class=\"translated\" defaultText=\"Sort by\">:</span> <select class=\"sort-by\">\n                <option value=\"name\" class=\"translated\" defaultText=\"Name\"></option>\n                <option value=\"source\" class=\"translated\" defaultText=\"Source\"></option>\n                <option value=\"type-by-points\" class=\"translated\" defaultText=\"Type (by Points)\"></option>\n                <option value=\"type-by-name\" selected=\"1\" class=\"translated\" defaultText=\"Type (by Name)\" selected=\"selected\">" + (exportObj.translate('ui', 'Type (by Name)')) + "</option>\n            </select>\n            <div class=\"card-selector-container\">\n\n            </div>\n            <br>\n            <div class=\"card-viewer-conditions-container\">\n            </div>\n        </div>\n        <div class=\"col-md-4\">\n            <div class=\"card card-viewer-placeholder info-well\">\n                <p class=\"translate select-a-card\" defaultText=\"Select a card\"></p>\n            </div>\n            <div class=\"card card-viewer-container\">\n            </div>\n        </div>\n    </div>\n</div>"));
     this.card_selector_container = $(this.container.find('.xwing-card-browser .card-selector-container'));
     this.card_viewer_container = $(this.container.find('.xwing-card-browser .card-viewer-container'));
-    this.card_viewer_container.append($.trim(exportObj.builders[0].createInfoContainerUI()));
+    this.card_viewer_container.append($.trim(exportObj.builders[7].createInfoContainerUI()));
     this.card_viewer_container.hide();
     this.card_viewer_conditions_container = $(this.container.find('.xwing-card-browser .card-viewer-conditions-container'));
-    this.card_viewer_container.hide();
+    this.card_viewer_conditions_container.hide();
     this.card_viewer_placeholder = $(this.container.find('.xwing-card-browser .card-viewer-placeholder'));
     this.advanced_search_container = $(this.container.find('.xwing-card-browser .advanced-search-container'));
     this.sort_selector = $(this.container.find('select.sort-by'));
@@ -1239,11 +1229,13 @@ exportObj.CardBrowser = (function() {
     for (faction in _ref) {
       pilot = _ref[faction];
       opt = $(document.createElement('OPTION'));
-      opt.text(faction);
+      opt.val(faction);
+      opt.text(exportObj.translate('faction', faction));
       this.faction_selection.append(opt);
     }
     factionless_option = $(document.createElement('OPTION'));
-    factionless_option.text("Factionless");
+    factionless_option.val("Factionless");
+    factionless_option.text(exportObj.translate('faction', "Factionless"));
     this.faction_selection.append(factionless_option);
     this.faction_selection.select2({
       minimumResultsForSearch: $.isMobile() ? -1 : 0
@@ -1261,7 +1253,8 @@ exportObj.CardBrowser = (function() {
     this.slot_available_selection = $(this.container.find('.xwing-card-browser select.slot-available-selection'));
     for (slot in exportObj.upgradesBySlotCanonicalName) {
       opt = $(document.createElement('OPTION'));
-      opt.text(slot);
+      opt.val(slot);
+      opt.text(exportObj.translate('slot', slot));
       this.slot_available_selection.append(opt);
     }
     this.slot_available_selection.select2({
@@ -1273,7 +1266,8 @@ exportObj.CardBrowser = (function() {
     for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
       action = _ref1[_i];
       opt = $(document.createElement('OPTION'));
-      opt.text(action);
+      opt.text(exportObj.translate('action', action));
+      opt.val(action);
       this.action_available_selection.append(opt);
     }
     this.action_available_selection.select2({
@@ -1284,7 +1278,8 @@ exportObj.CardBrowser = (function() {
     for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
       linkedaction = _ref2[_j];
       opt = $(document.createElement('OPTION'));
-      opt.text(linkedaction);
+      opt.text(exportObj.translate('action', linkedaction));
+      opt.val(linkedaction);
       this.linkedaction_available_selection.append(opt);
     }
     this.linkedaction_available_selection.select2({
@@ -1293,7 +1288,8 @@ exportObj.CardBrowser = (function() {
     this.slot_used_selection = $(this.container.find('.xwing-card-browser select.slot-used-selection'));
     for (slot in exportObj.upgradesBySlotCanonicalName) {
       opt = $(document.createElement('OPTION'));
-      opt.text(slot);
+      opt.text(exportObj.translate('slot', slot));
+      opt.val(slot);
       this.slot_used_selection.append(opt);
     }
     this.slot_used_selection.select2({
@@ -1302,7 +1298,8 @@ exportObj.CardBrowser = (function() {
     this.slot_used_second_selection = $(this.container.find('.xwing-card-browser select.slot-used-second-selection'));
     for (slot in exportObj.upgradesBySlotCanonicalName) {
       opt = $(document.createElement('OPTION'));
-      opt.text(slot);
+      opt.text(exportObj.translate('slot', slot));
+      opt.val(slot);
       this.slot_used_second_selection.append(opt);
     }
     this.slot_used_second_selection.select2({
@@ -1336,7 +1333,8 @@ exportObj.CardBrowser = (function() {
     this.recurring_charge = ($(this.container.find('.xwing-card-browser .has-recurring-charge-checkbox')))[0];
     this.not_recurring_charge = ($(this.container.find('.xwing-card-browser .has-not-recurring-charge-checkbox')))[0];
     this.minimum_owned_copies = ($(this.container.find('.xwing-card-browser .minimum-owned-copies')))[0];
-    return this.maximum_owned_copies = ($(this.container.find('.xwing-card-browser .maximum-owned-copies')))[0];
+    this.maximum_owned_copies = ($(this.container.find('.xwing-card-browser .maximum-owned-copies')))[0];
+    return exportObj.translateUIElements(this.container);
   };
 
   CardBrowser.prototype.setupHandlers = function() {
@@ -1604,13 +1602,13 @@ exportObj.CardBrowser = (function() {
             _results.push({
               name: card_data.name,
               display_name: card_data.display_name,
-              type: exportObj.translate(this.language, 'ui', 'upgradeHeader', card_data.slot),
+              type: exportObj.translate('ui', 'upgradeHeader', card_data.slot),
               data: card_data,
               orig_type: card_data.slot
             });
           }
           return _results;
-        }).call(this));
+        })());
       } else {
         this.all_cards = this.all_cards.concat((function() {
           var _ref, _results;
@@ -1621,13 +1619,13 @@ exportObj.CardBrowser = (function() {
             _results.push({
               name: card_data.name,
               display_name: card_data.display_name,
-              type: exportObj.translate(this.language, 'singular', type),
+              type: exportObj.translate('singular', type),
               data: card_data,
-              orig_type: exportObj.translate('English', 'singular', type)
+              orig_type: exportObj.translate('singular', type)
             });
           }
           return _results;
-        }).call(this));
+        })());
       }
     }
     this.types = (function() {
@@ -1636,14 +1634,14 @@ exportObj.CardBrowser = (function() {
       _results = [];
       for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
         type = _ref[_j];
-        _results.push(exportObj.translate(this.language, 'types', type));
+        _results.push(exportObj.translate('types', type));
       }
       return _results;
-    }).call(this);
+    })();
     _ref = exportObj.upgrades;
     for (card_name in _ref) {
       card_data = _ref[card_name];
-      upgrade_text = exportObj.translate(this.language, 'ui', 'upgradeHeader', card_data.slot);
+      upgrade_text = exportObj.translate('ui', 'upgradeHeader', card_data.slot);
       if (__indexOf.call(this.types, upgrade_text) < 0) {
         this.types.push(upgrade_text);
       }
@@ -1774,7 +1772,7 @@ exportObj.CardBrowser = (function() {
         for (_m = 0, _len4 = _ref4.length; _m < _len4; _m++) {
           source = _ref4[_m];
           optgroup = $(document.createElement('OPTGROUP'));
-          optgroup.attr('label', source);
+          optgroup.attr('label', exportObj.translate('sources', source));
           card_added = false;
           _ref5 = this.cards_by_source[source];
           for (_n = 0, _len5 = _ref5.length; _n < _len5; _n++) {
@@ -1817,7 +1815,7 @@ exportObj.CardBrowser = (function() {
       };
       orig_type = 'Addon';
     }
-    exportObj.builders[0].showTooltip(orig_type, data, add_opts != null ? add_opts : {}, this.card_viewer_container);
+    exportObj.builders[7].showTooltip(orig_type, data, add_opts != null ? add_opts : {}, this.card_viewer_container);
     this.card_viewer_container.show();
     if ((data != null ? data.applies_condition : void 0) != null) {
       conditions = new Set();
@@ -1864,25 +1862,25 @@ exportObj.CardBrowser = (function() {
 
   CardBrowser.prototype.getCollectionNumber = function(card) {
     var owned_copies, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
-    if (!((exportObj.builders[0].collection != null) && (exportObj.builders[0].collection.counts != null))) {
+    if (!((exportObj.builders[7].collection != null) && (exportObj.builders[7].collection.counts != null))) {
       return -1;
     }
     owned_copies = 0;
     switch (card.orig_type) {
       case 'Pilot':
-        owned_copies = (_ref = (_ref1 = exportObj.builders[0].collection.counts.pilot) != null ? _ref1[card.name] : void 0) != null ? _ref : 0;
+        owned_copies = (_ref = (_ref1 = exportObj.builders[7].collection.counts.pilot) != null ? _ref1[card.name] : void 0) != null ? _ref : 0;
         break;
       case 'Ship':
-        owned_copies = (_ref2 = (_ref3 = exportObj.builders[0].collection.counts.ship) != null ? _ref3[card.name] : void 0) != null ? _ref2 : 0;
+        owned_copies = (_ref2 = (_ref3 = exportObj.builders[7].collection.counts.ship) != null ? _ref3[card.name] : void 0) != null ? _ref2 : 0;
         break;
       default:
-        owned_copies = (_ref4 = (_ref5 = exportObj.builders[0].collection.counts.upgrade) != null ? _ref5[card.name] : void 0) != null ? _ref4 : 0;
+        owned_copies = (_ref4 = (_ref5 = exportObj.builders[7].collection.counts.upgrade) != null ? _ref5[card.name] : void 0) != null ? _ref4 : 0;
     }
     return owned_copies;
   };
 
   CardBrowser.prototype.checkSearchCriteria = function(card) {
-    var action, actions, adds, all_factions, faction, faction_matches, hasDuplicates, hyperspace_legal, matches, matching_points, name, owned_copies, pilot, pilots, points, required_actions, required_linked_actions, required_slots, s, search_text, selected_factions, ship, size_matches, slot, slots, text_in_ship, text_search, used_second_slots, used_slots, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s, _t, _u, _v, _w;
+    var action, actions, adds, all_factions, faction, faction_matches, hasDuplicates, hyperspace_legal, matches, matching_points, name, new_actions, owned_copies, pilot, pilots, points, required_actions, required_linked_actions, required_slots, s, search_text, selected_factions, ship, size_matches, slot, slots, text_in_ship, text_search, used_second_slots, used_slots, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s, _t, _u, _v, _w, _x;
     search_text = this.card_search_text.value.toLowerCase();
     text_search = card.name.toLowerCase().indexOf(search_text) > -1 || (card.data.text && card.data.text.toLowerCase().indexOf(search_text)) > -1 || (card.display_name && card.display_name.toLowerCase().indexOf(search_text) > -1);
     if (!text_search) {
@@ -1936,6 +1934,9 @@ exportObj.CardBrowser = (function() {
             break;
           }
         }
+        if (!faction_matches) {
+          return false;
+        }
       }
       if (card.orig_type === 'Ship') {
         faction_matches = false;
@@ -1961,7 +1962,7 @@ exportObj.CardBrowser = (function() {
         if (__indexOf.call(selected_factions, faction) < 0) {
           continue;
         }
-        hyperspace_legal = hyperspace_legal || exportObj.hyperspaceCheck(card.data, faction, card.orig_type === 'Ship');
+        hyperspace_legal = hyperspace_legal || exportObj.hyperspaceCheckBrowser(card.data, faction, card.orig_type);
       }
       if (!hyperspace_legal) {
         return false;
@@ -1990,7 +1991,7 @@ exportObj.CardBrowser = (function() {
       }
       for (_o = 0, _len6 = required_slots.length; _o < _len6; _o++) {
         slot = required_slots[_o];
-        if (!(((slot === "Torpedo") || (slot === "Missile") || (slot === "Cannon")) && (__indexOf.call(slots, "HardpointShip") >= 0))) {
+        if (!(((slot === "Torpedo") || (slot === "Missile") || (slot === "Cannon")) && ((slots != null) && (__indexOf.call(slots, "HardpointShip") >= 0)))) {
           if (!((slots != null) && __indexOf.call(slots, slot) >= 0)) {
             return false;
           }
@@ -2009,22 +2010,31 @@ exportObj.CardBrowser = (function() {
     required_linked_actions = this.linkedaction_available_selection.val();
     if ((required_actions.length > 0) || (required_linked_actions.length > 0)) {
       actions = (_ref5 = card.data.actions) != null ? _ref5 : [];
-      actions = actions.concat((_ref6 = card.data.actionsred) != null ? _ref6 : []);
       if (card.orig_type === 'Pilot') {
-        actions = (_ref7 = (_ref8 = card.data.ship_override) != null ? _ref8.actions : void 0) != null ? _ref7 : exportObj.ships[card.data.ship].actions;
-        actions = actions.concat((_ref9 = (_ref10 = card.data.ship_override) != null ? _ref10.actionsred : void 0) != null ? _ref9 : exportObj.ships[card.data.ship].actionsred);
+        actions = (_ref6 = (_ref7 = card.data.ship_override) != null ? _ref7.actions : void 0) != null ? _ref6 : exportObj.ships[card.data.ship].actions;
+        actions = actions.concat((_ref8 = (_ref9 = card.data.ship_override) != null ? _ref9.actionsred : void 0) != null ? _ref8 : exportObj.ships[card.data.ship].actionsred);
+        if ((card.data.keyword != null) && (__indexOf.call(card.data.keyword, "Droid") >= 0)) {
+          new_actions = [];
+          for (_p = 0, _len7 = actions.length; _p < _len7; _p++) {
+            action = actions[_p];
+            if (action != null) {
+              new_actions.push(action.replace("Focus", "Calculate"));
+            }
+          }
+          actions = new_actions;
+        }
       }
     }
-    _ref11 = required_actions != null ? required_actions : [];
-    for (_p = 0, _len7 = _ref11.length; _p < _len7; _p++) {
-      action = _ref11[_p];
-      if (!((actions != null) && ((__indexOf.call(actions, action) >= 0) || (_ref12 = "F-" + action, __indexOf.call(actions, _ref12) >= 0)))) {
+    _ref10 = required_actions != null ? required_actions : [];
+    for (_q = 0, _len8 = _ref10.length; _q < _len8; _q++) {
+      action = _ref10[_q];
+      if (!((actions != null) && ((__indexOf.call(actions, action) >= 0) || (_ref11 = "F-" + action, __indexOf.call(actions, _ref11) >= 0) || (_ref12 = "R-" + action, __indexOf.call(actions, _ref12) >= 0)))) {
         return false;
       }
     }
     _ref13 = required_linked_actions != null ? required_linked_actions : [];
-    for (_q = 0, _len8 = _ref13.length; _q < _len8; _q++) {
-      action = _ref13[_q];
+    for (_r = 0, _len9 = _ref13.length; _r < _len9; _r++) {
+      action = _ref13[_r];
       if (!((actions != null) && ((_ref14 = "R> " + action, __indexOf.call(actions, _ref14) >= 0) || (_ref15 = "> " + action, __indexOf.call(actions, _ref15) >= 0)))) {
         return false;
       }
@@ -2036,8 +2046,8 @@ exportObj.CardBrowser = (function() {
       if (card.data.pointsarray != null) {
         matching_points = false;
         _ref16 = card.data.pointsarray;
-        for (_r = 0, _len9 = _ref16.length; _r < _len9; _r++) {
-          points = _ref16[_r];
+        for (_s = 0, _len10 = _ref16.length; _s < _len10; _s++) {
+          points = _ref16[_s];
           if (points >= this.minimum_point_costs.value && points <= this.maximum_point_costs.value) {
             matching_points = true;
             break;
@@ -2049,13 +2059,13 @@ exportObj.CardBrowser = (function() {
       }
       if (card.orig_type === 'Ship') {
         matching_points = false;
-        for (_s = 0, _len10 = selected_factions.length; _s < _len10; _s++) {
-          faction = selected_factions[_s];
+        for (_t = 0, _len11 = selected_factions.length; _t < _len11; _t++) {
+          faction = selected_factions[_t];
           _ref17 = exportObj.pilotsByFactionCanonicalName[faction];
           for (name in _ref17) {
             pilots = _ref17[name];
-            for (_t = 0, _len11 = pilots.length; _t < _len11; _t++) {
-              pilot = pilots[_t];
+            for (_u = 0, _len12 = pilots.length; _u < _len12; _u++) {
+              pilot = pilots[_u];
               if (pilot.ship === card.data.name) {
                 if (pilot.points >= this.minimum_point_costs.value && pilot.points <= this.maximum_point_costs.value) {
                   matching_points = true;
@@ -2082,8 +2092,8 @@ exportObj.CardBrowser = (function() {
         return false;
       }
       matches = false;
-      for (_u = 0, _len12 = used_slots.length; _u < _len12; _u++) {
-        slot = used_slots[_u];
+      for (_v = 0, _len13 = used_slots.length; _v < _len13; _v++) {
+        slot = used_slots[_v];
         if (card.data.slot === slot) {
           matches = true;
           break;
@@ -2099,11 +2109,11 @@ exportObj.CardBrowser = (function() {
         return false;
       }
       matches = false;
-      for (_v = 0, _len13 = used_second_slots.length; _v < _len13; _v++) {
-        slot = used_second_slots[_v];
+      for (_w = 0, _len14 = used_second_slots.length; _w < _len14; _w++) {
+        slot = used_second_slots[_w];
         _ref18 = card.data.also_occupies_upgrades;
-        for (_w = 0, _len14 = _ref18.length; _w < _len14; _w++) {
-          adds = _ref18[_w];
+        for (_x = 0, _len15 = _ref18.length; _x < _len15; _x++) {
+          adds = _ref18[_x];
           if (adds === slot) {
             matches = true;
             break;
@@ -2132,7 +2142,7 @@ exportObj.CardBrowser = (function() {
     if (card.data.charge && !card.data.recurring && !this.not_recurring_charge.checked) {
       return false;
     }
-    if (((_ref19 = exportObj.builders[0].collection) != null ? _ref19.counts : void 0) != null) {
+    if (((_ref19 = exportObj.builders[7].collection) != null ? _ref19.counts : void 0) != null) {
       owned_copies = this.getCollectionNumber(card);
       if (!(owned_copies >= this.minimum_owned_copies.value && owned_copies <= this.maximum_owned_copies.value)) {
         return false;
@@ -2231,8 +2241,9 @@ exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
 
 exportObj.RulesBrowser = (function() {
   function RulesBrowser(args) {
+    var _ref;
     this.container = $(args.container);
-    this.language = 'English';
+    this.language = (_ref = exportObj.currentLanguage) != null ? _ref : 'English';
     this.prepareRulesData();
     this.setupRuleUI();
     this.setupRulesHandlers();
@@ -2240,12 +2251,13 @@ exportObj.RulesBrowser = (function() {
 
   RulesBrowser.prototype.setupRuleUI = function() {
     var date, version;
-    this.container.append($.trim("<div class=\"container-fluid xwing-rules-browser\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"card card-search-container\">\n                <h5 class=\"card-title\">Rules Search</h5>\n                <div class=\"advanced-search-container\">\n                    <h6 class=\"card-subtitle mb-2 text-muted version\">Version: </h6>\n                    <label class = \"text-search advanced-search-label\">\n                        <strong>Term: </strong>\n                        <input type=\"search\" placeholder=\"Search for game term or card\" class = \"rule-search-text\">\n                    </label>\n                </div>\n                <div class=\"rules-container card-selector-container\">\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-8\">\n            <div class=\"card card-viewer-container card-search-container\">\n                <h4 class=\"card-title info-name\"></h4>\n                <br />\n                <p class=\"info-text\" />\n            </div>\n        </div>\n    </div>\n</div>"));
+    this.container.append($.trim("<div class=\"container-fluid xwing-rules-browser\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"card card-search-container\">\n                <h5 class=\"card-title translated\" defaultText=\"Rules Search\"></h5>\n                <div class=\"advanced-search-container\">\n                    <h6 class=\"card-subtitle mb-2 text-muted version\"><span class=\"translated\" defaultText=\"Version\"></span>: </h6>\n                    <label class = \"text-search advanced-search-label\">\n                        <strong class=\"translated\" defaultText=\"Term:\"></strong>\n                        <input type=\"search\" placeholder=\"" + (exportObj.translate('ui', "Search for game term or card")) + "\" class = \"rule-search-text\">\n                    </label>\n                </div>\n                <div class=\"rules-container card-selector-container\">\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-8\">\n            <div class=\"card card-viewer-container card-search-container\">\n                <h4 class=\"card-title info-name\"></h4>\n                <br />\n                <p class=\"info-text\" />\n            </div>\n        </div>\n    </div>\n</div>"));
     this.versionlabel = $(this.container.find('.xwing-rules-browser .version'));
     this.rule_selector_container = $(this.container.find('.xwing-rules-browser .rules-container'));
     this.rule_viewer_container = $(this.container.find('.xwing-rules-browser .card-viewer-container'));
     this.rule_viewer_container.hide();
     this.advanced_search_container = $(this.container.find('.xwing-rules-browser .advanced-search-container'));
+    exportObj.translateUIElements(this.container);
     version = this.all_rules.version.number;
     date = this.all_rules.version.date;
     this.versionlabel.append("" + version + ", " + date);
@@ -2289,7 +2301,7 @@ exportObj.RulesBrowser = (function() {
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       type = _ref[_i];
       optgroup = $(document.createElement('OPTGROUP'));
-      optgroup.attr('label', exportObj.translate(this.language, 'rulestypes', type));
+      optgroup.attr('label', exportObj.translate('rulestypes', type));
       rule_added = false;
       _ref1 = this.all_rules[type];
       for (rule_name in _ref1) {
@@ -2353,41 +2365,72 @@ exportObj.RulesBrowser = (function() {
 
 DFL_LANGUAGE = 'English';
 
+SHOW_DEBUG_OUT_MISSING_TRANSLATIONS = false;
+
 builders = [];
 
 exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
 
+exportObj.languagePriority = -1;
+
+try {
+  (function() {
+    var langc, languageCodes, _i, _len, _results;
+    if (exportObj.languagePriority > 3) {
+      return;
+    }
+    exportObj.currentLanguage = DFL_LANGUAGE;
+    languageCodes = [navigator.language].concat(navigator.languages);
+    _results = [];
+    for (_i = 0, _len = languageCodes.length; _i < _len; _i++) {
+      langc = languageCodes[_i];
+      langc = langc.split('-')[0];
+      if (langc in exportObj.codeToLanguage) {
+        exportObj.currentLanguage = exportObj.codeToLanguage[langc];
+        exportObj.languagePriority = 3;
+        break;
+      } else {
+        _results.push(void 0);
+      }
+    }
+    return _results;
+  })();
+} catch (_error) {
+  all = _error;
+  exportObj.currentLanguage = DFL_LANGUAGE;
+}
+
 exportObj.loadCards = function(language) {
-  var basic_cards;
-  basic_cards = exportObj.basicCardData();
-  exportObj.canonicalizeShipNames(basic_cards);
-  exportObj.ships = basic_cards.ships;
-  exportObj.setupCommonCardData(basic_cards);
   return exportObj.cardLoaders[language]();
 };
 
 exportObj.translate = function() {
-  var all, args, category, language, translation, what;
+  var args, category, what;
+  category = arguments[0], what = arguments[1], args = 3 <= arguments.length ? __slice.call(arguments, 2) : [];
+  return exportObj.translateToLang.apply(exportObj, [exportObj.currentLanguage, category, what].concat(__slice.call(args)));
+};
+
+exportObj.translateToLang = function() {
+  var args, category, language, translation, what;
   language = arguments[0], category = arguments[1], what = arguments[2], args = 4 <= arguments.length ? __slice.call(arguments, 3) : [];
   try {
     translation = exportObj.translations[language][category][what];
   } catch (_error) {
     all = _error;
-    if (!all instanceof TypeError || language === DFL_LANGUAGE) {
-      console.log(category);
-      console.log(what);
-      throw all;
-    }
+    translation = void 0;
   }
   if (translation != null) {
     if (translation instanceof Function) {
-      return translation.apply(null, [exportObj.translate, language].concat(__slice.call(args)));
+      return translation.apply(null, [exportObj.translate].concat(__slice.call(args)));
     } else {
       return translation;
     }
   } else {
     if (language !== DFL_LANGUAGE) {
-      return exportObj.translate.apply(exportObj, [DFL_LANGUAGE, category, what].concat(__slice.call(args)));
+      if (SHOW_DEBUG_OUT_MISSING_TRANSLATIONS) {
+        console.log(language + ' translation for ' + String(what) + ' (category ' + String(category) + ') missing');
+      }
+      return exportObj.translateToLang.apply(exportObj, [DFL_LANGUAGE, category, what].concat(__slice.call(args)));
     } else {
       return what;
     }
@@ -2395,17 +2438,30 @@ exportObj.translate = function() {
 };
 
 exportObj.setupTranslationSupport = function() {
+  var basic_cards;
   (function(builders) {
     return $(exportObj).on('xwing:languageChanged', (function(_this) {
-      return function(e, language, cb) {
-        var builder, currentfaction, html, selector, ___iced_passed_deferral, __iced_deferrals, __iced_k;
+      return function(e, language, priority, cb) {
+        var builder, current_language, ___iced_passed_deferral, __iced_deferrals, __iced_k;
         __iced_k = __iced_k_noop;
         ___iced_passed_deferral = iced.findDeferral(arguments);
+        if (priority == null) {
+          priority = 5;
+        }
         if (cb == null) {
           cb = $.noop;
         }
+        if (priority === 'reload') {
+          null;
+        } else if (priority < exportObj.languagePriority) {
+          return;
+        } else {
+          exportObj.languagePriority = priority;
+          exportObj.currentLanguage = language;
+        }
         if (language in exportObj.translations) {
           $('.language-placeholder').text(language);
+          current_language = "";
           (function(__iced_k) {
             var _i, _len, _ref, _results, _while;
             _ref = builders;
@@ -2425,12 +2481,13 @@ exportObj.setupTranslationSupport = function() {
                 return _break();
               } else {
                 builder = _ref[_i];
+                current_language = builder.language;
                 (function(__iced_k) {
                   __iced_deferrals = new iced.Deferrals(__iced_k, {
                     parent: ___iced_passed_deferral
                   });
                   builder.container.trigger('xwing:beforeLanguageLoad', __iced_deferrals.defer({
-                    lineno: 2038
+                    lineno: 2113
                   }));
                   __iced_deferrals._fulfill();
                 })(_next);
@@ -2438,53 +2495,16 @@ exportObj.setupTranslationSupport = function() {
             };
             _while(__iced_k);
           })(function() {
-            var _ref;
-            exportObj.loadCards(language);
-            _ref = exportObj.translations[language].byCSSSelector;
-            for (selector in _ref) {
-              if (!__hasProp.call(_ref, selector)) continue;
-              html = _ref[selector];
-              $(selector).html(html);
+            var _i, _len;
+            if (language !== current_language) {
+              exportObj.loadCards(language);
             }
-            currentfaction = $.getParameterByName('f');
-            (function(__iced_k) {
-              var _i, _len, _ref1, _results, _while;
-              _ref1 = builders;
-              _len = _ref1.length;
-              _i = 0;
-              _while = function(__iced_k) {
-                var _break, _continue, _next;
-                _break = __iced_k;
-                _continue = function() {
-                  return iced.trampoline(function() {
-                    ++_i;
-                    return _while(__iced_k);
-                  });
-                };
-                _next = _continue;
-                if (!(_i < _len)) {
-                  return _break();
-                } else {
-                  builder = _ref1[_i];
-                  (function(__iced_k) {
-                    if (currentfaction === builder.faction) {
-                      return __iced_k(builder.container.trigger('xwing:afterLanguageLoad', language));
-                    } else {
-                      (function(__iced_k) {
-                        __iced_deferrals = new iced.Deferrals(__iced_k, {
-                          parent: ___iced_passed_deferral
-                        });
-                        builder.container.trigger('xwing:afterLanguageLoad', language, __iced_deferrals.defer({
-                          lineno: 2047
-                        }));
-                        __iced_deferrals._fulfill();
-                      })(__iced_k);
-                    }
-                  })(_next);
-                }
-              };
-              _while(__iced_k);
-            })(__iced_k);
+            exportObj.translateUIElements();
+            for (_i = 0, _len = builders.length; _i < _len; _i++) {
+              builder = builders[_i];
+              builder.container.trigger('xwing:afterLanguageLoad', language);
+            }
+            return __iced_k();
           });
         } else {
           return __iced_k();
@@ -2492,8 +2512,27 @@ exportObj.setupTranslationSupport = function() {
       };
     })(this));
   })(builders);
+  basic_cards = exportObj.basicCardData();
+  exportObj.canonicalizeShipNames(basic_cards);
+  exportObj.ships = basic_cards.ships;
+  exportObj.setupCommonCardData(basic_cards);
   exportObj.loadCards(DFL_LANGUAGE);
-  return $(exportObj).trigger('xwing:languageChanged', DFL_LANGUAGE);
+  exportObj.loadCards(exportObj.currentLanguage);
+  return $(exportObj).trigger('xwing:languageChanged', [exportObj.currentLanguage, 'reload']);
+};
+
+exportObj.translateUIElements = function(context) {
+  var translateableNode, _i, _len, _ref, _results;
+  if (context == null) {
+    context = void 0;
+  }
+  _ref = $('.translated', context);
+  _results = [];
+  for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+    translateableNode = _ref[_i];
+    _results.push(translateableNode.innerHTML = exportObj.translate('ui', translateableNode.getAttribute('defaultText')));
+  }
+  return _results;
 };
 
 exportObj.setupTranslationUI = function(backend) {
@@ -2504,7 +2543,7 @@ exportObj.setupTranslationUI = function(backend) {
       if (backend != null) {
         backend.set('language', language);
       }
-      return $(exportObj).trigger('xwing:languageChanged', language);
+      return $(exportObj).trigger('xwing:languageChanged', [language, 100]);
     });
   };
   _results = [];
@@ -2685,6 +2724,7 @@ exportObj.SquadBuilder = (function() {
     this._randomizerLoopBody = __bind(this._randomizerLoopBody, this);
     this.releaseUnique = __bind(this.releaseUnique, this);
     this.claimUnique = __bind(this.claimUnique, this);
+    this.updatePrintAndExportTexts = __bind(this.updatePrintAndExportTexts, this);
     this.onSquadNameChanged = __bind(this.onSquadNameChanged, this);
     this.onSquadDirtinessChanged = __bind(this.onSquadDirtinessChanged, this);
     this.onSquadLoadRequested = __bind(this.onSquadLoadRequested, this);
@@ -2692,9 +2732,10 @@ exportObj.SquadBuilder = (function() {
     this.onGameTypeChanged = __bind(this.onGameTypeChanged, this);
     this.onNotesUpdated = __bind(this.onNotesUpdated, this);
     this.updatePermaLink = __bind(this.updatePermaLink, this);
+    this.updateShipOrder = __bind(this.updateShipOrder, this);
     this.getPermaLink = __bind(this.getPermaLink, this);
     this.getPermaLinkParams = __bind(this.getPermaLinkParams, this);
-    var _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
+    var _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7;
     this.container = $(args.container);
     this.faction = $.trim(args.faction);
     this.printable_container = $(args.printable_container);
@@ -2721,16 +2762,16 @@ exportObj.SquadBuilder = (function() {
       fill_zero_pts: false
     };
     this.total_points = 0;
-    this.isHyperspace = (_ref = (_ref1 = exportObj.builders[0]) != null ? _ref1.isHyperspace : void 0) != null ? _ref : false;
+    this.isHyperspace = (_ref = (_ref1 = exportObj.builders[0]) != null ? _ref1.isHyperspace : void 0) != null ? _ref : true;
     this.isEpic = (_ref2 = (_ref3 = exportObj.builders[0]) != null ? _ref3.isEpic : void 0) != null ? _ref2 : false;
     this.isQuickbuild = (_ref4 = (_ref5 = exportObj.builders[0]) != null ? _ref5.isQuickbuild : void 0) != null ? _ref4 : false;
     this.backend = null;
     this.current_squad = {};
-    this.language = 'English';
+    this.language = (_ref6 = exportObj.currentLanguage) != null ? _ref6 : 'English';
     this.collection = null;
     this.current_obstacles = [];
     this.setupUI();
-    this.game_type_selector.val(((_ref6 = exportObj.builders[0]) != null ? _ref6 : this).game_type_selector.val());
+    this.game_type_selector.val(((_ref7 = exportObj.builders[0]) != null ? _ref7 : this).game_type_selector.val());
     this.setupEventHandlers();
     window.setInterval(this.updatePermaLink, 250);
     this.isUpdatingPoints = false;
@@ -2748,7 +2789,7 @@ exportObj.SquadBuilder = (function() {
     if (initial_load == null) {
       initial_load = false;
     }
-    default_squad_name = 'Unnamed Squadron';
+    default_squad_name = this.uitranslation('Unnamed Squadron');
     squad_name = $.trim(this.squad_name_input.val()) || default_squad_name;
     if (initial_load && $.trim($.getParameterByName('sn'))) {
       squad_name = $.trim($.getParameterByName('sn'));
@@ -2776,7 +2817,7 @@ exportObj.SquadBuilder = (function() {
     };
     if (this.total_points > 0) {
       if (squad_name === default_squad_name) {
-        this.current_squad.name = 'Unsaved Squadron';
+        this.current_squad.name = this.uitranslation('Unsaved Squadron');
       }
       this.current_squad.dirty = true;
     }
@@ -2786,7 +2827,7 @@ exportObj.SquadBuilder = (function() {
 
   SquadBuilder.prototype.newSquadFromScratch = function(squad_name) {
     if (squad_name == null) {
-      squad_name = 'New Squadron';
+      squad_name = this.uitranslation('New Squadron');
     }
     this.squad_name_input.val(squad_name);
     this.removeAllShips();
@@ -2799,6 +2840,12 @@ exportObj.SquadBuilder = (function() {
     return this.tag.val('');
   };
 
+  SquadBuilder.prototype.uitranslation = function() {
+    var args, what;
+    what = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+    return exportObj.translate('ui', what, args);
+  };
+
   SquadBuilder.prototype.setupUI = function() {
     var DEFAULT_RANDOMIZER_BID_GOAL, DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, opt, _i, _len, _ref;
     DEFAULT_RANDOMIZER_POINTS = 200;
@@ -2808,13 +2855,13 @@ exportObj.SquadBuilder = (function() {
     DEFAULT_RANDOMIZER_SHIP_LIMIT = 0;
     this.status_container = $(document.createElement('DIV'));
     this.status_container.addClass('container-fluid');
-    this.status_container.append($.trim('<div class="row squad-name-and-points-row">\n    <div class="col-md-3 squad-name-container">\n        <div class="display-name">\n            <span class="squad-name"></span>\n            <i class="far fa-edit"></i>\n        </div>\n        <div class="input-append">\n            <input type="text" maxlength="64" placeholder="Name your squad..." />\n            <button class="btn save"><i class="fa fa-pen-square"></i></button>\n        </div>\n        <br />\n        <select class="game-type-selector">\n            <option value="standard">Extended</option>\n            <option value="hyperspace">Hyperspace</option>\n            <option value="epic">Epic</option>\n            <option value="quickbuild">Quickbuild</option>\n        </select>\n    </div>\n    <div class="col-md-4 points-display-container">\n        Points: <span class="total-points">0</span> / <input type="number" class="desired-points" value="200">\n        <span class="points-remaining-container">(<span class="points-remaining"></span>&nbsp;left) <span class="points-destroyed red"></span></span>\n        <span class="content-warning unreleased-content-used d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated"></span></span>\n        <span class="content-warning loading-failed-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated"></span></span>\n        <span class="content-warning collection-invalid d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated"></span></span>\n        <span class="content-warning ship-number-invalid-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated">A tournament legal squad must contain 2-8 ships!</span></span>\n        <span class="content-warning multi-faction-warning-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated">Multi-Faction Lists are NEVER tournament legal!</span></span>\n    </div>\n    <div class="col-md-5 float-right button-container">\n        <div class="btn-group float-right">\n\n            <button class="btn btn-info view-as-text"><span class="d-none d-lg-block"><i class="fa fa-print"></i>&nbsp;Print/Export</span><span class="d-lg-none"><i class="fa fa-print"></i></span></button>\n            <a class="btn btn-primary d-none collection"><span class="d-none d-lg-block"><i class="fa fa-folder-open"></i> Your Collection</span><span class="d-lg-none"><i class="fa fa-folder-open"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class="btn btn-danger randomize"><span class="d-none d-lg-block"><i class="fa fa-random"></i> Randomize!</span><span class="d-lg-none"><i class="fa fa-random"></i></span></button>\n            <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">\n                <span class="caret"></span>\n            </button>\n            <ul class="dropdown-menu">\n                <li><a class="dropdown-item randomize-options">Randomizer Options</a></li>\n                <li><a class="dropdown-item misc-settings">Misc Settings</a></li>\n            </ul>\n            \n\n        </div>\n    </div>\n</div>\n\n<div class="row squad-save-buttons">\n    <div class="col-md-12">\n        <button class="show-authenticated btn btn-primary save-list"><i class="far fa-save"></i>&nbsp;Save</button>\n        <button class="show-authenticated btn btn-primary save-list-as"><i class="far fa-file"></i>&nbsp;Save As...</button>\n        <button class="show-authenticated btn btn-primary delete-list disabled"><i class="fa fa-trash"></i>&nbsp;Delete</button>\n        <button class="show-authenticated btn btn-info backend-list-my-squads show-authenticated"><i class="fa fa-download"></i>&nbsp;Load Squad</button>\n        <button class="btn btn-info import-squad"><i class="fa fa-file-import"></i>&nbsp;Import</button>\n        <button class="btn btn-danger clear-squad"><i class="fa fa-plus-circle"></i>&nbsp;New Squad</button>\n        <span class="show-authenticated backend-status"></span>\n    </div>\n</div>'));
+    this.status_container.append($.trim("<div class=\"row squad-name-and-points-row\">\n    <div class=\"col-md-3 squad-name-container\">\n        <div class=\"display-name\">\n            <span class=\"squad-name\"></span>\n            <i class=\"far fa-edit\"></i>\n        </div>\n        <div class=\"input-append\">\n            <input type=\"text\" maxlength=\"64\" placeholder=\"" + (this.uitranslation("Name your squad...")) + "\" />\n            <button class=\"btn save\"><i class=\"fa fa-pen-square\"></i></button>\n        </div>\n        <br />\n        <select class=\"game-type-selector\">\n            <option value=\"standard\" class=\"translated\" defaultText=\"Standard\" selected=\"selected\">" + (this.uitranslation("Standard")) + "</option>\n            <option value=\"extended\" class=\"translated\" defaultText=\"Extended\"></option>\n            <option value=\"epic\" class=\"translated\" defaultText=\"Epic\"></option>\n            <option value=\"quickbuild\" class=\"translated\" defaultText=\"Quickbuild\"></option>\n        </select>\n    </div>\n    <div class=\"col-md-4 points-display-container\">\n        Points: <span class=\"total-points\">0</span> / <input type=\"number\" class=\"desired-points\" value=\"20\">\n        <span class=\"points-remaining-container\">(<span class=\"points-remaining\"></span>&nbsp;left) <span class=\"points-destroyed red\"></span></span>\n        <span class=\"content-warning unreleased-content-used d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Unreleased content warning\"></span></span>\n        <span class=\"content-warning loading-failed-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Broken squad link warning\"></span></span>\n        <span class=\"content-warning collection-invalid d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Collection warning\"></span></span>\n        <span class=\"content-warning ship-number-invalid-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Ship number warning\"></span></span>\n        <span class=\"content-warning multi-faction-warning-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Multi-Faction warning\"></span></span>\n    </div>\n    <div class=\"col-md-5 float-right button-container\">\n        <div class=\"btn-group float-right\">\n\n            <button class=\"btn btn-info view-as-text\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print/Export\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-print\"></i></span></button>\n            <a class=\"btn btn-primary d-none collection\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-folder-open\"></i> <span class=\"translated\" defaultText=\"Your Collection\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-folder-open\"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class=\"btn btn-danger randomize\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-random\"></i> <span class=\"translated\" defaultText=\"Randomize!\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-random\"></i></span></button>\n            <button class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\">\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu\">\n                <li><a class=\"dropdown-item randomize-options translated\" defaultText=\"Randomizer Options\"></a></li>\n                <li><a class=\"dropdown-item misc-settings translated\" defaultText=\"Misc Settings\"></a></li>\n            </ul>\n            \n\n        </div>\n    </div>\n</div>\n\n<div class=\"row squad-save-buttons\">\n    <div class=\"col-md-12\">\n        <button class=\"show-authenticated btn btn-primary save-list\"><i class=\"far fa-save\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save\"></span></button>\n        <button class=\"show-authenticated btn btn-primary save-list-as\"><i class=\"far fa-file\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save As...\"></span></button>\n        <button class=\"show-authenticated btn btn-primary delete-list disabled\"><i class=\"fa fa-trash\"></i>&nbsp;<span class=\"translated\" defaultText=\"Delete\"></span></button>\n        <button class=\"show-authenticated btn btn-info backend-list-my-squads show-authenticated\"><i class=\"fa fa-download\"></i>&nbsp;<span class = \"translated\" defaultText=\"Load Squad\"></span></button>\n        <button class=\"btn btn-info import-squad\"><i class=\"fa fa-file-import\"></i>&nbsp;<span class=\"translated\" defaultText=\"Import\"></span></button>\n        <button class=\"btn btn-danger clear-squad\"><i class=\"fa fa-plus-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"New Squad\"></span></button>\n        <span class=\"show-authenticated backend-status\"></span>\n    </div>\n</div>"));
     this.container.append(this.status_container);
     this.xws_import_modal = $(document.createElement('DIV'));
     this.xws_import_modal.addClass('modal fade import-modal d-print-none');
     this.xws_import_modal.tabindex = "-1";
     this.xws_import_modal.role = "dialog";
-    this.xws_import_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>XWS Import</h3>\n            <button type=\"button\" class=\"close d-print-none\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            Import your list via XWS into YASB.<br>\n            <i>XWS is a common format to share lists between applications.</i>\n            <div class=\"container-fluid\">\n                <textarea class=\"xws-content\" placeholder=\"Paste XWS here\"></textarea>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <span class=\"xws-import-status\"></span>&nbsp;\n            <button class=\"btn btn-danger import-xws\">Import</button>\n        </div>\n    </div>\n</div>"));
+    this.xws_import_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"XWS Import\"></h3>\n            <button type=\"button\" class=\"close d-print-none\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <span class=\"translated\" defaultText=\"XWS Import Dialog\"></span>\n            <div class=\"container-fluid\">\n                <textarea class=\"xws-content\" placeholder='" + this.uitranslation("Paste XWS here") + "'></textarea>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <span class=\"xws-import-status\"></span>&nbsp;\n            <button class=\"btn btn-danger import-xws translated\" defaultText=\"Import\"></button>\n        </div>\n    </div>\n</div>"));
     this.from_xws_button = this.container.find('button.import-squad');
     this.from_xws_button.click((function(_this) {
       return function(e) {
@@ -2836,7 +2883,7 @@ exportObj.SquadBuilder = (function() {
     this.list_modal.tabindex = "-1";
     this.list_modal.role = "dialog";
     this.container.append(this.list_modal);
-    this.list_modal.append($.trim("<div class=\"modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <div class=\"d-print-none\">\n                <h4 class=\"modal-title\"><span class=\"squad-name\"></span> (<span class=\"total-points\"></span>)</h4>\n            </div>\n            <div class=\"d-none d-print-block\">\n                <div class=\"fancy-header\">\n                    <div class=\"squad-name\"></div>\n                    <div class=\"squad-faction\"></div>\n                    <div class=\"mask\">\n                        <div class=\"outer-circle\">\n                            <div class=\"inner-circle\">\n                                <span class=\"total-points\"></span>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"fancy-under-header\"></div>\n            </div>\n            <button type=\"button\" class=\"close d-print-none\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"fancy-list\"></div>\n            <div class=\"simple-list\"></div>\n            <div class=\"simplecopy-list\">\n                <p>Copy the below and paste it elsewhere.</p>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy\">Copy</button>\n            </div>\n            <div class=\"reddit-list\">\n                <p>Copy the below and paste it into your reddit post.</p>\n                <p>Make sure that the post editor is set to markdown mode.</p>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy\">Copy</button>\n            </div>\n            <div class=\"tts-list\">\n                <p>Copy the below and paste it into the Tabletop Simulator.</p>\n                <textarea></textarea><br /><button class=\"btn btn-modal btn-copy\">Copy</button>\n            </div>\n            <div class=\"bbcode-list\">\n                <p>Copy the BBCode below and paste it into your forum post.</p>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy\">Copy</button>\n            </div>\n            <div class=\"html-list\">\n                <textarea></textarea><button class=\"btn btn-modal btn-copy\">Copy</button>\n            </div>\n            <div class=\"xws-list\">\n                <p>Copy and paste this into an XWS-compliant application.\n                <div class=\"row full-row\">\n                    <div class=\"col d-inline-block d-none d-sm-block\"><textarea></textarea><br /><button class=\"btn btn-modal btn-copy\">Copy</button></div>\n                    <div class=\"col d-inline-block d-none d-sm-block qrcode-container\" id=\"xws-qrcode-container\"></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"container-fluid modal-footer d-print-none\">\n            <div class=\"row full-row\">\n                <div class=\"col d-inline-block d-none d-sm-block right-col\">\n                    <label class=\"color-skip-text-checkbox\">\n                        Skip Card Text <input type=\"checkbox\" class=\"toggle-skip-text-print\" />\n                    </label><br />\n                    <label class=\"vertical-space-checkbox\">\n                        Add Space for Cards <input type=\"checkbox\" class=\"toggle-vertical-space\" />\n                    </label><br />\n                    <label class=\"maneuver-print-checkbox\">\n                        Include Maneuvers Chart <input type=\"checkbox\" class=\"toggle-maneuver-print\" />\n                    </label><br />\n                    <label class=\"expanded-shield-hull-print-checkbox\">\n                        Expand Shield and Hull <input type=\"checkbox\" class=\"toggle-expanded-shield-hull-print\" />\n                    </label>\n                </div>\n                <div class=\"col d-inline-block d-none d-sm-block right-col\">\n                    <label class=\"color-print-checkbox\">\n                        Print Color <input type=\"checkbox\" class=\"toggle-color-print\" checked=\"checked\" />\n                    </label><br />\n                    <label class=\"qrcode-checkbox\">\n                        Include QR codes <input type=\"checkbox\" class=\"toggle-juggler-qrcode\" checked=\"checked\" />\n                    </label><br />\n                    <label class=\"obstacles-checkbox\">\n                        Include Obstacle Choices <input type=\"checkbox\" class=\"toggle-obstacles\" />\n                    </label>\n                </div>\n            </div>\n            <div class=\"row btn-group list-display-mode\">\n                <button class=\"btn btn-modal select-simple-view\">Simple</button>\n                <button class=\"btn btn-modal select-fancy-view d-none d-sm-block\">Fancy</button>\n                <button class=\"btn btn-modal select-simplecopy-view\">Text</button>\n                <button class=\"btn btn-modal select-tts-view\">TTS</button>\n                <button class=\"btn btn-modal select-reddit-view\">Reddit</button>\n                <button class=\"btn btn-modal select-bbcode-view\">BBCode</button>\n                <button class=\"btn btn-modal select-html-view\">HTML</button>\n                <button class=\"btn btn-modal select-xws-view\">XWS</button>\n            </div>\n            <button class=\"btn btn-modal print-list d-none d-sm-block\"><i class=\"fa fa-print\"></i>&nbsp;Print</button>\n        </div>\n    </div>\n</div>"));
+    this.list_modal.append($.trim("<div class=\"modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <div class=\"d-print-none\">\n                <h4 class=\"modal-title\"><span class=\"squad-name\"></span> (<span class=\"total-points\"></span>)</h4>\n            </div>\n            <div class=\"d-none d-print-block\">\n                <div class=\"fancy-header\">\n                    <div class=\"squad-name\"></div>\n                    <div class=\"squad-faction\"></div>\n                    <div class=\"mask\">\n                        <div class=\"outer-circle\">\n                            <div class=\"inner-circle\">\n                                <span class=\"total-points\"></span>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"fancy-under-header\"></div>\n            </div>\n            <button type=\"button\" class=\"close d-print-none\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"fancy-list\"></div>\n            <div class=\"simple-list\"></div>\n            <div class=\"simplecopy-list\">\n                <span class=\"translated\" defaultText=\"Copy below simple text\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"reddit-list\">\n                <span class=\"translated\" defaultText=\"Copy below markdown\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"tts-list\">\n                <span class=\"translated\" defaultText=\"Copy below TTS\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"bbcode-list\">\n                <span class=\"translated\" defaultText=\"Copy below BBCode\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"html-list\">\n                <span class=\"translated\" defaultText=\"Copy below HTML\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"xws-list\">\n                <span class=\"translated\" defaultText=\"Copy below XWS\"></span>\n                <div class=\"row full-row\">\n                    <div class=\"col d-inline-block d-none d-sm-block\"><textarea></textarea><br /><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button></div>\n                    <div class=\"col d-inline-block d-none d-sm-block qrcode-container\" id=\"xws-qrcode-container\"></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"container-fluid modal-footer d-print-none\">\n            <div class=\"row full-row\">\n                <div class=\"col d-inline-block d-none d-sm-block right-col\">\n                    <label class=\"color-skip-text-checkbox\">\n                        <span class=\"translated\" defaultText=\"Skip Card Text\"></span> <input type=\"checkbox\" class=\"toggle-skip-text-print\" />\n                    </label><br />\n                    <label class=\"vertical-space-checkbox\">\n                        <span class=\"translated\" defaultText=\"Space for Cards\"></span> <input type=\"checkbox\" class=\"toggle-vertical-space\" />\n                    </label><br />\n                    <label class=\"maneuver-print-checkbox\">\n                        <span class=\"translated\" defaultText=\"Include Maneuvers Chart\"></span> <input type=\"checkbox\" class=\"toggle-maneuver-print\" />\n                    </label><br />\n                    <label class=\"expanded-shield-hull-print-checkbox\">\n                        <span class=\"translated\" defaultText=\"Expand Shield and Hull\"></span> <input type=\"checkbox\" class=\"toggle-expanded-shield-hull-print\" />\n                    </label>\n                </div>\n                <div class=\"col d-inline-block d-none d-sm-block right-col\">\n                    <label class=\"color-print-checkbox\">\n                        <span class=\"translated\" defaultText=\"Print Color\"></span> <input type=\"checkbox\" class=\"toggle-color-print\" checked=\"checked\" />\n                    </label><br />\n                    <label class=\"qrcode-checkbox\">\n                        <span class=\"translated\" defaultText=\"Include QR codes\"></span> <input type=\"checkbox\" class=\"toggle-juggler-qrcode\" checked=\"checked\" />\n                    </label><br />\n                    <label class=\"obstacles-checkbox\">\n                        <span class=\"translated\" defaultText=\"Include Obstacle Choices\"></span> <input type=\"checkbox\" class=\"toggle-obstacles\" />\n                    </label>\n                </div>\n            </div>\n            <div class=\"row btn-group list-display-mode\">\n                <button class=\"btn btn-modal select-simple-view translated\" defaultText=\"Simple\"></button>\n                <button class=\"btn btn-modal select-fancy-view d-none d-sm-block translated\" defaultText=\"Fancy\"></button>\n                <button class=\"btn btn-modal select-simplecopy-view translated\" defaultText=\"Text\"></button>\n                <button class=\"btn btn-modal select-tts-view translated\" defaultText=\"TTS\"></button>\n                <button class=\"btn btn-modal select-reddit-view translated\" defaultText=\"Reddit\"></button>\n                <button class=\"btn btn-modal select-bbcode-view translated\" defaultText=\"BBCode\"></button>\n                <button class=\"btn btn-modal select-html-view translated\" defaultText=\"HTML\"></button>\n                <button class=\"btn btn-modal select-xws-view translated\" defaultText=\"XWS\"></button>\n            </div>\n            <button class=\"btn btn-modal print-list d-none d-sm-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print\"></span></button>\n        </div>\n    </div>\n</div>"));
     this.fancy_container = $(this.list_modal.find('.fancy-list'));
     this.fancy_total_points_container = $(this.list_modal.find('div.modal-header .total-points'));
     this.simple_container = $(this.list_modal.find('div.modal-body .simple-list'));
@@ -3198,7 +3245,8 @@ exportObj.SquadBuilder = (function() {
     this.randomizer_options_modal.tabindex = "-1";
     this.randomizer_options_modal.role = "dialog";
     $('body').append(this.randomizer_options_modal);
-    this.randomizer_options_modal.append($.trim("<div class=\"modal-dialog modal-dialog-scrollable modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>Random Squad Builder Options</h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <form>\n                <label>\n                    Maximal desired bid\n                    <input type=\"number\" class=\"randomizer-bid-goal\" value=\"" + DEFAULT_RANDOMIZER_BID_GOAL + "\" placeholder=\"" + DEFAULT_RANDOMIZER_BID_GOAL + "\" />\n                </label><br />\n                <label>\n                    Maximum Ship Count (0 for no limit)\n                    <input type=\"number\" class=\"randomizer-ship-limit\" value=\"" + DEFAULT_RANDOMIZER_SHIP_LIMIT + "\" placeholder=\"" + DEFAULT_RANDOMIZER_SHIP_LIMIT + "\" />\n                </label><br />\n                <label>\n                    More upgrades\n                    <input type=\"range\" min=\"0\" max=\"10\" class=\"randomizer-ships-or-upgrades\" value=\"" + DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES + "\" placeholder=\"" + DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES + "\" />\n                    Less upgrades\n                </label><br />\n                <label>\n                    <input type=\"checkbox\" class=\"randomizer-collection-only\" checked=\"checked\"/> \n                    Only use items from collection\n                </label><br />\n                <label>\n                    Sets and Expansions (default all)\n                    <select class=\"randomizer-sources\" multiple=\"1\" data-placeholder=\"Use all sets and expansions\">\n                    </select>\n                </label><br />\n                <label>\n                    <input type=\"checkbox\" class=\"randomizer-fill-zero-pts\" /> \n                    Always fill 0-point slots\n                </label><br />\n                <label>\n                    Maximum Seconds to Spend Randomizing\n                    <input type=\"number\" class=\"randomizer-timeout\" value=\"" + DEFAULT_RANDOMIZER_TIMEOUT_SEC + "\" placeholder=\"" + DEFAULT_RANDOMIZER_TIMEOUT_SEC + "\" />\n                </label>\n            </form>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-primary do-randomize\" aria-hidden=\"true\">Randomize!</button>\n            <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">Close</button>\n        </div>\n    </div>\n</div>"));
+    this.randomizer_options_modal.append($.trim(("<div class=\"modal-dialog modal-dialog-scrollable modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"Random Squad Builder Options\"></h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <form>\n                <label>\n                    <span class=\"translated\" defaultText=\"Maximal desired bid\"></span>\n                    <input type=\"number\" class=\"randomizer-bid-goal\" value=\"" + DEFAULT_RANDOMIZER_BID_GOAL + "\" placeholder=\"" + DEFAULT_RANDOMIZER_BID_GOAL + "\" />\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"Maximum Ship Count\"></span>\n                    <input type=\"number\" class=\"randomizer-ship-limit\" value=\"" + DEFAULT_RANDOMIZER_SHIP_LIMIT + "\" placeholder=\"" + DEFAULT_RANDOMIZER_SHIP_LIMIT + "\" />\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"More upgrades\"></span>\n                    <input type=\"range\" min=\"0\" max=\"10\" class=\"randomizer-ships-or-upgrades\" value=\"" + DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES + "\" placeholder=\"" + DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES + "\" />\n                    <span class=\"translated\" defaultText=\"Less upgrades\"></span>\n                </label><br />\n                <label>\n                    <input type=\"checkbox\" class=\"randomizer-collection-only\" checked=\"checked\"/> \n                    <span class=\"translated\" defaultText=\"Limit to collection\"></span>\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"Sets and Expansions\"></span>\n                    <select class=\"randomizer-sources\" multiple=\"1\" data-placeholder='") + this.uitranslation('All sets and expansions') + ("'>\n                    </select>\n                </label><br />\n                <label>\n                    <input type=\"checkbox\" class=\"randomizer-fill-zero-pts\" /> \n                    <span class=\"translated\" defaultText=\"Always fill 0-point slots\"></span>\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"Maximum Seconds to Spend Randomizing\"></span>\n                    <input type=\"number\" class=\"randomizer-timeout\" value=\"" + DEFAULT_RANDOMIZER_TIMEOUT_SEC + "\" placeholder=\"" + DEFAULT_RANDOMIZER_TIMEOUT_SEC + "\" />\n                </label>\n            </form>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-primary do-randomize translated\" aria-hidden=\"true\" defaultText=\"Roll!\"></button>\n            <button class=\"btn translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>")));
+    exportObj.translateUIElements(this.randomizer_options_modal);
     this.randomizer_source_selector = $(this.randomizer_options_modal.find('select.randomizer-sources'));
     _ref = exportObj.expansions;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -3264,7 +3312,7 @@ exportObj.SquadBuilder = (function() {
     this.misc_settings_modal.tabindex = "-1";
     this.misc_settings_modal.role = "dialog";
     $('body').append(this.misc_settings_modal);
-    this.misc_settings_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>Miscellaneous Settings</h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <label class = \"toggle-initiative-prefix-names misc-settings-label\">\n                <input type=\"checkbox\" class=\"initiative-prefix-names-checkbox misc-settings-checkbox\" /> Put INI as prefix in front of names. \n            </label><br />\n            <label>\n                <input type=\"checkbox\" checked /> Is Dee Yun the worst?\n            </label>\n        </div>\n        <div class=\"modal-footer\">\n            <span class=\"misc-settings-infoline\"></span>\n            &nbsp;\n            <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">Close</button>\n        </div>\n    </div>\n</div>"));
+    this.misc_settings_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"Miscellaneous Settings\"></h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <label class = \"toggle-initiative-prefix-names misc-settings-label\">\n                <input type=\"checkbox\" class=\"initiative-prefix-names-checkbox misc-settings-checkbox\" /> <span class=\"translated\" defaultText=\"Use INI prefix\"></span> \n            </label><br />\n        </div>\n        <div class=\"modal-footer\">\n            <span class=\"misc-settings-infoline\"></span>\n            &nbsp;\n            <button class=\"btn translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
     this.misc_settings_infoline = $(this.misc_settings_modal.find('.misc-settings-infoline'));
     this.misc_settings_initiative_prefix = $(this.misc_settings_modal.find('.initiative-prefix-names-checkbox'));
     if (this.backend != null) {
@@ -3306,14 +3354,14 @@ exportObj.SquadBuilder = (function() {
         if (_this.backend != null) {
           if (_this.misc_settings_initiative_prefix.prop('checked')) {
             return _this.backend.set('showInitiativeInFrontOfPilotName', '1', function(ds) {
-              _this.misc_settings_infoline.text("Changes Saved");
+              _this.misc_settings_infoline.text(_this.uitranslation("Changes Saved"));
               return _this.misc_settings_infoline.fadeIn(100, function() {
                 return _this.misc_settings_infoline.fadeOut(3000);
               });
             });
           } else {
             return _this.backend.deleteSetting('showInitiativeInFrontOfPilotName', function(dd) {
-              _this.misc_settings_infoline.text("Changes Saved");
+              _this.misc_settings_infoline.text(_this.uitranslation("Changes Saved"));
               return _this.misc_settings_infoline.fadeIn(100, function() {
                 return _this.misc_settings_infoline.fadeOut(3000);
               });
@@ -3330,12 +3378,13 @@ exportObj.SquadBuilder = (function() {
         return _this.misc_settings_initiative_prefix.prop('checked', (((_ref1 = exportObj.settings) != null ? _ref1.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix);
       };
     })(this));
+    exportObj.translateUIElements(this.misc_settings_modal);
     this.choose_obstacles_modal = $(document.createElement('DIV'));
     this.choose_obstacles_modal.addClass('modal fade choose-obstacles-modal');
     this.choose_obstacles_modal.tabindex = "-1";
     this.choose_obstacles_modal.role = "dialog";
     this.container.append(this.choose_obstacles_modal);
-    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description'>Choose up to three obstacles, to include in the permalink for use in external programs</label>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"obstacle-select-container\" style=\"float:left\">\n                <select multiple class='obstacle-select' size=\"18\">\n                    <option class=\"coreasteroid0-select\" value=\"coreasteroid0\">Core Asteroid 0</option>\n                    <option class=\"coreasteroid1-select\" value=\"coreasteroid1\">Core Asteroid 1</option>\n                    <option class=\"coreasteroid2-select\" value=\"coreasteroid2\">Core Asteroid 2</option>\n                    <option class=\"coreasteroid3-select\" value=\"coreasteroid3\">Core Asteroid 3</option>\n                    <option class=\"coreasteroid4-select\" value=\"coreasteroid4\">Core Asteroid 4</option>\n                    <option class=\"coreasteroid5-select\" value=\"coreasteroid5\">Core Asteroid 5</option>\n                    <option class=\"yt2400debris0-select\" value=\"yt2400debris0\">YT2400 Debris 0</option>\n                    <option class=\"yt2400debris1-select\" value=\"yt2400debris1\">YT2400 Debris 1</option>\n                    <option class=\"yt2400debris2-select\" value=\"yt2400debris2\">YT2400 Debris 2</option>\n                    <option class=\"vt49decimatordebris0-select\" value=\"vt49decimatordebris0\">VT49 Debris 0</option>\n                    <option class=\"vt49decimatordebris1-select\" value=\"vt49decimatordebris1\">VT49 Debris 1</option>\n                    <option class=\"vt49decimatordebris2-select\" value=\"vt49decimatordebris2\">VT49 Debris 2</option>\n                    <option class=\"core2asteroid0-select\" value=\"core2asteroid0\">Force Awakens Asteroid 0</option>\n                    <option class=\"core2asteroid1-select\" value=\"core2asteroid1\">Force Awakens Asteroid 1</option>\n                    <option class=\"core2asteroid2-select\" value=\"core2asteroid2\">Force Awakens Asteroid 2</option>\n                    <option class=\"core2asteroid3-select\" value=\"core2asteroid3\">Force Awakens Asteroid 3</option>\n                    <option class=\"core2asteroid4-select\" value=\"core2asteroid4\">Force Awakens Asteroid 4</option>\n                    <option class=\"core2asteroid5-select\" value=\"core2asteroid5\">Force Awakens Asteroid 5</option>\n                    <option class=\"gascloud1-select\" value=\"gascloud1\">Gas Cloud 1</option>\n                    <option class=\"gascloud2-select\" value=\"gascloud2\">Gas Cloud 2</option>\n                    <option class=\"gascloud3-select\" value=\"gascloud3\">Gas Cloud 3</option>\n                    <option class=\"gascloud4-select\" value=\"gascloud4\">Gas Cloud 4</option>\n                    <option class=\"gascloud5-select\" value=\"gascloud5\">Gas Cloud 5</option>\n                    <option class=\"gascloud6-select\" value=\"gascloud6\">Gas Cloud 6</option>\n                </select>\n            </div>\n            <div class=\"obstacle-image-container\" style=\"display:none;\">\n                <img class=\"obstacle-image\" src=\"images/core2asteroid0.png\" />\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn close-print-dialog\" data-dismiss=\"modal\" aria-hidden=\"true\">Close</button>\n        </div>\n    </div>\n</div>"));
+    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description translated' defaultText=\"Choose obstacles dialog\"></label>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"obstacle-select-container\" style=\"float:left\">\n                <select multiple class='obstacle-select' size=\"18\">\n                    <option class=\"coreasteroid0-select translated\" value=\"coreasteroid0\" defaultText=\"Core Asteroid 0\"></option>\n                    <option class=\"coreasteroid1-select translated\" value=\"coreasteroid1\" defaultText=\"Core Asteroid 1\"></option>\n                    <option class=\"coreasteroid2-select translated\" value=\"coreasteroid2\" defaultText=\"Core Asteroid 2\"></option>\n                    <option class=\"coreasteroid3-select translated\" value=\"coreasteroid3\" defaultText=\"Core Asteroid 3\"></option>\n                    <option class=\"coreasteroid4-select translated\" value=\"coreasteroid4\" defaultText=\"Core Asteroid 4\"></option>\n                    <option class=\"coreasteroid5-select translated\" value=\"coreasteroid5\" defaultText=\"Core Asteroid 5\"></option>\n                    <option class=\"yt2400debris0-select translated\" value=\"yt2400debris0\" defaultText=\"YT2400 Debris 0\"></option>\n                    <option class=\"yt2400debris1-select translated\" value=\"yt2400debris1\" defaultText=\"YT2400 Debris 1\"></option>\n                    <option class=\"yt2400debris2-select translated\" value=\"yt2400debris2\" defaultText=\"YT2400 Debris 2\"></option>\n                    <option class=\"vt49decimatordebris0-select translated\" value=\"vt49decimatordebris0\" defaultText=\"VT49 Debris 0\"></option>\n                    <option class=\"vt49decimatordebris1-select translated\" value=\"vt49decimatordebris1\" defaultText=\"VT49 Debris 1\"></option>\n                    <option class=\"vt49decimatordebris2-select translated\" value=\"vt49decimatordebris2\" defaultText=\"VT49 Debris 2\"></option>\n                    <option class=\"core2asteroid0-select translated\" value=\"core2asteroid0\" defaultText=\"Force Awakens Asteroid 0\"></option>\n                    <option class=\"core2asteroid1-select translated\" value=\"core2asteroid1\" defaultText=\"Force Awakens Asteroid 1\"></option>\n                    <option class=\"core2asteroid2-select translated\" value=\"core2asteroid2\" defaultText=\"Force Awakens Asteroid 2\"></option>\n                    <option class=\"core2asteroid3-select translated\" value=\"core2asteroid3\" defaultText=\"Force Awakens Asteroid 3\"></option>\n                    <option class=\"core2asteroid4-select translated\" value=\"core2asteroid4\" defaultText=\"Force Awakens Asteroid 4\"></option>\n                    <option class=\"core2asteroid5-select translated\" value=\"core2asteroid5\" defaultText=\"Force Awakens Asteroid 5\"></option>\n                    <option class=\"gascloud1-select translated\" value=\"gascloud1\" defaultText=\"Gas Cloud 1\"></option>\n                    <option class=\"gascloud2-select translated\" value=\"gascloud2\" defaultText=\"Gas Cloud 2\"></option>\n                    <option class=\"gascloud3-select translated\" value=\"gascloud3\" defaultText=\"Gas Cloud 3\"></option>\n                    <option class=\"gascloud4-select translated\" value=\"gascloud4\" defaultText=\"Gas Cloud 4\"></option>\n                    <option class=\"gascloud5-select translated\" value=\"gascloud5\" defaultText=\"Gas Cloud 5\"></option>\n                    <option class=\"gascloud6-select translated\" value=\"gascloud6\" defaultText=\"Gas Cloud 6\"></option>\n                </select>\n            </div>\n            <div class=\"obstacle-image-container\" style=\"display:none;\">\n                <img class=\"obstacle-image\" src=\"images/core2asteroid0.png\" />\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
     this.obstacles_select = this.choose_obstacles_modal.find('.obstacle-select');
     this.obstacles_select_image = this.choose_obstacles_modal.find('.obstacle-image-container');
     this.backend_list_squads_button = $(this.container.find('button.backend-list-my-squads'));
@@ -3363,7 +3412,7 @@ exportObj.SquadBuilder = (function() {
             obstacles: _this.getObstacles(),
             tag: _this.tag.val().substr(0, 1024)
           };
-          _this.backend_status.html($.trim("<i class=\"fa fa-sync fa-spin\"></i>&nbsp;Saving squad..."));
+          _this.backend_status.html($.trim("<i class=\"fa fa-sync fa-spin\"></i>&nbsp;<span class=\"translated\" defaultText=\"Saving squad...\"></span>"));
           _this.backend_status.show();
           _this.backend_save_list_button.addClass('disabled');
           (function(__iced_k) {
@@ -3376,11 +3425,11 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3032
+              lineno: 3125
             }));
             __iced_deferrals._fulfill();
           })(function() {
-            return __iced_k(results.success ? (_this.current_squad.dirty = false, _this.current_squad.id != null ? _this.backend_status.html($.trim("<i class=\"fa fa-check\"></i>&nbsp;Squad updated successfully.")) : (_this.backend_status.html($.trim("<i class=\"fa fa-check\"></i>&nbsp;New squad saved successfully.")), _this.current_squad.id = results.id), _this.container.trigger('xwing-backend:squadDirtinessChanged')) : (_this.backend_status.html($.trim("<i class=\"fa fa-exclamation-circle\"></i>&nbsp;" + results.error)), _this.backend_save_list_button.removeClass('disabled')));
+            return __iced_k(results.success ? (_this.current_squad.dirty = false, _this.current_squad.id != null ? _this.backend_status.html($.trim("<i class=\"fa fa-check\"></i>&nbsp;<span class=\"translated\" defaultText=\"Squad updated successfully.\"></span>")) : (_this.backend_status.html($.trim("<i class=\"fa fa-check\"></i>&nbsp;<span class=\"translated\" defaultText=\"New squad saved successfully.\"></span>")), _this.current_squad.id = results.id), _this.container.trigger('xwing-backend:squadDirtinessChanged')) : (_this.backend_status.html($.trim("<i class=\"fa fa-exclamation-circle\"></i>&nbsp;" + results.error)), _this.backend_save_list_button.removeClass('disabled')));
           });
         } else {
           return __iced_k();
@@ -3409,13 +3458,16 @@ exportObj.SquadBuilder = (function() {
     content_container = $(document.createElement('DIV'));
     content_container.addClass('container-fluid');
     this.container.append(content_container);
-    content_container.append($.trim("<div class=\"row\">\n    <div class=\"col-md-9 ship-container\">\n        <label class=\"notes-container show-authenticated col-md-10\">\n            <span class=\"notes-name\">Squad Notes:</span>\n            <br />\n            <textarea class=\"squad-notes\"></textarea>\n            <br />\n            <span class=\"tag-name\">Tag:</span>\n            <input type=\"search\" class=\"squad-tag\"></input>\n        </label>\n        <div class=\"obstacles-container\">\n                <button class=\"btn btn-info choose-obstacles\"><i class=\"fa fa-cloud\"></i>&nbsp;Choose Obstacles</button>\n        </div>\n    </div>\n    <div class=\"col-md-3 info-container\" id=\"info-container\">\n    </div>\n</div>"));
+    content_container.append($.trim("<div class=\"row\">\n    <div class=\"col-md-9 ship-container\">\n        <label class=\"unsortable notes-container show-authenticated col-md-10\">\n            <span class=\"notes-name translated\" defaultText=\"Squad Notes:\"></span>\n            <br />\n            <textarea class=\"squad-notes\"></textarea>\n            <br />\n            <span class=\"tag-name translated\" defaultText=\"Tag:\"></span>\n            <input type=\"search\" class=\"squad-tag\"></input>\n        </label>\n        <div class=\"unsortable obstacles-container\">\n                <button class=\"btn btn-info choose-obstacles\"><i class=\"fa fa-cloud\"></i>&nbsp;<span class=\"translated\" defaultText=\"Choose Obstacles\"</span></button>\n        </div>\n    </div>\n    <div class=\"col-md-3 info-container\" id=\"info-container\">\n    </div>\n</div>"));
     this.ship_container = $(content_container.find('div.ship-container'));
     this.info_container = $(content_container.find('div.info-container'));
     this.obstacles_container = content_container.find('.obstacles-container');
     this.notes_container = $(content_container.find('.notes-container'));
     this.notes = $(this.notes_container.find('textarea.squad-notes'));
     this.tag = $(this.notes_container.find('input.squad-tag'));
+    this.ship_container.sortable({
+      cancel: '.unsortable'
+    });
     this.info_container.append($.trim(this.createInfoContainerUI()));
     this.info_container.hide();
     this.print_list_button = $(this.container.find('button.print-list'));
@@ -3435,11 +3487,12 @@ exportObj.SquadBuilder = (function() {
     this.mobile_tooltip_modal.tabindex = "-1";
     this.mobile_tooltip_modal.role = "dialog";
     this.container.append(this.mobile_tooltip_modal);
-    return this.mobile_tooltip_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n        </div>\n        <div class=\"modal-body\">" + this.createInfoContainerUI() + "        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-danger close-print-dialog\" data-dismiss=\"modal\" aria-hidden=\"true\">Close</button>\n        </div>\n    </div>\n</div>"));
+    this.mobile_tooltip_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n        </div>\n        <div class=\"modal-body\">" + this.createInfoContainerUI() + "        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-danger close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
+    return exportObj.translateUIElements(this.container);
   };
 
   SquadBuilder.prototype.createInfoContainerUI = function() {
-    return "<div class=\"card info-well\">\n    <div class=\"info-name\"></div>\n    <div class=\"info-type\"></div>\n    <span class=\"info-collection\"></span>\n    <table class=\"table-sm\">\n        <tbody>\n            <tr class=\"info-ship\">\n                <td class=\"info-header\">Ship</td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-base\">\n                <td class=\"info-header\">Base</td>\n                <td class=\"info-data\"></td> \n            </tr>\n            <tr class=\"info-skill\">\n                <td class=\"info-header\">Initiative</td>\n                <td class=\"info-data info-skill\"></td>\n            </tr>\n            <tr class=\"info-engagement\">\n                <td class=\"info-header\">Engagement</td>\n                <td class=\"info-data info-engagement\"></td>\n            </tr>\n            <tr class=\"info-attack-bullseye\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-bullseyearc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-frontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-fullfront\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-fullfrontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-left\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-leftarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-right\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-rightarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-back\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-reararc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-turret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-singleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-doubleturret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-doubleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-agility\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-agility xwing-miniatures-font-agility\"></i></td>\n                <td class=\"info-data info-agility\"></td>\n            </tr>\n            <tr class=\"info-hull\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-hull xwing-miniatures-font-hull\"></i></td>\n                <td class=\"info-data info-hull\"></td>\n            </tr>\n            <tr class=\"info-shields\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-shield xwing-miniatures-font-shield\"></i></td>\n                <td class=\"info-data info-shields\"></td>\n            </tr>\n            <tr class=\"info-force\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-force xwing-miniatures-font-forcecharge\"></i></td>\n                <td class=\"info-data info-force\"></td>\n            </tr>\n            <tr class=\"info-charge\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-charge xwing-miniatures-font-charge\"></i></td>\n                <td class=\"info-data info-charge\"></td>\n            </tr>\n            <tr class=\"info-energy\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-energy xwing-miniatures-font-energy\"></i></td>\n                <td class=\"info-data info-energy\"></td>\n            </tr>\n            <tr class=\"info-range\">\n                <td class=\"info-header\">Range</td>\n                <td class=\"info-data info-range\"></td><td class=\"info-rangebonus\"><i class=\"xwing-miniatures-font red header-range xwing-miniatures-font-rangebonusindicator\"></i></td>\n            </tr>\n            <tr class=\"info-actions\">\n                <td class=\"info-header\">Actions</td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-upgrades\">\n                <td class=\"info-header\">Upgrades</td>\n                <td class=\"info-data\"></td>\n            </tr>\n        </tbody>\n    </table>\n    <p class=\"info-restrictions\"></p>\n    <p class=\"info-text\"></p>\n    <p class=\"info-maneuvers\"></p>\n    <br />\n    <span class=\"info-header info-sources\">Sources:</span> \n    <span class=\"info-data info-sources\"></span>\n</div>";
+    return "<div class=\"card info-well\">\n    <div class=\"info-name\"></div>\n    <div class=\"info-type\"></div>\n    <span class=\"info-collection\"></span>\n    <table class=\"table-sm\">\n        <tbody>\n            <tr class=\"info-ship\">\n                <td class=\"info-header translated\" defaultText=\"Ship\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-base\">\n                <td class=\"info-header translated\" defaultText=\"Base\"></td>\n                <td class=\"info-data\"></td> \n            </tr>\n            <tr class=\"info-skill\">\n                <td class=\"info-header translated\" defaultText=\"Initiative\"></td>\n                <td class=\"info-data info-skill\"></td>\n            </tr>\n            <tr class=\"info-points\">\n                <td class=\"info-header translated\" defaultText=\"Points\"></td>\n                <td class=\"info-data info-points\"></td>\n            </tr>\n            <tr class=\"info-engagement\">\n                <td class=\"info-header translated\" defaultText=\"Engagement\"></td>\n                <td class=\"info-data info-engagement\"></td>\n            </tr>\n            <tr class=\"info-attack-bullseye\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-bullseyearc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-frontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-fullfront\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-fullfrontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-left\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-leftarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-right\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-rightarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-back\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-reararc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-turret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-singleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-doubleturret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-doubleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-agility\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-agility xwing-miniatures-font-agility\"></i></td>\n                <td class=\"info-data info-agility\"></td>\n            </tr>\n            <tr class=\"info-hull\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-hull xwing-miniatures-font-hull\"></i></td>\n                <td class=\"info-data info-hull\"></td>\n            </tr>\n            <tr class=\"info-shields\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-shield xwing-miniatures-font-shield\"></i></td>\n                <td class=\"info-data info-shields\"></td>\n            </tr>\n            <tr class=\"info-force\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-force xwing-miniatures-font-forcecharge\"></i></td>\n                <td class=\"info-data info-force\"></td>\n            </tr>\n            <tr class=\"info-charge\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-charge xwing-miniatures-font-charge\"></i></td>\n                <td class=\"info-data info-charge\"></td>\n            </tr>\n            <tr class=\"info-energy\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-energy xwing-miniatures-font-energy\"></i></td>\n                <td class=\"info-data info-energy\"></td>\n            </tr>\n            <tr class=\"info-range\">\n                <td class=\"info-header translated\" defaultText=\"Range\"></td>\n                <td class=\"info-data info-range\"></td><td class=\"info-rangebonus\"><i class=\"xwing-miniatures-font red header-range xwing-miniatures-font-rangebonusindicator\"></i></td>\n            </tr>\n            <tr class=\"info-actions\">\n                <td class=\"info-header translated\" defaultText=\"Actions\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-upgrades\">\n                <td class=\"info-header translated\" defaultText=\"Upgrades\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n        </tbody>\n    </table>\n    <p class=\"info-restrictions\"></p>\n    <p class=\"info-text\"></p>\n    <p class=\"info-maneuvers\"></p>\n    <br />\n    <span class=\"info-header info-sources translated\" defaultText=\"Sources:\"></span> \n    <span class=\"info-data info-sources\"></span>\n</div>";
   };
 
   SquadBuilder.prototype.setupEventHandlers = function() {
@@ -3496,18 +3549,20 @@ exportObj.SquadBuilder = (function() {
         if (cb == null) {
           cb = $.noop;
         }
-        _this.language = language;
-        old_dirty = _this.current_squad.dirty;
-        if (_this.pretranslation_serialized.length != null) {
-          _this.loadFromSerialized(_this.pretranslation_serialized);
+        if (_this.language !== language) {
+          _this.language = language;
+          old_dirty = _this.current_squad.dirty;
+          if (_this.pretranslation_serialized.length != null) {
+            _this.loadFromSerialized(_this.pretranslation_serialized);
+          }
+          _ref = _this.ships;
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            ship = _ref[_i];
+            ship.updateSelections();
+          }
+          _this.current_squad.dirty = old_dirty;
+          _this.pretranslation_serialized = void 0;
         }
-        _ref = _this.ships;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          ship = _ref[_i];
-          ship.updateSelections();
-        }
-        _this.current_squad.dirty = old_dirty;
-        _this.pretranslation_serialized = void 0;
         return cb();
       };
     })(this)).on('xwing:shipUpdated', (function(_this) {
@@ -3537,7 +3592,7 @@ exportObj.SquadBuilder = (function() {
     })(this)).on('xwing-collection:created', (function(_this) {
       return function(e, collection) {
         _this.collection = collection;
-        _this.collection.onLanguageChange(null, _this.language);
+        _this.checkCollection();
         return _this.collection_button.removeClass('d-none');
       };
     })(this)).on('xwing-collection:changed', (function(_this) {
@@ -3571,6 +3626,15 @@ exportObj.SquadBuilder = (function() {
         if (_this.game_type_selector.val() !== gameType) {
           return _this.game_type_selector.val(gameType).trigger('change');
         }
+      };
+    })(this));
+    this.ship_container.on('sortstart', (function(_this) {
+      return function(e, ui) {
+        return _this.oldIndex = ui.item.index();
+      };
+    })(this)).on('sortstop', (function(_this) {
+      return function(e, ui) {
+        return _this.updateShipOrder(_this.oldIndex, ui.item.index());
       };
     })(this));
     this.obstacles_select.change((function(_this) {
@@ -3682,9 +3746,9 @@ exportObj.SquadBuilder = (function() {
         if (_this.isEpic) {
           _this.printable_container.find('.squad-name').append(" <i class=\"xwing-miniatures-font xwing-miniatures-font-energy\"></i>");
         }
-        _this.printable_container.find('.printable-body').append($.trim("<div class=\"version\">Points Version: 1.8.0 November 2020</div>"));
+        _this.printable_container.find('.printable-body').append($.trim("<div class=\"version\"><span class=\"translated\" defaultText=\"Points Version:\"></span> 2.0.0 Sept 2021</div>"));
         if ($.trim(_this.notes.val()) !== '') {
-          _this.printable_container.find('.printable-body').append($.trim("<h5 class=\"print-notes\">Notes:</h5>\n<pre class=\"print-notes\"></pre>"));
+          _this.printable_container.find('.printable-body').append($.trim("<h5 class=\"print-notes translated\" defaultText=\"Notes:\"></h5>\n<pre class=\"print-notes\"></pre>"));
           _this.printable_container.find('.printable-body pre.print-notes').text(_this.notes.val());
         } else {
 
@@ -3692,11 +3756,11 @@ exportObj.SquadBuilder = (function() {
         _this.printable_container.find('.printable-body').append($.trim("<div class=\"print-conditions\"></div>"));
         _this.printable_container.find('.printable-body .print-conditions').html(_this.condition_container.html());
         if (_this.list_modal.find('.toggle-obstacles').prop('checked')) {
-          _this.printable_container.find('.printable-body').append($.trim("<div class=\"obstacles\">\n    <div>Mark the three obstacles you are using.</div>\n    <img class=\"obstacle-silhouettes\" src=\"images/xws-obstacles.png\" />\n</div>"));
+          _this.printable_container.find('.printable-body').append($.trim("<div class=\"obstacles\">\n    <div class=\"translated\" defaultText=\"Mark obstacles\"></div>\n    <img class=\"obstacle-silhouettes\" src=\"images/xws-obstacles.png\" />\n</div>"));
         }
         query = _this.getPermaLinkParams(['sn', 'obs']);
         if ((query != null) && _this.list_modal.find('.toggle-juggler-qrcode').prop('checked')) {
-          _this.printable_container.find('.printable-body').append($.trim("<div class=\"qrcode-container\">\n    <div class=\"permalink-container\">\n        <div class=\"qrcode\"></div>\n        <div class=\"qrcode-text\">Scan to open this list in the builder</div>\n    </div>\n    <div class=\"juggler-container\">\n        <div class=\"qrcode\"></div>\n        <div class=\"qrcode-text\">For List Juggler (When it's updated for 2.0)</div>\n    </div>\n</div>"));
+          _this.printable_container.find('.printable-body').append($.trim("<div class=\"qrcode-container\">\n    <div class=\"permalink-container\">\n        <div class=\"qrcode\"></div>\n        <div class=\"qrcode-text translated\" defaultText=\"Scan QR-Code\"></div>\n    </div>\n    <div class=\"juggler-container\">\n        <div class=\"qrcode\"></div>\n        <div class=\"qrcode-text translated\" defaultText=\"List Juggler QR-Code\"></div>\n    </div>\n</div>"));
           text = "https://yasb-xws.herokuapp.com/juggler" + query;
           _this.printable_container.find('.juggler-container .qrcode').qrcode({
             render: 'div',
@@ -3772,6 +3836,18 @@ exportObj.SquadBuilder = (function() {
     return "" + URL_BASE + params;
   };
 
+  SquadBuilder.prototype.updateShipOrder = function(oldpos, newpos) {
+    var selectedShip;
+    selectedShip = this.ships[oldpos];
+    this.ships.splice(oldpos, 1);
+    this.ships.splice(newpos, 0, selectedShip);
+    this.updatePermaLink;
+    if (oldpos !== newpos) {
+      this.current_squad.dirty = true;
+      return this.container.trigger('xwing-backend:squadDirtinessChanged');
+    }
+  };
+
   SquadBuilder.prototype.updatePermaLink = function() {
     var next_params;
     if (!this.container.is(':visible')) {
@@ -3798,20 +3874,21 @@ exportObj.SquadBuilder = (function() {
     oldHyperspace = this.isHyperspace;
     oldEpic = this.isEpic;
     oldQuickbuild = this.isQuickbuild;
-    this.isHyperspace = false;
+    this.isHyperspace = true;
     this.isEpic = false;
     this.isQuickbuild = false;
     switch (gametype) {
-      case 'standard':
-        this.desired_points_input.val(200);
+      case 'extended':
+        this.isHyperspace = false;
+        this.desired_points_input.val(20);
         break;
-      case 'hyperspace':
+      case 'standard':
         this.isHyperspace = true;
-        this.desired_points_input.val(200);
+        this.desired_points_input.val(20);
         break;
       case 'epic':
         this.isEpic = true;
-        this.desired_points_input.val(500);
+        this.desired_points_input.val(50);
         break;
       case 'quickbuild':
         this.isQuickbuild = true;
@@ -3851,7 +3928,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.onPointsUpdated = function(cb) {
-    var bbcode_ships, conditions, conditions_set, htmlview_ships, i, obstacle, obstacles, points_dest, points_destroyed, points_left, reddit_ships, ship, ship_uses_unreleased_content, simplecopy_ships, tot_points, tts_obstacles, tts_ships, unreleased_content_used, _i, _j, _k, _l, _len, _len1, _len2, _ref, _ref1, _ref2;
+    var conditions, conditions_set, i, points_dest, points_destroyed, points_left, ship, ship_uses_unreleased_content, tot_points, unreleased_content_used, _i, _j, _len, _ref, _ref1;
     if (cb == null) {
       cb = $.noop;
     }
@@ -3886,58 +3963,13 @@ exportObj.SquadBuilder = (function() {
     this.points_remaining_container.toggleClass('red', points_left < 0);
     this.unreleased_content_used_container.toggleClass('d-none', !unreleased_content_used);
     this.fancy_total_points_container.text(this.total_points);
-    this.fancy_container.text('');
-    this.simple_container.html('<table class="simple-table"></table>');
-    simplecopy_ships = [];
-    reddit_ships = [];
-    tts_ships = [];
-    bbcode_ships = [];
-    htmlview_ships = [];
-    _ref1 = this.ships;
-    for (_j = 0, _len = _ref1.length; _j < _len; _j++) {
-      ship = _ref1[_j];
-      if (ship.pilot != null) {
-        this.fancy_container.append(ship.toHTML());
-        this.simple_container.find('table').append(ship.toTableRow());
-        simplecopy_ships.push(ship.toSimpleCopy());
-        reddit_ships.push(ship.toRedditText());
-        tts_ships.push(ship.toTTSText());
-        bbcode_ships.push(ship.toBBCode());
-        htmlview_ships.push(ship.toSimpleHTML());
-      }
-    }
-    this.htmlview_container.find('textarea').val($.trim("" + (htmlview_ships.join('<br />')) + "\n<br />\n<b><i>Total: " + this.total_points + "</i></b>\n<br />\n<a href=\"" + (this.getPermaLink()) + "\">View in Yet Another Squad Builder 2.0</a>"));
-    this.reddit_container.find('textarea').val($.trim("" + (reddit_ships.join("    \n")) + "    \n**Total:** *" + this.total_points + "*    \n    \n[View in Yet Another Squad Builder 2.0](" + (this.getPermaLink()) + ")"));
-    this.simplecopy_container.find('textarea').val($.trim("" + (simplecopy_ships.join("")) + "    \nTotal: " + this.total_points + "    \n    \nView in Yet Another Squad Builder 2.0: " + (this.getPermaLink())));
-    obstacles = this.getObstacles();
-    if (((obstacles != null) && obstacles.length > 0) && (tts_ships.length > 0)) {
-      tts_ships[tts_ships.length - 1] = tts_ships[tts_ships.length - 1].slice(0, -2);
-      tts_obstacles = ' |';
-      for (_k = 0, _len1 = obstacles.length; _k < _len1; _k++) {
-        obstacle = obstacles[_k];
-        if (obstacle != null) {
-          tts_obstacles += " " + obstacle + " /";
-        }
-      }
-      tts_obstacles = tts_obstacles.slice(0, -1);
-      tts_ships.push(tts_obstacles);
-    }
-    this.tts_textarea.val($.trim("" + (tts_ships.join(""))));
-    this.bbcode_container.find('textarea').val($.trim("" + (bbcode_ships.join("\n\n")) + "\n[b][i]Total: " + this.total_points + "[/i][/b]\n\n[url=" + (this.getPermaLink()) + "]View in Yet Another Squad Builder 2.0[/url]"));
-    this.xws_textarea.val($.trim(JSON.stringify(this.toXWS())));
-    $('#xws-qrcode-container').text('');
-    $('#xws-qrcode-container').qrcode({
-      render: 'canvas',
-      text: JSON.stringify(this.toMinimalXWS()),
-      ec: 'L',
-      size: 128
-    });
+    this.updatePrintAndExportTexts();
     this.checkCollection();
     if (typeof Set !== "undefined" && Set !== null) {
       conditions_set = new Set();
-      _ref2 = this.ships;
-      for (_l = 0, _len2 = _ref2.length; _l < _len2; _l++) {
-        ship = _ref2[_l];
+      _ref1 = this.ships;
+      for (_j = 0, _len = _ref1.length; _j < _len; _j++) {
+        ship = _ref1[_j];
         ship.getConditions().forEach(function(condition) {
           return conditions_set.add(condition);
         });
@@ -3969,8 +4001,6 @@ exportObj.SquadBuilder = (function() {
     var _ref, _ref1;
     this.current_squad = squad;
     this.backend_delete_list_button.removeClass('disabled');
-    this.squad_name_input.val(this.current_squad.name);
-    this.squad_name_placeholder.text(this.current_squad.name);
     this.current_obstacles = this.current_squad.additional_data.obstacles;
     this.updateObstacleSelect(this.current_squad.additional_data.obstacles);
     if (squad.serialized.length != null) {
@@ -3980,8 +4010,8 @@ exportObj.SquadBuilder = (function() {
     this.tag.val((_ref1 = squad.additional_data.tag) != null ? _ref1 : '');
     this.backend_status.fadeOut('slow');
     this.current_squad.dirty = false;
-    this.container.trigger('xwing-backend:squadDirtinessChanged');
-    return this.container.trigger('xwing-backend:squadNameChanged');
+    this.container.trigger('xwing-backend:squadNameChanged');
+    return this.container.trigger('xwing-backend:squadDirtinessChanged');
   };
 
   SquadBuilder.prototype.onSquadDirtinessChanged = function() {
@@ -3989,9 +4019,9 @@ exportObj.SquadBuilder = (function() {
     this.backend_save_list_as_button.toggleClass('disabled', this.total_points === 0);
     this.backend_delete_list_button.toggleClass('disabled', this.current_squad.id == null);
     if (this.ships.length > 1) {
-      return $('meta[property="og:description"]').attr("content", "X-Wing Squadron by YASB 2.0: " + this.current_squad.name + ": " + this.describeSquad());
+      return $('meta[property="og:description"]').attr("content", this.uitranslation("X-Wing Squadron by YASB 2.0: ") + this.current_squad.name + ": " + this.describeSquad());
     } else {
-      return $('meta[property="og:description"]').attr("content", "YASB 2.0 is a simple, fast, and easy to use squad builder for X-Wing Miniatures by Fantasy Flight Games.");
+      return $('meta[property="og:description"]').attr("content", this.uitranslation("YASB advertisment"));
     }
   };
 
@@ -4008,13 +4038,64 @@ exportObj.SquadBuilder = (function() {
     if ($.getParameterByName('f') !== this.faction) {
       return;
     }
-    if (this.current_squad.name !== "Unnamed Squadron" && this.current_squad.name !== "Unsaved Squadron") {
+    if (this.current_squad.name !== this.uitranslation("Unnamed Squadron") && this.current_squad.name !== this.uitranslation("Unsaved Squadron")) {
       if (document.title !== "YASB 2.0 - " + this.current_squad.name) {
-        return document.title = "YASB 2.0 - " + this.current_squad.name;
+        document.title = "YASB 2.0 - " + this.current_squad.name;
       }
     } else {
-      return document.title = "YASB 2.0";
+      document.title = "YASB 2.0";
     }
+    return this.updatePrintAndExportTexts();
+  };
+
+  SquadBuilder.prototype.updatePrintAndExportTexts = function() {
+    var bbcode_ships, htmlview_ships, obstacle, obstacles, reddit_ships, ship, simplecopy_ships, tts_obstacles, tts_ships, _i, _j, _len, _len1, _ref;
+    this.fancy_container.text('');
+    this.simple_container.html('<table class="simple-table"></table>');
+    simplecopy_ships = [];
+    reddit_ships = [];
+    tts_ships = [];
+    bbcode_ships = [];
+    htmlview_ships = [];
+    _ref = this.ships;
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      ship = _ref[_i];
+      if (ship.pilot != null) {
+        this.fancy_container.append(ship.toHTML());
+        this.simple_container.find('table').append(ship.toTableRow());
+        simplecopy_ships.push(ship.toSimpleCopy());
+        reddit_ships.push(ship.toRedditText());
+        tts_ships.push(ship.toTTSText());
+        bbcode_ships.push(ship.toBBCode());
+        htmlview_ships.push(ship.toSimpleHTML());
+      }
+    }
+    this.htmlview_container.find('textarea').val($.trim("" + (htmlview_ships.join('<br />')) + "\n<br />\n<b><i>Total: " + this.total_points + "</i></b>\n<br />\n<a href=\"" + (this.getPermaLink()) + "\">" + (this.uitranslation("View in YASB")) + "</a>"));
+    this.reddit_container.find('textarea').val($.trim("" + (reddit_ships.join("    \n")) + "    \n**" + (this.uitranslation('Total')) + ":** *" + this.total_points + "*    \n    \n[" + (this.uitranslation('View in YASB')) + "](" + (this.getPermaLink()) + ")"));
+    this.simplecopy_container.find('textarea').val($.trim("" + (simplecopy_ships.join("")) + "    \n" + (this.uitranslation('Total')) + ": " + this.total_points + "    \n    \n" + (this.uitranslation('View in YASB')) + ": " + (this.getPermaLink())));
+    obstacles = this.getObstacles();
+    if (((obstacles != null) && obstacles.length > 0) && (tts_ships.length > 0)) {
+      tts_ships[tts_ships.length - 1] = tts_ships[tts_ships.length - 1].slice(0, -2);
+      tts_obstacles = ' |';
+      for (_j = 0, _len1 = obstacles.length; _j < _len1; _j++) {
+        obstacle = obstacles[_j];
+        if (obstacle != null) {
+          tts_obstacles += " " + obstacle + " /";
+        }
+      }
+      tts_obstacles = tts_obstacles.slice(0, -1);
+      tts_ships.push(tts_obstacles);
+    }
+    this.tts_textarea.val($.trim("" + (tts_ships.join(""))));
+    this.xws_textarea.val($.trim(JSON.stringify(this.toXWS())));
+    $('#xws-qrcode-container').text('');
+    $('#xws-qrcode-container').qrcode({
+      render: 'canvas',
+      text: JSON.stringify(this.toMinimalXWS()),
+      ec: 'L',
+      size: 128
+    });
+    return this.bbcode_container.find('textarea').val($.trim("" + (bbcode_ships.join("\n\n")) + "\n[b][i]" + (this.uitranslation('Total')) + ": " + this.total_points + "[/i][/b]\n\n[url=" + (this.getPermaLink()) + "]" + (this.uitranslation('View in YASB')) + "[/url]"));
   };
 
   SquadBuilder.prototype.removeAllShips = function() {
@@ -4022,7 +4103,7 @@ exportObj.SquadBuilder = (function() {
       this.removeShip(this.ships[0]);
     }
     if (this.ships.length > 0) {
-      throw new Error("Ships not emptied");
+      throw new Error(this.uitranslation("Ships not emptied"));
     }
   };
 
@@ -4053,12 +4134,12 @@ exportObj.SquadBuilder = (function() {
 
   SquadBuilder.prototype.serialize = function() {
     var game_type_abbrev, selected_points, serialization_version, ship;
-    serialization_version = 8;
+    serialization_version = 9;
     game_type_abbrev = (function() {
       switch (this.game_type_selector.val()) {
-        case 'standard':
+        case 'extended':
           return 's';
-        case 'hyperspace':
+        case 'standard':
           return 'h';
         case 'epic':
           return 'e';
@@ -4088,25 +4169,28 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.loadFromSerialized = function(serialized) {
-    var desired_points, g, game_type_abbrev, game_type_and_point_abbrev, matches, new_ship, p, re, s, serialized_ship, serialized_ships, ship, ship_splitter, ships_with_unmet_dependencies, version, _i, _j, _len, _len1, _ref, _ref1, _ref2, _ref3;
+    var desired_points, g, game_type_abbrev, matches, new_ship, p, re, s, serialized_ship, serialized_ships, ship, ship_splitter, ships_with_unmet_dependencies, version, _i, _j, _len, _len1, _ref, _ref1, _ref2;
     this.suppress_automatic_new_ship = true;
     this.removeAllShips();
     re = __indexOf.call(serialized, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
     matches = re.exec(serialized);
     if (matches != null) {
       version = parseInt(matches[1]);
-      ship_splitter = version > 7 ? 'Y' : ';';
-      _ref2 = version > 7 ? ((_ref = matches[2].split('Z'), g = _ref[0], p = _ref[1], s = _ref[2], _ref), [g, parseInt(p), s]) : ((_ref1 = matches[2].split('!'), game_type_and_point_abbrev = _ref1[0], s = _ref1[1], _ref1), parseInt(game_type_and_point_abbrev.split('=')[1]) ? p = parseInt(game_type_and_point_abbrev.split('=')[1]) : p = 200, g = game_type_and_point_abbrev.split('=')[0], [g, p, s]), game_type_abbrev = _ref2[0], desired_points = _ref2[1], serialized_ships = _ref2[2];
+      if (version < 9) {
+        ship_splitter = 'Y';
+      }
+      _ref = matches[2].split('Z'), g = _ref[0], p = _ref[1], s = _ref[2];
+      _ref1 = [g, parseInt(p), s], game_type_abbrev = _ref1[0], desired_points = _ref1[1], serialized_ships = _ref1[2];
       if (serialized_ships == null) {
         this.loading_failed_container.toggleClass('d-none', false);
         return;
       }
       switch (game_type_abbrev) {
         case 's':
-          this.changeGameTypeOnSquadLoad('standard');
+          this.changeGameTypeOnSquadLoad('extended');
           break;
         case 'h':
-          this.changeGameTypeOnSquadLoad('hyperspace');
+          this.changeGameTypeOnSquadLoad('standard');
           break;
         case 'e':
           this.changeGameTypeOnSquadLoad('epic');
@@ -4118,9 +4202,9 @@ exportObj.SquadBuilder = (function() {
       this.desired_points_input.change();
       ships_with_unmet_dependencies = [];
       if (serialized_ships.length != null) {
-        _ref3 = serialized_ships.split(ship_splitter);
-        for (_i = 0, _len = _ref3.length; _i < _len; _i++) {
-          serialized_ship = _ref3[_i];
+        _ref2 = serialized_ships.split(ship_splitter);
+        for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+          serialized_ship = _ref2[_i];
           if (serialized_ship !== '') {
             new_ship = this.addShip();
             if ((!new_ship.fromSerialized(version, serialized_ship)) || !new_ship.pilot) {
@@ -4272,7 +4356,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 3872
+              lineno: 3983
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4282,7 +4366,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 3873
+                lineno: 3984
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -4751,7 +4835,7 @@ exportObj.SquadBuilder = (function() {
         maneuvers_modified = ship.effectiveStats().maneuvers;
         if ((added_dials[ship.data.name] == null) || !(_ref1 = maneuvers_modified.toString(), __indexOf.call(added_dials[ship.data.name], _ref1) >= 0)) {
           added_dials[ship.data.name] = ((_ref2 = added_dials[ship.data.name]) != null ? _ref2 : []).concat([maneuvers_modified.toString()]);
-          dialHTML += '<div class="fancy-dial">' + ("<h4 class=\"ship-name-dial\">" + (ship.data.display_name != null ? ship.data.display_name : ship.data.name)) + ("" + (maneuvers_modified.toString() !== maneuvers_unmodified.toString() ? " (upgraded)" : "") + "</h4>") + this.getManeuverTableHTML(maneuvers_modified, maneuvers_unmodified) + '</div>';
+          dialHTML += '<div class="fancy-dial">' + ("<h4 class=\"ship-name-dial\">" + (ship.data.display_name != null ? ship.data.display_name : ship.data.name)) + ("" + (maneuvers_modified.toString() !== maneuvers_unmodified.toString() ? " (" + this.uitranslation(modified) + ")" : "") + "</h4>") + this.getManeuverTableHTML(maneuvers_modified, maneuvers_unmodified) + '</div>';
         }
       }
     }
@@ -4759,9 +4843,9 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.getManeuverTableHTML = function(maneuvers, baseManeuvers) {
-    var bearing, bearings, bearings_without_maneuvers, className, color, difficulty, haveManeuver, linePath, maneuverClass, maneuverClass2, outTable, outlineColor, speed, transform, trianglePath, turn, v, _i, _j, _k, _l, _len, _len1, _len2, _m, _n, _ref, _ref1, _ref2, _ref3, _results;
+    var bearing, bearings, bearings_without_maneuvers, className, color, difficulty, haveManeuver, innerPath, linePath, maneuverClass, maneuverClass2, outTable, outlineColor, speed, transform, trianglePath, turn, v, _i, _j, _k, _l, _len, _len1, _len2, _m, _n, _ref, _ref1, _ref2, _ref3, _results;
     if ((maneuvers == null) || maneuvers.length === 0) {
-      return "Missing maneuver info.";
+      return this.uitranslation("Missing maneuver info.");
     }
     bearings_without_maneuvers = (function() {
       _results = [];
@@ -4830,73 +4914,86 @@ exportObj.SquadBuilder = (function() {
             maneuverClass2 = "svg-modified-maneuver";
           }
           if (speed === 0 && turn === 2) {
-            outTable += "<rect class=\"svg-maneuver-stop " + maneuverClass + " " + maneuverClass2 + "\" x=\"50\" y=\"50\" width=\"100\" height=\"100\" style=\"fill:" + color + "\" />";
+            outTable += "<rect class=\"svg-maneuver-stop " + maneuverClass + " " + maneuverClass2 + "\" x=\"50\" y=\"50\" width=\"100\" height=\"100\" style=\"fill:" + color + "; stroke-width:5; stroke:" + outlineColor + "\" />";
           } else {
             transform = "";
             className = "";
             switch (turn) {
               case 0:
                 linePath = "M160,180 L160,70 80,70";
+                innerPath = "M160,175 L160,70 70,70";
                 trianglePath = "M80,100 V40 L30,70 Z";
                 break;
               case 1:
                 linePath = "M150,180 S150,120 80,60";
+                innerPath = "M150,175 S150,120 80,60";
                 trianglePath = "M80,100 V40 L30,70 Z";
                 transform = "transform='translate(-5 -15) rotate(45 70 90)' ";
                 break;
               case 2:
                 linePath = "M100,180 L100,100 100,80";
+                innerPath = "M100,175 L100,120 100,70";
                 trianglePath = "M70,80 H130 L100,30 Z";
                 break;
               case 3:
                 linePath = "M50,180 S50,120 120,60";
+                innerPath = "M50,175 S50,120 120,60";
                 trianglePath = "M120,100 V40 L170,70 Z";
                 transform = "transform='translate(5 -15) rotate(-45 130 90)' ";
                 break;
               case 4:
                 linePath = "M40,180 L40,70 120,70";
+                innerPath = "M40,175 L40,70 130,70";
                 trianglePath = "M120,100 V40 L170,70 Z";
                 break;
               case 5:
                 linePath = "M50,180 L50,100 C50,10 140,10 140,100 L140,120";
+                innerPath = "M50,175 L50,100 C50,10 140,10 140,100 L140,130";
                 trianglePath = "M170,120 H110 L140,180 Z";
                 break;
               case 6:
                 linePath = "M150,180 S150,120 80,60";
+                innerPath = "M150,175 S150,120 85,65";
                 trianglePath = "M80,100 V40 L30,70 Z";
                 transform = "transform='translate(0 50)'";
                 break;
               case 7:
                 linePath = "M50,180 S50,120 120,60";
+                innerPath = "M50,175 S50,120 115,65";
                 trianglePath = "M120,100 V40 L170,70 Z";
                 transform = "transform='translate(0 50)'";
                 break;
               case 8:
                 linePath = "M160,180 L160,70 80,70";
+                innerPath = "M160,175 L160,70 85,70";
                 trianglePath = "M60,100 H100 L80,140 Z";
                 break;
               case 9:
                 linePath = "M40,180 L40,70 120,70";
+                innerPath = "M40,175 L40,70 115,70";
                 trianglePath = "M100,100 H140 L120,140 Z";
                 break;
               case 10:
                 linePath = "M50,180 S50,120 120,60";
+                innerPath = "M50,175 S50,120 120,60";
                 trianglePath = "M120,100 V40 L170,70 Z";
                 transform = "transform='translate(5 -15) rotate(-45 130 90)' ";
                 className = 'backwards';
                 break;
               case 11:
                 linePath = "M100,180 L100,100 100,80";
+                innerPath = "M100,175 L100,100 100,70";
                 trianglePath = "M70,80 H130 L100,30 Z";
                 className = 'backwards';
                 break;
               case 12:
                 linePath = "M150,180 S150,120 80,60";
+                innerPath = "M150,175 S150,120 80,60";
                 trianglePath = "M80,100 V40 L30,70 Z";
                 transform = "transform='translate(-5 -15) rotate(45 70 90)' ";
                 className = 'backwards';
             }
-            outTable += $.trim("<g class=\"maneuver " + className + "\">\n  <path class = 'svg-maneuver-outer " + maneuverClass + " " + maneuverClass2 + "' stroke-width='25' fill='none' stroke='" + outlineColor + "' d='" + linePath + "' />\n  <path class = 'svg-maneuver-triangle " + maneuverClass + " " + maneuverClass2 + "' d='" + trianglePath + "' fill='" + color + "' stroke-width='5' stroke='" + outlineColor + "' " + transform + "/>\n  <path class = 'svg-maneuver-inner " + maneuverClass + " " + maneuverClass2 + "' stroke-width='15' fill='none' stroke='" + color + "' d='" + linePath + "' />\n</g>");
+            outTable += $.trim("<g class=\"maneuver " + className + "\">\n  <path class = 'svg-maneuver-outer " + maneuverClass + " " + maneuverClass2 + "' stroke-width='25' fill='none' stroke='" + outlineColor + "' d='" + linePath + "' />\n  <path class = 'svg-maneuver-triangle " + maneuverClass + " " + maneuverClass2 + "' d='" + trianglePath + "' fill='" + color + "' stroke-width='5' stroke='" + outlineColor + "' " + transform + "/>\n  <path class = 'svg-maneuver-inner " + maneuverClass + " " + maneuverClass2 + "' stroke-width='15' fill='none' stroke='" + color + "' d='" + innerPath + "' />\n</g>");
           }
           outTable += "</svg>";
         }
@@ -4928,6 +5025,10 @@ exportObj.SquadBuilder = (function() {
       if (action.search('F-') !== -1) {
         color = "force ";
         action = action.replace(/F-/gi, '');
+      }
+      if (action.search('W-') !== -1) {
+        prefix = "White ";
+        action = action.replace(/W-/gi, '');
       } else if (action.search('R-') !== -1) {
         color = "red ";
         action = action.replace(/R-/gi, '');
@@ -4940,7 +5041,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.showTooltip = function(type, data, additional_opts, container, force_update) {
-    var addon_count, chargeHTML, cls, count, effective_stats, first, ini, inis, item, missingStuffInfoText, name, pilot, pilot_count, point_info, possible_inis, recurringicon, restriction_info, ship, ship_count, slot, slot_types, source, sources, state, uniquedots, upgrade, well, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref33, _ref34, _ref35, _ref36, _ref37, _ref38, _ref39, _ref4, _ref40, _ref41, _ref42, _ref43, _ref44, _ref45, _ref46, _ref47, _ref48, _ref49, _ref5, _ref50, _ref51, _ref52, _ref53, _ref54, _ref55, _ref56, _ref57, _ref58, _ref59, _ref6, _ref60, _ref61, _ref62, _ref63, _ref64, _ref65, _ref66, _ref67, _ref68, _ref69, _ref7, _ref70, _ref71, _ref72, _ref73, _ref74, _ref75, _ref8, _ref9, _results, _results1;
+    var addon_count, chargeHTML, cls, count, effective_stats, first, ini, inis, item, missingStuffInfoText, name, pilot, pilot_count, point_info, point_range_text, possible_costs, possible_inis, recurringicon, restriction_info, ship, ship_count, slot, slot_types, source, sources, state, uniquedots, upgrade, well, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref33, _ref34, _ref35, _ref36, _ref37, _ref38, _ref39, _ref4, _ref40, _ref41, _ref42, _ref43, _ref44, _ref45, _ref46, _ref47, _ref48, _ref49, _ref5, _ref50, _ref51, _ref52, _ref53, _ref54, _ref55, _ref56, _ref57, _ref58, _ref59, _ref6, _ref60, _ref61, _ref62, _ref63, _ref64, _ref65, _ref66, _ref67, _ref68, _ref69, _ref7, _ref70, _ref71, _ref72, _ref73, _ref74, _ref75, _ref76, _ref77, _ref8, _ref9, _results, _results1;
     if (container == null) {
       container = this.info_container;
     }
@@ -4951,6 +5052,7 @@ exportObj.SquadBuilder = (function() {
       switch (type) {
         case 'Ship':
           possible_inis = [];
+          possible_costs = [];
           slot_types = {};
           for (slot in exportObj.upgradesBySlotCanonicalName) {
             slot_types[slot] = -1;
@@ -4958,12 +5060,13 @@ exportObj.SquadBuilder = (function() {
           _ref = exportObj.pilots;
           for (name in _ref) {
             pilot = _ref[name];
-            if (pilot.ship !== data.name) {
+            if (pilot.ship !== data.name || !this.isOurFaction(pilot.faction)) {
               continue;
             }
             if (!(_ref1 = pilot.skill, __indexOf.call(possible_inis, _ref1) >= 0)) {
               possible_inis.push(pilot.skill);
             }
+            possible_costs.push(pilot.points);
             for (slot in slot_types) {
               state = slot_types[slot];
               switch (pilot.slots.filter((function(_this) {
@@ -5016,10 +5119,10 @@ exportObj.SquadBuilder = (function() {
           }
           possible_inis.sort();
           container.find('.info-type').text(type);
-          container.find('.info-name').html("" + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) ? "" : " (" + (exportObj.translate(this.language, 'ui', 'unreleased')) + ")"));
+          container.find('.info-name').html("" + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) ? "" : " (" + (this.uitranslation('unreleased')) + ")"));
           if (((_ref2 = this.collection) != null ? _ref2.counts : void 0) != null) {
             ship_count = (_ref3 = (_ref4 = this.collection.counts) != null ? (_ref5 = _ref4.ship) != null ? _ref5[data.name] : void 0 : void 0) != null ? _ref3 : 0;
-            container.find('.info-collection').text("You have " + ship_count + " ship model" + (ship_count > 1 ? 's' : '') + " in your collection.");
+            container.find('.info-collection').text(this.uitranslation("collectionContentShips", ship_count));
             container.find('.info-collection').show();
           } else {
             container.find('.info-collection').hide();
@@ -5035,6 +5138,13 @@ exportObj.SquadBuilder = (function() {
           }
           container.find('tr.info-skill td.info-data').text(inis);
           container.find('tr.info-skill').show();
+          point_range_text = "" + (Math.min.apply(Math, possible_costs)) + " - " + (Math.max.apply(Math, possible_costs));
+          container.find('tr.info-points td.info-data').text(point_range_text);
+          if (this.isQuickbuild) {
+            container.find('tr.info-points').hide();
+          } else {
+            container.find('tr.info-points').show();
+          }
           container.find('tr.info-engagement').hide();
           container.find('tr.info-attack td.info-data').text(data.attack);
           container.find('tr.info-attack-bullseye td.info-data').text(data.attackbull);
@@ -5054,13 +5164,13 @@ exportObj.SquadBuilder = (function() {
           container.find('tr.info-attack-doubleturret').toggle(data.attackdt != null);
           container.find('tr.info-ship').hide();
           if (data.large != null) {
-            container.find('tr.info-base td.info-data').text("Large");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Large"));
           } else if (data.medium != null) {
-            container.find('tr.info-base td.info-data').text("Medium");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Medium"));
           } else if (data.huge != null) {
-            container.find('tr.info-base td.info-data').text("Huge");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Huge"));
           } else {
-            container.find('tr.info-base td.info-data').text("Small");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Small"));
           }
           container.find('tr.info-base').show();
           _ref6 = container.find('tr.info-attack td.info-header i.xwing-miniatures-font')[0].classList;
@@ -5106,10 +5216,10 @@ exportObj.SquadBuilder = (function() {
             _results = [];
             for (slot in slot_types) {
               state = slot_types[slot];
-              _results.push(state === 1 ? exportObj.translate(this.language, 'sloticon', slot) : (state === 2 ? '(' + exportObj.translate(this.language, 'sloticon', slot) + ')' : (state === 3 ? exportObj.translate(this.language, 'sloticon', slot) + exportObj.translate(this.language, 'sloticon', slot) : (state === 4 ? exportObj.translate(this.language, 'sloticon', slot) + '(' + exportObj.translate(this.language, 'sloticon', slot) + ')' : (state === 5 ? '(' + exportObj.translate(this.language, 'sloticon', slot) + exportObj.translate(this.language, 'sloticon', slot) + ')' : (state === 6 ? exportObj.translate(this.language, 'sloticon', slot) + exportObj.translate(this.language, 'sloticon', slot) + exportObj.translate(this.language, 'sloticon', slot) : void 0))))));
+              _results.push(state === 1 ? exportObj.translate('sloticon', slot) : (state === 2 ? '(' + exportObj.translate('sloticon', slot) + ')' : (state === 3 ? exportObj.translate('sloticon', slot) + exportObj.translate('sloticon', slot) : (state === 4 ? exportObj.translate('sloticon', slot) + '(' + exportObj.translate('sloticon', slot) + ')' : (state === 5 ? '(' + exportObj.translate('sloticon', slot) + exportObj.translate('sloticon', slot) + ')' : (state === 6 ? exportObj.translate('sloticon', slot) + exportObj.translate('sloticon', slot) + exportObj.translate('sloticon', slot) : void 0))))));
             }
             return _results;
-          }).call(this)).join(' ') || 'None');
+          })()).join(' ') || 'None');
           container.find('p.info-text').hide();
           container.find('p.info-maneuvers').show();
           container.find('p.info-maneuvers').html(this.getManeuverTableHTML(data.maneuvers, data.maneuvers));
@@ -5119,30 +5229,30 @@ exportObj.SquadBuilder = (function() {
             _results = [];
             for (_k = 0, _len2 = _ref9.length; _k < _len2; _k++) {
               source = _ref9[_k];
-              _results.push(exportObj.translate(this.language, 'sources', source));
+              _results.push(exportObj.translate('sources', source));
             }
             return _results;
-          }).call(this)).sort();
-          container.find('.info-sources.info-data').text((sources.length > 1) || (!(__indexOf.call(sources, 'Loose Ships') >= 0)) ? (sources.length > 0 ? sources.join(', ') : exportObj.translate(this.language, 'ui', 'unreleased')) : "Only available from 1st edition");
+          })()).sort();
+          container.find('.info-sources.info-data').text((sources.length > 1) || (!(_ref9 = exportObj.translate('sources', 'Loose Ships'), __indexOf.call(sources, _ref9) >= 0)) ? (sources.length > 0 ? sources.join(', ') : exportObj.translate('ui', 'unreleased')) : this.uitranslation("Only available from 1st edition"));
           container.find('.info-sources').show();
           break;
         case 'Pilot':
           container.find('.info-type').text(type);
           container.find('.info-sources.info-data').text(((function() {
-            var _k, _len2, _ref9, _results;
-            _ref9 = data.sources;
+            var _k, _len2, _ref10, _results;
+            _ref10 = data.sources;
             _results = [];
-            for (_k = 0, _len2 = _ref9.length; _k < _len2; _k++) {
-              source = _ref9[_k];
-              _results.push(exportObj.translate(this.language, 'sources', source));
+            for (_k = 0, _len2 = _ref10.length; _k < _len2; _k++) {
+              source = _ref10[_k];
+              _results.push(exportObj.translate('sources', source));
             }
             return _results;
-          }).call(this)).sort().join(', '));
+          })()).sort().join(', '));
           container.find('.info-sources').show();
-          if (((_ref9 = this.collection) != null ? _ref9.counts : void 0) != null) {
-            pilot_count = (_ref10 = (_ref11 = this.collection.counts) != null ? (_ref12 = _ref11.pilot) != null ? _ref12[data.name] : void 0 : void 0) != null ? _ref10 : 0;
-            ship_count = (_ref13 = (_ref14 = this.collection.counts.ship) != null ? _ref14[data.ship] : void 0) != null ? _ref13 : 0;
-            container.find('.info-collection').text("You have " + ship_count + " ship model" + (ship_count > 1 ? 's' : '') + " and " + pilot_count + " pilot card" + (pilot_count > 1 ? 's' : '') + " in your collection.");
+          if (((_ref10 = this.collection) != null ? _ref10.counts : void 0) != null) {
+            pilot_count = (_ref11 = (_ref12 = this.collection.counts) != null ? (_ref13 = _ref12.pilot) != null ? _ref13[data.name] : void 0 : void 0) != null ? _ref11 : 0;
+            ship_count = (_ref14 = (_ref15 = this.collection.counts.ship) != null ? _ref15[data.ship] : void 0) != null ? _ref14 : 0;
+            container.find('.info-collection').text(this.uitranslation("collectionContentShipsAndPilots", ship_count, pilot_count));
             container.find('.info-collection').show();
           } else {
             container.find('.info-collection').hide();
@@ -5163,7 +5273,7 @@ exportObj.SquadBuilder = (function() {
           } else {
             uniquedots = "";
           }
-          container.find('.info-name').html("" + uniquedots + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) ? "" : " (" + (exportObj.translate(this.language, 'ui', 'unreleased')) + ")"));
+          container.find('.info-name').html("" + uniquedots + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) ? "" : " (" + (exportObj.translate('ui', 'unreleased')) + ")"));
           restriction_info = this.restriction_text(data) + this.upgrade_effect(data);
           if (restriction_info !== '') {
             container.find('p.info-restrictions').html(restriction_info != null ? restriction_info : '');
@@ -5171,19 +5281,19 @@ exportObj.SquadBuilder = (function() {
           } else {
             container.find('p.info-restrictions').hide();
           }
-          container.find('p.info-text').html((_ref15 = data.text) != null ? _ref15 : '');
+          container.find('p.info-text').html((_ref16 = data.text) != null ? _ref16 : '');
           container.find('p.info-text').show();
           ship = exportObj.ships[data.ship];
           container.find('tr.info-ship td.info-data').text(data.ship);
           container.find('tr.info-ship').show();
           if (ship.large != null) {
-            container.find('tr.info-base td.info-data').text("Large");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Large"));
           } else if (ship.medium != null) {
-            container.find('tr.info-base td.info-data').text("Medium");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Medium"));
           } else if (ship.huge != null) {
-            container.find('tr.info-base td.info-data').text("Huge");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Huge"));
           } else {
-            container.find('tr.info-base td.info-data').text("Small");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Small"));
           }
           container.find('tr.info-base').show();
           container.find('tr.info-skill td.info-data').text(data.skill);
@@ -5194,28 +5304,29 @@ exportObj.SquadBuilder = (function() {
           } else {
             container.find('tr.info-engagement').hide();
           }
-          container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass((_ref16 = ship.attack_icon) != null ? _ref16 : 'xwing-miniatures-font-attack');
-          container.find('tr.info-attack td.info-data').text(statAndEffectiveStat((_ref17 = (_ref18 = data.ship_override) != null ? _ref18.attack : void 0) != null ? _ref17 : ship.attack, effective_stats, 'attack'));
+          container.find('tr.info-points').hide();
+          container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass((_ref17 = ship.attack_icon) != null ? _ref17 : 'xwing-miniatures-font-attack');
+          container.find('tr.info-attack td.info-data').text(statAndEffectiveStat((_ref18 = (_ref19 = data.ship_override) != null ? _ref19.attack : void 0) != null ? _ref18 : ship.attack, effective_stats, 'attack'));
           container.find('tr.info-attack').toggle((ship.attack != null) || ((effective_stats != null ? effective_stats.attack : void 0) != null));
-          container.find('tr.info-attack-fullfront td.info-data').text(statAndEffectiveStat((_ref19 = (_ref20 = data.ship_override) != null ? _ref20.attackf : void 0) != null ? _ref19 : ship.attackf, effective_stats, 'attackf'));
+          container.find('tr.info-attack-fullfront td.info-data').text(statAndEffectiveStat((_ref20 = (_ref21 = data.ship_override) != null ? _ref21.attackf : void 0) != null ? _ref20 : ship.attackf, effective_stats, 'attackf'));
           container.find('tr.info-attack-fullfront').toggle((ship.attackf != null) || ((effective_stats != null ? effective_stats.attackf : void 0) != null));
-          container.find('tr.info-attack-bullseye td.info-data').text(statAndEffectiveStat((_ref21 = (_ref22 = data.ship_override) != null ? _ref22.attackbull : void 0) != null ? _ref21 : ship.attackbull, effective_stats, 'attackbull'));
+          container.find('tr.info-attack-bullseye td.info-data').text(statAndEffectiveStat((_ref22 = (_ref23 = data.ship_override) != null ? _ref23.attackbull : void 0) != null ? _ref22 : ship.attackbull, effective_stats, 'attackbull'));
           container.find('tr.info-attack-bullseye').toggle((ship.attackbull != null) || ((effective_stats != null ? effective_stats.attackbull : void 0) != null));
-          container.find('tr.info-attack-left td.info-data').text(statAndEffectiveStat((_ref23 = (_ref24 = data.ship_override) != null ? _ref24.attackl : void 0) != null ? _ref23 : ship.attackl, effective_stats, 'attackl'));
+          container.find('tr.info-attack-left td.info-data').text(statAndEffectiveStat((_ref24 = (_ref25 = data.ship_override) != null ? _ref25.attackl : void 0) != null ? _ref24 : ship.attackl, effective_stats, 'attackl'));
           container.find('tr.info-attack-left').toggle((ship.attackl != null) || ((effective_stats != null ? effective_stats.attackl : void 0) != null));
-          container.find('tr.info-attack-right td.info-data').text(statAndEffectiveStat((_ref25 = (_ref26 = data.ship_override) != null ? _ref26.attackr : void 0) != null ? _ref25 : ship.attackr, effective_stats, 'attackr'));
+          container.find('tr.info-attack-right td.info-data').text(statAndEffectiveStat((_ref26 = (_ref27 = data.ship_override) != null ? _ref27.attackr : void 0) != null ? _ref26 : ship.attackr, effective_stats, 'attackr'));
           container.find('tr.info-attack-right').toggle((ship.attackr != null) || ((effective_stats != null ? effective_stats.attackr : void 0) != null));
-          container.find('tr.info-attack-back td.info-data').text(statAndEffectiveStat((_ref27 = (_ref28 = data.ship_override) != null ? _ref28.attackb : void 0) != null ? _ref27 : ship.attackb, effective_stats, 'attackb'));
+          container.find('tr.info-attack-back td.info-data').text(statAndEffectiveStat((_ref28 = (_ref29 = data.ship_override) != null ? _ref29.attackb : void 0) != null ? _ref28 : ship.attackb, effective_stats, 'attackb'));
           container.find('tr.info-attack-back').toggle((ship.attackb != null) || ((effective_stats != null ? effective_stats.attackb : void 0) != null));
-          container.find('tr.info-attack-turret td.info-data').text(statAndEffectiveStat((_ref29 = (_ref30 = data.ship_override) != null ? _ref30.attackt : void 0) != null ? _ref29 : ship.attackt, effective_stats, 'attackt'));
+          container.find('tr.info-attack-turret td.info-data').text(statAndEffectiveStat((_ref30 = (_ref31 = data.ship_override) != null ? _ref31.attackt : void 0) != null ? _ref30 : ship.attackt, effective_stats, 'attackt'));
           container.find('tr.info-attack-turret').toggle((ship.attackt != null) || ((effective_stats != null ? effective_stats.attackt : void 0) != null));
-          container.find('tr.info-attack-doubleturret td.info-data').text(statAndEffectiveStat((_ref31 = (_ref32 = data.ship_override) != null ? _ref32.attackdt : void 0) != null ? _ref31 : ship.attackdt, effective_stats, 'attackdt'));
+          container.find('tr.info-attack-doubleturret td.info-data').text(statAndEffectiveStat((_ref32 = (_ref33 = data.ship_override) != null ? _ref33.attackdt : void 0) != null ? _ref32 : ship.attackdt, effective_stats, 'attackdt'));
           container.find('tr.info-attack-doubleturret').toggle((ship.attackdt != null) || ((effective_stats != null ? effective_stats.attackdt : void 0) != null));
           container.find('tr.info-range').hide();
           container.find('td.info-rangebonus').hide();
-          container.find('tr.info-agility td.info-data').text(statAndEffectiveStat((_ref33 = (_ref34 = data.ship_override) != null ? _ref34.agility : void 0) != null ? _ref33 : ship.agility, effective_stats, 'agility'));
+          container.find('tr.info-agility td.info-data').text(statAndEffectiveStat((_ref34 = (_ref35 = data.ship_override) != null ? _ref35.agility : void 0) != null ? _ref34 : ship.agility, effective_stats, 'agility'));
           container.find('tr.info-agility').show();
-          container.find('tr.info-hull td.info-data').text(statAndEffectiveStat((_ref35 = (_ref36 = data.ship_override) != null ? _ref36.hull : void 0) != null ? _ref35 : ship.hull, effective_stats, 'hull'));
+          container.find('tr.info-hull td.info-data').text(statAndEffectiveStat((_ref36 = (_ref37 = data.ship_override) != null ? _ref37.hull : void 0) != null ? _ref36 : ship.hull, effective_stats, 'hull'));
           container.find('tr.info-hull').show();
           recurringicon = '';
           if (ship.shieldrecurr != null) {
@@ -5225,7 +5336,7 @@ exportObj.SquadBuilder = (function() {
               ++count;
             }
           }
-          container.find('tr.info-shields td.info-data').html(statAndEffectiveStat((_ref37 = (_ref38 = data.ship_override) != null ? _ref38.shields : void 0) != null ? _ref37 : ship.shields, effective_stats, 'shields') + recurringicon);
+          container.find('tr.info-shields td.info-data').html(statAndEffectiveStat((_ref38 = (_ref39 = data.ship_override) != null ? _ref39.shields : void 0) != null ? _ref38 : ship.shields, effective_stats, 'shields') + recurringicon);
           container.find('tr.info-shields').show();
           recurringicon = '';
           if (ship.energyrecurr != null) {
@@ -5235,10 +5346,10 @@ exportObj.SquadBuilder = (function() {
               ++count;
             }
           }
-          container.find('tr.info-energy td.info-data').html(statAndEffectiveStat((_ref39 = (_ref40 = data.ship_override) != null ? _ref40.energy : void 0) != null ? _ref39 : ship.energy, effective_stats, 'energy') + recurringicon);
-          container.find('tr.info-energy').toggle((((_ref41 = data.ship_override) != null ? _ref41.energy : void 0) != null) || (ship.energy != null));
+          container.find('tr.info-energy td.info-data').html(statAndEffectiveStat((_ref40 = (_ref41 = data.ship_override) != null ? _ref41.energy : void 0) != null ? _ref40 : ship.energy, effective_stats, 'energy') + recurringicon);
+          container.find('tr.info-energy').toggle((((_ref42 = data.ship_override) != null ? _ref42.energy : void 0) != null) || (ship.energy != null));
           if ((((effective_stats != null ? effective_stats.force : void 0) != null) && effective_stats.force > 0) || (data.force != null)) {
-            container.find('tr.info-force td.info-data').html(statAndEffectiveStat((_ref42 = (_ref43 = data.ship_override) != null ? _ref43.force : void 0) != null ? _ref42 : data.force, effective_stats, 'force') + '<sup><i class="fas fa-caret-up"></i></sup>');
+            container.find('tr.info-force td.info-data').html(statAndEffectiveStat((_ref43 = (_ref44 = data.ship_override) != null ? _ref44.force : void 0) != null ? _ref43 : data.force, effective_stats, 'force') + '<sup><i class="fas fa-caret-up"></i></sup>');
             container.find('tr.info-force').show();
           } else {
             container.find('tr.info-force').hide();
@@ -5266,28 +5377,32 @@ exportObj.SquadBuilder = (function() {
           } else {
             container.find('tr.info-charge').hide();
           }
-          container.find('tr.info-actions td.info-data').html(this.formatActions((_ref44 = (_ref45 = data.ship_override) != null ? _ref45.actions : void 0) != null ? _ref44 : (_ref46 = effective_stats != null ? effective_stats.actions : void 0) != null ? _ref46 : ship.actions, ", ", (_ref47 = data.keyword) != null ? _ref47 : []));
+          if ((effective_stats != null ? effective_stats.actions : void 0) != null) {
+            container.find('tr.info-actions td.info-data').html(this.formatActions((_ref45 = (_ref46 = data.ship_override) != null ? _ref46.actions : void 0) != null ? _ref45 : effective_stats.actions, ", "));
+          } else {
+            container.find('tr.info-actions td.info-data').html(this.formatActions((_ref47 = (_ref48 = data.ship_override) != null ? _ref48.actions : void 0) != null ? _ref47 : ship.actions, ", ", (_ref49 = data.keyword) != null ? _ref49 : []));
+          }
           container.find('tr.info-actions').show();
           if (this.isQuickbuild) {
             container.find('tr.info-upgrades').hide();
           } else {
             container.find('tr.info-upgrades').show();
             container.find('tr.info-upgrades td.info-data').html(((function() {
-              var _k, _len2, _ref48, _results;
-              _ref48 = data.slots;
+              var _k, _len2, _ref50, _results;
+              _ref50 = data.slots;
               _results = [];
-              for (_k = 0, _len2 = _ref48.length; _k < _len2; _k++) {
-                slot = _ref48[_k];
-                _results.push(exportObj.translate(this.language, 'sloticon', slot));
+              for (_k = 0, _len2 = _ref50.length; _k < _len2; _k++) {
+                slot = _ref50[_k];
+                _results.push(exportObj.translate('sloticon', slot));
               }
               return _results;
-            }).call(this)).join(' ') || 'None');
+            })()).join(' ') || 'None');
           }
           container.find('p.info-maneuvers').show();
-          container.find('p.info-maneuvers').html(this.getManeuverTableHTML((_ref48 = effective_stats != null ? effective_stats.maneuvers : void 0) != null ? _ref48 : ship.maneuvers, ship.maneuvers));
+          container.find('p.info-maneuvers').html(this.getManeuverTableHTML((_ref50 = effective_stats != null ? effective_stats.maneuvers : void 0) != null ? _ref50 : ship.maneuvers, ship.maneuvers));
           break;
         case 'Quickbuild':
-          container.find('.info-type').text('Quickbuild');
+          container.find('.info-type').text(this.uitranslation('Quickbuild'));
           container.find('.info-sources').hide();
           container.find('.info-collection').hide();
           pilot = exportObj.pilots[data.pilot];
@@ -5305,7 +5420,7 @@ exportObj.SquadBuilder = (function() {
           } else {
             uniquedots = "";
           }
-          container.find('.info-name').html("" + uniquedots + (pilot.display_name ? pilot.display_name : pilot.name) + (data.suffix != null ? data.suffix : "") + (exportObj.isReleased(pilot) ? "" : " (" + (exportObj.translate(this.language, 'ui', 'unreleased')) + ")"));
+          container.find('.info-name').html("" + uniquedots + (pilot.display_name ? pilot.display_name : pilot.name) + (data.suffix != null ? data.suffix : "") + (exportObj.isReleased(pilot) ? "" : " (" + (exportObj.translate('ui', 'unreleased')) + ")"));
           restriction_info = this.restriction_text(data) + this.upgrade_effect(data);
           if (restriction_info !== '') {
             container.find('p.info-restrictions').html(restriction_info != null ? restriction_info : '');
@@ -5313,24 +5428,25 @@ exportObj.SquadBuilder = (function() {
           } else {
             container.find('p.info-restrictions').hide();
           }
-          container.find('p.info-text').html((_ref49 = pilot.text) != null ? _ref49 : '');
+          container.find('p.info-text').html((_ref51 = pilot.text) != null ? _ref51 : '');
           container.find('p.info-text').show();
           container.find('tr.info-ship td.info-data').text(data.ship);
           container.find('tr.info-ship').show();
           if (ship.large != null) {
-            container.find('tr.info-base td.info-data').text("Large");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Large"));
           } else if (ship.medium != null) {
-            container.find('tr.info-base td.info-data').text("Medium");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Medium"));
           } else {
-            container.find('tr.info-base td.info-data').text("Small");
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Small"));
           }
           container.find('tr.info-base').show();
           container.find('tr.info-skill td.info-data').text(pilot.skill);
           container.find('tr.info-skill').show();
+          container.find('tr.info-points').hide();
           container.find('tr.info-engagement td.info-data').text(pilot.skill);
           container.find('tr.info-engagement').show();
-          container.find('tr.info-attack td.info-data').text((_ref50 = (_ref51 = pilot.ship_override) != null ? _ref51.attack : void 0) != null ? _ref50 : ship.attack);
-          container.find('tr.info-attack').toggle((((_ref52 = pilot.ship_override) != null ? _ref52.attack : void 0) != null) || (ship.attack != null));
+          container.find('tr.info-attack td.info-data').text((_ref52 = (_ref53 = pilot.ship_override) != null ? _ref53.attack : void 0) != null ? _ref52 : ship.attack);
+          container.find('tr.info-attack').toggle((((_ref54 = pilot.ship_override) != null ? _ref54.attack : void 0) != null) || (ship.attack != null));
           container.find('tr.info-attack-fullfront td.info-data').text(ship.attackf);
           container.find('tr.info-attack-fullfront').toggle(ship.attackf != null);
           container.find('tr.info-attack-bullseye td.info-data').text(ship.attackbull);
@@ -5345,19 +5461,19 @@ exportObj.SquadBuilder = (function() {
           container.find('tr.info-attack-turret').toggle(ship.attackt != null);
           container.find('tr.info-attack-doubleturret td.info-data').text(ship.attackdt);
           container.find('tr.info-attack-doubleturret').toggle(ship.attackdt != null);
-          container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass((_ref53 = ship.attack_icon) != null ? _ref53 : 'xwing-miniatures-font-frontarc');
-          container.find('tr.info-energy td.info-data').text((_ref54 = (_ref55 = pilot.ship_override) != null ? _ref55.energy : void 0) != null ? _ref54 : ship.energy);
-          container.find('tr.info-energy').toggle((((_ref56 = pilot.ship_override) != null ? _ref56.energy : void 0) != null) || (ship.energy != null));
+          container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass((_ref55 = ship.attack_icon) != null ? _ref55 : 'xwing-miniatures-font-frontarc');
+          container.find('tr.info-energy td.info-data').text((_ref56 = (_ref57 = pilot.ship_override) != null ? _ref57.energy : void 0) != null ? _ref56 : ship.energy);
+          container.find('tr.info-energy').toggle((((_ref58 = pilot.ship_override) != null ? _ref58.energy : void 0) != null) || (ship.energy != null));
           container.find('tr.info-range').hide();
           container.find('td.info-rangebonus').hide();
-          container.find('tr.info-agility td.info-data').text((_ref57 = (_ref58 = pilot.ship_override) != null ? _ref58.agility : void 0) != null ? _ref57 : ship.agility);
+          container.find('tr.info-agility td.info-data').text((_ref59 = (_ref60 = pilot.ship_override) != null ? _ref60.agility : void 0) != null ? _ref59 : ship.agility);
           container.find('tr.info-agility').show();
-          container.find('tr.info-hull td.info-data').text((_ref59 = (_ref60 = pilot.ship_override) != null ? _ref60.hull : void 0) != null ? _ref59 : ship.hull);
+          container.find('tr.info-hull td.info-data').text((_ref61 = (_ref62 = pilot.ship_override) != null ? _ref62.hull : void 0) != null ? _ref61 : ship.hull);
           container.find('tr.info-hull').show();
-          container.find('tr.info-shields td.info-data').text((_ref61 = (_ref62 = pilot.ship_override) != null ? _ref62.shields : void 0) != null ? _ref61 : ship.shields);
+          container.find('tr.info-shields td.info-data').text((_ref63 = (_ref64 = pilot.ship_override) != null ? _ref64.shields : void 0) != null ? _ref63 : ship.shields);
           container.find('tr.info-shields').show();
           if (((effective_stats != null ? effective_stats.force : void 0) != null) || (data.force != null)) {
-            container.find('tr.info-force td.info-data').html(((_ref63 = (_ref64 = pilot.ship_override) != null ? _ref64.force : void 0) != null ? _ref63 : pilot.force) + '<sup><i class="fas fa-caret-up"></i></sup>');
+            container.find('tr.info-force td.info-data').html(((_ref65 = (_ref66 = pilot.ship_override) != null ? _ref66.force : void 0) != null ? _ref65 : pilot.force) + '<sup><i class="fas fa-caret-up"></i></sup>');
             container.find('tr.info-force').show();
           } else {
             container.find('tr.info-force').hide();
@@ -5385,15 +5501,15 @@ exportObj.SquadBuilder = (function() {
           } else {
             container.find('tr.info-charge').hide();
           }
-          container.find('tr.info-actions td.info-data').html(this.formatActions((_ref65 = (_ref66 = pilot.ship_override) != null ? _ref66.actions : void 0) != null ? _ref65 : exportObj.ships[data.ship].actions, ", ", (_ref67 = pilot.keyword) != null ? _ref67 : []));
+          container.find('tr.info-actions td.info-data').html(this.formatActions((_ref67 = (_ref68 = pilot.ship_override) != null ? _ref68.actions : void 0) != null ? _ref67 : exportObj.ships[data.ship].actions, ", ", (_ref69 = pilot.keyword) != null ? _ref69 : []));
           container.find('tr.info-actions').show();
           container.find('tr.info-upgrades').show();
           container.find('tr.info-upgrades td.info-data').html(((function() {
-            var _k, _len2, _ref68, _ref69, _results;
-            _ref69 = (_ref68 = data.upgrades) != null ? _ref68 : [];
+            var _k, _len2, _ref70, _ref71, _results;
+            _ref71 = (_ref70 = data.upgrades) != null ? _ref70 : [];
             _results = [];
-            for (_k = 0, _len2 = _ref69.length; _k < _len2; _k++) {
-              upgrade = _ref69[_k];
+            for (_k = 0, _len2 = _ref71.length; _k < _len2; _k++) {
+              upgrade = _ref71[_k];
               _results.push(exportObj.upgrades[upgrade].display_name != null ? exportObj.upgrades[upgrade].display_name : upgrade);
             }
             return _results;
@@ -5404,15 +5520,15 @@ exportObj.SquadBuilder = (function() {
         case 'Addon':
           container.find('.info-type').text(additional_opts.addon_type);
           container.find('.info-sources.info-data').text(((function() {
-            var _k, _len2, _ref68, _results;
-            _ref68 = data.sources;
+            var _k, _len2, _ref70, _results;
+            _ref70 = data.sources;
             _results = [];
-            for (_k = 0, _len2 = _ref68.length; _k < _len2; _k++) {
-              source = _ref68[_k];
-              _results.push(exportObj.translate(this.language, 'sources', source));
+            for (_k = 0, _len2 = _ref70.length; _k < _len2; _k++) {
+              source = _ref70[_k];
+              _results.push(exportObj.translate('sources', source));
             }
             return _results;
-          }).call(this)).sort().join(', '));
+          })()).sort().join(', '));
           container.find('.info-sources').show();
           if (data.unique != null) {
             uniquedots = "&middot;&nbsp;";
@@ -5427,30 +5543,30 @@ exportObj.SquadBuilder = (function() {
           } else {
             uniquedots = "";
           }
-          if (((_ref68 = this.collection) != null ? _ref68.counts : void 0) != null) {
-            addon_count = (_ref69 = (_ref70 = this.collection.counts) != null ? (_ref71 = _ref70['upgrade']) != null ? _ref71[data.name] : void 0 : void 0) != null ? _ref69 : 0;
-            container.find('.info-collection').text("You have " + addon_count + " in your collection.");
+          if (((_ref70 = this.collection) != null ? _ref70.counts : void 0) != null) {
+            addon_count = (_ref71 = (_ref72 = this.collection.counts) != null ? (_ref73 = _ref72['upgrade']) != null ? _ref73[data.name] : void 0 : void 0) != null ? _ref71 : 0;
+            container.find('.info-collection').text(this.uitranslation("collectionContentUpgrades", addon_count));
             container.find('.info-collection').show();
           } else {
             container.find('.info-collection').hide();
           }
-          container.find('.info-name').html("" + uniquedots + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) ? "" : " (" + (exportObj.translate(this.language, 'ui', 'unreleased')) + ")"));
+          container.find('.info-name').html("" + uniquedots + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) ? "" : " (" + (this.uitranslation('unreleased')) + ")"));
           if (data.pointsarray != null) {
-            point_info = "<i><b>Point cost:</b> " + data.pointsarray + " when ";
+            point_info = "<i>" + this.uitranslation("varPointCostsPoints", data.pointsarray);
             if ((data.variableagility != null) && data.variableagility) {
-              point_info += "agility is " + (function() {
+              point_info += this.uitranslation("varPointCostsConditionAgility", (function() {
                 _results = [];
-                for (var _k = 0, _ref72 = data.pointsarray.length - 1; 0 <= _ref72 ? _k <= _ref72 : _k >= _ref72; 0 <= _ref72 ? _k++ : _k--){ _results.push(_k); }
+                for (var _k = 0, _ref74 = data.pointsarray.length - 1; 0 <= _ref74 ? _k <= _ref74 : _k >= _ref74; 0 <= _ref74 ? _k++ : _k--){ _results.push(_k); }
                 return _results;
-              }).apply(this);
+              }).apply(this));
             } else if ((data.variableinit != null) && data.variableinit) {
-              point_info += "initiative is " + (function() {
+              point_info += this.uitranslation("varPointCostsConditionIni", (function() {
                 _results1 = [];
-                for (var _l = 0, _ref73 = data.pointsarray.length - 1; 0 <= _ref73 ? _l <= _ref73 : _l >= _ref73; 0 <= _ref73 ? _l++ : _l--){ _results1.push(_l); }
+                for (var _l = 0, _ref75 = data.pointsarray.length - 1; 0 <= _ref75 ? _l <= _ref75 : _l >= _ref75; 0 <= _ref75 ? _l++ : _l--){ _results1.push(_l); }
                 return _results1;
-              }).apply(this);
+              }).apply(this));
             } else if ((data.variablebase != null) && data.variablebase) {
-              point_info += " base size is small, medium, large or huge";
+              point_info += this.uitranslation("varPointCostsConditionBase");
             }
             point_info += "</i>";
           }
@@ -5464,11 +5580,12 @@ exportObj.SquadBuilder = (function() {
           } else {
             container.find('p.info-restrictions').hide();
           }
-          container.find('p.info-text').html((_ref74 = data.text) != null ? _ref74 : '');
+          container.find('p.info-text').html((_ref76 = data.text) != null ? _ref76 : '');
           container.find('p.info-text').show();
           container.find('tr.info-ship').hide();
           container.find('tr.info-base').hide();
           container.find('tr.info-skill').hide();
+          container.find('tr.info-points').hide();
           container.find('tr.info-engagement').hide();
           if (data.energy != null) {
             container.find('tr.info-energy td.info-data').text(data.energy);
@@ -5481,6 +5598,12 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-attack').show();
           } else {
             container.find('tr.info-attack').hide();
+          }
+          if (data.attackb != null) {
+            container.find('tr.info-attack-back td.info-data').text(data.attackb);
+            container.find('tr.info-attack-back').show();
+          } else {
+            container.find('tr.info-attack-back').hide();
           }
           if (data.attackt != null) {
             container.find('tr.info-attack-turret td.info-data').text(data.attackt);
@@ -5498,7 +5621,7 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-attack-left td.info-data').text(data.attackl);
             container.find('tr.info-attack-left').show();
           } else {
-            container.find('tr.info-attack-right').hide();
+            container.find('tr.info-attack-left').hide();
           }
           if (data.attackdt != null) {
             container.find('tr.info-attack-doubleturret td.info-data').text(data.attackdt);
@@ -5518,9 +5641,6 @@ exportObj.SquadBuilder = (function() {
           } else {
             container.find('tr.info-attack-fullfront').hide();
           }
-          container.find('tr.info-attack-right').hide();
-          container.find('tr.info-attack-left').hide();
-          container.find('tr.info-attack-back').hide();
           if (data.charge != null) {
             recurringicon = '';
             if (data.recurring != null) {
@@ -5574,6 +5694,7 @@ exportObj.SquadBuilder = (function() {
           container.find('tr.info-ship').hide();
           container.find('tr.info-base').hide();
           container.find('tr.info-skill').hide();
+          container.find('tr.info-points').hide();
           container.find('tr.info-agility').hide();
           container.find('tr.info-hull').hide();
           container.find('tr.info-shields').hide();
@@ -5593,19 +5714,19 @@ exportObj.SquadBuilder = (function() {
           container.find('tr.info-force').hide();
           break;
         case 'MissingStuff':
-          container.find('.info-type').text("List of Missing items");
+          container.find('.info-type').text(this.uitranslation("List of Missing items"));
           container.find('.info-sources').hide();
           container.find('.info-collection').hide();
-          container.find('.info-name').html("Missing items");
+          container.find('.info-name').html(this.uitranslation("Missing items"));
           container.find('.info-name').show();
-          missingStuffInfoText = "To field this squad you need the following additional items: <ul>";
+          missingStuffInfoText = this.uitranslation("Missing Item List:") + "<ul>";
           for (_m = 0, _len2 = data.length; _m < _len2; _m++) {
             item = data[_m];
             missingStuffInfoText += "<li><strong>" + (item.display_name != null ? item.display_name : item.name) + "</strong> (";
             first = true;
-            _ref75 = item.sources;
-            for (_n = 0, _len3 = _ref75.length; _n < _len3; _n++) {
-              source = _ref75[_n];
+            _ref77 = item.sources;
+            for (_n = 0, _len3 = _ref77.length; _n < _len3; _n++) {
+              source = _ref77[_n];
               if (!first) {
                 missingStuffInfoText += ", ";
               }
@@ -5621,6 +5742,7 @@ exportObj.SquadBuilder = (function() {
           container.find('tr.info-ship').hide();
           container.find('tr.info-base').hide();
           container.find('tr.info-skill').hide();
+          container.find('tr.info-points').hide();
           container.find('tr.info-agility').hide();
           container.find('tr.info-hull').hide();
           container.find('tr.info-shields').hide();
@@ -5883,7 +6005,7 @@ exportObj.SquadBuilder = (function() {
     data.timer = window.setTimeout(stopHandler, timeout_ms);
     window.setTimeout(this._makeRandomizerLoopFunc(data), 0);
     this.resetCurrentSquad();
-    this.current_squad.name = 'Random Squad';
+    this.current_squad.name = this.uitranslation('Random Squad');
     return this.container.trigger('xwing-backend:squadNameChanged');
   };
 
@@ -5972,7 +6094,7 @@ exportObj.SquadBuilder = (function() {
         comma = ', ';
       }
       if (statchange.actions.length > 0) {
-        text += comma + this.formatActions(statchange.actions, ", ", []);
+        text += comma + this.formatActions(statchange.actions, ", ");
         comma = ', ';
       }
     }
@@ -5995,10 +6117,10 @@ exportObj.SquadBuilder = (function() {
     }
     if (text !== '') {
       data = {
-        text: "</br><b>Adds:</b> " + text
+        text: "</br><b>" + (this.uitranslation("adds", text)) + "</b>"
       };
       if (removestext !== '') {
-        data.text += "</br><b>Removes:</b> " + removestext;
+        data.text += "</br><b>" + (this.uitranslation("removes", removestext)) + "</b>";
       }
       return exportObj.fixIcons(data);
     } else {
@@ -6014,12 +6136,12 @@ exportObj.SquadBuilder = (function() {
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         r = _ref[_i];
         if (r[0] === "orUnique") {
-          uniquetext = exportObj.translate(this.language, 'restrictions', " or Squad Including") + (" " + r[1]);
+          uniquetext = exportObj.translate('restrictions', " or Squad Including") + (" " + r[1]);
           continue;
         }
         switch (r[0]) {
           case "Base":
-            text += comma + ("" + r[1] + " ") + exportObj.translate(this.language, 'restrictions', "Ship");
+            text += comma + ("" + r[1] + " ") + exportObj.translate('restrictions', "Ship");
             break;
           case "Action":
             array = [r[1]];
@@ -6029,10 +6151,10 @@ exportObj.SquadBuilder = (function() {
             text += comma + ("%" + (r[1].toUpperCase().replace(/[^a-z0-9]/gi, '')) + "% Equipped");
             break;
           case "Slot":
-            text += comma + exportObj.translate(this.language, 'restrictions', "Extra") + (" %" + (r[1].toUpperCase().replace(/[^a-z0-9]/gi, '')) + "%");
+            text += comma + exportObj.translate('restrictions', "Extra") + (" %" + (r[1].toUpperCase().replace(/[^a-z0-9]/gi, '')) + "%");
             break;
           case "Keyword":
-            text += comma + exportObj.translate(this.language, 'restrictions', "" + r[1]);
+            text += comma + exportObj.translate('restrictions', "" + r[1]);
             break;
           case "AttackArc":
             text += comma + "%REARARC%";
@@ -6044,26 +6166,26 @@ exportObj.SquadBuilder = (function() {
             text += comma + ("%ENERGY% > " + r[1]);
             break;
           case "InitiativeGreaterThan":
-            text += comma + exportObj.translate(this.language, 'restrictions', "Initiative") + (" > " + r[1]);
+            text += comma + exportObj.translate('restrictions', "Initiative") + (" > " + r[1]);
             break;
           case "InitiativeLessThan":
-            text += comma + exportObj.translate(this.language, 'restrictions', "Initiative") + (" < " + r[1]);
+            text += comma + exportObj.translate('restrictions', "Initiative") + (" < " + r[1]);
             break;
           case "AgilityEquals":
-            text += comma + exportObj.translate(this.language, 'restrictions', "Agility") + (" = " + r[1]);
+            text += comma + exportObj.translate('restrictions', "Agility") + (" = " + r[1]);
             break;
           case "isUnique":
             if (r[1] === true) {
-              text += comma + exportObj.translate(this.language, 'restrictions', "Limited");
+              text += comma + exportObj.translate('restrictions', "Limited");
             } else {
-              text += comma + exportObj.translate(this.language, 'restrictions', "Non-Limited");
+              text += comma + exportObj.translate('restrictions', "Non-Limited");
             }
             break;
           case "Format":
-            text += comma + exportObj.translate(this.language, 'restrictions', "" + r[1] + " Ship");
+            text += comma + exportObj.translate('restrictions', "" + r[1] + " Ship");
             break;
           case "Faction":
-            othertext += comma + exportObj.translate(this.language, 'faction', "" + r[1]);
+            othertext += comma + exportObj.translate('faction', "" + r[1]);
         }
         comma = ', ';
       }
@@ -6075,11 +6197,11 @@ exportObj.SquadBuilder = (function() {
             _ref1 = card.faction;
             for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
               factionitem = _ref1[_j];
-              othertext += comma + exportObj.translate(this.language, 'faction', "" + factionitem);
+              othertext += comma + exportObj.translate('faction', "" + factionitem);
               comma = ' or ';
             }
           } else {
-            othertext += comma + exportObj.translate(this.language, 'faction', "" + card.faction);
+            othertext += comma + exportObj.translate('faction', "" + card.faction);
           }
           comma = ', ';
         }
@@ -6098,18 +6220,18 @@ exportObj.SquadBuilder = (function() {
         comma = ', ';
       }
       if (card.solitary) {
-        othertext += comma + exportObj.translate(this.language, 'faction', "Solitary");
+        othertext += comma + exportObj.translate('faction', "Solitary");
         comma = ', ';
       }
       if (card.standardized) {
-        othertext += comma + exportObj.translate(this.language, 'faction', "Standardized");
+        othertext += comma + exportObj.translate('faction', "Standardized");
         comma = ', ';
       }
     }
     text += othertext + uniquetext;
     if (text !== '') {
       data = {
-        text: "<i><b>" + exportObj.translate(this.language, 'restrictions', "Restrictions") + ":</b> " + text + "</i>"
+        text: "<i><b>" + exportObj.translate('restrictions', "Restrictions") + ":</b> " + text + "</i>"
       };
       return exportObj.fixIcons(data);
     } else {
@@ -6173,9 +6295,7 @@ exportObj.SquadBuilder = (function() {
     var missingStuff, pilot_is_available, ship, ship_is_available, upgrade, upgrade_is_available, validity, _i, _j, _len, _len1, _ref, _ref1, _ref2, _ref3, _ref4;
     if (Object.keys((_ref = (_ref1 = this.collection) != null ? _ref1.expansions : void 0) != null ? _ref : {}).length === 0) {
       return [true, []];
-    }
-    this.collection.reset();
-    if (((_ref2 = this.collection) != null ? _ref2.checks.collectioncheck : void 0) !== "true") {
+    } else if (((_ref2 = this.collection) != null ? _ref2.checks.collectioncheck : void 0) !== "true") {
       return [true, []];
     }
     this.collection.reset();
@@ -6237,7 +6357,7 @@ exportObj.SquadBuilder = (function() {
       points: this.total_points,
       vendor: {
         yasb: {
-          builder: 'Yet Another Squad Builder 2.0',
+          builder: 'YASB 2.0',
           builder_url: window.location.href.split('?')[0],
           link: this.getPermaLink()
         }
@@ -6412,15 +6532,17 @@ exportObj.SquadBuilder = (function() {
               upgrade_canonical = upgrade_canonicals[_k];
               slot = null;
               slot = (_ref4 = exportObj.fromXWSUpgrade[upgrade_type]) != null ? _ref4 : upgrade_type.capitalize();
-              upgrade = (_base = exportObj.upgradesBySlotXWSName[slot])[upgrade_canonical] != null ? _base[upgrade_canonical] : _base[upgrade_canonical] = exportObj.upgradesBySlotCanonicalName[slot][upgrade_canonical];
-              if (upgrade == null) {
-                console.log("Failed to load xws upgrade: " + upgrade_canonical);
-                error += "Skipped upgrade " + upgrade_canonical;
-                success = false;
-                continue;
+              if (upgrade_canonical != null) {
+                upgrade = (_base = exportObj.upgradesBySlotXWSName[slot])[upgrade_canonical] != null ? _base[upgrade_canonical] : _base[upgrade_canonical] = exportObj.upgradesBySlotCanonicalName[slot][upgrade_canonical];
+                if (upgrade == null) {
+                  console.log("Failed to load xws upgrade: " + upgrade_canonical);
+                  error += "Skipped upgrade " + upgrade_canonical;
+                  success = false;
+                  continue;
+                }
+                serialized_squad += upgrade.id;
+                serialized_squad += "W";
               }
-              serialized_squad += upgrade.id;
-              serialized_squad += "W";
             }
           }
           serialized_squad += "XY";
@@ -6452,6 +6574,7 @@ Ship = (function() {
     this.upgrades = [];
     this.wingmates = [];
     this.destroystate = null;
+    this.uitranslation = this.builder.uitranslation;
     this.setupUI();
   }
 
@@ -6467,35 +6590,32 @@ Ship = (function() {
       throw new Error("Ship not registered with builder");
     }
     this.builder.ships.splice(idx, 1);
+    if (this.wingmates.length > 0) {
+      this.setWingmates(0);
+    }
     (function(_this) {
       return (function(__iced_k) {
-        if (_this.wingmates.length > 0) {
-          return __iced_k(_this.setWingmates(0));
-        } else {
+        if (_this.linkedShip !== null) {
           (function(__iced_k) {
-            if (_this.linkedShip !== null) {
+            var _ref;
+            if (((_ref = _this.linkedShip.wingmates) != null ? _ref.length : void 0) > 0 && __indexOf.call(_this.linkedShip.wingmates, _this) >= 0) {
+              return __iced_k(_this.linkedShip.removeFromWing(_this));
+            } else {
               _this.linkedShip.linkedShip = null;
               (function(__iced_k) {
-                var _ref;
-                if (((_ref = _this.linkedShip.wingmates) != null ? _ref.length : void 0) > 0) {
-                  return __iced_k(_this.linkedShip.removeFromWing(_this));
-                } else {
-                  (function(__iced_k) {
-                    __iced_deferrals = new iced.Deferrals(__iced_k, {
-                      parent: ___iced_passed_deferral,
-                      funcname: "Ship.destroy"
-                    });
-                    _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                      lineno: 5449
-                    }));
-                    __iced_deferrals._fulfill();
-                  })(__iced_k);
-                }
+                __iced_deferrals = new iced.Deferrals(__iced_k, {
+                  parent: ___iced_passed_deferral,
+                  funcname: "Ship.destroy"
+                });
+                _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
+                  lineno: 5605
+                }));
+                __iced_deferrals._fulfill();
               })(__iced_k);
-            } else {
-              return __iced_k();
             }
           })(__iced_k);
+        } else {
+          return __iced_k();
         }
       });
     })(this)((function(_this) {
@@ -6506,7 +6626,7 @@ Ship = (function() {
   };
 
   Ship.prototype.copyFrom = function(other) {
-    var available_pilots, delayed_upgrades, id, no_uniques_involved, other_upgrade, other_upgrades, pilot_data, upgrade, _i, _j, _k, _len, _len1, _len2, _name, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
+    var available_pilots, delayed_upgrades, id, no_uniques_involved, other_upgrade, other_upgrades, pilot_data, upgrade, _i, _j, _k, _l, _len, _len1, _len2, _len3, _name, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8;
     if (other === this) {
       throw new Error("Cannot copy from self");
     }
@@ -6582,17 +6702,29 @@ Ship = (function() {
       _ref5 = this.upgrades;
       for (_k = 0, _len2 = _ref5.length; _k < _len2; _k++) {
         upgrade = _ref5[_k];
-        other_upgrade = ((_ref6 = other_upgrades[upgrade.slot]) != null ? _ref6 : []).shift();
-        if (other_upgrade != null) {
-          upgrade.setById(other_upgrade.data.id);
-          if (!upgrades.lastSetValid) {
-            delayed_upgrades[other_upgrade.data.id] = upgrade;
+        if (!upgrade.isOccupied()) {
+          other_upgrade = ((_ref6 = other_upgrades[upgrade.slot]) != null ? _ref6 : []).shift();
+          if (other_upgrade != null) {
+            upgrade.setById(other_upgrade.data.id);
+            if (!upgrade.lastSetValid) {
+              delayed_upgrades[other_upgrade.data.id] = upgrade;
+            }
           }
         }
       }
       for (id in delayed_upgrades) {
         upgrade = delayed_upgrades[id];
         upgrade.setById(id);
+      }
+      _ref7 = this.upgrades;
+      for (_l = 0, _len3 = _ref7.length; _l < _len3; _l++) {
+        upgrade = _ref7[_l];
+        if (!upgrade.isOccupied()) {
+          other_upgrade = ((_ref8 = other_upgrades[upgrade.slot]) != null ? _ref8 : []).shift();
+          if (other_upgrade != null) {
+            upgrade.setById(other_upgrade.data.id);
+          }
+        }
       }
       this.addStandardizedUpgrades();
     }
@@ -6703,7 +6835,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5559
+                          lineno: 5724
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6753,7 +6885,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5592
+                                  lineno: 5757
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -6814,7 +6946,7 @@ Ship = (function() {
   };
 
   Ship.prototype.setPilot = function(new_pilot, noautoequip) {
-    var auto_equip_upgrade, autoequip, delayed_upgrades, id, old_upgrade, old_upgrades, same_ship, upgrade, upgrade_name, ___iced_passed_deferral, __iced_deferrals, __iced_k, _i, _len, _name, _ref;
+    var auto_equip_upgrade, autoequip, delayed_upgrades, id, old_upgrade, old_upgrades, same_ship, upgrade, upgrade_name, _, ___iced_passed_deferral, __iced_deferrals, __iced_k, _i, _len, _name, _ref;
     __iced_k = __iced_k_noop;
     ___iced_passed_deferral = iced.findDeferral(arguments);
     if (noautoequip == null) {
@@ -6832,7 +6964,7 @@ Ship = (function() {
             if (old_upgrades[_name = upgrade.slot] == null) {
               old_upgrades[_name] = [];
             }
-            old_upgrades[upgrade.slot].push(upgrade);
+            old_upgrades[upgrade.slot].push(upgrade.data.id);
           }
         }
       }
@@ -6851,7 +6983,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5650
+                      lineno: 5815
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -6860,7 +6992,7 @@ Ship = (function() {
                 return __iced_k();
               }
             })(function() {
-              var _j, _k, _l, _len1, _len2, _len3, _ref1, _ref2, _ref3, _ref4, _ref5;
+              var _j, _k, _l, _len1, _len2, _len3, _m, _ref1, _ref2, _ref3, _ref4, _ref5;
               _this.pilot = new_pilot;
               if (_this.pilot != null) {
                 _this.setupAddons();
@@ -6883,21 +7015,23 @@ Ship = (function() {
                 }
               }
               if (same_ship) {
-                delayed_upgrades = {};
-                _ref4 = _this.upgrades;
-                for (_l = 0, _len3 = _ref4.length; _l < _len3; _l++) {
-                  upgrade = _ref4[_l];
-                  old_upgrade = ((_ref5 = old_upgrades[upgrade.slot]) != null ? _ref5 : []).shift();
-                  if (old_upgrade != null) {
-                    upgrade.setById(old_upgrade.data.id);
-                    if (!upgrade.lastSetValid) {
-                      delayed_upgrades[old_upgrade.data.id] = upgrade;
+                for (_ = _l = 1; _l <= 2; _ = ++_l) {
+                  delayed_upgrades = {};
+                  _ref4 = _this.upgrades;
+                  for (_m = 0, _len3 = _ref4.length; _m < _len3; _m++) {
+                    upgrade = _ref4[_m];
+                    old_upgrade = ((_ref5 = old_upgrades[upgrade.slot]) != null ? _ref5 : []).shift();
+                    if (old_upgrade != null) {
+                      upgrade.setById(old_upgrade);
+                      if (!upgrade.lastSetValid) {
+                        delayed_upgrades[old_upgrade] = upgrade;
+                      }
                     }
                   }
-                }
-                for (id in delayed_upgrades) {
-                  upgrade = delayed_upgrades[id];
-                  upgrade.setById(id);
+                  for (id in delayed_upgrades) {
+                    upgrade = delayed_upgrades[id];
+                    upgrade.setById(id);
+                  }
                 }
               }
               return __iced_k();
@@ -6908,6 +7042,7 @@ Ship = (function() {
         });
       })(this)((function(_this) {
         return function() {
+          _this.row.removeClass('unsortable');
           _this.builder.container.trigger('xwing:pointsUpdated');
           return __iced_k(_this.builder.container.trigger('xwing-backend:squadDirtinessChanged'));
         };
@@ -6932,7 +7067,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5680
+                lineno: 5851
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7001,7 +7136,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5709
+              lineno: 5880
             }));
           }
         }
@@ -7054,7 +7189,7 @@ Ship = (function() {
       return;
     }
     if ((this.wingmates == null) || this.wingmates.length === 0) {
-      this.wingmates = [this.linkedShip];
+      this.wingmates = [];
     }
     quickbuild = exportObj.quickbuildsById[this.quickbuildId];
     while (this.wingmates.length < wingmates) {
@@ -7066,7 +7201,7 @@ Ship = (function() {
       }
       newMate.linkedShip = this;
       this.wingmates.push(newMate);
-      newMate.setPilotById(quickbuild.linkedId);
+      newMate.setPilotById(quickbuild.wingmateId);
       newMate.primary = false;
       this.primary = true;
     }
@@ -7093,7 +7228,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 5765
+                lineno: 5936
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -7169,12 +7304,12 @@ Ship = (function() {
   Ship.prototype.setupUI = function() {
     var shipResultFormatter, shipSelectionFormatter, shipicon;
     this.row = $(document.createElement('DIV'));
-    this.row.addClass('row ship mb-5 mb-sm-0');
+    this.row.addClass('row ship mb-5 mb-sm-0 unsortable');
     this.row.insertBefore(this.builder.notes_container);
     if (this.pilot != null) {
       shipicon = exportObj.ships[this.pilot.ship].icon ? exportObj.ships[this.pilot.ship].icon : exportObj.ships[this.pilot.ship].xws;
     }
-    this.row.append($.trim('<div class="col-md-3">\n    <div class="form-group d-flex">\n        <input class="ship-selector-container" type="hidden"></input>\n        <div class="input-group-append">\n            <button class="btn btn-secondary d-block d-md-none ship-query-modal"><i class="fas fa-question"></i></button>\n        </div>\n    <br />\n    </div>\n    <div class="form-group d-flex">\n        <input type="hidden" class="pilot-selector-container"></input>\n        <div class="input-group-append">\n            <button class="btn btn-secondary pilot-query-modal"><i class="fas fa-question"></i></button>\n        <br />\n        </div>\n    </div>\n    <label class="wingmate-label">\n    Wingmates: \n        <input type="number" class="wingmate-selector"></input>\n    </label>\n</div>\n<div class="col-md-1 points-display-container">\n     <span></span>\n</div>\n<div class="col-md-6 addon-container">  </div>\n<div class="col-md-2 button-container">\n    <button class="btn btn-danger remove-pilot side-button"><span class="d-none d-sm-block" data-toggle="tooltip" title="Remove Pilot"><i class="fa fa-times"></i></span><span class="d-block d-sm-none"> Remove Pilot</span></button>\n    <button class="btn btn-light copy-pilot side-button"><span class="d-none d-sm-block" data-toggle="tooltip" title="Clone Pilot"><i class="far fa-copy"></i></span><span class="d-block d-sm-none"> Clone Pilot</span></button>&nbsp;&nbsp;&nbsp;\n    <button class="btn btn-light points-destroyed side-button" points-state"><span class="destroyed-type" title="Points Destroyed"><i class="xwing-miniatures-font xwing-miniatures-font-title"></i></span></button>\n</div>'));
+    this.row.append($.trim("<div class=\"col-md-3\">\n    <div class=\"form-group d-flex\">\n        <input class=\"ship-selector-container\" type=\"hidden\"></input>\n        <div class=\"input-group-append\">\n            <button class=\"btn btn-secondary d-block d-md-none ship-query-modal\"><i class=\"fas fa-question\"></i></button>\n        </div>\n    <br />\n    </div>\n    <div class=\"form-group d-flex\">\n        <input type=\"hidden\" class=\"pilot-selector-container\"></input>\n        <div class=\"input-group-append\">\n            <button class=\"btn btn-secondary pilot-query-modal\"><i class=\"fas fa-question\"></i></button>\n        <br />\n        </div>\n    </div>\n    <label class=\"wingmate-label\">\n    " + (this.uitranslation("Wingmates")) + ": \n        <input type=\"number\" class=\"wingmate-selector\"></input>\n    </label>\n</div>\n<div class=\"col-md-1 points-display-container\">\n     <span></span>\n</div>\n<div class=\"col-md-6 addon-container\">  </div>\n<div class=\"col-md-2 button-container\">\n    <button class=\"btn btn-danger remove-pilot side-button\"><span class=\"d-none d-sm-block\" data-toggle=\"tooltip\" title=\"" + (this.uitranslation("Remove Pilot")) + "\"><i class=\"fa fa-times\"></i></span><span class=\"d-block d-sm-none\"> " + (this.uitranslation("Remove Pilot")) + "</span></button>\n    <button class=\"btn btn-light copy-pilot side-button\"><span class=\"d-none d-sm-block\" data-toggle=\"tooltip\" title=\"" + (this.uitranslation("Clone Pilot")) + "\"><i class=\"far fa-copy\"></i></span><span class=\"d-block d-sm-none\"> " + (this.uitranslation("Clone Pilot")) + "</span></button>&nbsp;&nbsp;&nbsp;\n    <button class=\"btn btn-light points-destroyed side-button\" points-state\"><span class=\"destroyed-type\" title=\"" + (this.uitranslation("Points Destroyed")) + "\"><i class=\"xwing-miniatures-font xwing-miniatures-font-title\"></i></span></button>\n</div>"));
     this.row.find('.button-container span').tooltip();
     this.ship_selector = $(this.row.find('input.ship-selector-container'));
     this.pilot_selector = $(this.row.find('input.pilot-selector-container'));
@@ -7205,7 +7340,7 @@ Ship = (function() {
     };
     this.ship_selector.select2({
       width: '100%',
-      placeholder: exportObj.translate(this.builder.language, 'ui', 'shipSelectorPlaceholder'),
+      placeholder: exportObj.translate('ui', 'shipSelectorPlaceholder'),
       query: (function(_this) {
         return function(query) {
           var data;
@@ -7273,7 +7408,7 @@ Ship = (function() {
     })(this));
     this.pilot_selector.select2({
       width: '100%',
-      placeholder: exportObj.translate(this.builder.language, 'ui', 'pilotSelectorPlaceholder'),
+      placeholder: exportObj.translate('ui', 'pilotSelectorPlaceholder'),
       query: (function(_this) {
         return function(query) {
           var data;
@@ -7387,9 +7522,19 @@ Ship = (function() {
     this.copy_button = $(this.row.find('button.copy-pilot'));
     this.copy_button.click((function(_this) {
       return function(e) {
-        var clone;
-        clone = _this.builder.ships[_this.builder.ships.length - 1];
-        return clone.copyFrom(_this);
+        var ship, _i, _len, _ref, _results;
+        _ref = _this.builder.ships;
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          ship = _ref[_i];
+          if (ship.row.hasClass("unsortable")) {
+            ship.copyFrom(_this);
+            break;
+          } else {
+            _results.push(void 0);
+          }
+        }
+        return _results;
       };
     })(this));
     this.copy_button.hide();
@@ -7421,9 +7566,13 @@ Ship = (function() {
 
   Ship.prototype.toString = function() {
     if (this.pilot != null) {
-      return "Pilot " + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + " flying " + (this.data.display_name ? this.data.display_name : this.data.name);
+      return this.uitranslation("PilotFlyingShip", (this.pilot.display_name ? this.pilot.display_name : this.pilot.name), (this.data.display_name ? this.data.display_name : this.data.name));
     } else {
-      return "Ship without pilot";
+      if (this.data.display_name) {
+        return this.data.display_name;
+      } else {
+        return this.data.name;
+      }
     }
   };
 
@@ -7549,7 +7698,7 @@ Ship = (function() {
     }
     HalfPoints = Math.ceil(this.getPoints() / 2);
     Threshold = Math.ceil((effective_stats['hull'] + effective_stats['shields']) / 2);
-    html += $.trim("<div class=\"ship-points-total\">\n    <strong>Ship Total: " + (this.getPoints()) + ", Half Points: " + HalfPoints + ", Threshold: " + Threshold + "</strong> \n</div>");
+    html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Total")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Threshold")) + ": " + Threshold + "</strong> \n</div>");
     return "<div class=\"fancy-ship\">" + html + "</div>";
   };
 
@@ -7575,10 +7724,10 @@ Ship = (function() {
         table_html += upgrade.toTableRow(points);
       }
     }
-    table_html += "<tr class=\"simple-ship-total\"><td colspan=\"2\">Ship Total: " + (this.getPoints()) + "</td></tr>";
+    table_html += "<tr class=\"simple-ship-total\"><td colspan=\"2\">" + (this.uitranslation("Ship Total")) + ": " + (this.getPoints()) + "</td></tr>";
     halfPoints = Math.ceil(this.getPoints() / 2);
     threshold = Math.ceil((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">Half Points: " + halfPoints + " Threshold: " + threshold + "</td></tr>";
+    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Threshold")) + ": " + threshold + "</td></tr>";
     table_html += '<tr><td>&nbsp;</td><td></td></tr>';
     return table_html;
   };
@@ -7614,7 +7763,7 @@ Ship = (function() {
     }
     halfPoints = Math.ceil(this.getPoints() / 2);
     threshold = Math.ceil((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    simplecopy += "Ship total: " + (this.getPoints()) + "  Half Points: " + halfPoints + "  Threshold: " + threshold + "    \n    \n";
+    simplecopy += "" + (this.uitranslation("Ship total")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Threshold")) + ": " + threshold + "    \n    \n";
     return simplecopy;
   };
 
@@ -7645,7 +7794,7 @@ Ship = (function() {
         }
       }
       reddit += reddit_upgrades.join("    ");
-      reddit += "&nbsp;*Ship total: (" + (this.getPoints()) + ")*    \n";
+      reddit += "&nbsp;*" + (this.uitranslation("Ship total")) + ": (" + (this.getPoints()) + ")*    \n";
     }
     return reddit;
   };
@@ -8027,7 +8176,7 @@ Ship = (function() {
   };
 
   Ship.prototype.restriction_check = function(restrictions, upgrade_obj) {
-    var effective_stats, r, _i, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
+    var action, check, effective_stats, r, w, _i, _j, _len, _len1, _ref, _ref1, _ref2;
     effective_stats = this.effectiveStats();
     for (_i = 0, _len = restrictions.length; _i < _len; _i++) {
       r = restrictions[_i];
@@ -8068,11 +8217,31 @@ Ship = (function() {
               if (!(this.data.huge != null)) {
                 return false;
               }
+              break;
+            case "Standard":
+              if (this.data.huge != null) {
+                return false;
+              }
           }
           break;
         case "Action":
-          if (!((_ref = r[1], __indexOf.call(effective_stats.actions, _ref) >= 0) || (_ref1 = "*" + r[1], __indexOf.call(effective_stats.actions, _ref1) >= 0) || (_ref2 = "F-" + r[1], __indexOf.call(effective_stats.actions, _ref2) >= 0) || (_ref3 = "R-" + r[1], __indexOf.call(effective_stats.actions, _ref3) >= 0))) {
-            return false;
+          if (r[1].startsWith("W-")) {
+            w = r[1].substring(2);
+            if (__indexOf.call(effective_stats.actions, w) < 0) {
+              return false;
+            }
+          } else {
+            check = false;
+            _ref = effective_stats.actions;
+            for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
+              action = _ref[_j];
+              if (action.includes(r[1]) && !action.includes(">")) {
+                check = true;
+              }
+            }
+            if (check === false) {
+              return false;
+            }
           }
           break;
         case "Keyword":
@@ -8128,12 +8297,12 @@ Ship = (function() {
         case "Format":
           switch (r[1]) {
             case "Epic":
-              if (!(_ref4 = this.data.name, __indexOf.call(exportObj.epicExclusionsList, _ref4) >= 0)) {
+              if (!(_ref1 = this.data.name, __indexOf.call(exportObj.epicExclusionsList, _ref1) >= 0)) {
                 return false;
               }
               break;
             case "Standard":
-              if (_ref5 = this.data.name, __indexOf.call(exportObj.epicExclusionsList, _ref5) >= 0) {
+              if (_ref2 = this.data.name, __indexOf.call(exportObj.epicExclusionsList, _ref2) >= 0) {
                 return false;
               }
           }
@@ -8322,7 +8491,7 @@ GenericAddon = (function() {
   }
 
   GenericAddon.prototype.destroy = function() {
-    var args, cb, ___iced_passed_deferral, __iced_deferrals, __iced_k;
+    var args, cb, isLastShip, ship, ___iced_passed_deferral, __iced_deferrals, __iced_k;
     __iced_k = __iced_k_noop;
     ___iced_passed_deferral = iced.findDeferral(arguments);
     cb = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
@@ -8340,7 +8509,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6701
+                lineno: 6876
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8351,9 +8520,19 @@ GenericAddon = (function() {
       });
     })(this)((function(_this) {
       return function() {
-        var _ref;
+        var _i, _len, _ref, _ref1;
         if (((_ref = _this.data) != null ? _ref.standardized : void 0) != null) {
-          _this.removeStandardized();
+          isLastShip = true;
+          _ref1 = _this.ship.builder.ships;
+          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+            ship = _ref1[_i];
+            if ((ship.data != null) && (_this.ship.data.name === ship.data.name) && (_this.ship !== ship)) {
+              isLastShip = false;
+            }
+          }
+          if (isLastShip === true) {
+            _this.removeStandardized();
+          }
         }
         _this.destroyed = true;
         _this.rescindAddons();
@@ -8489,7 +8668,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 6790
+                  lineno: 6970
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8516,7 +8695,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 6797
+                      lineno: 6977
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8589,7 +8768,8 @@ GenericAddon = (function() {
               for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
                 upgrade = _ref3[_j];
                 if (((_ref4 = upgrade.data) != null ? _ref4.name : void 0) === nameToRemove) {
-                  _results1.push(upgrade.data = null);
+                  upgrade.setData(null);
+                  break;
                 } else {
                   _results1.push(void 0);
                 }
@@ -8659,7 +8839,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 6869
+            lineno: 7052
           }));
         }
         __iced_deferrals._fulfill();
@@ -8747,7 +8927,7 @@ GenericAddon = (function() {
       if (this.data.range != null) {
         attackrangebonus = (this.data.rangebonus != null) ? "<span class=\"upgrade-attack-rangebonus\"><i class=\"xwing-miniatures-font xwing-miniatures-font-rangebonusindicator\"></i></span>" : '';
         attackStats = $.trim("<span class=\"upgrade-attack-range\">" + this.data.range + "</span>\n" + attackrangebonus);
-        attackIcon = (this.data.attack != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attack + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-frontarc\"></i>") : (this.data.attackt != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackt + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-singleturretarc\"></i>") : (this.data.attackdt != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackdt + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-doubleturretarc\"></i>") : (this.data.attackl != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackl + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-leftarc\"></i>") : (this.data.attackr != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackr + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-rightarc\"></i>") : (this.data.attackbull != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackbull + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-bullseyearc\"></i>") : '';
+        attackIcon = (this.data.attack != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attack + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-frontarc\"></i>") : (this.data.attackf != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackf + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-fullfrontarc\"></i>") : (this.data.attackb != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackb + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-backarc\"></i>") : (this.data.attackt != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackt + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-singleturretarc\"></i>") : (this.data.attackdt != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackdt + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-doubleturretarc\"></i>") : (this.data.attackl != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackl + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-leftarc\"></i>") : (this.data.attackr != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackr + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-rightarc\"></i>") : (this.data.attackbull != null) ? $.trim("<span class=\"info-data info-attack\">" + this.data.attackbull + "</span>\n<i class=\"xwing-miniatures-font xwing-miniatures-font-bullseyearc\"></i>") : '';
         attackHTML = $.trim("<div class=\"upgrade-attack\">\n    " + attackStats + "\n    " + attackIcon + "\n</div>");
       }
       if (this.data.charge != null) {
@@ -8949,7 +9129,7 @@ exportObj.Upgrade = (function(_super) {
   Upgrade.prototype.setupSelector = function() {
     return Upgrade.__super__.setupSelector.call(this, {
       width: '100%',
-      placeholder: this.placeholderMod_func(exportObj.translate(this.ship.builder.language, 'ui', 'upgradePlaceholder', this.slot)),
+      placeholder: this.placeholderMod_func(exportObj.translate('ui', 'upgradePlaceholder', this.slot)),
       allowClear: true,
       query: (function(_this) {
         return function(query) {
@@ -9085,75 +9265,21 @@ exportObj.fromXWSUpgrade = {
   'system': 'Sensor',
   'mod': 'Modification',
   'force-power': 'Force',
-  'tacticalrelay': 'Tactical Relay'
+  'tactical-relay': 'Tactical Relay'
 };
 
 SPEC_URL = 'https://github.com/elistevens/xws-spec';
 
-exportObj.XWSManager = (function() {
-  function XWSManager(args) {
-    this.container = $(args.container);
-  }
-
-  XWSManager.prototype.setupUI = function() {
-    this.container.addClass('d-print-none');
-    this.container.html($.trim("<div class=\"row col-md-12 xws-space\">\n    <!-- Import is marked in red since it creates something new -->\n    <button class=\"btn btn-danger from-xws\"><i class=\"fa fa-file-import\"></i>&nbsp;Import from XWS</button>\n    <button class=\"btn btn-primary to-xws\"><i class=\"fa fa-file-export\"></i>&nbsp;Export to XWS</button>\n</div>"));
-    this.xws_import_modal = $(document.createElement('DIV'));
-    this.xws_import_modal.addClass('modal fade xws-modal d-print-none');
-    this.xws_import_modal.tabindex = "-1";
-    this.xws_import_modal.role = "dialog";
-    this.container.append(this.xws_import_modal);
-    return this.xws_import_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3>XWS Import</h3>\n            <button type=\"button\" class=\"close d-print-none\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            Paste XWS here to load a list exported from another application.\n            <i>XWS is a way to share X-Wing squads between applications, e.g. YASB and LaunchBay Next</i>\n            <div class=\"container-fluid\">\n                <textarea class=\"xws-content\" placeholder=\"Paste XWS here...\"></textarea>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <span class=\"xws-import-status\"></span>&nbsp;\n            <button class=\"btn btn-danger import-xws\">Import It!</button>\n        </div>\n    </div>\n</div>"));
-  };
-
-  XWSManager.prototype.setupHandlers = function() {
-    this.from_xws_button = this.container.find('button.from-xws');
-    this.from_xws_button.click((function(_this) {
-      return function(e) {
-        e.preventDefault();
-        return _this.xws_import_modal.modal('show');
-      };
-    })(this));
-    this.to_xws_button = this.container.find('button.to-xws');
-    this.to_xws_button.click((function(_this) {
-      return function(e) {
-        e.preventDefault();
-        return $(window).trigger('xwing:pingActiveBuilder', function(builder) {
-          return builder.showXWSModal('bla');
-        });
-      };
-    })(this));
-    $('#xws-qrcode-container').click(function(e) {
-      return window.open($('#xws-qrcode-container canvas')[0].toDataURL());
-    });
-    this.load_xws_button = $(this.xws_import_modal.find('button.import-xws'));
-    return this.load_xws_button.click((function(_this) {
-      return function(e) {
-        e.preventDefault();
-        return exportObj.loadXWSButton(_this.xws_import_modal);
-      };
-    })(this));
-  };
-
-  return XWSManager;
-
-})();
+SQUAD_TO_XWS_URL = 'http://squad2xws.herokuapp.com/translate/';
 
 exportObj.loadXWSButton = function(xws_import_modal) {
   var import_status;
   import_status = $(xws_import_modal.find('.xws-import-status'));
-  import_status.text('Loading...');
+  import_status.text(exportObj.translate('ui', 'Loading...'));
   return (function(_this) {
     return function(import_status) {
-      var e, xws;
-      try {
-        xws = JSON.parse(xws_import_modal.find('.xws-content').val());
-      } catch (_error) {
-        e = _error;
-        import_status.text('Invalid JSON');
-        return;
-      }
-      return (function(xws) {
+      var e, input, jsonurl, loadxws, uuid, xws;
+      loadxws = function(xws) {
         return $(window).trigger('xwing:activateBuilder', [
           exportObj.fromXWSFaction[xws.faction], function(builder) {
             if (builder.current_squad.dirty && (builder.backend != null)) {
@@ -9161,7 +9287,7 @@ exportObj.loadXWSButton = function(xws_import_modal) {
               return builder.backend.warnUnsaved(builder, function() {
                 return builder.loadFromXWS(xws, function(res) {
                   if (!res.success) {
-                    _this.xws_import_modal.modal('show');
+                    xws_import_modal.modal('show');
                     return import_status.text(res.error);
                   }
                 });
@@ -9169,7 +9295,7 @@ exportObj.loadXWSButton = function(xws_import_modal) {
             } else {
               return builder.loadFromXWS(xws, function(res) {
                 if (res.success) {
-                  return _this.xws_import_modal.modal('hide');
+                  return xws_import_modal.modal('hide');
                 } else {
                   return import_status.text(res.error);
                 }
@@ -9177,7 +9303,19 @@ exportObj.loadXWSButton = function(xws_import_modal) {
             }
           }
         ]);
-      })(xws);
+      };
+      input = xws_import_modal.find('.xws-content').val();
+      try {
+        xws = JSON.parse(input);
+        return loadxws(xws);
+      } catch (_error) {
+        e = _error;
+        uuid = input.split('/').pop();
+        jsonurl = SQUAD_TO_XWS_URL + uuid;
+        return ($.getJSON(jsonurl, loadxws))["catch"](function(e) {
+          return import_status.text('Invalid Input');
+        });
+      }
     };
   })(this)(import_status);
 };
