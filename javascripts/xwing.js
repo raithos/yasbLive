@@ -1089,11 +1089,7 @@ exportObj.SquadBuilderBackend = (function() {
                 cb('English', -0.5);
               } else {
                 language_code = language_tag.split('-')[0];
-                if (langc in exportObj.codeToLanguage) {
-                  cb(exportObj.codeToLanguage[language_code], 8);
-                } else {
-                  cb('English', -1);
-                }
+                cb('English', -1);
               }
               break;
             }
@@ -2487,7 +2483,7 @@ exportObj.setupTranslationSupport = function() {
                     parent: ___iced_passed_deferral
                   });
                   builder.container.trigger('xwing:beforeLanguageLoad', __iced_deferrals.defer({
-                    lineno: 2113
+                    lineno: 2107
                   }));
                   __iced_deferrals._fulfill();
                 })(_next);
@@ -2754,7 +2750,7 @@ exportObj.SquadBuilder = (function() {
     this.tooltip_currently_displaying = null;
     this.randomizer_options = {
       sources: null,
-      points: 20,
+      points: 200,
       bid_goal: 5,
       ships_or_upgrades: 3,
       ship_limit: 0,
@@ -2762,7 +2758,7 @@ exportObj.SquadBuilder = (function() {
       fill_zero_pts: false
     };
     this.total_points = 0;
-    this.isHyperspace = (_ref = (_ref1 = exportObj.builders[0]) != null ? _ref1.isHyperspace : void 0) != null ? _ref : true;
+    this.isStandard = (_ref = (_ref1 = exportObj.builders[0]) != null ? _ref1.isStandard : void 0) != null ? _ref : true;
     this.isEpic = (_ref2 = (_ref3 = exportObj.builders[0]) != null ? _ref3.isEpic : void 0) != null ? _ref2 : false;
     this.isQuickbuild = (_ref4 = (_ref5 = exportObj.builders[0]) != null ? _ref5.isQuickbuild : void 0) != null ? _ref4 : false;
     this.backend = null;
@@ -2848,14 +2844,14 @@ exportObj.SquadBuilder = (function() {
 
   SquadBuilder.prototype.setupUI = function() {
     var DEFAULT_RANDOMIZER_BID_GOAL, DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, opt, _i, _len, _ref;
-    DEFAULT_RANDOMIZER_POINTS = 20;
+    DEFAULT_RANDOMIZER_POINTS = 200;
     DEFAULT_RANDOMIZER_TIMEOUT_SEC = 4;
     DEFAULT_RANDOMIZER_BID_GOAL = 5;
     DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES = 3;
     DEFAULT_RANDOMIZER_SHIP_LIMIT = 0;
     this.status_container = $(document.createElement('DIV'));
     this.status_container.addClass('container-fluid');
-    this.status_container.append($.trim("<div class=\"row squad-name-and-points-row\">\n    <div class=\"col-md-3 squad-name-container\">\n        <div class=\"display-name\">\n            <span class=\"squad-name\"></span>\n            <i class=\"far fa-edit\"></i>\n        </div>\n        <div class=\"input-append\">\n            <input type=\"text\" maxlength=\"64\" placeholder=\"" + (this.uitranslation("Name your squad...")) + "\" />\n            <button class=\"btn save\"><i class=\"fa fa-pen-square\"></i></button>\n        </div>\n        <br />\n        <select class=\"game-type-selector\">\n            <option value=\"standard\" class=\"translated\" defaultText=\"Standard\" selected=\"selected\">" + (this.uitranslation("Standard")) + "</option>\n            <option value=\"extended\" class=\"translated\" defaultText=\"Extended\"></option>\n            <option value=\"epic\" class=\"translated\" defaultText=\"Epic\"></option>\n            <option value=\"quickbuild\" class=\"translated\" defaultText=\"Quickbuild\"></option>\n        </select>\n    </div>\n    <div class=\"col-md-4 points-display-container\">\n        Points: <span class=\"total-points\">0</span> / <input type=\"number\" class=\"desired-points\" value=\"20\">\n        <span class=\"points-remaining-container\">(<span class=\"points-remaining\"></span>&nbsp;left) <span class=\"points-destroyed red\"></span></span>\n        <span class=\"content-warning unreleased-content-used d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Unreleased content warning\"></span></span>\n        <span class=\"content-warning loading-failed-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Broken squad link warning\"></span></span>\n        <span class=\"content-warning collection-invalid d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Collection warning\"></span></span>\n        <span class=\"content-warning ship-number-invalid-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Ship number warning\"></span></span>\n        <span class=\"content-warning multi-faction-warning-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Multi-Faction warning\"></span></span>\n    </div>\n    <div class=\"col-md-5 float-right button-container\">\n        <div class=\"btn-group float-right\">\n\n            <button class=\"btn btn-info view-as-text\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print/Export\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-print\"></i></span></button>\n            <a class=\"btn btn-primary d-none collection\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-folder-open\"></i> <span class=\"translated\" defaultText=\"Your Collection\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-folder-open\"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class=\"btn btn-danger randomize\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-random\"></i> <span class=\"translated\" defaultText=\"Randomize!\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-random\"></i></span></button>\n            <button class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\">\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu\">\n                <li><a class=\"dropdown-item randomize-options translated\" defaultText=\"Randomizer Options\"></a></li>\n                <li><a class=\"dropdown-item misc-settings translated\" defaultText=\"Misc Settings\"></a></li>\n            </ul>\n            \n\n        </div>\n    </div>\n</div>\n\n<div class=\"row squad-save-buttons\">\n    <div class=\"col-md-12\">\n        <button class=\"show-authenticated btn btn-primary save-list\"><i class=\"far fa-save\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save\"></span></button>\n        <button class=\"show-authenticated btn btn-primary save-list-as\"><i class=\"far fa-file\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save As...\"></span></button>\n        <button class=\"show-authenticated btn btn-primary delete-list disabled\"><i class=\"fa fa-trash\"></i>&nbsp;<span class=\"translated\" defaultText=\"Delete\"></span></button>\n        <button class=\"show-authenticated btn btn-info backend-list-my-squads show-authenticated\"><i class=\"fa fa-download\"></i>&nbsp;<span class = \"translated\" defaultText=\"Load Squad\"></span></button>\n        <button class=\"btn btn-info import-squad\"><i class=\"fa fa-file-import\"></i>&nbsp;<span class=\"translated\" defaultText=\"Import\"></span></button>\n        <button class=\"btn btn-danger clear-squad\"><i class=\"fa fa-plus-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"New Squad\"></span></button>\n        <span class=\"show-authenticated backend-status\"></span>\n    </div>\n</div>"));
+    this.status_container.append($.trim("<div class=\"row squad-name-and-points-row\">\n    <div class=\"col-md-3 squad-name-container\">\n        <div class=\"display-name\">\n            <span class=\"squad-name\"></span>\n            <i class=\"far fa-edit\"></i>\n        </div>\n        <div class=\"input-append\">\n            <input type=\"text\" maxlength=\"64\" placeholder=\"" + (this.uitranslation("Name your squad...")) + "\" />\n            <button class=\"btn save\"><i class=\"fa fa-pen-square\"></i></button>\n        </div>\n        <br />\n        <select class=\"game-type-selector\">\n            <option value=\"standard\" class=\"translated\" defaultText=\"Standard\" selected=\"selected\">" + (this.uitranslation("Standard")) + "</option>\n            <option value=\"extended\" class=\"translated\" defaultText=\"Extended\"></option>\n            <option value=\"epic\" class=\"translated\" defaultText=\"Epic\"></option>\n            <option value=\"quickbuild\" class=\"translated\" defaultText=\"Quickbuild\"></option>\n        </select>\n    </div>\n    <div class=\"col-md-4 points-display-container\">\n        Points: <span class=\"total-points\">0</span> / <input type=\"number\" class=\"desired-points\" value=\"200\">\n        <span class=\"points-remaining-container\">(<span class=\"points-remaining\"></span>&nbsp;left) <span class=\"points-destroyed red\"></span></span>\n        <span class=\"content-warning unreleased-content-used d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Unreleased content warning\"></span></span>\n        <span class=\"content-warning loading-failed-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Broken squad link warning\"></span></span>\n        <span class=\"content-warning old-version-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"This squad is using an older version of X-Wing.\"></span></span>\n        <span class=\"content-warning collection-invalid d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Collection warning\"></span></span>\n        <span class=\"content-warning ship-number-invalid-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Ship number warning\"></span></span>\n        <span class=\"content-warning multi-faction-warning-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Multi-Faction warning\"></span></span>\n    </div>\n    <div class=\"col-md-5 float-right button-container\">\n        <div class=\"btn-group float-right\">\n\n            <button class=\"btn btn-info view-as-text\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print/Export\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-print\"></i></span></button>\n            <a class=\"btn btn-primary d-none collection\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-folder-open\"></i> <span class=\"translated\" defaultText=\"Your Collection\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-folder-open\"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class=\"btn btn-danger randomize\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-random\"></i> <span class=\"translated\" defaultText=\"Randomize!\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-random\"></i></span></button>\n            <button class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\">\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu\">\n                <li><a class=\"dropdown-item randomize-options translated\" defaultText=\"Randomizer Options\"></a></li>\n                <li><a class=\"dropdown-item misc-settings translated\" defaultText=\"Misc Settings\"></a></li>\n            </ul>\n            \n\n        </div>\n    </div>\n</div>\n\n<div class=\"row squad-save-buttons\">\n    <div class=\"col-md-12\">\n        <button class=\"show-authenticated btn btn-primary save-list\"><i class=\"far fa-save\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save\"></span></button>\n        <button class=\"show-authenticated btn btn-primary save-list-as\"><i class=\"far fa-file\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save As...\"></span></button>\n        <button class=\"show-authenticated btn btn-primary delete-list disabled\"><i class=\"fa fa-trash\"></i>&nbsp;<span class=\"translated\" defaultText=\"Delete\"></span></button>\n        <button class=\"show-authenticated btn btn-info backend-list-my-squads show-authenticated\"><i class=\"fa fa-download\"></i>&nbsp;<span class = \"translated\" defaultText=\"Load Squad\"></span></button>\n        <button class=\"btn btn-info import-squad\"><i class=\"fa fa-file-import\"></i>&nbsp;<span class=\"translated\" defaultText=\"Import\"></span></button>\n        <button class=\"btn btn-danger clear-squad\"><i class=\"fa fa-plus-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"New Squad\"></span></button>\n        <span class=\"show-authenticated backend-status\"></span>\n    </div>\n</div>"));
     this.container.append(this.status_container);
     this.xws_import_modal = $(document.createElement('DIV'));
     this.xws_import_modal.addClass('modal fade import-modal d-print-none');
@@ -3177,6 +3173,7 @@ exportObj.SquadBuilder = (function() {
     this.points_remaining_container = $(this.points_container.find('.points-remaining-container'));
     this.unreleased_content_used_container = $(this.points_container.find('.unreleased-content-used'));
     this.loading_failed_container = $(this.points_container.find('.loading-failed-container'));
+    this.old_version_container = $(this.points_container.find('.old-version-container'));
     this.ship_number_invalid_container = $(this.points_container.find('.ship-number-invalid-container'));
     this.multi_faction_warning_container = $(this.points_container.find('.multi-faction-warning-container'));
     this.collection_invalid_container = $(this.points_container.find('.collection-invalid'));
@@ -3425,7 +3422,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3125
+              lineno: 3121
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -3740,7 +3737,7 @@ exportObj.SquadBuilder = (function() {
             }).call(_this);
             _this.printable_container.find('.squad-faction').html("<i class=\"xwing-miniatures-font xwing-miniatures-font-" + faction + "\"></i>");
         }
-        if (_this.isHyperspace) {
+        if (_this.isStandard) {
           _this.printable_container.find('.squad-name').append(" <i class=\"xwing-miniatures-font xwing-miniatures-font-first-player-1\"></i>");
         }
         if (_this.isEpic) {
@@ -3867,28 +3864,28 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.onGameTypeChanged = function(gametype, cb) {
-    var oldEpic, oldHyperspace, oldQuickbuild, old_id;
+    var oldEpic, oldQuickbuild, old_id, oldstandard;
     if (cb == null) {
       cb = $.noop;
     }
-    oldHyperspace = this.isHyperspace;
+    oldstandard = this.isStandard;
     oldEpic = this.isEpic;
     oldQuickbuild = this.isQuickbuild;
-    this.isHyperspace = true;
+    this.isStandard = true;
     this.isEpic = false;
     this.isQuickbuild = false;
     switch (gametype) {
       case 'extended':
-        this.isHyperspace = false;
-        this.desired_points_input.val(20);
+        this.isStandard = false;
+        this.desired_points_input.val(200);
         break;
       case 'standard':
-        this.isHyperspace = true;
-        this.desired_points_input.val(20);
+        this.isStandard = true;
+        this.desired_points_input.val(200);
         break;
       case 'epic':
         this.isEpic = true;
-        this.desired_points_input.val(50);
+        this.desired_points_input.val(500);
         break;
       case 'quickbuild':
         this.isQuickbuild = true;
@@ -4137,10 +4134,10 @@ exportObj.SquadBuilder = (function() {
     serialization_version = 9;
     game_type_abbrev = (function() {
       switch (this.game_type_selector.val()) {
-        case 'extended':
-          return 's';
         case 'standard':
           return 'h';
+        case 'extended':
+          return 's';
         case 'epic':
           return 'e';
         case 'quickbuild':
@@ -4169,18 +4166,19 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.loadFromSerialized = function(serialized) {
-    var desired_points, g, game_type_abbrev, matches, new_ship, p, re, s, serialized_ship, serialized_ships, ship, ship_splitter, ships_with_unmet_dependencies, version, _i, _j, _len, _len1, _ref, _ref1, _ref2;
+    var desired_points, g, game_type_abbrev, game_type_and_point_abbrev, matches, new_ship, p, re, s, serialized_ship, serialized_ships, ship, ship_splitter, ships_with_unmet_dependencies, version, _i, _j, _len, _len1, _ref, _ref1, _ref2, _ref3;
     this.suppress_automatic_new_ship = true;
     this.removeAllShips();
     re = __indexOf.call(serialized, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
     matches = re.exec(serialized);
     if (matches != null) {
       version = parseInt(matches[1]);
+      ship_splitter = version > 7 ? 'Y' : ';';
+      _ref2 = version > 7 ? ((_ref = matches[2].split('Z'), g = _ref[0], p = _ref[1], s = _ref[2], _ref), [g, parseInt(p), s]) : ((_ref1 = matches[2].split('!'), game_type_and_point_abbrev = _ref1[0], s = _ref1[1], _ref1), parseInt(game_type_and_point_abbrev.split('=')[1]) ? p = parseInt(game_type_and_point_abbrev.split('=')[1]) : p = 200, g = game_type_and_point_abbrev.split('=')[0], [g, p, s]), game_type_abbrev = _ref2[0], desired_points = _ref2[1], serialized_ships = _ref2[2];
       if (version < 9) {
-        ship_splitter = 'Y';
+        this.old_version_container.toggleClass('d-none', false);
+        return;
       }
-      _ref = matches[2].split('Z'), g = _ref[0], p = _ref[1], s = _ref[2];
-      _ref1 = [g, parseInt(p), s], game_type_abbrev = _ref1[0], desired_points = _ref1[1], serialized_ships = _ref1[2];
       if (serialized_ships == null) {
         this.loading_failed_container.toggleClass('d-none', false);
         return;
@@ -4202,9 +4200,9 @@ exportObj.SquadBuilder = (function() {
       this.desired_points_input.change();
       ships_with_unmet_dependencies = [];
       if (serialized_ships.length != null) {
-        _ref2 = serialized_ships.split(ship_splitter);
-        for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
-          serialized_ship = _ref2[_i];
+        _ref3 = serialized_ships.split(ship_splitter);
+        for (_i = 0, _len = _ref3.length; _i < _len; _i++) {
+          serialized_ship = _ref3[_i];
           if (serialized_ship !== '') {
             new_ship = this.addShip();
             if ((!new_ship.fromSerialized(version, serialized_ship)) || !new_ship.pilot) {
@@ -4356,7 +4354,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 3983
+              lineno: 3991
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4366,7 +4364,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 3984
+                lineno: 3992
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -4423,8 +4421,8 @@ exportObj.SquadBuilder = (function() {
     }
     if (this.isQuickbuild) {
       return true;
-    } else if (this.isHyperspace) {
-      return exportObj.hyperspaceCheck(item_data, this.faction, shipCheck);
+    } else if (this.isStandard) {
+      return exportObj.standardCheck(item_data, this.faction, shipCheck);
     } else if (!this.isEpic) {
       return exportObj.epicExclusions(item_data);
     } else {
@@ -6368,7 +6366,7 @@ exportObj.SquadBuilder = (function() {
           link: this.getPermaLink()
         }
       },
-      version: '2.0.0'
+      version: '2.5.0'
     };
     _ref = this.ships;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -6498,7 +6496,7 @@ exportObj.SquadBuilder = (function() {
         this.removeAllShips();
         success = true;
         error = "";
-        serialized_squad = "v9ZsZ20Z";
+        serialized_squad = "v9ZhZ20Z";
         _ref = xws.pilots;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           pilot = _ref[_i];
@@ -6614,7 +6612,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5610
+                  lineno: 5618
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6841,7 +6839,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5729
+                          lineno: 5737
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6891,7 +6889,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5762
+                                  lineno: 5770
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -6989,7 +6987,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5820
+                      lineno: 5828
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7073,7 +7071,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5856
+                lineno: 5864
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7142,7 +7140,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5885
+              lineno: 5893
             }));
           }
         }
@@ -7229,7 +7227,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 5939
+                lineno: 5947
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -7910,94 +7908,31 @@ Ship = (function() {
   };
 
   Ship.prototype.fromSerialized = function(version, serialized) {
-    var addon_cls, addon_id, addon_type_serialized, conferred_addon, conferredaddon_pair, conferredaddon_pairs, deferred_id, deferred_id_added, deferred_ids, everythingadded, i, pilot_id, pilot_splitter, upgrade, upgrade_conferred_addon_pairs, upgrade_id, upgrade_ids, upgrade_selection, upgrade_splitter, version_4_compatibility_placeholder_mod, version_4_compatibility_placeholder_title, _, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _m, _n, _o, _p, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+    var conferredaddon_pairs, everythingadded, i, pilot_id, pilot_splitter, upgrade, upgrade_id, upgrade_ids, upgrade_selection, upgrade_splitter, _, _i, _j, _k, _len, _ref, _ref1, _ref2;
     everythingadded = true;
     switch (version) {
+      case 1:
+      case 2:
+      case 3:
       case 4:
       case 5:
       case 6:
-        if ((serialized.split(':')).length === 3) {
-          _ref = serialized.split(':'), pilot_id = _ref[0], upgrade_ids = _ref[1], conferredaddon_pairs = _ref[2];
-        } else {
-          _ref1 = serialized.split(':'), pilot_id = _ref1[0], upgrade_ids = _ref1[1], version_4_compatibility_placeholder_title = _ref1[2], version_4_compatibility_placeholder_mod = _ref1[3], conferredaddon_pairs = _ref1[4];
-        }
-        this.setPilotById(parseInt(pilot_id), true);
-        if (!this.validate) {
-          return false;
-        }
-        deferred_ids = [];
-        _ref2 = upgrade_ids.split(',');
-        for (i = _i = 0, _len = _ref2.length; _i < _len; i = ++_i) {
-          upgrade_id = _ref2[i];
-          upgrade_id = parseInt(upgrade_id);
-          if (upgrade_id < 0 || isNaN(upgrade_id)) {
-            continue;
-          }
-          if (this.upgrades[i].isOccupied() || (((_ref3 = this.upgrades[i].dataById[upgrade_id]) != null ? _ref3.also_occupies_upgrades : void 0) != null)) {
-            deferred_ids.push(upgrade_id);
-          } else {
-            this.upgrades[i].setById(upgrade_id);
-            everythingadded &= this.upgrades[i].lastSetValid;
-          }
-        }
-        for (_j = 0, _len1 = deferred_ids.length; _j < _len1; _j++) {
-          deferred_id = deferred_ids[_j];
-          deferred_id_added = false;
-          _ref4 = this.upgrades;
-          for (i = _k = 0, _len2 = _ref4.length; _k < _len2; i = ++_k) {
-            upgrade = _ref4[i];
-            if (upgrade.isOccupied() || upgrade.slot !== exportObj.upgradesById[deferred_id].slot) {
-              continue;
-            }
-            upgrade.setById(deferred_id);
-            deferred_id_added = upgrade.lastSetValid;
-            break;
-          }
-          everythingadded &= deferred_id_added;
-        }
-        if (conferredaddon_pairs != null) {
-          conferredaddon_pairs = conferredaddon_pairs.split(',');
-        } else {
-          conferredaddon_pairs = [];
-        }
-        _ref5 = this.upgrades;
-        for (_l = 0, _len3 = _ref5.length; _l < _len3; _l++) {
-          upgrade = _ref5[_l];
-          if (((upgrade != null ? upgrade.data : void 0) != null) && upgrade.conferredAddons.length > 0) {
-            upgrade_conferred_addon_pairs = conferredaddon_pairs.splice(0, upgrade.conferredAddons.length);
-            for (i = _m = 0, _len4 = upgrade_conferred_addon_pairs.length; _m < _len4; i = ++_m) {
-              conferredaddon_pair = upgrade_conferred_addon_pairs[i];
-              _ref6 = conferredaddon_pair.split('.'), addon_type_serialized = _ref6[0], addon_id = _ref6[1];
-              addon_id = parseInt(addon_id);
-              addon_cls = SERIALIZATION_CODE_TO_CLASS[addon_type_serialized];
-              if (!addon_cls) {
-                console.log("Something went wrong... could not serialize properly");
-                continue;
-              }
-              conferred_addon = upgrade.conferredAddons[i];
-              if (conferred_addon instanceof addon_cls) {
-                conferred_addon.setById(addon_id);
-                everythingadded &= conferred_addon.lastSetValid;
-              } else {
-                throw new Error("Expected addon class " + addon_cls.constructor.name + " for conferred addon at index " + i + " but " + conferred_addon.constructor.name + " is there");
-              }
-            }
-          }
-        }
-        break;
       case 7:
       case 8:
-        pilot_splitter = version > 7 ? 'X' : ':';
-        upgrade_splitter = version > 7 ? 'W' : ',';
-        _ref7 = serialized.split(pilot_splitter), pilot_id = _ref7[0], upgrade_ids = _ref7[1], conferredaddon_pairs = _ref7[2];
+        console.log("Incorrect Version!");
+        break;
+      case 9:
+        pilot_splitter = 'X';
+        upgrade_splitter = 'W';
+        _ref = serialized.split(pilot_splitter), pilot_id = _ref[0], upgrade_ids = _ref[1], conferredaddon_pairs = _ref[2];
         upgrade_ids = upgrade_ids.split(upgrade_splitter);
         this.setPilotById(parseInt(pilot_id), true);
         if (!this.validate) {
           return false;
         }
         if (!this.builder.isQuickbuild) {
-          for (_ = _n = 1; _n < 3; _ = ++_n) {
-            for (i = _o = _ref8 = upgrade_ids.length - 1; _ref8 <= -1 ? _o < -1 : _o > -1; i = _ref8 <= -1 ? ++_o : --_o) {
+          for (_ = _i = 1; _i < 3; _ = ++_i) {
+            for (i = _j = _ref1 = upgrade_ids.length - 1; _ref1 <= -1 ? _j < -1 : _j > -1; i = _ref1 <= -1 ? ++_j : --_j) {
               upgrade_id = upgrade_ids[i];
               upgrade = exportObj.upgradesById[upgrade_id];
               if (upgrade == null) {
@@ -8008,9 +7943,9 @@ Ship = (function() {
                 }
                 continue;
               }
-              _ref9 = this.upgrades;
-              for (_p = 0, _len5 = _ref9.length; _p < _len5; _p++) {
-                upgrade_selection = _ref9[_p];
+              _ref2 = this.upgrades;
+              for (_k = 0, _len = _ref2.length; _k < _len; _k++) {
+                upgrade_selection = _ref2[_k];
                 if (exportObj.slotsMatching(upgrade.slot, upgrade_selection.slot) && !upgrade_selection.isOccupied()) {
                   upgrade_selection.setById(upgrade_id);
                   if (upgrade_selection.lastSetValid) {
@@ -8078,7 +8013,7 @@ Ship = (function() {
   };
 
   Ship.prototype.validate = function() {
-    var addCommand, current_upgrade_points, equipped_upgrades, func, func_result, i, max_checks, pilot_func, unchanged, upgrade, valid, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref, _ref1, _ref10, _ref11, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+    var addCommand, current_upgrade_points, equipped_upgrades, func, func_result, i, max_checks, pilot_func, unchanged, upgrade, valid, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref, _ref1, _ref10, _ref11, _ref12, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
     if (this.pilot == null) {
       return true;
     }
@@ -8132,9 +8067,12 @@ Ship = (function() {
         func = (_ref8 = upgrade != null ? (_ref9 = upgrade.data) != null ? _ref9.validation_func : void 0 : void 0) != null ? _ref8 : void 0;
         if (func != null) {
           func_result = upgrade != null ? (_ref10 = upgrade.data) != null ? _ref10.validation_func(this, upgrade) : void 0 : void 0;
+        } else if (upgrade != null ? (_ref11 = upgrade.data) != null ? _ref11.restrictions : void 0 : void 0) {
+          func_result = this.restriction_check(upgrade.data.restrictions, upgrade, current_upgrade_points, upgrade.getPoints());
+        } else {
+          func_result = this.restriction_check(void 0, upgrade, current_upgrade_points, upgrade.getPoints());
         }
-        func_result = this.restriction_check((upgrade.data.restrictions ? upgrade.data.restrictions : void 0), upgrade, current_upgrade_points, upgrade.getPoints());
-        if ((((func_result != null) && !func_result) || (((upgrade != null ? upgrade.data : void 0) != null) && ((_ref11 = upgrade.data, __indexOf.call(equipped_upgrades, _ref11) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !this.builder.isQuickbuild) {
+        if ((((func_result != null) && !func_result) || (((upgrade != null ? upgrade.data : void 0) != null) && ((_ref12 = upgrade.data, __indexOf.call(equipped_upgrades, _ref12) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !this.builder.isQuickbuild) {
           upgrade.setById(null);
           valid = false;
           unchanged = false;
@@ -8522,7 +8460,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6887
+                lineno: 6843
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8681,7 +8619,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 6981
+                  lineno: 6937
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8708,7 +8646,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 6988
+                      lineno: 6944
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8852,7 +8790,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7063
+            lineno: 7019
           }));
         }
         __iced_deferrals._fulfill();

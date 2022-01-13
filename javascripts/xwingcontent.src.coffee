@@ -22491,7 +22491,7 @@ exportObj.randomizer = (faction_name, points) ->
         #if Math.random() >= 0.9
         #append.shiplistmaster.pilotsbyid.xws ? shiplistmaster.pilotsbyid.canonical_name ? shiplistmaster.pilotsbyid.name.canonicalize())
 
-exportObj.hyperspaceShipInclusions = [
+exportObj.standardShipInclusions = [
     {name: 'X-Wing', faction: 'Rebel Alliance'}
     {name: 'YT-1300', faction: 'Rebel Alliance'}
     {name: 'B-Wing', faction: 'Rebel Alliance'}
@@ -22551,7 +22551,7 @@ exportObj.hyperspaceShipInclusions = [
 ]
 
 # Used to exclude pilots from included ships
-exportObj.hyperspacePilotExclusions = [
+exportObj.standardPilotExclusions = [
 
     # Rebel Alliance
     'Wedge Antilles'
@@ -22700,8 +22700,8 @@ exportObj.hyperspacePilotExclusions = [
 
 ]
 
-# Upgrades in that are not in Hyperspace
-exportObj.hyperspaceUpgradeExclusions = [
+# Upgrades in that are not in standard
+exportObj.standardUpgradeExclusions = [
     # Rebel Alliance
     'Jyn Erso'
     'Bistan'
@@ -22895,29 +22895,29 @@ exportObj.epicExclusions = (data) ->
 
 # Ships/Pilots excluded unless in the included list (with further excluded pilots list for included ships, i.e u-wing)
 # while upgrades assumed included unless on the excluded list
-exportObj.hyperspaceCheck = (data, faction='', shipCheck=false) ->
+exportObj.standardCheck = (data, faction='', shipCheck=false) ->
     if (shipCheck)
-        if (data.name in exportObj.hyperspacePilotExclusions)
+        if (data.name in exportObj.standardPilotExclusions)
             return false
-        for ship in exportObj.hyperspaceShipInclusions
+        for ship in exportObj.standardShipInclusions
             if (ship.faction == faction && (data.name == ship.name || data.ship == ship.name || (Array.isArray(data.ship) and ship.name in data.ship)))
                 return true
         return false
     else
-        return data.name not in exportObj.hyperspaceUpgradeExclusions
+        return data.name not in exportObj.standardUpgradeExclusions
 
-exportObj.hyperspaceCheckBrowser = (data, faction='', type) ->
+exportObj.standardCheckBrowser = (data, faction='', type) ->
     # check ship/pilot first
     if type == 'Pilot'
-        return data.name not in exportObj.hyperspacePilotExclusions
+        return data.name not in exportObj.standardPilotExclusions
     else if type == 'Ship'
-        for ship in exportObj.hyperspaceShipInclusions
+        for ship in exportObj.standardShipInclusions
             # checks against name for ship itself or ship name/faction for pilot inclusions
             if (ship.faction == faction && (data.name == ship.name || data.ship == ship.name || (Array.isArray(data.ship) and ship.name in data.ship)))
                 return true
         return false
     else
-        return data.name not in exportObj.hyperspaceUpgradeExclusions
+        return data.name not in exportObj.standardUpgradeExclusions
 
 exportObj.codeToLanguage ?= {}
 exportObj.codeToLanguage.en = 'English'

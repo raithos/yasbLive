@@ -969,13 +969,7 @@ class exportObj.SquadBuilderBackend
                     else
                         language_code = language_tag.split('-')[0]
                         # check if the language code is available
-                        if langc of exportObj.codeToLanguage
-                            # yep - use as language with reasonable priority
-                            cb(exportObj.codeToLanguage[language_code], 8)
-                        else
-                            # bullshit priority - we can't support what the user wants
-                            # (maybe he gave another option though in his browser settings)
-                            cb 'English', -1
+                        cb 'English', -1
                     break
             else
                 # no headers, callback with bullshit priority
@@ -2288,7 +2282,7 @@ class exportObj.SquadBuilder
         @tooltip_currently_displaying = null
         @randomizer_options =
             sources: null
-            points: 20
+            points: 200
             bid_goal: 5
             ships_or_upgrades: 3
             ship_limit: 0
@@ -2296,7 +2290,7 @@ class exportObj.SquadBuilder
             fill_zero_pts: false
         @total_points = 0
         # a squad given in the link is loaded on construction of that builder. It will set all gamemodes of already existing builders accordingly, but we did not exists back than. So we copy over the gamemode
-        @isHyperspace = exportObj.builders[0]?.isHyperspace ? true
+        @isStandard = exportObj.builders[0]?.isStandard ? true
         @isEpic = exportObj.builders[0]?.isEpic ? false
         @isQuickbuild = exportObj.builders[0]?.isQuickbuild ? false
 
@@ -2373,7 +2367,7 @@ class exportObj.SquadBuilder
         exportObj.translate('ui', what, args)
 
     setupUI: ->
-        DEFAULT_RANDOMIZER_POINTS = 20
+        DEFAULT_RANDOMIZER_POINTS = 200
         DEFAULT_RANDOMIZER_TIMEOUT_SEC = 4
         DEFAULT_RANDOMIZER_BID_GOAL = 5
         DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES = 3
@@ -2401,10 +2395,11 @@ class exportObj.SquadBuilder
                     </select>
                 </div>
                 <div class="col-md-4 points-display-container">
-                    Points: <span class="total-points">0</span> / <input type="number" class="desired-points" value="20">
+                    Points: <span class="total-points">0</span> / <input type="number" class="desired-points" value="200">
                     <span class="points-remaining-container">(<span class="points-remaining"></span>&nbsp;left) <span class="points-destroyed red"></span></span>
                     <span class="content-warning unreleased-content-used d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Unreleased content warning"></span></span>
                     <span class="content-warning loading-failed-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Broken squad link warning"></span></span>
+                    <span class="content-warning old-version-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="This squad is using an older version of X-Wing."></span></span>
                     <span class="content-warning collection-invalid d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Collection warning"></span></span>
                     <span class="content-warning ship-number-invalid-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Ship number warning"></span></span>
                     <span class="content-warning multi-faction-warning-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Multi-Faction warning"></span></span>
@@ -2840,6 +2835,7 @@ class exportObj.SquadBuilder
         @points_remaining_container = $ @points_container.find('.points-remaining-container')
         @unreleased_content_used_container = $ @points_container.find('.unreleased-content-used')
         @loading_failed_container = $ @points_container.find('.loading-failed-container')
+        @old_version_container = $ @points_container.find('.old-version-container')
         @ship_number_invalid_container = $ @points_container.find('.ship-number-invalid-container')
         @multi_faction_warning_container = $ @points_container.find('.multi-faction-warning-container')
         @collection_invalid_container = $ @points_container.find('.collection-invalid')
@@ -3474,7 +3470,7 @@ class exportObj.SquadBuilder
                             'first-player-4'
                     @printable_container.find('.squad-faction').html """<i class="xwing-miniatures-font xwing-miniatures-font-#{faction}"></i>"""
             # List type
-            if @isHyperspace
+            if @isStandard
                 @printable_container.find('.squad-name').append """ <i class="xwing-miniatures-font xwing-miniatures-font-first-player-1"></i>"""
             if @isEpic
                 @printable_container.find('.squad-name').append """ <i class="xwing-miniatures-font xwing-miniatures-font-energy"></i>""" 
@@ -3582,22 +3578,22 @@ class exportObj.SquadBuilder
             @container.trigger 'xwing-backend:squadDirtinessChanged'
 
     onGameTypeChanged: (gametype, cb=$.noop) =>
-        oldHyperspace = @isHyperspace
+        oldstandard = @isStandard
         oldEpic = @isEpic
         oldQuickbuild = @isQuickbuild
-        @isHyperspace = true
+        @isStandard = true
         @isEpic = false
         @isQuickbuild = false
         switch gametype
             when 'extended'
-                @isHyperspace = false
-                @desired_points_input.val 20
+                @isStandard = false
+                @desired_points_input.val 200
             when 'standard'
-                @isHyperspace = true
-                @desired_points_input.val 20
+                @isStandard = true
+                @desired_points_input.val 200
             when 'epic'
                 @isEpic = true
-                @desired_points_input.val 50
+                @desired_points_input.val 500
             when 'quickbuild'
                 @isQuickbuild = true
                 @desired_points_input.val 8
@@ -3815,10 +3811,10 @@ class exportObj.SquadBuilder
 
         serialization_version = 9
         game_type_abbrev = switch @game_type_selector.val()
-            when 'extended'
-                's'
             when 'standard'
                 'h'
+            when 'extended'
+                's'
             when 'epic'
                 'e'
             when 'quickbuild'
@@ -3842,16 +3838,28 @@ class exportObj.SquadBuilder
             # versioned
             version = parseInt matches[1]
             # v9: X-Wing 2.5 points rework. Due to the massive change in points structure, previous versions will no longer be supported
-            if version < 9
-                ship_splitter = 'Y'
+            ship_splitter = if version > 7 then 'Y' else ';'
             # parse out game type
-            [g, p, s] = matches[2].split('Z')
-            [ game_type_abbrev, desired_points, serialized_ships ] = [g, parseInt(p), s]
+            [ game_type_abbrev, desired_points, serialized_ships ] =
+                if version > 7
+                     [g, p, s] = matches[2].split('Z')
+                     [g, parseInt(p), s]
+                else
+                    [ game_type_and_point_abbrev, s ] = matches[2].split('!')
+                    if parseInt(game_type_and_point_abbrev.split('=')[1])
+                        p = parseInt(game_type_and_point_abbrev.split('=')[1])
+                    else
+                        p = 200
+                    g = game_type_and_point_abbrev.split('=')[0]
+                    [ g, p, s ]
 
-            # check if there are serialized ships to load
+            if version < 9 # old version are no longer supported
+                @old_version_container.toggleClass 'd-none', false
+                return
             if !serialized_ships? # something went wrong, we can't load that serialization
                 @loading_failed_container.toggleClass 'd-none', false
                 return
+
             switch game_type_abbrev
                 when 's'
                     @changeGameTypeOnSquadLoad 'extended'
@@ -4008,11 +4016,11 @@ class exportObj.SquadBuilder
             getPrimaryFaction(faction) == check_faction
 
     isItemAvailable: (item_data, shipCheck=false) ->
-        # this method is not even invoked by most quickbuild stuff to check availability for quickbuild squads, as the method was formerly just telling apart extended/hyperspace
+        # this method is not even invoked by most quickbuild stuff to check availability for quickbuild squads, as the method was formerly just telling apart extended/standard
         if @isQuickbuild
             return true
-        else if @isHyperspace
-            return exportObj.hyperspaceCheck(item_data, @faction, shipCheck)
+        else if @isStandard
+            return exportObj.standardCheck(item_data, @faction, shipCheck)
         else if (not @isEpic)
             return exportObj.epicExclusions(item_data)
         else
@@ -5415,7 +5423,7 @@ class exportObj.SquadBuilder
                     builder: 'YASB 2.0'
                     builder_url: window.location.href.split('?')[0]
                     link: @getPermaLink()
-            version: '2.0.0'
+            version: '2.5.0'
             # there is no point to have this version identifier, if we never actually increase it, right?
 
         for ship in @ships
@@ -5506,7 +5514,7 @@ class exportObj.SquadBuilder
                 success = true
                 error = ""
 
-                serialized_squad = "v9ZsZ20Z" # serialization v9, extended squad, 20 points
+                serialized_squad = "v9ZhZ20Z" # serialization v9, extended squad, 20 points
                 # serialization schema SHIPID:UPGRADEID,UPGRADEID,...,UPGRADEID:;SHIPID:UPGRADEID,...
 
                 for pilot in xws.pilots
@@ -6499,70 +6507,15 @@ class Ship
     # returning false does not necessary mean nothing has been added, but some stuff might have been dropped (e.g. 0-0-0 if vader is not yet in the squad)
         everythingadded = true
         switch version
-        # version 1-3 are 1st edition x-wing only, so we may as well delete them. 
-        # version 4 was the final version of 1st edition, and the first few weeks of 2nd edition. 
-        # version 5 is the current version. It handles titles and mods as regular upgrades. 
-            when 4, 5, 6
-                # PILOT_ID:UPGRADEID1,UPGRADEID2:CONFERREDADDONTYPE1.CONFERREDADDONID1,CONFERREDADDONTYPE2.CONFERREDADDONID2
-                # conferredaddons are upgrade slots added by e.g. titles 
-                # version 5 is the same as version 4, but title and mod has been dropped (as they are treated as upgrades anyways). Thus, we may differ by length 
-                if (serialized.split ':').length == 3
-                    # version 5,6
-                    [ pilot_id, upgrade_ids, conferredaddon_pairs ] = serialized.split ':'
-                else 
-                    # version 4
-                    [ pilot_id, upgrade_ids, version_4_compatibility_placeholder_title, version_4_compatibility_placeholder_mod, conferredaddon_pairs ] = serialized.split ':'
-                @setPilotById parseInt(pilot_id), true
-                # make sure the pilot is valid 
-                return false unless @validate
+            when 1, 2, 3, 4, 5, 6, 7, 8
+                # v 1-3 are 1st Ed
+                # v 4-8 are 2nd Ed 
+                # v 9+ are 2.5 Ed 
+                console.log "Incorrect Version!"
 
-                deferred_ids = []
-                for upgrade_id, i in upgrade_ids.split ','
-                    upgrade_id = parseInt upgrade_id
-                    continue if upgrade_id < 0 or isNaN(upgrade_id)
-                    # Defer fat upgrades
-                    if @upgrades[i].isOccupied() or @upgrades[i].dataById[upgrade_id]?.also_occupies_upgrades?
-                        deferred_ids.push upgrade_id
-                    else
-                        @upgrades[i].setById upgrade_id
-                        everythingadded &= @upgrades[i].lastSetValid
-
-                for deferred_id in deferred_ids
-                    deferred_id_added = false
-                    for upgrade, i in @upgrades
-                        if upgrade.isOccupied() or upgrade.slot != exportObj.upgradesById[deferred_id].slot
-                            continue
-                        upgrade.setById deferred_id
-                        deferred_id_added = upgrade.lastSetValid
-                        break
-                    everythingadded &= deferred_id_added
-
-                if conferredaddon_pairs?
-                    conferredaddon_pairs = conferredaddon_pairs.split ','
-                else
-                    conferredaddon_pairs = []
-
-                for upgrade in @upgrades
-                    if upgrade?.data? and upgrade.conferredAddons.length > 0
-                        upgrade_conferred_addon_pairs = conferredaddon_pairs.splice 0, upgrade.conferredAddons.length
-                        for conferredaddon_pair, i in upgrade_conferred_addon_pairs
-                            [ addon_type_serialized, addon_id ] = conferredaddon_pair.split '.'
-                            addon_id = parseInt addon_id
-                            addon_cls = SERIALIZATION_CODE_TO_CLASS[addon_type_serialized]
-                            if not addon_cls
-                                console.log("Something went wrong... could not serialize properly")
-                                continue
-                            conferred_addon = upgrade.conferredAddons[i]
-                            if conferred_addon instanceof addon_cls
-                                conferred_addon.setById addon_id
-                                everythingadded &= conferred_addon.lastSetValid
-                            else
-                                throw new Error("Expected addon class #{addon_cls.constructor.name} for conferred addon at index #{i} but #{conferred_addon.constructor.name} is there")
-
-            when 7, 8
-                pilot_splitter = if version > 7 then 'X' else ':'
-                upgrade_splitter = if version > 7 then 'W' else ','
-                # version 7 is an further extension of version 6, allowing arbitrary order of upgrades. It currently ignores conferredaddons (upgrades in slots added by titles etc), probably we can drop the special case handling for them and include them into the usual upgrade list?
+            when 9
+                pilot_splitter = 'X'
+                upgrade_splitter = 'W'
                 [ pilot_id, upgrade_ids, conferredaddon_pairs ] = serialized.split pilot_splitter
                 upgrade_ids = upgrade_ids.split upgrade_splitter
                 # set the pilot
@@ -6682,7 +6635,10 @@ class Ship
                 func = upgrade?.data?.validation_func ? undefined
                 if func?
                     func_result = upgrade?.data?.validation_func(this, upgrade)
-                func_result = @restriction_check((if upgrade.data.restrictions then upgrade.data.restrictions else undefined), upgrade, current_upgrade_points, upgrade.getPoints())
+                else if upgrade?.data?.restrictions
+                    func_result = @restriction_check(upgrade.data.restrictions, upgrade, current_upgrade_points, upgrade.getPoints())
+                else
+                    func_result = @restriction_check(undefined, upgrade, current_upgrade_points, upgrade.getPoints())
                 # check if either a) validation func not met or b) upgrade already equipped or c) upgrade is not available (e.g. not format legal)
                 # ignore those checks if this is a quickbuild squad
                 if ((func_result? and not func_result) or (upgrade?.data? and (upgrade.data in equipped_upgrades or (upgrade.data.faction? and not @builder.isOurFaction(upgrade.data.faction,@pilot.faction)) or not @builder.isItemAvailable(upgrade.data)))) and not @builder.isQuickbuild
