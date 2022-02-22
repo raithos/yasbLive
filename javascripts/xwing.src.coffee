@@ -955,21 +955,28 @@ class exportObj.SquadBuilderBackend
         if settings?.language?
             # we found a language, provide it with priority 10
             cb settings.language, 10
-        # otherwise we may parse a language out of the headers (reimplements commit d95bb5e93fbb75d0e6a4a7270f7a86cf86a62a0a)
+        # otherwise we may parse a language out of the headers 
         else
             await @getHeaders defer(headers)
             if headers?.HTTP_ACCEPT_LANGUAGE?
                 # Need to parse out language preferences
-                # I'm going to be lazy and only output the first one we encounter
+                console.log "#{headers.HTTP_ACCEPT_LANGUAGE}"
                 for language_range in headers.HTTP_ACCEPT_LANGUAGE.split(',')
                     [ language_tag, quality ] = language_range.split ';'
+                    console.log "#{language_tag}, #{quality}"
                     if language_tag == '*'
-                        # let's give that half bullshit priority
+                        # let's give that half priority
                         cb 'English', -0.5
                     else
                         language_code = language_tag.split('-')[0]
                         # check if the language code is available
-                        cb 'English', -1
+                        if langc of exportObj.codeToLanguage
+                            # yep - use as language with reasonable priority
+                            cb(exportObj.codeToLanguage[language_code], 8)
+                        else
+                            # bullshit priority - we can't support what the user wants
+                            # (maybe he gave another option though in his browser settings)
+                            cb 'English', -1
                     break
             else
                 # no headers, callback with bullshit priority
@@ -1296,10 +1303,7 @@ class exportObj.CardBrowser
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card card-viewer-placeholder info-well">
-                            <p class="translate select-a-card" defaultText="Select a card"></p>
-                        </div>
-                        <div class="card card-viewer-container">
+                        <div class="card-viewer-container">
                         </div>
                     </div>
                 </div>
@@ -1308,11 +1312,10 @@ class exportObj.CardBrowser
 
         @card_selector_container = $ @container.find('.xwing-card-browser .card-selector-container')
         @card_viewer_container = $ @container.find('.xwing-card-browser .card-viewer-container')
-        @card_viewer_container.append $.trim exportObj.builders[7].createInfoContainerUI()
+        @card_viewer_container.append $.trim exportObj.builders[0].createInfoContainerUI(false)
         @card_viewer_container.hide()
         @card_viewer_conditions_container = $ @container.find('.xwing-card-browser .card-viewer-conditions-container')
         @card_viewer_conditions_container.hide()
-        @card_viewer_placeholder = $ @container.find('.xwing-card-browser .card-viewer-placeholder')
         @advanced_search_container = $ @container.find('.xwing-card-browser .advanced-search-container')
 
         @sort_selector = $ @container.find('select.sort-by')
@@ -1597,9 +1600,8 @@ class exportObj.CardBrowser
             add_opts = {addon_type: orig_type}
             orig_type = 'Addon'
 
-        exportObj.builders[7].showTooltip(orig_type, data, add_opts ? {}, @card_viewer_container) # we use the render method from the squad builder, cause it works.
-
         @card_viewer_container.show()
+        exportObj.builders[0].showTooltip(orig_type, data, add_opts ? {}, @card_viewer_container) # we use the render method from the squad builder, cause it works.
 
         # Conditions
         if data?.applies_condition?
@@ -1618,8 +1620,6 @@ class exportObj.CardBrowser
             @card_viewer_conditions_container.show()
         else
             @card_viewer_conditions_container.hide()
-
-        @card_viewer_placeholder.hide()
 
     addCardTo: (container, card) ->
         option = $ document.createElement('OPTION')
@@ -1985,10 +1985,9 @@ class exportObj.RulesBrowser
             text: rule.data 'text'
         orig_type = 'Rules'
 
+        @rule_viewer_container.show()
         exportObj.builders[0].showTooltip(orig_type, data, add_opts ? {}, @rule_viewer_container) # we use the render method from the squad builder, cause it works.
 
-        @rule_viewer_container.show()
-        # @rule_viewer_placeholder.hide()
 
     addRulesTo: (container, rule) ->
         option = $ document.createElement('OPTION')
@@ -2263,6 +2262,7 @@ class exportObj.SquadBuilder
         @faction = $.trim args.faction
         @printable_container = $ args.printable_container
         @tab = $ args.tab
+        @show_points_destroyed = false
 
         # internal state
         @ships = []
@@ -2282,7 +2282,7 @@ class exportObj.SquadBuilder
         @tooltip_currently_displaying = null
         @randomizer_options =
             sources: null
-            points: 200
+            points: 20
             bid_goal: 5
             ships_or_upgrades: 3
             ship_limit: 0
@@ -2367,7 +2367,7 @@ class exportObj.SquadBuilder
         exportObj.translate('ui', what, args)
 
     setupUI: ->
-        DEFAULT_RANDOMIZER_POINTS = 200
+        DEFAULT_RANDOMIZER_POINTS = 20
         DEFAULT_RANDOMIZER_TIMEOUT_SEC = 4
         DEFAULT_RANDOMIZER_BID_GOAL = 5
         DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES = 3
@@ -2395,7 +2395,7 @@ class exportObj.SquadBuilder
                     </select>
                 </div>
                 <div class="col-md-4 points-display-container">
-                    Points: <span class="total-points">0</span> / <input type="number" class="desired-points" value="200">
+                    Points: <span class="total-points">0</span> / <input type="number" class="desired-points" value="20">
                     <span class="points-remaining-container">(<span class="points-remaining"></span>&nbsp;left) <span class="points-destroyed red"></span></span>
                     <span class="content-warning unreleased-content-used d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Unreleased content warning"></span></span>
                     <span class="content-warning loading-failed-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Broken squad link warning"></span></span>
@@ -2431,11 +2431,12 @@ class exportObj.SquadBuilder
                     <button class="show-authenticated btn btn-primary delete-list disabled"><i class="fa fa-trash"></i>&nbsp;<span class="translated" defaultText="Delete"></span></button>
                     <button class="show-authenticated btn btn-info backend-list-my-squads show-authenticated"><i class="fa fa-download"></i>&nbsp;<span class = "translated" defaultText="Load Squad"></span></button>
                     <button class="btn btn-info import-squad"><i class="fa fa-file-import"></i>&nbsp;<span class="translated" defaultText="Import"></span></button>
+                    <button class="btn btn-info show-points-destroyed"><i class="fas fa-bullseye"></i>&nbsp;<span class="show-points-destroyed-span translated" defaultText="#{@uitranslation("Show Points Destroyed")}"></span></button>                    
                     <button class="btn btn-danger clear-squad"><i class="fa fa-plus-circle"></i>&nbsp;<span class="translated" defaultText="New Squad"></span></button>
                     <span class="show-authenticated backend-status"></span>
                 </div>
             </div>
-        """
+        """ 
         @container.append @status_container
 
         @xws_import_modal = $ document.createElement 'DIV'
@@ -2813,6 +2814,23 @@ class exportObj.SquadBuilder
             else
                 @newSquadFromScratch()
 
+        @show_points_destroyed_button = $ @status_container.find('.show-points-destroyed')
+        @show_points_destroyed_button_span = $ @status_container.find('.show-points-destroyed-span')
+        @show_points_destroyed_button.click (e) =>
+            @show_points_destroyed = not @show_points_destroyed
+            if @show_points_destroyed == false
+                @points_destroyed_span.hide()
+            else
+                @points_destroyed_span.show()
+            for ship in @ships
+                if ship.pilot?
+                    if @show_points_destroyed == false
+                        @show_points_destroyed_button_span.text @uitranslation("Show Points Destroyed")
+                        ship.points_destroyed_button.hide()
+                    else
+                        @show_points_destroyed_button_span.text @uitranslation("Hide Points Destroyed")
+                        ship.points_destroyed_button.show()
+
         @squad_name_container = $ @status_container.find('div.squad-name-container')
         @squad_name_display = $ @container.find('.display-name')
         @squad_name_placeholder = $ @container.find('.squad-name')
@@ -3184,7 +3202,8 @@ class exportObj.SquadBuilder
             cancel: '.unsortable'
 
         @info_container.append $.trim @createInfoContainerUI()
-        @info_container.hide()
+        @info_container.find('.info-well').hide()
+        @info_intro = @info_container.find('.intro')
 
         @print_list_button = $ @container.find('button.print-list')
 
@@ -3219,12 +3238,36 @@ class exportObj.SquadBuilder
             </div>
         </div>
     </div>
-        """       
+        """
+        @mobile_tooltip_modal.find('intro').hide()
+
         # translate all the UI we just created to current language
         exportObj.translateUIElements(@container) 
 
-    createInfoContainerUI: ->
+    createInfoContainerUI: (include_intro = true) ->
+        if include_intro == true
+            intro = """
+                <h2>YASB for X-Wing 2.5</h2>
+                <p>YASB (Yet Another Squad Builder) 2.5 is a simple, fast, squad builder for X-Wing Miniatures by <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a>.</p>
+                <h5>Credits</h5>
+                <p>Built upon the amazing original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
+                <p>YASB is updated and maintained by Stephen Kim.</p>
+                <p>Additional credits to:<br>
+                2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>
+                Translation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>
+                Site logo: Thomas Kohler<br>
+                Quick Build Support: Patrick Mischke</p>
+
+                <p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>
+
+                <p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>
+                <p><button class="btn btn-primary paypal" onclick="window.open('https://paypal.me/raithos');">Donate</button></p>
+            """
+        else
+            intro = ""
+
         return """
+            <div class="card intro">#{intro}</div>
             <div class="card info-well">
                 <div class="info-name"></div>
                 <div class="info-type"></div>
@@ -3587,13 +3630,13 @@ class exportObj.SquadBuilder
         switch gametype
             when 'extended'
                 @isStandard = false
-                @desired_points_input.val 200
+                @desired_points_input.val 20
             when 'standard'
                 @isStandard = true
-                @desired_points_input.val 200
+                @desired_points_input.val 20
             when 'epic'
                 @isEpic = true
-                @desired_points_input.val 500
+                @desired_points_input.val 50
             when 'quickbuild'
                 @isQuickbuild = true
                 @desired_points_input.val 8
@@ -3849,7 +3892,7 @@ class exportObj.SquadBuilder
                     if parseInt(game_type_and_point_abbrev.split('=')[1])
                         p = parseInt(game_type_and_point_abbrev.split('=')[1])
                     else
-                        p = 200
+                        p = 20
                     g = game_type_and_point_abbrev.split('=')[0]
                     [ g, p, s ]
 
@@ -4169,12 +4212,7 @@ class exportObj.SquadBuilder
         if filter_func != @dfl_filter_func
             available_upgrades = (upgrade for upgrade in available_upgrades when filter_func(upgrade))
 
-        current_upgrade_points = 0
-        for upgrade in upgrades_in_use
-            current_upgrade_points += this_upgrade_obj.getPoints(upgrade)
-        console.log "upgrade points total: #{current_upgrade_points}"
-
-        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (not upgrade.unique? or upgrade not in @uniques_in_use['Upgrade']) and (ship.restriction_check((if upgrade.restrictions then upgrade.restrictions else undefined), current_upgrade_points, upgrade.points)) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
+        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (not upgrade.unique? or upgrade not in @uniques_in_use['Upgrade']) and (ship.restriction_check((if upgrade.restrictions then upgrade.restrictions else undefined),this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), ship.upgrade_points_total)) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
         
         
 
@@ -4395,7 +4433,6 @@ class exportObj.SquadBuilder
         return actionlist.replace(seperation,'')
 
     showTooltip: (type, data, additional_opts, container = @info_container, force_update = false) ->
-
         if data != @tooltip_currently_displaying or force_update
             switch type
                 when 'Ship'
@@ -4927,7 +4964,6 @@ class exportObj.SquadBuilder
                     else
                         container.find('tr.info-attack-fullfront').hide()
                         
-
                     if data.charge?
                         recurringicon = ''
                         if data.recurring?
@@ -5039,7 +5075,8 @@ class exportObj.SquadBuilder
                     container.find('tr.info-force').hide()
 
             if container != @mobile_tooltip_modal
-                container.show()
+                container.find('.info-well').show()
+                container.find('.intro').hide()
             @tooltip_currently_displaying = data
 
             # fix card viewer to view, if it is fully visible (it might not be e.g. on mobile devices. In that case keep it on its static position, so you can scroll to see it)
@@ -5590,8 +5627,9 @@ class Ship
         @linkedShip = null # some quickbuilds contain two ships, this variable may reference a Ship beeing part of the same quickbuild card
         @primary = true # only the primary ship of a linked ship pair will contribute points and serialization id
         @upgrades = []
+        @upgrade_points_total = 0
         @wingmates = [] # stores wingmates (quickbuild stuff only) 
-        @destroystate = null
+        @destroystate = 0
         @uitranslation = @builder.uitranslation
 
         @setupUI()
@@ -5707,7 +5745,8 @@ class Ship
         # Show delete button
         @remove_button.fadeIn 'fast'
         @copy_button.fadeIn 'fast'
-        @points_destroyed_button.fadeIn 'fast'
+        if @builder.show_points_destroyed == true
+            @points_destroyed_button.fadeIn 'fast'
 
         # Ship background
         @row.addClass "ship-#{ship_type.toLowerCase().replace(/[^a-z0-9]/gi, '')}"
@@ -5897,7 +5936,9 @@ class Ship
     getPoints: ->
         if not @builder.isQuickbuild
             points = @pilot?.points ? 0
-            @points_container.find('span').text points
+            total_upgrades = @pilot?.pointsupg ? "N/A"
+            @points_container.find('div').text "#{points}"
+            @points_container.find('.upgrade-points').text "(#{@upgrade_points_total}/#{total_upgrades})"
             if points > 0
                 @points_container.fadeTo 'fast', 1
             else
@@ -6005,14 +6046,14 @@ class Ship
             <div class="col-md-3">
                 <div class="form-group d-flex">
                     <input class="ship-selector-container" type="hidden"></input>
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary d-block d-md-none ship-query-modal"><i class="fas fa-question"></i></button>
+                    <div class="d-block d-md-none input-group-append">
+                        <button class="btn btn-secondary ship-query-modal"><i class="fas fa-question"></i></button>
                     </div>
                 <br />
                 </div>
                 <div class="form-group d-flex">
                     <input type="hidden" class="pilot-selector-container"></input>
-                    <div class="input-group-append">
+                    <div class="d-block d-md-none input-group-append">
                         <button class="btn btn-secondary pilot-query-modal"><i class="fas fa-question"></i></button>
                     <br />
                     </div>
@@ -6023,13 +6064,14 @@ class Ship
                 </label>
             </div>
             <div class="col-md-1 points-display-container">
-                 <span></span>
+                 <div></div>
+                 <div class="upgrade-points"></div>
             </div>
             <div class="col-md-6 addon-container">  </div>
             <div class="col-md-2 button-container">
                 <button class="btn btn-danger remove-pilot side-button"><span class="d-none d-sm-block" data-toggle="tooltip" title="#{@uitranslation("Remove Pilot")}"><i class="fa fa-times"></i></span><span class="d-block d-sm-none"> #{@uitranslation("Remove Pilot")}</span></button>
-                <button class="btn btn-light copy-pilot side-button"><span class="d-none d-sm-block" data-toggle="tooltip" title="#{@uitranslation("Clone Pilot")}"><i class="far fa-copy"></i></span><span class="d-block d-sm-none"> #{@uitranslation("Clone Pilot")}</span></button>&nbsp;&nbsp;&nbsp;
-                <button class="btn btn-light points-destroyed side-button" points-state"><span class="destroyed-type" title="#{@uitranslation("Points Destroyed")}"><i class="xwing-miniatures-font xwing-miniatures-font-title"></i></span></button>
+                <button class="btn btn-light copy-pilot side-button"><span class="d-none d-sm-block" data-toggle="tooltip" title="#{@uitranslation("Clone Pilot")}"><i class="far fa-copy"></i></span><span class="d-block d-sm-none"> #{@uitranslation("Clone Pilot")}</span></button>
+                <button class="btn btn-light points-destroyed side-button" points-state"><span class="d-none d-sm-block destroyed-type" data-toggle="tooltip" title="#{@uitranslation("Points Destroyed")}"><i class="fas fa-circle"></i></i></span><span class="d-block d-sm-none destroyed-type-mobile"> #{@uitranslation("Undamaged")}</span></button>
             </div>
         """
         @row.find('.button-container span').tooltip()
@@ -6050,7 +6092,7 @@ class Ship
             if @pilot
                 @builder.showTooltip 'Pilot', @pilot, (@ if @pilot), @builder.mobile_tooltip_modal, true
                 @builder.mobile_tooltip_modal.modal 'show'
-            
+
             
         shipResultFormatter = (object, container, query) ->
             return """<i class="xwing-miniatures-ship xwing-miniatures-ship-#{object.icon}"></i> #{object.text}"""
@@ -6186,18 +6228,31 @@ class Ship
         @checkPilotSelectorQueryModal()
         
         @points_destroyed_button_span = $ @row.find('.destroyed-type')
+        @points_destroyed_button_span_mobile = $ @row.find('.destroyed-type-mobile')
 
         @points_destroyed_button = $ @row.find('button.points-destroyed')
         @points_destroyed_button.click (e) =>
-            if @destroystate == 1
-                @destroystate = 2
-                @points_destroyed_button_span.html '<i class="xwing-miniatures-font xwing-miniatures-font-crit"></i>'
-            else if @destroystate == 2
-                @destroystate = 0
-                @points_destroyed_button_span.html '<i class="xwing-miniatures-font xwing-miniatures-font-title"></i>'
-            else
-                @destroystate = 1
-                @points_destroyed_button_span.html '<i class="xwing-miniatures-font xwing-miniatures-font-hit"></i>'
+            switch @destroystate
+                when 0
+                    @destroystate++
+                    @points_destroyed_button.addClass "btn-warning"
+                    @points_destroyed_button.removeClass "btn-light"
+                    @points_destroyed_button_span_mobile.text @uitranslation("Half Damaged")
+                    @points_destroyed_button_span.html '<i class="fas fa-adjust"></i>'
+                when 1
+                    @destroystate++
+                    @points_destroyed_button.addClass "btn-danger"
+                    @points_destroyed_button.removeClass "btn-warning"
+                    @points_destroyed_button_span_mobile.text @uitranslation("Fully Destroyed")
+                    @points_destroyed_button_span.html '<i class="far fa-circle"></i>'
+                when 2
+                    @destroystate = 0
+                    @points_destroyed_button.addClass "btn-light"
+                    @points_destroyed_button.removeClass "btn-danger"
+                    @points_destroyed_button_span_mobile.text @uitranslation("Undamaged")
+                    @points_destroyed_button_span.html '<i class="fas fa-circle"></i>'
+
+
             @builder.onPointsUpdated()
         @points_destroyed_button.hide()
     
@@ -6512,6 +6567,7 @@ class Ship
                 # v 4-8 are 2nd Ed 
                 # v 9+ are 2.5 Ed 
                 console.log "Incorrect Version!"
+                @old_version_container.toggleClass 'd-none', false
 
             when 9
                 pilot_splitter = 'X'
@@ -6588,11 +6644,8 @@ class Ship
         stats
 
     validate: ->
-        # Remove addons that violate their validation functions (if any) one by one
-        # until everything checks out
-        # If there is no explicit validation_func, use restriction_func
+        # Remove addons that violate their validation functions (if any) one by one until everything checks out
         # Returns true, if nothing has been changed, and false otherwise
-
         # check if we are an empty selection, which is always valid
         if not @pilot?
             return true 
@@ -6626,20 +6679,15 @@ class Ship
                 return false # no need to check anything further, as we do not exist anymore 
             # everything is limited in X-Wing 2.0, so we need to check if any upgrade is equipped more than once
             equipped_upgrades = []
-            current_upgrade_points = 0
+            @upgrade_points_total = 0
             for upgrade in @upgrades
-                current_upgrade_points += upgrade.getPoints()
-            console.log "upgrade points total: #{current_upgrade_points}"
+                @upgrade_points_total += upgrade.getPoints()
 
             for upgrade in @upgrades
                 func = upgrade?.data?.validation_func ? undefined
                 if func?
                     func_result = upgrade?.data?.validation_func(this, upgrade)
-                else if upgrade?.data?.restrictions
-                    func_result = @restriction_check(upgrade.data.restrictions, upgrade, current_upgrade_points, upgrade.getPoints())
-                else
-                    func_result = @restriction_check(undefined, upgrade, current_upgrade_points, upgrade.getPoints())
-                # check if either a) validation func not met or b) upgrade already equipped or c) upgrade is not available (e.g. not format legal)
+
                 # ignore those checks if this is a quickbuild squad
                 if ((func_result? and not func_result) or (upgrade?.data? and (upgrade.data in equipped_upgrades or (upgrade.data.faction? and not @builder.isOurFaction(upgrade.data.faction,@pilot.faction)) or not @builder.isItemAvailable(upgrade.data)))) and not @builder.isQuickbuild
                     #console.log "Invalid upgrade: #{upgrade?.data?.name}"
@@ -6671,16 +6719,16 @@ class Ship
             return true unless upgrade.isOccupied()
         false
 
-    restriction_check: (restrictions, upgrade_obj, current_upgrade_points, points) ->
+    restriction_check: (restrictions, upgrade_obj, points, current_upgrade_points) ->
         effective_stats = @effectiveStats()
-        if @pilot.pointsupg? and (@pilot.pointsupg - current_upgrade_points < points)
-            return true
+        if @pilot.pointsupg? and (points + current_upgrade_points > @pilot.pointsupg)
+            return false
         else
             if restrictions?
                 for r in restrictions
                     if r[0] == "orUnique"
                         if @checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))
-                            return true
+                            return false
                     switch r[0]
                         when "Base"  
                             switch r[1]
