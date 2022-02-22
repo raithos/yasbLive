@@ -3253,6 +3253,7 @@ class exportObj.SquadBuilder
                 <p>Built upon the amazing original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
                 <p>YASB is updated and maintained by Stephen Kim.</p>
                 <p>Additional credits to:<br>
+                2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>
                 2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>
                 Translation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>
                 Site logo: Thomas Kohler<br>
@@ -3521,7 +3522,7 @@ class exportObj.SquadBuilder
                     
             # Notes, if present
             @printable_container.find('.printable-body').append $.trim """
-                <div class="version"><span class="translated" defaultText="Points Version:"></span> 2.0.0 Sept 2021</div>
+                <div class="version"><span class="translated" defaultText="Points Version:"></span> 2.5.0 03/01/2022</div>
             """
             if $.trim(@notes.val()) != ''
                 @printable_container.find('.printable-body').append $.trim """
@@ -6719,6 +6720,8 @@ class Ship
                     if r[0] == "orUnique"
                         if @checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))
                             return false
+                        else
+                            return true
                     switch r[0]
                         when "Base"  
                             switch r[1]

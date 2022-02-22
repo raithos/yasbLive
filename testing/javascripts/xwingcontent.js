@@ -686,6 +686,17 @@ exportObj.basicCardData = function() {
         actions: ["Focus", "F-Evade", "Lock", "Barrel Roll", "Boost"],
         maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 1, 0, 1, 2, 0, 0, 0, 0, 0], [2, 1, 1, 1, 2, 0, 3, 3, 0, 0], [0, 2, 1, 2, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 3, 0, 0, 0, 0], [0, 0, 2, 0, 0, 3, 0, 0, 0, 0]]
       },
+      "Delta-7b Aethersprite": {
+        name: "Delta-7b Aethersprite",
+        xws: "Delta-7b Aethersprite".canonicalize(),
+        factions: ["Galactic Republic"],
+        attack: 3,
+        agility: 2,
+        hull: 3,
+        shields: 3,
+        actions: ["Focus", "F-Evade", "Lock", "Barrel Roll", "Boost"],
+        maneuvers: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 1, 0, 1, 2, 0, 0, 0, 0, 0], [2, 1, 1, 1, 2, 0, 3, 3, 0, 0], [0, 2, 1, 2, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 3, 0, 0, 0, 0], [0, 0, 2, 0, 0, 3, 0, 0, 0, 0]]
+      },
       "Sith Infiltrator": {
         name: "Sith Infiltrator",
         xws: "Sith Infiltrator".canonicalize(),
@@ -1175,7 +1186,7 @@ exportObj.basicCardData = function() {
         ship: "X-Wing",
         skill: 3,
         points: 4,
-        pointsupg: 7,
+        pointsupg: 6,
         keyword: ["Partisan"],
         slots: ["Talent", "Missile", "Astromech", "Illicit", "Modification", "Configuration"]
       }, {
@@ -1345,7 +1356,7 @@ exportObj.basicCardData = function() {
         ship: "Y-Wing",
         skill: 4,
         points: 4,
-        pointsupg: 14,
+        pointsupg: 12,
         slots: ["Talent", "Turret", "Missile", "Astromech", "Device", "Device", "Modification"]
       }, {
         name: "Evaan Verlaine",
@@ -1974,7 +1985,7 @@ exportObj.basicCardData = function() {
         ship: "Y-Wing",
         skill: 1,
         points: 4,
-        pointsupg: 6,
+        pointsupg: 4,
         slots: ["Turret", "Missile", "Device", "Illicit"]
       }, {
         name: "Han Solo (Scum)",
@@ -2027,8 +2038,8 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Escape Craft",
         skill: 4,
-        points: 6,
-        pointsupg: 17,
+        points: 3,
+        pointsupg: 4,
         slots: ["Talent", "Crew", "Modification"]
       }, {
         name: "Outer Rim Pioneer",
@@ -2125,8 +2136,8 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Fang Fighter",
         skill: 1,
-        points: 4,
-        pointsupg: 7,
+        points: 5,
+        pointsupg: 10,
         keyword: ["Mandalorian"],
         slots: ["Modification", "Modification"]
       }, {
@@ -2296,8 +2307,8 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "JumpMaster 5000",
         skill: 2,
-        points: 4,
-        pointsupg: 7,
+        points: 5,
+        pointsupg: 4,
         slots: ["Torpedo", "Cannon", "Illicit"]
       }, {
         name: "Talonbane Cobra",
@@ -4062,7 +4073,7 @@ exportObj.basicCardData = function() {
         skill: 0,
         points: 3,
         pointsupg: 6,
-        slots: ["Talent", "Talent", "Tech", "Modification"]
+        slots: ["Talent", "Talent", "Tech", "Tech"]
       }, {
         name: "Cat",
         id: 291,
@@ -4213,7 +4224,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         pointsupg: 12,
-        slots: ["Talent", "Missile", "Tactical Relay", "Modification", "Title"]
+        slots: ["Talent", "Missile", "Modification", "Modification", "Title"]
       }, {
         name: "Wat Tambor",
         id: 306,
@@ -4477,7 +4488,7 @@ exportObj.basicCardData = function() {
         points: 3,
         pointsupg: 9,
         keyword: ["Droid"],
-        slots: ["Missile", "Missile", "Modification", "Configuration"]
+        slots: ["Sensor", "Missile", "Missile", "Modification", "Configuration"]
       }, {
         name: "Naboo Handmaiden",
         id: 330,
@@ -5362,7 +5373,7 @@ exportObj.basicCardData = function() {
         recurring: 1,
         ship: "LAAT/i Gunship",
         points: 5,
-        pointsupg: 15,
+        pointsupg: 14,
         keyword: ["Clone"],
         slots: ["Sensor", "Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -6272,7 +6283,7 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         pointsupg: 15,
-        slots: ["Tech", "Talent", "Missile", "Gunner", "Device", "Device", "Modification"]
+        slots: ["Talent", "Tech", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "First Order Cadet",
         id: 497,
@@ -6393,8 +6404,8 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Gauntlet Fighter",
         skill: 2,
-        points: 5,
-        pointsupg: 11,
+        points: 7,
+        pointsupg: 10,
         unique: true,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Modification", "Configuration"]
@@ -6408,7 +6419,7 @@ exportObj.basicCardData = function() {
         pointsupg: 24,
         unique: true,
         keyword: ["Mandalorian"],
-        slots: ["Talent", "Crew", "Gunner", "Torpedo", "Missile", "Missile", "Device", "Modification", "Modification", "Title", "Configuration"]
+        slots: ["Talent", "Crew", "Gunner", "Missile", "Missile", "Device", "Modification", "Modification", "Title", "Configuration"]
       }, {
         name: "Bo-Katan Kryze (Republic)",
         canonical_name: 'Bo-Katan Kryze'.canonicalize(),
@@ -6427,8 +6438,8 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Gauntlet Fighter",
         skill: 2,
-        points: 5,
-        pointsupg: 11,
+        points: 7,
+        pointsupg: 16,
         unique: true,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Modification", "Configuration"]
@@ -6490,8 +6501,8 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "Gauntlet Fighter",
         skill: 3,
-        points: 5,
-        pointsupg: 11,
+        points: 8,
+        pointsupg: 20,
         slots: ["Talent", "Crew", "Gunner", "Torpedo", "Device", "Modification", "Configuration"]
       }, {
         name: "Mandalorian Resistance Pilot",
@@ -6571,6 +6582,113 @@ exportObj.basicCardData = function() {
         pointsupg: 10,
         keyword: ["Bounty Hunter", "Mandelorian"],
         slots: ["Crew", "Gunner", "Illicit", "Modification", "Modification"]
+      }, {
+        name: "Plo Koon",
+        id: 525,
+        unique: true,
+        faction: "Galactic Republic",
+        ship: "Delta-7b Aethersprite",
+        skill: 5,
+        force: 2,
+        points: 7,
+        pointsupg: 12,
+        keyword: ["Jedi", "Light Side"],
+        slots: ["Force", "Missile", "Talent", "Astromech", "Modification"]
+      }, {
+        name: "Saesee Tiin",
+        id: 526,
+        unique: true,
+        faction: "Galactic Republic",
+        ship: "Delta-7b Aethersprite",
+        skill: 4,
+        force: 2,
+        points: 6,
+        pointsupg: 9,
+        keyword: ["Jedi", "Light Side"],
+        slots: ["Force", "Astromech", "Modification"]
+      }, {
+        name: "Mace Windu",
+        id: 527,
+        unique: true,
+        faction: "Galactic Republic",
+        ship: "Delta-7b Aethersprite",
+        skill: 4,
+        force: 3,
+        points: 6,
+        pointsupg: 8,
+        keyword: ["Jedi", "Light Side"],
+        slots: ["Force", "Force", "Astromech", "Modification"]
+      }, {
+        name: "Anakin Skywalker",
+        id: 528,
+        unique: true,
+        faction: "Galactic Republic",
+        ship: "Delta-7b Aethersprite",
+        skill: 6,
+        force: 3,
+        points: 8,
+        pointsupg: 15,
+        keyword: ["Jedi", "Light Side"],
+        slots: ["Force", "Force", "Missile", "Astromech", "Modification"]
+      }, {
+        name: "Luminara Unduli",
+        id: 529,
+        unique: true,
+        faction: "Galactic Republic",
+        ship: "Delta-7b Aethersprite",
+        skill: 4,
+        force: 2,
+        points: 6,
+        pointsupg: 7,
+        keyword: ["Jedi", "Light Side"],
+        slots: ["Force", "Astromech", "Modification"]
+      }, {
+        name: "Barriss Offee",
+        id: 530,
+        unique: true,
+        faction: "Galactic Republic",
+        ship: "Delta-7b Aethersprite",
+        skill: 4,
+        force: 1,
+        points: 5,
+        pointsupg: 10,
+        keyword: ["Jedi", "Light Side"],
+        slots: ["Force", "Missile", "Astromech", "Modification"]
+      }, {
+        name: "Ahsoka Tano",
+        id: 531,
+        unique: true,
+        faction: "Galactic Republic",
+        ship: "Delta-7b Aethersprite",
+        skill: 3,
+        force: 2,
+        points: 6,
+        pointsupg: 10,
+        keyword: ["Jedi", "Light Side"],
+        slots: ["Force", "Astromech", "Modification"]
+      }, {
+        name: "Jedi Knight",
+        id: 532,
+        faction: "Galactic Republic",
+        ship: "Delta-7b Aethersprite",
+        skill: 3,
+        force: 1,
+        points: 6,
+        pointsupg: 8,
+        keyword: ["Jedi", "Light Side"],
+        slots: ["Force", "Astromech", "Modification"]
+      }, {
+        name: "Obi-Wan Kenobi",
+        id: 533,
+        unique: true,
+        faction: "Galactic Republic",
+        ship: "Delta-7b Aethersprite",
+        skill: 5,
+        force: 3,
+        points: 7,
+        pointsupg: 12,
+        keyword: ["Jedi", "Light Side"],
+        slots: ["Force", "Force", "Missile", "Astromech", "Modification"]
       }
     ],
     upgradesById: [
@@ -8309,7 +8427,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         slot: "Talent",
         points: 1,
-        restrictions: [["isUnique", false]]
+        restrictions: [["Keyword", "Clone"]]
       }, {
         name: "Synchronized Console",
         id: 211,
@@ -10486,7 +10604,8 @@ exportObj.basicCardData = function() {
         charge: 1,
         restrictions: [["Keyword", "Mandalorian"]]
       }, {
-        name: "Ahsoka Tano",
+        name: "Ahsoka Tano (Crew)",
+        canonical_name: 'Ahsoka Tano'.canonicalize(),
         id: 424,
         points: 9,
         force: 1,
@@ -10629,7 +10748,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Rebel Alliance"
       }, {
-        name: "Maul (Mandelore)",
+        name: "Maul (Mandalore)",
         canonical_name: 'Maul'.canonicalize(),
         id: 440,
         points: 10,
@@ -10785,7 +10904,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "The Child",
         id: 453,
-        points: 2,
+        points: 8,
         unique: true,
         slot: "Crew",
         force: 2,
@@ -10795,7 +10914,7 @@ exportObj.basicCardData = function() {
         name: "Tracking Fob",
         id: 454,
         points: 4,
-        slot: "Crew",
+        slot: "Illicit",
         max_per_squad: 3,
         restrictions: [["Keyword", "Bounty Hunter"]],
         applies_condition: 'Marked for Elimination'.canonicalize()
@@ -15829,6 +15948,21 @@ exportObj.standardShipInclusions = [
   }, {
     name: 'Scavenged YT-1300',
     faction: 'Resistance'
+  }, {
+    name: 'Gauntlet Fighter',
+    faction: 'Galactic Empire'
+  }, {
+    name: 'Gauntlet Fighter',
+    faction: 'Rebel Alliance'
+  }, {
+    name: 'Gauntlet Fighter',
+    faction: 'Scum and Villainy'
+  }, {
+    name: 'Gauntlet Fighter',
+    faction: 'Separatist Alliance'
+  }, {
+    name: 'Gauntlet Fighter',
+    faction: 'Galactic Republic'
   }
 ];
 
@@ -16220,7 +16354,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Arvel Crynyd": {
       display_name: "Arvel Crynyd",
-      text: "You can perform primary attacks at range 0.%LINEBREAK%If you would fail a %BOOST% action by overlapping another ship, resolve it as though you were partially executing a maneuver instead.%LINEBREAK%<strong>Vectored Thrusters:</strong> After you perform an action, you may perform a red %BOOST% action."
+      text: "If you would fail a 󲁃 action by overlapping another ship, you may resolve it as though you were partially executing a maneuver instead. While you perform an attack at attack range 0, treat it as an attack at attack range 1.\" %LINEBREAK%<strong>Vectored Thrusters:</strong> After you perform an action, you may perform a red %BOOST% action. %LINEBREAK%<i>Errata (since rules reference 1.4): Changed the second portion of the ability.</i>"
     },
     "Asajj Ventress": {
       display_name: "Asajj Ventress",
@@ -16368,7 +16502,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Captain Oicunn": {
       display_name: "Captain Oicunn",
-      text: "You can perform primary attacks at range 0."
+      text: "While you perform an attack at attack range 0, treat it as an attack at attack range 1. %LINEBREAK%<i>Errata (since rules reference 1.4): Ability changed to work in new core rules</i>"
     },
     "Captain Rex": {
       display_name: "Captain Rex",
@@ -16464,7 +16598,7 @@ exportObj.cardLoaders.English = function() {
     },
     "DBS-404": {
       display_name: "DBS-404",
-      text: "You can perform primary attacks at range 0. While you perform an attack at attack range 0-1, you <strong>must</strong> roll 1 additional die. After the attack hits, suffer 1 %CRIT% damage. %LINEBREAK%<strong>Networked Calculations:</strong> While you defend or perform an attack, you may spend 1 calculate token from a friendly ship at range&nbsp;0-1 to change 1&nbsp;%FOCUS% result to an %EVADE% or %HIT% result."
+      text: "While you perform an attack at attack range 1, you <strong>must</strong> roll 1 additional die. After the attack hits, suffer 1 %CRIT% damage. %LINEBREAK%<strong>Networked Calculations:</strong> While you defend or perform an attack, you may spend 1 calculate token from a friendly ship at range&nbsp;0-1 to change 1&nbsp;%FOCUS% result to an %EVADE% or %HIT% result. %LINEBREAK%<i>Errata (since rules reference 1.4): Changed the range restriction on this ability\"</i>"
     },
     "DFS-081": {
       display_name: "DFS-081",
@@ -17600,22 +17734,22 @@ exportObj.cardLoaders.English = function() {
       text: "After you fully execute a maneuver, if there is an enemy ship in your %FRONTARC% at range 0-1 or in your %BULLSEYEARC%, you may spend 1 %FORCE% to remove 1 stress token.%LINEBREAK%<strong>Plated Hull:</strong> While you defend, if you are not critically damaged, change 1 %CRIT% to a %HIT% result."
     },
     "Sun Fac": {
-      text: "While you perform a primary attack, if the defender is tractored, roll 1 additional attack die. %LINEBREAK% <strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action."
+      text: "While you perform a primary attack, if the defender is tractored, roll 1 additional attack die. %LINEBREAK% <strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you fully execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action. %LINEBREAK%<i>Errata (since rules reference 1.4): added \"fully\"</i>"
     },
     "Stalgasin Hive Guard": {
-      text: "<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action."
+      text: "<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you fully execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action. %LINEBREAK%<i>Errata (since rules reference 1.4): added \"fully\"</i>"
     },
     "Petranaki Arena Ace": {
-      text: "<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action."
+      text: "<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you fully execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action. %LINEBREAK%<i>Errata (since rules reference 1.4): added \"fully\"</i>"
     },
     "Berwer Kret": {
-      text: "After you perform an attack that hits, each friendly ship with %CALCULATE% on its action bar and a lock on the defender may perform a red %CALCULATE% action. %LINEBREAK%<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action."
+      text: "After you perform an attack that hits, each friendly ship with %CALCULATE% on its action bar and a lock on the defender may perform a red %CALCULATE% action. %LINEBREAK%<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you fully execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action. %LINEBREAK%<i>Errata (since rules reference 1.4): added \"fully\"</i>"
     },
     "Chertek": {
-      text: "While you perform a primary attack, if the defender is tractored, you may reroll up to 2 attack dice. %LINEBREAK%<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action."
+      text: "While you perform a primary attack, if the defender is tractored, you may reroll up to 2 attack dice. %LINEBREAK%<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you fully execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action. %LINEBREAK%<i>Errata (since rules reference 1.4): added \"fully\"</i>"
     },
     "Gorgol": {
-      text: "During the System Phase, you may gain 1 disarm token and choose a friendly ship at range 1-2. If you do, it gains 1 tractor token, then repairs 1 of its faceup <strong>Ship</strong> trait damage cards. %LINEBREAK%<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action."
+      text: "During the System Phase, you may gain 1 disarm token and choose a friendly ship at range 1-2. If you do, it gains 1 tractor token, then repairs 1 of its faceup <strong>Ship</strong> trait damage cards. %LINEBREAK%<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you fully execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action. %LINEBREAK%<i>Errata (since rules reference 1.4): added \"fully\"</i>"
     },
     "Kazuda Xiono": {
       text: "While you defend or perform a primary attack, if the enemy ship's initiative is higher than the number of damage cards you have, you may roll 1 additional die. %LINEBREAK%<strong>Explosion with Wings:</strong> You are dealt 1 facedown damage card. After you perform a %SLAM% action, you may expose 1 damage card to remove 1 disarm token."
@@ -17889,7 +18023,7 @@ exportObj.cardLoaders.English = function() {
       text: "While you perform an attack against a damaged defender, roll 1 additional attack die.%LINEBREAK%<strong>Autothrusters:</strong> After you perform an action, you may perform a red %BARRELROLL% or red %BOOST% action."
     },
     "Commandant Goran": {
-      text: "After a friendly ship at range 0-3 with a lower initiative than yours partially executes a maneuver, it may perform a red %FOCUS% action. %LINEBREAK%<strong>Autothrusters:</strong> After you perform an action, you may perform a red %BARRELROLL% or red %BOOST% action."
+      text: "At the start of the Engagement Phase, choose a friendly ship at range 0-3 with a lower initiative than yours. The chosen ship gains 1 evade token and removes 1 non-stress red token.%LINEBREAK%<strong>Autothrusters:</strong> After you perform an action, you may perform a red %BARRELROLL% or red %BOOST% action.%LINEBREAK%<i>Errata (since rules reference 1.4): ability reworked</i>"
     },
     "Nash Windrider": {
       text: "During the Engagement Phase, after a friendly small ship at range 0-3 is destroyed, if that ship has not engaged this phase, you may spend 1 %CHARGE%. If you do, that ship engages at the current initiative. %LINEBREAK%<strong>Autothrusters:</strong> After you perform an action, you may perform a red %BARRELROLL% or red %BOOST% action."
@@ -18036,6 +18170,10 @@ exportObj.cardLoaders.English = function() {
       display_name: "Pre Vizsla",
       text: "While you perform an attack, if the defender's initiative is equal to or greater than yours, you may spend 2 %CHARGE% to roll 1 additional die."
     },
+    "Pre Vizsla": {
+      display_name: "Pre Vizsla",
+      text: "While you perform an attack, if the defender's initiative is equal to or greater than yours, you may spend 2 %CHARGE% to roll 1 additional die."
+    },
     "Rook Kast": {
       display_name: "Rook Kast",
       text: "Before you engage, you may gain 1 strain token. While you perform a primary attack, if you are strained, you may change 1 of your blank or %FOCUS% results to a %HIT% result."
@@ -18047,6 +18185,18 @@ exportObj.cardLoaders.English = function() {
     "Chopper (Gauntlet Fighter)": {
       display_name: "Chopper",
       text: "At the start of the Engagement Phase, each enemy ship at range 0 gains 2 jam tokens."
+    },
+    "The Mandalorian": {
+      display_name: "The Mandalorian",
+      text: "While you defend or perform an attack, if you are in the %FRONTARC% at range 1-2 of 2 or more enemy ships, you may change 1 of your blank results to a %FOCUS% result."
+    },
+    "Q9-0": {
+      display_name: "Q9-0",
+      text: "After you fully execute an advanced maneuver, you may perform a %CALCULATE% or %BARRELROLL% action, even while stressed. If you do, gain 1 strain token."
+    },
+    "Guild Bounty Hunter": {
+      display_name: "Guild Bounty Hunter",
+      text: "While you perform an attack at attack range 1-2, you may spend 1 non-recurring %CHARGE% from 1 of your equipped %ILLICIT% upgrades to change 1 %FOCUS% result to a %CRIT% result."
     },
     "Republic Judiciary": {
       display_name: "Republic Judiciary",
@@ -18355,7 +18505,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Count Dooku": {
       display_name: "Count Dooku",
-      text: "Before a ship at range&nbsp;0-2 rolls attack or defense dice, if all of your %FORCE% are active, you may spend 1 %FORCE% and name a result. If the roll does not contain the named result, the ship must change 1&nbsp;die to that result."
+      text: "During an attack, before a ship at range&nbsp;0-2 rolls attack or defense dice, if all of your %FORCE% are active, you may spend 1 %FORCE% and name a result. If the roll does not contain the named result, the ship must change 1&nbsp;die to that result.%LINEBREAK%<i>Errata (since rules reference 1.4): Added \"During an attack\"</i>"
     },
     "Crack Shot": {
       display_name: "Crack Shot",
@@ -18387,7 +18537,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Dedicated": {
       display_name: "Dedicated",
-      text: "While another friendly ship in your %LEFTARC%&nbsp;or %RIGHTARC% at range&nbsp;0-2 defends, if it is limited or has the <strong>Dedicated</strong> upgrade and you are not strained, you may gain 1 strain token. If you do, the defender rerolls 1&nbsp;of their blank results."
+      text: "While another friendly ship in your %LEFTARC%&nbsp;or %RIGHTARC% at range&nbsp;0-2 defends, if it is limited or has the <strong>Dedicated</strong> upgrade and you are not strained, you may gain 1 strain token. If you do, the defender rerolls 1&nbsp;of their blank results.%LINEBREAK%<i>Errata (since rules reference 1.4): Removed Non-Limited restriction and added Clone restriction</i>"
     },
     "Delayed Fuses": {
       display_name: "Delayed Fuses",
@@ -18462,7 +18612,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Ferrosphere Paint": {
       display_name: "Ferrosphere Paint",
-      text: "After an enemy ship locks you, if you are not in that ship’s %BULLSEYEARC%, that ship gains 1 stress token."
+      text: "After an enemy ship locks you, if you are not in that ship's %BULLSEYEARC%, that ship gains 1 stress token unless it chooses to break its lock.%LINEBREAK%<i>Errata (since rules reference 1.4): Abilty adjusted to allow counterplay</i>"
     },
     "Fifth Brother": {
       display_name: "Fifth Brother",
@@ -18505,7 +18655,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Grappling Struts": {
       display_name: "Grappling Struts",
-      text: "Closed:%LINEBREAK%<strong>Setup:</strong> Equip this side faceup.%LINEBREAK%While you execute a maneuver, if you overlap an asteroid or debris cloud and there are 1 or fewer other friendly ships at range 0 of that obstacle, you may flip this card.%LINEBREAK%Open:%LINEBREAK%You ignore obstacles at range&nbsp;0 and while you move through them. After you reveal your dial, if you reveal a maneuver other than a [2&nbsp;%STRAIGHT%] and are at range 0 of an asteroid or debris cloud, skip your Execute Maneuver step and remove 1 stress token; if you revealed a right or left maneuver, rotate your ship 90º in that direction. After you execute a maneuver, flip this card."
+      text: "Closed:%LINEBREAK%<strong>Setup:</strong> Equip this side faceup.%LINEBREAK%After you execute a maneuver, if you overlap an asteroid or debris cloud and there are 1 or fewer other friendly ships at range 0 of that obstacle, you may flip this card. If you do, you do not suffer the effects of overlapping the asteroid or debris cloud.%LINEBREAK% Open:%LINEBREAK%You ignore obstacles at range 0. You cannot perform %BARRELROLL% actions. After you reveal your dial, if you reveal a maneuver other than a [2%STRAIGHT%] and are at range 0 of an asteroid or debris cloud, skip your Execute Maneuver step and remove 1 stress token; if you revealed a right or left maneuver, rotate your ship 90° in that direction. After you execute a maneuver, flip this card.%LINEBREAK%<i>Errata (since rules reference 1.4): Updated text to work as intended</i>"
     },
     "Greedo": {
       display_name: "Greedo",
@@ -18660,7 +18810,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Landing Struts": {
       display_name: "Landing Struts",
-      text: "Closed:%LINEBREAK%<strong>Setup:</strong> Equip this side faceup.%LINEBREAK%While you execute a maneuver, if you overlap an asteroid or debris cloud and there are 1 or fewer other friendly ships at range 0 of that obstacle, you may flip this card.%LINEBREAK%Open:%LINEBREAK%You ignore obstacles at range&nbsp;0 and while you move through them. After you reveal your dial, if you reveal a maneuver other than a [2&nbsp;%STRAIGHT%] and are at range 0 of an asteroid or debris cloud, skip your Execute Maneuver step and remove 1 stress token; if you revealed a right or left maneuver, rotate your ship 90º in that direction. After you execute a maneuver, flip this card."
+      text: "Closed:%LINEBREAK%<strong>Setup:</strong> Equip this side faceup.%LINEBREAK% After you execute a maneuver, if you overlap an asteroid or debris cloud and there are 1 or fewer other friendly ships at range 0 of that obstacle, you may flip this card. If you do, you do not suffer the effects of overlapping the asteroid or debris cloud. %LINEBREAK% Open:%LINEBREAK% You ignore obstacles at range 0. You cannot perform %BARRELROLL% actions. After you reveal your dial, if you reveal a maneuver other than a [2 %STRAIGHT%] and are at range 0 of an asteroid or debris cloud, skip your Execute Maneuver step and remove 1 stress token; if you revealed a right or left maneuver, rotate your ship 90° in that direction. After you execute a maneuver, flip this card.%LINEBREAK%<i>Errata (since rules reference 1.4): Updated text to work as intended</i>"
     },
     "Lando Calrissian": {
       display_name: "Lando Calrissian",
@@ -18688,7 +18838,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Luke Skywalker": {
       display_name: "Luke Skywalker",
-      text: "At the start of the Engagement Phase, you may spend 1&nbsp;%FORCE% to rotate your %SINGLETURRETARC% indicator."
+      text: "At the start of the Engagement Phase, you may spend 1&nbsp;%FORCE% and gain 1 deplete token to rotate your %SINGLETURRETARC% indicator. %LINEBREAK%<i>Errata (since rules reference 1.4): Added an additional cost</i>"
     },
     "M9-G8": {
       display_name: "M9-G8",
@@ -19030,7 +19180,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Zeb" Orrelios': {
       display_name: "“Zeb” Orrelios",
-      text: "You can perform primary attacks at range 0. Enemy ships at range 0 can perform primary attacks against you."
+      text: "While you perform an attack at attack range 0, you may spend focus tokens for their default effect to modify results. While defending at attack range 0, the attacker may spend focus tokens for their default effect to modify results.%LINEBREAK%<i>Errata (since rules reference 1.4): Ability reworked</i>"
     },
     "Kaydel Connix": {
       display_name: "Kaydel Connix",
@@ -19070,7 +19220,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Leia Organa (Resistance)": {
       display_name: "Leia Organa",
-      text: "After a friendly ship reveals its dial, you may spend 1 %FORCE%. If you do, the chosen ship reduces the difficulty of that maneuver."
+      text: "After a friendly ship reveals a non-[0 %STOP%] maneuver, you may spend 1 %FORCE%. If you do, the chosen ship reduces the difficulty of that maneuver.%LINEBREAK%<i>Errata (since rules reference 1.4): Added restriction on maneuver type)</i>"
     },
     "Korr Sella": {
       display_name: "Korr Sella",
@@ -19090,7 +19240,7 @@ exportObj.cardLoaders.English = function() {
     },
     "C1-10P": {
       display_name: "C1-10P",
-      text: "<strong>C1-10P: </strong>Setup: Equip this side faceup. %LINEBREAK% After you execute a maneuver, you may spend 1 %CHARGE% to perform a red %EVADE% action, even while stressed. %LINEBREAK% During the End Phase, if this card has 0 active %CHARGE%, flip it. %LINEBREAK% <strong>C1-10P (Erratic):</strong> After you execute a maneuver, you <strong>must</strong> choose a ship at range 0-1. It gains 1 jam token."
+      text: "<strong>C1-10P: </strong>Setup: Equip this side faceup. %LINEBREAK% After you fully execute a maneuver, you may spend 1 %CHARGE% to perform a red %EVADE% action, even while stressed. %LINEBREAK% During the End Phase, if this card has 0 active %CHARGE%, flip it. %LINEBREAK% <strong>C1-10P (Erratic):</strong> After you fully execute a maneuver, you <strong>must</strong> choose a ship at range 0-1. It gains 1 jam token.%LINEBREAK%<i>Errata (since rules reference 1.4): added \"fully\"</i>"
     },
     "Ahsoka Tano": {
       display_name: "Ahsoka Tano",
@@ -19395,7 +19545,7 @@ exportObj.cardLoaders.English = function() {
     "Babu Frik": {
       text: "Before you would gain a non-lock red or orange token, you may spend 1 %CHARGE% to place it on this card instead. During the System Phase, if there are 1 or more tokens on this card, you <b>must</b> spend 1 %CHARGE%. If you cannot, remove those tokens and gain matching tokens."
     },
-    "Ahsoka Tano": {
+    "Ahsoka Tano (Crew)": {
       display_name: "Ahsoka Tano",
       text: "After you fully execute a maneuver, you may spend 1 %FORCE% to choose 1 friendly ship in your %FULLREARARC% at range 1-2. If you do, that ship may perform a red %FOCUS% action, even while stressed."
     },
@@ -19453,7 +19603,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Tal Merrik": {
       display_name: "Tal Merrik",
-      text: "<strong>Setup:</strong> Before placing forcse, choose 1 enemy ship and assign the <b>False Friend</b> condition to it. %LINEBREAK% <strong>Action:</strong> If the <b>False Friend</b> condition is not assigned to an enemy ship, assign it to an enemy ship in your %FRONTARC% at range 0-2.           "
+      text: "<strong>Setup:</strong> Before placing forcse, choose 1 enemy ship and assign the <b>False Friend</b> condition to it. %LINEBREAK% <strong>Action:</strong> If the <b>False Friend</b> condition is not assigned to an enemy ship, assign it to an enemy ship in your %FRONTARC% at range 0-2."
     },
     "Tiber Saxon": {
       display_name: "Tiber Saxon",
@@ -19867,7 +20017,7 @@ exportObj.cardLoaders.English = function() {
       text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK%  <strong>System Phase:</strong> The DRK-1 probe droid’s controlling player may choose a [2 %BANKLEFT%], [2 %STRAIGHT%] or [2 %BANKRIGHT%] template and any set of the DRK-1’s guides. The player then relocates the remote, placing the DRK-1 at the other end of the template. It can be placed overlapping an object this way. %LINEBREAK%If the DRK-1 overlaps a ship, use the position marker to denote the ship’s position, then place the ship on top of the remote. %LINEBREAK%<strong>Activation, Engagement, and End Phase:</strong> No effect. %LINEBREAK%<strong>Other Rules:</strong> While a ship locks an object or jams an enemy ship, it may measure range from a friendly DRK-1 probe droid. After an enemy ship executes a maneuver that causes it to overlap a DRK-1 probe droid, the ship’s controller rolls 1 attack die. On a %FOCUS% result, the DRK-1 probe droid suffers 1 %HIT% damage.'
     },
     'Buzz Droid Swarm': {
-      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>System, Activation, and End Phase:</strong> No effect. %LINEBREAK%<strong>Engagement Phase:</strong> When you engage, each enemy ship at range 0 of the buzz droid swarm suffers 1 %CRIT% damage. %LINEBREAK%<strong>Other Rules:</strong> After an enemy ship overlaps or moves through a buzz droid swarm, the swarm’s controlling player relocates it by aligning the tab to that ship’s front or rear guides (this ship is at range 0 of the swarm). The swarm cannot be aligned to a set of the ship’s guides if doing so would cause it to overlap an object. If the swarm cannot be placed at a chosen set of guides, its controlling player must align it to the other set of the ship’s guides. If it cannot be aligned to the other set, the swarm and the enemy ship that overlapped or moved through it each suffer 1 %HIT% damage.'
+      text: 'INIT: 0 <br>AGILITY: 1 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>System, Activation, and End Phase:</strong> No effect. %LINEBREAK%<strong>Engagement Phase:</strong> When you engage, each enemy ship at range 0 of the buzz droid swarm suffers 1 %CRIT% damage. %LINEBREAK%<strong>Other Rules:</strong> After an enemy ship overlaps or moves through a buzz droid swarm, the swarm’s controlling player relocates it by aligning the tab to that ship’s front or rear guides (this ship is at range 0 of the swarm). The swarm cannot be aligned to a set of the ship’s guides if doing so would cause it to overlap an object. If the swarm cannot be placed at a chosen set of guides, its controlling player must align it to the other set of the ship’s guides. If it cannot be aligned to the other set, the swarm and the enemy ship that overlapped or moved through it each suffer 1 %HIT% damage. %LINEBREAK%<i>Errata (since rules reference 1.4): Agility adjusted for balance.</i>'
     },
     'It\'s the Resistance': {
       text: '<strong>Setup:</strong> Start in reserve. %LINEBREAK% When you deploy, you are placed within range 1 of any table edge and beyond range 3 of any enemy ship. %LINEBREAK% At the start of the round, if all of the friendly <strong>GA-97</strong>\'s %CHARGE% are active, you <strong>must</strong> deploy. Then remove this card. After the friendly <strong>GA-97</strong> is destroyed, you <strong>must</strong> deploy. Then gain 1 disarm token and remove this card.'
