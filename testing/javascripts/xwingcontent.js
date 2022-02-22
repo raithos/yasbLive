@@ -6593,16 +6593,14 @@ exportObj.basicCardData = function() {
         name: "R2 Astromech",
         id: 2,
         slot: "Astromech",
-        points: [3, 3, 5, 8],
-        variablepoints: "Agility",
+        points: 6,
         charge: 2
       }, {
         name: "R2-D2",
         id: 3,
         unique: true,
         slot: "Astromech",
-        points: [4, 6, 8, 10],
-        variablepoints: "Agility",
+        points: 8,
         charge: 3,
         faction: "Rebel Alliance"
       }, {
@@ -7096,8 +7094,7 @@ exportObj.basicCardData = function() {
         name: "Seasoned Navigator",
         id: 59,
         slot: "Crew",
-        points: [2, 3, 4, 5, 6, 7, 8, 9, 10],
-        variablepoints: "Initiative"
+        points: 7
       }, {
         name: "Seventh Sister",
         id: 60,
@@ -7210,8 +7207,7 @@ exportObj.basicCardData = function() {
         name: "Supernatural Reflexes",
         id: 74,
         slot: "Force",
-        points: [4, 4, 4, 8, 16, 24, 32],
-        variablepoints: "Initiative",
+        points: 24,
         restrictions: [["Base", "Small"]]
       }, {
         name: "Sense",
@@ -7332,8 +7328,7 @@ exportObj.basicCardData = function() {
         name: "Veteran Turret Gunner",
         id: 90,
         slot: "Gunner",
-        points: [9, 8, 7, 7],
-        variablepoints: "Base",
+        points: 8,
         restrictions: [["Action", "Rotate Arc"]]
       }, {
         name: "Cloaking Device",
@@ -7363,8 +7358,7 @@ exportObj.basicCardData = function() {
         name: "Inertial Dampeners",
         id: 95,
         slot: "Illicit",
-        points: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-        variablepoints: "Initiative"
+        points: 8
       }, {
         name: "Rigged Cargo Chute",
         id: 96,
@@ -8048,8 +8042,7 @@ exportObj.basicCardData = function() {
         name: "Primed Thrusters",
         id: 178,
         slot: "Tech",
-        points: [4, 5, 6, 7, 8, 9, 10],
-        variablepoints: "Initiative",
+        points: 6,
         restrictions: [["Base", "Small"]]
       }, {
         name: "Kylo Ren",
@@ -8591,8 +8584,7 @@ exportObj.basicCardData = function() {
         slot: "Sensor",
         charge: 1,
         recurring: 1,
-        points: 5,
-        variablepoints: "Initiative"
+        points: 5
       }, {
         name: "R2-A6",
         id: 241,
@@ -8739,7 +8731,6 @@ exportObj.basicCardData = function() {
         id: 256,
         slot: "Talent",
         points: 9,
-        variablepoints: "Base",
         attack: 2,
         range: "2",
         rangebonus: true
@@ -9671,13 +9662,12 @@ exportObj.basicCardData = function() {
         name: "R2-D2 (Republic)",
         canonical_name: 'R2-D2'.canonicalize(),
         id: 340,
+        points: 8,
         charge: 2,
         unique: true,
         xws: "r2d2-republic",
         faction: "Galactic Republic",
-        slot: "Astromech",
-        points: [4, 6, 8, 10],
-        variablepoints: "Agility"
+        slot: "Astromech"
       }, {
         name: "Extreme Maneuvers",
         id: 341,
@@ -9708,8 +9698,7 @@ exportObj.basicCardData = function() {
         ship: "T-70 X-Wing",
         unique: true,
         slot: "Modification",
-        points: [2, 3, 4, 5, 6, 7, 8],
-        variablepoints: "Initiative"
+        points: 5
       }, {
         name: '"Fives"',
         id: 346,
