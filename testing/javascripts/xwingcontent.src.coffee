@@ -1274,6 +1274,7 @@ exportObj.basicCardData = ->
             ]
         "Delta-7b Aethersprite":
             name: "Delta-7b Aethersprite"
+            icon: "delta7aethersprite"
             xws: "Delta-7b Aethersprite".canonicalize()
             factions: ["Galactic Republic"]
             attack: 3
@@ -2621,7 +2622,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "U-Wing"
             skill: 4
-            points: 5
+            points: 6
             pointsupg: 18
             keyword: ["Partisan"]
             slots: [
@@ -5110,7 +5111,7 @@ exportObj.basicCardData = ->
             ship: "TIE Advanced"
             skill: 2
             points: 3
-            pointsupg: 2
+            pointsupg: 4
             slots: [
                 "Sensor"
                 "Missile"
@@ -5219,8 +5220,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE Reaper"
             skill: 2
-            points: 4
-            pointsupg: 7
+            points: 5
+            pointsupg: 14
             slots: [
                 "Crew"
                 "Crew"
@@ -5353,8 +5354,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE Punisher"
             skill: 2
-            points: 4
-            pointsupg: 8
+            points: 5
+            pointsupg: 6
             slots: [
                 "Sensor"
                 "Torpedo"
@@ -5440,7 +5441,7 @@ exportObj.basicCardData = ->
             ship: "TIE Defender"
             skill: 1
             points: 7
-            pointsupg: 6
+            pointsupg: 14
             slots: [
                 "Sensor"
                 "Cannon"
@@ -11318,7 +11319,7 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Plo Koon"
+            name: "Plo Koon (Delta-7b)"
             id: 525
             unique: true
             faction: "Galactic Republic"
@@ -11337,7 +11338,8 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Saesee Tiin"
+            name: "Saesee Tiin (Delta-7b)"
+            canonical_name: 'Saesee Tiin'.canonicalize()
             id: 526
             unique: true
             faction: "Galactic Republic"
@@ -11354,7 +11356,8 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Mace Windu"
+            name: "Mace Windu (Delta-7b)"
+            canonical_name: 'Mace Windu'.canonicalize()
             id: 527
             unique: true
             faction: "Galactic Republic"
@@ -11372,7 +11375,8 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Anakin Skywalker"
+            name: "Anakin Skywalker (Delta-7b)"
+            canonical_name: 'Anakin Skywalker'.canonicalize()
             id: 528
             unique: true
             faction: "Galactic Republic"
@@ -11391,7 +11395,8 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Luminara Unduli"
+            name: "Luminara Unduli (Delta-7b)"
+            canonical_name: 'Luminara Unduli'.canonicalize()
             id: 529
             unique: true
             faction: "Galactic Republic"
@@ -11408,7 +11413,8 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Barriss Offee"
+            name: "Barriss Offee (Delta-7b)"
+            canonical_name: 'Barriss Offee'.canonicalize()
             id: 530
             unique: true
             faction: "Galactic Republic"
@@ -11426,7 +11432,8 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Ahsoka Tano"
+            name: "Ahsoka Tano (Delta-7b)"
+            canonical_name: 'Ahsoka Tano'.canonicalize()
             id: 531
             unique: true
             faction: "Galactic Republic"
@@ -11443,7 +11450,8 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Jedi Knight"
+            name: "Jedi Knight (Delta-7b)"
+            canonical_name: 'Jedi Knight'.canonicalize()
             id: 532
             faction: "Galactic Republic"
             ship: "Delta-7b Aethersprite"
@@ -11459,7 +11467,8 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: "Obi-Wan Kenobi"
+            name: "Obi-Wan Kenobi (Delta-7b)"
+            canonical_name: 'Obi-Wan Kenobi'.canonicalize()
             id: 533
             unique: true
             faction: "Galactic Republic"
@@ -12283,7 +12292,7 @@ exportObj.basicCardData = ->
             name: "Luke Skywalker"
             id: 87
             slot: "Gunner"
-            points: 26
+            points: 16
             force: 1
             unique: true
             faction: "Rebel Alliance"
@@ -24539,6 +24548,9 @@ exportObj.cardLoaders.English = () ->
         "Ahsoka Tano":
            display_name: """Ahsoka Tano"""
            text: """After you fully execute a maneuver, you may choose a friendly ship at range&nbsp;0-1 and spend 1&nbsp;%FORCE%. That ship may perform an action, even if it is stressed.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
+        "Ahsoka Tano (Delta-7b)":
+           display_name: """Ahsoka Tano"""
+           text: """After you fully execute a maneuver, you may choose a friendly ship at range&nbsp;0-1 and spend 1&nbsp;%FORCE%. That ship may perform an action, even if it is stressed.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
         "Airen Cracken":
            display_name: """Airen Cracken"""
            text: """After you perform an attack, you may choose 1 friendly ship at range 1. That ship may perform an action, treating it as red."""
@@ -24546,6 +24558,9 @@ exportObj.cardLoaders.English = () ->
            display_name: """Alpha Squadron Pilot"""
            text: """<i class = flavor_text>Sienar Fleet Systems designed the TIE interceptor with four wing-mounted laser cannons, a dramatic increase in firepower over its predecessors.</i>%LINEBREAK%<strong>Autothrusters:</strong> After you perform an action, you may perform a red %BARRELROLL% or red %BOOST% action."""
         "Anakin Skywalker":
+           display_name: """Anakin Skywalker"""
+           text: """After you fully execute a maneuver, if there is an enemy ship in your %FRONTARC% at range&nbsp;0-1 or in your %BULLSEYEARC%, you may spend 1 %FORCE% to remove 1&nbsp;stress token.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
+        "Anakin Skywalker (Delta-7b)":
            display_name: """Anakin Skywalker"""
            text: """After you fully execute a maneuver, if there is an enemy ship in your %FRONTARC% at range&nbsp;0-1 or in your %BULLSEYEARC%, you may spend 1 %FORCE% to remove 1&nbsp;stress token.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
         "Anakin Skywalker (N-1 Starfighter)":
@@ -24569,6 +24584,9 @@ exportObj.cardLoaders.English = () ->
            display_name: """Baron of the Empire"""
            text: """<i class = flavor_text>Sienar Fleet System’s TIE Advanced v1 is a groundbreaking starfighter design, featuring upgraded engines, a missile launcher, and folding s-foils.</i>"""
         "Barriss Offee":
+           display_name: """Barriss Offee"""
+           text: """While a friendly ship at range&nbsp;0-2 performs an attack, if the defender is in its %BULLSEYEARC%, you may spend 1&nbsp;%FORCE% to change 1&nbsp;%FOCUS% result to a %HIT% result or 1&nbsp;%HIT% result to a %CRIT% result.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1 %FORCE% to perform a %BOOST% or %BARRELROLL% action."""
+        "Barriss Offee (Delta-7b)":
            display_name: """Barriss Offee"""
            text: """While a friendly ship at range&nbsp;0-2 performs an attack, if the defender is in its %BULLSEYEARC%, you may spend 1&nbsp;%FORCE% to change 1&nbsp;%FOCUS% result to a %HIT% result or 1&nbsp;%HIT% result to a %CRIT% result.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1 %FORCE% to perform a %BOOST% or %BARRELROLL% action."""
         "Ben Teene":
@@ -24943,6 +24961,9 @@ exportObj.cardLoaders.English = () ->
         "Jedi Knight":
            display_name: """Jedi Knight"""
            text: """<i class = flavor_text>When the Clone Wars began, the Jedi Knights rallied to the cause of preserving the Republic, assuming command of legions of clone troopers and leading them in battle.</i>%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
+        "Jedi Knight (Delta-7b)":
+           display_name: """Jedi Knight"""
+           text: """<i class = flavor_text>When the Clone Wars began, the Jedi Knights rallied to the cause of preserving the Republic, assuming command of legions of clone troopers and leading them in battle.</i>%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
         "Jek Porkins":
            display_name: """Jek Porkins"""
            text: """After you receive a stress token, you may roll 1 attack die to remove it. On a %HIT% result, suffer 1&nbsp;%HIT% damage."""
@@ -25060,6 +25081,9 @@ exportObj.cardLoaders.English = () ->
         "Luminara Unduli":
            display_name: """Luminara Unduli"""
            text: """While a friendly ship at range&nbsp;0-2 defends, if it is not in the attacker’s %BULLSEYEARC%, you may spend 1&nbsp;%FORCE%. If you do, change 1&nbsp;%CRIT% result to a %HIT% result or 1 %HIT% result to a %FOCUS% result.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
+        "Luminara Unduli (Delta-7b)":
+           display_name: """Luminara Unduli"""
+           text: """While a friendly ship at range&nbsp;0-2 defends, if it is not in the attacker’s %BULLSEYEARC%, you may spend 1&nbsp;%FORCE%. If you do, change 1&nbsp;%CRIT% result to a %HIT% result or 1 %HIT% result to a %FOCUS% result.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
         "L'ulo L'ampar":
            display_name: """L’ulo L’ampar"""
            text: """While you defend or perform a primary attack, if you are stressed, you <b>must</b> roll 1 fewer defense die or 1 additional attack die.%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%. After you perform an action, you may perform a red %BOOST% or red %ROTATEARC% action."""
@@ -25067,6 +25091,9 @@ exportObj.cardLoaders.English = () ->
            display_name: """Maarek Stele"""
            text: """While you perform an attack, if the defender would be dealt a faceup damage card, instead draw 3 damage cards, choose 1, and discard the rest.%LINEBREAK%<strong>Advanced Targeting Computer:</strong> While you perform a primary attack against a defender you have locked, roll 1 additional attack die and change 1&nbsp;%HIT% result to a %CRIT% result. """
         "Mace Windu":
+           display_name: """Mace Windu"""
+           text: """After you fully execute a red maneuver, recover 1&nbsp;%FORCE%.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
+        "Mace Windu (Delta-7b)":
            display_name: """Mace Windu"""
            text: """After you fully execute a red maneuver, recover 1&nbsp;%FORCE%.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
         "Magva Yarro":
@@ -25115,6 +25142,9 @@ exportObj.cardLoaders.English = () ->
            display_name: """N’dru Suhlak"""
            text: """While you perform a primary attack, if there are no other friendly ships at range 0-2, roll 1 additional attack die."""
         "Obi-Wan Kenobi":
+           display_name: """Obi-Wan Kenobi"""
+           text: """After a friendly ship at range&nbsp;0-2 spends a focus token, you may spend 1&nbsp;%FORCE%. If you do, that ship gains 1&nbsp;focus token.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
+        "Obi-Wan Kenobi (Delta-7b)":
            display_name: """Obi-Wan Kenobi"""
            text: """After a friendly ship at range&nbsp;0-2 spends a focus token, you may spend 1&nbsp;%FORCE%. If you do, that ship gains 1&nbsp;focus token.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
         "Obsidian Squadron Pilot":
@@ -25173,6 +25203,9 @@ exportObj.cardLoaders.English = () ->
         "Plo Koon":
            display_name: """Plo Koon"""
            text: """At the start of the Engagement Phase, you may spend 1 %FORCE% and choose another friendly ship at range 0-2. If you do, you may transfer 1 green token to it or transfer one orange token from it to yourself.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
+        "Plo Koon (Delta-7b)":
+           display_name: """Plo Koon"""
+           text: """At the start of the Engagement Phase, you may spend 1 %FORCE% and choose another friendly ship at range 0-2. If you do, you may transfer 1 green token to it or transfer one orange token from it to yourself.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
         "Poe Dameron":
            display_name: """Poe Dameron"""
            text: """After you perform an action, you may spend 1&nbsp;%CHARGE% to perform a white action, treating it as red.%LINEBREAK%<strong>Weapon Hardpoint:</strong> You can equip 1&nbsp;%CANNON%, %TORPEDO%, or %MISSILE% upgrade."""
@@ -25227,6 +25260,9 @@ exportObj.cardLoaders.English = () ->
            display_name: """Sabine Wren"""
            text: """While you defend, if the attacker is in your %SINGLETURRETARC% at range 0-2, you may add 1&nbsp;%FOCUS% result to your dice results."""
         "Saesee Tiin":
+           display_name: """Saesee Tiin"""
+           text: """After a friendly ship at range 0-2 reveals its dial, you may spend 1 %FORCE%. If you do, set its dial to another maneuver of the same speed and difficulty.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
+        "Saesee Tiin (Delta-7b)":
            display_name: """Saesee Tiin"""
            text: """After a friendly ship at range 0-2 reveals its dial, you may spend 1 %FORCE%. If you do, set its dial to another maneuver of the same speed and difficulty.%LINEBREAK%<strong>Fine-tuned Controls:</strong> After you fully execute a maneuver, you may spend 1&nbsp;%FORCE% to perform a %BOOST% or %BARRELROLL% action."""
         "Sarco Plank":
@@ -37598,8 +37634,7 @@ exportObj.rulesEntries = ->
             text: """Ships can perform actions, which thematically represent things a pilot can do, such as repositioning slightly or flying defensively. When a ship is instructed to perform an action, the ship can perform a <strong>standard action</strong>, which includes actions listed in that ship’s action bar, as well as abilities that have the <strong>“Action:”</strong> header on that ship’s condition, damage, ship, or upgrade cards. <br><br>• A ship cannot perform actions while stressed. <br>• Some upgrade cards have an action bar that lists one or more actions. <br>These actions are added to the ship’s action bar and therefore are standard actions that the ship can perform. <br>• Some ship and upgrade cards have a linked action bar which allows the ship to perform linked actions. <br>• Some actions can fail. <br>• Actions have three difficulties: white, red, or purple. White is the least difficult, then red, then purple. <br>◊ As a cost to attempt to perform a red action, a ship must gain 1 stress token. <br>◊ As a cost to attempt to perform a purple action, a ship must spend 1 %FORCE%. <br>◊ If a ship is instructed to perform an action, the action is white unless stated otherwise. <br>◊ If two or more effects would alter the color of an action from its default color (e.g. “treat the action as red” ), the action is treated as the most restrictive of those colors. <br>• There is no maximum limit to the number of actions a ship can perform over the course of a round, but a ship cannot perform the same action more than once during a single round, or perform an action it has failed this round. <br>◊ If a ship has multiple damage cards with the same name, each damage card’s ability is a different action. <br>◊ Some cards have multiple <strong>“Action:”</strong> headers, each of which indicates a different action. <br>◊ Game effects such as “gain 1 focus token,” “boost,” or “acquire a lock” are not actions, and a ship can resolve these game effects any number of times each round. Game effects such as “perform a %FOCUS% action,” “perform a %BOOST% action,” or “perform a %LOCK% action” are actions, and therefore each ship can perform each of these actions only once per round. <br>• During the Perform Action step of a ship’s activation, the ship may perform an action. <br>• A ship can choose not to perform an action during the Perform Action step or when granted an action."""
         "ACTIVATION PHASE":
             name: "Activation Phase"
-            text: """The Activation Phase is the third phase of a round. During this phase, each ship <strong>activates</strong>, one at a time, starting with the ship with the lowest initiative and continuing in ascending order.<br><br>Each ship activates by resolving the following steps in order:<br><strong>1. Reveal Dial:</strong> The ship’s assigned dial is revealed by flipping it faceup and then placing it next to its ship card.<br><strong>2. Execute Maneuver:</strong> The ship executes the maneuver selected on the revealed dial.<br><strong>3. Perform Action:</strong> The ship may perform one action.<br><br>After all ships have activated, players proceed to the Engagement Phase.<br>• If a player has multiple ships with the same initiative value, that player activates them in any order—finishing the entire activation for one ship before activating another ship of the same initiative value.<br>• If multiple players have ships with the same initiative value, player order is used to determine the sequence. The first player activates all of their ships with that initiative value in any order, then the second player activates all of their ships with that initiative value in any order.<br>• When a ship activates, if it skips the Reveal Dial step, it cannot resolve any abilities that trigger after the ship reveals its dial.<br>• A stressed ship cannot execute red maneuvers or perform actions.<br>• If a stressed ship attempts to execute a red maneuver, the ship executes a stress maneuver instead. The stress maneuver is a white [%STRAIGHT% 2] maneuver. The bearing, difficulty, and speed of this maneuver cannot be changed unless an ability explicitly affects the stress maneuver.<br>• If a ship with no active %FORCE% attempts to perform a purple maneuver, it
-executes a stress maneuver instead."""
+            text: """The Activation Phase is the third phase of a round. During this phase, each ship <strong>activates</strong>, one at a time, starting with the ship with the lowest initiative and continuing in ascending order.<br><br>Each ship activates by resolving the following steps in order:<br><strong>1. Reveal Dial:</strong> The ship’s assigned dial is revealed by flipping it faceup and then placing it next to its ship card.<br><strong>2. Execute Maneuver:</strong> The ship executes the maneuver selected on the revealed dial.<br><strong>3. Perform Action:</strong> The ship may perform one action.<br><br>After all ships have activated, players proceed to the Engagement Phase.<br>• If a player has multiple ships with the same initiative value, that player activates them in any order—finishing the entire activation for one ship before activating another ship of the same initiative value.<br>• If multiple players have ships with the same initiative value, player order is used to determine the sequence. The first player activates all of their ships with that initiative value in any order, then the second player activates all of their ships with that initiative value in any order.<br>• When a ship activates, if it skips the Reveal Dial step, it cannot resolve any abilities that trigger after the ship reveals its dial.<br>• A stressed ship cannot execute red maneuvers or perform actions.<br>• If a stressed ship attempts to execute a red maneuver, the ship executes a stress maneuver instead. The stress maneuver is a white [%STRAIGHT% 2] maneuver. The bearing, difficulty, and speed of this maneuver cannot be changed unless an ability explicitly affects the stress maneuver.<br>• If a ship with no active %FORCE% attempts to perform a purple maneuver, it executes a stress maneuver instead."""
         "AGILITY":
             name: "Agility"
             text: """A ship’s agility is the green number on its ship card. This value indicates the number of defense dice the ship rolls while it defends.<br>• During an attack, a ship with an agility value of “0” can still roll additional defense dice granted by game effects such as the range bonus, the attack being obstructed by an obstacle, or other card abilities.<br>• Abilities or game effects that cause a ship to roll additional or fewer defense dice do not modify the agility value of the defender.<br>• All modifiers to agility are cumulative.<br>• After all modifiers have been applied, if the number of defense dice required for a roll is less than “0,” it is treated as “0.”<br>• After all modifiers have applied, if the number of defense dice required for a roll is greater than "6," it is treated as "6.""" 
