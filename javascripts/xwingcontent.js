@@ -1601,7 +1601,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         pointsupg: 6,
-        slots: ["Missile", "Configuration"]
+        slots: ["Modification", "Configuration"]
       }, {
         name: "Green Squadron Pilot",
         id: 52,
@@ -6450,7 +6450,7 @@ exportObj.basicCardData = function() {
         id: 512,
         faction: "Scum and Villainy",
         ship: "Gauntlet Fighter",
-        skill: 8,
+        skill: 5,
         points: 8,
         pointsupg: 27,
         unique: true,
@@ -6562,7 +6562,7 @@ exportObj.basicCardData = function() {
         points: 7,
         pointsupg: 28,
         unique: true,
-        keyword: ["Mandelorian"],
+        keyword: ["Mandalorian"],
         slots: ["Talent", "Talent", "Crew", "Crew", "Cannon", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "Guild Bounty Hunter",
