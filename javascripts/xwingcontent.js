@@ -10764,6 +10764,7 @@ exportObj.basicCardData = function() {
         points: 10,
         slot: "Crew",
         unique: true,
+        force: 1,
         faction: "Scum and Villainy",
         restrictions: [["Slot", "Crew"]],
         validation_func: function(ship, upgrade_obj) {
