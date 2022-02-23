@@ -8197,8 +8197,8 @@ Ship = (function() {
         for (_i = 0, _len = restrictions.length; _i < _len; _i++) {
           r = restrictions[_i];
           if (r[0] === "orUnique") {
-            if (!this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
-              return false;
+            if (this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
+              return true;
             }
           }
           switch (r[0]) {

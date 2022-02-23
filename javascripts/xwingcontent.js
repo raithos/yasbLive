@@ -10748,7 +10748,7 @@ exportObj.basicCardData = function() {
         recurring: 1,
         slot: "Crew",
         unique: true,
-        faction: ["Rebel Alliance"],
+        faction: ["Rebel Alliance", "Galactic Empire", "Scum and Villainy"],
         restrictions: [["orUnique", "Gar Saxon"], ["Faction", "Rebel Alliance"]]
       }, {
         name: "Ursa Wren",
@@ -19724,7 +19724,7 @@ exportObj.cardLoaders.English = function() {
     "The Child": {
       text: "<strong>Setup:</strong> After placing forces, choose an opponent; they assign the <b>Merciless Pursuit</b> condition to two of their ships. %LINEBREAK% Your %FORCE% lose the recurring icon. After you defend, if you suffered damage during that attack, recover 1 %FORCE%."
     },
-    "The Child": {
+    "Tracking Fob": {
       text: "<strong>Setup:</strong> After placing forces, choose an opponent; they assign the <b>Marked for Elimination</b> condition to 1 of their ships. They must assign it to a limited ship, if able. %LINEBREAK% You ignore range restrictions while acquireing locks on the ship with the <b>Marked for Elimination</b> condition."
     },
     "Notorious": {
