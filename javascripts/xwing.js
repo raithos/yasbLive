@@ -4393,7 +4393,7 @@ exportObj.SquadBuilder = (function() {
       container: this.ship_container
     });
     this.ships.push(new_ship);
-    this.ship_number_invalid_container.toggleClass('d-none', this.ships.length < 10 && this.ships.length > 2);
+    this.ship_number_invalid_container.toggleClass('d-none', this.ships.length < 10 && this.ships.length > 3);
     this.multi_faction_warning_container.toggleClass('d-none', this.faction !== "All");
     return new_ship;
   };
@@ -4430,7 +4430,7 @@ exportObj.SquadBuilder = (function() {
             })(function() {
               _this.current_squad.dirty = true;
               _this.container.trigger('xwing-backend:squadDirtinessChanged');
-              _this.ship_number_invalid_container.toggleClass('d-none', _this.ships.length < 10 && _this.ships.length > 2);
+              _this.ship_number_invalid_container.toggleClass('d-none', _this.ships.length < 10 && _this.ships.length > 3);
               return __iced_k(_this.multi_faction_warning_container.toggleClass('d-none', _this.faction !== "All"));
             });
           });
