@@ -1828,7 +1828,7 @@ exportObj.basicCardData = function() {
         points: 3,
         pointsupg: 8,
         keyword: ["Droid", "Spectre"],
-        slots: ["Talent", "Crew", "Modification", "Astromech", "Title"]
+        slots: ["Crew", "Modification", "Astromech", "Title"]
       }, {
         name: "Braylen Stramm",
         id: 73,
