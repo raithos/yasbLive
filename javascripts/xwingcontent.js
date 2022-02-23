@@ -4138,7 +4138,7 @@ exportObj.basicCardData = function() {
         pointsupg: 16,
         charge: 1,
         recurring: 1,
-        slots: ["Astromech", "Tech", "Modification", "Configuration", "HardpointShip"]
+        slots: ["Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Temmin Wexley",
         id: 297,
@@ -4148,7 +4148,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         pointsupg: 13,
-        slots: ["Talent", "Astromech", "Tech", "Modification", "Modification", "Configuration", "HardpointShip"]
+        slots: ["Talent", "Tech", "Astromech", "Modification", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Nien Nunb",
         id: 298,
@@ -4158,7 +4158,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 6,
         pointsupg: 13,
-        slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Missile", "HardpointShip"]
+        slots: ["Talent", "Tech", "Missile", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Ello Asty",
         id: 299,
@@ -4168,7 +4168,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 6,
         pointsupg: 14,
-        slots: ["Talent", "Talent", "Astromech", "Tech", "Modification", "Configuration", "HardpointShip"]
+        slots: ["Talent", "Talent", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Green Squadron Expert",
         id: 300,
@@ -5702,7 +5702,7 @@ exportObj.basicCardData = function() {
         pointsupg: 12,
         charge: 2,
         recurring: 1,
-        slots: ["Talent", "Talent", "Astromech", "Tech", "Tech", "Modification", "Configuration", "HardpointShip"]
+        slots: ["Talent", "Talent", "Tech", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Temmin Wexley (HoH)",
         canonical_name: 'Temmin Wexley'.canonicalize(),
@@ -5714,7 +5714,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 6,
         pointsupg: 14,
-        slots: ["Talent", "Astromech", "Tech", "Tech", "Modification", "Configuration", "HardpointShip"]
+        slots: ["Talent", "Tech", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Merl Cobben",
         id: 444,
