@@ -3531,7 +3531,7 @@ exportObj.SquadBuilder = (function() {
       include_intro = true;
     }
     if (include_intro === true) {
-      intro = "<h2>YASB for X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) 2.5 is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n\n<p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button></p>";
+      intro = "<h2>YASB 2 for X-Wing</h2>\n<p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n\n<p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button></p>";
     } else {
       intro = "";
     }
@@ -8177,9 +8177,7 @@ Ship = (function() {
         for (_i = 0, _len = restrictions.length; _i < _len; _i++) {
           r = restrictions[_i];
           if (r[0] === "orUnique") {
-            if (this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
-              return true;
-            } else {
+            if (!this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
               return false;
             }
           }
@@ -8509,7 +8507,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6885
+                lineno: 6883
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8668,7 +8666,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 6979
+                  lineno: 6977
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8695,7 +8693,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 6986
+                      lineno: 6984
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8839,7 +8837,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7061
+            lineno: 7059
           }));
         }
         __iced_deferrals._fulfill();
