@@ -350,7 +350,7 @@ ul.nav li.dropdown ul.dropdown-menu li:hover {
   background-color: #333; }
 
 input[type=number] {
-  width: 3em;
+  width: 2em;
   font-size: 1em;
   -moz-appearance: textfield; }
 

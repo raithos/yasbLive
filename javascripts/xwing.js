@@ -2040,10 +2040,10 @@ exportObj.CardBrowser = (function() {
       }
     }
     if (this.minimum_point_costs.value > 0 || this.maximum_point_costs.value < 200) {
-      if (!((card.data.points >= this.minimum_point_costs.value && card.data.points <= this.maximum_point_costs.value) || (card.data.points === "*" || (card.data.points == null)))) {
+      if (!((card.data.points >= this.minimum_point_costs.value && card.data.points <= this.maximum_point_costs.value) || (card.data.variablepoints != null))) {
         return false;
       }
-      if (card.data.pointsarray != null) {
+      if (card.data.variablepoints != null) {
         matching_points = false;
         _ref16 = card.data.pointsarray;
         for (_s = 0, _len10 = _ref16.length; _s < _len10; _s++) {
@@ -3531,7 +3531,7 @@ exportObj.SquadBuilder = (function() {
       include_intro = true;
     }
     if (include_intro === true) {
-      intro = "<h2>YASB for X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) 2.5 is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n\n<p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button></p>";
+      intro = "<h2>YASB 2 for X-Wing (Version 2.5) </h2>\n<p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n\n<p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button></p>";
     } else {
       intro = "";
     }
@@ -3789,7 +3789,7 @@ exportObj.SquadBuilder = (function() {
         if (_this.isEpic) {
           _this.printable_container.find('.squad-name').append(" <i class=\"xwing-miniatures-font xwing-miniatures-font-energy\"></i>");
         }
-        _this.printable_container.find('.printable-body').append($.trim("<div class=\"version\"><span class=\"translated\" defaultText=\"Points Version:\"></span> 2.0.0 Sept 2021</div>"));
+        _this.printable_container.find('.printable-body').append($.trim("<div class=\"version\"><span class=\"translated\" defaultText=\"Points Version:\"></span> 2.5.0 03/01/2022</div>"));
         if ($.trim(_this.notes.val()) !== '') {
           _this.printable_container.find('.printable-body').append($.trim("<h5 class=\"print-notes translated\" defaultText=\"Notes:\"></h5>\n<pre class=\"print-notes\"></pre>"));
           _this.printable_container.find('.printable-body pre.print-notes').text(_this.notes.val());
@@ -3917,16 +3917,11 @@ exportObj.SquadBuilder = (function() {
     oldstandard = this.isStandard;
     oldEpic = this.isEpic;
     oldQuickbuild = this.isQuickbuild;
-    this.isStandard = true;
+    this.isStandard = false;
     this.isEpic = false;
     this.isQuickbuild = false;
     switch (gametype) {
       case 'extended':
-        this.isStandard = false;
-        this.desired_points_input.val(20);
-        break;
-      case 'standard':
-        this.isStandard = true;
         this.desired_points_input.val(20);
         break;
       case 'epic':
@@ -3936,6 +3931,10 @@ exportObj.SquadBuilder = (function() {
       case 'quickbuild':
         this.isQuickbuild = true;
         this.desired_points_input.val(8);
+        break;
+      default:
+        this.isStandard = true;
+        this.desired_points_input.val(20);
     }
     if (oldQuickbuild !== this.isQuickbuild) {
       old_id = this.current_squad.id;
@@ -4843,7 +4842,7 @@ exportObj.SquadBuilder = (function() {
         upgrade = available_upgrades[_j];
         _results.push({
           id: upgrade.id,
-          text: "" + (upgrade.display_name ? upgrade.display_name : upgrade.name) + " (" + (this_upgrade_obj.getPoints(upgrade)) + (upgrade.pointsarray ? '*' : '') + ")",
+          text: "" + (upgrade.display_name ? upgrade.display_name : upgrade.name) + " (" + (this_upgrade_obj.getPoints(upgrade)) + (upgrade.variablepoints ? '*' : '') + ")",
           points: this_upgrade_obj.getPoints(upgrade),
           name: upgrade.name,
           display_name: upgrade.display_name,
@@ -5207,12 +5206,8 @@ exportObj.SquadBuilder = (function() {
           container.find('tr.info-attack-turret').toggle(data.attackt != null);
           container.find('tr.info-attack-doubleturret').toggle(data.attackdt != null);
           container.find('tr.info-ship').hide();
-          if (data.large != null) {
-            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Large"));
-          } else if (data.medium != null) {
-            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Medium"));
-          } else if (data.huge != null) {
-            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Huge"));
+          if (data.base != null) {
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", data.base));
           } else {
             container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Small"));
           }
@@ -5330,12 +5325,8 @@ exportObj.SquadBuilder = (function() {
           ship = exportObj.ships[data.ship];
           container.find('tr.info-ship td.info-data').text(data.ship);
           container.find('tr.info-ship').show();
-          if (ship.large != null) {
-            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Large"));
-          } else if (ship.medium != null) {
-            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Medium"));
-          } else if (ship.huge != null) {
-            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Huge"));
+          if (ship.base != null) {
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", ship.base));
           } else {
             container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Small"));
           }
@@ -5476,10 +5467,8 @@ exportObj.SquadBuilder = (function() {
           container.find('p.info-text').show();
           container.find('tr.info-ship td.info-data').text(data.ship);
           container.find('tr.info-ship').show();
-          if (ship.large != null) {
-            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Large"));
-          } else if (ship.medium != null) {
-            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Medium"));
+          if (ship.base != null) {
+            container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", ship.base));
           } else {
             container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", "Small"));
           }
@@ -5595,22 +5584,25 @@ exportObj.SquadBuilder = (function() {
             container.find('.info-collection').hide();
           }
           container.find('.info-name').html("" + uniquedots + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) ? "" : " (" + (this.uitranslation('unreleased')) + ")"));
-          if (data.pointsarray != null) {
-            point_info = "<i>" + this.uitranslation("varPointCostsPoints", data.pointsarray);
-            if ((data.variableagility != null) && data.variableagility) {
-              point_info += this.uitranslation("varPointCostsConditionAgility", (function() {
-                _results = [];
-                for (var _k = 0, _ref74 = data.pointsarray.length - 1; 0 <= _ref74 ? _k <= _ref74 : _k >= _ref74; 0 <= _ref74 ? _k++ : _k--){ _results.push(_k); }
-                return _results;
-              }).apply(this));
-            } else if ((data.variableinit != null) && data.variableinit) {
-              point_info += this.uitranslation("varPointCostsConditionIni", (function() {
-                _results1 = [];
-                for (var _l = 0, _ref75 = data.pointsarray.length - 1; 0 <= _ref75 ? _l <= _ref75 : _l >= _ref75; 0 <= _ref75 ? _l++ : _l--){ _results1.push(_l); }
-                return _results1;
-              }).apply(this));
-            } else if ((data.variablebase != null) && data.variablebase) {
-              point_info += this.uitranslation("varPointCostsConditionBase");
+          if (data.variablepoints != null) {
+            point_info = "<i>" + this.uitranslation("varPointCostsPoints", data.points);
+            switch (data.variablepoints) {
+              case "Agility":
+                point_info += this.uitranslation("varPointCostsConditionAgility", (function() {
+                  _results = [];
+                  for (var _k = 0, _ref74 = data.points.length - 1; 0 <= _ref74 ? _k <= _ref74 : _k >= _ref74; 0 <= _ref74 ? _k++ : _k--){ _results.push(_k); }
+                  return _results;
+                }).apply(this));
+                break;
+              case "Initiative":
+                point_info += this.uitranslation("varPointCostsConditionIni", (function() {
+                  _results1 = [];
+                  for (var _l = 0, _ref75 = data.points.length - 1; 0 <= _ref75 ? _l <= _ref75 : _l >= _ref75; 0 <= _ref75 ? _l++ : _l--){ _results1.push(_l); }
+                  return _results1;
+                }).apply(this));
+                break;
+              case "Base":
+                point_info += this.uitranslation("varPointCostsConditionBase");
             }
             point_info += "</i>";
           }
@@ -5998,7 +5990,7 @@ exportObj.SquadBuilder = (function() {
   SquadBuilder.prototype.randomSquad = function(max_points, allowed_sources, timeout_ms, bid_goal, ship_limit, ships_or_upgrades, collection_only, fill_zero_pts) {
     var data, stopHandler;
     if (max_points == null) {
-      max_points = 20;
+      max_points = 200;
     }
     if (allowed_sources == null) {
       allowed_sources = null;
@@ -6654,7 +6646,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5656
+                  lineno: 5647
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6883,7 +6875,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5776
+                          lineno: 5767
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6933,7 +6925,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5809
+                                  lineno: 5800
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7031,7 +7023,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5867
+                      lineno: 5858
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7115,7 +7107,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5903
+                lineno: 5894
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7184,7 +7176,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5932
+              lineno: 5923
             }));
           }
         }
@@ -7273,7 +7265,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 5988
+                lineno: 5979
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8185,7 +8177,7 @@ Ship = (function() {
         for (_i = 0, _len = restrictions.length; _i < _len; _i++) {
           r = restrictions[_i];
           if (r[0] === "orUnique") {
-            if (this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
+            if (!this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
               return false;
             }
           }
@@ -8193,37 +8185,37 @@ Ship = (function() {
             case "Base":
               switch (r[1]) {
                 case "Small":
-                  if ((this.data.medium != null) || (this.data.large != null) || (this.data.huge != null)) {
+                  if (this.data.base != null) {
+                    return false;
+                  }
+                  break;
+                case "Non-Small":
+                  if (this.data.base == null) {
                     return false;
                   }
                   break;
                 case "Small or Medium":
-                  if ((this.data.large != null) || (this.data.huge != null)) {
-                    return false;
-                  }
-                  break;
-                case "Medium":
-                  if (!(this.data.medium != null)) {
+                  if (!(((this.data.base != null) && this.data.base === "Medium") || (this.data.base == null))) {
                     return false;
                   }
                   break;
                 case "Medium or Large":
-                  if (!((this.data.medium != null) || (this.data.large != null))) {
+                  if (!((this.data.base != null) && (this.data.base === "Medium" || this.data.base === "Large"))) {
                     return false;
                   }
                   break;
-                case "Large":
-                  if (!(this.data.large != null)) {
-                    return false;
-                  }
-                  break;
-                case "Huge":
-                  if (!(this.data.huge != null)) {
+                case "Large or Huge":
+                  if (!((this.data.base != null) && (this.data.base === "Large" || this.data.base === "Huge"))) {
                     return false;
                   }
                   break;
                 case "Standard":
-                  if (this.data.huge != null) {
+                  if ((this.data.base != null) && this.data.base === "Huge") {
+                    return false;
+                  }
+                  break;
+                default:
+                  if (!((this.data.base != null) && this.data.base === r[1])) {
                     return false;
                   }
               }
@@ -8515,7 +8507,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6891
+                lineno: 6883
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8674,7 +8666,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 6985
+                  lineno: 6977
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8701,7 +8693,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 6992
+                      lineno: 6984
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8845,7 +8837,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7067
+            lineno: 7059
           }));
         }
         __iced_deferrals._fulfill();
@@ -8875,20 +8867,27 @@ GenericAddon = (function() {
     if (ship == null) {
       ship = this.ship;
     }
-    if ((data != null ? data.variableagility : void 0) != null) {
-      return data != null ? data.pointsarray[ship.data.agility] : void 0;
-    } else if ((data != null ? data.variablebase : void 0) != null) {
-      if ((ship != null ? ship.data.medium : void 0) != null) {
-        return data != null ? data.pointsarray[1] : void 0;
-      } else if ((ship != null ? ship.data.large : void 0) != null) {
-        return data != null ? data.pointsarray[2] : void 0;
-      } else if ((ship != null ? ship.data.huge : void 0) != null) {
-        return data != null ? data.pointsarray[3] : void 0;
-      } else {
-        return data != null ? data.pointsarray[0] : void 0;
+    if ((data != null ? data.variablepoints : void 0) != null) {
+      switch (data.variablepoints) {
+        case "Agility":
+          return data != null ? data.points[ship.data.agility] : void 0;
+        case "Base":
+          if ((ship != null ? ship.data.base : void 0) != null) {
+            switch (ship.data.base) {
+              case "Medium":
+                return data != null ? data.points[1] : void 0;
+              case "Large":
+                return data != null ? data.points[2] : void 0;
+              case "Huge":
+                return data != null ? data.points[3] : void 0;
+            }
+          } else {
+            return data != null ? data.points[0] : void 0;
+          }
+          break;
+        case "Initiative":
+          return data != null ? data.points[ship.pilot.skill] : void 0;
       }
-    } else if ((data != null ? data.variableinit : void 0) != null) {
-      return data != null ? data.pointsarray[ship.pilot.skill] : void 0;
     } else {
       return (_ref = data != null ? data.points : void 0) != null ? _ref : 0;
     }
@@ -8898,7 +8897,7 @@ GenericAddon = (function() {
     if (this.data != null) {
       return this.selector.select2('data', {
         id: this.data.id,
-        text: "" + (this.data.display_name ? this.data.display_name : this.data.name) + " (" + points + (this.data.pointsarray ? '*' : '') + ")"
+        text: "" + (this.data.display_name ? this.data.display_name : this.data.name) + " (" + points + (this.data.variablepoints ? '*' : '') + ")"
       });
     } else {
       return this.selector.select2('data', null);

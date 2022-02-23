@@ -1742,8 +1742,8 @@ class exportObj.CardBrowser
 
         # check if point costs matches
         if @minimum_point_costs.value > 0 or @maximum_point_costs.value < 200
-            return false unless (card.data.points >= @minimum_point_costs.value and card.data.points <= @maximum_point_costs.value) or (card.data.points == "*" or not card.data.points?)
-            if card.data.pointsarray?
+            return false unless (card.data.points >= @minimum_point_costs.value and card.data.points <= @maximum_point_costs.value) or (card.data.variablepoints?)
+            if card.data.variablepoints?
                 matching_points = false
                 for points in card.data.pointsarray
                     if points >= @minimum_point_costs.value and points <= @maximum_point_costs.value
@@ -3247,12 +3247,13 @@ class exportObj.SquadBuilder
     createInfoContainerUI: (include_intro = true) ->
         if include_intro == true
             intro = """
-                <h2>YASB for X-Wing 2.5</h2>
-                <p>YASB (Yet Another Squad Builder) 2.5 is a simple, fast, squad builder for X-Wing Miniatures by <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a>.</p>
+                <h2>YASB 2 for X-Wing (Version 2.5) </h2>
+                <p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a>.</p>
                 <h5>Credits</h5>
                 <p>Built upon the amazing original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
                 <p>YASB is updated and maintained by Stephen Kim.</p>
                 <p>Additional credits to:<br>
+                2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>
                 2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>
                 Translation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>
                 Site logo: Thomas Kohler<br>
@@ -3521,7 +3522,7 @@ class exportObj.SquadBuilder
                     
             # Notes, if present
             @printable_container.find('.printable-body').append $.trim """
-                <div class="version"><span class="translated" defaultText="Points Version:"></span> 2.0.0 Sept 2021</div>
+                <div class="version"><span class="translated" defaultText="Points Version:"></span> 2.5.0 03/01/2022</div>
             """
             if $.trim(@notes.val()) != ''
                 @printable_container.find('.printable-body').append $.trim """
@@ -3624,15 +3625,11 @@ class exportObj.SquadBuilder
         oldstandard = @isStandard
         oldEpic = @isEpic
         oldQuickbuild = @isQuickbuild
-        @isStandard = true
+        @isStandard = false
         @isEpic = false
         @isQuickbuild = false
         switch gametype
             when 'extended'
-                @isStandard = false
-                @desired_points_input.val 20
-            when 'standard'
-                @isStandard = true
                 @desired_points_input.val 20
             when 'epic'
                 @isEpic = true
@@ -3640,6 +3637,9 @@ class exportObj.SquadBuilder
             when 'quickbuild'
                 @isQuickbuild = true
                 @desired_points_input.val 8
+            else
+                @isStandard = true
+                @desired_points_input.val 20
         if oldQuickbuild != @isQuickbuild
             old_id = @current_squad.id
             @newSquadFromScratch($.trim(@current_squad.name))
@@ -4224,7 +4224,7 @@ class exportObj.SquadBuilder
             # available_upgrades.push include_upgrade
             eligible_upgrades.push include_upgrade
 
-        retval = ({ id: upgrade.id, text: "#{if upgrade.display_name then upgrade.display_name else upgrade.name} (#{this_upgrade_obj.getPoints(upgrade)}#{if upgrade.pointsarray then '*' else ''})", points: this_upgrade_obj.getPoints(upgrade), name: upgrade.name, display_name: upgrade.display_name, disabled: upgrade not in eligible_upgrades } for upgrade in available_upgrades)
+        retval = ({ id: upgrade.id, text: "#{if upgrade.display_name then upgrade.display_name else upgrade.name} (#{this_upgrade_obj.getPoints(upgrade)}#{if upgrade.variablepoints then '*' else ''})", points: this_upgrade_obj.getPoints(upgrade), name: upgrade.name, display_name: upgrade.display_name, disabled: upgrade not in eligible_upgrades } for upgrade in available_upgrades)
         if sorted
             retval = retval.sort exportObj.sortHelper
 
@@ -4527,12 +4527,8 @@ class exportObj.SquadBuilder
                     container.find('tr.info-attack-doubleturret').toggle(data.attackdt?)
                 
                     container.find('tr.info-ship').hide()        
-                    if data.large?
-                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Large")
-                    else if data.medium?
-                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Medium")
-                    else if data.huge?
-                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Huge")
+                    if data.base?
+                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", data.base)
                     else
                         container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Small")
                     container.find('tr.info-base').show()
@@ -4630,12 +4626,8 @@ class exportObj.SquadBuilder
                     container.find('tr.info-ship td.info-data').text data.ship
                     container.find('tr.info-ship').show()
                     
-                    if ship.large?
-                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Large")
-                    else if ship.medium?
-                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Medium")
-                    else if ship.huge?
-                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Huge")
+                    if ship.base?
+                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", ship.base)
                     else
                         container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Small")
                     container.find('tr.info-base').show()
@@ -4779,10 +4771,8 @@ class exportObj.SquadBuilder
                     container.find('tr.info-ship td.info-data').text data.ship
                     container.find('tr.info-ship').show()
 
-                    if ship.large?
-                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Large")
-                    else if ship.medium?
-                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Medium")
+                    if ship.base?
+                        container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", ship.base)
                     else
                         container.find('tr.info-base td.info-data').text exportObj.translate("gameterms", "Small")
                     container.find('tr.info-base').show()
@@ -4885,14 +4875,15 @@ class exportObj.SquadBuilder
                     else
                         container.find('.info-collection').hide()
                     container.find('.info-name').html """#{uniquedots}#{if data.display_name then data.display_name else data.name}#{if exportObj.isReleased(data) then  "" else " (#{@uitranslation('unreleased')})"}"""
-                    if data.pointsarray? 
-                        point_info = "<i>" + @uitranslation("varPointCostsPoints", data.pointsarray)
-                        if data.variableagility? and data.variableagility
-                            point_info += @uitranslation("varPointCostsConditionAgility", [0..data.pointsarray.length-1])
-                        else if data.variableinit? and data.variableinit
-                            point_info += @uitranslation("varPointCostsConditionIni", [0..data.pointsarray.length-1])
-                        else if data.variablebase? and data.variablebase
-                            point_info += @uitranslation("varPointCostsConditionBase")
+                    if data.variablepoints?
+                        point_info = "<i>" + @uitranslation("varPointCostsPoints", data.points)
+                        switch data.variablepoints
+                            when "Agility"
+                                point_info += @uitranslation("varPointCostsConditionAgility", [0..data.points.length-1])
+                            when "Initiative"
+                                point_info += @uitranslation("varPointCostsConditionIni", [0..data.points.length-1])
+                            when "Base"
+                                point_info += @uitranslation("varPointCostsConditionBase")
                         point_info += "</i>"
 
                     restriction_info = @restriction_text(data) + @upgrade_effect(data)
@@ -5202,7 +5193,7 @@ class exportObj.SquadBuilder
         () =>
             @_randomizerLoopBody(data)
 
-    randomSquad: (max_points=20, allowed_sources=null, timeout_ms=1000, bid_goal=5, ship_limit=0, ships_or_upgrades=3, collection_only=true, fill_zero_pts=false) ->
+    randomSquad: (max_points=200, allowed_sources=null, timeout_ms=1000, bid_goal=5, ship_limit=0, ships_or_upgrades=3, collection_only=true, fill_zero_pts=false) ->
         @backend_status.fadeOut 'slow'
         @suppress_automatic_new_ship = true
         
@@ -6727,25 +6718,26 @@ class Ship
             if restrictions?
                 for r in restrictions
                     if r[0] == "orUnique"
-                        if @checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))
+                        if not @checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))
                             return false
                     switch r[0]
                         when "Base"  
                             switch r[1]
                                 when "Small"
-                                    if @data.medium? or @data.large? or @data.huge? then return false
+                                    if @data.base? then return false
+                                when "Non-Small"
+                                    if not @data.base? then return false
                                 when "Small or Medium"
-                                    if @data.large? or @data.huge? then return false
-                                when "Medium" 
-                                    if not (@data.medium?) then return false
+                                    if not ((@data.base? and @data.base == "Medium") or not @data.base?) then return false
                                 when "Medium or Large"
-                                    if not (@data.medium? or @data.large?) then return false
-                                when "Large" 
-                                    if not (@data.large?) then return false
-                                when "Huge" 
-                                    if not (@data.huge?) then return false
-                                when "Standard" 
-                                    if @data.huge? then return false
+                                    if not (@data.base? and (@data.base == "Medium" or @data.base == "Large")) then return false
+                                when "Large or Huge" 
+                                    if not (@data.base? and (@data.base == "Large" or @data.base == "Huge")) then return false
+                                when "Standard"
+                                    if (@data.base? and @data.base == "Huge") then return false
+                                else
+                                    if not (@data.base? and @data.base == r[1]) then return false
+
                         when "Action"
                             if r[1].startsWith("W-")
                                 w = r[1].substring(2)
@@ -7075,19 +7067,23 @@ class GenericAddon
 
     getPoints: (data = @data, ship = @ship) ->
         # Moar special case jankiness
-        if data?.variableagility?
-            data?.pointsarray[ship.data.agility]
-        else if data?.variablebase?
-            if ship?.data.medium?
-                data?.pointsarray[1]
-            else if ship?.data.large?
-                data?.pointsarray[2]
-            else if ship?.data.huge?
-                data?.pointsarray[3]
-            else
-                data?.pointsarray[0]
-        else if data?.variableinit?
-            data?.pointsarray[ship.pilot.skill]
+        if data?.variablepoints?
+            switch data.variablepoints
+                when "Agility"
+                    data?.points[ship.data.agility]
+                when "Base"
+                    if ship?.data.base?
+                        switch ship.data.base
+                            when "Medium"
+                                data?.points[1]
+                            when "Large"
+                                data?.points[2]
+                            when "Huge"
+                                data?.points[3]
+                    else
+                        data?.points[0]
+                when "Initiative"
+                    data?.points[ship.pilot.skill]
         else
             data?.points ? 0
             
@@ -7095,7 +7091,7 @@ class GenericAddon
         if @data?
             @selector.select2 'data',
             id: @data.id
-            text: "#{if @data.display_name then @data.display_name else @data.name} (#{points}#{if @data.pointsarray then '*' else ''})"
+            text: "#{if @data.display_name then @data.display_name else @data.name} (#{points}#{if @data.variablepoints then '*' else ''})"
         else
             @selector.select2 'data', null
 
