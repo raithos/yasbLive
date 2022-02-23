@@ -2759,8 +2759,6 @@ exportObj.SquadBuilder = (function() {
     this.randomizer_options = {
       sources: null,
       points: 20,
-      bid_goal: 5,
-      ships_or_upgrades: 3,
       ship_limit: 0,
       collection_only: true,
       fill_zero_pts: false
@@ -2825,6 +2823,7 @@ exportObj.SquadBuilder = (function() {
       }
       this.current_squad.dirty = true;
     }
+    this.old_version_container.toggleClass('d-none', true);
     this.container.trigger('xwing-backend:squadNameChanged');
     return this.container.trigger('xwing-backend:squadDirtinessChanged');
   };
@@ -2851,15 +2850,13 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.setupUI = function() {
-    var DEFAULT_RANDOMIZER_BID_GOAL, DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, opt, _i, _len, _ref;
+    var DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, opt, _i, _len, _ref;
     DEFAULT_RANDOMIZER_POINTS = 20;
     DEFAULT_RANDOMIZER_TIMEOUT_SEC = 4;
-    DEFAULT_RANDOMIZER_BID_GOAL = 5;
-    DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES = 3;
     DEFAULT_RANDOMIZER_SHIP_LIMIT = 0;
     this.status_container = $(document.createElement('DIV'));
     this.status_container.addClass('container-fluid');
-    this.status_container.append($.trim("<div class=\"row squad-name-and-points-row\">\n    <div class=\"col-md-3 squad-name-container\">\n        <div class=\"display-name\">\n            <span class=\"squad-name\"></span>\n            <i class=\"far fa-edit\"></i>\n        </div>\n        <div class=\"input-append\">\n            <input type=\"text\" maxlength=\"64\" placeholder=\"" + (this.uitranslation("Name your squad...")) + "\" />\n            <button class=\"btn save\"><i class=\"fa fa-pen-square\"></i></button>\n        </div>\n        <br />\n        <select class=\"game-type-selector\">\n            <option value=\"standard\" class=\"translated\" defaultText=\"Standard\" selected=\"selected\">" + (this.uitranslation("Standard")) + "</option>\n            <option value=\"extended\" class=\"translated\" defaultText=\"Extended\"></option>\n            <option value=\"epic\" class=\"translated\" defaultText=\"Epic\"></option>\n            <option value=\"quickbuild\" class=\"translated\" defaultText=\"Quickbuild\"></option>\n        </select>\n    </div>\n    <div class=\"col-md-4 points-display-container\">\n        Points: <span class=\"total-points\">0</span> / <input type=\"number\" class=\"desired-points\" value=\"20\">\n        <span class=\"points-remaining-container\">(<span class=\"points-remaining\"></span>&nbsp;left) <span class=\"points-destroyed red\"></span></span>\n        <span class=\"content-warning unreleased-content-used d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Unreleased content warning\"></span></span>\n        <span class=\"content-warning loading-failed-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Broken squad link warning\"></span></span>\n        <span class=\"content-warning old-version-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"This squad is using an older version of X-Wing.\"></span></span>\n        <span class=\"content-warning collection-invalid d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Collection warning\"></span></span>\n        <span class=\"content-warning ship-number-invalid-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Ship number warning\"></span></span>\n        <span class=\"content-warning multi-faction-warning-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Multi-Faction warning\"></span></span>\n    </div>\n    <div class=\"col-md-5 float-right button-container\">\n        <div class=\"btn-group float-right\">\n\n            <button class=\"btn btn-info view-as-text\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print/Export\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-print\"></i></span></button>\n            <a class=\"btn btn-primary d-none collection\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-folder-open\"></i> <span class=\"translated\" defaultText=\"Your Collection\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-folder-open\"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class=\"btn btn-danger randomize\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-random\"></i> <span class=\"translated\" defaultText=\"Randomize!\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-random\"></i></span></button>\n            <button class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\">\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu\">\n                <li><a class=\"dropdown-item randomize-options translated\" defaultText=\"Randomizer Options\"></a></li>\n                <li><a class=\"dropdown-item misc-settings translated\" defaultText=\"Misc Settings\"></a></li>\n            </ul>\n            \n\n        </div>\n    </div>\n</div>\n\n<div class=\"row squad-save-buttons\">\n    <div class=\"col-md-12\">\n        <button class=\"show-authenticated btn btn-primary save-list\"><i class=\"far fa-save\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save\"></span></button>\n        <button class=\"show-authenticated btn btn-primary save-list-as\"><i class=\"far fa-file\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save As...\"></span></button>\n        <button class=\"show-authenticated btn btn-primary delete-list disabled\"><i class=\"fa fa-trash\"></i>&nbsp;<span class=\"translated\" defaultText=\"Delete\"></span></button>\n        <button class=\"show-authenticated btn btn-info backend-list-my-squads show-authenticated\"><i class=\"fa fa-download\"></i>&nbsp;<span class = \"translated\" defaultText=\"Load Squad\"></span></button>\n        <button class=\"btn btn-info import-squad\"><i class=\"fa fa-file-import\"></i>&nbsp;<span class=\"translated\" defaultText=\"Import\"></span></button>\n        <button class=\"btn btn-info show-points-destroyed\"><i class=\"fas fa-bullseye\"></i>&nbsp;<span class=\"show-points-destroyed-span translated\" defaultText=\"" + (this.uitranslation("Show Points Destroyed")) + "\"></span></button>                    \n        <button class=\"btn btn-danger clear-squad\"><i class=\"fa fa-plus-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"New Squad\"></span></button>\n        <span class=\"show-authenticated backend-status\"></span>\n    </div>\n</div>"));
+    this.status_container.append($.trim("<div class=\"row squad-name-and-points-row\">\n    <div class=\"col-md-3 squad-name-container\">\n        <div class=\"display-name\">\n            <span class=\"squad-name\"></span>\n            <i class=\"far fa-edit\"></i>\n        </div>\n        <div class=\"input-append\">\n            <input type=\"text\" maxlength=\"64\" placeholder=\"" + (this.uitranslation("Name your squad...")) + "\" />\n            <button class=\"btn save\"><i class=\"fa fa-pen-square\"></i></button>\n        </div>\n        <br />\n        <select class=\"game-type-selector\">\n            <option value=\"standard\" class=\"translated\" defaultText=\"Standard\" selected=\"selected\">" + (this.uitranslation("Standard")) + "</option>\n            <option value=\"extended\" class=\"translated\" defaultText=\"Extended\"></option>\n            <option value=\"epic\" class=\"translated\" defaultText=\"Epic\"></option>\n            <option value=\"quickbuild\" class=\"translated\" defaultText=\"Quickbuild\"></option>\n        </select>\n    </div>\n    <div class=\"col-md-4 points-display-container\">\n        Points: <span class=\"total-points\">0</span> / <input type=\"number\" class=\"desired-points\" value=\"20\">\n        <span class=\"points-remaining-container\">(<span class=\"points-remaining\"></span>&nbsp;left) <span class=\"points-destroyed red\"></span></span>\n        <span class=\"content-warning unreleased-content-used d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Unreleased content warning\"></span></span>\n        <span class=\"content-warning loading-failed-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Broken squad link warning\"></span></span>\n        <span class=\"content-warning old-version-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"This squad was created for an older version of X-Wing.\"></span></span>\n        <span class=\"content-warning collection-invalid d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Collection warning\"></span></span>\n        <span class=\"content-warning ship-number-invalid-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Ship number warning\"></span></span>\n        <span class=\"content-warning multi-faction-warning-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Multi-Faction warning\"></span></span>\n    </div>\n    <div class=\"col-md-5 float-right button-container\">\n        <div class=\"btn-group float-right\">\n\n            <button class=\"btn btn-info view-as-text\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print/Export\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-print\"></i></span></button>\n            <a class=\"btn btn-primary d-none collection\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-folder-open\"></i> <span class=\"translated\" defaultText=\"Your Collection\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-folder-open\"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class=\"btn btn-danger randomize\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-random\"></i> <span class=\"translated\" defaultText=\"Randomize!\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-random\"></i></span></button>\n            <button class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\">\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu\">\n                <li><a class=\"dropdown-item randomize-options translated\" defaultText=\"Randomizer Options\"></a></li>\n                <li><a class=\"dropdown-item misc-settings translated\" defaultText=\"Misc Settings\"></a></li>\n            </ul>\n            \n\n        </div>\n    </div>\n</div>\n\n<div class=\"row squad-save-buttons\">\n    <div class=\"col-md-12\">\n        <button class=\"show-authenticated btn btn-primary save-list\"><i class=\"far fa-save\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save\"></span></button>\n        <button class=\"show-authenticated btn btn-primary save-list-as\"><i class=\"far fa-file\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save As...\"></span></button>\n        <button class=\"show-authenticated btn btn-primary delete-list disabled\"><i class=\"fa fa-trash\"></i>&nbsp;<span class=\"translated\" defaultText=\"Delete\"></span></button>\n        <button class=\"show-authenticated btn btn-info backend-list-my-squads show-authenticated\"><i class=\"fa fa-download\"></i>&nbsp;<span class = \"translated\" defaultText=\"Load Squad\"></span></button>\n        <button class=\"btn btn-info import-squad\"><i class=\"fa fa-file-import\"></i>&nbsp;<span class=\"translated\" defaultText=\"Import\"></span></button>\n        <button class=\"btn btn-info show-points-destroyed\"><i class=\"fas fa-bullseye\"></i>&nbsp;<span class=\"show-points-destroyed-span translated\" defaultText=\"" + (this.uitranslation("Show Points Destroyed")) + "\"></span></button>                    \n        <button class=\"btn btn-danger clear-squad\"><i class=\"fa fa-plus-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"New Squad\"></span></button>\n        <span class=\"show-authenticated backend-status\"></span>\n    </div>\n</div>"));
     this.container.append(this.status_container);
     this.xws_import_modal = $(document.createElement('DIV'));
     this.xws_import_modal.addClass('modal fade import-modal d-print-none');
@@ -3280,7 +3277,7 @@ exportObj.SquadBuilder = (function() {
     this.randomizer_options_modal.tabindex = "-1";
     this.randomizer_options_modal.role = "dialog";
     $('body').append(this.randomizer_options_modal);
-    this.randomizer_options_modal.append($.trim(("<div class=\"modal-dialog modal-dialog-scrollable modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"Random Squad Builder Options\"></h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <form>\n                <label>\n                    <span class=\"translated\" defaultText=\"Maximal desired bid\"></span>\n                    <input type=\"number\" class=\"randomizer-bid-goal\" value=\"" + DEFAULT_RANDOMIZER_BID_GOAL + "\" placeholder=\"" + DEFAULT_RANDOMIZER_BID_GOAL + "\" />\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"Maximum Ship Count\"></span>\n                    <input type=\"number\" class=\"randomizer-ship-limit\" value=\"" + DEFAULT_RANDOMIZER_SHIP_LIMIT + "\" placeholder=\"" + DEFAULT_RANDOMIZER_SHIP_LIMIT + "\" />\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"More upgrades\"></span>\n                    <input type=\"range\" min=\"0\" max=\"10\" class=\"randomizer-ships-or-upgrades\" value=\"" + DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES + "\" placeholder=\"" + DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES + "\" />\n                    <span class=\"translated\" defaultText=\"Less upgrades\"></span>\n                </label><br />\n                <label>\n                    <input type=\"checkbox\" class=\"randomizer-collection-only\" checked=\"checked\"/> \n                    <span class=\"translated\" defaultText=\"Limit to collection\"></span>\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"Sets and Expansions\"></span>\n                    <select class=\"randomizer-sources\" multiple=\"1\" data-placeholder='") + this.uitranslation('All sets and expansions') + ("'>\n                    </select>\n                </label><br />\n                <label>\n                    <input type=\"checkbox\" class=\"randomizer-fill-zero-pts\" /> \n                    <span class=\"translated\" defaultText=\"Always fill 0-point slots\"></span>\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"Maximum Seconds to Spend Randomizing\"></span>\n                    <input type=\"number\" class=\"randomizer-timeout\" value=\"" + DEFAULT_RANDOMIZER_TIMEOUT_SEC + "\" placeholder=\"" + DEFAULT_RANDOMIZER_TIMEOUT_SEC + "\" />\n                </label>\n            </form>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-primary do-randomize translated\" aria-hidden=\"true\" defaultText=\"Roll!\"></button>\n            <button class=\"btn translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>")));
+    this.randomizer_options_modal.append($.trim(("<div class=\"modal-dialog modal-dialog-scrollable modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"Random Squad Builder Options\"></h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <form>\n                <label>\n                    <span class=\"translated\" defaultText=\"Maximum Ship Count\"></span>\n                    <input type=\"number\" class=\"randomizer-ship-limit\" value=\"" + DEFAULT_RANDOMIZER_SHIP_LIMIT + "\" placeholder=\"" + DEFAULT_RANDOMIZER_SHIP_LIMIT + "\" />\n                </label><br />\n                <label>\n                    <input type=\"checkbox\" class=\"randomizer-collection-only\" checked=\"checked\"/> \n                    <span class=\"translated\" defaultText=\"Limit to collection\"></span>\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"Sets and Expansions\"></span>\n                    <select class=\"randomizer-sources\" multiple=\"1\" data-placeholder='") + this.uitranslation('All sets and expansions') + ("'>\n                    </select>\n                </label><br />\n                <label>\n                    <input type=\"checkbox\" class=\"randomizer-fill-zero-pts\" /> \n                    <span class=\"translated\" defaultText=\"Always fill 0-point slots\"></span>\n                </label><br />\n                <label>\n                    <span class=\"translated\" defaultText=\"Maximum Seconds to Spend Randomizing\"></span>\n                    <input type=\"number\" class=\"randomizer-timeout\" value=\"" + DEFAULT_RANDOMIZER_TIMEOUT_SEC + "\" placeholder=\"" + DEFAULT_RANDOMIZER_TIMEOUT_SEC + "\" />\n                </label>\n            </form>\n        </div>\n        <div class=\"modal-footer\">\n            <button class=\"btn btn-primary do-randomize translated\" aria-hidden=\"true\" defaultText=\"Roll!\"></button>\n            <button class=\"btn translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>")));
     exportObj.translateUIElements(this.randomizer_options_modal);
     this.randomizer_source_selector = $(this.randomizer_options_modal.find('select.randomizer-sources'));
     _ref = exportObj.expansions;
@@ -3298,7 +3295,7 @@ exportObj.SquadBuilder = (function() {
     this.randomizer_fill_zero_pts = ($(this.randomizer_options_modal.find('.randomizer-fill-zero-pts')))[0];
     this.randomize_button.click((function(_this) {
       return function(e) {
-        var bid_goal, points, ship_limit, ships_or_upgrades, timeout_sec;
+        var points, ship_limit, timeout_sec;
         e.preventDefault();
         if (_this.current_squad.dirty && (_this.backend != null)) {
           return _this.backend.warnUnsaved(_this, function() {
@@ -3309,23 +3306,15 @@ exportObj.SquadBuilder = (function() {
           if (isNaN(points) || points <= 0) {
             points = DEFAULT_RANDOMIZER_POINTS;
           }
-          bid_goal = parseInt($(_this.randomizer_options_modal.find('.randomizer-bid-goal')).val());
-          if (isNaN(bid_goal) || bid_goal < 0) {
-            bid_goal = DEFAULT_RANDOMIZER_BID_GOAL;
-          }
           ship_limit = parseInt($(_this.randomizer_options_modal.find('.randomizer-ship-limit')).val());
           if (isNaN(ship_limit) || ship_limit < 0) {
             ship_limit = DEFAULT_RANDOMIZER_SHIP_LIMIT;
-          }
-          ships_or_upgrades = parseInt($(_this.randomizer_options_modal.find('.randomizer-ships-or-upgrades')).val());
-          if (isNaN(ships_or_upgrades) || ships_or_upgrades < 0) {
-            ships_or_upgrades = DEFAULT_RANDOMIZER_SHIPS_OR_UPGRADES;
           }
           timeout_sec = parseInt($(_this.randomizer_options_modal.find('.randomizer-timeout')).val());
           if (isNaN(timeout_sec) || timeout_sec <= 0) {
             timeout_sec = DEFAULT_RANDOMIZER_TIMEOUT_SEC;
           }
-          return _this.randomSquad(points, _this.randomizer_source_selector.val(), timeout_sec * 1000, bid_goal, ship_limit, ships_or_upgrades, _this.randomizer_collection_selector.checked, _this.randomizer_fill_zero_pts.checked);
+          return _this.randomSquad(points, _this.randomizer_source_selector.val(), timeout_sec * 1000, ship_limit, _this.randomizer_collection_selector.checked, _this.randomizer_fill_zero_pts.checked);
         }
       };
     })(this));
@@ -3461,7 +3450,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3149
+              lineno: 3134
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4237,10 +4226,14 @@ exportObj.SquadBuilder = (function() {
       _ref2 = version > 7 ? ((_ref = matches[2].split('Z'), g = _ref[0], p = _ref[1], s = _ref[2], _ref), [g, parseInt(p), s]) : ((_ref1 = matches[2].split('!'), game_type_and_point_abbrev = _ref1[0], s = _ref1[1], _ref1), parseInt(game_type_and_point_abbrev.split('=')[1]) ? p = parseInt(game_type_and_point_abbrev.split('=')[1]) : p = 20, g = game_type_and_point_abbrev.split('=')[0], [g, p, s]), game_type_abbrev = _ref2[0], desired_points = _ref2[1], serialized_ships = _ref2[2];
       if (version < 9) {
         this.old_version_container.toggleClass('d-none', false);
+        this.suppress_automatic_new_ship = false;
+        this.addShip();
         return;
       }
       if (serialized_ships == null) {
         this.loading_failed_container.toggleClass('d-none', false);
+        this.suppress_automatic_new_ship = false;
+        this.addShip();
         return;
       }
       switch (game_type_abbrev) {
@@ -4414,7 +4407,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4056
+              lineno: 4045
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4424,7 +4417,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4057
+                lineno: 4046
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -4775,7 +4768,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.getAvailableUpgradesIncluding = function(slot, include_upgrade, ship, this_upgrade_obj, term, filter_func, sorted) {
-    var available_upgrades, eligible_upgrades, equipped_upgrade, retval, upgrade, upgrade_name, upgrades_in_use, _i, _j, _len, _len1, _ref, _results;
+    var available_upgrades, eligible_upgrades, equipped_upgrade, points_without_include_upgrade, retval, upgrade, upgrade_name, upgrades_in_use, _i, _j, _len, _len1, _ref, _results;
     if (term == null) {
       term = '';
     }
@@ -4820,12 +4813,13 @@ exportObj.SquadBuilder = (function() {
         return _results;
       })();
     }
+    points_without_include_upgrade = ship.upgrade_points_total - this_upgrade_obj.getPoints(include_upgrade);
     eligible_upgrades = (function() {
       var _ref, _results;
       _results = [];
       for (upgrade_name in available_upgrades) {
         upgrade = available_upgrades[upgrade_name];
-        if (((upgrade.unique == null) || __indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && (ship.restriction_check((upgrade.restrictions ? upgrade.restrictions : void 0), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), ship.upgrade_points_total)) && __indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((_ref = upgrade.slot, __indexOf.call(this.uniques_in_use['Slot'], _ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
+        if (((upgrade.unique == null) || __indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && (ship.restriction_check((upgrade.restrictions ? upgrade.restrictions : void 0), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade)) && __indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((_ref = upgrade.slot, __indexOf.call(this.uniques_in_use['Slot'], _ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
           _results.push(upgrade);
         }
       }
@@ -5866,147 +5860,92 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype._randomizerLoopBody = function(data) {
-    var addon, available_pilots, available_ships, available_upgrades, idx, new_ship, pilot, removable_things, ship, ship_type, sorted, thing_to_remove, unused_addons, upgrade, _, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s;
+    var addon, available_pilots, available_ships, available_upgrades, expensive_slots, new_ship, pilot, ship, ship_type, sorted, unused_addons, upgrade, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref, _ref1, _ref2, _ref3, _ref4;
     if (data.keep_running) {
-      if (data.max_points - this.total_points <= data.bid_goal && this.total_points <= data.max_points) {
+      if (this.total_points === data.max_points) {
         data.keep_running = false;
-      } else if (this.total_points < data.max_points) {
-        unused_addons = [];
+        if (this.isQuickbuild) {
+          data.keep_running = false;
+          return;
+        }
         _ref = this.ships;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           ship = _ref[_i];
-          _ref1 = ship.upgrades;
-          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-            upgrade = _ref1[_j];
-            if (!((upgrade.data != null) || ((upgrade.occupied_by != null) && upgrade.occupied_by !== null))) {
-              unused_addons.push(upgrade);
-            }
-          }
-        }
-        idx = $.randomInt(data.ships_or_upgrades + unused_addons.length);
-        if (idx < data.ships_or_upgrades || unused_addons.length === 0) {
-          available_ships = this.getAvailableShipsMatchingAndCheapEnough(data.max_points - this.total_points, '', false, data.collection_only);
-          if (available_ships.length === 0) {
-            if (unused_addons.length > 0) {
-              idx = $.randomInt(unused_addons.length) + data.ships_or_upgrades;
-            } else {
-              available_ships = this.getAvailableShipsMatching('', false, data.collection_only);
-            }
-          }
-          if ((available_ships.length > 0) && ((this.ships.length < data.ship_limit) || (data.ship_limit === 0))) {
-            ship_type = available_ships[$.randomInt(available_ships.length)].name;
-            available_pilots = this.getAvailablePilotsForShipIncluding(ship_type);
-            if (available_pilots.length === 0) {
-              return;
-            }
-            pilot = available_pilots[$.randomInt(available_pilots.length)];
-            if (!pilot.disabled && (this.isQuickbuild ? exportObj.pilots[exportObj.quickbuildsById[pilot.id].pilot] : exportObj.pilotsById[pilot.id]).sources.intersects(data.allowed_sources) && ((!data.collection_only) || this.collection.checkShelf('pilot', (this.isQuickbuild ? exportObj.quickbuildsById[pilot.id] : pilot.name)))) {
-              new_ship = this.addShip();
-              new_ship.setPilotById(pilot.id);
-            }
-          }
-        }
-        if (idx >= data.ships_or_upgrades && unused_addons.length !== 0) {
-          addon = unused_addons[idx - data.ships_or_upgrades];
-          switch (addon.type) {
-            case 'Upgrade':
-              available_upgrades = (function() {
-                var _k, _len2, _ref2, _results;
-                _ref2 = this.getAvailableUpgradesIncluding(addon.slot, null, addon.ship, addon, '', this.dfl_filter_func, sorted = false);
-                _results = [];
-                for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-                  upgrade = _ref2[_k];
-                  if (exportObj.upgradesById[upgrade.id].sources.intersects(data.allowed_sources) && ((!data.collection_only) || this.collection.checkShelf('upgrade', upgrade.name))) {
-                    _results.push(upgrade);
-                  }
-                }
-                return _results;
-              }).call(this);
-              upgrade = available_upgrades.length > 0 ? available_upgrades[$.randomInt(available_upgrades.length)] : void 0;
-              if (upgrade && !upgrade.disabled) {
-                addon.setById(upgrade.id);
+          expensive_slots = [];
+          while (ship.upgrade_points_total < ship.pilot.pointsupg) {
+            unused_addons = [];
+            _ref1 = ship.upgrades;
+            for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+              upgrade = _ref1[_j];
+              if (!((upgrade.data != null) || ((upgrade.occupied_by != null) && upgrade.occupied_by !== null) || __indexOf.call(expensive_slots, upgrade) >= 0)) {
+                unused_addons.push(upgrade);
               }
+            }
+            if (unused_addons.length === 0) {
               break;
-            default:
-              throw new Error("Invalid addon type " + addon.type);
+            }
+            addon = unused_addons[$.randomInt(unused_addons.length)];
+            available_upgrades = (function() {
+              var _k, _len2, _ref2, _results;
+              _ref2 = this.getAvailableUpgradesIncluding(addon.slot, null, ship, addon, '', this.dfl_filter_func, sorted = false);
+              _results = [];
+              for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+                upgrade = _ref2[_k];
+                if ((exportObj.upgradesById[upgrade.id].sources.intersects(data.allowed_sources) && ((!data.collection_only) || this.collection.checkShelf('upgrade', upgrade.name))) && !upgrade.disabled) {
+                  _results.push(upgrade);
+                }
+              }
+              return _results;
+            }).call(this);
+            if (available_upgrades.length > 0) {
+              upgrade = available_upgrades[$.randomInt(available_upgrades.length)];
+              addon.setById(upgrade.id);
+            } else {
+              expensive_slots.push(addon);
+            }
+          }
+        }
+      } else if (this.total_points < data.max_points) {
+        available_ships = this.getAvailableShipsMatchingAndCheapEnough(data.max_points - this.total_points, '', false, data.collection_only);
+        if (available_ships.length === 0) {
+          available_ships = this.getAvailableShipsMatching('', false, data.collection_only);
+        }
+        if ((available_ships.length > 0) && ((this.ships.length < data.ship_limit) || (data.ship_limit === 0))) {
+          ship_type = available_ships[$.randomInt(available_ships.length)].name;
+          available_pilots = this.getAvailablePilotsForShipIncluding(ship_type);
+          if (available_pilots.length === 0) {
+            return;
+          }
+          pilot = available_pilots[$.randomInt(available_pilots.length)];
+          if (!pilot.disabled && (this.isQuickbuild ? exportObj.pilots[exportObj.quickbuildsById[pilot.id].pilot] : exportObj.pilotsById[pilot.id]).sources.intersects(data.allowed_sources) && ((!data.collection_only) || this.collection.checkShelf('pilot', (this.isQuickbuild ? exportObj.quickbuildsById[pilot.id] : pilot.name)))) {
+            new_ship = this.addShip();
+            new_ship.setPilotById(pilot.id);
           }
         }
       } else {
-        removable_things = [];
-        _ref2 = this.ships;
-        for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-          ship = _ref2[_k];
-          for (_ = _l = 0, _ref3 = 11 - data.ships_or_upgrades; 0 <= _ref3 ? _l < _ref3 : _l > _ref3; _ = 0 <= _ref3 ? ++_l : --_l) {
-            removable_things.push(ship);
-          }
-          _ref4 = ship.upgrades;
-          for (_m = 0, _len3 = _ref4.length; _m < _len3; _m++) {
-            upgrade = _ref4[_m];
-            if (upgrade.data != null) {
-              removable_things.push(upgrade);
-            }
-          }
-        }
-        if (removable_things.length > 0) {
-          thing_to_remove = removable_things[$.randomInt(removable_things.length)];
-          if (thing_to_remove instanceof Ship) {
-            this.removeShip(thing_to_remove);
-          } else if (thing_to_remove instanceof GenericAddon) {
-            thing_to_remove.setData(null);
-          } else {
-            throw new Error("Unknown thing to remove " + thing_to_remove);
-          }
-        }
+        this.removeShip(this.ships[$.randomInt(this.ships.length)]);
       }
       return window.setTimeout(this._makeRandomizerLoopFunc(data), 0);
     } else {
       while (this.total_points > data.max_points) {
-        removable_things = [];
-        _ref5 = this.ships;
-        for (_n = 0, _len4 = _ref5.length; _n < _len4; _n++) {
-          ship = _ref5[_n];
-          _ref6 = ship.upgrades;
-          for (_o = 0, _len5 = _ref6.length; _o < _len5; _o++) {
-            upgrade = _ref6[_o];
-            if (upgrade.data != null) {
-              removable_things.push(upgrade);
-            }
-          }
-        }
-        if (removable_things.length === 0) {
-          _ref7 = this.ships;
-          for (_p = 0, _len6 = _ref7.length; _p < _len6; _p++) {
-            ship = _ref7[_p];
-            removable_things.push(ship);
-          }
-        }
-        if (removable_things.length > 0) {
-          thing_to_remove = removable_things[$.randomInt(removable_things.length)];
-          if (thing_to_remove instanceof Ship) {
-            this.removeShip(thing_to_remove);
-          } else if (thing_to_remove instanceof GenericAddon) {
-            thing_to_remove.setData(null);
-          } else {
-            throw new Error("Unknown thing to remove " + thing_to_remove);
-          }
-        }
+        this.removeShip(this.ships[$.randomInt(this.ships.length)]);
       }
       if (data.fill_zero_pts) {
-        _ref8 = this.ships;
-        for (_q = 0, _len7 = _ref8.length; _q < _len7; _q++) {
-          ship = _ref8[_q];
-          _ref9 = ship.upgrades;
-          for (_r = 0, _len8 = _ref9.length; _r < _len8; _r++) {
-            addon = _ref9[_r];
+        _ref2 = this.ships;
+        for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+          ship = _ref2[_k];
+          _ref3 = ship.upgrades;
+          for (_l = 0, _len3 = _ref3.length; _l < _len3; _l++) {
+            addon = _ref3[_l];
             if (!!((addon.data != null) || ((addon.occupied_by != null) && addon.occupied_by !== null))) {
               continue;
             }
             available_upgrades = (function() {
-              var _len9, _ref10, _results, _s;
-              _ref10 = this.getAvailableUpgradesIncluding(addon.slot, null, addon.ship, addon, '', this.dfl_filter_func, sorted = false);
+              var _len4, _m, _ref4, _results;
+              _ref4 = this.getAvailableUpgradesIncluding(addon.slot, null, addon.ship, addon, '', this.dfl_filter_func, sorted = false);
               _results = [];
-              for (_s = 0, _len9 = _ref10.length; _s < _len9; _s++) {
-                upgrade = _ref10[_s];
+              for (_m = 0, _len4 = _ref4.length; _m < _len4; _m++) {
+                upgrade = _ref4[_m];
                 if (exportObj.upgradesById[upgrade.id].sources.intersects(data.allowed_sources) && (upgrade.points < 1) && ((!data.collection_only) || this.collection.checkShelf('upgrade', upgrade.name))) {
                   _results.push(upgrade);
                 }
@@ -6021,9 +5960,9 @@ exportObj.SquadBuilder = (function() {
         }
       }
       window.clearTimeout(data.timer);
-      _ref10 = this.ships;
-      for (_s = 0, _len9 = _ref10.length; _s < _len9; _s++) {
-        ship = _ref10[_s];
+      _ref4 = this.ships;
+      for (_m = 0, _len4 = _ref4.length; _m < _len4; _m++) {
+        ship = _ref4[_m];
         ship.updateSelections();
       }
       this.suppress_automatic_new_ship = false;
@@ -6039,7 +5978,7 @@ exportObj.SquadBuilder = (function() {
     })(this);
   };
 
-  SquadBuilder.prototype.randomSquad = function(max_points, allowed_sources, timeout_ms, bid_goal, ship_limit, ships_or_upgrades, collection_only, fill_zero_pts) {
+  SquadBuilder.prototype.randomSquad = function(max_points, allowed_sources, timeout_ms, ship_limit, collection_only, fill_zero_pts) {
     var data, stopHandler;
     if (max_points == null) {
       max_points = 200;
@@ -6050,14 +5989,8 @@ exportObj.SquadBuilder = (function() {
     if (timeout_ms == null) {
       timeout_ms = 1000;
     }
-    if (bid_goal == null) {
-      bid_goal = 5;
-    }
     if (ship_limit == null) {
       ship_limit = 0;
-    }
-    if (ships_or_upgrades == null) {
-      ships_or_upgrades = 3;
     }
     if (collection_only == null) {
       collection_only = true;
@@ -6078,9 +6011,7 @@ exportObj.SquadBuilder = (function() {
     }
     data = {
       max_points: max_points,
-      bid_goal: bid_goal,
       ship_limit: ship_limit,
-      ships_or_upgrades: ships_or_upgrades,
       keep_running: true,
       allowed_sources: allowed_sources != null ? allowed_sources : exportObj.expansions,
       collection_only: (this.collection != null) && (this.collection.checks.collectioncheck === "true") && collection_only,
@@ -6698,7 +6629,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5697
+                  lineno: 5651
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6927,7 +6858,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5817
+                          lineno: 5771
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6977,7 +6908,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5850
+                                  lineno: 5804
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7075,7 +7006,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5908
+                      lineno: 5862
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7159,7 +7090,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5944
+                lineno: 5898
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7228,7 +7159,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5973
+              lineno: 5927
             }));
           }
         }
@@ -7317,7 +7248,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6029
+                lineno: 5983
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -7811,7 +7742,7 @@ Ship = (function() {
       html += $.trim("</div>");
     }
     HalfPoints = Math.ceil(this.getPoints() / 2);
-    Threshold = Math.ceil((effective_stats['hull'] + effective_stats['shields']) / 2);
+    Threshold = Math.floor((effective_stats['hull'] + effective_stats['shields']) / 2);
     html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Total")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Threshold")) + ": " + Threshold + "</strong> \n</div>");
     return "<div class=\"fancy-ship\">" + html + "</div>";
   };
@@ -7840,7 +7771,7 @@ Ship = (function() {
     }
     table_html += "<tr class=\"simple-ship-total\"><td colspan=\"2\">" + (this.uitranslation("Ship Total")) + ": " + (this.getPoints()) + "</td></tr>";
     halfPoints = Math.ceil(this.getPoints() / 2);
-    threshold = Math.ceil((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
+    threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
     table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Threshold")) + ": " + threshold + "</td></tr>";
     table_html += '<tr><td>&nbsp;</td><td></td></tr>';
     return table_html;
@@ -7876,7 +7807,7 @@ Ship = (function() {
       simplecopy += "    \n";
     }
     halfPoints = Math.ceil(this.getPoints() / 2);
-    threshold = Math.ceil((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
+    threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
     simplecopy += "" + (this.uitranslation("Ship total")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Threshold")) + ": " + threshold + "    \n    \n";
     return simplecopy;
   };
@@ -8130,7 +8061,7 @@ Ship = (function() {
   };
 
   Ship.prototype.validate = function() {
-    var addCommand, equipped_upgrades, func, func_result, i, max_checks, pilot_func, unchanged, upgrade, valid, _i, _j, _k, _l, _len, _len1, _len2, _m, _ref, _ref1, _ref10, _ref11, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+    var addCommand, equipped_upgrades, func, i, max_checks, meets_restrictions, pilot_func, restrictions, unchanged, upgrade, valid, _i, _j, _k, _l, _len, _len1, _ref, _ref1, _ref10, _ref11, _ref12, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
     if (this.pilot == null) {
       return true;
     }
@@ -8175,16 +8106,14 @@ Ship = (function() {
       _ref6 = this.upgrades;
       for (_l = 0, _len1 = _ref6.length; _l < _len1; _l++) {
         upgrade = _ref6[_l];
-        this.upgrade_points_total += upgrade.getPoints();
-      }
-      _ref7 = this.upgrades;
-      for (_m = 0, _len2 = _ref7.length; _m < _len2; _m++) {
-        upgrade = _ref7[_m];
-        func = (_ref8 = upgrade != null ? (_ref9 = upgrade.data) != null ? _ref9.validation_func : void 0 : void 0) != null ? _ref8 : void 0;
+        meets_restrictions = true;
+        func = (_ref7 = upgrade != null ? (_ref8 = upgrade.data) != null ? _ref8.validation_func : void 0 : void 0) != null ? _ref7 : void 0;
         if (func != null) {
-          func_result = upgrade != null ? (_ref10 = upgrade.data) != null ? _ref10.validation_func(this, upgrade) : void 0 : void 0;
+          meets_restrictions = meets_restrictions && (upgrade != null ? (_ref9 = upgrade.data) != null ? _ref9.validation_func(this, upgrade) : void 0 : void 0);
         }
-        if ((((func_result != null) && !func_result) || (((upgrade != null ? upgrade.data : void 0) != null) && ((_ref11 = upgrade.data, __indexOf.call(equipped_upgrades, _ref11) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !this.builder.isQuickbuild) {
+        restrictions = (_ref10 = upgrade != null ? (_ref11 = upgrade.data) != null ? _ref11.restrictions : void 0 : void 0) != null ? _ref10 : void 0;
+        meets_restrictions = meets_restrictions && this.restriction_check(restrictions, upgrade, upgrade.getPoints(), this.upgrade_points_total);
+        if (((!meets_restrictions) || (((upgrade != null ? upgrade.data : void 0) != null) && ((_ref12 = upgrade.data, __indexOf.call(equipped_upgrades, _ref12) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !this.builder.isQuickbuild) {
           upgrade.setById(null);
           valid = false;
           unchanged = false;
@@ -8193,6 +8122,7 @@ Ship = (function() {
         if (((upgrade != null ? upgrade.data : void 0) != null) && upgrade.data) {
           equipped_upgrades.push(upgrade != null ? upgrade.data : void 0);
         }
+        this.upgrade_points_total += upgrade.getPoints();
       }
       if (valid) {
         break;
@@ -8222,7 +8152,7 @@ Ship = (function() {
     _ref = this.upgrades;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       upgrade = _ref[_i];
-      if (upgrade === upgrade_obj || upgrade.slot !== upgradeslot) {
+      if (upgrade === upgrade_obj || !exportObj.slotsMatching(upgrade.slot, upgradeslot)) {
         continue;
       }
       if (!upgrade.isOccupied()) {
@@ -8316,7 +8246,7 @@ Ship = (function() {
               }
               break;
             case "Slot":
-              if (!this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1])) {
+              if (!this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]) && !upgrade_obj.occupiesAnUpgradeSlot(r[1])) {
                 return false;
               }
               break;
@@ -8384,7 +8314,7 @@ Ship = (function() {
     _ref = this.upgrades;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       upgrade = _ref[_i];
-      if (slot === upgrade.slot) {
+      if (exportObj.slotsMatching(slot, upgrade.slot)) {
         return true;
       }
     }
@@ -8572,7 +8502,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6943
+                lineno: 6898
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8731,7 +8661,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7037
+                  lineno: 6992
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8758,7 +8688,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7044
+                      lineno: 6999
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8902,7 +8832,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7119
+            lineno: 7074
           }));
         }
         __iced_deferrals._fulfill();
@@ -9106,7 +9036,7 @@ GenericAddon = (function() {
         _results1 = [];
         for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
           upgrade = _ref3[_j];
-          if (upgrade.slot !== slot || upgrade === this || !upgrade.isOccupied()) {
+          if (!exportObj.slotsMatching(upgrade.slot, slot) || upgrade === this || !upgrade.isOccupied()) {
             continue;
           }
           upgrade.setData(null);
@@ -9134,7 +9064,7 @@ GenericAddon = (function() {
         _results1 = [];
         for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
           upgrade = _ref3[_j];
-          if (upgrade.slot !== slot || upgrade === this || upgrade.isOccupied()) {
+          if (!exportObj.slotsMatching(upgrade.slot, slot) || upgrade === this || upgrade.isOccupied()) {
             continue;
           }
           this.occupy(upgrade);
@@ -9173,7 +9103,7 @@ GenericAddon = (function() {
     _ref = this.ship.upgrades;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       upgrade = _ref[_i];
-      if (upgrade.slot !== upgradeslot || upgrade === this || (upgrade.data != null)) {
+      if (!exportObj.slotsMatching(upgrade.slot, upgradeslot) || upgrade === this || (upgrade.data != null)) {
         continue;
       }
       if ((upgrade.occupied_by != null) && upgrade.occupied_by === this) {

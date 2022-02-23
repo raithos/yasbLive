@@ -5166,7 +5166,7 @@ exportObj.basicCardData = ->
             pointsupg: 7
             slots: [
                 "Talent"
-                "Modification"
+                "Missile"
                 "Modification"
                 "Configuration"
             ]
@@ -7157,6 +7157,7 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Modification"
                 "Configuration"
+                "Missile"
                 "HardpointShip"
             ]
         }
@@ -8809,7 +8810,6 @@ exportObj.basicCardData = ->
                 "Device"
                 "Modification"
                 "Configuration"
-                "Title"
             ]
         }
         {
@@ -14645,7 +14645,7 @@ exportObj.basicCardData = ->
             id: 316
             slot: "Device"
             charge: 1
-            points: 7
+            points: 5
             applies_condition: 'Cluster Mine'.canonicalize()
         }
         {

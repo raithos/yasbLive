@@ -2990,7 +2990,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         pointsupg: 7,
-        slots: ["Talent", "Modification", "Modification", "Configuration"]
+        slots: ["Talent", "Missile", "Modification", "Configuration"]
       }, {
         name: "Alpha Squadron Pilot",
         id: 182,
@@ -4158,7 +4158,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 6,
         pointsupg: 13,
-        slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "HardpointShip"]
+        slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "Missile", "HardpointShip"]
       }, {
         name: "Ello Asty",
         id: 299,
@@ -5137,7 +5137,7 @@ exportObj.basicCardData = function() {
         ship: "B-Wing",
         points: 4,
         pointsupg: 11,
-        slots: ["Talent", "Sensor", "Cannon", "Cannon", "Torpedo", "Device", "Modification", "Configuration", "Title"]
+        slots: ["Talent", "Sensor", "Cannon", "Cannon", "Torpedo", "Device", "Modification", "Configuration"]
       }, {
         name: "Alexsandr Kallus",
         id: 392,
@@ -9560,7 +9560,7 @@ exportObj.basicCardData = function() {
         id: 316,
         slot: "Device",
         charge: 1,
-        points: 7,
+        points: 5,
         applies_condition: 'Cluster Mine'.canonicalize()
       }, {
         name: "Ion Bombs",
