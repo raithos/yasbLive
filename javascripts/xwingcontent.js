@@ -10919,8 +10919,13 @@ exportObj.basicCardData = function() {
         unique: true,
         slot: "Crew",
         force: 2,
+        forcerecurring: 0,
         faction: ["Scum and Villainy", "Rebel Alliance", "Galactic Empire"],
-        applies_condition: 'Merciless Pursuit'.canonicalize()
+        applies_condition: 'Merciless Pursuit'.canonicalize(),
+        modifier_func: function(stats) {
+          stats.force += 2;
+          return stats.forcerecurring = 0;
+        }
       }, {
         name: "Tracking Fob",
         id: 454,
