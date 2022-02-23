@@ -967,6 +967,7 @@ exportObj.basicCardData = function() {
         shields: 2,
         base: "Large",
         actions: ["Focus", "R-Reinforce", "Lock", "R-Coordinate"],
+        autoequip: ["Swivel Wing"],
         maneuvers: [[0, 0, 3, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 0, 0, 0, 0, 0], [2, 1, 1, 1, 2, 0, 0, 0, 0, 0], [3, 2, 2, 2, 3, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
       },
       "ST-70 Assault Ship": {
