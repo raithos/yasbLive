@@ -4601,7 +4601,7 @@ exportObj.basicCardData = function() {
         points: 5,
         pointsupg: 14,
         keyword: ["Clone"],
-        slots: ["Talent", "Torpedo", "Gunner", "Gunner", "Astromech", "Modifcation", "Modification"]
+        slots: ["Talent", "Torpedo", "Gunner", "Gunner", "Astromech", "Modification", "Modification"]
       }, {
         name: "Squad Seven Veteran",
         id: 340,
