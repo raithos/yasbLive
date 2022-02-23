@@ -36,7 +36,7 @@
 .ship-firespray31 {
   background-image: url("../images/slave_i1.png");
   background-repeat: no-repeat;
-  background-position: 0px -30px; }
+  background-position: 0px -10px; }
 
 .ship-bwing {
   background-image: url("../images/bwing.png");
@@ -106,7 +106,7 @@
 .ship-t70xwing {
   background-image: url("../images/t70xwing0.png");
   background-repeat: no-repeat;
-  background-position: 0px -30px; }
+  background-position: 0px -10px; }
 
 .ship-tieadvancedprototype {
   background-image: url("../images/tieadvancedprototype0.png");
@@ -246,7 +246,7 @@
 .ship-scavengedyt1300 {
   background-image: url("../images/millennium_falcon_resistance.png");
   background-repeat: no-repeat;
-  background-position: 0px -30px; }
+  background-position: 0px -10px; }
 
 .ship-mg100starfortress {
   background-image: url("../images/resistancebomber.png");
@@ -256,7 +256,7 @@
 .ship-rz2awing {
   background-image: url("../images/rz2awing.png");
   background-repeat: no-repeat;
-  background-position: 0px -30px; }
+  background-position: 0px -20px; }
 
 .ship-escapecraft {
   background-image: url("../images/escapecraft.png");
@@ -279,6 +279,11 @@
   background-position: 0px -10px; }
 
 .ship-delta7aethersprite {
+  background-image: url("../images/delta7aethersprite0.png");
+  background-repeat: no-repeat;
+  background-position: 0px -10px; }
+
+.ship-delta7baethersprite {
   background-image: url("../images/delta7aethersprite0.png");
   background-repeat: no-repeat;
   background-position: 0px -10px; }
@@ -336,7 +341,7 @@
 .ship-resistancetransportpod {
   background-image: url("../images/resistancetransportpod0.png");
   background-repeat: no-repeat;
-  background-position: 0px -40px; }
+  background-position: 0px -20px; }
 
 .ship-tierbheavy {
   background-image: url("../images/tierbheavy.png");
@@ -391,7 +396,7 @@
 .ship-btanr2ywing {
   background-image: url("../images/btanr2ywing.png");
   background-repeat: no-repeat;
-  background-position: 0px -40px; }
+  background-position: 0px -10px; }
   
 
 .ship-gr75mediumtransport {

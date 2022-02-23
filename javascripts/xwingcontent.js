@@ -2498,7 +2498,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         pointsupg: 8,
-        slots: ["Modification"]
+        slots: ["Modification", "HardpointShip"]
       }, {
         name: "Inaldra",
         id: 137,
