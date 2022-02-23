@@ -2579,7 +2579,7 @@ exportObj.basicCardData = function() {
         charge: 1,
         recurring: 1,
         points: 6,
-        pointsupg: 11,
+        pointsupg: 17,
         slots: ["Talent", "Turret", "Crew", "Gunner", "Device", "Device", "Modification", "Title"]
       }, {
         name: "Sol Sixxa",
@@ -6368,7 +6368,7 @@ exportObj.basicCardData = function() {
         id: 504,
         faction: "Galactic Empire",
         ship: "TIE Fighter",
-        skill: 2,
+        skill: 4,
         points: 3,
         pointsupg: 4,
         max_per_squad: 2,
