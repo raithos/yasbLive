@@ -1777,7 +1777,7 @@ exportObj.basicCardData = function() {
         points: 3,
         pointsupg: 10,
         keyword: ["Spectre"],
-        slots: ["Talent", "Title", "Crew", "Modification", "Title"]
+        slots: ["Talent", "Turret", "Crew", "Modification", "Title"]
       }, {
         name: "Fenn Rau (Sheathipede)",
         id: 69,
@@ -3151,7 +3151,7 @@ exportObj.basicCardData = function() {
         ship: "TIE Defender",
         skill: 1,
         points: 7,
-        pointsupg: 14,
+        pointsupg: 4,
         slots: ["Sensor", "Cannon", "Configuration"]
       }, {
         name: '"Whisper"',
