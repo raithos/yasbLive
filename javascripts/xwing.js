@@ -1816,6 +1816,9 @@ exportObj.CardBrowser = (function() {
       };
       orig_type = 'Addon';
     }
+    if (orig_type === 'Pilot') {
+      this.card_viewer_container.find('tr.info-faction').show();
+    }
     this.card_viewer_container.show();
     exportObj.builders[0].showTooltip(orig_type, data, add_opts != null ? add_opts : {}, this.card_viewer_container);
     if ((data != null ? data.applies_condition : void 0) != null) {
@@ -2487,7 +2490,7 @@ exportObj.setupTranslationSupport = function() {
                     parent: ___iced_passed_deferral
                   });
                   builder.container.trigger('xwing:beforeLanguageLoad', __iced_deferrals.defer({
-                    lineno: 2106
+                    lineno: 2109
                   }));
                   __iced_deferrals._fulfill();
                 })(_next);
@@ -3416,9 +3419,10 @@ exportObj.SquadBuilder = (function() {
     this.choose_obstacles_modal.tabindex = "-1";
     this.choose_obstacles_modal.role = "dialog";
     this.container.append(this.choose_obstacles_modal);
-    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description translated' defaultText=\"Choose obstacles dialog\"></label>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"obstacle-select-container\" style=\"float:left\">\n                <select multiple class='obstacle-select' size=\"18\">\n                    <option class=\"coreasteroid0-select translated\" value=\"coreasteroid0\" defaultText=\"Core Asteroid 0\"></option>\n                    <option class=\"coreasteroid1-select translated\" value=\"coreasteroid1\" defaultText=\"Core Asteroid 1\"></option>\n                    <option class=\"coreasteroid2-select translated\" value=\"coreasteroid2\" defaultText=\"Core Asteroid 2\"></option>\n                    <option class=\"coreasteroid3-select translated\" value=\"coreasteroid3\" defaultText=\"Core Asteroid 3\"></option>\n                    <option class=\"coreasteroid4-select translated\" value=\"coreasteroid4\" defaultText=\"Core Asteroid 4\"></option>\n                    <option class=\"coreasteroid5-select translated\" value=\"coreasteroid5\" defaultText=\"Core Asteroid 5\"></option>\n                    <option class=\"yt2400debris0-select translated\" value=\"yt2400debris0\" defaultText=\"YT2400 Debris 0\"></option>\n                    <option class=\"yt2400debris1-select translated\" value=\"yt2400debris1\" defaultText=\"YT2400 Debris 1\"></option>\n                    <option class=\"yt2400debris2-select translated\" value=\"yt2400debris2\" defaultText=\"YT2400 Debris 2\"></option>\n                    <option class=\"vt49decimatordebris0-select translated\" value=\"vt49decimatordebris0\" defaultText=\"VT49 Debris 0\"></option>\n                    <option class=\"vt49decimatordebris1-select translated\" value=\"vt49decimatordebris1\" defaultText=\"VT49 Debris 1\"></option>\n                    <option class=\"vt49decimatordebris2-select translated\" value=\"vt49decimatordebris2\" defaultText=\"VT49 Debris 2\"></option>\n                    <option class=\"core2asteroid0-select translated\" value=\"core2asteroid0\" defaultText=\"Force Awakens Asteroid 0\"></option>\n                    <option class=\"core2asteroid1-select translated\" value=\"core2asteroid1\" defaultText=\"Force Awakens Asteroid 1\"></option>\n                    <option class=\"core2asteroid2-select translated\" value=\"core2asteroid2\" defaultText=\"Force Awakens Asteroid 2\"></option>\n                    <option class=\"core2asteroid3-select translated\" value=\"core2asteroid3\" defaultText=\"Force Awakens Asteroid 3\"></option>\n                    <option class=\"core2asteroid4-select translated\" value=\"core2asteroid4\" defaultText=\"Force Awakens Asteroid 4\"></option>\n                    <option class=\"core2asteroid5-select translated\" value=\"core2asteroid5\" defaultText=\"Force Awakens Asteroid 5\"></option>\n                    <option class=\"gascloud1-select translated\" value=\"gascloud1\" defaultText=\"Gas Cloud 1\"></option>\n                    <option class=\"gascloud2-select translated\" value=\"gascloud2\" defaultText=\"Gas Cloud 2\"></option>\n                    <option class=\"gascloud3-select translated\" value=\"gascloud3\" defaultText=\"Gas Cloud 3\"></option>\n                    <option class=\"gascloud4-select translated\" value=\"gascloud4\" defaultText=\"Gas Cloud 4\"></option>\n                    <option class=\"gascloud5-select translated\" value=\"gascloud5\" defaultText=\"Gas Cloud 5\"></option>\n                    <option class=\"gascloud6-select translated\" value=\"gascloud6\" defaultText=\"Gas Cloud 6\"></option>\n                </select>\n            </div>\n            <div class=\"obstacle-image-container\" style=\"display:none;\">\n                <img class=\"obstacle-image\" src=\"images/core2asteroid0.png\" />\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
+    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description translated' defaultText=\"Choose obstacles dialog\"></label>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"obstacle-select-container\" style=\"float:left\">\n                <select multiple class='obstacle-select' size=\"18\">\n                    <option class=\"coreasteroid0-select translated\" value=\"coreasteroid0\" defaultText=\"Core Asteroid 0\"></option>\n                    <option class=\"coreasteroid1-select translated\" value=\"coreasteroid1\" defaultText=\"Core Asteroid 1\"></option>\n                    <option class=\"coreasteroid2-select translated\" value=\"coreasteroid2\" defaultText=\"Core Asteroid 2\"></option>\n                    <option class=\"coreasteroid3-select translated\" value=\"coreasteroid3\" defaultText=\"Core Asteroid 3\"></option>\n                    <option class=\"coreasteroid4-select translated\" value=\"coreasteroid4\" defaultText=\"Core Asteroid 4\"></option>\n                    <option class=\"coreasteroid5-select translated\" value=\"coreasteroid5\" defaultText=\"Core Asteroid 5\"></option>\n                    <option class=\"yt2400debris0-select translated\" value=\"yt2400debris0\" defaultText=\"YT2400 Debris 0\"></option>\n                    <option class=\"yt2400debris1-select translated\" value=\"yt2400debris1\" defaultText=\"YT2400 Debris 1\"></option>\n                    <option class=\"yt2400debris2-select translated\" value=\"yt2400debris2\" defaultText=\"YT2400 Debris 2\"></option>\n                    <option class=\"vt49decimatordebris0-select translated\" value=\"vt49decimatordebris0\" defaultText=\"VT49 Debris 0\"></option>\n                    <option class=\"vt49decimatordebris1-select translated\" value=\"vt49decimatordebris1\" defaultText=\"VT49 Debris 1\"></option>\n                    <option class=\"vt49decimatordebris2-select translated\" value=\"vt49decimatordebris2\" defaultText=\"VT49 Debris 2\"></option>\n                    <option class=\"core2asteroid0-select translated\" value=\"core2asteroid0\" defaultText=\"Force Awakens Asteroid 0\"></option>\n                    <option class=\"core2asteroid1-select translated\" value=\"core2asteroid1\" defaultText=\"Force Awakens Asteroid 1\"></option>\n                    <option class=\"core2asteroid2-select translated\" value=\"core2asteroid2\" defaultText=\"Force Awakens Asteroid 2\"></option>\n                    <option class=\"core2asteroid3-select translated\" value=\"core2asteroid3\" defaultText=\"Force Awakens Asteroid 3\"></option>\n                    <option class=\"core2asteroid4-select translated\" value=\"core2asteroid4\" defaultText=\"Force Awakens Asteroid 4\"></option>\n                    <option class=\"core2asteroid5-select translated\" value=\"core2asteroid5\" defaultText=\"Force Awakens Asteroid 5\"></option>\n                    <option class=\"gascloud1-select translated\" value=\"gascloud1\" defaultText=\"Gas Cloud 1\"></option>\n                    <option class=\"gascloud2-select translated\" value=\"gascloud2\" defaultText=\"Gas Cloud 2\"></option>\n                    <option class=\"gascloud3-select translated\" value=\"gascloud3\" defaultText=\"Gas Cloud 3\"></option>\n                    <option class=\"gascloud4-select translated\" value=\"gascloud4\" defaultText=\"Gas Cloud 4\"></option>\n                    <option class=\"gascloud5-select translated\" value=\"gascloud5\" defaultText=\"Gas Cloud 5\"></option>\n                    <option class=\"gascloud6-select translated\" value=\"gascloud6\" defaultText=\"Gas Cloud 6\"></option>\n                </select>\n            </div>\n            <div>\n                <div class=\"obstacle-image-container\" style=\"display:none;\">\n                    <img class=\"obstacle-image\" src=\"images/core2asteroid0.png\" />\n                </div>\n                <div class=\"obstacle-sources-container\">\n                    <span class=\"info-header obstacle-sources translated\" defaultText=\"Sources:\"></span> \n                    <span class=\"info-data obstacle-sources\"></span>\n                </div>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
     this.obstacles_select = this.choose_obstacles_modal.find('.obstacle-select');
     this.obstacles_select_image = this.choose_obstacles_modal.find('.obstacle-image-container');
+    this.obstacles_select_sources = this.choose_obstacles_modal.find('.info-data.obstacle-sources');
     this.backend_list_squads_button = $(this.container.find('button.backend-list-my-squads'));
     this.backend_list_squads_button.click((function(_this) {
       return function(e) {
@@ -3457,7 +3461,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3139
+              lineno: 3149
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -3535,7 +3539,7 @@ exportObj.SquadBuilder = (function() {
     } else {
       intro = "";
     }
-    return "<div class=\"card intro\">" + intro + "</div>\n<div class=\"card info-well\">\n    <div class=\"info-name\"></div>\n    <div class=\"info-type\"></div>\n    <span class=\"info-collection\"></span>\n    <table class=\"table-sm\">\n        <tbody>\n            <tr class=\"info-ship\">\n                <td class=\"info-header translated\" defaultText=\"Ship\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-base\">\n                <td class=\"info-header translated\" defaultText=\"Base\"></td>\n                <td class=\"info-data\"></td> \n            </tr>\n            <tr class=\"info-skill\">\n                <td class=\"info-header translated\" defaultText=\"Initiative\"></td>\n                <td class=\"info-data info-skill\"></td>\n            </tr>\n            <tr class=\"info-points\">\n                <td class=\"info-header translated\" defaultText=\"Points\"></td>\n                <td class=\"info-data info-points\"></td>\n            </tr>\n            <tr class=\"info-engagement\">\n                <td class=\"info-header translated\" defaultText=\"Engagement\"></td>\n                <td class=\"info-data info-engagement\"></td>\n            </tr>\n            <tr class=\"info-attack-bullseye\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-bullseyearc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-frontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-fullfront\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-fullfrontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-left\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-leftarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-right\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-rightarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-back\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-reararc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-turret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-singleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-doubleturret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-doubleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-agility\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-agility xwing-miniatures-font-agility\"></i></td>\n                <td class=\"info-data info-agility\"></td>\n            </tr>\n            <tr class=\"info-hull\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-hull xwing-miniatures-font-hull\"></i></td>\n                <td class=\"info-data info-hull\"></td>\n            </tr>\n            <tr class=\"info-shields\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-shield xwing-miniatures-font-shield\"></i></td>\n                <td class=\"info-data info-shields\"></td>\n            </tr>\n            <tr class=\"info-force\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-force xwing-miniatures-font-forcecharge\"></i></td>\n                <td class=\"info-data info-force\"></td>\n            </tr>\n            <tr class=\"info-charge\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-charge xwing-miniatures-font-charge\"></i></td>\n                <td class=\"info-data info-charge\"></td>\n            </tr>\n            <tr class=\"info-energy\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-energy xwing-miniatures-font-energy\"></i></td>\n                <td class=\"info-data info-energy\"></td>\n            </tr>\n            <tr class=\"info-range\">\n                <td class=\"info-header translated\" defaultText=\"Range\"></td>\n                <td class=\"info-data info-range\"></td><td class=\"info-rangebonus\"><i class=\"xwing-miniatures-font red header-range xwing-miniatures-font-rangebonusindicator\"></i></td>\n            </tr>\n            <tr class=\"info-actions\">\n                <td class=\"info-header translated\" defaultText=\"Actions\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-upgrades\">\n                <td class=\"info-header translated\" defaultText=\"Upgrades\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n        </tbody>\n    </table>\n    <p class=\"info-restrictions\"></p>\n    <p class=\"info-text\"></p>\n    <p class=\"info-maneuvers\"></p>\n    <br />\n    <span class=\"info-header info-sources translated\" defaultText=\"Sources:\"></span> \n    <span class=\"info-data info-sources\"></span>\n</div>";
+    return "<div class=\"card intro\">" + intro + "</div>\n<div class=\"card info-well\">\n    <div class=\"info-name\"></div>\n    <div class=\"info-type\"></div>\n    <span class=\"info-collection\"></span>\n    <table class=\"table-sm\">\n        <tbody>\n            <tr class=\"info-faction\">\n                <td class=\"info-header translated\" defaultText=\"Faction\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-ship\">\n                <td class=\"info-header translated\" defaultText=\"Ship\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-base\">\n                <td class=\"info-header translated\" defaultText=\"Base\"></td>\n                <td class=\"info-data\"></td> \n            </tr>\n            <tr class=\"info-skill\">\n                <td class=\"info-header translated\" defaultText=\"Initiative\"></td>\n                <td class=\"info-data info-skill\"></td>\n            </tr>\n            <tr class=\"info-points\">\n                <td class=\"info-header translated\" defaultText=\"Points\"></td>\n                <td class=\"info-data info-points\"></td>\n            </tr>\n            <tr class=\"info-engagement\">\n                <td class=\"info-header translated\" defaultText=\"Engagement\"></td>\n                <td class=\"info-data info-engagement\"></td>\n            </tr>\n            <tr class=\"info-attack-bullseye\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-bullseyearc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-frontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-fullfront\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-fullfrontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-left\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-leftarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-right\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-rightarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-back\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-reararc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-turret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-singleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-doubleturret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-doubleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-agility\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-agility xwing-miniatures-font-agility\"></i></td>\n                <td class=\"info-data info-agility\"></td>\n            </tr>\n            <tr class=\"info-hull\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-hull xwing-miniatures-font-hull\"></i></td>\n                <td class=\"info-data info-hull\"></td>\n            </tr>\n            <tr class=\"info-shields\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-shield xwing-miniatures-font-shield\"></i></td>\n                <td class=\"info-data info-shields\"></td>\n            </tr>\n            <tr class=\"info-force\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-force xwing-miniatures-font-forcecharge\"></i></td>\n                <td class=\"info-data info-force\"></td>\n            </tr>\n            <tr class=\"info-charge\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-charge xwing-miniatures-font-charge\"></i></td>\n                <td class=\"info-data info-charge\"></td>\n            </tr>\n            <tr class=\"info-energy\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-energy xwing-miniatures-font-energy\"></i></td>\n                <td class=\"info-data info-energy\"></td>\n            </tr>\n            <tr class=\"info-range\">\n                <td class=\"info-header translated\" defaultText=\"Range\"></td>\n                <td class=\"info-data info-range\"></td><td class=\"info-rangebonus\"><i class=\"xwing-miniatures-font red header-range xwing-miniatures-font-rangebonusindicator\"></i></td>\n            </tr>\n            <tr class=\"info-actions\">\n                <td class=\"info-header translated\" defaultText=\"Actions\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-upgrades\">\n                <td class=\"info-header translated\" defaultText=\"Upgrades\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n        </tbody>\n    </table>\n    <p class=\"info-restrictions\"></p>\n    <p class=\"info-text\"></p>\n    <p class=\"info-maneuvers\"></p>\n    <br />\n    <span class=\"info-header info-sources translated\" defaultText=\"Sources:\"></span> \n    <span class=\"info-data info-sources\"></span>\n</div>";
   };
 
   SquadBuilder.prototype.setupEventHandlers = function() {
@@ -3705,7 +3709,7 @@ exportObj.SquadBuilder = (function() {
             new_selection = _this.current_obstacles;
           }
           if (new_selection.length > 0) {
-            _this.showChooseObstaclesSelectImage(new_selection[0]);
+            _this.showChooseObstaclesSelectInformation(new_selection[0]);
           }
           _this.current_squad.additional_data.obstacles = _this.current_obstacles;
           _this.current_squad.dirty = true;
@@ -4163,6 +4167,17 @@ exportObj.SquadBuilder = (function() {
     return this.choose_obstacles_modal.modal('show');
   };
 
+  SquadBuilder.prototype.showChooseObstaclesSelectInformation = function(obstacle) {
+    this.showChooseObstaclesSelectImage(obstacle);
+    return this.showChooseObstaclesSelectSources(obstacle);
+  };
+
+  SquadBuilder.prototype.showChooseObstaclesSelectSources = function(obstacle) {
+    var sources, _ref, _ref1, _ref2;
+    sources = (_ref = (_ref1 = exportObj.obstacles[obstacle]) != null ? _ref1.sources : void 0) != null ? _ref : [];
+    return this.obstacles_select_sources.text((sources.length > 1) || (!(_ref2 = exportObj.translate('sources', 'Loose Ships'), __indexOf.call(sources, _ref2) >= 0)) ? (sources.length > 0 ? sources.join(', ') : exportObj.translate('ui', 'unreleased')) : this.uitranslation("Only available from 1st edition"));
+  };
+
   SquadBuilder.prototype.showChooseObstaclesSelectImage = function(obstacle) {
     this.image_name = 'images/' + obstacle + '.png';
     this.obstacles_select_image.find('.obstacle-image').attr('src', this.image_name);
@@ -4399,7 +4414,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4034
+              lineno: 4056
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4409,7 +4424,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4035
+                lineno: 4057
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -5467,6 +5482,8 @@ exportObj.SquadBuilder = (function() {
           container.find('p.info-text').show();
           container.find('tr.info-ship td.info-data').text(data.ship);
           container.find('tr.info-ship').show();
+          container.find('tr.info-faction td.info-data').text(data.faction);
+          container.find('tr.info-faction').hide();
           if (ship.base != null) {
             container.find('tr.info-base td.info-data').text(exportObj.translate("gameterms", ship.base));
           } else {
@@ -5619,6 +5636,7 @@ exportObj.SquadBuilder = (function() {
           container.find('p.info-text').html((_ref76 = data.text) != null ? _ref76 : '');
           container.find('p.info-text').show();
           container.find('tr.info-ship').hide();
+          container.find('tr.info-faction').hide();
           container.find('tr.info-base').hide();
           container.find('tr.info-skill').hide();
           container.find('tr.info-points').hide();
@@ -5728,6 +5746,7 @@ exportObj.SquadBuilder = (function() {
           container.find('p.info-text').html(data.text);
           container.find('p.info-text').show();
           container.find('tr.info-ship').hide();
+          container.find('tr.info-faction').hide();
           container.find('tr.info-base').hide();
           container.find('tr.info-skill').hide();
           container.find('tr.info-points').hide();
@@ -5776,6 +5795,7 @@ exportObj.SquadBuilder = (function() {
           container.find('p.info-text').html(missingStuffInfoText);
           container.find('p.info-text').show();
           container.find('tr.info-ship').hide();
+          container.find('tr.info-faction').hide();
           container.find('tr.info-base').hide();
           container.find('tr.info-skill').hide();
           container.find('tr.info-points').hide();
@@ -6646,7 +6666,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5647
+                  lineno: 5673
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6875,7 +6895,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5767
+                          lineno: 5793
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6925,7 +6945,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5800
+                                  lineno: 5826
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7023,7 +7043,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5858
+                      lineno: 5884
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7107,7 +7127,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5894
+                lineno: 5920
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7176,7 +7196,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5923
+              lineno: 5949
             }));
           }
         }
@@ -7265,7 +7285,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 5979
+                lineno: 6005
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8507,7 +8527,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6883
+                lineno: 6909
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8666,7 +8686,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 6977
+                  lineno: 7003
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8693,7 +8713,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 6984
+                      lineno: 7010
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8837,7 +8857,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7059
+            lineno: 7085
           }));
         }
         __iced_deferrals._fulfill();
@@ -9275,7 +9295,7 @@ exportObj.fromXWSUpgrade = {
 
 SPEC_URL = 'https://github.com/elistevens/xws-spec';
 
-SQUAD_TO_XWS_URL = 'http://squad2xws.herokuapp.com/translate/';
+SQUAD_TO_XWS_URL = 'https://squad2xws.herokuapp.com/translate/';
 
 exportObj.loadXWSButton = function(xws_import_modal) {
   var import_status;
