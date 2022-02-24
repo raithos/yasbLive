@@ -16001,7 +16001,7 @@ exportObj.standardShipInclusions = [
 
 exportObj.standardPilotExclusions = ['Hera Syndulla (VCX-100)', 'Ved Foslo', 'Han Solo (Resistance)', 'Vi Moradi', 'Saesee Tiin', 'Phlac-Arphocc Prototype'];
 
-exportObj.standardUpgradeExclusions = ['Cassian Andor', 'Boba Fett', 'Slave I', 'Supreme Leader Snoke', 'R2-A6', 'Tal Merrik', 'Advanced Sensors', 'Delta-7B', 'Inertial Dampeners', 'Informant', 'Interloper Turn', 'Intimidation', 'Precognitive Reflexes', 'Seasoned Navigator', 'Sense', 'Supernatural Reflexes', 'Static Discharge Vanes', 'Stealth Device'];
+exportObj.standardUpgradeExclusions = ['Cassian Andor', 'Boba Fett', 'Tobias Beckett', 'Slave I', 'Supreme Leader Snoke', 'R2-A6', 'Tal Merrik', 'Advanced Sensors', 'Delta-7B', 'Inertial Dampeners', 'Informant', 'Interloper Turn', 'Intimidation', 'Precognitive Reflexes', 'Seasoned Navigator', 'Sense', 'Supernatural Reflexes', 'Static Discharge Vanes', 'Stealth Device'];
 
 exportObj.epicExclusionsList = ['CR90 Corellian Corvette', 'Raider-class Corvette', 'GR-75 Medium Transport', 'Gozanti-class Cruiser', 'C-ROC Cruiser', 'Syliure-class Hyperspace Ring', 'Trident-class Assault Ship'];
 
