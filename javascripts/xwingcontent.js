@@ -6357,7 +6357,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Galactic Empire",
         ship: "TIE Fighter",
-        skill: 2,
+        skill: 4,
         charge: 2,
         recurring: 1,
         points: 4,
@@ -10816,7 +10816,6 @@ exportObj.basicCardData = function() {
         points: 4,
         charge: 1,
         slot: "Device",
-        unique: true,
         applies_condition: 'Blazer Bomb'.canonicalize()
       }, {
         name: "Beskar Reinforced Plating",
@@ -10997,7 +10996,13 @@ exportObj.basicCardData = function() {
         points: 6,
         slot: "Modification",
         faction: ["Scum and Villainy", "Resistance"],
-        restrictions: [["Base", "Small or Medium"]]
+        restrictions: [
+          ["Base", "Small or Medium"], {
+            modifier_func: function(stats) {
+              return stats.actions.push('Slam');
+            }
+          }
+        ]
       }, {
         name: "Hotshot Tail Blaster",
         id: 463,
