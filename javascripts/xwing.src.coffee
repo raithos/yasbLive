@@ -333,6 +333,7 @@ class exportObj.SquadBuilderBackend
                     @squad_list_tags.find('.btn').removeClass 'btn-inverse'
                     button.addClass 'btn-inverse'
                     @squad_list_modal.find('.squad-list li').each (idx, elem) ->
+                        console.log(buttontag)
                         if $(elem).data().squad.additional_data.tag?
                             tag_array = $(elem).data().squad.additional_data.tag.split(",")
                             found_tag = false
