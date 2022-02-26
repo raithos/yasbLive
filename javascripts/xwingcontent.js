@@ -1723,7 +1723,7 @@ exportObj.basicCardData = function() {
         points: 8,
         pointsupg: 18,
         keyword: ["Droid", "Spectre"],
-        slots: ["Sensor", "Crew", "Torpedo", "Crew", "Crew", "Gunner", "Modification", "Title"]
+        slots: ["Sensor", "Turret", "Torpedo", "Crew", "Crew", "Gunner", "Modification", "Title"]
       }, {
         name: "Lothal Rebel",
         id: 64,
@@ -2597,7 +2597,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Scurrg H-6 Bomber",
         skill: 2,
-        points: 4,
+        points: 5,
         pointsupg: 7,
         slots: ["Turret", "Gunner", "Device", "Device"]
       }, {
@@ -10816,7 +10816,7 @@ exportObj.basicCardData = function() {
         points: 4,
         charge: 1,
         slot: "Device",
-        applies_condition: 'Blazer Bomb'.canonicalize()
+        applies_condition: 'Blaze Bomb'.canonicalize()
       }, {
         name: "Beskar Reinforced Plating",
         id: 445,
@@ -24190,6 +24190,10 @@ exportObj.manifestByExpansion = {
       count: 1
     }, {
       name: 'DRK-1 Probe Droids',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Perceptive Copilot',
       type: 'upgrade',
       count: 1
     }, {
