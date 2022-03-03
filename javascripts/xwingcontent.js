@@ -6416,6 +6416,7 @@ exportObj.basicCardData = function() {
         name: "Bo-Katan Kryze",
         id: 509,
         faction: "Separatist Alliance",
+        xws: "bokatan-separatistalliance",
         ship: "Gauntlet Fighter",
         skill: 4,
         points: 7,
@@ -6426,6 +6427,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Bo-Katan Kryze (Republic)",
         canonical_name: 'Bo-Katan Kryze'.canonicalize(),
+        xws: "bokatan",
         id: 510,
         faction: "Galactic Republic",
         ship: "Gauntlet Fighter",
@@ -6448,6 +6450,7 @@ exportObj.basicCardData = function() {
         slots: ["Talent", "Crew", "Gunner", "Device", "Modification", "Configuration"]
       }, {
         name: "Maul",
+        xws: "maul-gauntletfighter",
         id: 512,
         faction: "Scum and Villainy",
         ship: "Gauntlet Fighter",
