@@ -6438,7 +6438,7 @@ exportObj.basicCardData = function() {
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Torpedo", "Missile", "Missile", "Device", "Modification", "Modification", "Title", "Configuration"]
       }, {
-        name: "Night Owl Liberator",
+        name: "Nite Owl Liberator",
         id: 511,
         faction: "Galactic Republic",
         ship: "Gauntlet Fighter",
@@ -6522,7 +6522,7 @@ exportObj.basicCardData = function() {
         unique: true,
         slots: ["Talent", "Crew", "Gunner", "Device", "Modification", "Configuration"]
       }, {
-        name: "Chopper (Gauntlet Fighter)",
+        name: '"Chopper" (Gauntlet Fighter)',
         canonical_name: 'Chopper'.canonicalize(),
         xws: "chopper-gauntletfighter",
         id: 519,
@@ -10900,7 +10900,8 @@ exportObj.basicCardData = function() {
         validation_func: function(ship, upgrade_obj) {
           return upgrade_obj.occupiesAnUpgradeSlot("Crew");
         },
-        also_occupies_upgrades: ["Crew"]
+        also_occupies_upgrades: ["Crew"],
+        applies_condition: 'Clan Wren Commandos'.canonicalize()
       }, {
         name: "Razor Crest",
         id: 451,
@@ -11023,6 +11024,90 @@ exportObj.basicCardData = function() {
         charge: 2,
         slot: "Illicit",
         restrictions: [["Base", "Medium or Large"]]
+      }, {
+        name: "Combat Boarding Tube",
+        id: 464,
+        points: 0,
+        slot: "Command",
+        ship: "Gauntlet Fighter",
+        restrictions: [["Slot", "Configuration"], ["Base", "Standard"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Configuration");
+        },
+        also_occupies_upgrades: ["Configuration"]
+      }, {
+        name: "Drop-Seat Bay",
+        id: 465,
+        points: 1,
+        slot: "Modification",
+        ship: "Gauntlet Fighter",
+        unequips_upgrades: ['Device'],
+        also_occupies_upgrades: ['Device'],
+        confersAddons: [
+          {
+            type: exportObj.Upgrade,
+            slot: "Crew"
+          }, {
+            type: exportObj.Upgrade,
+            slot: "Crew"
+          }
+        ]
+      }, {
+        name: "Mandalorian Super Commandos",
+        id: 466,
+        points: 7,
+        slot: "Crew",
+        unique: true,
+        charge: 2,
+        faction: "Scum and Villainy",
+        restrictions: [["Slot", "Crew"], ["Base", "Non-Small"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"],
+        applies_condition: 'Mandalorian Super Commandos'.canonicalize()
+      }, {
+        name: "Imperial Super Commandos",
+        id: 467,
+        points: 7,
+        slot: "Crew",
+        unique: true,
+        charge: 2,
+        faction: "Galactic Empire",
+        restrictions: [["Slot", "Crew"], ["Base", "Non-Small"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"],
+        applies_condition: 'Imperial Super Commandos'.canonicalize()
+      }, {
+        name: "Nite Owl Commandos",
+        id: 468,
+        points: 7,
+        slot: "Crew",
+        unique: true,
+        charge: 2,
+        faction: "Galactic Republic",
+        restrictions: [["Slot", "Crew"], ["Base", "Non-Small"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"],
+        applies_condition: 'Nite Owl Commandos'.canonicalize()
+      }, {
+        name: "Death Watch Commandos",
+        id: 469,
+        points: 7,
+        slot: "Crew",
+        unique: true,
+        charge: 2,
+        faction: "Separatist Alliance",
+        restrictions: [["Slot", "Crew"], ["Base", "Non-Small"]],
+        validation_func: function(ship, upgrade_obj) {
+          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
+        },
+        also_occupies_upgrades: ["Crew"],
+        applies_condition: 'Death Watch Commandos'.canonicalize()
       }
     ],
     conditionsById: [
@@ -11141,6 +11226,21 @@ exportObj.basicCardData = function() {
       }, {
         name: 'Marked for Elimination',
         id: 34
+      }, {
+        name: 'Clan Wren Commandos',
+        id: 35
+      }, {
+        name: 'Nite Owl Commandos',
+        id: 36
+      }, {
+        name: 'Death Watch Commandos',
+        id: 37
+      }, {
+        name: 'Imperial Super Commandos',
+        id: 38
+      }, {
+        name: 'Mandalorian Super Commandos',
+        id: 39
       }
     ],
     quickbuildsById: [
@@ -18266,7 +18366,7 @@ exportObj.cardLoaders.English = function() {
       display_name: "Ezra Bridger",
       text: "While you defend or perform an attack, if you are stressed, you may spend 1 %FORCE% to change up to 2 of your %FOCUS% results to %EVADE% or %HIT% results."
     },
-    "Chopper (Gauntlet Fighter)": {
+    '"Chopper" (Gauntlet Fighter)': {
       display_name: "Chopper",
       text: "At the start of the Engagement Phase, each enemy ship at range 0 gains 2 jam tokens."
     },
@@ -19737,6 +19837,18 @@ exportObj.cardLoaders.English = function() {
     "Clan Wren Commandos": {
       text: "During the System Phase, you may spend 1 %CHARGE% to drop a Commando Team remote using the [1 %STRAIGHT%] template. You can place that device using the front or rear guides. %LINEBREAK% This card's %CHARGE% cannot be recovered."
     },
+    "Death Watch Commandos": {
+      text: "During the System Phase, you may spend 1 %CHARGE% to drop a Commando Team remote using the [1 %STRAIGHT%] template. You can place that device using the front or rear guides. %LINEBREAK% This card's %CHARGE% cannot be recovered."
+    },
+    "Nite Owl Commandos": {
+      text: "During the System Phase, you may spend 1 %CHARGE% to drop a Commando Team remote using the [1 %STRAIGHT%] template. You can place that device using the front or rear guides. %LINEBREAK% This card's %CHARGE% cannot be recovered."
+    },
+    "Imperial Super Commandos": {
+      text: "During the System Phase, you may spend 1 %CHARGE% to drop a Commando Team remote using the [1 %STRAIGHT%] template. You can place that device using the front or rear guides. %LINEBREAK% This card's %CHARGE% cannot be recovered."
+    },
+    "Mandalorian Super Commandos": {
+      text: "During the System Phase, you may spend 1 %CHARGE% to drop a Commando Team remote using the [1 %STRAIGHT%] template. You can place that device using the front or rear guides. %LINEBREAK% This card's %CHARGE% cannot be recovered."
+    },
     "Razor Crest": {
       text: "<strong>Setup:</strong> Place 1 non-limited %ILLICIT% upgrade facedown under this card. %LINEBREAK% During the System Phase, you may reveal that %ILLICIT% upgrade and equip it as if it were equipped at Setup (without paying its points cost)."
     },
@@ -19775,6 +19887,12 @@ exportObj.cardLoaders.English = function() {
     },
     "Hotshot Tail Blaster": {
       text: "This attack can be performed at range 0. %LINEBREAK% <strong>Action:</strong> Spend 1 %CHARGE%."
+    },
+    "Drop-Seat Bay": {
+      text: "If you would drop a %CREW% remote using a [%STRAIGHT%] template, you may use a bank [%BANKLEFT% or %BANKRIGHT%] tempalte of the same speed instead and can alighn that template's middle line with the hashmark on your ship's left or right side instead of your rear guides."
+    },
+    "Combat Boarding Tube": {
+      text: "During the System Phase, if you would drop a %CREW% remote and there is an enemy medium, large, or huge ship at range 0-1 in your %REARARC%, you may place that device in the play area in your %REARARC% at range 0-1 so that it is at range 0 of that enemy ship instead. Then, that enemy ship gains 1 deplete, strain, or stress token of your choice."
     },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
@@ -20159,6 +20277,21 @@ exportObj.cardLoaders.English = function() {
     },
     'Blaze Bomb': {
       text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. %LINEBREAK% When this device detonates, each ship and remote at range 0-1 rolls 1 attack die. Each ship or remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result. %LINEBREAK% After this devices detonates, place a Blace by aligning the Blaze\'s guides to the device\'s tab. %LINEBREAK% A Blaze is an obstacle. After this obstacle is placed, place a fues marker on it. %LINEBREAK% During the End Phase, remove each Blaze with no fuse markers, then remove 1 fuse marker from each Blaze.'
+    },
+    'Clan Wren Commandos': {
+      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
+    },
+    'Death Watch Commandos': {
+      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
+    },
+    'Nite Owl Commandos': {
+      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
+    },
+    'Imperial Super Commandos': {
+      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
+    },
+    'Mandalorian Super Commandos': {
+      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
     }
   };
   for (name in pilot_translations) {
@@ -28381,6 +28514,363 @@ exportObj.manifestByExpansion = {
     }, {
       name: 'gascloud5',
       type: 'obstacle',
+      count: 1
+    }
+  ],
+  "Gauntlet Fighter Expansion pack": [
+    {
+      name: 'Gauntlet Fighter',
+      type: 'ship',
+      count: 1
+    }, {
+      name: 'Maul',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Bo-Katan Kryze (Republic)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Bo-Katan Kryze',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Captain Hark',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Pre Vizsla',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Rook Kast',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Ezra Bridger (Gauntlet Fighter)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Chopper" (Gauntlet Fighter)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Mandalorian Resistance Pilot',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Death Watch Warrior',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Nite Owl Liberator',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Gar Saxon',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Imperial Super Commando',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Shadow Collective Operator',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Gauntlet',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Nightbrother',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Swivel Wing',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Drop-Seat Bay',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Clan Wren Commandos',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Combat Boarding Tube',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Mandalorian Super Commandos',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Imperial Super Commandos',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Nite Owl Commandos',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Death Watch Commandos',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Blazer Bomb',
+      type: 'upgrade',
+      count: 2
+    }
+  ],
+  "Pride of Mandalore Reinforcements Pack": [
+    {
+      name: 'Fenn Rau (Rebel Fang)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Bodica Venj',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Dirk Ullodin',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Clan Wren Volunteer',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Mandalorian Royal Guard',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'ISB Jingoist',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Moff Gideon',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Ahsoka Tano (Crew)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Bo-Katan Kryze (Republic/Separatist)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Bo-Katan Kryze (Rebel/Scum)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Captain Hark',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Fenn Rau',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Gar Saxon',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Gar Saxon (Gunner)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Korkie Kryze',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Obi-Wan Kenobi',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Pre Vizsla',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Rook Kast',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Satine Kryze',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Savage Opress',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Tal Merrik',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Tiber Saxon',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Tristan Wren',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Ursa Wren',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Ursa Wren (Gunner)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Sabine Wren (Command)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Prime Minister Almec',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Maul (Mandalore)',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Beskar Reinforced Plating',
+      type: 'upgrade',
+      count: 3
+    }, {
+      name: 'Blazer Bomb',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Mandalorian Optics',
+      type: 'upgrade',
+      count: 3
+    }, {
+      name: 'Clan Training',
+      type: 'upgrade',
+      count: 3
+    }, {
+      name: 'Deadeye Shot',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Ion Limiter Override',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Marg Sabl Closure',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Compassion',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Malice',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Electro-Chaff Missiles',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Suppressive Gunner',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Weapons Systems Officer',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'False Transponder Codes',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Delayed Fuses',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Overtuned Modulators',
+      type: 'upgrade',
+      count: 2
+    }
+  ],
+  "Razor Crest Expansion Pack": [
+    {
+      name: 'ST-70 Assault Ship',
+      type: 'ship',
+      count: 1
+    }, {
+      name: 'The Mandalorian',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Q9-0',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Guild Bounty Hunter',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Outer Rim Enforcer',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: 'Razor Crest',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'The Mandalorian',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'The Child',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Tracking Fob',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Notorious',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Enduring',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'IG-11',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Greef Karga',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Kuiil',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Peli Motto',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Migs Mayfeld',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Burnout Thrusters',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Hotshot Tail Blaster',
+      type: 'upgrade',
       count: 1
     }
   ],
