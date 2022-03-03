@@ -6564,7 +6564,7 @@ exportObj.basicCardData = function() {
         points: 7,
         pointsupg: 28,
         unique: true,
-        keyword: ["Mandalorian"],
+        keyword: ["Bounty Hunter", "Mandalorian"],
         slots: ["Talent", "Talent", "Crew", "Crew", "Cannon", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "Guild Bounty Hunter",
@@ -6585,7 +6585,7 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 6,
         pointsupg: 10,
-        keyword: ["Bounty Hunter", "Mandelorian"],
+        keyword: ["Bounty Hunter", "Mandalorian"],
         slots: ["Crew", "Gunner", "Illicit", "Modification", "Modification"]
       }, {
         name: "Plo Koon (Delta-7b)",
