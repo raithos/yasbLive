@@ -2961,7 +2961,7 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         pointsupg: 4,
-        slots: ["Sensor", "Missile", "Modification"]
+        slots: ["Sensor", "Modification", "Modification"]
       }, {
         name: "Soontir Fel",
         id: 179,
@@ -6864,7 +6864,7 @@ exportObj.basicCardData = function() {
         name: "C-3PO",
         id: 18,
         slot: "Crew",
-        points: 7,
+        points: 5,
         unique: true,
         faction: "Rebel Alliance",
         modifier_func: function(stats) {
@@ -11006,14 +11006,13 @@ exportObj.basicCardData = function() {
         id: 462,
         points: 6,
         slot: "Modification",
-        faction: ["Scum and Villainy", "Resistance"],
-        restrictions: [
-          ["Base", "Small or Medium"], {
-            modifier_func: function(stats) {
-              return stats.actions.push('Slam');
-            }
+        faction: ["Scum and Villainy"],
+        restrictions: [["Base", "Small or Medium"]],
+        modifier_func: function(stats) {
+          if (__indexOf.call(stats.actions, 'Slam') < 0) {
+            return stats.actions.push('Slam');
           }
-        ]
+        }
       }, {
         name: "Hotshot Tail Blaster",
         id: 463,
