@@ -1211,8 +1211,8 @@ exportObj.CardBrowser = (function() {
   }
 
   CardBrowser.prototype.setupUI = function() {
-    var action, faction, factionless_option, linkedaction, opt, pilot, slot, _i, _j, _len, _len1, _ref, _ref1, _ref2;
-    this.container.append($.trim("<div class=\"container-fluid xwing-card-browser\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"card card-search-container\">\n            <h5 class=\"card-title translated\" defaultText=\"Card Search\"></h5>\n                <div class=\"advanced-search-container\">\n                    <div class = \"card search-container general-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"General\"></h6>\n                        <label class = \"text-search advanced-search-label\">\n                        <strong class=\"translated\" defaultText=\"Textsearch:\"></strong>\n                            <input type=\"search\" placeholder=\"" + (exportObj.translate('ui', "Placeholder Textsearch Browser")) + "\" class = \"card-search-text\">\n                        </label>\n                        <div class= \"advanced-search-faction-selection-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Factions:\"></strong>\n                                <select class=\"advanced-search-selection faction-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "All factions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-point-selection-container\">\n                            <strong class=\"translated\" defaultText=\"Point costs:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-points\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-point-cost advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-points\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-point-cost advanced-search-number-input\" value=\"200\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-collection-container\">\n                            <strong class=\"translated\" defaultText=\"Owned copies:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-owned-copies\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-owned-copies advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-owened-copies\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-owned-copies advanced-search-number-input\" value=\"100\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-misc-container\">\n                            <strong class=\"translated\" defaultText=\"Misc:\"></strong>\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-non-unique\">\n                                <input type=\"checkbox\" class=\"non-unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is not unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-hyperspace\">\n                                <input type=\"checkbox\" class=\"hyperspace-checkbox advanced-search-checkbox\" />  <span class=\"translated\" defaultText=\"Hyperspace legal\"></span>\n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container ship-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Ships and Pilots\"></h6>\n                        <div class = \"advanced-search-slot-available-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Slots:\"></strong>\n                                <select class=\"advanced-search-selection slot-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"duplicate-slots-checkbox advanced-search-checkbox\" /> " + (exportObj.translate('ui', "Has multiple of the chosen slots")) + "\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-actions-available-container\">\n                            <label class = \"advanced-search-label select-available-actions\">\n                                <strong class=\"translated\" defaultText=\"Actions:\"></strong>\n                                <select class=\"advanced-search-selection action-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-linkedactions-available-container\">\n                            <label class = \"advanced-search-label select-available-linkedactions\">\n                                <strong class=\"translated\" defaultText=\"Linked actions:\"></strong>\n                                <select class=\"advanced-search-selection linkedaction-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-ini-container\">\n                            <strong class=\"translated\" defaultText=\"Initiative:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-ini\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-ini advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-ini\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-ini advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-hull-container\">\n                            <strong class=\"translated\" defaultText=\"Hull:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-hull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-hull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-hull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-hull advanced-search-number-input\" value=\"12\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-shields-container\">\n                            <strong class=\"translated\" defaultText=\"Shields:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-shields\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-shields advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-shields\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-shields advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-agility-container\">\n                            <strong class=\"translated\" defaultText=\"Agility:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-agility\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-agility advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-agility\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-agility advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-base-size-container\">\n                            <strong class=\"translated\" defaultText=\"Base size:\"></strong>\n                            <label class = \"advanced-search-label toggle-small-base\">\n                                <input type=\"checkbox\" class=\"small-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Small\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-medium-base\">\n                                <input type=\"checkbox\" class=\"medium-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Medium\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-large-base\">\n                                <input type=\"checkbox\" class=\"large-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Large\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attack-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-frontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attack\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attack advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attack\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attack advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-singleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackdt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-doubleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackdt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackdt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackdt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackdt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackf-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-fullfrontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackf\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackf advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackf\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackf advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackb-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-reararc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackb\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackb advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackb\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackb advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackbull-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-bullseyearc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackbull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackbull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackbull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackbull advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container other-stuff-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Other Stuff\"></h6>\n                        <div class = \"advanced-search-slot-used-container\">\n                            <label class = \"advanced-search-label select-used-slots\">\n                                <strong class=\"translated\" defaultText=\"Used slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-slot-used-second-slot-container\">\n                            <label class = \"advanced-search-label select-used-second-slots\">\n                                <strong class=\"translated\" defaultText=\"Used double-slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-second-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-a-second-slot\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-a-second-slot-checkbox\" /> <span class=\"translated\" defaultText=\"Only upgrades requiring multiple slots\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-charge-container\">\n                            <strong class=\"translated\" defaultText=\"Charges:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-charge\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-charge advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-charge\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-charge advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Recurring\"></span>\n                            </label>\n                            <label class = \"advanced-search-label has-not-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-not-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Not recurring\"></span>\n                            </label>\n                        <div class = \"advanced-search-force-container\">\n                            <strong class=\"translated\" defaultText=\"Force:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-force\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-force advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-force\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-force advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-4 card-selecting-area\">\n            <span class=\"translate sort-cards-by\" defaultText=\"Sort cards by\"></span><span class=\"translated\" defaultText=\"Sort by\">:</span> <select class=\"sort-by\">\n                <option value=\"name\" class=\"translated\" defaultText=\"Name\"></option>\n                <option value=\"source\" class=\"translated\" defaultText=\"Source\"></option>\n                <option value=\"type-by-points\" class=\"translated\" defaultText=\"Type (by Points)\"></option>\n                <option value=\"type-by-name\" selected=\"1\" class=\"translated\" defaultText=\"Type (by Name)\" selected=\"selected\">" + (exportObj.translate('ui', 'Type (by Name)')) + "</option>\n            </select>\n            <div class=\"card-selector-container\">\n\n            </div>\n            <br>\n            <div class=\"card-viewer-conditions-container\">\n            </div>\n        </div>\n        <div class=\"col-md-4\">\n            <div class=\"card-viewer-container\">\n            </div>\n        </div>\n    </div>\n</div>"));
+    var action, faction, factionless_option, i, keyword_item, keyword_items, keyword_list, keywords, linkedaction, opt, pilot, slot, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref2;
+    this.container.append($.trim("<div class=\"container-fluid xwing-card-browser\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"card card-search-container\">\n            <h5 class=\"card-title translated\" defaultText=\"Card Search\"></h5>\n                <div class=\"advanced-search-container\">\n                    <div class = \"card search-container general-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"General\"></h6>\n                        <label class = \"text-search advanced-search-label\">\n                        <strong class=\"translated\" defaultText=\"Textsearch:\"></strong>\n                            <input type=\"search\" placeholder=\"" + (exportObj.translate('ui', "Placeholder Textsearch Browser")) + "\" class = \"card-search-text\">\n                        </label>\n                        <div class= \"advanced-search-faction-selection-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Factions:\"></strong>\n                                <select class=\"advanced-search-selection faction-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "All factions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-point-selection-container\">\n                            <strong class=\"translated\" defaultText=\"Point costs:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-points\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-point-cost advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-points\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-point-cost advanced-search-number-input\" value=\"200\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-collection-container\">\n                            <strong class=\"translated\" defaultText=\"Owned copies:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-owned-copies\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-owned-copies advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-owened-copies\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-owned-copies advanced-search-number-input\" value=\"100\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-misc-container\">\n                            <strong class=\"translated\" defaultText=\"Misc:\"></strong>\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-non-unique\">\n                                <input type=\"checkbox\" class=\"non-unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is not unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-hyperspace\">\n                                <input type=\"checkbox\" class=\"hyperspace-checkbox advanced-search-checkbox\" />  <span class=\"translated\" defaultText=\"Hyperspace legal\"></span>\n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container ship-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Ships and Pilots\"></h6>\n                        <div class = \"advanced-search-slot-available-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Slots:\"></strong>\n                                <select class=\"advanced-search-selection slot-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"duplicate-slots-checkbox advanced-search-checkbox\" /> " + (exportObj.translate('ui', "Has multiple of the chosen slots")) + "\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-keyword-available-container\">\n                            <label class = \"advanced-search-label select-available-keywords\">\n                                <strong class=\"translated\" defaultText=\"Keywords:\"></strong>\n                                <select class=\"advanced-search-selection keyword-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "keywords")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-actions-available-container\">\n                            <label class = \"advanced-search-label select-available-actions\">\n                                <strong class=\"translated\" defaultText=\"Actions:\"></strong>\n                                <select class=\"advanced-search-selection action-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-linkedactions-available-container\">\n                            <label class = \"advanced-search-label select-available-linkedactions\">\n                                <strong class=\"translated\" defaultText=\"Linked actions:\"></strong>\n                                <select class=\"advanced-search-selection linkedaction-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-ini-container\">\n                            <strong class=\"translated\" defaultText=\"Initiative:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-ini\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-ini advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-ini\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-ini advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-hull-container\">\n                            <strong class=\"translated\" defaultText=\"Hull:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-hull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-hull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-hull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-hull advanced-search-number-input\" value=\"12\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-shields-container\">\n                            <strong class=\"translated\" defaultText=\"Shields:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-shields\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-shields advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-shields\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-shields advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-agility-container\">\n                            <strong class=\"translated\" defaultText=\"Agility:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-agility\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-agility advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-agility\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-agility advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-base-size-container\">\n                            <strong class=\"translated\" defaultText=\"Base size:\"></strong>\n                            <label class = \"advanced-search-label toggle-small-base\">\n                                <input type=\"checkbox\" class=\"small-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Small\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-medium-base\">\n                                <input type=\"checkbox\" class=\"medium-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Medium\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-large-base\">\n                                <input type=\"checkbox\" class=\"large-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Large\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attack-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-frontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attack\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attack advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attack\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attack advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-singleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackdt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-doubleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackdt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackdt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackdt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackdt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackf-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-fullfrontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackf\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackf advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackf\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackf advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackb-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-reararc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackb\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackb advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackb\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackb advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackbull-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-bullseyearc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackbull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackbull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackbull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackbull advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container other-stuff-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Other Stuff\"></h6>\n                        <div class = \"advanced-search-slot-used-container\">\n                            <label class = \"advanced-search-label select-used-slots\">\n                                <strong class=\"translated\" defaultText=\"Used slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-slot-used-second-slot-container\">\n                            <label class = \"advanced-search-label select-used-second-slots\">\n                                <strong class=\"translated\" defaultText=\"Used double-slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-second-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-a-second-slot\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-a-second-slot-checkbox\" /> <span class=\"translated\" defaultText=\"Only upgrades requiring multiple slots\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-charge-container\">\n                            <strong class=\"translated\" defaultText=\"Charges:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-charge\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-charge advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-charge\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-charge advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Recurring\"></span>\n                            </label>\n                            <label class = \"advanced-search-label has-not-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-not-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Not recurring\"></span>\n                            </label>\n                        <div class = \"advanced-search-force-container\">\n                            <strong class=\"translated\" defaultText=\"Force:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-force\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-force advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-force\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-force advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-4 card-selecting-area\">\n            <span class=\"translate sort-cards-by\" defaultText=\"Sort cards by\"></span><span class=\"translated\" defaultText=\"Sort by\">:</span> <select class=\"sort-by\">\n                <option value=\"name\" class=\"translated\" defaultText=\"Name\"></option>\n                <option value=\"source\" class=\"translated\" defaultText=\"Source\"></option>\n                <option value=\"type-by-points\" class=\"translated\" defaultText=\"Type (by Points)\"></option>\n                <option value=\"type-by-name\" selected=\"1\" class=\"translated\" defaultText=\"Type (by Name)\" selected=\"selected\">" + (exportObj.translate('ui', 'Type (by Name)')) + "</option>\n            </select>\n            <div class=\"card-selector-container\">\n\n            </div>\n            <br>\n            <div class=\"card-viewer-conditions-container\">\n            </div>\n        </div>\n        <div class=\"col-md-4\">\n            <div class=\"card-viewer-container\">\n            </div>\n        </div>\n    </div>\n</div>"));
     this.card_selector_container = $(this.container.find('.xwing-card-browser .card-selector-container'));
     this.card_viewer_container = $(this.container.find('.xwing-card-browser .card-viewer-container'));
     this.card_viewer_container.append($.trim(exportObj.builders[0].createInfoContainerUI(false)));
@@ -1261,11 +1261,33 @@ exportObj.CardBrowser = (function() {
     this.slot_available_selection.select2({
       minimumResultsForSearch: $.isMobile() ? -1 : 0
     });
+    this.keyword_available_selection = $(this.container.find('.xwing-card-browser select.keyword-available-selection'));
+    keyword_list = [];
+    for (keywords in exportObj.pilotsByKeyword) {
+      keyword_items = keywords.split(",");
+      for (_i = 0, _len = keyword_items.length; _i < _len; _i++) {
+        i = keyword_items[_i];
+        if ((keyword_list.indexOf(i) < 0) && (i !== "undefined")) {
+          keyword_list.push(i);
+        }
+      }
+    }
+    keyword_list.sort();
+    for (_j = 0, _len1 = keyword_list.length; _j < _len1; _j++) {
+      keyword_item = keyword_list[_j];
+      opt = $(document.createElement('OPTION'));
+      opt.val(keyword_item);
+      opt.text(exportObj.translate('keyword', keyword_item));
+      this.keyword_available_selection.append(opt);
+    }
+    this.keyword_available_selection.select2({
+      minimumResultsForSearch: $.isMobile() ? -1 : 0
+    });
     this.duplicateslots = ($(this.container.find('.xwing-card-browser .duplicate-slots-checkbox')))[0];
     this.action_available_selection = $(this.container.find('.xwing-card-browser select.action-available-selection'));
     _ref1 = ["Evade", "Focus", "Lock", "Boost", "Barrel Roll", "Calculate", "Reinforce", "Rotate Arc", "Coordinate", "Slam", "Reload", "Jam"].sort();
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      action = _ref1[_i];
+    for (_k = 0, _len2 = _ref1.length; _k < _len2; _k++) {
+      action = _ref1[_k];
       opt = $(document.createElement('OPTION'));
       opt.text(exportObj.translate('action', action));
       opt.val(action);
@@ -1276,8 +1298,8 @@ exportObj.CardBrowser = (function() {
     });
     this.linkedaction_available_selection = $(this.container.find('.xwing-card-browser select.linkedaction-available-selection'));
     _ref2 = ["Evade", "Focus", "Lock", "Boost", "Barrel Roll", "Calculate", "Reinforce", "Rotate Arc", "Coordinate", "Slam", "Reload", "Jam"].sort();
-    for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
-      linkedaction = _ref2[_j];
+    for (_l = 0, _len3 = _ref2.length; _l < _len3; _l++) {
+      linkedaction = _ref2[_l];
       opt = $(document.createElement('OPTION'));
       opt.text(exportObj.translate('action', linkedaction));
       opt.val(linkedaction);
@@ -1412,6 +1434,11 @@ exportObj.CardBrowser = (function() {
       };
     })(this);
     this.slot_available_selection[0].onchange = (function(_this) {
+      return function() {
+        return _this.renderList(_this.sort_selector.val());
+      };
+    })(this);
+    this.keyword_available_selection[0].onchange = (function(_this) {
       return function() {
         return _this.renderList(_this.sort_selector.val());
       };
@@ -1883,7 +1910,7 @@ exportObj.CardBrowser = (function() {
   };
 
   CardBrowser.prototype.checkSearchCriteria = function(card) {
-    var action, actions, adds, all_factions, faction, faction_matches, hasDuplicates, hyperspace_legal, matches, matching_points, name, new_actions, owned_copies, pilot, pilots, points, required_actions, required_linked_actions, required_slots, s, search_text, selected_factions, ship, size_matches, slot, slots, text_in_ship, text_search, used_second_slots, used_slots, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len15, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s, _t, _u, _v, _w, _x;
+    var action, actions, adds, all_factions, faction, faction_matches, hasDuplicates, hyperspace_legal, keyword, keywords, matches, matching_points, name, new_actions, owned_copies, pilot, pilots, points, required_actions, required_keywords, required_linked_actions, required_slots, s, search_text, selected_factions, ship, size_matches, slot, slots, text_in_ship, text_search, used_second_slots, used_slots, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len13, _len14, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s, _t, _u, _v, _w;
     search_text = this.card_search_text.value.toLowerCase();
     text_search = card.name.toLowerCase().indexOf(search_text) > -1 || (card.data.text && card.data.text.toLowerCase().indexOf(search_text)) > -1 || (card.display_name && card.display_name.toLowerCase().indexOf(search_text) > -1);
     if (!text_search) {
@@ -1974,26 +2001,8 @@ exportObj.CardBrowser = (function() {
     required_slots = this.slot_available_selection.val();
     if (required_slots.length > 0) {
       slots = card.data.slots;
-      if (card.orig_type === 'Ship') {
-        slots = [];
-        for (_m = 0, _len4 = selected_factions.length; _m < _len4; _m++) {
-          faction = selected_factions[_m];
-          if (faction !== void 0) {
-            _ref4 = exportObj.pilotsByFactionCanonicalName[faction];
-            for (name in _ref4) {
-              pilots = _ref4[name];
-              for (_n = 0, _len5 = pilots.length; _n < _len5; _n++) {
-                pilot = pilots[_n];
-                if (pilot.ship === card.data.name) {
-                  slots.push.apply(slots, pilot.slots);
-                }
-              }
-            }
-          }
-        }
-      }
-      for (_o = 0, _len6 = required_slots.length; _o < _len6; _o++) {
-        slot = required_slots[_o];
+      for (_m = 0, _len4 = required_slots.length; _m < _len4; _m++) {
+        slot = required_slots[_m];
         if (!(((slot === "Torpedo") || (slot === "Missile") || (slot === "Cannon")) && ((slots != null) && (__indexOf.call(slots, "HardpointShip") >= 0)))) {
           if (!((slots != null) && __indexOf.call(slots, slot) >= 0)) {
             return false;
@@ -2009,17 +2018,27 @@ exportObj.CardBrowser = (function() {
         }
       }
     }
+    required_keywords = this.keyword_available_selection.val();
+    if (required_keywords.length > 0) {
+      keywords = card.data.keyword;
+      for (_n = 0, _len5 = required_keywords.length; _n < _len5; _n++) {
+        keyword = required_keywords[_n];
+        if (!((keywords != null) && __indexOf.call(keywords, keyword) >= 0)) {
+          return false;
+        }
+      }
+    }
     required_actions = this.action_available_selection.val();
     required_linked_actions = this.linkedaction_available_selection.val();
     if ((required_actions.length > 0) || (required_linked_actions.length > 0)) {
-      actions = (_ref5 = card.data.actions) != null ? _ref5 : [];
+      actions = (_ref4 = card.data.actions) != null ? _ref4 : [];
       if (card.orig_type === 'Pilot') {
-        actions = (_ref6 = (_ref7 = card.data.ship_override) != null ? _ref7.actions : void 0) != null ? _ref6 : exportObj.ships[card.data.ship].actions;
-        actions = actions.concat((_ref8 = (_ref9 = card.data.ship_override) != null ? _ref9.actionsred : void 0) != null ? _ref8 : exportObj.ships[card.data.ship].actionsred);
+        actions = (_ref5 = (_ref6 = card.data.ship_override) != null ? _ref6.actions : void 0) != null ? _ref5 : exportObj.ships[card.data.ship].actions;
+        actions = actions.concat((_ref7 = (_ref8 = card.data.ship_override) != null ? _ref8.actionsred : void 0) != null ? _ref7 : exportObj.ships[card.data.ship].actionsred);
         if ((card.data.keyword != null) && (__indexOf.call(card.data.keyword, "Droid") >= 0)) {
           new_actions = [];
-          for (_p = 0, _len7 = actions.length; _p < _len7; _p++) {
-            action = actions[_p];
+          for (_o = 0, _len6 = actions.length; _o < _len6; _o++) {
+            action = actions[_o];
             if (action != null) {
               new_actions.push(action.replace("Focus", "Calculate"));
             }
@@ -2028,17 +2047,17 @@ exportObj.CardBrowser = (function() {
         }
       }
     }
-    _ref10 = required_actions != null ? required_actions : [];
-    for (_q = 0, _len8 = _ref10.length; _q < _len8; _q++) {
-      action = _ref10[_q];
-      if (!((actions != null) && ((__indexOf.call(actions, action) >= 0) || (_ref11 = "F-" + action, __indexOf.call(actions, _ref11) >= 0) || (_ref12 = "R-" + action, __indexOf.call(actions, _ref12) >= 0)))) {
+    _ref9 = required_actions != null ? required_actions : [];
+    for (_p = 0, _len7 = _ref9.length; _p < _len7; _p++) {
+      action = _ref9[_p];
+      if (!((actions != null) && ((__indexOf.call(actions, action) >= 0) || (_ref10 = "F-" + action, __indexOf.call(actions, _ref10) >= 0) || (_ref11 = "R-" + action, __indexOf.call(actions, _ref11) >= 0)))) {
         return false;
       }
     }
-    _ref13 = required_linked_actions != null ? required_linked_actions : [];
-    for (_r = 0, _len9 = _ref13.length; _r < _len9; _r++) {
-      action = _ref13[_r];
-      if (!((actions != null) && ((_ref14 = "R> " + action, __indexOf.call(actions, _ref14) >= 0) || (_ref15 = "> " + action, __indexOf.call(actions, _ref15) >= 0)))) {
+    _ref12 = required_linked_actions != null ? required_linked_actions : [];
+    for (_q = 0, _len8 = _ref12.length; _q < _len8; _q++) {
+      action = _ref12[_q];
+      if (!((actions != null) && ((_ref13 = "R> " + action, __indexOf.call(actions, _ref13) >= 0) || (_ref14 = "> " + action, __indexOf.call(actions, _ref14) >= 0)))) {
         return false;
       }
     }
@@ -2048,9 +2067,9 @@ exportObj.CardBrowser = (function() {
       }
       if (card.data.variablepoints != null) {
         matching_points = false;
-        _ref16 = card.data.pointsarray;
-        for (_s = 0, _len10 = _ref16.length; _s < _len10; _s++) {
-          points = _ref16[_s];
+        _ref15 = card.data.pointsarray;
+        for (_r = 0, _len9 = _ref15.length; _r < _len9; _r++) {
+          points = _ref15[_r];
           if (points >= this.minimum_point_costs.value && points <= this.maximum_point_costs.value) {
             matching_points = true;
             break;
@@ -2062,13 +2081,13 @@ exportObj.CardBrowser = (function() {
       }
       if (card.orig_type === 'Ship') {
         matching_points = false;
-        for (_t = 0, _len11 = selected_factions.length; _t < _len11; _t++) {
-          faction = selected_factions[_t];
-          _ref17 = exportObj.pilotsByFactionCanonicalName[faction];
-          for (name in _ref17) {
-            pilots = _ref17[name];
-            for (_u = 0, _len12 = pilots.length; _u < _len12; _u++) {
-              pilot = pilots[_u];
+        for (_s = 0, _len10 = selected_factions.length; _s < _len10; _s++) {
+          faction = selected_factions[_s];
+          _ref16 = exportObj.pilotsByFactionCanonicalName[faction];
+          for (name in _ref16) {
+            pilots = _ref16[name];
+            for (_t = 0, _len11 = pilots.length; _t < _len11; _t++) {
+              pilot = pilots[_t];
               if (pilot.ship === card.data.name) {
                 if (pilot.points >= this.minimum_point_costs.value && pilot.points <= this.maximum_point_costs.value) {
                   matching_points = true;
@@ -2095,8 +2114,8 @@ exportObj.CardBrowser = (function() {
         return false;
       }
       matches = false;
-      for (_v = 0, _len13 = used_slots.length; _v < _len13; _v++) {
-        slot = used_slots[_v];
+      for (_u = 0, _len12 = used_slots.length; _u < _len12; _u++) {
+        slot = used_slots[_u];
         if (card.data.slot === slot) {
           matches = true;
           break;
@@ -2112,11 +2131,11 @@ exportObj.CardBrowser = (function() {
         return false;
       }
       matches = false;
-      for (_w = 0, _len14 = used_second_slots.length; _w < _len14; _w++) {
-        slot = used_second_slots[_w];
-        _ref18 = card.data.also_occupies_upgrades;
-        for (_x = 0, _len15 = _ref18.length; _x < _len15; _x++) {
-          adds = _ref18[_x];
+      for (_v = 0, _len13 = used_second_slots.length; _v < _len13; _v++) {
+        slot = used_second_slots[_v];
+        _ref17 = card.data.also_occupies_upgrades;
+        for (_w = 0, _len14 = _ref17.length; _w < _len14; _w++) {
+          adds = _ref17[_w];
           if (adds === slot) {
             matches = true;
             break;
@@ -2145,7 +2164,7 @@ exportObj.CardBrowser = (function() {
     if (card.data.charge && !card.data.recurring && !this.not_recurring_charge.checked) {
       return false;
     }
-    if (((_ref19 = exportObj.builders[7].collection) != null ? _ref19.counts : void 0) != null) {
+    if (((_ref18 = exportObj.builders[7].collection) != null ? _ref18.counts : void 0) != null) {
       owned_copies = this.getCollectionNumber(card);
       if (!(owned_copies >= this.minimum_owned_copies.value && owned_copies <= this.maximum_owned_copies.value)) {
         return false;
@@ -2490,7 +2509,7 @@ exportObj.setupTranslationSupport = function() {
                     parent: ___iced_passed_deferral
                   });
                   builder.container.trigger('xwing:beforeLanguageLoad', __iced_deferrals.defer({
-                    lineno: 2109
+                    lineno: 2132
                   }));
                   __iced_deferrals._fulfill();
                 })(_next);
@@ -3450,7 +3469,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3134
+              lineno: 3157
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4407,7 +4426,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4051
+              lineno: 4074
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4417,7 +4436,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4052
+                lineno: 4075
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -6656,7 +6675,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5673
+                  lineno: 5696
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6885,7 +6904,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5793
+                          lineno: 5816
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6935,7 +6954,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5826
+                                  lineno: 5849
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7033,7 +7052,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5884
+                      lineno: 5907
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7117,7 +7136,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5920
+                lineno: 5943
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7186,7 +7205,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5949
+              lineno: 5972
             }));
           }
         }
@@ -7275,7 +7294,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6005
+                lineno: 6028
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8544,7 +8563,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6928
+                lineno: 6951
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8703,7 +8722,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7022
+                  lineno: 7045
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8730,7 +8749,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7029
+                      lineno: 7052
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8874,7 +8893,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7104
+            lineno: 7127
           }));
         }
         __iced_deferrals._fulfill();

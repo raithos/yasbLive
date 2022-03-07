@@ -15602,7 +15602,7 @@ exportObj.basicCardData = function() {
 };
 
 exportObj.setupCommonCardData = function(basic_cards) {
-  var card, cards, condition, condition_data, condition_name, e, expansion, i, name, pilot, pilot_data, pilot_name, quickbuild_count, quickbuild_data, ship_data, ship_name, source, upgrade, upgrade_data, upgrade_name, _base, _base1, _base2, _base3, _base4, _base5, _base6, _base7, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _name, _name1, _name2, _name3, _name4, _name5, _name6, _name7, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s, _t;
+  var card, cards, condition, condition_data, condition_name, e, expansion, i, name, pilot, pilot_data, pilot_name, quickbuild_count, quickbuild_data, ship_data, ship_name, source, upgrade, upgrade_data, upgrade_name, _base, _base1, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _base9, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _name, _name1, _name2, _name3, _name4, _name5, _name6, _name7, _name8, _name9, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s, _t;
   _ref = basic_cards.pilotsById;
   for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
     pilot_data = _ref[i];
@@ -15758,18 +15758,20 @@ exportObj.setupCommonCardData = function(basic_cards) {
     throw new Error("At least one pilot shares an ID with another");
   }
   exportObj.pilotsByFactionCanonicalName = {};
+  exportObj.pilotsByKeyword = {};
   exportObj.pilotsByUniqueName = {};
   _ref14 = exportObj.pilots;
   for (pilot_name in _ref14) {
     pilot = _ref14[pilot_name];
     ((_base = ((_base1 = exportObj.pilotsByFactionCanonicalName)[_name1 = pilot.faction] != null ? _base1[_name1] : _base1[_name1] = {}))[_name = pilot.canonical_name] != null ? _base[_name] : _base[_name] = []).push(pilot);
-    ((_base2 = exportObj.pilotsByUniqueName)[_name2 = pilot.canonical_name.getXWSBaseName()] != null ? _base2[_name2] : _base2[_name2] = []).push(pilot);
+    ((_base2 = ((_base3 = exportObj.pilotsByKeyword)[_name3 = pilot.keyword] != null ? _base3[_name3] : _base3[_name3] = {}))[_name2 = pilot.canonical_name] != null ? _base2[_name2] : _base2[_name2] = []).push(pilot);
+    ((_base4 = exportObj.pilotsByUniqueName)[_name4 = pilot.canonical_name.getXWSBaseName()] != null ? _base4[_name4] : _base4[_name4] = []).push(pilot);
   }
   exportObj.pilotsByFactionXWS = {};
   _ref15 = exportObj.pilots;
   for (pilot_name in _ref15) {
     pilot = _ref15[pilot_name];
-    ((_base3 = ((_base4 = exportObj.pilotsByFactionXWS)[_name4 = pilot.faction] != null ? _base4[_name4] : _base4[_name4] = {}))[_name3 = pilot.xws] != null ? _base3[_name3] : _base3[_name3] = []).push(pilot);
+    ((_base5 = ((_base6 = exportObj.pilotsByFactionXWS)[_name6 = pilot.faction] != null ? _base6[_name6] : _base6[_name6] = {}))[_name5 = pilot.xws] != null ? _base5[_name5] : _base5[_name5] = []).push(pilot);
   }
   exportObj.upgradesById = {};
   _ref16 = exportObj.upgrades;
@@ -15794,9 +15796,9 @@ exportObj.setupCommonCardData = function(basic_cards) {
   _ref18 = exportObj.upgrades;
   for (upgrade_name in _ref18) {
     upgrade = _ref18[upgrade_name];
-    ((_base5 = exportObj.upgradesBySlotCanonicalName)[_name5 = upgrade.slot] != null ? _base5[_name5] : _base5[_name5] = {})[upgrade.canonical_name] = upgrade;
-    ((_base6 = exportObj.upgradesBySlotXWSName)[_name6 = upgrade.slot] != null ? _base6[_name6] : _base6[_name6] = {})[upgrade.xws] = upgrade;
-    ((_base7 = exportObj.upgradesBySlotUniqueName)[_name7 = upgrade.slot] != null ? _base7[_name7] : _base7[_name7] = {})[upgrade.canonical_name.getXWSBaseName()] = upgrade;
+    ((_base7 = exportObj.upgradesBySlotCanonicalName)[_name7 = upgrade.slot] != null ? _base7[_name7] : _base7[_name7] = {})[upgrade.canonical_name] = upgrade;
+    ((_base8 = exportObj.upgradesBySlotXWSName)[_name8 = upgrade.slot] != null ? _base8[_name8] : _base8[_name8] = {})[upgrade.xws] = upgrade;
+    ((_base9 = exportObj.upgradesBySlotUniqueName)[_name9 = upgrade.slot] != null ? _base9[_name9] : _base9[_name9] = {})[upgrade.canonical_name.getXWSBaseName()] = upgrade;
   }
   exportObj.conditionsById = {};
   _ref19 = exportObj.conditions;
