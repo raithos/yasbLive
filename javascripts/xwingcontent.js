@@ -6416,7 +6416,7 @@ exportObj.basicCardData = function() {
         name: "Bo-Katan Kryze",
         id: 509,
         faction: "Separatist Alliance",
-        xws: "bokatan-separatistalliance",
+        xws: "bokatankryze-separatistalliance",
         ship: "Gauntlet Fighter",
         skill: 4,
         points: 7,
@@ -6427,7 +6427,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Bo-Katan Kryze (Republic)",
         canonical_name: 'Bo-Katan Kryze'.canonicalize(),
-        xws: "bokatan",
+        xws: "bokatankryze",
         id: 510,
         faction: "Galactic Republic",
         ship: "Gauntlet Fighter",
@@ -6450,7 +6450,6 @@ exportObj.basicCardData = function() {
         slots: ["Talent", "Crew", "Gunner", "Device", "Modification", "Configuration"]
       }, {
         name: "Maul",
-        xws: "maul-gauntletfighter",
         id: 512,
         faction: "Scum and Villainy",
         ship: "Gauntlet Fighter",
@@ -10634,6 +10633,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Ahsoka Tano (Crew)",
         canonical_name: 'Ahsoka Tano'.canonicalize(),
+        xws: "ahsokatano-crew",
         id: 424,
         points: 9,
         force: 1,
@@ -10654,6 +10654,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Bo-Katan Kryze (Rebel/Scum)",
         canonical_name: 'Bo-Katan Kryze'.canonicalize(),
+        xws: "bokatankryze-rebel-scum",
         id: 426,
         points: 4,
         slot: "Crew",
@@ -10778,6 +10779,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Maul (Mandalore)",
         canonical_name: 'Maul'.canonicalize(),
+        xws: 'maul-crew',
         id: 440,
         points: 10,
         slot: "Crew",
@@ -10804,6 +10806,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Gar Saxon (Gunner)",
         canonical_name: 'Gar Saxon'.canonicalize(),
+        xws: "garsaxon-gunner",
         id: 441,
         points: 9,
         slot: "Gunner",
@@ -10822,6 +10825,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Ursa Wren (Gunner)",
         canonical_name: 'Ursa Wren'.canonicalize(),
+        xws: "ursawren-gunner",
         id: 443,
         points: 6,
         slot: "Gunner",
