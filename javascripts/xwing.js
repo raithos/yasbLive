@@ -3979,7 +3979,7 @@ exportObj.SquadBuilder = (function() {
       this.addStandardizedToList(ship);
       tot_points += ship.getPoints();
       if (ship.destroystate === 1) {
-        points_dest += Math.ceil(ship.getPoints() / 2);
+        points_dest += Math.floor(ship.getPoints() / 2);
       } else if (ship.destroystate === 2) {
         points_dest += ship.getPoints();
       }
@@ -7768,7 +7768,7 @@ Ship = (function() {
       }
       html += $.trim("</div>");
     }
-    HalfPoints = Math.ceil(this.getPoints() / 2);
+    HalfPoints = Math.floor(this.getPoints() / 2);
     Threshold = Math.floor((effective_stats['hull'] + effective_stats['shields']) / 2);
     html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Total")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Threshold")) + ": " + Threshold + "</strong> \n</div>");
     return "<div class=\"fancy-ship\">" + html + "</div>";
@@ -7797,7 +7797,7 @@ Ship = (function() {
       }
     }
     table_html += "<tr class=\"simple-ship-total\"><td colspan=\"2\">" + (this.uitranslation("Ship Total")) + ": " + (this.getPoints()) + "</td></tr>";
-    halfPoints = Math.ceil(this.getPoints() / 2);
+    halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
     table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Threshold")) + ": " + threshold + "</td></tr>";
     table_html += '<tr><td>&nbsp;</td><td></td></tr>';
@@ -7833,7 +7833,7 @@ Ship = (function() {
       simplecopy += simplecopy_upgrades.join("    ");
       simplecopy += "    \n";
     }
-    halfPoints = Math.ceil(this.getPoints() / 2);
+    halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
     simplecopy += "" + (this.uitranslation("Ship total")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Threshold")) + ": " + threshold + "    \n    \n";
     return simplecopy;

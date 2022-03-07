@@ -6469,6 +6469,7 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 7,
         pointsupg: 10,
+        keyword: ["Mandalorian"],
         slots: ["Crew", "Gunner", "Device", "Device", "Modification", "Illicit", "Configuration"]
       }, {
         name: "Rook Kast",
@@ -6479,6 +6480,7 @@ exportObj.basicCardData = function() {
         points: 7,
         pointsupg: 18,
         unique: true,
+        keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Modification", "Illicit", "Configuration"]
       }, {
         name: "Captain Hark",
@@ -6500,6 +6502,7 @@ exportObj.basicCardData = function() {
         points: 7,
         pointsupg: 10,
         unique: true,
+        keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Device", "Modification", "Configuration"]
       }, {
         name: "Gar Saxon",
@@ -6510,6 +6513,7 @@ exportObj.basicCardData = function() {
         points: 8,
         pointsupg: 20,
         unique: true,
+        keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Torpedo", "Device", "Modification", "Configuration"]
       }, {
         name: "Mandalorian Resistance Pilot",
@@ -6520,6 +6524,7 @@ exportObj.basicCardData = function() {
         points: 7,
         pointsupg: 10,
         unique: true,
+        keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Modification", "Configuration"]
       }, {
         name: '"Chopper" (Gauntlet Fighter)',
