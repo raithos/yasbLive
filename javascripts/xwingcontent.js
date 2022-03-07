@@ -19799,7 +19799,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Savage Opress": {
       display_name: "Savage Opress",
-      text: "After a friendly ship in your %FRONTARC% at range 1-2 gains a stress of strain token, you may spend 1 %FORCE%. If you do, that ship gains 1 focus token."
+      text: "After a friendly ship in your %FRONTARC% at range 1-2 gains a stress or strain token, you may spend 1 %FORCE%. If you do, that ship gains 1 focus token."
     },
     "Tal Merrik": {
       display_name: "Tal Merrik",
@@ -19827,7 +19827,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Prime Minister Almec": {
       display_name: "Prime Minister Almec",
-      text: "<strong>Setup:</strong> Equip this side faceup. %LINEBREAK% After a friendly ship at range 0-2 reveals a white maneuver, if it has no green tokens, it may gain 1 stress token to gain 1 calculate token. %LINEBREAK% During the End Phase, iif you have 2 or more stress tokens, flip this card. %LINEBREAK% <strong>Almec, Maul's Puppet</strong> %LINEBREAK% After a friendly ship at range 0-2 fully executes a maneuver, that ship may perform a %CALCULATE% or %FOCUS% action on its action bar, even while stressed."
+      text: "<strong>Setup:</strong> Equip this side faceup. %LINEBREAK% After a friendly ship at range 0-2 reveals a white maneuver, if it has no green tokens, it may gain 1 stress token to gain 1 calculate token. %LINEBREAK% During the End Phase, iif you have 2 or more stress tokens, flip this card. %LINEBREAK% <strong>Almec, Maul's Puppet</strong> %LINEBREAK% After a friendly ship at range 0-2 fully executes a red maneuver, that ship may perform a %CALCULATE% or %FOCUS% action on its action bar, even while stressed."
     },
     "Beskar Reinforced Plating": {
       text: "While you defend, if the attacker is in your %FRONTARC%, before you would be dealt a faceup damage card, you may spend 1 %CHARGE% to be dealt that card facedown instead, or spend 2 %CHARGE% to discard it instead."
