@@ -2684,7 +2684,7 @@ exportObj.basicCardData = function() {
         points: 6,
         pointsupg: 16,
         keyword: ["Bounty Hunter"],
-        slots: ["Talent", "Cannon", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification"]
+        slots: ["Talent", "Cannon", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
         name: "Trandoshan Slaver",
         id: 155,
@@ -6682,6 +6682,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Ahsoka Tano (Delta-7b)",
         canonical_name: 'Ahsoka Tano'.canonicalize(),
+        xws: "ahsokatano-delta7baethersprite",
         id: 531,
         unique: true,
         faction: "Galactic Republic",
@@ -6695,6 +6696,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Jedi Knight (Delta-7b)",
         canonical_name: 'Jedi Knight'.canonicalize(),
+        xws: "jediknight-delta7baethersprite",
         id: 532,
         faction: "Galactic Republic",
         ship: "Delta-7b Aethersprite",
@@ -6707,6 +6709,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Obi-Wan Kenobi (Delta-7b)",
         canonical_name: 'Obi-Wan Kenobi'.canonicalize(),
+        xws: "obiwankenobi-delta7baethersprite",
         id: 533,
         unique: true,
         faction: "Galactic Republic",
