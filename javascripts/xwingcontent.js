@@ -6563,7 +6563,7 @@ exportObj.basicCardData = function() {
         pointsupg: 20,
         unique: true,
         keyword: ["Droid"],
-        slots: ["Talent", "Talent", "Crew", "Crew", "Cannon", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
+        slots: ["Crew", "Crew", "Cannon", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "The Mandalorian",
         id: 522,
