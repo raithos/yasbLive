@@ -1649,7 +1649,7 @@ exportObj.CardBrowser = (function() {
               display_name: card_data.display_name,
               type: exportObj.translate('singular', type),
               data: card_data,
-              orig_type: exportObj.translate('singular', type)
+              orig_type: exportObj.translateToLang('English', 'singular', type)
             });
           }
           return _results;
@@ -1847,7 +1847,7 @@ exportObj.CardBrowser = (function() {
       this.card_viewer_container.find('tr.info-faction').show();
     }
     this.card_viewer_container.show();
-    exportObj.builders[0].showTooltip(orig_type, data, add_opts != null ? add_opts : {}, this.card_viewer_container);
+    exportObj.builders[7].showTooltip(orig_type, data, add_opts != null ? add_opts : {}, this.card_viewer_container);
     if ((data != null ? data.applies_condition : void 0) != null) {
       conditions = new Set();
       if (data.applies_condition instanceof Array) {

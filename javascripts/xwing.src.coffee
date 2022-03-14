@@ -1519,7 +1519,7 @@ class exportObj.CardBrowser
             if type == 'upgrades'
                 @all_cards = @all_cards.concat ( { name: card_data.name, display_name: card_data.display_name, type: exportObj.translate('ui', 'upgradeHeader', card_data.slot), data: card_data, orig_type: card_data.slot } for card_name, card_data of exportObj[type] )
             else
-                @all_cards = @all_cards.concat ( { name: card_data.name, display_name: card_data.display_name, type: exportObj.translate('singular', type), data: card_data, orig_type: exportObj.translate('singular', type) } for card_name, card_data of exportObj[type] )
+                @all_cards = @all_cards.concat ( { name: card_data.name, display_name: card_data.display_name, type: exportObj.translate('singular', type), data: card_data, orig_type: exportObj.translateToLang('English','singular', type) } for card_name, card_data of exportObj[type] )
 
         @types = (exportObj.translate('types', type) for type in [ 'Pilot', 'Ship' ])
         for card_name, card_data of exportObj.upgrades
@@ -1626,7 +1626,7 @@ class exportObj.CardBrowser
             @card_viewer_container.find('tr.info-faction').show() # this information is not shown in the builder, since the faction is clear there, but usefull here. 
 
         @card_viewer_container.show()
-        exportObj.builders[0].showTooltip(orig_type, data, add_opts ? {}, @card_viewer_container) # we use the render method from the squad builder, cause it works.
+        exportObj.builders[7].showTooltip(orig_type, data, add_opts ? {}, @card_viewer_container) # we use the render method from the squad builder, cause it works.
 
         # Conditions
         if data?.applies_condition?
