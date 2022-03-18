@@ -6491,7 +6491,7 @@ exportObj.basicCardData = function() {
         pointsupg: 15,
         unique: true,
         keyword: ["Mandalorian"],
-        slots: ["Talent", "Crew", "Gunner", "Modification", "Configuration"]
+        slots: ["Talent", "Crew", "Gunner", "Device", "Modification", "Configuration"]
       }, {
         name: "Imperial Super Commando",
         id: 516,
@@ -9523,7 +9523,7 @@ exportObj.basicCardData = function() {
         name: "Coaxium Hyperfuel",
         id: 310,
         slot: "Illicit",
-        points: 1,
+        points: 4,
         restrictions: [["Action", "Slam"]]
       }, {
         name: "Mag-Pulse Warheads",
