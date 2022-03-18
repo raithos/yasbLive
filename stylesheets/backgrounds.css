@@ -281,12 +281,12 @@
 .ship-delta7aethersprite {
   background-image: url("../images/delta7aethersprite0.png");
   background-repeat: no-repeat;
-  background-position: 0px -10px; }
+  background-position: 0px -20px; }
 
 .ship-delta7baethersprite {
-  background-image: url("../images/delta7aethersprite0.png");
+  background-image: url("../images/delta7baethersprite0.png");
   background-repeat: no-repeat;
-  background-position: 0px -10px; }
+  background-position: 0px -30px; }
 
 .ship-v19torrent {
   background-image: url("../images/v19torrent.png");
@@ -395,6 +395,16 @@
 
 .ship-btanr2ywing {
   background-image: url("../images/btanr2ywing.png");
+  background-repeat: no-repeat;
+  background-position: 0px -10px; }
+  
+.ship-gauntletfighter {
+  background-image: url("../images/gauntletfighter.png");
+  background-repeat: no-repeat;
+  background-position: 0px -20px; }
+  
+.ship-st70assaultship {
+  background-image: url("../images/st70assaultship.png");
   background-repeat: no-repeat;
   background-position: 0px -10px; }
   
