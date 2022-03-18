@@ -1318,7 +1318,7 @@ class exportObj.CardBrowser
 
         @card_selector_container = $ @container.find('.xwing-card-browser .card-selector-container')
         @card_viewer_container = $ @container.find('.xwing-card-browser .card-viewer-container')
-        @card_viewer_container.append $.trim exportObj.builders[0].createInfoContainerUI(false)
+        @card_viewer_container.append $.trim exportObj.builders[7].createInfoContainerUI(false)
         @card_viewer_container.hide()
         @card_viewer_conditions_container = $ @container.find('.xwing-card-browser .card-viewer-conditions-container')
         @card_viewer_conditions_container.hide()
