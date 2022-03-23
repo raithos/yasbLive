@@ -1,8 +1,8 @@
 
 /*
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
  */
 var DFL_LANGUAGE, GenericAddon, SERIALIZATION_CODE_TO_CLASS, SHOW_DEBUG_OUT_MISSING_TRANSLATIONS, SPEC_URL, SQUAD_DISPLAY_NAME_MAX_LENGTH, SQUAD_TO_XWS_URL, Ship, TYPES, URL_BASE, all, builders, byName, byPoints, conditionToHTML, exportObj, getPrimaryFaction, statAndEffectiveStat,
   __slice = [].slice,
@@ -2380,9 +2380,9 @@ exportObj.RulesBrowser = (function() {
 
 
 /*
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
  */
 
 DFL_LANGUAGE = 'English';
@@ -2587,9 +2587,9 @@ exportObj.registerBuilderForTranslation = function(builder) {
 
 
 /*
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
  */
 
 exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
@@ -3823,7 +3823,7 @@ exportObj.SquadBuilder = (function() {
             size: text.length < 144 ? 144 : 160,
             text: text
           });
-          text = "https://raithos.github.io/" + query;
+          text = "https://yasb.app/" + query;
           _this.printable_container.find('.permalink-container .qrcode').qrcode({
             render: 'div',
             ec: 'M',
@@ -6423,7 +6423,7 @@ exportObj.SquadBuilder = (function() {
       points: this.total_points,
       vendor: {
         yasb: {
-          builder: 'YASB 2.0',
+          builder: 'YASB 2.5',
           builder_url: window.location.href.split('?')[0],
           link: this.getPermaLink()
         }

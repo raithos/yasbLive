@@ -1,8 +1,8 @@
 
 /*
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
     German translation by
     - Patrick Mischke https://github.com/patschke
  */
@@ -172,7 +172,7 @@ exportObj.translations.Deutsch = {
     "Print": "Drucken",
     "Random Squad Builder Options": "Zufallsgeneratoreinstellungen",
     "Miscellaneous Settings": "Sonstige Einstellungen",
-    "View in YASB": "In YASB 2.0 öffnen",
+    "View in YASB": "In YASB 2.5 öffnen",
     "Card Search": "Kartensuche",
     "from": "von",
     "to": "bis",
@@ -184,8 +184,8 @@ exportObj.translations.Deutsch = {
     "Clone Pilot": "Pilot duplizieren",
     "Wingmates": "Flügelmänner",
     "Total": "Summe",
-    "X-Wing Squadron by YASB 2.0: ": "Staffel erstellt mit YASB 2.0",
-    "YASB advertisment": "YASB 2.0 ist ein übersichtlicher, einfach zu nutzender und quelloffener Staffeleditor für das X-Wing Miniaturenspiel von Asmodee",
+    "X-Wing Squadron by YASB 2.0: ": "Staffel erstellt mit YASB 2.5",
+    "YASB advertisment": "YASB 2.5 ist ein übersichtlicher, einfach zu nutzender und quelloffener Staffeleditor für das X-Wing Miniaturenspiel von Asmodee",
     "Points Destroyed": "Zerstörte Punkte",
     "Ship total": "Summe Schiff",
     "Ship Total": "Summe Schiff",
@@ -3617,9 +3617,9 @@ exportObj.cardLoaders.Deutsch = function() {
 
 
 /*
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
     Spanish translation by
     - Xavi G https://github.com/kharnete
  */
@@ -5447,9 +5447,9 @@ exportObj.cardLoaders['Español'] = function() {
 
 
 /*
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
 
     French translation by
     - Clément Bourgoin <c@iwzr.fr> https://github.com/iwazaru
@@ -13654,9 +13654,9 @@ exportObj.cardLoaders.Italiano = function() {
 
 
 /*
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
     Japanese translation by
     - k-keisuke
  */

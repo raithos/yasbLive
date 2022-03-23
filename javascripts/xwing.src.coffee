@@ -1,7 +1,7 @@
 ###
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
 ###
 
 exportObj = exports ? this
@@ -2033,9 +2033,9 @@ class exportObj.RulesBrowser
         return true
 
 ###
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
 ###
 
 DFL_LANGUAGE = 'English' # default language
@@ -2170,9 +2170,9 @@ exportObj.registerBuilderForTranslation = (builder) ->
     builders.push(builder) if builder not in builders
 
 ###
-    X-Wing Squad Builder 2.0
+    X-Wing Squad Builder 2.5
     Stephen Kim <raithos@gmail.com>
-    https://raithos.github.io
+    https://yasb.app
 ###
 exportObj = exports ? this
 
@@ -3596,7 +3596,7 @@ class exportObj.SquadBuilder
                     ec: 'M'
                     size: if text.length < 144 then 144 else 160
                     text: text
-                text = "https://raithos.github.io/#{query}"
+                text = "https://yasb.app/#{query}"
                 @printable_container.find('.permalink-container .qrcode').qrcode
                     render: 'div'
                     ec: 'M'
@@ -5497,7 +5497,7 @@ class exportObj.SquadBuilder
             points: @total_points
             vendor:
                 yasb:
-                    builder: 'YASB 2.0'
+                    builder: 'YASB 2.5'
                     builder_url: window.location.href.split('?')[0]
                     link: @getPermaLink()
             version: '2.5.0'
