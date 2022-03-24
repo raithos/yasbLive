@@ -2903,7 +2903,7 @@ exportObj.SquadBuilder = (function() {
     this.list_modal.tabindex = "-1";
     this.list_modal.role = "dialog";
     this.container.append(this.list_modal);
-    this.list_modal.append($.trim("<div class=\"modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <div class=\"d-print-none\">\n                <h4 class=\"modal-title\"><span class=\"squad-name\"></span> (<span class=\"total-points\"></span>)</h4>\n            </div>\n            <div class=\"d-none d-print-block\">\n                <div class=\"fancy-header\">\n                    <div class=\"squad-name\"></div>\n                    <div class=\"squad-faction\"></div>\n                    <div class=\"mask\">\n                        <div class=\"outer-circle\">\n                            <div class=\"inner-circle\">\n                                <span class=\"total-points\"></span>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"fancy-under-header\"></div>\n            </div>\n            <button type=\"button\" class=\"close d-print-none\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"fancy-list\"></div>\n            <div class=\"simple-list\"></div>\n            <div class=\"simplecopy-list\">\n                <span class=\"translated\" defaultText=\"Copy below simple text\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"reddit-list\">\n                <span class=\"translated\" defaultText=\"Copy below markdown\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"tts-list\">\n                <span class=\"translated\" defaultText=\"Copy below TTS\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"bbcode-list\">\n                <span class=\"translated\" defaultText=\"Copy below BBCode\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"html-list\">\n                <span class=\"translated\" defaultText=\"Copy below HTML\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"xws-list\">\n                <span class=\"translated\" defaultText=\"Copy below XWS\"></span>\n                <div class=\"row full-row\">\n                    <div class=\"col d-inline-block d-none d-sm-block\"><textarea></textarea><br /><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button></div>\n                    <div class=\"col d-inline-block d-none d-sm-block qrcode-container\" id=\"xws-qrcode-container\"></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"container-fluid modal-footer d-print-none\">\n            <div class=\"row full-row\">\n                <div class=\"col d-inline-block d-none d-sm-block right-col\">\n                    <label class=\"color-skip-text-checkbox\">\n                        <span class=\"translated\" defaultText=\"Skip Card Text\"></span> <input type=\"checkbox\" class=\"toggle-skip-text-print\" />\n                    </label><br />\n                    <label class=\"vertical-space-checkbox\">\n                        <span class=\"translated\" defaultText=\"Space for Cards\"></span> <input type=\"checkbox\" class=\"toggle-vertical-space\" />\n                    </label><br />\n                    <label class=\"maneuver-print-checkbox\">\n                        <span class=\"translated\" defaultText=\"Include Maneuvers Chart\"></span> <input type=\"checkbox\" class=\"toggle-maneuver-print\" />\n                    </label><br />\n                    <label class=\"expanded-shield-hull-print-checkbox\">\n                        <span class=\"translated\" defaultText=\"Expand Shield and Hull\"></span> <input type=\"checkbox\" class=\"toggle-expanded-shield-hull-print\" />\n                    </label>\n                </div>\n                <div class=\"col d-inline-block d-none d-sm-block right-col\">\n                    <label class=\"color-print-checkbox\">\n                        <span class=\"translated\" defaultText=\"Print Color\"></span> <input type=\"checkbox\" class=\"toggle-color-print\" checked=\"checked\" />\n                    </label><br />\n                    <label class=\"qrcode-checkbox\">\n                        <span class=\"translated\" defaultText=\"Include QR codes\"></span> <input type=\"checkbox\" class=\"toggle-juggler-qrcode\" checked=\"checked\" />\n                    </label><br />\n                    <label class=\"obstacles-checkbox\">\n                        <span class=\"translated\" defaultText=\"Include Obstacle Choices\"></span> <input type=\"checkbox\" class=\"toggle-obstacles\" />\n                    </label>\n                </div>\n            </div>\n            <div class=\"row btn-group list-display-mode\">\n                <button class=\"btn btn-modal select-simple-view translated\" defaultText=\"Simple\"></button>\n                <button class=\"btn btn-modal select-fancy-view d-none d-sm-block translated\" defaultText=\"Fancy\"></button>\n                <button class=\"btn btn-modal select-simplecopy-view translated\" defaultText=\"Text\"></button>\n                <button class=\"btn btn-modal select-tts-view translated\" defaultText=\"TTS\"></button>\n                <button class=\"btn btn-modal select-reddit-view translated\" defaultText=\"Reddit\"></button>\n                <button class=\"btn btn-modal select-bbcode-view translated\" defaultText=\"BBCode\"></button>\n                <button class=\"btn btn-modal select-html-view translated\" defaultText=\"HTML\"></button>\n                <button class=\"btn btn-modal select-xws-view translated\" defaultText=\"XWS\"></button>\n            </div>\n            <button class=\"btn btn-modal print-list d-none d-sm-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print\"></span></button>\n        </div>\n    </div>\n</div>"));
+    this.list_modal.append($.trim("<div class=\"modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <div class=\"d-print-none\">\n                <h4 class=\"modal-title\"><span class=\"squad-name\"></span> (<span class=\"total-points\"></span>)</h4>\n            </div>\n            <div class=\"d-none d-print-block\">\n                <div class=\"fancy-header\">\n                    <div class=\"squad-name\"></div>\n                    <div class=\"squad-faction\"></div>\n                    <div class=\"mask\">\n                        <div class=\"outer-circle\">\n                            <div class=\"inner-circle\">\n                                <span class=\"total-points\"></span>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"fancy-under-header\"></div>\n            </div>\n            <button type=\"button\" class=\"close d-print-none\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"fancy-list\"></div>\n            <div class=\"simple-list\"></div>\n            <div class=\"simplecopy-list\">\n                <span class=\"translated\" defaultText=\"Copy below simple text\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"reddit-list\">\n                <span class=\"translated\" defaultText=\"Copy below markdown\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"tts-list\">\n                <span class=\"translated\" defaultText=\"Copy below TTS\"></span>\n                <textarea></textarea><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button>\n            </div>\n            <div class=\"xws-list\">\n                <span class=\"translated\" defaultText=\"Copy below XWS\"></span>\n                <div class=\"row full-row\">\n                    <div class=\"col d-inline-block d-none d-sm-block\"><textarea></textarea><br /><button class=\"btn btn-modal btn-copy translated\" defaultText=\"Copy\"></button></div>\n                    <div class=\"col d-inline-block d-none d-sm-block qrcode-container\" id=\"xws-qrcode-container\"></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"container-fluid modal-footer d-print-none\">\n            <div class=\"row full-row\">\n                <div class=\"col d-inline-block d-none d-sm-block right-col\">\n                    <label class=\"color-skip-text-checkbox\">\n                        <span class=\"translated\" defaultText=\"Skip Card Text\"></span> <input type=\"checkbox\" class=\"toggle-skip-text-print\" />\n                    </label><br />\n                    <label class=\"vertical-space-checkbox\">\n                        <span class=\"translated\" defaultText=\"Space for Cards\"></span> <input type=\"checkbox\" class=\"toggle-vertical-space\" />\n                    </label><br />\n                    <label class=\"maneuver-print-checkbox\">\n                        <span class=\"translated\" defaultText=\"Include Maneuvers Chart\"></span> <input type=\"checkbox\" class=\"toggle-maneuver-print\" />\n                    </label><br />\n                    <label class=\"expanded-shield-hull-print-checkbox\">\n                        <span class=\"translated\" defaultText=\"Expand Shield and Hull\"></span> <input type=\"checkbox\" class=\"toggle-expanded-shield-hull-print\" />\n                    </label>\n                </div>\n                <div class=\"col d-inline-block d-none d-sm-block right-col\">\n                    <label class=\"color-print-checkbox\">\n                        <span class=\"translated\" defaultText=\"Print Color\"></span> <input type=\"checkbox\" class=\"toggle-color-print\" checked=\"checked\" />\n                    </label><br />\n                    <label class=\"qrcode-checkbox\">\n                        <span class=\"translated\" defaultText=\"Include QR codes\"></span> <input type=\"checkbox\" class=\"toggle-juggler-qrcode\" checked=\"checked\" />\n                    </label><br />\n                    <label class=\"obstacles-checkbox\">\n                        <span class=\"translated\" defaultText=\"Include Obstacle Choices\"></span> <input type=\"checkbox\" class=\"toggle-obstacles\" checked=\"checked\" />\n                    </label>\n                </div>\n            </div>\n            <div class=\"row btn-group list-display-mode\">\n                <button class=\"btn btn-modal select-simple-view translated\" defaultText=\"Simple\"></button>\n                <button class=\"btn btn-modal select-fancy-view d-none d-sm-block translated\" defaultText=\"Fancy\"></button>\n                <button class=\"btn btn-modal select-simplecopy-view translated\" defaultText=\"Text\"></button>\n                <button class=\"btn btn-modal select-reddit-view translated\" defaultText=\"Reddit\"></button>\n                <button class=\"btn btn-modal select-tts-view translated\" defaultText=\"TTS\"></button>\n                <button class=\"btn btn-modal select-xws-view translated\" defaultText=\"XWS\"></button>\n            </div>\n            <button class=\"btn btn-modal print-list d-none d-sm-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print\"></span></button>\n        </div>\n    </div>\n</div>"));
     this.fancy_container = $(this.list_modal.find('.fancy-list'));
     this.fancy_total_points_container = $(this.list_modal.find('div.modal-header .total-points'));
     this.simple_container = $(this.list_modal.find('div.modal-body .simple-list'));
@@ -2919,12 +2919,6 @@ exportObj.SquadBuilder = (function() {
     this.xws_container = $(this.list_modal.find('div.modal-body .xws-list'));
     this.xws_textarea = $(this.xws_container.find('textarea'));
     this.xws_textarea.attr('readonly', 'readonly');
-    this.bbcode_container = $(this.list_modal.find('div.modal-body .bbcode-list'));
-    this.bbcode_textarea = $(this.bbcode_container.find('textarea'));
-    this.bbcode_textarea.attr('readonly', 'readonly');
-    this.htmlview_container = $(this.list_modal.find('div.modal-body .html-list'));
-    this.html_textarea = $(this.htmlview_container.find('textarea'));
-    this.html_textarea.attr('readonly', 'readonly');
     this.toggle_vertical_space_container = $(this.list_modal.find('.vertical-space-checkbox'));
     this.toggle_color_print_container = $(this.list_modal.find('.color-print-checkbox'));
     this.toggle_color_skip_text = $(this.list_modal.find('.color-skip-text-checkbox'));
@@ -2960,8 +2954,6 @@ exportObj.SquadBuilder = (function() {
           _this.reddit_container.hide();
           _this.tts_container.hide();
           _this.xws_container.hide();
-          _this.bbcode_container.hide();
-          _this.htmlview_container.hide();
           _this.toggle_vertical_space_container.hide();
           _this.toggle_color_print_container.hide();
           _this.toggle_color_skip_text.hide();
@@ -2986,8 +2978,6 @@ exportObj.SquadBuilder = (function() {
           _this.simplecopy_container.hide();
           _this.reddit_container.hide();
           _this.tts_container.hide();
-          _this.bbcode_container.hide();
-          _this.htmlview_container.hide();
           _this.xws_container.hide();
           _this.toggle_vertical_space_container.show();
           _this.toggle_color_print_container.show();
@@ -3010,9 +3000,7 @@ exportObj.SquadBuilder = (function() {
           _this.list_display_mode = 'reddit';
           _this.reddit_container.show();
           _this.simplecopy_container.hide();
-          _this.bbcode_container.hide();
           _this.tts_container.hide();
-          _this.htmlview_container.hide();
           _this.xws_container.hide();
           _this.simple_container.hide();
           _this.fancy_container.hide();
@@ -3039,9 +3027,7 @@ exportObj.SquadBuilder = (function() {
           _this.list_display_mode = 'simplecopy';
           _this.reddit_container.hide();
           _this.simplecopy_container.show();
-          _this.bbcode_container.hide();
           _this.tts_container.hide();
-          _this.htmlview_container.hide();
           _this.xws_container.hide();
           _this.simple_container.hide();
           _this.fancy_container.hide();
@@ -3067,8 +3053,6 @@ exportObj.SquadBuilder = (function() {
           _this.select_tts_view_button.addClass('btn-inverse');
           _this.list_display_mode = 'tts';
           _this.tts_container.show();
-          _this.bbcode_container.hide();
-          _this.htmlview_container.hide();
           _this.xws_container.hide();
           _this.simple_container.hide();
           _this.simplecopy_container.hide();
@@ -3076,64 +3060,6 @@ exportObj.SquadBuilder = (function() {
           _this.fancy_container.hide();
           _this.tts_textarea.select();
           _this.tts_textarea.focus();
-          _this.toggle_vertical_space_container.hide();
-          _this.toggle_color_print_container.hide();
-          _this.toggle_color_skip_text.hide();
-          _this.toggle_maneuver_dial_container.hide();
-          _this.toggle_expanded_shield_hull_container.hide();
-          _this.toggle_qrcode_container.hide();
-          _this.toggle_obstacle_container.hide();
-          return _this.btn_print_list.disabled = true;
-        }
-      };
-    })(this));
-    this.select_bbcode_view_button = $(this.list_modal.find('.select-bbcode-view'));
-    this.select_bbcode_view_button.click((function(_this) {
-      return function(e) {
-        _this.select_bbcode_view_button.blur();
-        if (_this.list_display_mode !== 'bbcode') {
-          _this.list_modal.find('.list-display-mode .btn').removeClass('btn-inverse');
-          _this.select_bbcode_view_button.addClass('btn-inverse');
-          _this.list_display_mode = 'bbcode';
-          _this.bbcode_container.show();
-          _this.simplecopy_container.hide();
-          _this.reddit_container.hide();
-          _this.tts_container.hide();
-          _this.htmlview_container.hide();
-          _this.xws_container.hide();
-          _this.simple_container.hide();
-          _this.fancy_container.hide();
-          _this.bbcode_textarea.select();
-          _this.bbcode_textarea.focus();
-          _this.toggle_vertical_space_container.hide();
-          _this.toggle_color_print_container.hide();
-          _this.toggle_color_skip_text.hide();
-          _this.toggle_maneuver_dial_container.hide();
-          _this.toggle_expanded_shield_hull_container.hide();
-          _this.toggle_qrcode_container.hide();
-          _this.toggle_obstacle_container.hide();
-          return _this.btn_print_list.disabled = true;
-        }
-      };
-    })(this));
-    this.select_html_view_button = $(this.list_modal.find('.select-html-view'));
-    this.select_html_view_button.click((function(_this) {
-      return function(e) {
-        _this.select_html_view_button.blur();
-        if (_this.list_display_mode !== 'html') {
-          _this.list_modal.find('.list-display-mode .btn').removeClass('btn-inverse');
-          _this.select_html_view_button.addClass('btn-inverse');
-          _this.list_display_mode = 'html';
-          _this.reddit_container.hide();
-          _this.simplecopy_container.hide();
-          _this.tts_container.hide();
-          _this.bbcode_container.hide();
-          _this.htmlview_container.show();
-          _this.simple_container.hide();
-          _this.fancy_container.hide();
-          _this.xws_container.hide();
-          _this.html_textarea.select();
-          _this.html_textarea.focus();
           _this.toggle_vertical_space_container.hide();
           _this.toggle_color_print_container.hide();
           _this.toggle_color_skip_text.hide();
@@ -3427,7 +3353,7 @@ exportObj.SquadBuilder = (function() {
     this.choose_obstacles_modal.tabindex = "-1";
     this.choose_obstacles_modal.role = "dialog";
     this.container.append(this.choose_obstacles_modal);
-    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description translated' defaultText=\"Choose obstacles dialog\"></label>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"obstacle-select-container\" style=\"float:left\">\n                <select multiple class='obstacle-select' size=\"18\">\n                    <option class=\"coreasteroid0-select translated\" value=\"coreasteroid0\" defaultText=\"Core Asteroid 0\"></option>\n                    <option class=\"coreasteroid1-select translated\" value=\"coreasteroid1\" defaultText=\"Core Asteroid 1\"></option>\n                    <option class=\"coreasteroid2-select translated\" value=\"coreasteroid2\" defaultText=\"Core Asteroid 2\"></option>\n                    <option class=\"coreasteroid3-select translated\" value=\"coreasteroid3\" defaultText=\"Core Asteroid 3\"></option>\n                    <option class=\"coreasteroid4-select translated\" value=\"coreasteroid4\" defaultText=\"Core Asteroid 4\"></option>\n                    <option class=\"coreasteroid5-select translated\" value=\"coreasteroid5\" defaultText=\"Core Asteroid 5\"></option>\n                    <option class=\"yt2400debris0-select translated\" value=\"yt2400debris0\" defaultText=\"YT2400 Debris 0\"></option>\n                    <option class=\"yt2400debris1-select translated\" value=\"yt2400debris1\" defaultText=\"YT2400 Debris 1\"></option>\n                    <option class=\"yt2400debris2-select translated\" value=\"yt2400debris2\" defaultText=\"YT2400 Debris 2\"></option>\n                    <option class=\"vt49decimatordebris0-select translated\" value=\"vt49decimatordebris0\" defaultText=\"VT49 Debris 0\"></option>\n                    <option class=\"vt49decimatordebris1-select translated\" value=\"vt49decimatordebris1\" defaultText=\"VT49 Debris 1\"></option>\n                    <option class=\"vt49decimatordebris2-select translated\" value=\"vt49decimatordebris2\" defaultText=\"VT49 Debris 2\"></option>\n                    <option class=\"core2asteroid0-select translated\" value=\"core2asteroid0\" defaultText=\"Force Awakens Asteroid 0\"></option>\n                    <option class=\"core2asteroid1-select translated\" value=\"core2asteroid1\" defaultText=\"Force Awakens Asteroid 1\"></option>\n                    <option class=\"core2asteroid2-select translated\" value=\"core2asteroid2\" defaultText=\"Force Awakens Asteroid 2\"></option>\n                    <option class=\"core2asteroid3-select translated\" value=\"core2asteroid3\" defaultText=\"Force Awakens Asteroid 3\"></option>\n                    <option class=\"core2asteroid4-select translated\" value=\"core2asteroid4\" defaultText=\"Force Awakens Asteroid 4\"></option>\n                    <option class=\"core2asteroid5-select translated\" value=\"core2asteroid5\" defaultText=\"Force Awakens Asteroid 5\"></option>\n                    <option class=\"gascloud1-select translated\" value=\"gascloud1\" defaultText=\"Gas Cloud 1\"></option>\n                    <option class=\"gascloud2-select translated\" value=\"gascloud2\" defaultText=\"Gas Cloud 2\"></option>\n                    <option class=\"gascloud3-select translated\" value=\"gascloud3\" defaultText=\"Gas Cloud 3\"></option>\n                    <option class=\"gascloud4-select translated\" value=\"gascloud4\" defaultText=\"Gas Cloud 4\"></option>\n                    <option class=\"gascloud5-select translated\" value=\"gascloud5\" defaultText=\"Gas Cloud 5\"></option>\n                    <option class=\"gascloud6-select translated\" value=\"gascloud6\" defaultText=\"Gas Cloud 6\"></option>\n                </select>\n            </div>\n            <div>\n                <div class=\"obstacle-image-container\" style=\"display:none;\">\n                    <img class=\"obstacle-image\" src=\"images/core2asteroid0.png\" />\n                </div>\n                <div class=\"obstacle-sources-container\">\n                    <span class=\"info-header obstacle-sources translated\" defaultText=\"Sources:\"></span> \n                    <span class=\"info-data obstacle-sources\"></span>\n                </div>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
+    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description translated' defaultText=\"Choose obstacles dialog\"></label>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"obstacle-select-container\" style=\"float:left\">\n                <select multiple class='obstacle-select' size=\"18\">\n                    <option class=\"coreasteroid0-select translated\" value=\"coreasteroid0\" defaultText=\"Core Asteroid 0\"></option>\n                    <option class=\"coreasteroid1-select translated\" value=\"coreasteroid1\" defaultText=\"Core Asteroid 1\"></option>\n                    <option class=\"coreasteroid2-select translated\" value=\"coreasteroid2\" defaultText=\"Core Asteroid 2\"></option>\n                    <option class=\"coreasteroid3-select translated\" value=\"coreasteroid3\" defaultText=\"Core Asteroid 3\"></option>\n                    <option class=\"coreasteroid4-select translated\" value=\"coreasteroid4\" defaultText=\"Core Asteroid 4\"></option>\n                    <option class=\"coreasteroid5-select translated\" value=\"coreasteroid5\" defaultText=\"Core Asteroid 5\"></option>\n                    <option class=\"yt2400debris0-select translated\" value=\"yt2400debris0\" defaultText=\"YT2400 Debris 0\"></option>\n                    <option class=\"yt2400debris1-select translated\" value=\"yt2400debris1\" defaultText=\"YT2400 Debris 1\"></option>\n                    <option class=\"yt2400debris2-select translated\" value=\"yt2400debris2\" defaultText=\"YT2400 Debris 2\"></option>\n                    <option class=\"vt49decimatordebris0-select translated\" value=\"vt49decimatordebris0\" defaultText=\"VT49 Debris 0\"></option>\n                    <option class=\"vt49decimatordebris1-select translated\" value=\"vt49decimatordebris1\" defaultText=\"VT49 Debris 1\"></option>\n                    <option class=\"vt49decimatordebris2-select translated\" value=\"vt49decimatordebris2\" defaultText=\"VT49 Debris 2\"></option>\n                    <option class=\"core2asteroid0-select translated\" value=\"core2asteroid0\" defaultText=\"Force Awakens Asteroid 0\"></option>\n                    <option class=\"core2asteroid1-select translated\" value=\"core2asteroid1\" defaultText=\"Force Awakens Asteroid 1\"></option>\n                    <option class=\"core2asteroid2-select translated\" value=\"core2asteroid2\" defaultText=\"Force Awakens Asteroid 2\"></option>\n                    <option class=\"core2asteroid3-select translated\" value=\"core2asteroid3\" defaultText=\"Force Awakens Asteroid 3\"></option>\n                    <option class=\"core2asteroid4-select translated\" value=\"core2asteroid4\" defaultText=\"Force Awakens Asteroid 4\"></option>\n                    <option class=\"core2asteroid5-select translated\" value=\"core2asteroid5\" defaultText=\"Force Awakens Asteroid 5\"></option>\n                    <option class=\"gascloud1-select translated\" value=\"gascloud1\" defaultText=\"Gas Cloud 1\"></option>\n                    <option class=\"gascloud2-select translated\" value=\"gascloud2\" defaultText=\"Gas Cloud 2\"></option>\n                    <option class=\"gascloud3-select translated\" value=\"gascloud3\" defaultText=\"Gas Cloud 3\"></option>\n                    <option class=\"gascloud4-select translated\" value=\"gascloud4\" defaultText=\"Gas Cloud 4\"></option>\n                    <option class=\"gascloud5-select translated\" value=\"gascloud5\" defaultText=\"Gas Cloud 5\"></option>\n                    <option class=\"gascloud6-select translated\" value=\"gascloud6\" defaultText=\"Gas Cloud 6\"></option>\n                    <option class=\"pomasteroid1-select translated\" value=\"pomasteroid1\" defaultText=\"Pride of Mandalore Rock 1\"></option>\n                    <option class=\"pomasteroid2-select translated\" value=\"pomasteroid2\" defaultText=\"Pride of Mandalore Rock 2\"></option>\n                    <option class=\"pomasteroid3-select translated\" value=\"pomasteroid3\" defaultText=\"Pride of Mandalore Rock 3\"></option>\n                    <option class=\"pomdebris1-select translated\" value=\"pomdebris1\" defaultText=\"Pride of Mandalore Debris 1\"></option>\n                    <option class=\"pomdebris2-select translated\" value=\"pomdebris2\" defaultText=\"Pride of Mandalore Debris 2\"></option>\n                    <option class=\"pomdebris3-select translated\" value=\"pomdebris3\" defaultText=\"Pride of Mandalore Debris 3\"></option>\n                </select>\n            </div>\n            <div>\n                <div class=\"obstacle-image-container\" style=\"display:none;\">\n                    <img class=\"obstacle-image\" src=\"images/core2asteroid0.png\" />\n                </div>\n                <div class=\"obstacle-sources-container\">\n                    <span class=\"info-header obstacle-sources translated\" defaultText=\"Sources:\"></span> \n                    <span class=\"info-data obstacle-sources\"></span>\n                </div>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
     this.obstacles_select = this.choose_obstacles_modal.find('.obstacle-select');
     this.obstacles_select_image = this.choose_obstacles_modal.find('.obstacle-image-container');
     this.obstacles_select_sources = this.choose_obstacles_modal.find('.info-data.obstacle-sources');
@@ -3469,7 +3395,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3157
+              lineno: 3086
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -3734,7 +3660,7 @@ exportObj.SquadBuilder = (function() {
     })(this));
     this.print_list_button.click((function(_this) {
       return function(e) {
-        var container, expanded_hull_and_shield, faction, query, ship, text, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref2, _ref3;
+        var container, expanded_hull_and_shield, faction, obstaclelist, obstaclename, obstacles, query, ship, text, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref, _ref1, _ref2, _ref3;
         e.preventDefault();
         _this.printable_container.find('.printable-header').html(_this.list_modal.find('.modal-header').html());
         _this.printable_container.find('.printable-body').text('');
@@ -3801,7 +3727,7 @@ exportObj.SquadBuilder = (function() {
         if (_this.isEpic) {
           _this.printable_container.find('.squad-name').append(" <i class=\"xwing-miniatures-font xwing-miniatures-font-energy\"></i>");
         }
-        _this.printable_container.find('.printable-body').append($.trim("<div class=\"version\"><span class=\"translated\" defaultText=\"Points Version:\"></span> 2.5.0 03/01/2022</div>"));
+        _this.printable_container.find('.printable-body').append($.trim("<div class=\"version\">Points Version: 2.5.0 03/01/2022</div>"));
         if ($.trim(_this.notes.val()) !== '') {
           _this.printable_container.find('.printable-body').append($.trim("<h5 class=\"print-notes translated\" defaultText=\"Notes:\"></h5>\n<pre class=\"print-notes\"></pre>"));
           _this.printable_container.find('.printable-body pre.print-notes').text(_this.notes.val());
@@ -3811,7 +3737,13 @@ exportObj.SquadBuilder = (function() {
         _this.printable_container.find('.printable-body').append($.trim("<div class=\"print-conditions\"></div>"));
         _this.printable_container.find('.printable-body .print-conditions').html(_this.condition_container.html());
         if (_this.list_modal.find('.toggle-obstacles').prop('checked')) {
-          _this.printable_container.find('.printable-body').append($.trim("<div class=\"obstacles\">\n    <div class=\"translated\" defaultText=\"Mark obstacles\"></div>\n    <img class=\"obstacle-silhouettes\" src=\"images/xws-obstacles.png\" />\n</div>"));
+          obstacles = _this.getObstacles();
+          obstaclelist = "";
+          for (_m = 0, _len4 = obstacles.length; _m < _len4; _m++) {
+            obstaclename = obstacles[_m];
+            obstaclelist += "<img class=\"obstacle-silhouettes\" src=\"images/" + obstaclename + ".png\" />";
+          }
+          _this.printable_container.find('.printable-body').append($.trim("<div class=\"obstacles\">\n    <div>Chosen Obstacles:<br>" + obstaclelist + "</div>\n</div>"));
         }
         query = _this.getPermaLinkParams(['sn', 'obs']);
         if ((query != null) && _this.list_modal.find('.toggle-juggler-qrcode').prop('checked')) {
@@ -4103,14 +4035,12 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.updatePrintAndExportTexts = function() {
-    var bbcode_ships, htmlview_ships, obstacle, obstacles, reddit_ships, ship, simplecopy_ships, tts_obstacles, tts_ships, _i, _j, _len, _len1, _ref;
+    var obstacle, obstacles, reddit_ships, ship, simplecopy_ships, tts_obstacles, tts_ships, _i, _j, _len, _len1, _ref;
     this.fancy_container.text('');
     this.simple_container.html('<table class="simple-table"></table>');
     simplecopy_ships = [];
     reddit_ships = [];
     tts_ships = [];
-    bbcode_ships = [];
-    htmlview_ships = [];
     _ref = this.ships;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       ship = _ref[_i];
@@ -4120,11 +4050,8 @@ exportObj.SquadBuilder = (function() {
         simplecopy_ships.push(ship.toSimpleCopy());
         reddit_ships.push(ship.toRedditText());
         tts_ships.push(ship.toTTSText());
-        bbcode_ships.push(ship.toBBCode());
-        htmlview_ships.push(ship.toSimpleHTML());
       }
     }
-    this.htmlview_container.find('textarea').val($.trim("" + (htmlview_ships.join('<br />')) + "\n<br />\n<b><i>Total: " + this.total_points + "</i></b>\n<br />\n<a href=\"" + (this.getPermaLink()) + "\">" + (this.uitranslation("View in YASB")) + "</a>"));
     this.reddit_container.find('textarea').val($.trim("" + (reddit_ships.join("    \n")) + "    \n**" + (this.uitranslation('Total')) + ":** *" + this.total_points + "*    \n    \n[" + (this.uitranslation('View in YASB')) + "](" + (this.getPermaLink()) + ")"));
     this.simplecopy_container.find('textarea').val($.trim("" + (simplecopy_ships.join("")) + "    \n" + (this.uitranslation('Total')) + ": " + this.total_points + "    \n    \n" + (this.uitranslation('View in YASB')) + ": " + (this.getPermaLink())));
     obstacles = this.getObstacles();
@@ -4143,13 +4070,12 @@ exportObj.SquadBuilder = (function() {
     this.tts_textarea.val($.trim("" + (tts_ships.join(""))));
     this.xws_textarea.val($.trim(JSON.stringify(this.toXWS())));
     $('#xws-qrcode-container').text('');
-    $('#xws-qrcode-container').qrcode({
+    return $('#xws-qrcode-container').qrcode({
       render: 'canvas',
       text: JSON.stringify(this.toMinimalXWS()),
       ec: 'L',
       size: 128
     });
-    return this.bbcode_container.find('textarea').val($.trim("" + (bbcode_ships.join("\n\n")) + "\n[b][i]" + (this.uitranslation('Total')) + ": " + this.total_points + "[/i][/b]\n\n[url=" + (this.getPermaLink()) + "]" + (this.uitranslation('View in YASB')) + "[/url]"));
   };
 
   SquadBuilder.prototype.removeAllShips = function() {
@@ -4302,8 +4228,6 @@ exportObj.SquadBuilder = (function() {
       this.select_xws_view_button.addClass('btn-inverse');
       this.list_display_mode = 'xws';
       this.xws_container.show();
-      this.bbcode_container.hide();
-      this.htmlview_container.hide();
       this.simple_container.hide();
       this.simplecopy_container.hide();
       this.reddit_container.hide();
@@ -4426,7 +4350,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4074
+              lineno: 3994
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4436,7 +4360,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4075
+                lineno: 3995
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -6675,7 +6599,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5696
+                  lineno: 5616
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6904,7 +6828,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5816
+                          lineno: 5736
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6954,7 +6878,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5849
+                                  lineno: 5769
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7052,7 +6976,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5907
+                      lineno: 5827
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7136,7 +7060,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5943
+                lineno: 5863
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7205,7 +7129,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5972
+              lineno: 5892
             }));
           }
         }
@@ -7294,7 +7218,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6028
+                lineno: 5948
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -7789,7 +7713,7 @@ Ship = (function() {
     }
     HalfPoints = Math.floor(this.getPoints() / 2);
     Threshold = Math.floor((effective_stats['hull'] + effective_stats['shields']) / 2);
-    html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Total")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Threshold")) + ": " + Threshold + "</strong> \n</div>");
+    html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + "/" + this.pilot.pointsupg + "), " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Damage Threshold")) + ": " + Threshold + "</strong> \n</div>");
     return "<div class=\"fancy-ship\">" + html + "</div>";
   };
 
@@ -7815,10 +7739,10 @@ Ship = (function() {
         table_html += upgrade.toTableRow(points);
       }
     }
-    table_html += "<tr class=\"simple-ship-total\"><td colspan=\"2\">" + (this.uitranslation("Ship Total")) + ": " + (this.getPoints()) + "</td></tr>";
+    table_html += "<tr class=\"simple-ship-total\"><td colspan=\"2\">" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "</td></tr>";
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Threshold")) + ": " + threshold + "</td></tr>";
+    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + "/" + this.pilot.pointsupg + ") " + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "</td></tr>";
     table_html += '<tr><td>&nbsp;</td><td></td></tr>';
     return table_html;
   };
@@ -7854,12 +7778,12 @@ Ship = (function() {
     }
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    simplecopy += "" + (this.uitranslation("Ship total")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Threshold")) + ": " + threshold + "    \n    \n";
+    simplecopy += "" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + "/" + this.pilot.pointsupg + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "    \n    \n";
     return simplecopy;
   };
 
   Ship.prototype.toRedditText = function() {
-    var points, reddit, reddit_upgrades, slotted_upgrades, upgrade, upgrade_reddit, _i, _len;
+    var halfPoints, points, reddit, reddit_upgrades, slotted_upgrades, threshold, upgrade, upgrade_reddit, _i, _len;
     reddit = "**" + this.pilot.name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + ")**    \n";
     slotted_upgrades = (function() {
       var _i, _len, _ref, _results;
@@ -7874,6 +7798,8 @@ Ship = (function() {
       return _results;
     }).call(this);
     if (slotted_upgrades.length > 0) {
+      halfPoints = Math.floor(this.getPoints() / 2);
+      threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
       reddit += "    ";
       reddit_upgrades = [];
       for (_i = 0, _len = slotted_upgrades.length; _i < _len; _i++) {
@@ -7885,7 +7811,7 @@ Ship = (function() {
         }
       }
       reddit += reddit_upgrades.join("    ");
-      reddit += "&nbsp;*" + (this.uitranslation("Ship total")) + ": (" + (this.getPoints()) + ")*    \n";
+      reddit += "&nbsp;*" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + "/" + this.pilot.pointsupg + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "*    \n";
     }
     return reddit;
   };
@@ -7915,65 +7841,6 @@ Ship = (function() {
       }
     }
     return tts += " / ";
-  };
-
-  Ship.prototype.toBBCode = function() {
-    var bbcode, bbcode_upgrades, points, slotted_upgrades, upgrade, upgrade_bbcode, _i, _len;
-    bbcode = "[b]" + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + ")[/b]";
-    slotted_upgrades = (function() {
-      var _i, _len, _ref, _results;
-      _ref = this.upgrades;
-      _results = [];
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        upgrade = _ref[_i];
-        if (upgrade.data != null) {
-          _results.push(upgrade);
-        }
-      }
-      return _results;
-    }).call(this);
-    if (slotted_upgrades.length > 0) {
-      bbcode += "\n";
-      bbcode_upgrades = [];
-      for (_i = 0, _len = slotted_upgrades.length; _i < _len; _i++) {
-        upgrade = slotted_upgrades[_i];
-        points = upgrade.getPoints();
-        upgrade_bbcode = upgrade.toBBCode(points);
-        if (upgrade_bbcode != null) {
-          bbcode_upgrades.push(upgrade_bbcode);
-        }
-      }
-      bbcode += bbcode_upgrades.join("\n");
-    }
-    return bbcode;
-  };
-
-  Ship.prototype.toSimpleHTML = function() {
-    var html, points, slotted_upgrades, upgrade, upgrade_html, _i, _len;
-    html = "<b>" + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + ")</b><br />";
-    slotted_upgrades = (function() {
-      var _i, _len, _ref, _results;
-      _ref = this.upgrades;
-      _results = [];
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        upgrade = _ref[_i];
-        if (upgrade.data != null) {
-          _results.push(upgrade);
-        }
-      }
-      return _results;
-    }).call(this);
-    if (slotted_upgrades.length > 0) {
-      for (_i = 0, _len = slotted_upgrades.length; _i < _len; _i++) {
-        upgrade = slotted_upgrades[_i];
-        points = upgrade.getPoints();
-        upgrade_html = upgrade.toSimpleHTML(points);
-        if (upgrade_html != null) {
-          html += upgrade_html;
-        }
-      }
-    }
-    return html;
   };
 
   Ship.prototype.toSerialized = function() {
@@ -8563,7 +8430,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6951
+                lineno: 6846
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8722,7 +8589,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7045
+                  lineno: 6940
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8749,7 +8616,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7052
+                      lineno: 6947
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8893,7 +8760,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7127
+            lineno: 7022
           }));
         }
         __iced_deferrals._fulfill();
@@ -9061,22 +8928,6 @@ GenericAddon = (function() {
       return "" + (exportObj.toTTS(this.data.name));
     } else {
       return null;
-    }
-  };
-
-  GenericAddon.prototype.toBBCode = function(points) {
-    if (this.data != null) {
-      return "[i]" + (this.data.display_name ? this.data.display_name : this.data.name) + " (" + points + ")[/i]";
-    } else {
-      return null;
-    }
-  };
-
-  GenericAddon.prototype.toSimpleHTML = function(points) {
-    if (this.data != null) {
-      return "<i>" + (this.data.display_name ? this.data.display_name : this.data.name) + " (" + points + ")</i><br />";
-    } else {
-      return '';
     }
   };
 

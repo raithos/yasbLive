@@ -28816,6 +28816,30 @@ exportObj.manifestByExpansion = {
       name: 'Overtuned Modulators',
       type: 'upgrade',
       count: 2
+    }, {
+      name: 'pomasteroid1',
+      type: 'obstacle',
+      count: 1
+    }, {
+      name: 'pomasteroid2',
+      type: 'obstacle',
+      count: 1
+    }, {
+      name: 'pomasteroid3',
+      type: 'obstacle',
+      count: 1
+    }, {
+      name: 'pomdebris1',
+      type: 'obstacle',
+      count: 1
+    }, {
+      name: 'pomdebris2',
+      type: 'obstacle',
+      count: 1
+    }, {
+      name: 'pomdebris3',
+      type: 'obstacle',
+      count: 1
     }
   ],
   "Razor Crest Expansion Pack": [

@@ -2542,14 +2542,6 @@ class exportObj.SquadBuilder
                     <span class="translated" defaultText="Copy below TTS"></span>
                     <textarea></textarea><button class="btn btn-modal btn-copy translated" defaultText="Copy"></button>
                 </div>
-                <div class="bbcode-list">
-                    <span class="translated" defaultText="Copy below BBCode"></span>
-                    <textarea></textarea><button class="btn btn-modal btn-copy translated" defaultText="Copy"></button>
-                </div>
-                <div class="html-list">
-                    <span class="translated" defaultText="Copy below HTML"></span>
-                    <textarea></textarea><button class="btn btn-modal btn-copy translated" defaultText="Copy"></button>
-                </div>
                 <div class="xws-list">
                     <span class="translated" defaultText="Copy below XWS"></span>
                     <div class="row full-row">
@@ -2582,7 +2574,7 @@ class exportObj.SquadBuilder
                             <span class="translated" defaultText="Include QR codes"></span> <input type="checkbox" class="toggle-juggler-qrcode" checked="checked" />
                         </label><br />
                         <label class="obstacles-checkbox">
-                            <span class="translated" defaultText="Include Obstacle Choices"></span> <input type="checkbox" class="toggle-obstacles" />
+                            <span class="translated" defaultText="Include Obstacle Choices"></span> <input type="checkbox" class="toggle-obstacles" checked="checked" />
                         </label>
                     </div>
                 </div>
@@ -2590,10 +2582,8 @@ class exportObj.SquadBuilder
                     <button class="btn btn-modal select-simple-view translated" defaultText="Simple"></button>
                     <button class="btn btn-modal select-fancy-view d-none d-sm-block translated" defaultText="Fancy"></button>
                     <button class="btn btn-modal select-simplecopy-view translated" defaultText="Text"></button>
-                    <button class="btn btn-modal select-tts-view translated" defaultText="TTS"></button>
                     <button class="btn btn-modal select-reddit-view translated" defaultText="Reddit"></button>
-                    <button class="btn btn-modal select-bbcode-view translated" defaultText="BBCode"></button>
-                    <button class="btn btn-modal select-html-view translated" defaultText="HTML"></button>
+                    <button class="btn btn-modal select-tts-view translated" defaultText="TTS"></button>
                     <button class="btn btn-modal select-xws-view translated" defaultText="XWS"></button>
                 </div>
                 <button class="btn btn-modal print-list d-none d-sm-block"><i class="fa fa-print"></i>&nbsp;<span class="translated" defaultText="Print"></span></button>
@@ -2616,12 +2606,6 @@ class exportObj.SquadBuilder
         @xws_container = $ @list_modal.find('div.modal-body .xws-list')
         @xws_textarea = $ @xws_container.find('textarea')
         @xws_textarea.attr 'readonly', 'readonly'
-        @bbcode_container = $ @list_modal.find('div.modal-body .bbcode-list')
-        @bbcode_textarea = $ @bbcode_container.find('textarea')
-        @bbcode_textarea.attr 'readonly', 'readonly'
-        @htmlview_container = $ @list_modal.find('div.modal-body .html-list')
-        @html_textarea = $ @htmlview_container.find('textarea')
-        @html_textarea.attr 'readonly', 'readonly'
         @toggle_vertical_space_container = $ @list_modal.find('.vertical-space-checkbox')
         @toggle_color_print_container = $ @list_modal.find('.color-print-checkbox')
         @toggle_color_skip_text = $ @list_modal.find('.color-skip-text-checkbox')
@@ -2654,8 +2638,6 @@ class exportObj.SquadBuilder
                 @reddit_container.hide()
                 @tts_container.hide()
                 @xws_container.hide()
-                @bbcode_container.hide()
-                @htmlview_container.hide()
                 @toggle_vertical_space_container.hide()
                 @toggle_color_print_container.hide()
                 @toggle_color_skip_text.hide()
@@ -2677,8 +2659,6 @@ class exportObj.SquadBuilder
                 @simplecopy_container.hide()
                 @reddit_container.hide()
                 @tts_container.hide()
-                @bbcode_container.hide()
-                @htmlview_container.hide()
                 @xws_container.hide()
                 @toggle_vertical_space_container.show()
                 @toggle_color_print_container.show()
@@ -2698,9 +2678,7 @@ class exportObj.SquadBuilder
                 @list_display_mode = 'reddit'
                 @reddit_container.show()
                 @simplecopy_container.hide()
-                @bbcode_container.hide()
                 @tts_container.hide()
-                @htmlview_container.hide()
                 @xws_container.hide()
                 @simple_container.hide()
                 @fancy_container.hide()
@@ -2724,9 +2702,7 @@ class exportObj.SquadBuilder
                 @list_display_mode = 'simplecopy'
                 @reddit_container.hide()
                 @simplecopy_container.show()
-                @bbcode_container.hide()
                 @tts_container.hide()
-                @htmlview_container.hide()
                 @xws_container.hide()
                 @simple_container.hide()
                 @fancy_container.hide()
@@ -2750,8 +2726,6 @@ class exportObj.SquadBuilder
                 @select_tts_view_button.addClass 'btn-inverse'
                 @list_display_mode = 'tts'
                 @tts_container.show()
-                @bbcode_container.hide()
-                @htmlview_container.hide()
                 @xws_container.hide()
                 @simple_container.hide()
                 @simplecopy_container.hide()
@@ -2768,57 +2742,6 @@ class exportObj.SquadBuilder
                 @toggle_obstacle_container.hide()
                 @btn_print_list.disabled = true;
 
-        @select_bbcode_view_button = $ @list_modal.find('.select-bbcode-view')
-        @select_bbcode_view_button.click (e) =>
-            @select_bbcode_view_button.blur()
-            unless @list_display_mode == 'bbcode'
-                @list_modal.find('.list-display-mode .btn').removeClass 'btn-inverse'
-                @select_bbcode_view_button.addClass 'btn-inverse'
-                @list_display_mode = 'bbcode'
-                @bbcode_container.show()
-                @simplecopy_container.hide()
-                @reddit_container.hide()
-                @tts_container.hide()
-                @htmlview_container.hide()
-                @xws_container.hide()
-                @simple_container.hide()
-                @fancy_container.hide()
-                @bbcode_textarea.select()
-                @bbcode_textarea.focus()
-                @toggle_vertical_space_container.hide()
-                @toggle_color_print_container.hide()
-                @toggle_color_skip_text.hide()
-                @toggle_maneuver_dial_container.hide()
-                @toggle_expanded_shield_hull_container.hide()
-                @toggle_qrcode_container.hide()
-                @toggle_obstacle_container.hide()
-                @btn_print_list.disabled = true;
-
-        @select_html_view_button = $ @list_modal.find('.select-html-view')
-        @select_html_view_button.click (e) =>
-            @select_html_view_button.blur()
-            unless @list_display_mode == 'html'
-                @list_modal.find('.list-display-mode .btn').removeClass 'btn-inverse'
-                @select_html_view_button.addClass 'btn-inverse'
-                @list_display_mode = 'html'
-                @reddit_container.hide()
-                @simplecopy_container.hide()
-                @tts_container.hide()
-                @bbcode_container.hide()
-                @htmlview_container.show()
-                @simple_container.hide()
-                @fancy_container.hide()
-                @xws_container.hide()
-                @html_textarea.select()
-                @html_textarea.focus()
-                @toggle_vertical_space_container.hide()
-                @toggle_color_print_container.hide()
-                @toggle_color_skip_text.hide()
-                @toggle_maneuver_dial_container.hide()
-                @toggle_expanded_shield_hull_container.hide()
-                @toggle_qrcode_container.hide()
-                @toggle_obstacle_container.hide()
-                @btn_print_list.disabled = true;
 
         @select_xws_view_button = $ @list_modal.find('.select-xws-view')
         @select_xws_view_button.click (e) =>
@@ -3110,6 +3033,12 @@ class exportObj.SquadBuilder
                         <option class="gascloud4-select translated" value="gascloud4" defaultText="Gas Cloud 4"></option>
                         <option class="gascloud5-select translated" value="gascloud5" defaultText="Gas Cloud 5"></option>
                         <option class="gascloud6-select translated" value="gascloud6" defaultText="Gas Cloud 6"></option>
+                        <option class="pomasteroid1-select translated" value="pomasteroid1" defaultText="Pride of Mandalore Rock 1"></option>
+                        <option class="pomasteroid2-select translated" value="pomasteroid2" defaultText="Pride of Mandalore Rock 2"></option>
+                        <option class="pomasteroid3-select translated" value="pomasteroid3" defaultText="Pride of Mandalore Rock 3"></option>
+                        <option class="pomdebris1-select translated" value="pomdebris1" defaultText="Pride of Mandalore Debris 1"></option>
+                        <option class="pomdebris2-select translated" value="pomdebris2" defaultText="Pride of Mandalore Debris 2"></option>
+                        <option class="pomdebris3-select translated" value="pomdebris3" defaultText="Pride of Mandalore Debris 3"></option>
                     </select>
                 </div>
                 <div>
@@ -3550,7 +3479,7 @@ class exportObj.SquadBuilder
                     
             # Notes, if present
             @printable_container.find('.printable-body').append $.trim """
-                <div class="version"><span class="translated" defaultText="Points Version:"></span> 2.5.0 03/01/2022</div>
+                <div class="version">Points Version: 2.5.0 03/01/2022</div>
             """
             if $.trim(@notes.val()) != ''
                 @printable_container.find('.printable-body').append $.trim """
@@ -3565,13 +3494,17 @@ class exportObj.SquadBuilder
                 <div class="print-conditions"></div>
             """
             @printable_container.find('.printable-body .print-conditions').html @condition_container.html()
-                
+
             # Obstacles
             if @list_modal.find('.toggle-obstacles').prop('checked')
+                obstacles = @getObstacles()
+                obstaclelist = ""
+                for obstaclename in obstacles
+                    obstaclelist += """<img class="obstacle-silhouettes" src="images/#{obstaclename}.png" />"""
+
                 @printable_container.find('.printable-body').append $.trim """
                     <div class="obstacles">
-                        <div class="translated" defaultText="Mark obstacles"></div>
-                        <img class="obstacle-silhouettes" src="images/xws-obstacles.png" />
+                        <div>Chosen Obstacles:<br>#{obstaclelist}</div>
                     </div>
                 """
 
@@ -3802,8 +3735,6 @@ class exportObj.SquadBuilder
         simplecopy_ships = []
         reddit_ships = []
         tts_ships = []
-        bbcode_ships = []
-        htmlview_ships = []
         for ship in @ships
             if ship.pilot?
                 @fancy_container.append ship.toHTML()
@@ -3815,14 +3746,6 @@ class exportObj.SquadBuilder
                 simplecopy_ships.push ship.toSimpleCopy()
                 reddit_ships.push ship.toRedditText()
                 tts_ships.push ship.toTTSText()
-                bbcode_ships.push ship.toBBCode()
-                htmlview_ships.push ship.toSimpleHTML()
-        @htmlview_container.find('textarea').val $.trim """#{htmlview_ships.join '<br />'}
-<br />
-<b><i>Total: #{@total_points}</i></b>
-<br />
-<a href="#{@getPermaLink()}">#{@uitranslation("View in YASB")}</a>
-        """
 
         @reddit_container.find('textarea').val $.trim """#{reddit_ships.join "    \n"}    \n**#{@uitranslation('Total')}:** *#{@total_points}*    \n    \n[#{@uitranslation('View in YASB')}](#{@getPermaLink()})"""
         @simplecopy_container.find('textarea').val $.trim """#{simplecopy_ships.join ""}    \n#{@uitranslation('Total')}: #{@total_points}    \n    \n#{@uitranslation('View in YASB')}: #{@getPermaLink()}"""
@@ -3849,7 +3772,6 @@ class exportObj.SquadBuilder
             ec: 'L'
             size: 128
         
-        @bbcode_container.find('textarea').val $.trim """#{bbcode_ships.join "\n\n"}\n[b][i]#{@uitranslation('Total')}: #{@total_points}[/i][/b]\n\n[url=#{@getPermaLink()}]#{@uitranslation('View in YASB')}[/url]"""
 
     removeAllShips: ->
         while @ships.length > 0
@@ -3982,8 +3904,6 @@ class exportObj.SquadBuilder
             @select_xws_view_button.addClass 'btn-inverse'
             @list_display_mode = 'xws'
             @xws_container.show()
-            @bbcode_container.hide()
-            @htmlview_container.hide()
             @simple_container.hide()
             @simplecopy_container.hide()
             @reddit_container.hide()
@@ -6485,12 +6405,13 @@ class Ship
             """
         
         HalfPoints = Math.floor @getPoints() / 2
+        
 
         Threshold = Math.floor (effective_stats['hull'] + effective_stats['shields']) / 2
         
         html += $.trim """
             <div class="ship-points-total">
-                <strong>#{@uitranslation("Ship Total")}: #{@getPoints()}, #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Threshold")}: #{Threshold}</strong> 
+                <strong>#{@uitranslation("Ship Cost")}: #{@getPoints()}, #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg}), #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Damage Threshold")}: #{Threshold}</strong> 
             </div>
         """
 
@@ -6511,12 +6432,12 @@ class Ship
                 table_html += upgrade.toTableRow points
 
         # if @getPoints() != @pilot.points
-        table_html += """<tr class="simple-ship-total"><td colspan="2">#{@uitranslation("Ship Total")}: #{@getPoints()}</td></tr>"""
+        table_html += """<tr class="simple-ship-total"><td colspan="2">#{@uitranslation("Ship Cost")}: #{@getPoints()}</td></tr>"""
         
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Threshold")}: #{threshold}</td></tr>"""
+        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg}) #{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Damage Threshold")}: #{threshold}</td></tr>"""
 
         table_html += '<tr><td>&nbsp;</td><td></td></tr>'
         table_html
@@ -6537,7 +6458,7 @@ class Ship
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        simplecopy += """#{@uitranslation("Ship total")}: #{@getPoints()}  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Threshold")}: #{threshold}    \n    \n"""
+        simplecopy += """#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}    \n    \n"""
 
         simplecopy
         
@@ -6546,6 +6467,8 @@ class Ship
         reddit = """**#{@pilot.name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else @pilot.points})**    \n"""
         slotted_upgrades = (upgrade for upgrade in @upgrades when upgrade.data?)
         if slotted_upgrades.length > 0
+            halfPoints = Math.floor @getPoints() / 2        
+            threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
             reddit +="    "
             reddit_upgrades= []
             for upgrade in slotted_upgrades
@@ -6553,8 +6476,7 @@ class Ship
                 upgrade_reddit = upgrade.toRedditText points
                 reddit_upgrades.push upgrade_reddit if upgrade_reddit?
             reddit += reddit_upgrades.join "    "
-            reddit += """&nbsp;*#{@uitranslation("Ship total")}: (#{@getPoints()})*    \n"""
-
+            reddit += """&nbsp;*#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}*    \n"""
         reddit
 
     toTTSText: ->
@@ -6565,33 +6487,6 @@ class Ship
                 upgrade_tts = upgrade.toTTSText()
                 tts += (" + " + upgrade_tts) if upgrade_tts?
         tts += " / "
-
-    toBBCode: ->
-        bbcode = """[b]#{if @pilot.display_name then @pilot.display_name else @pilot.name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else @pilot.points})[/b]"""
-
-        slotted_upgrades = (upgrade for upgrade in @upgrades when upgrade.data?)
-        if slotted_upgrades.length > 0
-            bbcode +="\n"
-            bbcode_upgrades= []
-            for upgrade in slotted_upgrades
-                points = upgrade.getPoints()
-                upgrade_bbcode = upgrade.toBBCode points
-                bbcode_upgrades.push upgrade_bbcode if upgrade_bbcode?
-            bbcode += bbcode_upgrades.join "\n"
-
-        bbcode
-
-    toSimpleHTML: ->
-        html = """<b>#{if @pilot.display_name then @pilot.display_name else @pilot.name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else @pilot.points})</b><br />"""
-
-        slotted_upgrades = (upgrade for upgrade in @upgrades when upgrade.data?)
-        if slotted_upgrades.length > 0
-            for upgrade in slotted_upgrades
-                points = upgrade.getPoints()
-                upgrade_html = upgrade.toSimpleHTML points
-                html += upgrade_html if upgrade_html?
-
-        html
 
     toSerialized: ->
         # PILOT_ID:UPGRADEID1,UPGRADEID2:CONFERREDADDONTYPE1.CONFERREDADDONID1,CONFERREDADDONTYPE2.CONFERREDADDONID2
@@ -7310,18 +7205,6 @@ class GenericAddon
             """#{exportObj.toTTS(@data.name)}"""
         else
             null
-
-    toBBCode: (points) ->
-        if @data?
-            """[i]#{if @data.display_name then @data.display_name else @data.name} (#{points})[/i]"""
-        else
-            null
-
-    toSimpleHTML: (points) ->
-        if @data?
-            """<i>#{if @data.display_name then @data.display_name else @data.name} (#{points})</i><br />"""
-        else
-            ''
 
     toSerialized: ->
         """#{@serialization_code}.#{@data?.id ? -1}"""
