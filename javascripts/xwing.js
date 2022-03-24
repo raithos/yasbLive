@@ -5188,6 +5188,7 @@ exportObj.SquadBuilder = (function() {
             })()
           ]);
           container.find('tr.info-faction').hide();
+          container.find('p.info-restrictions').hide();
           _ref6 = container.find('tr.info-attack td.info-header i.xwing-miniatures-font')[0].classList;
           for (_j = 0, _len1 = _ref6.length; _j < _len1; _j++) {
             cls = _ref6[_j];
