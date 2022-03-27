@@ -16174,23 +16174,34 @@ exportObj.standardCheck = function(data, faction, shipCheck) {
 };
 
 exportObj.standardCheckBrowser = function(data, faction, type) {
-  var ship, _i, _len, _ref, _ref1, _ref2, _ref3;
+  var check, ship, _i, _j, _len, _len1, _ref, _ref1, _ref2, _ref3, _ref4;
   if (faction == null) {
     faction = '';
   }
   if (type === 'Pilot') {
-    return _ref = data.name, __indexOf.call(exportObj.standardPilotExclusions, _ref) < 0;
+    check = false;
+    _ref = exportObj.standardShipInclusions;
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      ship = _ref[_i];
+      if (data.faction === ship.faction && (data.ship === ship.name)) {
+        check = true;
+      }
+    }
+    if (check === false) {
+      return false;
+    }
+    return _ref1 = data.name, __indexOf.call(exportObj.standardPilotExclusions, _ref1) < 0;
   } else if (type === 'Ship') {
-    _ref1 = exportObj.standardShipInclusions;
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      ship = _ref1[_i];
-      if (ship.faction === faction && (data.name === ship.name || data.ship === ship.name || (Array.isArray(data.ship) && (_ref2 = ship.name, __indexOf.call(data.ship, _ref2) >= 0)))) {
+    _ref2 = exportObj.standardShipInclusions;
+    for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
+      ship = _ref2[_j];
+      if (ship.faction === faction && (data.name === ship.name || data.ship === ship.name || (Array.isArray(data.ship) && (_ref3 = ship.name, __indexOf.call(data.ship, _ref3) >= 0)))) {
         return true;
       }
     }
     return false;
   } else {
-    return _ref3 = data.name, __indexOf.call(exportObj.standardUpgradeExclusions, _ref3) < 0;
+    return _ref4 = data.name, __indexOf.call(exportObj.standardUpgradeExclusions, _ref4) < 0;
   }
 };
 
