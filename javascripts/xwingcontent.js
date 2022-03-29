@@ -6537,6 +6537,7 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         pointsupg: 18,
+        keyword: ["Droid", "Spectre"],
         unique: true,
         slots: ["Crew", "Gunner", "Device", "Modification", "Modification", "Configuration", "Title"]
       }, {
