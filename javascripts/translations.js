@@ -15798,7 +15798,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Mandalorian Royal Guard": {
       display_name: "Mandalorian Royal Guard",
-      text: "友軍の小型ではない宇宙船が防御する際、もし君がその攻撃アーク内にいるなら、君はデプリート・トークン1つとストレイン・トークン1つを得ても良い。もし君がそうするなら、防御者は結果を1つ%EVADE%の結果に変更しても良い。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "友軍の、小型ではない宇宙船が防御する際、もし君がその攻撃アーク内にいるなら、君はデプリート・トークン1つとストレイン・トークン1つを得ても良い。もし君がそうするなら、防御者は結果を1つ%EVADE%の結果に変更しても良い。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
     },
     "ISB Jingoist": {
       display_name: "ISB Jingoist",
@@ -16508,7 +16508,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Marksmanship": {
       display_name: "Marksmanship",
-      text: "攻撃が実行を実行する際、もし防御者が%BULLSEYEARC%内にいるなら、君は%HIT%の結果1つを%CRIT%の結果に変えても良い。"
+      text: "君が攻撃を実行する際、もし防御者が%BULLSEYEARC%内にいるなら、君は%HIT%の結果1つを%CRIT%の結果に変えても良い。"
     },
     "Maul": {
       display_name: "Maul",
@@ -17253,7 +17253,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Savage Opress": {
       display_name: "Savage Opress",
-      text: "君の%FRONTARC%内レンジ1-2の友軍宇宙船がストレスあるいはストレイン・トークンを得た後、君は%FOCUS%を1つ消費しても良い。もし君がそうするなら、その宇宙船はフォーカス・トークンを1つ得る。"
+      text: "君の%FRONTARC%内レンジ1-2の友軍宇宙船がストレスあるいはストレイン・トークンを得た後、君は%FORCE%を1つ消費しても良い。もし君がそうするなら、その宇宙船はフォーカス・トークンを1つ得る。"
     },
     "Tal Merrik": {
       display_name: "Tal Merrik",
@@ -17745,7 +17745,7 @@ exportObj.cardLoaders.日本語 = function() {
     'Trials of the Darksaber': {
       text: '君が攻撃レンジ0-2で攻撃を実行する際、君は%CRIT%の結果を1つ消費しても良い。もし君がそうするなら、もし防御宇宙船のプレイヤーが君よりも%POINT%を獲得しているなら、そのプレイヤーは獲得した%POINT%を1つ失う。その%POINT%をこのカードの上に置く。 %LINEBREAK% 君が防御した後、もし君が敵宇宙船の攻撃レンジ0-2の攻撃で破壊されたなら、攻撃者に<b>Trials of the Darksaber</b>コンディションをつける(このカードの上の全ての%POINT%は残して)。 %LINEBREAK% ゲームの終了時、この宇宙船はこのカードの上の%POINT%を全て獲得する。'
     },
-    'Blaze Bomb': {
+    'Blazer Bomb': {
       text: '<b>タイプ:</b> デバイス, 爆弾 %LINEBREAK% アクティベーション・フェイズの終了時、このデバイスは爆発する。 %LINEBREAK% このデバイスが爆発する時、レンジ0-1の各宇宙船とリモートは攻撃ダイスを1つ振る。各宇宙船とリモートは%HIT%/%CRIT%の結果につき%HIT%ダメージを1つ受ける。 %LINEBREAK% このデバイスが爆発した後、BlazeをBlazeのガイドとデバイスの出っ張りを合わせて置く。 %LINEBREAK% Blazeは障害物である。この障害物が置かれた後、ヒューズ・マーカーをその上に置く。 %LINEBREAK% 終了フェイズの間、ヒューズ・マーカーのないBlazeを取り除き、その後各Blazeからヒューズ・マーカーを1つ取り除く。'
     },
     'Clan Wren Commandos': {
