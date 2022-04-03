@@ -6332,7 +6332,7 @@ exportObj.basicCardData = function() {
         id: 501,
         faction: "Rebel Alliance",
         canonical_name: 'Fenn Rau'.canonicalize(),
-        xws: "fennrau-rebelfangfighter",
+        xws: "fennrau-rebel-fang",
         unique: true,
         ship: "Fang Fighter",
         skill: 6,
@@ -7146,7 +7146,7 @@ exportObj.basicCardData = function() {
         keyword: ["Dark Side"],
         faction: ["Scum and Villainy", "Rebel Alliance"],
         force: 1,
-        restrictions: [["orUnique", "Ezra Bridger"], ["Faction", "Scum and Villainy"]],
+        restrictions: [["FactionOrUnique", "Ezra Bridger", "Scum and Villainy"]],
         modifier_func: function(stats) {
           return stats.force += 1;
         }
@@ -7281,7 +7281,7 @@ exportObj.basicCardData = function() {
         points: 5,
         unique: true,
         faction: ["Scum and Villainy", "Galactic Empire"],
-        restrictions: [["orUnique", "Darth Vader"], ["Faction", "Scum and Villainy"]]
+        restrictions: [["FactionOrUnique", "Darth Vader", "Scum and Villainy"]]
       }, {
         name: "Unkar Plutt",
         id: 64,
@@ -7390,7 +7390,7 @@ exportObj.basicCardData = function() {
         points: 2,
         unique: true,
         faction: ["Scum and Villainy", "Galactic Empire"],
-        restrictions: [["orUnique", "Darth Vader"], ["Faction", "Scum and Villainy"]]
+        restrictions: [["FactionOrUnique", "Darth Vader", "Scum and Villainy"]]
       }, {
         name: "Dengar",
         id: 80,
@@ -7487,7 +7487,7 @@ exportObj.basicCardData = function() {
         points: 3,
         unique: true,
         charge: 2,
-        restrictions: [["Base", "Small or Medium"]]
+        restrictions: [["Base", "Small", "Medium"]]
       }, {
         name: "Contraband Cybernetics",
         id: 92,
@@ -7516,7 +7516,7 @@ exportObj.basicCardData = function() {
         points: 4,
         charge: 1,
         applies_condition: 'Loose Cargo'.canonicalize(),
-        restrictions: [["Base", "Medium or Large"]]
+        restrictions: [["Base", "Medium", "Large"]]
       }, {
         name: "Barrage Rockets",
         id: 97,
@@ -7582,7 +7582,7 @@ exportObj.basicCardData = function() {
         slot: "Modification",
         points: 4,
         charge: 2,
-        restrictions: [["Base", "Medium or Large"]]
+        restrictions: [["Base", "Medium", "Large"]]
       }, {
         name: "Advanced SLAM",
         id: 104,
@@ -7627,7 +7627,7 @@ exportObj.basicCardData = function() {
         id: 110,
         slot: "Modification",
         points: 2,
-        restrictions: [["Base", "Medium or Large"]]
+        restrictions: [["Base", "Medium", "Large"]]
       }, {
         name: "Advanced Sensors",
         id: 111,
@@ -7672,7 +7672,7 @@ exportObj.basicCardData = function() {
         id: 118,
         slot: "Talent",
         points: 6,
-        restrictions: [["Base", "Small or Medium"]],
+        restrictions: [["Base", "Small", "Medium"]],
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'R-Evade') < 0) {
             return stats.actions.push('R-Evade');
@@ -7684,7 +7684,7 @@ exportObj.basicCardData = function() {
         slot: "Talent",
         points: 2,
         charge: 1,
-        restrictions: [["Base", "Small or Medium"]]
+        restrictions: [["Base", "Small", "Medium"]]
       }, {
         name: "Expert Handling",
         id: 120,
@@ -7712,7 +7712,7 @@ exportObj.basicCardData = function() {
         id: 123,
         slot: "Talent",
         points: 7,
-        restrictions: [["Base", "Small or Medium"]]
+        restrictions: [["Base", "Small", "Medium"]]
       }, {
         name: "Lone Wolf",
         id: 124,
@@ -8799,7 +8799,7 @@ exportObj.basicCardData = function() {
         id: 247,
         slot: "Modification",
         points: 4,
-        restrictions: [["ShieldsGreaterThan", 0], ["Base", "Small or Medium"]],
+        restrictions: [["ShieldsGreaterThan", 0], ["Base", "Small", "Medium"]],
         modifier_func: function(stats) {
           stats.shields -= 1;
           if (__indexOf.call(stats.actions, 'Reinforce') < 0) {
@@ -9739,7 +9739,7 @@ exportObj.basicCardData = function() {
         id: 331,
         slot: "Talent",
         points: 1,
-        restrictions: [["Base", "Small or Medium"]]
+        restrictions: [["Base", "Small", "Medium"]]
       }, {
         name: "XX-23 S-Thread Tracers",
         id: 332,
@@ -9834,7 +9834,7 @@ exportObj.basicCardData = function() {
         id: 343,
         slot: "Talent",
         points: 1,
-        restrictions: [["Base", "Small or Medium"]]
+        restrictions: [["Base", "Small", "Medium"]]
       }, {
         name: "Starbird Slash",
         id: 344,
@@ -9875,7 +9875,7 @@ exportObj.basicCardData = function() {
         unique: true,
         slot: "Tech",
         points: 4,
-        restrictions: [["Base", "Medium or Large"]],
+        restrictions: [["Base", "Medium", "Large"]],
         applies_condition: 'Sensor Buoy'.canonicalize()
       }, {
         name: "Suppressive Gunner",
@@ -10772,7 +10772,7 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         unique: true,
         faction: ["Rebel Alliance", "Galactic Empire", "Scum and Villainy"],
-        restrictions: [["orUnique", "Gar Saxon"], ["Faction", "Rebel Alliance"]]
+        restrictions: [["FactionOrUnique", "Gar Saxon", "Rebel Alliance"]]
       }, {
         name: "Ursa Wren",
         id: 439,
@@ -10816,7 +10816,7 @@ exportObj.basicCardData = function() {
         slot: "Gunner",
         unique: true,
         faction: "Scum and Villainy",
-        restrictions: [["Base", "Large or Huge"]]
+        restrictions: [["Base", "Large", "Huge"]]
       }, {
         name: "Tiber Saxon",
         id: 442,
@@ -11008,7 +11008,7 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         unique: true,
         faction: "Scum and Villainy",
-        restrictions: [["Base", "Medium or Large"]]
+        restrictions: [["Base", "Medium", "Large"]]
       }, {
         name: "Migs Mayfeld",
         id: 461,
@@ -11022,7 +11022,7 @@ exportObj.basicCardData = function() {
         points: 6,
         slot: "Modification",
         faction: ["Scum and Villainy"],
-        restrictions: [["Base", "Small or Medium"]],
+        restrictions: [["Base", "Small", "Medium"]],
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'Slam') < 0) {
             return stats.actions.push('Slam');
@@ -11037,7 +11037,7 @@ exportObj.basicCardData = function() {
         rangebonus: true,
         charge: 2,
         slot: "Illicit",
-        restrictions: [["Base", "Medium or Large"]]
+        restrictions: [["Base", "Medium", "Large"]]
       }, {
         name: "Combat Boarding Tube",
         id: 464,
@@ -15612,7 +15612,7 @@ exportObj.basicCardData = function() {
 };
 
 exportObj.setupCommonCardData = function(basic_cards) {
-  var card, cards, condition, condition_data, condition_name, e, expansion, i, name, pilot, pilot_data, pilot_name, quickbuild_count, quickbuild_data, ship_data, ship_name, source, upgrade, upgrade_data, upgrade_name, _base, _base1, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _base9, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _name, _name1, _name2, _name3, _name4, _name5, _name6, _name7, _name8, _name9, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s, _t;
+  var card, cards, condition, condition_data, condition_name, e, expansion, i, name, pilot, pilot_data, pilot_name, quickbuild_count, quickbuild_data, ship_data, ship_name, source, upgrade, upgrade_data, upgrade_name, _base, _base1, _base10, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _base9, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _name, _name1, _name10, _name2, _name3, _name4, _name5, _name6, _name7, _name8, _name9, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s, _t;
   _ref = basic_cards.pilotsById;
   for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
     pilot_data = _ref[i];
@@ -15803,12 +15803,14 @@ exportObj.setupCommonCardData = function(basic_cards) {
   exportObj.upgradesBySlotCanonicalName = {};
   exportObj.upgradesBySlotXWSName = {};
   exportObj.upgradesBySlotUniqueName = {};
+  exportObj.upgradesByUniqueName = {};
   _ref18 = exportObj.upgrades;
   for (upgrade_name in _ref18) {
     upgrade = _ref18[upgrade_name];
     ((_base7 = exportObj.upgradesBySlotCanonicalName)[_name7 = upgrade.slot] != null ? _base7[_name7] : _base7[_name7] = {})[upgrade.canonical_name] = upgrade;
     ((_base8 = exportObj.upgradesBySlotXWSName)[_name8 = upgrade.slot] != null ? _base8[_name8] : _base8[_name8] = {})[upgrade.xws] = upgrade;
     ((_base9 = exportObj.upgradesBySlotUniqueName)[_name9 = upgrade.slot] != null ? _base9[_name9] : _base9[_name9] = {})[upgrade.canonical_name.getXWSBaseName()] = upgrade;
+    ((_base10 = exportObj.upgradesByUniqueName)[_name10 = upgrade.canonical_name.getXWSBaseName()] != null ? _base10[_name10] : _base10[_name10] = []).push(upgrade);
   }
   exportObj.conditionsById = {};
   _ref19 = exportObj.conditions;

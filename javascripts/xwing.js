@@ -4767,7 +4767,7 @@ exportObj.SquadBuilder = (function() {
       _results = [];
       for (upgrade_name in available_upgrades) {
         upgrade = available_upgrades[upgrade_name];
-        if (((upgrade.unique == null) || __indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && (ship.restriction_check((upgrade.restrictions ? upgrade.restrictions : void 0), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade)) && __indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((_ref = upgrade.slot, __indexOf.call(this.uniques_in_use['Slot'], _ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
+        if (((upgrade.unique == null) || __indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && ship.restriction_check((upgrade.restrictions ? upgrade.restrictions : void 0), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade) && __indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((_ref = upgrade.slot, __indexOf.call(this.uniques_in_use['Slot'], _ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
           _results.push(upgrade);
         }
       }
@@ -6125,19 +6125,31 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.restriction_text = function(card) {
-    var array, comma, data, factionitem, othertext, r, shipname, text, uniquetext, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
+    var array, b, comma, data, factionitem, index, othertext, r, shipname, text, uniquetext, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref2;
     uniquetext = comma = othertext = text = '';
     if (card.restrictions) {
       _ref = card.restrictions;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         r = _ref[_i];
-        if (r[0] === "orUnique") {
-          uniquetext = exportObj.translate('restrictions', " or Squad Including") + (" " + r[1]);
-          continue;
-        }
         switch (r[0]) {
+          case "FactionOrUnique":
+            othertext += comma + exportObj.translate('faction', "" + r[2]);
+            uniquetext = exportObj.translate('restrictions', " or Squad Including") + (" " + r[1]);
+            break;
           case "Base":
-            text += comma + ("" + r[1] + " ") + exportObj.translate('restrictions', "Ship");
+            for (index = _j = 0, _len1 = r.length; _j < _len1; index = ++_j) {
+              b = r[index];
+              if (b === "Base") {
+                text += comma;
+                continue;
+              }
+              text += "" + r[1] + " ";
+              if (r.length - 1 < index) {
+                text += "or ";
+              } else {
+                text += exportObj.translate('restrictions', "Ship");
+              }
+            }
             break;
           case "Action":
             array = [r[1]];
@@ -6191,8 +6203,8 @@ exportObj.SquadBuilder = (function() {
         if (card.faction) {
           if (card.faction instanceof Array) {
             _ref1 = card.faction;
-            for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-              factionitem = _ref1[_j];
+            for (_k = 0, _len2 = _ref1.length; _k < _len2; _k++) {
+              factionitem = _ref1[_k];
               othertext += comma + exportObj.translate('faction', "" + factionitem);
               comma = ' or ';
             }
@@ -6205,8 +6217,8 @@ exportObj.SquadBuilder = (function() {
       if (card.ship) {
         if (card.ship instanceof Array) {
           _ref2 = card.ship;
-          for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-            shipname = _ref2[_k];
+          for (_l = 0, _len3 = _ref2.length; _l < _len3; _l++) {
+            shipname = _ref2[_l];
             othertext += comma + shipname;
             comma = ' or ';
           }
@@ -6605,7 +6617,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5623
+                  lineno: 5625
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6834,7 +6846,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5743
+                          lineno: 5745
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6884,7 +6896,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5776
+                                  lineno: 5778
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -6982,7 +6994,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5834
+                      lineno: 5836
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7066,7 +7078,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5870
+                lineno: 5872
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7135,7 +7147,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5899
+              lineno: 5901
             }));
           }
         }
@@ -7224,7 +7236,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 5955
+                lineno: 5957
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8097,7 +8109,7 @@ Ship = (function() {
   };
 
   Ship.prototype.restriction_check = function(restrictions, upgrade_obj, points, current_upgrade_points) {
-    var action, check, effective_stats, r, w, _i, _j, _len, _len1, _ref, _ref1, _ref2;
+    var action, b, base, check, effective_stats, r, w, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
     effective_stats = this.effectiveStats();
     if ((this.pilot.pointsupg != null) && (points + current_upgrade_points > this.pilot.pointsupg)) {
       return false;
@@ -8105,50 +8117,48 @@ Ship = (function() {
       if (restrictions != null) {
         for (_i = 0, _len = restrictions.length; _i < _len; _i++) {
           r = restrictions[_i];
-          if (r[0] === "orUnique") {
-            if (this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
-              return true;
-            }
-          }
           switch (r[0]) {
-            case "Base":
-              switch (r[1]) {
-                case "Small":
-                  if (this.data.base != null) {
-                    return false;
-                  }
-                  break;
-                case "Non-Small":
-                  if (this.data.base == null) {
-                    return false;
-                  }
-                  break;
-                case "Small or Medium":
-                  if (!(((this.data.base != null) && this.data.base === "Medium") || (this.data.base == null))) {
-                    return false;
-                  }
-                  break;
-                case "Medium or Large":
-                  if (!((this.data.base != null) && (this.data.base === "Medium" || this.data.base === "Large"))) {
-                    return false;
-                  }
-                  break;
-                case "Large or Huge":
-                  if (!((this.data.base != null) && (this.data.base === "Large" || this.data.base === "Huge"))) {
-                    return false;
-                  }
-                  break;
-                case "Standard":
-                  if ((this.data.base != null) && this.data.base === "Huge") {
-                    return false;
-                  }
-                  break;
-                default:
-                  if (!((this.data.base != null) && this.data.base === r[1])) {
-                    return false;
-                  }
+            case "FactionOrUnique":
+              if (this.pilot.faction !== r[2] && !this.checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))) {
+                return false;
               }
               break;
+            case "Base":
+              check = false;
+              for (_j = 0, _len1 = r.length; _j < _len1; _j++) {
+                b = r[_j];
+                if (b === "Base") {
+                  continue;
+                }
+                if (b.startsWith("Non-")) {
+                  base = b.substring(4);
+                } else {
+                  base = b;
+                }
+                switch (base) {
+                  case "Small":
+                    if (this.data.base == null) {
+                      check = true;
+                    }
+                    break;
+                  case "Standard":
+                    if (!((this.data.base != null) && this.data.base === "Huge")) {
+                      check = true;
+                    }
+                    break;
+                  default:
+                    if ((this.data.base != null) && this.data.base === base) {
+                      check = true;
+                    }
+                }
+                if (b !== base) {
+                  check = !check;
+                }
+                if (check === true) {
+                  break;
+                }
+              }
+              return check;
             case "Action":
               if (r[1].startsWith("W-")) {
                 w = r[1].substring(2);
@@ -8158,8 +8168,8 @@ Ship = (function() {
               } else {
                 check = false;
                 _ref = effective_stats.actions;
-                for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
-                  action = _ref[_j];
+                for (_k = 0, _len2 = _ref.length; _k < _len2; _k++) {
+                  action = _ref[_k];
                   if (action.includes(r[1]) && !action.includes(">")) {
                     check = true;
                   }
@@ -8230,11 +8240,6 @@ Ship = (function() {
                   if (_ref2 = this.data.name, __indexOf.call(exportObj.epicExclusionsList, _ref2) >= 0) {
                     return false;
                   }
-              }
-              break;
-            case "Faction":
-              if (this.pilot.faction !== r[1]) {
-                return false;
               }
           }
         }
@@ -8436,7 +8441,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6853
+                lineno: 6850
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8595,7 +8600,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 6947
+                  lineno: 6944
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8622,7 +8627,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 6954
+                      lineno: 6951
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8766,7 +8771,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7029
+            lineno: 7026
           }));
         }
         __iced_deferrals._fulfill();
