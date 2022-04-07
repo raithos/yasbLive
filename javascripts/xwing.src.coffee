@@ -5289,8 +5289,8 @@ class exportObj.SquadBuilder
                             if b == "Base" 
                                 text += comma
                                 continue
-                            text += "#{r[1]} "
-                            if r.length - 1 < index then text += "or " else text += exportObj.translate('restrictions', "Ship")
+                            text += "#{b} "
+                            if index < r.length - 1 then text += "or " else text += exportObj.translate('restrictions', "Ship")
                     when "Action"
                         array = [r[1]]
                         text += comma + @formatActions(array,"", [])
@@ -6315,9 +6315,9 @@ class Ship
                     ++count
             else
                 recurringicon += '<sup><i class="fas fa-caret-up"></i></sup>'
-        forceHTML = if (@pilot.force?) then $.trim """
+        forceHTML = if (effective_stats.force?) then $.trim """
             <i class="xwing-miniatures-font header-force xwing-miniatures-font-forcecharge"></i>
-            <span class="info-data info-force">#{statAndEffectiveStat((@pilot.ship_override?.force ? @pilot.force), effective_stats, 'force')}#{recurringicon}</span>
+            <span class="info-data info-force">#{statAndEffectiveStat((@pilot.ship_override?.force ? @pilot.force ? 0), effective_stats, 'force')}#{recurringicon}</span>
         """ else ''
 
         if @pilot.charge?
@@ -7149,6 +7149,7 @@ class GenericAddon
                 if @data.forcerecurring?
                     forcerecurring = @data.forcerecurring
                 count = 0
+                recurringicon = ''
                 while count < forcerecurring
                     recurringicon += '<sup><i class="fas fa-caret-up"></i></sup>'
                     ++count
