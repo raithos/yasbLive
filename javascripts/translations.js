@@ -220,7 +220,7 @@ exportObj.translations.Deutsch = {
     "Squads reloaded": "Alle Staffeln dieser Fraktion wurden aktualisiert.",
     "login in progress": "OAuth Anmeldung in Bearbeitung. Bitte schließe die Anmeldung bei dem von dir gewählten Anbieter im soeben geöffneten Fenster ab.",
     "OAuth explanation": "<p>\n    <a href=\"http://de.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> (Open Authorization) ist ein Schnittstelle, die es dir ermöglicht dich bei verschiedenen Webseiten (z.B. hier bei YASB) anzumelden, ohne einen neuen Account anlegen zu müssen oder uns irgendwelche persönlichen Daten übermitteln zu müssen. Alles was du brauchst ist ein vorhandener Account bei einem der unten stehenden Anbieter, dem du sagst, dass du YASB nutzen möchtest. \nis an authorization system which lets you prove your identity at a web site without having to create a new account.  Instead, you tell some provider with whom you already have an account (e.g. Google or Facebook) to prove to this web site that you say who you are.  That way, the next time you visit, this site remembers that you're that user from Google.\n</p>\n<p>\n    Dieser Anbieter übermittelt dann eine eindeutige ID an YASB, unter der wir deine Staffeln und Sammlung speichern können, damit du beim nächsten Besuch auf sie zugreifen kannst. Wir können leider nicht verhindern, dass (je nach Anbieter) eventuell weitere Informationen außer dieser ID übertragen werden, den restlichen Kram werfen wir einfach sofort weg. \n</p>\n<p>\n    Mehr Informationen zum OAuth Verfahren findest du z.B. auf <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">unter diesem Link (englisch)</a>.\n</p>\n<p>\n    Wenn du lieber gar keinen Account nutzen möchtest, kannst du eine Staffeln übrigens auch einfach speichern, indem du ein Lesezeichen setzt - und diese sogar über den Link teilen. Achtung: Du musst das Lesezeichen jedes mal erneuern, wenn du deine Staffel bearbeitest. \n</p>",
-    "Continue to OAuth provider": "This will open a new window to let you authenticate with the chosen provider. You may have to allow pop ups for this site.",
+    "Intro Card YASB": "<h2>YASB 2 für X-Wing (Version 2.5) </h2>\n<p>YASB (engl. Yet Another Squad Builder, dt. Noch ein Staffel-Bauer) hilft dir, einfach und unkompliziert deine Staffeln für das X-Wing Miniaturenspiel von <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a> zu erstellen.</p>\n<h5>Impressum</h5>\n<p>Eine Weiterentwicklung des hervorragenden <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a> für die erste Edition.</p>\n<p>YASB wird von Stephen Kim und Patrick Mischke gepflegt.</p>\n<p>Besonderes Dankeschön an:<br>\nServer (-kosten) und Federführung seit der zweiten Edition: Stephen Kim. <br>\n2.5 Datenupdate: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 Datenupdate: Evan Cameron, Jonathan Hon, Devon Monkhouse und Mark Stewart.<br>\nÜbersetzungen: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nLogo: Thomas Kohler<br>\nQuick Build Funktionalität: Patrick Mischke</p>\n\n<p>Diese Seite ist inoffiziell und nicht lizensiert von oder sonst irgendwie mit Atomic Mass Games, Lucasfilm Ltd. oder Disney verbunden.</p>\n\n<p>Diese Seite steht dir dauerhaft kostenfrei zur Verfügung. YASB ist ein Open-Source Projekt, wenn du etwas beitragen möchtest, ist Hilfe immer willkommen. Aufgrund wiederholter Fragen hier ein Paypal-Link von Stephen Kim.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Über Paypal unterstützen</button></p>",
     "Continue to OAuth provider": "Dies wird ein neues Fenster beim gewählten Anbieter öffnen. Es kann sein, dass du Pop-Ups erlauben musst.",
     "iOS requires cross-site control": "Unter iOS musst du eventuell erst \"cross-site control\" aktivieren, damit OAuth nutzen kannst.",
     "select OAuth provider": "Wähle einen der untentstehenden OAuth Anbieter um dich einzuloggen und Staffeln speichern zu können.",
@@ -396,12 +396,36 @@ exportObj.translations.Deutsch = {
     "Gas Cloud 4": "Gaswolke 4",
     "Gas Cloud 5": "Gaswolke 5",
     "Gas Cloud 6": "Gaswolke 6",
+    "Pride of Mandalore Debris 1": "Stolz von Mandalore Trümmerwolke 1",
+    "Pride of Mandalore Debris 2": "Stolz von Mandalore Trümmerwolke 2",
+    "Pride of Mandalore Debris 3": "Stolz von Mandalore Trümmerwolke 3",
+    "Pride of Mandalore Rock 1": "Stolz von Mandalore Asteroid 1",
+    "Pride of Mandalore Rock 2": "Stolz von Mandalore Asteroid 2",
+    "Pride of Mandalore Rock 3": "Stolz von Mandalore Asteroid 3",
     adds: function(translator, data) {
       return "Fügt " + (translator('ui', data)) + " hinzu";
     },
     removes: function(translator, data) {
       return "Entfernt " + (translator('ui', data));
-    }
+    },
+    "Undamaged": "Unbeschädigt",
+    "Standard": "Standard",
+    "Faction": "Fraktion",
+    "Loadout": "Ausrüstung",
+    "Standard legal": "In Standard erlaubt",
+    "Keywords:": "Schlüsselwörter:",
+    "Show Points Destroyed": "Zerstörte Punkte anzeigen",
+    "Hide Points Destroyed": "Zerstörte Punkte verbergen",
+    "This squad was created for an older version of X-Wing.": "Diese Staffel wurde für eine älteren Version von X-Wing erstellt.",
+    "Damage Threshold": "Schadensgrenzwert",
+    "X-Wing Squadron by YASB 2: ": "X-Wing Staffel erstellt mit YASB 2.5: ",
+    "Ship Cost": "Schiffskosten",
+    "Paste XWS here": "XWS einfügen",
+    "All sets and expansions": "Alle Erweiterungen",
+    "All factions": "Alle Fraktionen",
+    "Has multiple of the chosen slots": "Hat mehrere der gewählten Slots",
+    "keywords": "Schlüsselwörter",
+    "Checking auth status...": "Prüfe Anmeldestatus..."
   },
   singular: {
     'pilots': 'Pilot',
@@ -428,11 +452,22 @@ exportObj.translations.Deutsch = {
     "Resistance": "Widerstand",
     "First Order": "Erste Ordnung",
     "Galactic Republic": "Galaktische Republik",
-    "Separatist Alliance": "Separatisten-Allianz"
+    "Separatist Alliance": "Separatisten-Allianz",
+    "Factionless": "Fraktionslos"
   },
   action: {
     "Barrel Roll": "Fassrolle",
-    "Focus": "Fokus"
+    "Focus": "Fokus",
+    "Boost": "Schub",
+    "Calculate": "Berechnung",
+    "Coordinate": "Koordinieren",
+    "Evade": "Ausweichen",
+    "Jam": "Stören",
+    "Reinforce": "Verstärken",
+    "Reload": "Nachladen",
+    "Rotate Arc": "Feuerwinkel drehen",
+    "Lock": "Zielerfassung",
+    "Reinforce": "Verstärken"
   },
   restrictions: {
     "Restrictions": "Einschränkungen",
@@ -2471,7 +2506,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Emperor Palpatine": {
       display_name: "Kanzler Palpatine",
-      text: "Kanzler Palpatine:%LINEBREAK%Aufbau: Rüste diese Seite offen aus.%LINEBREAK%Nachdem du verteidigt hast, falls der Angreifer in Reichweite 0-2 ist, darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält der Angreifer 1 Stressmarker.Während der Endphase darfst du diese Karte umdrehen. %LINEBREAK%Nachdem du eine violette %COORDINATE% -Aktion durchgeführt hast, erhält das von dir koordinierte Schiff 1 Stressmarker. Dann erhält es 1 Fokusmarker oder es stellt 1 %FORCE% wieder her."
+      text: "Kanzler Palpatine:%LINEBREAK%Aufbau: Rüste diese Seite offen aus.%LINEBREAK%Nachdem du verteidigt hast, falls der Angreifer in Reichweite 0-2 ist, darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält der Angreifer 1 Stressmarker.Während der Endphase darfst du diese Karte umdrehen. %LINEBREAK%Darth Sidious:%LINEBREAK%Nachdem du eine violette %COORDINATE% -Aktion durchgeführt hast, erhält das von dir koordinierte Schiff 1 Stressmarker. Dann erhält es 1 Fokusmarker oder es stellt 1 %FORCE% wieder her."
     },
     "Darth Vader": {
       display_name: "Darth Vader",
@@ -2999,7 +3034,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Ordnance Team": {
       display_name: "Munitionsteam",
-      text: "Solange du eine %RELOAD%-\nAktion durchführst, darfst du bis zu 3&nbsp;%ENERGY% ausgeben, um ebenso viele zusätzliche %CHARGE% auf deinen aus-gerüsteten %MISSILE%/%TORPEDO%-Aufwertungen nachzuladen.%LINEBREAK%Nachdem du eine %RELOAD%-Aktion durchgeführt hast, darfst du 1&nbsp;%ENERGY%ausgeben, um 1 Entwaffnet- Marker zu entfernen."
+      text: "Solange du eine %RELOAD%-Aktion durchführst, darfst du bis zu 3&nbsp;%ENERGY% ausgeben, um ebenso viele zusätzliche %CHARGE% auf deinen aus-gerüsteten %MISSILE%/%TORPEDO%-Aufwertungen nachzuladen.%LINEBREAK%Nachdem du eine %RELOAD%-Aktion durchgeführt hast, darfst du 1&nbsp;%ENERGY%ausgeben, um 1 Entwaffnet- Marker zu entfernen."
     },
     "Ordnance Tubes": {
       display_name: "Abschussrohre",
@@ -3111,7 +3146,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Q7 Astromech": {
       display_name: "Q7-Astromechdroide",
-      text: "Solange du eine Fassrolle fliegst oder Schub gibst, kannst du dich durch Hindernisse hindurchbewegen und \nsie überschneiden."
+      text: "Solange du eine Fassrolle fliegst oder Schub gibst, kannst du dich durch Hindernisse hindurchbewegen und sie überschneiden."
     },
     "Qi'ra": {
       display_name: "Qi’ra",

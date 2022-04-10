@@ -11021,6 +11021,7 @@ exportObj.basicCardData = function() {
         id: 462,
         points: 6,
         slot: "Modification",
+        charge: 1,
         faction: ["Scum and Villainy"],
         restrictions: [["Base", "Small", "Medium"]],
         modifier_func: function(stats) {
@@ -15606,6 +15607,132 @@ exportObj.basicCardData = function() {
         ship: "BTA-NR2 Y-Wing",
         threat: 3,
         upgrades: ["Predator", "Engine Upgrade", "R3 Astromech", "Targeting Computer", "Ion Cannon Turret"]
+      }, {
+        id: 603,
+        faction: "Scum and Villainy",
+        pilot: "Outer Rim Enforcer",
+        ship: "ST-70 Assault Ship",
+        threat: 2,
+        upgrades: ["Tracking Fob"]
+      }, {
+        id: 604,
+        faction: "Scum and Villainy",
+        pilot: "Q9-0",
+        ship: "ST-70 Assault Ship",
+        threat: 4,
+        upgrades: ["Outmaneuver", "The Mandalorian", "The Child", "Migs Mayfeld", "Tracking Fob", "Burnout Thrusters", "Razor Crest"]
+      }, {
+        id: 605,
+        faction: "Scum and Villainy",
+        pilot: "Guild Bounty Hunter",
+        ship: "ST-70 Assault Ship",
+        threat: 3,
+        upgrades: ["Peli Motto", "IG-11", "Hotshot Tail Blaster", "Tracking Fob", "Hull Upgrade"]
+      }, {
+        id: 606,
+        faction: "Scum and Villainy",
+        pilot: "The Mandalorian",
+        ship: "ST-70 Assault Ship",
+        threat: 4,
+        upgrades: ["Notorious", "Burnout Thrusters", "Kuiil", "The Child", "Hull Upgrade", "Tracking Fob", "Razor Crest"]
+      }, {
+        id: 607,
+        faction: "Scum and Villainy",
+        pilot: "Maul",
+        ship: "Gauntlet Fighter",
+        threat: 3,
+        upgrades: ["Heightened Perception", "Nightbrother", "Swivel Wing"]
+      }, {
+        id: 608,
+        faction: "Scum and Villainy",
+        pilot: "Rook Kast",
+        ship: "Gauntlet Fighter",
+        threat: 4,
+        upgrades: ["Elusive", "Mandalorian Super Commandos", "Drop-Seat Bay", "Nightbrother", "Swivel Wing"]
+      }, {
+        id: 609,
+        faction: "Scum and Villainy",
+        pilot: "Shadow Collective Operator",
+        ship: "Gauntlet Fighter",
+        threat: 3,
+        upgrades: ["Enduring", "Blazer Bomb", "Overtuned Modulators", "Shield Upgrade"]
+      }, {
+        id: 610,
+        faction: "Galactic Republic",
+        pilot: "Bo-Katan Kryze (Republic)",
+        ship: "Gauntlet Fighter",
+        threat: 4,
+        upgrades: ["Outmaneuver", "Nite Owl Commandos", "Veteran Tail Gunner", "Drop-Seat Bay", "Hull Upgrade", "Gauntlet", "Swivel Wing"]
+      }, {
+        id: 611,
+        faction: "Galactic Republic",
+        pilot: "Nite Owl Liberator",
+        ship: "Gauntlet Fighter",
+        threat: 3,
+        upgrades: ["Enduring", "Veteran Tail Gunner", "Concussion Bombs", "Hull Upgrade", "Swivel Wing"]
+      }, {
+        id: 612,
+        faction: "Separatist Alliance",
+        pilot: "Pre Vizsla",
+        ship: "Gauntlet Fighter",
+        threat: 4,
+        upgrades: ["Predator", "Death Watch Commandos", "Blazer Bomb", "Shield Upgrade", "Swivel Wing"]
+      }, {
+        id: 613,
+        faction: "Separatist Alliance",
+        pilot: "Bo-Katan Kryze",
+        ship: "Gauntlet Fighter",
+        threat: 3,
+        upgrades: ["Outmaneuver", "Veteran Tail Gunner", "Swivel Wing"]
+      }, {
+        id: 614,
+        faction: "Separatist Alliance",
+        pilot: "Death Watch Warrior",
+        ship: "Gauntlet Fighter",
+        threat: 3,
+        upgrades: ["Hull Upgrade", "Shield Upgrade", "Concussion Bombs", "Swivel Wing"]
+      }, {
+        id: 615,
+        faction: "Rebel Alliance",
+        pilot: "Ezra Bridger (Gauntlet Fighter)",
+        ship: "Gauntlet Fighter",
+        threat: 4,
+        upgrades: ["Shattering Shot", "Clan Wren Commandos", "Shield Upgrade", "Nightbrother", "Swivel Wing"]
+      }, {
+        id: 616,
+        faction: "Rebel Alliance",
+        pilot: '"Chopper" (Gauntlet Fighter)',
+        ship: "Gauntlet Fighter",
+        threat: 3,
+        upgrades: ["Predator", "Veteran Tail Gunner", "Hull Upgrade", "Nightbrother", "Swivel Wing"]
+      }, {
+        id: 617,
+        faction: "Rebel Alliance",
+        pilot: "Mandalorian Resistance Pilot",
+        ship: "Gauntlet Fighter",
+        threat: 3,
+        upgrades: ["Enduring", "Clan Wren Commandos", "Swivel Wing"]
+      }, {
+        id: 618,
+        faction: "Galactic Empire",
+        pilot: "Gar Saxon",
+        ship: "Gauntlet Fighter",
+        threat: 4,
+        upgrades: ["Imperial Super Commandos", "Drop-Seat Bay", "Hull Upgrade", "Shield Upgrade", "Swivel Wing"]
+      }, {
+        id: 619,
+        faction: "Galactic Empire",
+        pilot: "Captain Hark",
+        ship: "Gauntlet Fighter",
+        threat: 3,
+        upgrades: ["Combat Boarding Tube", "Imperial Super Commandos", "Swivel Wing"]
+      }, {
+        id: 620,
+        faction: "Galactic Empire",
+        pilot: "Imperial Super Commando",
+        ship: "Gauntlet Fighter",
+        threat: 2,
+        upgrades: ["Outmaneuver", "Veteran Tail Gunner", "Concussion Bombs", "Hull Upgrade"]
       }
     ]
   };
@@ -16382,6 +16509,7 @@ exportObj.translations.English = {
     "Name in use": "You already have a squad with that name",
     "select OAuth provider": "Select one of the OAuth providers below to log in and start saving squads.",
     "OAuth explanation": "<p>\n    <a href=\"http://en.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> is an authorization system which lets you prove your identity at a web site without having to create a new account.  Instead, you tell some provider with whom you already have an account (e.g. Google or Facebook) to prove to this web site that you say who you are.  That way, the next time you visit, this site remembers that you're that user from Google.\n</p>\n<p>\n    The best part about this is that you don't have to come up with a new username and password to remember.  And don't worry, I'm not collecting any data from the providers about you.  I've tried to set the scope of data to be as small as possible, but some places send a bunch of data at minimum.  I throw it away.  All I look at is a unique identifier (usually some giant number).\n</p>\n<p>\n    For more information, check out this <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">introduction to OAuth</a>.\n</p>",
+    "Intro Card YASB": "<h2>YASB 2 for X-Wing (Version 2.5) </h2>\n<p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n\n<p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button></p>",
     "Continue to OAuth provider": "This will open a new window to let you authenticate with the chosen provider. You may have to allow pop ups for this site.",
     "iOS requires cross-site control": "Due to a new feature in iOS systems OAuth won't work unless you enable \"cross-site control\".",
     "login in progress": "OAuth login is in progress. Please finish authorization at the specified provider using the window that was just created.",
@@ -28655,6 +28783,10 @@ exportObj.manifestByExpansion = {
       name: 'Blazer Bomb',
       type: 'upgrade',
       count: 2
+    }, {
+      name: 'Enduring',
+      type: 'upgrade',
+      count: 1
     }
   ],
   "Pride of Mandalore Reinforcements Pack": [
