@@ -16667,7 +16667,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Arvel Crynyd": {
       display_name: "Arvel Crynyd",
-      text: "If you would fail a 󲁃 action by overlapping another ship, you may resolve it as though you were partially executing a maneuver instead. While you perform an attack at attack range 0, treat it as an attack at attack range 1.\" %LINEBREAK%<strong>Vectored Thrusters:</strong> After you perform an action, you may perform a red %BOOST% action. %LINEBREAK%<i>Errata (since rules reference 1.4): Changed the second portion of the ability.</i>"
+      text: "If you would fail a %BOOST% action by overlapping another ship, you may resolve it as though you were partially executing a maneuver instead. While you perform an attack at attack range 0, treat it as an attack at attack range 1.\" %LINEBREAK%<strong>Vectored Thrusters:</strong> After you perform an action, you may perform a red %BOOST% action. %LINEBREAK%<i>Errata (since rules reference 1.4): Changed the second portion of the ability.</i>"
     },
     "Asajj Ventress": {
       display_name: "Asajj Ventress",
