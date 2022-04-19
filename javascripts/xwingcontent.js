@@ -6500,7 +6500,6 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         pointsupg: 10,
-        unique: true,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Device", "Modification", "Configuration"]
       }, {
