@@ -2258,7 +2258,7 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 3,
         pointsupg: 9,
-        slots: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification"]
+        slots: ["Talent", "Crew", "Device", "Illicit", "Illicit", "Modification"]
       }, {
         name: "Torkil Mux",
         id: 114,
