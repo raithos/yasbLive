@@ -6474,7 +6474,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.loadFromXWS = function(xws, cb) {
-    var addons, error, key, new_ship, pilot, pilotxws, possible_pilot, possible_pilots, serialized_squad, slot, success, upgrade, upgrade_canonical, upgrade_canonicals, upgrade_type, version_list, x, xws_faction, _base, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4;
+    var addons, error, gamemode, key, new_ship, pilot, pilotxws, possible_pilot, possible_pilots, serialized_squad, serialized_squad_intro, slot, success, upgrade, upgrade_canonical, upgrade_canonicals, upgrade_type, version_list, x, xws_faction, _base, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4;
     success = null;
     error = null;
     if (xws.version != null) {
@@ -6510,7 +6510,12 @@ exportObj.SquadBuilder = (function() {
         this.removeAllShips();
         success = true;
         error = "";
-        serialized_squad = "v9ZsZ20Z";
+        if (this.isStandard) {
+          gamemode = 'h';
+        } else {
+          gamemode = 's';
+        }
+        serialized_squad = "";
         _ref = xws.pilots;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           pilot = _ref[_i];
@@ -6541,6 +6546,9 @@ exportObj.SquadBuilder = (function() {
               }
             }
           }
+          if (!exportObj.standardCheck(pilot, true) && gamemode === 'h') {
+            gamemode = 's';
+          }
           serialized_squad += "X";
           addons = [];
           _ref3 = (_ref2 = pilot.upgrades) != null ? _ref2 : {};
@@ -6560,11 +6568,16 @@ exportObj.SquadBuilder = (function() {
                 }
                 serialized_squad += upgrade.id;
                 serialized_squad += "W";
+                if (!exportObj.standardCheck(upgrade, true) && gamemode === 'h') {
+                  gamemode = 's';
+                }
               }
             }
           }
           serialized_squad += "XY";
         }
+        serialized_squad_intro = "v9Z" + gamemode + "Z20Z";
+        serialized_squad = serialized_squad_intro + serialized_squad;
         this.loadFromSerialized(serialized_squad);
         this.current_squad.dirty = true;
         this.container.trigger('xwing-backend:squadNameChanged');
@@ -6627,7 +6640,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5613
+                  lineno: 5624
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6856,7 +6869,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5735
+                          lineno: 5746
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6906,7 +6919,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5768
+                                  lineno: 5779
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7005,7 +7018,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5827
+                      lineno: 5838
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7089,7 +7102,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5863
+                lineno: 5874
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7158,7 +7171,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5892
+              lineno: 5903
             }));
           }
         }
@@ -7247,7 +7260,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 5948
+                lineno: 5959
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8452,7 +8465,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6841
+                lineno: 6852
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8611,7 +8624,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 6935
+                  lineno: 6946
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8638,7 +8651,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 6942
+                      lineno: 6953
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8782,7 +8795,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7017
+            lineno: 7028
           }));
         }
         __iced_deferrals._fulfill();
