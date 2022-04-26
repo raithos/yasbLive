@@ -7684,7 +7684,7 @@ Ship = (function() {
         recurringicon += '<sup><i class="fas fa-caret-up"></i></sup>';
       }
     }
-    forceHTML = (effective_stats.force != null) ? $.trim("<i class=\"xwing-miniatures-font header-force xwing-miniatures-font-forcecharge\"></i>\n<span class=\"info-data info-force\">" + (statAndEffectiveStat((_ref21 = (_ref22 = (_ref23 = this.pilot.ship_override) != null ? _ref23.force : void 0) != null ? _ref22 : this.pilot.force) != null ? _ref21 : 0, effective_stats, 'force')) + recurringicon + "</span>") : '';
+    forceHTML = (effective_stats.force != null) && effective_stats.force > 0 ? $.trim("<i class=\"xwing-miniatures-font header-force xwing-miniatures-font-forcecharge\"></i>\n<span class=\"info-data info-force\">" + (statAndEffectiveStat((_ref21 = (_ref22 = (_ref23 = this.pilot.ship_override) != null ? _ref23.force : void 0) != null ? _ref22 : this.pilot.force) != null ? _ref21 : 0, effective_stats, 'force')) + recurringicon + "</span>") : '';
     if (this.pilot.charge != null) {
       recurringicon = '';
       if (this.pilot.recurring != null) {

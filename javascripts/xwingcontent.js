@@ -6421,6 +6421,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         pointsupg: 24,
+        charge: 1,
+        recurring: 1,
         unique: true,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Missile", "Missile", "Device", "Modification", "Modification", "Title", "Configuration"]
@@ -6486,7 +6488,7 @@ exportObj.basicCardData = function() {
         id: 515,
         faction: "Galactic Empire",
         ship: "Gauntlet Fighter",
-        skill: 2,
+        skill: 3,
         points: 7,
         pointsupg: 15,
         unique: true,
@@ -28783,6 +28785,10 @@ exportObj.manifestByExpansion = {
       count: 2
     }, {
       name: 'Enduring',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Shattering Shot',
       type: 'upgrade',
       count: 1
     }
