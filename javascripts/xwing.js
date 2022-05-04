@@ -1286,7 +1286,7 @@ exportObj.CardBrowser = (function() {
     });
     this.duplicateslots = ($(this.container.find('.xwing-card-browser .duplicate-slots-checkbox')))[0];
     this.action_available_selection = $(this.container.find('.xwing-card-browser select.action-available-selection'));
-    _ref1 = ["Evade", "Focus", "Lock", "Boost", "Barrel Roll", "Calculate", "Reinforce", "Rotate Arc", "Coordinate", "Slam", "Reload", "Jam"].sort();
+    _ref1 = ["Evade", "Focus", "Lock", "Boost", "Barrel Roll", "Calculate", "Reinforce", "Rotate Arc", "Coordinate", "Slam", "Reload", "Jam", "Cloak"].sort();
     for (_k = 0, _len2 = _ref1.length; _k < _len2; _k++) {
       action = _ref1[_k];
       opt = $(document.createElement('OPTION'));
@@ -1298,7 +1298,7 @@ exportObj.CardBrowser = (function() {
       minimumResultsForSearch: $.isMobile() ? -1 : 0
     });
     this.linkedaction_available_selection = $(this.container.find('.xwing-card-browser select.linkedaction-available-selection'));
-    _ref2 = ["Evade", "Focus", "Lock", "Boost", "Barrel Roll", "Calculate", "Reinforce", "Rotate Arc", "Coordinate", "Slam", "Reload", "Jam"].sort();
+    _ref2 = ["Evade", "Focus", "Lock", "Boost", "Barrel Roll", "Calculate", "Reinforce", "Rotate Arc", "Coordinate", "Slam", "Reload", "Jam", "Cloak"].sort();
     for (_l = 0, _len3 = _ref2.length; _l < _len3; _l++) {
       linkedaction = _ref2[_l];
       opt = $(document.createElement('OPTION'));
