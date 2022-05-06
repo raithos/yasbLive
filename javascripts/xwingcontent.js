@@ -10036,6 +10036,7 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-Fighter",
         faction: "Separatist Alliance",
         charge: 3,
+        recurring: -1,
         modifier_func: function(stats) {
           stats.actions.push('Slam');
           return stats.actions.push('R-> Lock');
