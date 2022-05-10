@@ -24474,6 +24474,10 @@ exportObj.manifestByExpansion = {
       type: 'upgrade',
       count: 1
     }, {
+      name: 'Ion Torpedoes',
+      type: 'upgrade',
+      count: 1
+    }, {
       name: 'Adv. Proton Torpedoes',
       type: 'upgrade',
       count: 1
@@ -24507,6 +24511,10 @@ exportObj.manifestByExpansion = {
       count: 1
     }, {
       name: 'Chancellor Palpatine',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Novice Technician',
       type: 'upgrade',
       count: 1
     }
