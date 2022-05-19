@@ -39328,7 +39328,7 @@ class exportObj.Collection
                     <div class="col">
                         <label>
                             <input class="singleton-count" type="number" size="3" value="#{count}" />
-                            <span class="upgrade-name">#{if exportObj.upgrades[upgrade].display_name then exportObj.upgrades[upgrade].display_name else upgrade}</span>
+                            <span class="upgrade-name"><i class="xwing-miniatures-ship xwing-miniatures-ship-#{if exportObj.upgrades[upgrade].slot then exportObj.upgrades[upgrade].slot.canonicalize()}"></i> #{if exportObj.upgrades[upgrade].display_name then exportObj.upgrades[upgrade].display_name else upgrade}</span>
                         </label>
                     </div>
                 </div>
