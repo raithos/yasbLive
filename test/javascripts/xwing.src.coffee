@@ -6039,8 +6039,8 @@ class Ship
         @row.addClass 'row ship mb-5 mb-sm-0 unsortable'
         @row.insertBefore @builder.notes_container
 
-        if @pilot?
-            shipicon = if exportObj.ships[@pilot.ship].icon then exportObj.ships[@pilot.ship].icon else exportObj.ships[@pilot.ship].xws
+        #if @pilot?
+        #    shipicon = if exportObj.ships[@pilot.ship].icon then exportObj.ships[@pilot.ship].icon else exportObj.ships[@pilot.ship].xws
         
         @row.append $.trim """
             <div class="col-md-3">

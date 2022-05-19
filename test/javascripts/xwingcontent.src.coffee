@@ -26493,10 +26493,12 @@ exportObj.cardLoaders.English = () ->
         '"Matchstick"':
            text: """While you perform a primary or %SINGLETURRETARC% attack, you may reroll 1 attack die for each red token you have. %LINEBREAK%<strong>Plated Hull:</strong> While you defend, if you are not critically damaged, change 1 %CRIT% to a %HIT% result."""
         '"Odd Ball" (Y-Wing)':
+           display_name: """“Odd Ball”"""
            text: """After you execute a red maneuver or perform a red action, if there is an enemy ship in your %BULLSEYEARC%, you may acquire a lock on that ship. %LINEBREAK%<strong>Plated Hull:</strong> While you defend, if you are not critically damaged, change 1 %CRIT% to a %HIT% result."""
         "R2-D2":
            text: """At the start of the Engagement Phase, if there is an enemy ship in your %REARARC%, gain 1 calculate token.%LINEBREAK%<strong>Plated Hull:</strong> While you defend, if you are not critically damaged, change 1 %CRIT% to a %HIT% result."""
         "Anakin Skywalker (Y-Wing)":
+           display_name: """Anakin Skywalker"""
            text: """After you fully execute a maneuver, if there is an enemy ship in your %FRONTARC% at range 0-1 or in your %BULLSEYEARC%, you may spend 1 %FORCE% to remove 1 stress token.%LINEBREAK%<strong>Plated Hull:</strong> While you defend, if you are not critically damaged, change 1 %CRIT% to a %HIT% result."""
         "Sun Fac":
            text: """While you perform a primary attack, if the defender is tractored, roll 1 additional attack die. %LINEBREAK% <strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you fully execute a maneuver, you may gain 1 tractor token to perform a %ROTATEARC% action. %LINEBREAK%<i>Errata (since rules reference 1.4): added "fully"</i>"""
@@ -26661,7 +26663,6 @@ exportObj.cardLoaders.English = () ->
            text: """<strong>Setup:</strong> Lose 2 %CHARGE%. %LINEBREAK% During the System Phase, you may assign 1 of your secret conditions to yourself facedown: <strong> %LINEBREAK% You Should Thank Me %LINEBREAK% You'd Better Mean Business. </strong>"""
         "Jango Fett":
            text: """While you defend or perform a primary attack, if the difficulty of your revealed maneuver is less than that of the enemy ship's, you may change 1 of the enemy ship's %FOCUS% results to a blank result."""
-
         "Hera Syndulla (B-Wing)":
            display_name: """Hera Syndulla"""
            text: """While another friendly ship at range 1-2 defends or performs an attack, during a Modify Dice step, you may transfer 1 of your focus tokens, evade tokens, or locks to that ship. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"""
@@ -39307,7 +39308,7 @@ class exportObj.Collection
                     <div class="col">
                         <label>
                             <input class="singleton-count" type="number" size="3" value="#{count}" />
-                            <span class="pilot-name">#{if exportObj.ships[exportObj.pilots[pilot].ship].icon then exportObj.ships[exportObj.pilots[pilot].ship].icon else exportObj.ships[exportObj.pilots[pilot].ship].xws} #{if exportObj.pilots[pilot].display_name then exportObj.pilots[pilot].display_name else pilot}</span>
+                            <span class="pilot-name"><i class="xwing-miniatures-ship xwing-miniatures-ship-#{if exportObj.ships[exportObj.pilots[pilot].ship].icon then exportObj.ships[exportObj.pilots[pilot].ship].icon else exportObj.ships[exportObj.pilots[pilot].ship].xws}"></i> #{if exportObj.pilots[pilot].display_name then exportObj.pilots[pilot].display_name else pilot}</span>
                         </label>
                     </div>
                 </div>

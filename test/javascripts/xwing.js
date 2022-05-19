@@ -7379,13 +7379,10 @@ Ship = (function() {
   };
 
   Ship.prototype.setupUI = function() {
-    var shipResultFormatter, shipSelectionFormatter, shipicon;
+    var shipResultFormatter, shipSelectionFormatter;
     this.row = $(document.createElement('DIV'));
     this.row.addClass('row ship mb-5 mb-sm-0 unsortable');
     this.row.insertBefore(this.builder.notes_container);
-    if (this.pilot != null) {
-      shipicon = exportObj.ships[this.pilot.ship].icon ? exportObj.ships[this.pilot.ship].icon : exportObj.ships[this.pilot.ship].xws;
-    }
     this.row.append($.trim("<div class=\"col-md-3\">\n    <div class=\"form-group d-flex\">\n        <input class=\"ship-selector-container\" type=\"hidden\"></input>\n        <div class=\"d-block d-md-none input-group-append\">\n            <button class=\"btn btn-secondary ship-query-modal\"><i class=\"fas fa-question\"></i></button>\n        </div>\n    <br />\n    </div>\n    <div class=\"form-group d-flex\">\n        <input type=\"hidden\" class=\"pilot-selector-container\"></input>\n        <div class=\"d-block d-md-none input-group-append\">\n            <button class=\"btn btn-secondary pilot-query-modal\"><i class=\"fas fa-question\"></i></button>\n        <br />\n        </div>\n    </div>\n    <label class=\"wingmate-label\">\n    " + (this.uitranslation("Wingmates")) + ": \n        <input type=\"number\" class=\"wingmate-selector\"></input>\n    </label>\n</div>\n<div class=\"col-md-1 points-display-container\">\n     <div></div>\n     <div class=\"upgrade-points\"></div>\n</div>\n<div class=\"col-md-6 addon-container\">  </div>\n<div class=\"col-md-2 button-container\">\n    <button class=\"btn btn-danger remove-pilot side-button\"><span class=\"d-none d-sm-block\" data-toggle=\"tooltip\" title=\"" + (this.uitranslation("Remove Pilot")) + "\"><i class=\"fa fa-times\"></i></span><span class=\"d-block d-sm-none\"> " + (this.uitranslation("Remove Pilot")) + "</span></button>\n    <button class=\"btn btn-light copy-pilot side-button\"><span class=\"d-none d-sm-block\" data-toggle=\"tooltip\" title=\"" + (this.uitranslation("Clone Pilot")) + "\"><i class=\"far fa-copy\"></i></span><span class=\"d-block d-sm-none\"> " + (this.uitranslation("Clone Pilot")) + "</span></button>\n    <button class=\"btn btn-light points-destroyed side-button\" points-state\"><span class=\"d-none d-sm-block destroyed-type\" data-toggle=\"tooltip\" title=\"" + (this.uitranslation("Points Destroyed")) + "\"><i class=\"fas fa-circle\"></i></i></span><span class=\"d-block d-sm-none destroyed-type-mobile\"> " + (this.uitranslation("Undamaged")) + "</span></button>\n</div>"));
     this.row.find('.button-container span').tooltip();
     this.ship_selector = $(this.row.find('input.ship-selector-container'));

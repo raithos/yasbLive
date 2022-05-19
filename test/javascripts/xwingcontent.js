@@ -18369,12 +18369,14 @@ exportObj.cardLoaders.English = function() {
       text: "While you perform a primary or %SINGLETURRETARC% attack, you may reroll 1 attack die for each red token you have. %LINEBREAK%<strong>Plated Hull:</strong> While you defend, if you are not critically damaged, change 1 %CRIT% to a %HIT% result."
     },
     '"Odd Ball" (Y-Wing)': {
+      display_name: "“Odd Ball”",
       text: "After you execute a red maneuver or perform a red action, if there is an enemy ship in your %BULLSEYEARC%, you may acquire a lock on that ship. %LINEBREAK%<strong>Plated Hull:</strong> While you defend, if you are not critically damaged, change 1 %CRIT% to a %HIT% result."
     },
     "R2-D2": {
       text: "At the start of the Engagement Phase, if there is an enemy ship in your %REARARC%, gain 1 calculate token.%LINEBREAK%<strong>Plated Hull:</strong> While you defend, if you are not critically damaged, change 1 %CRIT% to a %HIT% result."
     },
     "Anakin Skywalker (Y-Wing)": {
+      display_name: "Anakin Skywalker",
       text: "After you fully execute a maneuver, if there is an enemy ship in your %FRONTARC% at range 0-1 or in your %BULLSEYEARC%, you may spend 1 %FORCE% to remove 1 stress token.%LINEBREAK%<strong>Plated Hull:</strong> While you defend, if you are not critically damaged, change 1 %CRIT% to a %HIT% result."
     },
     "Sun Fac": {
@@ -29846,7 +29848,7 @@ exportObj.Collection = (function() {
     for (_l = 0, _len3 = _ref6.length; _l < _len3; _l++) {
       pilot = _ref6[_l];
       count = parseInt((_ref7 = (_ref8 = this.singletons.pilot) != null ? _ref8[pilot] : void 0) != null ? _ref7 : 0);
-      row = $.parseHTML($.trim("<div class=\"row\">\n    <div class=\"col\">\n        <label>\n            <input class=\"singleton-count\" type=\"number\" size=\"3\" value=\"" + count + "\" />\n            <span class=\"pilot-name\">" + (exportObj.ships[exportObj.pilots[pilot].ship].icon ? exportObj.ships[exportObj.pilots[pilot].ship].icon : exportObj.ships[exportObj.pilots[pilot].ship].xws) + " " + (exportObj.pilots[pilot].display_name ? exportObj.pilots[pilot].display_name : pilot) + "</span>\n        </label>\n    </div>\n</div>"));
+      row = $.parseHTML($.trim("<div class=\"row\">\n    <div class=\"col\">\n        <label>\n            <input class=\"singleton-count\" type=\"number\" size=\"3\" value=\"" + count + "\" />\n            <span class=\"pilot-name\"><i class=\"xwing-miniatures-ship xwing-miniatures-ship-" + (exportObj.ships[exportObj.pilots[pilot].ship].icon ? exportObj.ships[exportObj.pilots[pilot].ship].icon : exportObj.ships[exportObj.pilots[pilot].ship].xws) + "\"></i> " + (exportObj.pilots[pilot].display_name ? exportObj.pilots[pilot].display_name : pilot) + "</span>\n        </label>\n    </div>\n</div>"));
       input = $($(row).find('input'));
       input.data('singletonType', 'pilot');
       input.data('singletonName', pilot);
