@@ -39307,7 +39307,7 @@ class exportObj.Collection
                     <div class="col">
                         <label>
                             <input class="singleton-count" type="number" size="3" value="#{count}" />
-                            <span class="pilot-name">#{if pilot.ship then (if exportObj.ships[pilot.ship].icon then exportObj.ships[pilot.ship].icon else '') else ''} #{if exportObj.pilots[pilot].display_name then exportObj.pilots[pilot].display_name else pilot}</span>
+                            <span class="pilot-name">#{if pilot.ship then (if exportObj.ships[pilot.ship].icon then exportObj.ships[pilot.ship].icon else 'Cant Find Icon') else 'Ship Wrong'} #{if exportObj.pilots[pilot].display_name then exportObj.pilots[pilot].display_name else pilot}</span>
                         </label>
                     </div>
                 </div>
