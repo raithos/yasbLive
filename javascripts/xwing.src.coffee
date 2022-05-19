@@ -1084,12 +1084,21 @@ class exportObj.CardBrowser
                                         </label>
                                     </div>
                                     <div class = "advanced-search-point-selection-container">
-                                        <strong class="translated" defaultText="Point costs:"></strong>
+                                        <strong class="translated" defaultText="Point cost:"></strong>
                                         <label class = "advanced-search-label set-minimum-points">
                                             <span class="translated" defaultText="from"></span> <input type="number" class="minimum-point-cost advanced-search-number-input" value="0" /> 
                                         </label>
                                         <label class = "advanced-search-label set-maximum-points">
-                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="200" /> 
+                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="20" /> 
+                                        </label>
+                                    </div>
+                                    <div class = "advanced-search-loadout-selection-container">
+                                        <strong class="translated" defaultText="Loadout cost:"></strong>
+                                        <label class = "advanced-search-label set-minimum-loadout">
+                                            <span class="translated" defaultText="from"></span> <input type="number" class="minimum-loadout-cost advanced-search-number-input" value="0" /> 
+                                        </label>
+                                        <label class = "advanced-search-label set-maximum-loadout">
+                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-loadout-cost advanced-search-number-input" value="99" /> 
                                         </label>
                                     </div>
                                     <div class = "advanced-search-collection-container">
@@ -1098,7 +1107,7 @@ class exportObj.CardBrowser
                                             <span class="translated" defaultText="from"></span> <input type="number" class="minimum-owned-copies advanced-search-number-input" value="0" /> 
                                         </label>
                                         <label class = "advanced-search-label set-maximum-owened-copies">
-                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-owned-copies advanced-search-number-input" value="100" /> 
+                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-owned-copies advanced-search-number-input" value="99" /> 
                                         </label>
                                     </div>
                                     <div class = "advanced-search-misc-container">
@@ -1349,6 +1358,8 @@ class exportObj.CardBrowser
         
         @minimum_point_costs = ($ @container.find('.xwing-card-browser .minimum-point-cost'))[0]
         @maximum_point_costs = ($ @container.find('.xwing-card-browser .maximum-point-cost'))[0]
+        @minimum_loadout_costs = ($ @container.find('.xwing-card-browser .minimum-loadout-cost'))[0]
+        @maximum_loadout_costs = ($ @container.find('.xwing-card-browser .maximum-loadout-cost'))[0]
         @standard_checkbox = ($ @container.find('.xwing-card-browser .standard-checkbox'))[0]
         @unique_checkbox = ($ @container.find('.xwing-card-browser .unique-checkbox'))[0]
         @non_unique_checkbox = ($ @container.find('.xwing-card-browser .non-unique-checkbox'))[0]
@@ -1471,9 +1482,11 @@ class exportObj.CardBrowser
         
         @faction_selection[0].onchange = => @renderList @sort_selector.val()
         for basesize, checkbox of @base_size_checkboxes
-            checkbox.onclick = => @renderList @sort_selector.val()            
+            checkbox.onclick = => @renderList @sort_selector.val()
         @minimum_point_costs.oninput = => @renderList @sort_selector.val()
         @maximum_point_costs.oninput = => @renderList @sort_selector.val()
+        @minimum_loadout_costs.oninput = => @renderList @sort_selector.val()
+        @maximum_loadout_costs.oninput = => @renderList @sort_selector.val()
         @standard_checkbox.onclick = => @renderList @sort_selector.val()
         @unique_checkbox.onclick = => @renderList @sort_selector.val()
         @non_unique_checkbox.onclick = => @renderList @sort_selector.val()
@@ -1652,7 +1665,7 @@ class exportObj.CardBrowser
 
     addCardTo: (container, card) ->
         option = $ document.createElement('OPTION')
-        option.text "#{if card.display_name then card.display_name else card.name} (#{if card.data.points? then card.data.points else '*'}#{if card.data.pointsupg? then "/#{card.data.pointsupg}" else ''})"
+        option.text "#{if card.display_name then card.display_name else card.name} (#{if card.data.points? then card.data.points else '*'}#{if card.data.loadout? then "/#{card.data.loadout}" else ''})"
         option.data 'name', card.name
         option.data 'display_name', card.display_name
         option.data 'type', card.type
@@ -1771,7 +1784,7 @@ class exportObj.CardBrowser
             return false unless actions? and ((("R> " + action) in actions) or (("> " + action) in actions))
 
         # check if point costs matches
-        if @minimum_point_costs.value > 0 or @maximum_point_costs.value < 200
+        if @minimum_point_costs.value > 0 or @maximum_point_costs.value < 20
             return false unless (card.data.points >= @minimum_point_costs.value and card.data.points <= @maximum_point_costs.value) or (card.data.variablepoints?)
             if card.data.variablepoints?
                 matching_points = false
@@ -1792,6 +1805,22 @@ class exportObj.CardBrowser
                         break if matching_points
                     break if matching_points            
                 return false unless matching_points
+
+        # check if loadout costs matches
+        if @minimum_loadout_costs.value > 0 or @maximum_loadout_costs.value < 99
+            return false unless (card.data.loadout >= @minimum_loadout_costs.value and card.data.loadout <= @maximum_loadout_costs.value)
+            if card.orig_type == 'Ship' # check if pilot matching points exist
+                matching_loadout = false
+                for faction in selected_factions
+                    for name, pilots of exportObj.pilotsByFactionCanonicalName[faction]
+                        for pilot in pilots
+                            if pilot.ship == card.data.name
+                                if pilot.loadout >= @minimum_point_costs.value and pilot.loadout <= @maximum_loadout_costs.value
+                                    matching_loadout = true
+                                    break
+                        break if matching_loadout
+                    break if matching_loadout
+                return false unless matching_loadout
 
         # check if used slot matches
         used_slots = @slot_used_selection.val()
@@ -4066,7 +4095,7 @@ class exportObj.SquadBuilder
             if include_pilot? and include_pilot.unique? and (@matcher(include_pilot.name, term) or (include_pilot.display_name and @matcher(include_pilot.display_name, term)) )
                 eligible_faction_pilots.push include_pilot
 
-            retval = ({ id: pilot.id, text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then pilot.skill + ' - ' else ''}#{if pilot.display_name then pilot.display_name else pilot.name} (#{pilot.points}/#{pilot.pointsupg})", points: pilot.points, ship: pilot.ship, name: pilot.name, display_name: pilot.display_name, disabled: pilot not in eligible_faction_pilots } for pilot in available_faction_pilots)
+            retval = ({ id: pilot.id, text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then pilot.skill + ' - ' else ''}#{if pilot.display_name then pilot.display_name else pilot.name} (#{pilot.points}/#{pilot.loadout})", points: pilot.points, ship: pilot.ship, name: pilot.name, display_name: pilot.display_name, disabled: pilot not in eligible_faction_pilots } for pilot in available_faction_pilots)
         else
             # select according to quickbuild cards
             # filter for faction and ship
@@ -4404,7 +4433,7 @@ class exportObj.SquadBuilder
                         if not (pilot.skill in possible_inis)
                             possible_inis.push(pilot.skill)
                         possible_costs.push(pilot.points)
-                        possible_loadout.push(pilot.pointsupg)
+                        possible_loadout.push(pilot.loadout)
                         for slot, state of slot_types
                             switch pilot.slots.filter((item) => item == slot).length
                                 when 1
@@ -4598,7 +4627,7 @@ class exportObj.SquadBuilder
                     
                     container.find('tr.info-skill td.info-data').text data.skill
                     container.find('tr.info-skill').show()
-                    container.find('tr.info-loadout td.info-data').text data.pointsupg
+                    container.find('tr.info-loadout td.info-data').text data.loadout
                     container.find('tr.info-loadout').show()
                     if data.engagement?
                         container.find('tr.info-engagement td.info-data').text data.engagement
@@ -5089,7 +5118,7 @@ class exportObj.SquadBuilder
                     
                 for ship in @ships
                     expensive_slots = []
-                    while ship.upgrade_points_total < ship.pilot.pointsupg
+                    while ship.upgrade_points_total < ship.pilot.loadout
                         # we wan't to utilize newly added upgrade slots, so we will check for slots iteratively
                         unused_addons = []
                         for upgrade in ship.upgrades
@@ -5907,7 +5936,7 @@ class Ship
     getPoints: ->
         if not @builder.isQuickbuild
             points = @pilot?.points ? 0
-            total_upgrades = @pilot?.pointsupg ? "N/A"
+            total_upgrades = @pilot?.loadout ? "N/A"
             @points_container.find('div').text "#{points}"
             @points_container.find('.upgrade-points').text "(#{@upgrade_points_total}/#{total_upgrades})"
             if points > 0
@@ -5990,7 +6019,7 @@ class Ship
 
             @pilot_selector.select2 'data',
                 id: @pilot.id
-                text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then @pilot.skill + ' - ' else ''}#{if @pilot.display_name then @pilot.display_name else @pilot.name}#{if @quickbuildId != -1 then exportObj.quickbuildsById[@quickbuildId].suffix else ""} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else @pilot.points}/#{if @quickbuildId != -1 then "" else @pilot.pointsupg})"
+                text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then @pilot.skill + ' - ' else ''}#{if @pilot.display_name then @pilot.display_name else @pilot.name}#{if @quickbuildId != -1 then exportObj.quickbuildsById[@quickbuildId].suffix else ""} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else @pilot.points}/#{if @quickbuildId != -1 then "" else @pilot.loadout})"
             @pilot_selector.data('select2').container.show()
             for upgrade in @upgrades
                 points = upgrade.getPoints()
@@ -6010,8 +6039,8 @@ class Ship
         @row.addClass 'row ship mb-5 mb-sm-0 unsortable'
         @row.insertBefore @builder.notes_container
 
-        if @pilot?
-            shipicon = if exportObj.ships[@pilot.ship].icon then exportObj.ships[@pilot.ship].icon else exportObj.ships[@pilot.ship].xws
+        #if @pilot?
+        #    shipicon = if exportObj.ships[@pilot.ship].icon then exportObj.ships[@pilot.ship].icon else exportObj.ships[@pilot.ship].xws
         
         @row.append $.trim """
             <div class="col-md-3">
@@ -6422,7 +6451,7 @@ class Ship
         
         html += $.trim """
             <div class="ship-points-total">
-                <strong>#{@uitranslation("Ship Cost")}: #{@getPoints()}, #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg}), #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Damage Threshold")}: #{Threshold}</strong> 
+                <strong>#{@uitranslation("Ship Cost")}: #{@getPoints()}, #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.loadout}), #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Damage Threshold")}: #{Threshold}</strong> 
             </div>
         """
 
@@ -6448,7 +6477,7 @@ class Ship
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg}) #{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Damage Threshold")}: #{threshold}</td></tr>"""
+        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.loadout}) #{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Damage Threshold")}: #{threshold}</td></tr>"""
 
         table_html += '<tr><td>&nbsp;</td><td></td></tr>'
         table_html
@@ -6469,7 +6498,7 @@ class Ship
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        simplecopy += """#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}    \n    \n"""
+        simplecopy += """#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.loadout})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}    \n    \n"""
 
         simplecopy
         
@@ -6487,7 +6516,7 @@ class Ship
                 upgrade_reddit = upgrade.toRedditText points
                 reddit_upgrades.push upgrade_reddit if upgrade_reddit?
             reddit += reddit_upgrades.join "    "
-            reddit += """&nbsp;*#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}*    \n"""
+            reddit += """&nbsp;*#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.loadout})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}*    \n"""
         reddit
 
     toTTSText: ->
@@ -6686,7 +6715,7 @@ class Ship
 
     restriction_check: (restrictions, upgrade_obj, points, current_upgrade_points) ->
         effective_stats = @effectiveStats()
-        if @pilot.pointsupg? and (points + current_upgrade_points > @pilot.pointsupg)
+        if @pilot.loadout? and (points + current_upgrade_points > @pilot.loadout)
             return false
         else
             if restrictions?
