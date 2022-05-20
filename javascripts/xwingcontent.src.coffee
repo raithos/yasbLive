@@ -6806,7 +6806,7 @@ exportObj.basicCardData = ->
             skill: 3
             force: 2
             points: 4
-            loadout: 9
+            loadout: 7
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -11524,7 +11524,7 @@ exportObj.basicCardData = ->
             skill: 3
             force: 2
             points: 6
-            loadout: 7
+            loadout: 10
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
