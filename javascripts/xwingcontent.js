@@ -5935,7 +5935,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 6,
-        slots: ["Configuration"]
+        slots: ["Talent", "Missile", "Configuration"]
       }, {
         name: "Shara Bey (A-Wing)",
         canonical_name: 'Shara Bey'.canonicalize(),
