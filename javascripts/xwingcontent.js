@@ -2144,7 +2144,7 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 11,
         keyword: ["Mandalorian"],
-        slots: ["Talent", "Misssile", "Torpedo", "Modification"]
+        slots: ["Talent", "Missile", "Torpedo", "Modification"]
       }, {
         name: "Skull Squadron Pilot",
         id: 101,
@@ -2530,7 +2530,7 @@ exportObj.basicCardData = function() {
         ship: "M3-A Interceptor",
         skill: 2,
         points: 3,
-        loadout: 16,
+        loadout: 6,
         slots: ["Modification", "HardpointShip"]
       }, {
         name: "Sunny Bounder",
@@ -6031,7 +6031,7 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 9,
         loadout: 14,
-        slots: ["Force", "Tech", "Cannon", "Missile", "Configuration"]
+        slots: ["Force", "Talent", "Tech", "Cannon", "Missile", "Configuration"]
       }, {
         name: "Captain Dobbs",
         id: 470,
