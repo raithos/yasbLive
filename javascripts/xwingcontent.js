@@ -17111,7 +17111,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Captain Feroph": {
       display_name: "Captain Feroph",
-      text: "While you defend, if the attacker does not have any green tokens, you may change 1 of your blank or %FOCUS% results to an %EVADE% result.%LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
+      text: "While you defend, if the attacker does not have any green tokens, you may change 1 of your blank or %FOCUS% results to an %EVADE% result.%LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you may boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Captain Jonus": {
       display_name: "Captain Jonus",
@@ -17699,7 +17699,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Major Vermeil": {
       display_name: "Major Vermeil",
-      text: "While you perform an attack, if the defender does not have any green tokens, you may change 1 of your blank or %FOCUS% results to a %HIT% result.%LINEBREAK% %LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
+      text: "While you perform an attack, if the defender does not have any green tokens, you may change 1 of your blank or %FOCUS% results to a %HIT% result.%LINEBREAK% %LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you may boost. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Major Vynder": {
       display_name: "Major Vynder",
@@ -17921,7 +17921,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Scarif Base Pilot": {
       display_name: "Scarif Base Pilot",
-      text: "<i class = flavor_text>The TIE reaper was designed to ferry elite troops to flashpoints on the battlefield, notably carrying Director Krennic’s dreaded death troopers at the Battle of Scarif.</i>%LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
+      text: "<i class = flavor_text>The TIE reaper was designed to ferry elite troops to flashpoints on the battlefield, notably carrying Director Krennic’s dreaded death troopers at the Battle of Scarif.</i>%LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you may boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Scimitar Squadron Pilot": {
       display_name: "Scimitar Squadron Pilot",
@@ -18273,7 +18273,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Vizier"': {
       display_name: "“Vizier”",
-      text: "After you fully execute a speed 1 maneuver using your <strong>Controlled Ailerons</strong> ship ability, you may perform a %COORDINATE% action. If you do, skip your Perform Action step.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
+      text: "After you fully execute a speed 1 maneuver using your <strong>Controlled Ailerons</strong> ship ability, you may perform a %COORDINATE% action. If you do, skip your Perform Action step.%LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you may boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     '"Wampa"': {
       display_name: "“Wampa”",
