@@ -3809,8 +3809,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Fang Fighter"
             skill: 4
-            points: 4
-            loadout: 4
+            points: 5
+            loadout: 12
             keyword: ["Mandalorian"]
             slots: [
                 "Talent"
