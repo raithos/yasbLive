@@ -5474,7 +5474,7 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-Fighter",
         points: 4,
         loadout: 16,
-        slots: ["Talent", "Sensor", "Missile", "Modification", "Configuration"],
+        slots: ["Talent", "Sensor", "Missile", "Modification", "Modification", "Configuration"],
         applies_condition: 'Fearful Prey'.canonicalize()
       }, {
         name: "DIS-347",
@@ -5505,7 +5505,7 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-Fighter",
         points: 4,
         loadout: 14,
-        slots: ["Talent", "Sensor", "Missile", "Modification", "Configuration"]
+        slots: ["Talent", "Sensor", "Missile", "Modification", "Modification", "Configuration"]
       }, {
         name: "Colicoid Interceptor",
         id: 424,

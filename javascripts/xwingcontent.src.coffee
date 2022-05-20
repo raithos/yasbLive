@@ -9412,6 +9412,7 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Missile"
                 "Modification"
+                "Modification"
                 "Configuration"
             ]
             applies_condition: '''Fearful Prey'''.canonicalize()
@@ -9464,6 +9465,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
+                "Modification"
                 "Modification"
                 "Configuration"
             ]
