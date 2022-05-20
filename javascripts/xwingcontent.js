@@ -2935,7 +2935,7 @@ exportObj.basicCardData = function() {
         points: 7,
         loadout: 21,
         force: 3,
-        slots: ["Force", "Force", "Tech", "Sensor", "Missile", "Modification", "Modification"]
+        slots: ["Force", "Force", "Talent", "Tech", "Sensor", "Missile", "Modification", "Modification"]
       }, {
         name: "Maarek Stele",
         id: 174,
