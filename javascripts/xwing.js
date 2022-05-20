@@ -2692,7 +2692,7 @@ exportObj.slotsMatching = function(slota, slotb) {
         return true;
       }
       break;
-    case 'VersitileShip':
+    case 'VersatileShip':
       if (slotb === 'Torpedo' || slotb === 'Missile') {
         return true;
       }
@@ -2703,7 +2703,7 @@ exportObj.slotsMatching = function(slota, slotb) {
         return true;
       }
       break;
-    case 'VersitileShip':
+    case 'VersatileShip':
       if (slota === 'Torpedo' || slota === 'Missile') {
         return true;
       }

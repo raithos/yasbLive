@@ -2129,7 +2129,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "X-Wing"
             skill: 4
-            points: 4
+            points: 5
             loadout: 15
             slots: [
                 "Talent"
@@ -7439,7 +7439,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Talent"
                 "Astromech"
-                "Missile"
                 "Modification"
                 "Configuration"
             ]
@@ -7543,7 +7542,6 @@ exportObj.basicCardData = ->
             keyword: ["Clone"]
             slots: [
                 "Talent"
-                "Missile"
                 "Missile"
                 "Modification"
             ]
@@ -10535,7 +10533,7 @@ exportObj.basicCardData = ->
             ship: "BTA-NR2 Y-Wing"
             skill: 3
             points: 3
-            loadout: 7
+            loadout: 13
             slots: [
                 "Talent"
                 "Tech"
@@ -11508,7 +11506,6 @@ exportObj.basicCardData = ->
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
-                "Missile"
                 "Astromech"
                 "Modification"
             ]
@@ -11774,7 +11771,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Modification"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
         {
@@ -11795,7 +11792,7 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Modification"
                 "Modification"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
         {
@@ -11815,7 +11812,7 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Modification"
                 "Modification"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
         {
@@ -11833,7 +11830,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
         {
@@ -11851,7 +11848,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Modification"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
         {
@@ -11868,7 +11865,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Modification"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
         {
@@ -11885,7 +11882,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Modification"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
         {
@@ -11904,7 +11901,7 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Cannon"
                 "Modification"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
         {
@@ -11919,7 +11916,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
         {
@@ -11934,7 +11931,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Sensor"
                 "Modification"
-                "VersitileShip"
+                "VersatileShip"
             ]
         }
     ]
@@ -25214,7 +25211,7 @@ exportObj.translations.English =
         "Cargo": '<i class="xwing-miniatures-font xwing-miniatures-font-cargo"></i>'
         "Command": '<i class="xwing-miniatures-font xwing-miniatures-font-command"></i>'
         "HardpointShip": '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>'
-        "VersitileShip": '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>'
+        "VersatileShip": '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>'
         "Tactical Relay": '<i class="xwing-miniatures-font xwing-miniatures-font-tacticalrelay"></i>'
 
     restrictions:
@@ -25246,7 +25243,7 @@ exportObj.translations.English =
         "Torpedo": "Torpedo"
         "Turret": "Turret"
         "HardpointShip": "Weapon Hardpoint"
-        "VersitileShip": "Versitile Frame"
+        "VersatileShip": "Versatile Frame"
         "Hardpoint": "Hardpoint"
         "Illicit": "Illicit"
         "Configuration": "Configuration"

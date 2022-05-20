@@ -1134,7 +1134,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "X-Wing",
         skill: 4,
-        points: 4,
+        points: 5,
         loadout: 15,
         slots: ["Talent", "Torpedo", "Astromech", "Configuration"]
       }, {
@@ -4324,7 +4324,7 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 12,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Talent", "Astromech", "Missile", "Modification", "Configuration"]
+        slots: ["Force", "Talent", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Saesee Tiin",
         id: 313,
@@ -4392,7 +4392,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 8,
         keyword: ["Clone"],
-        slots: ["Talent", "Missile", "Missile", "Modification"]
+        slots: ["Talent", "Missile", "Modification"]
       }, {
         name: '"Tucker"',
         id: 319,
@@ -6143,7 +6143,7 @@ exportObj.basicCardData = function() {
         ship: "BTA-NR2 Y-Wing",
         skill: 3,
         points: 3,
-        loadout: 7,
+        loadout: 13,
         slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "Lega Fossang",
@@ -6701,7 +6701,7 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 10,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Missile", "Astromech", "Modification"]
+        slots: ["Force", "Astromech", "Modification"]
       }, {
         name: "Ahsoka Tano (Delta-7b)",
         canonical_name: 'Ahsoka Tano'.canonicalize(),
@@ -6869,7 +6869,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 7,
         keyword: ["Clone"],
-        slots: ["Talent", "Talent", "Sensor", "Modification", "VersitileShip"]
+        slots: ["Talent", "Talent", "Sensor", "Modification", "VersatileShip"]
       }, {
         name: '"Slider"',
         id: 545,
@@ -6882,7 +6882,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 8,
         keyword: ["Clone"],
-        slots: ["Talent", "Talent", "Sensor", "Modification", "Modification", "VersitileShip"]
+        slots: ["Talent", "Talent", "Sensor", "Modification", "Modification", "VersatileShip"]
       }, {
         name: '"Hawk (Z-95)"',
         canonical_name: '"Hawk"'.canonicalize(),
@@ -6895,7 +6895,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 8,
         keyword: ["Clone"],
-        slots: ["Talent", "Sensor", "Modification", "Modification", "VersitileShip"]
+        slots: ["Talent", "Sensor", "Modification", "Modification", "VersatileShip"]
       }, {
         name: '"Warthog (Z-95)"',
         canonical_name: '"Warthog"'.canonicalize(),
@@ -6908,7 +6908,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 10,
         keyword: ["Clone"],
-        slots: ["Talent", "Sensor", "VersitileShip"]
+        slots: ["Talent", "Sensor", "VersatileShip"]
       }, {
         name: '"Boost"',
         id: 548,
@@ -6919,7 +6919,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 8,
         keyword: ["Clone"],
-        slots: ["Talent", "Talent", "Sensor", "Modification", "VersitileShip"]
+        slots: ["Talent", "Talent", "Sensor", "Modification", "VersatileShip"]
       }, {
         name: '"Drift"',
         id: 549,
@@ -6930,7 +6930,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 5,
         keyword: ["Clone"],
-        slots: ["Talent", "Sensor", "Modification", "VersitileShip"]
+        slots: ["Talent", "Sensor", "Modification", "VersatileShip"]
       }, {
         name: '"Stub"',
         id: 550,
@@ -6941,7 +6941,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 8,
         keyword: ["Clone"],
-        slots: ["Talent", "Sensor", "Modification", "VersitileShip"]
+        slots: ["Talent", "Sensor", "Modification", "VersatileShip"]
       }, {
         name: '"Killer"',
         id: 551,
@@ -6952,7 +6952,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 11,
         keyword: ["Clone"],
-        slots: ["Talent", "Talent", "Sensor", "Cannon", "Modification", "VersitileShip"]
+        slots: ["Talent", "Talent", "Sensor", "Cannon", "Modification", "VersatileShip"]
       }, {
         name: "Reaper Squadron Scout",
         id: 552,
@@ -6962,7 +6962,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 2,
         keyword: ["Clone"],
-        slots: ["Talent", "Sensor", "VersitileShip"]
+        slots: ["Talent", "Sensor", "VersatileShip"]
       }, {
         name: "7th Sky Corps Pilot",
         id: 553,
@@ -6972,7 +6972,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 3,
         keyword: ["Clone"],
-        slots: ["Sensor", "Modification", "VersitileShip"]
+        slots: ["Sensor", "Modification", "VersatileShip"]
       }
     ],
     upgradesById: [
@@ -16679,7 +16679,7 @@ exportObj.translations.English = {
     "Cargo": '<i class="xwing-miniatures-font xwing-miniatures-font-cargo"></i>',
     "Command": '<i class="xwing-miniatures-font xwing-miniatures-font-command"></i>',
     "HardpointShip": '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>',
-    "VersitileShip": '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>',
+    "VersatileShip": '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>',
     "Tactical Relay": '<i class="xwing-miniatures-font xwing-miniatures-font-tacticalrelay"></i>'
   },
   restrictions: {
@@ -16711,7 +16711,7 @@ exportObj.translations.English = {
     "Torpedo": "Torpedo",
     "Turret": "Turret",
     "HardpointShip": "Weapon Hardpoint",
-    "VersitileShip": "Versitile Frame",
+    "VersatileShip": "Versatile Frame",
     "Hardpoint": "Hardpoint",
     "Illicit": "Illicit",
     "Configuration": "Configuration",
