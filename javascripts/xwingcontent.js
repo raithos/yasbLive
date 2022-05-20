@@ -17031,7 +17031,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Black Squadron Scout": {
       display_name: "Black Squadron Scout",
-      text: "<i class = flavor_text>These heavily armed atmospheric craft employ their specialized moveable wings to gain additional speed and maneuverability.</i>%LINEBREAK% <sasmall><strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver.</sasmall>"
+      text: "<i class = flavor_text>These heavily armed atmospheric craft employ their specialized moveable wings to gain additional speed and maneuverability.</i>%LINEBREAK% <strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Black Squadron Ace (T-70)": {
       display_name: "Black Squadron Ace",
@@ -17039,7 +17039,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Black Squadron Scout": {
       display_name: "Black Squadron Scout",
-      text: "<i class = flavor_text>These heavily armed atmospheric craft employ their specialized moveable wings to gain additional speed and maneuverability.</i>%LINEBREAK% <strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "<i class = flavor_text>These heavily armed atmospheric craft employ their specialized moveable wings to gain additional speed and maneuverability.</i>%LINEBREAK% <strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Black Sun Ace": {
       display_name: "Black Sun Ace",
@@ -17111,7 +17111,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Captain Feroph": {
       display_name: "Captain Feroph",
-      text: "While you defend, if the attacker does not have any green tokens, you may change 1 of your blank or %FOCUS% results to an %EVADE% result.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "While you defend, if the attacker does not have any green tokens, you may change 1 of your blank or %FOCUS% results to an %EVADE% result.%LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Captain Jonus": {
       display_name: "Captain Jonus",
@@ -17699,7 +17699,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Major Vermeil": {
       display_name: "Major Vermeil",
-      text: "While you perform an attack, if the defender does not have any green tokens, you may change 1 of your blank or %FOCUS% results to a %HIT% result.%LINEBREAK% %LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "While you perform an attack, if the defender does not have any green tokens, you may change 1 of your blank or %FOCUS% results to a %HIT% result.%LINEBREAK% %LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Major Vynder": {
       display_name: "Major Vynder",
@@ -17822,7 +17822,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Planetary Sentinel": {
       display_name: "Planetary Sentinel",
-      text: "<i class = flavor_text>To protect its many military installations, the Empire requires a swift and vigilant defense force.</i>%LINEBREAK% <strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "<i class = flavor_text>To protect its many military installations, the Empire requires a swift and vigilant defense force.</i>%LINEBREAK% <strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Plo Koon": {
       display_name: "Plo Koon",
@@ -17921,7 +17921,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Scarif Base Pilot": {
       display_name: "Scarif Base Pilot",
-      text: "<i class = flavor_text>The TIE reaper was designed to ferry elite troops to flashpoints on the battlefield, notably carrying Director Krennic’s dreaded death troopers at the Battle of Scarif.</i>%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "<i class = flavor_text>The TIE reaper was designed to ferry elite troops to flashpoints on the battlefield, notably carrying Director Krennic’s dreaded death troopers at the Battle of Scarif.</i>%LINEBREAK%<strong>Controlled Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Scimitar Squadron Pilot": {
       display_name: "Scimitar Squadron Pilot",
@@ -18157,7 +18157,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Countdown"': {
       display_name: "“Countdown”",
-      text: "While you defend, after the Neutralize Results step, if you are not stressed, you may suffer 1&nbsp;%HIT% damage and gain 1 stress token. If you do, cancel all dice results.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "While you defend, after the Neutralize Results step, if you are not stressed, you may suffer 1&nbsp;%HIT% damage and gain 1 stress token. If you do, cancel all dice results.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     '"Deathfire"': {
       display_name: "“Deathfire”",
@@ -18173,7 +18173,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Duchess"': {
       display_name: "“Duchess”",
-      text: "You may choose not to use your <strong>Adaptive Ailerons</strong>. %LINEBREAK%You may use your <strong>Adaptive Ailerons</strong> even while stressed.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "You may choose not to use your <strong>Adaptive Ailerons</strong>. %LINEBREAK%You may use your <strong>Adaptive Ailerons</strong> even while stressed.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     '"Dutch" Vander': {
       display_name: "“Dutch” Vander",
@@ -18233,7 +18233,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Pure Sabacc"': {
       display_name: "“Pure Sabacc”",
-      text: "While you perform an attack, if you have 1 or fewer damage cards, you may roll 1 additional attack die.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "While you perform an attack, if you have 1 or fewer damage cards, you may roll 1 additional attack die.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     '"Quickdraw"': {
       display_name: "“Quickdraw”",
@@ -18273,7 +18273,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Vizier"': {
       display_name: "“Vizier”",
-      text: "After you fully execute a speed 1 maneuver using your <strong>Adaptive Ailerons</strong> ship ability, you may perform a %COORDINATE% action. If you do, skip your Perform Action step.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "After you fully execute a speed 1 maneuver using your <strong>Controlled Ailerons</strong> ship ability, you may perform a %COORDINATE% action. If you do, skip your Perform Action step.%LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     '"Wampa"': {
       display_name: "“Wampa”",
@@ -18452,7 +18452,7 @@ exportObj.cardLoaders.English = function() {
       text: "While you perform an attack, after the Neutralize Results step, if the attack hit, you may spend 2 %FORCE% to add 1 %CRIT% result."
     },
     '"Vagabond"': {
-      text: "After you fully execute a maneuver using your <strong>Adaptive Ailerons</strong>, if you are not stressed you may drop 1 device. %LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> execute a white [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%], or [1&nbsp;%BANKRIGHT%] maneuver."
+      text: "After you fully execute a maneuver using your <strong>Adaptive Ailerons</strong>, if you are not stressed you may drop 1 device. %LINEBREAK%<strong>Adaptive Ailerons:</strong> Before you reveal your dial, if you are not stressed, you <b>must</b> boost.  %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed ship ability</i>"
     },
     "Morna Kee": {
       text: "During the End Phase, you may spend 1 %CHARGE% to flip 1 of your reinforce tokens to the other full arc instead of removing it."
@@ -19112,11 +19112,11 @@ exportObj.cardLoaders.English = function() {
     },
     "BB Astromech": {
       display_name: "BB Astromech",
-      text: "Before you execute a blue maneuver, you may spend 1&nbsp;%CHARGE% to perform a %BARRELROLL% action."
+      text: "During the System Phase, you may spend 1&nbsp;%CHARGE% to perform a %BARRELROLL% action. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed the effect timing to the System Phase</i>"
     },
     "BB-8": {
       display_name: "BB-8",
-      text: "Before you execute a blue maneuver, you may spend 1&nbsp;%CHARGE% to perform a&nbsp;%BARRELROLL% or&nbsp;%BOOST% action."
+      text: "During the System Phase, you may spend 1&nbsp;%CHARGE% to perform a&nbsp;%BARRELROLL% or&nbsp;%BOOST% action. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Changed the effect timing to the System Phase</i>"
     },
     "BT-1": {
       display_name: "BT-1",
@@ -19236,7 +19236,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Contraband Cybernetics": {
       display_name: "Contraband Cybernetics",
-      text: "Before you activate, you may spend 1&nbsp;%CHARGE%. If you do, until the end of the round, you can perform actions and execute red maneuvers, even while stressed."
+      text: "Before you activate, you may spend 1&nbsp;%CHARGE%. If you do, until the end of the round, you can perform actions and execute red maneuvers, even while stressed. This card's %CHARGE% cannot be recovered. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Added restriction on recovering charges</i>"
     },
     "Count Dooku": {
       display_name: "Count Dooku",
@@ -20350,7 +20350,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Ursa Wren": {
       display_name: "Ursa Wren",
-      text: "You can maintain up to 2 locks. Each lock must be on a different object. %LINEBREAK% After a friendly ship at range 0-3 is locked, you may acquire a lock on an enemy ship."
+      text: " You can maintain up to 2 locks. Each lock must be on a different object. After a friendly ship at range 0-3 is locked by an enemy ship, you may perform a %LOCK% action. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Updated text to work as intended</i>"
     },
     "Ursa Wren (Gunner)": {
       display_name: "Ursa Wren",
