@@ -13564,7 +13564,7 @@ exportObj.basicCardData = ->
             name: "Targeting Synchronizer"
             id: 177
             slot: "Tech"
-            points: 1
+            points: 3
             restrictions: [
                 ["Action", "Lock"]
             ]
@@ -14255,7 +14255,7 @@ exportObj.basicCardData = ->
             name: "Targeting Computer"
             id: 249
             slot: "Modification"
-            points: 3
+            points: 1
             modifier_func: (stats) ->
                 stats.actions.push 'Lock' if 'Lock' not in stats.actions
         }

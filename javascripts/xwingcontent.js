@@ -8438,7 +8438,7 @@ exportObj.basicCardData = function() {
         name: "Targeting Synchronizer",
         id: 177,
         slot: "Tech",
-        points: 1,
+        points: 3,
         restrictions: [["Action", "Lock"]]
       }, {
         name: "Primed Thrusters",
@@ -9068,7 +9068,7 @@ exportObj.basicCardData = function() {
         name: "Targeting Computer",
         id: 249,
         slot: "Modification",
-        points: 3,
+        points: 1,
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'Lock') < 0) {
             return stats.actions.push('Lock');
