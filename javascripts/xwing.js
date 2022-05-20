@@ -3795,7 +3795,7 @@ exportObj.SquadBuilder = (function() {
         if (_this.isEpic) {
           _this.printable_container.find('.squad-name').append(" <i class=\"xwing-miniatures-font xwing-miniatures-font-energy\"></i>");
         }
-        _this.printable_container.find('.printable-body').append($.trim("<div class=\"version\">Points Version: 2.5.0 03/01/2022</div>"));
+        _this.printable_container.find('.printable-body').append($.trim("<div class=\"version\">Points Version: 06/15/2022</div>"));
         if ($.trim(_this.notes.val()) !== '') {
           _this.printable_container.find('.printable-body').append($.trim("<h5 class=\"print-notes translated\" defaultText=\"Notes:\"></h5>\n<pre class=\"print-notes\"></pre>"));
           _this.printable_container.find('.printable-body pre.print-notes').text(_this.notes.val());
@@ -4073,7 +4073,7 @@ exportObj.SquadBuilder = (function() {
     this.backend_save_list_as_button.toggleClass('disabled', this.total_points === 0);
     this.backend_delete_list_button.toggleClass('disabled', this.current_squad.id == null);
     if (this.ships.length > 1) {
-      return $('meta[property="og:description"]').attr("content", this.uitranslation("X-Wing Squadron by YASB 2: ") + this.current_squad.name + ": " + this.describeSquad());
+      return $('meta[property="og:description"]').attr("content", this.uitranslation("X-Wing Squadron by YASB: ") + this.current_squad.name + ": " + this.describeSquad());
     } else {
       return $('meta[property="og:description"]').attr("content", this.uitranslation("YASB advertisment"));
     }
@@ -4093,11 +4093,11 @@ exportObj.SquadBuilder = (function() {
       return;
     }
     if (this.current_squad.name !== this.uitranslation("Unnamed Squadron") && this.current_squad.name !== this.uitranslation("Unsaved Squadron")) {
-      if (document.title !== "YASB 2 - " + this.current_squad.name) {
-        document.title = "YASB 2 - " + this.current_squad.name;
+      if (document.title !== "YASB - " + this.current_squad.name) {
+        document.title = "YASB - " + this.current_squad.name;
       }
     } else {
-      document.title = "YASB 2";
+      document.title = "YASB";
     }
     return this.updatePrintAndExportTexts();
   };
@@ -6425,12 +6425,12 @@ exportObj.SquadBuilder = (function() {
       points: this.total_points,
       vendor: {
         yasb: {
-          builder: 'YASB 2.5',
+          builder: 'YASB - X-Wing 2.5',
           builder_url: window.location.href.split('?')[0],
           link: this.getPermaLink()
         }
       },
-      version: '2.5.0'
+      version: '06/15/2022'
     };
     _ref = this.ships;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
