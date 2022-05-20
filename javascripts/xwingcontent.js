@@ -6394,7 +6394,7 @@ exportObj.basicCardData = function() {
         points: 2,
         loadout: 3,
         max_per_squad: 2,
-        slots: ["Talent", "Illicit", "Modification"]
+        slots: ["Illicit"]
       }, {
         name: "Mandalorian Royal Guard",
         id: 505,

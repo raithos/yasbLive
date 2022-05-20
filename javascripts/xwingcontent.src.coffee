@@ -10986,9 +10986,7 @@ exportObj.basicCardData = ->
             loadout: 3
             max_per_squad: 2
             slots: [
-                "Talent"
                 "Illicit"
-                "Modification"
             ]
         }
         {
