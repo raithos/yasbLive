@@ -2147,7 +2147,7 @@ exportObj.basicCardData = ->
             skill: 5
             keyword: ["Light Side"]
             force: 2
-            points: 8
+            points: 6
             loadout: 22
             slots: [
                 "Force"
