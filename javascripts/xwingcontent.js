@@ -2725,7 +2725,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 7,
-        slots: ["Talent", "Cannon", "Cannon", "Illicit"]
+        slots: ["Talent", "Missile", "Missile", "Illicit"]
       }, {
         name: "Kaa'to Leeachos",
         id: 157,
