@@ -11065,7 +11065,7 @@ exportObj.basicCardData = function() {
         canonical_name: 'Gar Saxon'.canonicalize(),
         xws: "garsaxon-gunner",
         id: 441,
-        points: 9,
+        points: 6,
         slot: "Gunner",
         unique: true,
         faction: "Scum and Villainy",
