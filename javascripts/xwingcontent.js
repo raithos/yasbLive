@@ -3449,9 +3449,9 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Fighter",
         skill: 2,
-        points: 2,
-        loadout: 0,
-        slots: []
+        points: 3,
+        loadout: 4,
+        slots: ["Talent", "Talent"]
       }, {
         name: "Black Squadron Ace",
         id: 227,
