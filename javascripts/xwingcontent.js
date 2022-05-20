@@ -2384,8 +2384,8 @@ exportObj.basicCardData = function() {
         ship: "Kihraxz Fighter",
         skill: 3,
         points: 4,
-        loadout: 0,
-        slots: []
+        loadout: 3,
+        slots: ["Talent"]
       }, {
         name: "Cartel Marauder",
         id: 124,

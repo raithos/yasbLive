@@ -4252,8 +4252,9 @@ exportObj.basicCardData = ->
             ship: "Kihraxz Fighter"
             skill: 3
             points: 4
-            loadout: 0
+            loadout: 3
             slots: [
+                "Talent"
             ]
         }
         {
