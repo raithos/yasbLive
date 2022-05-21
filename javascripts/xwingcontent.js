@@ -5454,7 +5454,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/rb Heavy",
         points: 5,
         loadout: 14,
-        slots: ["Sensor", "Cannon", "Cannon", "Modification", "Modification", "Configuration"]
+        slots: ["Sensor", "Cannon", "Cannon", "Gunner", "Modification", "Modification", "Configuration"]
       }, {
         name: '"Rampage"',
         id: 419,
@@ -5464,7 +5464,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/rb Heavy",
         points: 5,
         loadout: 16,
-        slots: ["Talent", "Cannon", "Cannon", "Modification", "Modification", "Configuration"]
+        slots: ["Talent", "Cannon", "Cannon", "Gunner", "Modification", "Modification", "Configuration"]
       }, {
         name: "Fearsome Predator",
         id: 420,
