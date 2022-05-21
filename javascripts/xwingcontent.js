@@ -5847,7 +5847,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 11,
-        slots: ["Talent", "Talent", "Missile", "Torpedo", "Modification", "Modification", "Configuration"]
+        slots: ["Talent", "Torpedo", "Modification", "Configuration"]
       }, {
         name: "Vult Skerris",
         id: 454,
