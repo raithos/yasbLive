@@ -3974,7 +3974,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         force: 3,
         points: 5,
-        loadout: 8,
+        loadout: 10,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Astromech", "Configuration", "Modification", "Modification"]
       }, {
