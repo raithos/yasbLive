@@ -6815,7 +6815,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 19,
-        keyword: ["Droid"],
+        keyword: ["Droid", "Networked Calculations"],
         slots: ["Cannon", "Cannon", "Modification", "Modification"]
       }, {
         name: "IG-102",
@@ -6826,7 +6826,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 19,
-        keyword: ["Droid"],
+        keyword: ["Droid", "Networked Calculations"],
         slots: ["Cannon", "Cannon", "Modification", "Modification"]
       }, {
         name: "IG-111",
@@ -6837,7 +6837,7 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 21,
-        keyword: ["Droid"],
+        keyword: ["Droid", "Networked Calculations"],
         slots: ["Cannon", "Cannon", "Modification", "Modification"]
       }, {
         name: "MagnaGuard Protector",
@@ -6848,7 +6848,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 18,
-        keyword: ["Droid"],
+        keyword: ["Droid", "Networked Calculations"],
         slots: ["Cannon", "Cannon", "Missile", "Modification"],
         applies_condition: 'Guarded'.canonicalize()
       }, {
@@ -6859,7 +6859,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 4,
-        keyword: ["Droid"],
+        keyword: ["Droid", "Networked Calculations"],
         slots: ["Cannon", "Cannon", "Modification"]
       }, {
         name: '"Knack"',
