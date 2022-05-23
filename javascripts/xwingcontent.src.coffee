@@ -4447,8 +4447,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "M3-A Interceptor"
             skill: 3
-            points: 4
-            loadout: 11
+            points: 3
+            loadout: 7
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -7860,8 +7860,9 @@ exportObj.basicCardData = ->
             keyword: ["Droid"]
             slots: [
                 "Missile"
-                "Configuration"
                 "Modification"
+                "Modification"
+                "Configuration"
             ]
         }
         {
@@ -25348,7 +25349,7 @@ exportObj.translations.English =
                     <p>Additional credits to:<br>
                     2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>
                     2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>
-                    Translation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>
+                    Translation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke<br>
                     Site logo: Thomas Kohler<br>
                     Quick Build Support: Patrick Mischke</p>
 
