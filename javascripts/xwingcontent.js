@@ -5495,7 +5495,7 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-Fighter",
         points: 4,
         loadout: 12,
-        slots: ["Talent", "Sensor", "Missile", "Modification", "Modification", "Configuration"]
+        slots: ["Talent", "Sensor", "Cannon", "Modification", "Modification", "Configuration"]
       }, {
         name: "Phlac-Arphocc Prototype",
         id: 423,
@@ -6910,7 +6910,7 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 10,
         keyword: ["Clone"],
-        slots: ["Talent", "Sensor", "VersatileShip"]
+        slots: ["Talent", "Sensor", "Modification", "VersatileShip"]
       }, {
         name: '"Boost"',
         id: 548,
