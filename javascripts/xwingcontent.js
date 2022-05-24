@@ -24834,15 +24834,15 @@ exportObj.manifestByExpansion = {
       type: 'upgrade',
       count: 3
     }, {
-      name: 'gascloud0',
-      type: 'obstacle',
-      count: 1
-    }, {
       name: 'gascloud1',
       type: 'obstacle',
       count: 1
     }, {
       name: 'gascloud2',
+      type: 'obstacle',
+      count: 1
+    }, {
+      name: 'gascloud3',
       type: 'obstacle',
       count: 1
     }
@@ -25175,15 +25175,15 @@ exportObj.manifestByExpansion = {
       type: 'upgrade',
       count: 3
     }, {
-      name: 'gascloud0',
-      type: 'obstacle',
-      count: 1
-    }, {
       name: 'gascloud1',
       type: 'obstacle',
       count: 1
     }, {
       name: 'gascloud2',
+      type: 'obstacle',
+      count: 1
+    }, {
+      name: 'gascloud3',
       type: 'obstacle',
       count: 1
     }
@@ -29077,15 +29077,15 @@ exportObj.manifestByExpansion = {
       type: 'obstacle',
       count: 1
     }, {
-      name: 'gascloud3',
-      type: 'obstacle',
-      count: 1
-    }, {
       name: 'gascloud4',
       type: 'obstacle',
       count: 1
     }, {
       name: 'gascloud5',
+      type: 'obstacle',
+      count: 1
+    }, {
+      name: 'gascloud6',
       type: 'obstacle',
       count: 1
     }
