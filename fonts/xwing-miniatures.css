@@ -835,6 +835,18 @@ i.xwing-miniatures-ship-tiesebomber:before {
 i.xwing-miniatures-ship-tiewiwhispermodifiedinterceptor:before {
   content: "\0023"; }
 
+i.xwing-miniatures-ship-gauntletfighter:before {
+  content: "6"; }
+
+i.xwing-miniatures-ship-clonez95headhunter:before {
+  content: "}"; }
+
+i.xwing-miniatures-ship-st70assaultship:before {
+  content: "'"; }
+
+i.xwing-miniatures-ship-rogueclassstarfighter:before {
+  content: "|"; }
+
 i.xwing-miniatures-ship-tridentclassassaultship:before {
   content: "\0036"; }
 

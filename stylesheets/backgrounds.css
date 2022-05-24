@@ -407,8 +407,18 @@
   background-image: url("../images/st70assaultship.png");
   background-repeat: no-repeat;
   background-position: 0px -10px; }
+    
+.ship-rogueclassstarfighter {
+  background-image: url("../images/rogueclassstarfighter.png");
+  background-repeat: no-repeat;
+  background-position: 0px -10px; }
   
-
+.ship-clonez95headhunter {
+  background-image: url("../images/clonez95headhunter.png");
+  background-repeat: no-repeat;
+  background-position: 0px -20px; }
+  
+  
 .ship-gr75mediumtransport {
   background-image: url("../images/gr75mediumtransport.png");
   background-repeat: no-repeat;
