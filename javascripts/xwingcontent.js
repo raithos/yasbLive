@@ -18865,7 +18865,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Cad Bane (Separatist)": {
       display_name: "Cad Bane",
-      text: "During the Engagement Phase, after another ship at range 0-3 is destroyed, you may spend 1 [Charge] to perform an action, even while stressed. %LINEBREAK% <strong>Dead to Rights:</strong> While you perform an attack, if the defender is in your %BULLSEYEARC%, defense dice cannot be modified using green tokens."
+      text: "During the Engagement Phase, after another ship at range 0-3 is destroyed, you may spend 1 %CHARGE% to perform an action, even while stressed. %LINEBREAK% <strong>Dead to Rights:</strong> While you perform an attack, if the defender is in your %BULLSEYEARC%, defense dice cannot be modified using green tokens."
     },
     "Viktor Hel (Rogue)": {
       display_name: "Viktor Hel",
