@@ -11410,8 +11410,8 @@ exportObj.basicCardData = function() {
         points: 0,
         ship: ["Rogue-class Starfighter"],
         modifier_func: function(stats) {
-          if (__indexOf.call(stats.actions, 'Cloak') < 0) {
-            return stats.actions.push('Cloak');
+          if (__indexOf.call(stats.actions, 'R-Cloak') < 0) {
+            return stats.actions.push('R-Cloak');
           }
         },
         confersAddons: [
@@ -15196,7 +15196,7 @@ exportObj.basicCardData = function() {
       }, {
         id: 503,
         faction: "Rebel Alliance",
-        pilot: "Hera Syndulla",
+        pilot: "Hera Syndulla (VCX-100)",
         ship: "VCX-100",
         threat: [6, 7, 8, 9],
         wingmates: [1, 2, 3, 4],
