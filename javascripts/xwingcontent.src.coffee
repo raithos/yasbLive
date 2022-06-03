@@ -38771,12 +38771,12 @@ exportObj.manifestByExpansion =
         {
             name: '"Knack"'
             type: 'pilot'
-            count: 2
+            count: 1
         }
         {
             name: '"Slider"'
             type: 'pilot'
-            count: 2
+            count: 1
         }
         {
             name: '"Stub"'
