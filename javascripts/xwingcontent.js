@@ -6886,7 +6886,7 @@ exportObj.basicCardData = function() {
         keyword: ["Clone"],
         slots: ["Talent", "Talent", "Sensor", "Modification", "Modification", "VersatileShip"]
       }, {
-        name: '"Hawk (Z-95)"',
+        name: '"Hawk" (Z-95)',
         canonical_name: '"Hawk"'.canonicalize(),
         xws: "hawk-clonez95headhunter",
         id: 546,
@@ -6899,7 +6899,7 @@ exportObj.basicCardData = function() {
         keyword: ["Clone"],
         slots: ["Talent", "Sensor", "Modification", "Modification", "VersatileShip"]
       }, {
-        name: '"Warthog (Z-95)"',
+        name: '"Warthog" (Z-95)',
         canonical_name: '"Warthog"'.canonicalize(),
         xws: "warthog-clonez95headhunter",
         id: 547,
@@ -18702,7 +18702,7 @@ exportObj.cardLoaders.English = function() {
       text: "At the start of the End Phase, you may spend 2 %CHARGE% to choose yourself or a ship in your %SINGLETURRETARC% with 1 or more circular tokens. During the End Phase, circular tokens are not removed from that ship."
     },
     "Arliz Hadrassian": {
-      text: "While you perform a %FRONTARC% attack, if you are damaged,before the Modify Dice step, you may change 1 of your %FOCUS% results to a %CRIT% result. %LINEBREAK% While you defend, if you are damaged, you <b>must</b> change 1 of your %FOCUS% results to a blank result. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"
+      text: "While you perform a %FRONTARC% attack, if you are damaged, before the Modify Dice step, you may change 1 of your %FOCUS% results to a %CRIT% result. %LINEBREAK% While you defend, if you are damaged, you <b>must</b> change 1 of your %FOCUS% results to a blank result. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"
     },
     "Leema Kai": {
       text: "Before you engage, if you are not in any enemy ship's %FRONTARC%, you may acquire a lock on an enemy ship in your %FULLFRONTARC%."
@@ -18915,7 +18915,7 @@ exportObj.cardLoaders.English = function() {
       display_name: "“Stub”",
       text: "While you defend, if the speed of your revealed maneuver is even, roll 1 additional defende die. While you perform a primary attack, if the speed of your revealed maneuver is odd, roll 1 additional attack die. %LINEBREAK%<strong>Versatile Frame:</strong> You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
     },
-    '"Hawk (Z-95)"': {
+    '"Hawk" (Z-95)': {
       display_name: "“Hawk”",
       text: "At the start of the End Phase, each friendly ship at range 0-1 that has a revealed maneuver of speed 3-5 may gain 1 strain token to perform a %BARRELROLL% or %BOOST% action.  %LINEBREAK%<strong>Versatile Frame:</strong> You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
     },
@@ -18923,7 +18923,7 @@ exportObj.cardLoaders.English = function() {
       display_name: "“Slider”",
       text: "When you reveal a [2 %BANKLEFT%] or [2 %BANKRIGHT%] maneuver, you may spend 2 %CHARGE% to execute it as a sideslip. %LINEBREAK%<strong>Versatile Frame:</strong> You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
     },
-    '"Warthog (Z-95)"': {
+    '"Warthog" (Z-95)': {
       display_name: "“Warthog”",
       text: "After you or a friendly non-limited ship at range 0-2 are destroyed during the Engagement Phase, that ship is not removed until the end of that phase. %LINEBREAK%<strong>Versatile Frame:</strong> You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
     },
@@ -20364,7 +20364,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Prime Minister Almec": {
       display_name: "Prime Minister Almec",
-      text: "<strong>Setup:</strong> Equip this side faceup. %LINEBREAK% After a friendly ship at range 0-2 reveals a white maneuver, if it has no green tokens, it may gain 1 stress token to gain 1 calculate token. %LINEBREAK% During the End Phase, iif you have 2 or more stress tokens, flip this card. %LINEBREAK% <strong>Almec, Maul's Puppet</strong> %LINEBREAK% After a friendly ship at range 0-2 fully executes a red maneuver, that ship may perform a %CALCULATE% or %FOCUS% action on its action bar, even while stressed."
+      text: "<strong>Setup:</strong> Equip this side faceup. %LINEBREAK% After a friendly ship at range 0-2 reveals a white maneuver, if it has no green tokens, it may gain 1 stress token to gain 1 calculate token. %LINEBREAK% During the End Phase, if you have 2 or more stress tokens, flip this card. %LINEBREAK% <strong>Almec, Maul's Puppet</strong> %LINEBREAK% After a friendly ship at range 0-2 fully executes a red maneuver, that ship may perform a %CALCULATE% or %FOCUS% action on its action bar, even while stressed."
     },
     "Beskar Reinforced Plating": {
       text: "While you defend, if the attacker is in your %FRONTARC%, before you would be dealt a faceup damage card, you may spend 1 %CHARGE% to be dealt that card facedown instead, or spend 2 %CHARGE% to discard it instead."
@@ -20376,7 +20376,7 @@ exportObj.cardLoaders.English = function() {
       text: "During the System Phase, you may spend 1 %CHARGE% to acquire a lock on an object in your %FRONTARC%. %LINEBREAK% While you perform a primary attack, if you have a lock on the defender, ignore obstacles beyond range 0 obstructing the attack."
     },
     "Clan Training": {
-      text: "Before you engage, iif you are not focused and there is an enemy ship in your %FRONTARC% at range 1, you may spend 1 %CHARGE% to perform a red %FOCUS% action. %LINEBREAK% After you perform an attack, if the defender is destroyed, recover 1 %CHARGE%."
+      text: "Before you engage, if you are not focused and there is an enemy ship in your %FRONTARC% at range 1, you may spend 1 %CHARGE% to perform a red %FOCUS% action. %LINEBREAK% After you perform an attack, if the defender is destroyed, recover 1 %CHARGE%."
     },
     "Gauntlet": {
       text: "During the System Phase, you may spend 1 %CHARGE% to repair 1 faceup <b>Ship</b> damage card."
@@ -29294,6 +29294,93 @@ exportObj.manifestByExpansion = {
       name: 'Xanadu Blood',
       type: 'upgrade',
       count: 1
+    }
+  ],
+  "Clone Z-95 Headhunter Expansion pack": [
+    {
+      name: 'Clone Z-95 Headhunter',
+      type: 'ship',
+      count: 2
+    }, {
+      name: '"Boost"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Drift"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Hawk" (Z-95)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Killer"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Knack"',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: '"Slider"',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: '"Stub"',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '"Warthog" (Z-95)',
+      type: 'pilot',
+      count: 1
+    }, {
+      name: '7th Sky Corps Pilot',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Reaper Squadron Scout',
+      type: 'pilot',
+      count: 2
+    }, {
+      name: 'Enduring',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Adv. Proton Torpedoes',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Angled Deflectors',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Fire-Control System',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Homing Torpedoes',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Ion Torpedoes',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Mag-Pulse Warheads',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Marg Sabl Closure',
+      type: 'upgrade',
+      count: 2
+    }, {
+      name: 'Squad Leader',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'XX-23 S-Thread Tracers',
+      type: 'upgrade',
+      count: 2
     }
   ],
   "Pride of Mandalore Reinforcements Pack": [
