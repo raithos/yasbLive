@@ -1362,7 +1362,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 18,
-        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Modification", "Device"]
+        slots: ["Talent", "Turret", "Torpedo", "Astromech", "Modification", "Device"]
       }, {
         name: "Horton Salm",
         id: 26,
@@ -11508,7 +11508,8 @@ exportObj.basicCardData = function() {
         id: 23
       }, {
         name: 'Fearful Prey',
-        id: 24
+        id: 24,
+        unique: true
       }, {
         name: 'You Should Thank Me',
         id: 25
@@ -11540,7 +11541,8 @@ exportObj.basicCardData = function() {
         id: 33
       }, {
         name: 'Marked for Elimination',
-        id: 34
+        id: 34,
+        unique: true
       }, {
         name: 'Clan Wren Commandos',
         id: 35

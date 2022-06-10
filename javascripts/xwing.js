@@ -4599,7 +4599,7 @@ exportObj.SquadBuilder = (function() {
           pilot = available_faction_pilots[_i];
           _results.push({
             id: pilot.id,
-            text: "" + ((((_ref = exportObj.settings) != null ? _ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? pilot.skill + ' - ' : '') + (pilot.display_name ? pilot.display_name : pilot.name) + " (" + pilot.points + "/" + pilot.loadout + ")",
+            text: "" + ((((_ref = exportObj.settings) != null ? _ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? pilot.skill + ' - ' : '') + (pilot.display_name ? pilot.display_name : pilot.name) + " (" + pilot.points + (pilot.loadout != null ? "/" + pilot.loadout : "") + ")",
             points: pilot.points,
             ship: pilot.ship,
             name: pilot.name,
@@ -5066,7 +5066,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.formatActions = function(actions, seperation, keyword) {
-    var action, action_icons, actionlist, color, prefix, _i, _len;
+    var action, action_icons, actionlist, color, prefix, showTooltipaction, _i, _len;
     if (keyword == null) {
       keyword = [];
     }
@@ -5076,7 +5076,7 @@ exportObj.SquadBuilder = (function() {
       color = "";
       prefix = seperation;
       if (__indexOf.call(keyword, "Droid") >= 0) {
-        action = action.replace('Focus', 'Calculate');
+        showTooltipaction = action.replace('Focus', 'Calculate');
       }
       if (action.search('> ') !== -1) {
         action = action.replace(/> /gi, '');
@@ -5128,54 +5128,58 @@ exportObj.SquadBuilder = (function() {
               possible_inis.push(pilot.skill);
             }
             possible_costs.push(pilot.points);
-            possible_loadout.push(pilot.loadout);
-            for (slot in slot_types) {
-              state = slot_types[slot];
-              switch (pilot.slots.filter((function(_this) {
-                    return function(item) {
-                      return item === slot;
-                    };
-                  })(this)).length) {
-                case 1:
-                  switch (state) {
-                    case -1:
-                      slot_types[slot] = 1;
-                      break;
-                    case 0:
-                      slot_types[slot] = 2;
-                      break;
-                    case 3:
-                      slot_types[slot] = 4;
-                  }
-                  break;
-                case 0:
-                  switch (state) {
-                    case -1:
-                      slot_types[slot] = 0;
-                      break;
-                    case 1:
-                      slot_types[slot] = 2;
-                      break;
-                    case 3:
-                    case 4:
-                      slot_types[slot] = 5;
-                  }
-                  break;
-                case 2:
-                  switch (state) {
-                    case -1:
-                      slot_types[slot] = 3;
-                      break;
-                    case 0:
-                    case 2:
-                      slot_types[slot] = 5;
-                      break;
-                    case 1:
-                      slot_types[slot] = 4;
-                  }
-                  break;
-                case 3:
-                  slot_types[slot] = 6;
+            if (pilot.loadout != null) {
+              possible_loadout.push(pilot.loadout);
+            }
+            if (pilot.slots != null) {
+              for (slot in slot_types) {
+                state = slot_types[slot];
+                switch (pilot.slots.filter((function(_this) {
+                      return function(item) {
+                        return item === slot;
+                      };
+                    })(this)).length) {
+                  case 1:
+                    switch (state) {
+                      case -1:
+                        slot_types[slot] = 1;
+                        break;
+                      case 0:
+                        slot_types[slot] = 2;
+                        break;
+                      case 3:
+                        slot_types[slot] = 4;
+                    }
+                    break;
+                  case 0:
+                    switch (state) {
+                      case -1:
+                        slot_types[slot] = 0;
+                        break;
+                      case 1:
+                        slot_types[slot] = 2;
+                        break;
+                      case 3:
+                      case 4:
+                        slot_types[slot] = 5;
+                    }
+                    break;
+                  case 2:
+                    switch (state) {
+                      case -1:
+                        slot_types[slot] = 3;
+                        break;
+                      case 0:
+                      case 2:
+                        slot_types[slot] = 5;
+                        break;
+                      case 1:
+                        slot_types[slot] = 4;
+                    }
+                    break;
+                  case 3:
+                    slot_types[slot] = 6;
+                }
               }
             }
           }
@@ -5473,7 +5477,7 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-upgrades').hide();
           } else {
             container.find('tr.info-upgrades').show();
-            container.find('tr.info-upgrades td.info-data').html(((function() {
+            container.find('tr.info-upgrades td.info-data').html(data.slots != null ? ((function() {
               var _k, _len2, _ref50, _results;
               _ref50 = data.slots;
               _results = [];
@@ -5482,7 +5486,7 @@ exportObj.SquadBuilder = (function() {
                 _results.push(exportObj.translate('sloticon', slot));
               }
               return _results;
-            })()).join(' ') || 'None');
+            })()).join(' ') || 'None' : "Standardized");
           }
           container.find('p.info-maneuvers').show();
           container.find('p.info-maneuvers').html(this.getManeuverTableHTML((_ref50 = effective_stats != null ? effective_stats.maneuvers : void 0) != null ? _ref50 : ship.maneuvers, ship.maneuvers));
@@ -5908,36 +5912,38 @@ exportObj.SquadBuilder = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           ship = _ref[_i];
           expensive_slots = [];
-          while (ship.upgrade_points_total < ship.pilot.loadout) {
-            unused_addons = [];
-            _ref1 = ship.upgrades;
-            for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-              upgrade = _ref1[_j];
-              if (!((upgrade.data != null) || ((upgrade.occupied_by != null) && upgrade.occupied_by !== null) || __indexOf.call(expensive_slots, upgrade) >= 0)) {
-                unused_addons.push(upgrade);
-              }
-            }
-            if (unused_addons.length === 0) {
-              break;
-            }
-            addon = unused_addons[$.randomInt(unused_addons.length)];
-            available_upgrades = (function() {
-              var _k, _len2, _ref2, _results;
-              _ref2 = this.getAvailableUpgradesIncluding(addon.slot, null, ship, addon, '', this.dfl_filter_func, sorted = false);
-              _results = [];
-              for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-                upgrade = _ref2[_k];
-                if ((exportObj.upgradesById[upgrade.id].sources.intersects(data.allowed_sources) && ((!data.collection_only) || this.collection.checkShelf('upgrade', upgrade.name))) && !upgrade.disabled) {
-                  _results.push(upgrade);
+          if (ship.pilot.loadout != null) {
+            while (ship.upgrade_points_total < ship.pilot.loadout) {
+              unused_addons = [];
+              _ref1 = ship.upgrades;
+              for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+                upgrade = _ref1[_j];
+                if (!((upgrade.data != null) || ((upgrade.occupied_by != null) && upgrade.occupied_by !== null) || __indexOf.call(expensive_slots, upgrade) >= 0)) {
+                  unused_addons.push(upgrade);
                 }
               }
-              return _results;
-            }).call(this);
-            if (available_upgrades.length > 0) {
-              upgrade = available_upgrades[$.randomInt(available_upgrades.length)];
-              addon.setById(upgrade.id);
-            } else {
-              expensive_slots.push(addon);
+              if (unused_addons.length === 0) {
+                break;
+              }
+              addon = unused_addons[$.randomInt(unused_addons.length)];
+              available_upgrades = (function() {
+                var _k, _len2, _ref2, _results;
+                _ref2 = this.getAvailableUpgradesIncluding(addon.slot, null, ship, addon, '', this.dfl_filter_func, sorted = false);
+                _results = [];
+                for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+                  upgrade = _ref2[_k];
+                  if ((exportObj.upgradesById[upgrade.id].sources.intersects(data.allowed_sources) && ((!data.collection_only) || this.collection.checkShelf('upgrade', upgrade.name))) && !upgrade.disabled) {
+                    _results.push(upgrade);
+                  }
+                }
+                return _results;
+              }).call(this);
+              if (available_upgrades.length > 0) {
+                upgrade = available_upgrades[$.randomInt(available_upgrades.length)];
+                addon.setById(upgrade.id);
+              } else {
+                expensive_slots.push(addon);
+              }
             }
           }
         }
@@ -6690,7 +6696,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5656
+                  lineno: 5658
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6919,7 +6925,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5778
+                          lineno: 5780
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6969,7 +6975,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5811
+                                  lineno: 5813
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7068,7 +7074,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5870
+                      lineno: 5872
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7152,7 +7158,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5906
+                lineno: 5908
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7169,24 +7175,46 @@ Ship = (function() {
   };
 
   Ship.prototype.setupAddons = function() {
-    var slot, upgrade, upgrade_data, upgrade_name, _i, _j, _len, _len1, _ref, _ref1, _ref2, _ref3, _results, _results1;
+    var slot, upgrade, upgrade_data, upgrade_name, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _results, _results1, _results2;
     if (!this.builder.isQuickbuild) {
-      _ref1 = (_ref = this.pilot.slots) != null ? _ref : [];
-      _results = [];
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        slot = _ref1[_i];
-        _results.push(this.upgrades.push(new exportObj.Upgrade({
-          ship: this,
-          container: this.addon_container,
-          slot: slot
-        })));
+      if (this.pilot.upgrades != null) {
+        _ref1 = (_ref = this.pilot.slots) != null ? _ref : [];
+        _results = [];
+        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+          upgrade_name = _ref1[_i];
+          upgrade_data = exportObj.upgrades[upgrade_name];
+          if (upgrade_data == null) {
+            console.log("Unknown Upgrade: " + upgrade_name);
+            continue;
+          }
+          upgrade = new exportObj.QuickbuildUpgrade({
+            ship: this,
+            container: this.addon_container,
+            slot: upgrade_data.slot,
+            upgrade: upgrade_data
+          });
+          upgrade.setData(upgrade_data);
+          _results.push(this.upgrades.push(upgrade));
+        }
+        return _results;
+      } else {
+        _ref3 = (_ref2 = this.pilot.slots) != null ? _ref2 : [];
+        _results1 = [];
+        for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
+          slot = _ref3[_j];
+          _results1.push(this.upgrades.push(new exportObj.Upgrade({
+            ship: this,
+            container: this.addon_container,
+            slot: slot
+          })));
+        }
+        return _results1;
       }
-      return _results;
     } else {
-      _ref3 = (_ref2 = exportObj.quickbuildsById[this.quickbuildId].upgrades) != null ? _ref2 : [];
-      _results1 = [];
-      for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
-        upgrade_name = _ref3[_j];
+      _ref5 = (_ref4 = exportObj.quickbuildsById[this.quickbuildId].upgrades) != null ? _ref4 : [];
+      _results2 = [];
+      for (_k = 0, _len2 = _ref5.length; _k < _len2; _k++) {
+        upgrade_name = _ref5[_k];
         upgrade_data = exportObj.upgrades[upgrade_name];
         if (upgrade_data == null) {
           console.log("Unknown Upgrade: " + upgrade_name);
@@ -7199,9 +7227,9 @@ Ship = (function() {
           upgrade: upgrade_data
         });
         upgrade.setData(upgrade_data);
-        _results1.push(this.upgrades.push(upgrade));
+        _results2.push(this.upgrades.push(upgrade));
       }
-      return _results1;
+      return _results2;
     }
   };
 
@@ -7221,7 +7249,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5935
+              lineno: 5950
             }));
           }
         }
@@ -7235,12 +7263,11 @@ Ship = (function() {
   };
 
   Ship.prototype.getPoints = function() {
-    var points, quickbuild, threat, total_upgrades, _ref, _ref1, _ref2, _ref3, _ref4;
+    var points, quickbuild, threat, _ref, _ref1, _ref2, _ref3;
     if (!this.builder.isQuickbuild) {
       points = (_ref = (_ref1 = this.pilot) != null ? _ref1.points : void 0) != null ? _ref : 0;
-      total_upgrades = (_ref2 = (_ref3 = this.pilot) != null ? _ref3.loadout : void 0) != null ? _ref2 : "N/A";
       this.points_container.find('div').text("" + points);
-      this.points_container.find('.upgrade-points').text("(" + this.upgrade_points_total + "/" + total_upgrades + ")");
+      this.points_container.find('.upgrade-points').text(((_ref2 = this.pilot) != null ? _ref2.loadout : void 0) != null ? "(" + this.upgrade_points_total + "/" + this.pilot.loadout + ")" : "");
       if (points > 0) {
         this.points_container.fadeTo('fast', 1);
       } else {
@@ -7249,7 +7276,7 @@ Ship = (function() {
       return points;
     } else {
       quickbuild = exportObj.quickbuildsById[this.quickbuildId];
-      threat = this.primary ? (_ref4 = quickbuild != null ? quickbuild.threat : void 0) != null ? _ref4 : 0 : 0;
+      threat = this.primary ? (_ref3 = quickbuild != null ? quickbuild.threat : void 0) != null ? _ref3 : 0 : 0;
       if ((quickbuild != null ? quickbuild.wingleader : void 0) != null) {
         threat = quickbuild.threat[quickbuild.wingmates.indexOf(this.wingmates.length)];
       }
@@ -7310,7 +7337,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 5991
+                lineno: 6005
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -7357,7 +7384,7 @@ Ship = (function() {
       });
       this.pilot_selector.select2('data', {
         id: this.pilot.id,
-        text: "" + ((((_ref = exportObj.settings) != null ? _ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? this.pilot.skill + ' - ' : '') + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + (this.quickbuildId !== -1 ? exportObj.quickbuildsById[this.quickbuildId].suffix : "") + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + "/" + (this.quickbuildId !== -1 ? "" : this.pilot.loadout) + ")"
+        text: "" + ((((_ref = exportObj.settings) != null ? _ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? this.pilot.skill + ' - ' : '') + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + (this.quickbuildId !== -1 ? exportObj.quickbuildsById[this.quickbuildId].suffix : "") + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + (this.quickbuildId !== -1 || (this.pilot.loadout == null) ? "" : "/" + this.pilot.loadout) + ")"
       });
       this.pilot_selector.data('select2').container.show();
       _ref1 = this.upgrades;
@@ -7802,7 +7829,7 @@ Ship = (function() {
     }
     HalfPoints = Math.floor(this.getPoints() / 2);
     Threshold = Math.floor((effective_stats['hull'] + effective_stats['shields']) / 2);
-    html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + "/" + this.pilot.loadout + "), " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Damage Threshold")) + ": " + Threshold + "</strong> \n</div>");
+    html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.pilot.loadout != null ? "/" + this.pilot.loadout : "") + "), " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Damage Threshold")) + ": " + Threshold + "</strong> \n</div>");
     return "<div class=\"fancy-ship\">" + html + "</div>";
   };
 
@@ -7831,7 +7858,7 @@ Ship = (function() {
     table_html += "<tr class=\"simple-ship-total\"><td colspan=\"2\">" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "</td></tr>";
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + "/" + this.pilot.loadout + ") " + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "</td></tr>";
+    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.pilot.loadout != null ? "/" + this.pilot.loadout : "") + ") " + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "</td></tr>";
     table_html += '<tr><td>&nbsp;</td><td></td></tr>';
     return table_html;
   };
@@ -7867,7 +7894,7 @@ Ship = (function() {
     }
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    simplecopy += "" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + "/" + this.pilot.loadout + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "    \n    \n";
+    simplecopy += "" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.pilot.loadout != null ? "/" + this.pilot.loadout : "") + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "    \n    \n";
     return simplecopy;
   };
 
@@ -7900,7 +7927,7 @@ Ship = (function() {
         }
       }
       reddit += reddit_upgrades.join("    ");
-      reddit += "&nbsp;*" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + "/" + this.pilot.loadout + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "*    \n";
+      reddit += "&nbsp;*" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.pilot.loadout != null ? "/" + this.pilot.loadout : "") + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "*    \n";
     }
     return reddit;
   };
@@ -8512,7 +8539,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6884
+                lineno: 6898
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8671,7 +8698,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 6978
+                  lineno: 6992
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8698,7 +8725,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 6985
+                      lineno: 6999
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8842,7 +8869,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7060
+            lineno: 7074
           }));
         }
         __iced_deferrals._fulfill();
