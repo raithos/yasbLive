@@ -201,7 +201,7 @@ body {
       #printable .fancy-ship .fancy-pilot-stats .info-data, #printable .fancy-ship .fancy-pilot-stats .xwing-miniatures-font {
         position: relative;
         bottom: 0.048in; }
-    #printable .fancy-ship .fancy-pilot-text {
+    #printable .fancy-ship .fancy-pilot-text, #printable .fancy-ship .fancy-pilot-chassis {
       margin-left: 0.6in;
       padding: 5px;
       color: black; }

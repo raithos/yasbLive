@@ -489,7 +489,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.Deutsch = function() {
-  var condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'Deutsch';
   exportObj.renameShip("YT-1300", "Modifizierter leichter YT-1300-Frachter");
   exportObj.renameShip("StarViper", "Angriffsplattform der Sternenviper-Klasse");
@@ -3647,7 +3647,12 @@ exportObj.cardLoaders.Deutsch = function() {
       text: 'Sobald diese Karte zugeordnet wird, falls keine offene Schadenskarte darauf liegt, sucht der Spieler, der sie zugeordnet hat, im Schadensstapel nach 1 <strong>Pilot</strong>-Schadenskarte und platziert sie offen auf dieser Karte. Dann mische den Schadensstapel. %LINEBREAK%Sobald du 1 %CRIT%-Schaden erleiden würdest, wird dir stattdessen die offene Schadenskarte auf dieser Karte zugeteilt. Dann entferne diese Karte. '
     }
   };
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
+  chassis_translations = {
+    "Versatile Frame": {
+      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+    }
+  };
+  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
 };
 
 
@@ -3812,7 +3817,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders['Español'] = function() {
-  var condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'Español';
   exportObj.renameShip("YT-1300", "Carguero ligero YT-1300 modificado");
   exportObj.renameShip("StarViper", "Plataforma de ataque clase Víbora Estelar");
@@ -5477,7 +5482,12 @@ exportObj.cardLoaders['Español'] = function() {
       text: '(Ficha de Mina) - Después de que una nave se solape con este dispositivo o pase a través de él, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, la nave que provocó su detonación tira 2 dados de ataque. Esa nave sufre a continuación 1 de daño %HIT% además de 1 de daño %HIT%/%CRIT% por cada resultado equivalente obtenido en la tirada.'
     }
   };
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
+  chassis_translations = {
+    "Versatile Frame": {
+      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+    }
+  };
+  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
 };
 
 
@@ -5617,7 +5627,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders['Français'] = function() {
-  var condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'Français';
   exportObj.renameShip("YT-1300", "Cargo Léger YT-1300 modifié");
   exportObj.renameShip("StarViper", "StarViper");
@@ -8286,7 +8296,12 @@ exportObj.cardLoaders['Français'] = function() {
       text: '(Mine) - Après qu\'un vaisseau a chevauché ou s\'est déplacé à travers cet engin, ce dernier explose. Lorsque cet engin explose, le vaisseau lance 2 dés d\'attaque. Puis ce vaisseau subit 1 dégât %HIT% plus 1 dégât %HIT%/%CRIT% pour chaque résultat correspondant obtenu.'
     }
   };
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
+  chassis_translations = {
+    "Versatile Frame": {
+      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+    }
+  };
+  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
 };
 
 exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
@@ -8414,7 +8429,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.Magyar = function() {
-  var condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'Magyar';
   exportObj.renameShip("YT-1300", "Modified YT-1300 Light Freighter");
   exportObj.renameShip("StarViper", "StarViper-class Attack Platform");
@@ -11978,7 +11993,12 @@ exportObj.cardLoaders.Magyar = function() {
       text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."
     }
   };
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
+  chassis_translations = {
+    "Versatile Frame": {
+      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+    }
+  };
+  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
 };
 
 exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
@@ -11996,7 +12016,7 @@ if (exportObj.translations == null) {
 exportObj.translations.Italiano = exportObj.cardLoaders != null ? exportObj.cardLoaders : exportObj.cardLoaders = {};
 
 exportObj.cardLoaders.Italiano = function() {
-  var condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'Italiano';
   pilot_translations = {
     "4-LOM": {
@@ -13951,7 +13971,12 @@ exportObj.cardLoaders.Italiano = function() {
     }
   };
   condition_translations = {};
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
+  chassis_translations = {
+    "Versatile Frame": {
+      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+    }
+  };
+  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
 };
 
 
@@ -14172,7 +14197,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.日本語 = function() {
-  var condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = '日本語';
   exportObj.renameShip("YT-1300", "Modified YT-1300 Light Freighter");
   exportObj.renameShip("StarViper", "StarViper-class Attack Platform");
@@ -18150,7 +18175,12 @@ exportObj.cardLoaders.日本語 = function() {
       text: '君が防御する際、もし君が攻撃者の %BULLSEYEARC% 内にいないなら、友軍のカリキュレートあるいは回避状態の <b>MagnaGuard Protector</b> につき1つ、防御ダイスを追加で振る。'
     }
   };
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
+  chassis_translations = {
+    "Versatile Frame": {
+      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+    }
+  };
+  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
 };
 
 exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
@@ -18168,7 +18198,7 @@ if (exportObj.translations == null) {
 exportObj.translations.Português = exportObj.cardLoaders != null ? exportObj.cardLoaders : exportObj.cardLoaders = {};
 
 exportObj.cardLoaders.Português = function() {
-  var condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'Português';
   pilot_translations = {
     "4-LOM": {
@@ -20123,7 +20153,12 @@ exportObj.cardLoaders.Português = function() {
     }
   };
   condition_translations = {};
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
+  chassis_translations = {
+    "Versatile Frame": {
+      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+    }
+  };
+  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
 };
 
 /*
