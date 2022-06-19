@@ -2364,7 +2364,7 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "C-3PO (Resistance)",
       text: "Solange du koordinierst, kannst du befreundete Schiffe jenseits von Reichweite 2 wählen, falls sie ein %CALCULATE% in ihrer Aktionsleiste haben.%LINEBREAK%Nachdem du die %CALCULATE%- oder %COORDINATE%-Aktion durchgeführt hast, erhalte 1 Berechnungsmarker."
     },
-    "C-3PO": {
+    "C-3PO (Republic)": {
       display_name: "C-3PO",
       text: "Solange du verteidigst, falls du berechnend bist, darfst du 1&nbsp;Verteidigungswürfel neu werfen.%LINEBREAK%Nachdem du eine %CALCULATE%-Aktion durchgeführt hast, erhalte 1&nbsp;Berechnungsmarker."
     },
@@ -3180,11 +3180,11 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "R2-D2",
       text: "Nachdem du dein Rad aufgedeckt hast, darfst du 1 %CHARGE% ausgeben und 1 Entwaffnet-Marker erhalten, um 1 Schild wiederherzustellen."
     },
-    "R2-D2": {
+    "R2-D2 (Resistance)": {
       display_name: "R2-D2",
       text: "Während der Endphase darfst du 1&nbsp;%CHARGE% und 1&nbsp;<shield> ausgeben, um 1 roten Marker zu entfernen.%LINEBREAK%Während der Endphase, falls du keine aktiven <shield>, darfst du 2&nbsp;%CHARGE% ausgeben, um 1&nbsp;<shield> wiederherzustellen und 1 Erschöpfungsmarker zu erhalten."
     },
-    "R2-D2": {
+    "R2-D2 (Republic)": {
       display_name: "R2-D2",
       text: "Nachdem du aktiviert worden bist, darfst du 1&nbsp;%CHARGE% ausgeben und 1 Erschöpfungsmarker erhalten, um 1 Schadenskarte zu reparieren, 1 Schild wiederherzustellen oder 1 Gerät in Reichweite 0-1 zu entfernen."
     },
@@ -14272,7 +14272,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "AP-5": {
       display_name: "AP-5",
-      text: "君がコーディネートする際、もし選んだ宇宙船にちょうど1つストレス・トークンがついているなら、その宇宙船はアクションを実行できる。%LINEBREAK%<strong>Comms Shuttle:</strong> 君がドックされている際、君のキャリア宇宙船は%COORDINATE%を得る。君のキャリア宇宙船のアクティベートの前に、それは%COORDINATE%アクションを実行しても良い。"
+      text: "君がコーディネートする際、もし選んだ宇宙船にちょうど1つストレス・トークンがついているなら、その宇宙船はアクションを実行できる。"
     },
     "Academy Pilot": {
       display_name: "Academy Pilot",
@@ -14280,15 +14280,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Ahhav": {
       display_name: "Ahhav",
-      text: "君が防御するか攻撃を実行する際、もし敵宇宙船のサイズが君よりも大きいなら、ダイスを追加で1つ振る。%LINEBREAK%<strong>Notched Stabilizers:</strong> 君が移動する際、君はアステロイドを無視する。"
+      text: "君が防御するか攻撃を実行する際、もし敵宇宙船のサイズが君よりも大きいなら、ダイスを追加で1つ振る。"
     },
     "Ahsoka Tano": {
       display_name: "Ahsoka Tano",
-      text: "君がマニューバを完全に実行した後、君はレンジ0-1の友軍宇宙船を選び、%FORCE%を1つ消費しても良い。その宇宙船はアクションを実行しても良い(ストレス状態であっても)。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "君がマニューバを完全に実行した後、君はレンジ0-1の友軍宇宙船を選び、%FORCE%を1つ消費しても良い。その宇宙船はアクションを実行しても良い(ストレス状態であっても)。"
     },
     "Ahsoka Tano (Delta-7b)": {
       display_name: "Ahsoka Tano",
-      text: "君がマニューバを完全に実行した後、君はレンジ0-1の友軍宇宙船を選び、%FORCE%を1つ消費しても良い。その宇宙船はアクションを実行しても良い(ストレス状態であっても)。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "君がマニューバを完全に実行した後、君はレンジ0-1の友軍宇宙船を選び、%FORCE%を1つ消費しても良い。その宇宙船はアクションを実行しても良い(ストレス状態であっても)。"
     },
     "Airen Cracken": {
       display_name: "Airen Cracken",
@@ -14296,22 +14296,22 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Alpha Squadron Pilot": {
       display_name: "Alpha Squadron Pilot",
-      text: "<i class = flavor_text>Sienar Fleet Systems designed the TIE interceptor with four wing-mounted laser cannons, a dramatic increase in firepower over its predecessors.</i>%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "<i class = flavor_text>Sienar Fleet Systems designed the TIE interceptor with four wing-mounted laser cannons, a dramatic increase in firepower over its predecessors.</i>"
     },
     "Anakin Skywalker": {
       display_name: "Anakin Skywalker",
-      text: "君がマニューバを完全に実行した後、もし敵宇宙船が君の%FRONTARC%レンジ0-1か君の%BULLSEYEARC%内にいるとき、君は%FORCE%を1つ消費して、ストレス・トークンを1つ取り除いても良い。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "君がマニューバを完全に実行した後、もし敵宇宙船が君の%FRONTARC%レンジ0-1か君の%BULLSEYEARC%内にいるとき、君は%FORCE%を1つ消費して、ストレス・トークンを1つ取り除いても良い。"
     },
     "Anakin Skywalker (Delta-7b)": {
       display_name: "Anakin Skywalker",
-      text: "君がマニューバを完全に実行した後、もし敵宇宙船が君の%FRONTARC%レンジ0-1か君の%BULLSEYEARC%内にいるとき、君は%FORCE%を1つ消費して、ストレス・トークンを1つ取り除いても良い。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "君がマニューバを完全に実行した後、もし敵宇宙船が君の%FRONTARC%レンジ0-1か君の%BULLSEYEARC%内にいるとき、君は%FORCE%を1つ消費して、ストレス・トークンを1つ取り除いても良い。"
     },
     "Anakin Skywalker (N-1 Starfighter)": {
-      text: "君が君のマニューバを公開する前に、君は%FORCE%を1つ消費して、バレル・ロールを実行しても良い(これはアクションではない)。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君が君のマニューバを公開する前に、君は%FORCE%を1つ消費して、バレル・ロールを実行しても良い(これはアクションではない)。"
     },
     "Arvel Crynyd": {
       display_name: "Arvel Crynyd",
-      text: "もし君が他の宇宙船に重なることにより%BOOST%アクションが失敗しようとする時、代わりにマニューバを部分的に実行するようにして解決する。 %LINEBREAK% 君が攻撃レンジ0で攻撃を実行する際、それを攻撃レンジ1の攻撃として扱う。 %LINEBREAK% <strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "もし君が他の宇宙船に重なることにより%BOOST%アクションが失敗しようとする時、代わりにマニューバを部分的に実行するようにして解決する。 %LINEBREAK% 君が攻撃レンジ0で攻撃を実行する際、それを攻撃レンジ1の攻撃として扱う。"
     },
     "Asajj Ventress": {
       display_name: "Asajj Ventress",
@@ -14319,7 +14319,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Autopilot Drone": {
       display_name: "Autopilot Drone",
-      text: "<i class = flavor_text>Sometimes, manufacturer’s warnings are made to be broken.</i>%LINEBREAK%<strong>Rigged Energy Cells:</strong> システム・フェイズの間、もし君がドックされていなければ、%CHARGE%を1つ失う。アクティベーション・フェイズの終了時、君の%CHARGE%が0なら、君は破壊される。君が取り除かれる前に、レンジ0-1の各宇宙船は%CRIT%ダメージを1つを受ける。"
+      text: "<i class = flavor_text>Sometimes, manufacturer’s warnings are made to be broken.</i>"
     },
     "Bandit Squadron Pilot": {
       display_name: "Bandit Squadron Pilot",
@@ -14327,7 +14327,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Baktoid Prototype": {
       display_name: "Baktoid Prototype",
-      text: "君が特殊攻撃を実行する際、もしNetworked Calculation宇宙船能力を持った友軍宇宙船が、防御者へのロックを持っているなら、君はその攻撃の%FOCUS%%CALCULATE%あるいは%LOCK%必要条件を無視しても良い。%LINEBREAK%<strong>Networked Calculation:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "君が特殊攻撃を実行する際、もしNetworked Calculation宇宙船能力を持った友軍宇宙船が、防御者へのロックを持っているなら、君はその攻撃の%FOCUS%%CALCULATE%あるいは%LOCK%必要条件を無視しても良い。"
     },
     "Baron of the Empire": {
       display_name: "Baron of the Empire",
@@ -14335,11 +14335,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Barriss Offee": {
       display_name: "Barriss Offee",
-      text: "レンジ0-2の友軍宇宙船が攻撃を実行する際、防御者がその%BULLSEYEARC%内にいるなら、君は%FORCE%を1つ消費して、%FOCUS%の結果1つを%HIT%の結果に変更するか、%HIT%の結果1つを%CRIT%の結果に変更しても良い。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船が攻撃を実行する際、防御者がその%BULLSEYEARC%内にいるなら、君は%FORCE%を1つ消費して、%FOCUS%の結果1つを%HIT%の結果に変更するか、%HIT%の結果1つを%CRIT%の結果に変更しても良い。"
     },
     "Barriss Offee (Delta-7b)": {
       display_name: "Barriss Offee",
-      text: "レンジ0-2の友軍宇宙船が攻撃を実行する際、防御者がその%BULLSEYEARC%内にいるなら、君は%FORCE%を1つ消費して、%FOCUS%の結果1つを%HIT%の結果に変更するか、%HIT%の結果1つを%CRIT%の結果に変更しても良い。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船が攻撃を実行する際、防御者がその%BULLSEYEARC%内にいるなら、君は%FORCE%を1つ消費して、%FOCUS%の結果1つを%HIT%の結果に変更するか、%HIT%の結果1つを%CRIT%の結果に変更しても良い。"
     },
     "Ben Teene": {
       display_name: "Ben Teene",
@@ -14363,11 +14363,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Black Squadron Scout": {
       display_name: "Black Squadron Scout",
-      text: "<i class = flavor_text>These heavily armed atmospheric craft employ their specialized moveable wings to gain additional speed and maneuverability.</i>%LINEBREAK% <sasmall><strong>Adaptive Ailerons:</strong> 君が君のダイヤルを公開する前に、もし君がストレス状態でなければ、君はブースト<b>しなければならない</b>。</sasmall>"
+      text: "<i class = flavor_text>These heavily armed atmospheric craft employ their specialized moveable wings to gain additional speed and maneuverability.</i>"
     },
     "Black Squadron Ace (T-70)": {
       display_name: "Black Squadron Ace",
-      text: "<i class = flavor_text>During the Cold War, Poe Dameron’s Black Squadron conducted daring covert operations against the First Order in defiance of treaties ratified by the New Republic Senate.</i>%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "<i class = flavor_text>During the Cold War, Poe Dameron’s Black Squadron conducted daring covert operations against the First Order in defiance of treaties ratified by the New Republic Senate.</i>"
     },
     "Black Sun Ace": {
       display_name: "Black Sun Ace",
@@ -14375,11 +14375,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Black Sun Assassin": {
       display_name: "Black Sun Assassin",
-      text: "<i class = flavor_text>Although assassinations can be handled with a shot in the dark or a dire substance added to a drink, a flaming shuttle tumbling from the sky sends a special kind of message.</i> %LINEBREAK% <strong>Microthrusters:</strong> 君がバレル・ロールを実行する際、君は%STRAIGHT%テンプレートの代わりに%BANKLEFT%あるいは%BANKRIGHT%テンプレートを<b>使用しなければならない</b>。"
+      text: "<i class = flavor_text>Although assassinations can be handled with a shot in the dark or a dire substance added to a drink, a flaming shuttle tumbling from the sky sends a special kind of message.</i>"
     },
     "Black Sun Enforcer": {
       display_name: "Black Sun Enforcer",
-      text: "<i class = flavor_text>Prince Xizor himself collaborated with MandalMotors to design the StarViper-class attack platform, one of the most formidable starfighters in the galaxy.</i> %LINEBREAK% <strong>Microthrusters:</strong> 君がバレル・ロールを実行する際、君は%STRAIGHT%テンプレートの代わりに%BANKLEFT%あるいは%BANKRIGHT%テンプレートを<b>使用しなければならない</b>。"
+      text: "<i class = flavor_text>Prince Xizor himself collaborated with MandalMotors to design the StarViper-class attack platform, one of the most formidable starfighters in the galaxy.</i>"
     },
     "Black Sun Soldier": {
       display_name: "Black Sun Soldier",
@@ -14403,11 +14403,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Blue Squadron Recruit": {
       display_name: "Blue Squadron Recruit",
-      text: "<i class = flavor_text>Young beings across the galaxy have grown up on tales of heroism in the Galactic Civil War, and many learned to fly in the same cockpits from which their parents fought the Empire.</i>%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "<i class = flavor_text>Young beings across the galaxy have grown up on tales of heroism in the Galactic Civil War, and many learned to fly in the same cockpits from which their parents fought the Empire.</i>"
     },
     "Blue Squadron Rookie": {
       display_name: "Blue Squadron Rookie",
-      text: "<i class = flavor_text>The Incom-FreiTek T-70 X-Wing was designed to improve upon the tactical flexibility of the venerable T-65. The starfighter’s advanced droid socket is compatible with a wide array of astromechs, and its modular weapons pods allow ground crews to tailor its payload for specific missions.</i>%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "<i class = flavor_text>The Incom-FreiTek T-70 X-Wing was designed to improve upon the tactical flexibility of the venerable T-65. The starfighter’s advanced droid socket is compatible with a wide array of astromechs, and its modular weapons pods allow ground crews to tailor its payload for specific missions.</i>"
     },
     "Blue Squadron Scout": {
       display_name: "Blue Squadron Scout",
@@ -14435,15 +14435,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Captain Cardinal": {
       display_name: "Captain Cardinal",
-      text: "レンジ1-2の君よりもイニシアチブが低い友軍宇宙船が防御あるいは攻撃を実行する際、もし君が少なくとも1つの%CHARGE%を持っているなら、その宇宙船は%FOCUS%の結果を1つ振り直しても良い。%LINEBREAK%レンジ0-3の敵宇宙船が破壊された後、%CHARGE%を1つ失う。%LINEBREAK%<strong>Linked Battery:</strong> 君が%CANNON%攻撃を実行する際、攻撃ダイスを追加で1つ振る。"
+      text: "レンジ1-2の君よりもイニシアチブが低い友軍宇宙船が防御あるいは攻撃を実行する際、もし君が少なくとも1つの%CHARGE%を持っているなら、その宇宙船は%FOCUS%の結果を1つ振り直しても良い。%LINEBREAK%レンジ0-3の敵宇宙船が破壊された後、%CHARGE%を1つ失う。"
     },
     "Captain Feroph": {
       display_name: "Captain Feroph",
-      text: "君が防御する際、もし攻撃者が緑のトークンを全く持っていなければ、君の空白あるいは%FOCUS%の結果のうち1つを%EVADE%の結果に変えても良い。%LINEBREAK%<strong>Controlled Ailerons:</strong> 君が君のダイヤルを公開する前に、君がストレス状態でなければ、君はブーストをしても良い。"
+      text: "君が防御する際、もし攻撃者が緑のトークンを全く持っていなければ、君の空白あるいは%FOCUS%の結果のうち1つを%EVADE%の結果に変えても良い。"
     },
     "Captain Jonus": {
       display_name: "Captain Jonus",
-      text: "レンジ0-1の友軍宇宙船が%TORPEDO%あるいは%MISSILE%による攻撃を実行する際、その宇宙船は2つまで攻撃ダイスを振り直しても良い。%LINEBREAK%<strong>Nimble Bomber:</strong> もし君が%STRAIGHT%テンプレートを使ってデバイスを投下する時、君は代わりに同じ速度の%BANKLEFT%あるいは%BANKRIGHT%テンプレートを使用しても良い。"
+      text: "レンジ0-1の友軍宇宙船が%TORPEDO%あるいは%MISSILE%による攻撃を実行する際、その宇宙船は2つまで攻撃ダイスを振り直しても良い。"
     },
     "Captain Jostero": {
       display_name: "Captain Jostero",
@@ -14471,11 +14471,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Captain Seevor": {
       display_name: "Captain Seevor",
-      text: "君が防御するか攻撃を実行する際、攻撃ダイスが振られる前に、もし君が敵宇宙船の%BULLSEYEARC%内にいなければ、君は%CHARGE%を1つ消費しても良い。もしそうするなら、その敵宇宙船はジャム・トークンを1つ得る。%LINEBREAK%<strong>Notched Stabilizer:</strong> 君が移動する際、君はアステロイドを無視する。"
+      text: "君が防御するか攻撃を実行する際、攻撃ダイスが振られる前に、もし君が敵宇宙船の%BULLSEYEARC%内にいなければ、君は%CHARGE%を1つ消費しても良い。もしそうするなら、その敵宇宙船はジャム・トークンを1つ得る。"
     },
     "Cartel Executioner": {
       display_name: "Cartel Executioner",
-      text: "<i class = flavor_text>Many veteran pilots in the service of the Hutt kajidics and other criminal operations choose the M12-L Kimogila for its firepower and dreaded reputation alike.</i>%LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の%BULLSEYEARC%内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "<i class = flavor_text>Many veteran pilots in the service of the Hutt kajidics and other criminal operations choose the M12-L Kimogila for its firepower and dreaded reputation alike.</i>"
     },
     "Cartel Marauder": {
       display_name: "Cartel Marauder",
@@ -14483,7 +14483,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Cartel Spacer": {
       display_name: "Cartel Spacer",
-      text: "<i class = flavor_text>MandalMotors’ M3-A “Scyk” Interceptor is purchased in large quantities by the Hutt Cartel and the Car’das smugglers due to its low cost and customizability.</i> %LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "<i class = flavor_text>MandalMotors’ M3-A “Scyk” Interceptor is purchased in large quantities by the Hutt Cartel and the Car’das smugglers due to its low cost and customizability.</i> "
     },
     "Cassian Andor": {
       display_name: "Cassian Andor",
@@ -14515,7 +14515,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Colonel Vessery": {
       display_name: "Colonel Vessery",
-      text: "君がロック状態の宇宙船に対して攻撃を実行する際、君は攻撃ダイスを振った後に、君は防御者に対するロックを得ても良い。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君がロック状態の宇宙船に対して攻撃を実行する際、君は攻撃ダイスを振った後に、君は防御者に対するロックを得ても良い。"
     },
     "Commander Malarus": {
       display_name: "Commander Malarus",
@@ -14523,7 +14523,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Constable Zuvio": {
       display_name: "Constable Zuvio",
-      text: "もし君がデバイスを投下しようとする時、君は代わりに[1%STRAIGHT%]テンプレートを用いて射出しても良い。%LINEBREAK%<strong>Spacetug Tractor Array:</strong> <b>アクション:</b> レンジ1の君の%FRONTARC%内の宇宙船を1つ選ぶ。その宇宙船はトラクター・トークンを1つ得るか、あるいは君の%BULLSEYEARC%内レンジ1にいるならトラクター・トークンを2つ得る。"
+      text: "もし君がデバイスを投下しようとする時、君は代わりに[1%STRAIGHT%]テンプレートを用いて射出しても良い。"
     },
     "Contracted Scout": {
       display_name: "Contracted Scout",
@@ -14531,7 +14531,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Corran Horn": {
       display_name: "Corran Horn",
-      text: "イニシアチブ0において、君は君の%BULLSEYEARC%内の敵宇宙船に対してボーナスの主武装攻撃を実行しても良い。もしそうするなら、次のプランニング・フェイズの開始時に、武装解除トークンを1つ得る。%LINEBREAK%<strong>Experimental Scanners:</strong> 君はレンジ3を越えてロックを得ることができる。君はレンジ1のロックを得ることができない。"
+      text: "イニシアチブ0において、君は君の%BULLSEYEARC%内の敵宇宙船に対してボーナスの主武装攻撃を実行しても良い。もしそうするなら、次のプランニング・フェイズの開始時に、武装解除トークンを1つ得る。"
     },
     "Count Dooku": {
       display_name: "Count Dooku",
@@ -14539,7 +14539,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Countess Ryad": {
       display_name: "Countess Ryad",
-      text: "君が%STRAIGHT%マニューバを実行しようとする際、君はマニューバの難易度を上げても良い。もしそうするなら、代わりにそれを%KTURN%として扱う。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君が%STRAIGHT%マニューバを実行しようとする際、君はマニューバの難易度を上げても良い。もしそうするなら、代わりにそれを%KTURN%として扱う。"
     },
     "Crymorah Goon": {
       display_name: "Crymorah Goon",
@@ -14551,19 +14551,19 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "DBS-32C": {
       display_name: "DBS-32C",
-      text: "エンゲージメント・フェイズの開始時、君はカリキュレート・トークンを1つ消費し、%COORDINATE%アクションを実行しても良い。君は<strong>Networked Calculations</strong>宇宙船能力を持っていない宇宙船をコーディネートできない。 %LINEBREAK%<strong>Networked Calculation:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "エンゲージメント・フェイズの開始時、君はカリキュレート・トークンを1つ消費し、%COORDINATE%アクションを実行しても良い。君は<strong>Networked Calculations</strong>宇宙船能力を持っていない宇宙船をコーディネートできない。 "
     },
     "DBS-404": {
       display_name: "DBS-404",
-      text: "君が攻撃レンジ1で攻撃を実行する際、君は追加で1つダイスを<b>振らなければならない</b>。攻撃が命中した後、君は%CRIT%ダメージを1つ受ける。%LINEBREAK%<strong>Networked Calculation:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "君が攻撃レンジ1で攻撃を実行する際、君は追加で1つダイスを<b>振らなければならない</b>。攻撃が命中した後、君は%CRIT%ダメージを1つ受ける。"
     },
     "DFS-081": {
       display_name: "DFS-081",
-      text: "レンジ0-1の友軍宇宙船が防御する際、君はカリキュレート・トークンを1つ消費して、全ての%CRIT%の結果を%HIT%の結果に変更しても良い。%LINEBREAK%<strong>Networked Calculation:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "レンジ0-1の友軍宇宙船が防御する際、君はカリキュレート・トークンを1つ消費して、全ての%CRIT%の結果を%HIT%の結果に変更しても良い。"
     },
     "DFS-311": {
       display_name: "DFS-311",
-      text: "エンゲージメント・フェイズの開始時、君はレンジ0-3の他の友軍宇宙船に君のカリキュレート・トークンを1つ転送しても良い。%LINEBREAK%<strong>Networked Calculation:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "エンゲージメント・フェイズの開始時、君はレンジ0-3の他の友軍宇宙船に君のカリキュレート・トークンを1つ転送しても良い。"
     },
     "Dace Bonearm": {
       display_name: "Dace Bonearm",
@@ -14571,11 +14571,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Dalan Oberos (StarViper)": {
       display_name: "Dalan Oberos",
-      text: "君がマニューバを完全に実行した後、君はストレス・トークンを1つ受け取り、君の宇宙船を90度回転させても良い。%LINEBREAK%<strong>Microthrusters:</strong> 君がバレル・ロールを実行する際、君は%STRAIGHT%テンプレートの代わりに%BANKLEFT%あるいは%BANKRIGHT%テンプレートを<b>使用しなければならない</b>。"
+      text: "君がマニューバを完全に実行した後、君はストレス・トークンを1つ受け取り、君の宇宙船を90度回転させても良い。"
     },
     "Dalan Oberos": {
       display_name: "Dalan Oberos",
-      text: "エンゲージメント・フェイズの開始時、君は君の%BULLSEYEARC%内のシールド状態の宇宙船を1つ選び、%CHARGE%を1つ消費しても良い。もしそうするなら、その宇宙船はシールドを1つ失い、君はシールドを1つ回復する。%LINEBREAK%<strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の%BULLSEYEARC%内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "エンゲージメント・フェイズの開始時、君は君の%BULLSEYEARC%内のシールド状態の宇宙船を1つ選び、%CHARGE%を1つ消費しても良い。もしそうするなら、その宇宙船はシールドを1つ失い、君はシールドを1つ回復する。"
     },
     "Dark Courier": {
       display_name: "Dark Courier",
@@ -14587,11 +14587,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Darth Vader": {
       display_name: "Darth Vader",
-      text: "君がアクションを実行した後、君は%FORCE%を1つ消費して、アクションを実行しても良い。%LINEBREAK%<strong>Advanced Targeting Computer:</strong> 君がロックを持っている防御者に対し、君が主武装で攻撃を実行する際、君は攻撃ダイスを追加で1つ振り、%HIT%の結果1つを%CRIT%の結果に変更する。"
+      text: "君がアクションを実行した後、君は%FORCE%を1つ消費して、アクションを実行しても良い。"
     },
     "Dash Rendar": {
       display_name: "Dash Rendar",
-      text: "君が移動する際、君は障害物を無視する。%LINEBREAK%<strong>Sensor Blindspot:</strong> 君がレンジ0-1の主武装による攻撃を実行する際、レンジ0-1ボーナスを適用せず、攻撃ダイスを1つ少なく振る。"
+      text: "君が移動する際、君は障害物を無視する。"
     },
     "Del Meeko": {
       display_name: "Del Meeko",
@@ -14599,7 +14599,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Delta Squadron Pilot": {
       display_name: "Delta Squadron Pilot",
-      text: "<i class = flavor_text>In addition to its missile launchers and six wingtip laser cannons, the formidable TIE defender is equipped with deflector shields and a hyperdrive.</i>%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "<i class = flavor_text>In addition to its missile launchers and six wingtip laser cannons, the formidable TIE defender is equipped with deflector shields and a hyperdrive.</i>"
     },
     "Dengar": {
       display_name: "Dengar",
@@ -14619,7 +14619,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Ello Asty": {
       display_name: "Ello Asty",
-      text: "君が赤のタロン・ロール[%TROLLLEFT%あるいは%TROLLRIGHT%]マニューバを公開した後、もし君のストレス・トークンが2つ以下なら、そのマニューバを白として扱う。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君が赤のタロン・ロール[%TROLLLEFT%あるいは%TROLLRIGHT%]マニューバを公開した後、もし君のストレス・トークンが2つ以下なら、そのマニューバを白として扱う。"
     },
     "Emon Azzameen": {
       display_name: "Emon Azzameen",
@@ -14639,11 +14639,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Ezra Bridger": {
       display_name: "Ezra Bridger",
-      text: "君が防御するか攻撃を実行する際、もし君がストレス状態なら、君は%FORCE%を1つ消費して、2つまでの%FOCUS%の結果を%EVADE%あるいは%HIT%の結果に変更しても良い。%LINEBREAK%<strong>Locked and Loaded:</strong> 君がドックされている際、君のキャリア宇宙船が主武装の%FRONTARC%あるいは%SINGLETURRETARC%による攻撃を実行した後、その宇宙船はボーナスの主武装の%REARARC%攻撃を実行しても良い。"
+      text: "君が防御するか攻撃を実行する際、もし君がストレス状態なら、君は%FORCE%を1つ消費して、2つまでの%FOCUS%の結果を%EVADE%あるいは%HIT%の結果に変更しても良い。"
     },
     "Ezra Bridger (Sheathipede)": {
       display_name: "Ezra Bridger",
-      text: "君が防御するか攻撃を実行する際、もし君がストレス状態なら、君は%FORCE%を1つ消費して、2つまでの%FOCUS%の結果を%EVADE%あるいは%HIT%の結果に変更しても良い。%LINEBREAK%<strong>Comms Shuttle:</strong> 君がドックされている際、君のキャリア宇宙船は%COORDINATE%を得る。君のキャリア宇宙船のアクティベートの前に、それは%COORDINATE%アクションを実行しても良い。"
+      text: "君が防御するか攻撃を実行する際、もし君がストレス状態なら、君は%FORCE%を1つ消費して、2つまでの%FOCUS%の結果を%EVADE%あるいは%HIT%の結果に変更しても良い。"
     },
     "Ezra Bridger (TIE Fighter)": {
       display_name: "Ezra Bridger",
@@ -14655,11 +14655,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Fenn Rau (Sheathipede)": {
       display_name: "Fenn Rau",
-      text: "君のファイアリング・アーク内の敵宇宙船がエンゲージする前、もし君がストレス状態でなければ、君はストレス・トークンを1つ得ても良い。もしそうするなら、その宇宙船はこのフェイズの間攻撃を実行する際、トークンを消費してダイスを修正することができない。%LINEBREAK%<strong>Comms Shuttle:</strong> 君がドックされている際、君のキャリア宇宙船は%COORDINATE%を得る。君のキャリア宇宙船のアクティベートの前に、それは%COORDINATE%アクションを実行しても良い。"
+      text: "君のファイアリング・アーク内の敵宇宙船がエンゲージする前、もし君がストレス状態でなければ、君はストレス・トークンを1つ得ても良い。もしそうするなら、その宇宙船はこのフェイズの間攻撃を実行する際、トークンを消費してダイスを修正することができない。"
     },
     "Fenn Rau": {
       display_name: "Fenn Rau",
-      text: "君が防御するか攻撃を実行する際、もし攻撃レンジが1なら、君はダイスを1つ多く振っても良い。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "君が防御するか攻撃を実行する際、もし攻撃レンジが1なら、君はダイスを1つ多く振っても良い。"
     },
     "Finch Dallow": {
       display_name: "Finch Dallow",
@@ -14667,11 +14667,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "First Order Test Pilot": {
       display_name: "First Order Test Pilot",
-      text: "<i class = flavor_text>Engineered for incredible speed and precise handling, the TIE Silencer is devastating in the hands of those who can unlock its full potential. Any lesser pilot could easily be overwhelmed and lose control of the nimble craft. </i>%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "<i class = flavor_text>Engineered for incredible speed and precise handling, the TIE Silencer is devastating in the hands of those who can unlock its full potential. Any lesser pilot could easily be overwhelmed and lose control of the nimble craft. </i>"
     },
     "Foreman Proach": {
       display_name: "Foreman Proach",
-      text: "君のエンゲージする前に、君は君の%BULLSEYEARC%レンジ1-2の敵宇宙船を1つ選び、武装解除トークンを1つ得ても良い。もしそうするなら、その宇宙船はトラクター・トークンを1つ得る。%LINEBREAK%<strong>Notched Stabilizer:</strong> 君が移動する際、君はアステロイドを無視する。"
+      text: "君のエンゲージする前に、君は君の%BULLSEYEARC%レンジ1-2の敵宇宙船を1つ選び、武装解除トークンを1つ得ても良い。もしそうするなら、その宇宙船はトラクター・トークンを1つ得る。"
     },
     "Freighter Captain": {
       display_name: "Freighter Captain",
@@ -14679,7 +14679,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Gamma Squadron Ace": {
       display_name: "Gamma Squadron Ace",
-      text: "<i class = flavor_text>Though it sacrifices a degree of speed and maneuverability compared to a TIE/ln, the TIE bomber’s increased payload can carry enough firepower to destroy virtually any enemy target.</i> %LINEBREAK%<strong>Nimble Bomber:</strong> もし君が%STRAIGHT%テンプレートを使ってデバイスを投下する時、君は代わりに同じ速度の%BANKLEFT%あるいは%BANKRIGHT%テンプレートを使用しても良い。"
+      text: "<i class = flavor_text>Though it sacrifices a degree of speed and maneuverability compared to a TIE/ln, the TIE bomber’s increased payload can carry enough firepower to destroy virtually any enemy target.</i> "
     },
     "Gand Findsman": {
       display_name: "Gand Findsman",
@@ -14695,7 +14695,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Gavin Darklighter": {
       display_name: "Gavin Darklighter",
-      text: "友軍宇宙船が攻撃を実行する際、もし防御者が君の%FRONTARC%の中にいるなら、攻撃者は%HIT%の結果1つを%CRIT%の結果に変更しても良い。%LINEBREAK%<strong>Experimental Scanners:<\strong> 君はレンジ3を越えてロックを得ることができる。君はレンジ1のロックを得ることができない。"
+      text: "友軍宇宙船が攻撃を実行する際、もし防御者が君の%FRONTARC%の中にいるなら、攻撃者は%HIT%の結果1つを%CRIT%の結果に変更しても良い。"
     },
     "General Grievous": {
       display_name: "General Grievous",
@@ -14703,7 +14703,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Genesis Red": {
       display_name: "Genesis Red",
-      text: "君がロックを得た後、君は君のフォーカスおよび回避トークンをすべて取り除かなければならない。その後、ロックした宇宙船が持っているのと同じ数のフォーカスおよび回避トークンを得る。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君がロックを得た後、君は君のフォーカスおよび回避トークンをすべて取り除かなければならない。その後、ロックした宇宙船が持っているのと同じ数のフォーカスおよび回避トークンを得る。"
     },
     "Gideon Hask": {
       display_name: "Gideon Hask",
@@ -14731,19 +14731,19 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Green Squadron Expert": {
       display_name: "Green Squadron Expert",
-      text: "<i class = flavor_text>Years of field-expedient modifications were standardized in the RZ-2 design, but daring pilots see the ship’s improved reliability as a challenge to further push the limits of its performance.</i>%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "<i class = flavor_text>Years of field-expedient modifications were standardized in the RZ-2 design, but daring pilots see the ship’s improved reliability as a challenge to further push the limits of its performance.</i>"
     },
     "Green Squadron Pilot": {
       display_name: "Green Squadron Pilot",
-      text: "<i class = flavor_text>Due to its sensitive controls and high maneuverability, only the most talented pilots belong in an A-wing cockpit.</i>%LINEBREAK%<strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "<i class = flavor_text>Due to its sensitive controls and high maneuverability, only the most talented pilots belong in an A-wing cockpit.</i>"
     },
     "Greer Sonnel": {
       display_name: "Greer Sonnel",
-      text: "君がマニューバを完全に実行した後、君は君の%SINGLETURRETARC%をローテートしても良い。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "君がマニューバを完全に実行した後、君は君の%SINGLETURRETARC%をローテートしても良い。"
     },
     "Guri": {
       display_name: "Guri",
-      text: "エンゲージメント・フェイズの開始時、レンジ0-1に敵宇宙船が1つ以上いるなら、君はフォーカス・トークンを1つ得ても良い。%LINEBREAK%<strong>Microthrusters:</strong> 君がバレル・ロールを実行する際、君は%STRAIGHT%テンプレートの代わりに%BANKLEFT%あるいは%BANKRIGHT%テンプレートを<b>使用しなければならない</b>。"
+      text: "エンゲージメント・フェイズの開始時、レンジ0-1に敵宇宙船が1つ以上いるなら、君はフォーカス・トークンを1つ得ても良い。"
     },
     "Han Solo": {
       display_name: "Han Solo",
@@ -14763,11 +14763,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Hera Syndulla": {
       display_name: "Hera Syndulla",
-      text: "君が赤か青のマニューバを公開した後、君は君のダイヤルを同じ難易度の違うマニューバにセットしても良い。%LINEBREAK%<strong>Locked and Loaded:</strong> 君がドックされている際、君のキャリア宇宙船が主武装の%FRONTARC%あるいは%SINGLETURRETARC%による攻撃を実行した後、その宇宙船はボーナスの主武装の%REARARC%攻撃を実行しても良い。"
+      text: "君が赤か青のマニューバを公開した後、君は君のダイヤルを同じ難易度の違うマニューバにセットしても良い。"
     },
     "Hera Syndulla (VCX-100)": {
       display_name: "Hera Syndulla",
-      text: "君が赤か青のマニューバを公開した後、君は君のダイヤルを同じ難易度の別のマニューバにセットしても良い。%LINEBREAK%<strong>Tail Gun:</strong> 君に宇宙船がドックされているなら、君は主武装の%REARARC%攻撃を、ドックされた宇宙船の主武装の%FRONTARC%攻撃値と同じ攻撃値で持つ。"
+      text: "君が赤か青のマニューバを公開した後、君は君のダイヤルを同じ難易度の別のマニューバにセットしても良い。"
     },
     "Hired Gun": {
       display_name: "Hired Gun",
@@ -14779,19 +14779,19 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "IG-88A": {
       display_name: "IG-88A",
-      text: "エンゲージメント・フェイズの開始時、君はレンジ1-3の、アクション・バーに%CALCULATE%を持つ友軍宇宙船を選んでも良い。もしそうするなら、君のカリキュレート・トークンのうち1つをそれに転送する。%LINEBREAK%<strong>Advanced Droid Brain:<strong> 君が%CALCULATE%アクションを実行した後、カリキュレート・トークンを1つ得る。"
+      text: "エンゲージメント・フェイズの開始時、君はレンジ1-3の、アクション・バーに%CALCULATE%を持つ友軍宇宙船を選んでも良い。もしそうするなら、君のカリキュレート・トークンのうち1つをそれに転送する。"
     },
     "IG-88B": {
       display_name: "IG-88B",
-      text: "君が攻撃を実行しそれがミスした後、君はボーナスの%CANNON%攻撃を実行しても良い。%LINEBREAK%<strong>Advanced Droid Brain:<strong> 君が%CALCULATE%アクションを実行した後、カリキュレート・トークンを1つ得る。"
+      text: "君が攻撃を実行しそれがミスした後、君はボーナスの%CANNON%攻撃を実行しても良い。"
     },
     "IG-88C": {
       display_name: "IG-88C",
-      text: "君が%BOOST%アクションを実行した後、君は%EVADE%アクションを実行しても良い。%LINEBREAK%<strong>Advanced Droid Brain:<strong> 君が%CALCULATE%アクションを実行した後、カリキュレート・トークンを1つ得る。"
+      text: "君が%BOOST%アクションを実行した後、君は%EVADE%アクションを実行しても良い。"
     },
     "IG-88D": {
       display_name: "IG-88D",
-      text: "君が[%SLOOPLEFT%3]または[%SLOOPRIGHT%3]を実行する際、代わりに同じ速度の別のテンプレートを使用しても良い。同じ向きの[%TURNLEFT%]または[%TURNRIGHT%]あるいは%STRAIGHT%テンプレート。%LINEBREAK%<strong>Advanced Droid Brain:<strong> 君が%CALCULATE%アクションを実行した後、カリキュレート・トークンを1つ得る。"
+      text: "君が[%SLOOPLEFT%3]または[%SLOOPRIGHT%3]を実行する際、代わりに同じ速度の別のテンプレートを使用しても良い。同じ向きの[%TURNLEFT%]または[%TURNRIGHT%]あるいは%STRAIGHT%テンプレート。"
     },
     "Ibtisam": {
       display_name: "Ibtisam",
@@ -14803,11 +14803,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Imdaar Test Pilot": {
       display_name: "Imdaar Test Pilot",
-      text: "<i class = flavor_text>The primary result of a hidden research facility on Imdaar Alpha, the TIE phantom achieves what many thought was impossible: a small starfighter equipped with an advanced cloaking device.</i>%LINEBREAK%<strong>Stygium Array:</strong> 君がデクロークした後、君は%EVADE%アクションを実行しても良い。終了フェイズの開始時、君は回避トークンを1つ消費してクローク・トークンを1つ得ても良い。"
+      text: "<i class = flavor_text>The primary result of a hidden research facility on Imdaar Alpha, the TIE phantom achieves what many thought was impossible: a small starfighter equipped with an advanced cloaking device.</i>"
     },
     "Inaldra": {
       display_name: "Inaldra",
-      text: "君が防御するか攻撃を実行する際、君は%HIT%ダメージを1つ受け、任意の数のダイスを振り直しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君が防御するか攻撃を実行する際、君は%HIT%ダメージを1つ受け、任意の数のダイスを振り直しても良い。"
     },
     "Inquisitor": {
       display_name: "Inquisitor",
@@ -14815,11 +14815,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Jake Farrell": {
       display_name: "Jake Farrell",
-      text: "君が%BARRELROLL%あるいは%BOOST%アクションを実行した後、君はレンジ0-1の友軍宇宙船を選んでも良い。その宇宙船は%FOCUS%アクションを実行しても良い。%LINEBREAK%<strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "君が%BARRELROLL%あるいは%BOOST%アクションを実行した後、君はレンジ0-1の友軍宇宙船を選んでも良い。その宇宙船は%FOCUS%アクションを実行しても良い。"
     },
     "Jakku Gunrunner": {
       display_name: "Jakku Gunrunner",
-      text: "<i class = flavor_text>The Quadrijet transfer spacetug, commonly called a \"Quadjumper,\" is nimble in space and atmosphere alike, making it popular among both smugglers and explorers.</i> %LINEBREAK%<strong>Spacetug Tractor Array:</strong> <b>アクション:</b> レンジ1の君の%FRONTARC%内の宇宙船を1つ選ぶ。その宇宙船はトラクター・トークンを1つ得るか、あるいは君の%BULLSEYEARC%内レンジ1にいるならトラクター・トークンを2つ得る。"
+      text: "<i class = flavor_text>The Quadrijet transfer spacetug, commonly called a \"Quadjumper,\" is nimble in space and atmosphere alike, making it popular among both smugglers and explorers.</i>"
     },
     "Jan Ors": {
       display_name: "Jan Ors",
@@ -14827,15 +14827,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Jaycris Tubbs": {
       display_name: "Jaycris Tubbs",
-      text: "君が青のマニューバを完全に実行した後、君はレンジ0-1の友軍宇宙船を1つ選んでも良い。もしそうするなら、その宇宙船はストレス・トークンを1つ取り除く。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君が青のマニューバを完全に実行した後、君はレンジ0-1の友軍宇宙船を1つ選んでも良い。もしそうするなら、その宇宙船はストレス・トークンを1つ取り除く。"
     },
     "Jedi Knight": {
       display_name: "Jedi Knight",
-      text: "<i class = flavor_text>When the Clone Wars began, the Jedi Knights rallied to the cause of preserving the Republic, assuming command of legions of clone troopers and leading them in battle.</i>%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "<i class = flavor_text>When the Clone Wars began, the Jedi Knights rallied to the cause of preserving the Republic, assuming command of legions of clone troopers and leading them in battle.</i>"
     },
     "Jedi Knight (Delta-7b)": {
       display_name: "Jedi Knight",
-      text: "<i class = flavor_text>When the Clone Wars began, the Jedi Knights rallied to the cause of preserving the Republic, assuming command of legions of clone troopers and leading them in battle.</i>%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "<i class = flavor_text>When the Clone Wars began, the Jedi Knights rallied to the cause of preserving the Republic, assuming command of legions of clone troopers and leading them in battle.</i>"
     },
     "Jek Porkins": {
       display_name: "Jek Porkins",
@@ -14843,15 +14843,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Jessika Pava": {
       display_name: "Jessika Pava",
-      text: "君が防御するか攻撃を実行する際、君は%CHARGE%を1つあるいは君が装備した%ASTROMECH%の自動変化しない%CHARGE%を1つ消費して、レンジ0-1の他の友軍宇宙船につき1つまでダイスを振り直しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君が防御するか攻撃を実行する際、君は%CHARGE%を1つあるいは君が装備した%ASTROMECH%の自動変化しない%CHARGE%を1つ消費して、レンジ0-1の他の友軍宇宙船につき1つまでダイスを振り直しても良い。"
     },
     "Joph Seastriker": {
       display_name: "Joph Seastriker",
-      text: "君がシールドを1つ失った後、回避トークンを1つ得る。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君がシールドを1つ失った後、回避トークンを1つ得る。"
     },
     "Joy Rekkoff": {
       display_name: "Joy Rekkoff",
-      text: "君が攻撃を実行する際、君は装備した%TORPEDO%アップグレードの%CHARGE%を1つ消費しても良い。もしそうするなら、防御者はダイスを1つ少なく振る。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "君が攻撃を実行する際、君は装備した%TORPEDO%アップグレードの%CHARGE%を1つ消費しても良い。もしそうするなら、防御者はダイスを1つ少なく振る。"
     },
     "Kaa'to Leeachos": {
       display_name: "Kaa’to Leeachos",
@@ -14859,15 +14859,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Kad Solus": {
       display_name: "Kad Solus",
-      text: "君は赤のマニューバを完全に実行した後、フォーカス・トークンを2つ得る。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "君は赤のマニューバを完全に実行した後、フォーカス・トークンを2つ得る。"
     },
     "Kanan Jarrus": {
       display_name: "Kanan Jarrus",
-      text: "君のファイアリング・アーク内の友軍宇宙船が防御する際、君は%FORCE%を1つ消費しても良い。もしそうするなら、攻撃者は攻撃ダイスを1つ少なく振る。%LINEBREAK%<strong>Tail Gun:</strong> 君に宇宙船がドックされているなら、君は主武装の%REARARC%攻撃を、ドックされた宇宙船の主武装の%FRONTARC%攻撃値と同じ攻撃値で持つ。"
+      text: "君のファイアリング・アーク内の友軍宇宙船が防御する際、君は%FORCE%を1つ消費しても良い。もしそうするなら、攻撃者は攻撃ダイスを1つ少なく振る。"
     },
     "Kare Kun": {
       display_name: "Kare Kun",
-      text: "君がブーストする際、君は代わりに[1%TURNLEFT%]あるいは[1%TURNRIGHT%]テンプレートを使用しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君がブーストする際、君は代わりに[1%TURNLEFT%]あるいは[1%TURNRIGHT%]テンプレートを使用しても良い。"
     },
     "Kashyyyk Defender": {
       display_name: "Kashyyyk Defender",
@@ -14887,7 +14887,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Knave Squadron Escort": {
       display_name: "Knave Squadron Escort",
-      text: "<i class = flavor_text>Designed to combine the best features of the X-wing series with the A-wing series, the E-wing boasts superior firepower, speed, and maneuverability.</i>%LINEBREAK% <strong>Experimental Scanners:</strong> 君はレンジ3を越えてロックを得ることができる。君はレンジ1のロックを得ることができない。"
+      text: "<i class = flavor_text>Designed to combine the best features of the X-wing series with the A-wing series, the E-wing boasts superior firepower, speed, and maneuverability.</i>"
     },
     "Koshka Frost": {
       display_name: "Koshka Frost",
@@ -14907,7 +14907,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Kylo Ren": {
       display_name: "Kylo Ren",
-      text: "君が防御する際、君は%FORCE%を1つ消費し、<strong>I’ll Show You the Dark Side</strong>コンディションを攻撃者につけても良い。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "君が防御する際、君は%FORCE%を1つ消費し、<strong>I’ll Show You the Dark Side</strong>コンディションを攻撃者につけても良い。"
     },
     "L3-37": {
       display_name: "L3-37",
@@ -14915,11 +14915,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "L3-37 (Escape Craft)": {
       display_name: "L3-37",
-      text: "もし君がシールド状態でなければ、君のバンク(%BANKLEFT%あるいは%BANKRIGHT%)マニューバの難易度が下がる。%LINEBREAK%<strong>Co-Pilot:</strong> 君がドックされている間、君をドックしている宇宙船は君のパイロット能力を元の能力と追加で得る。"
+      text: "もし君がシールド状態でなければ、君のバンク(%BANKLEFT%あるいは%BANKRIGHT%)マニューバの難易度が下がる。"
     },
     "Laetin A'shera": {
       display_name: "Laetin A’shera",
-      text: "君が防御するか攻撃を実行する際、攻撃がミスしたなら、回避トークンを1つ得る。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君が防御するか攻撃を実行する際、攻撃がミスしたなら、回避トークンを1つ得る。"
     },
     "Lando Calrissian": {
       display_name: "Lando Calrissian",
@@ -14931,7 +14931,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Lando Calrissian (Scum) (Escape Craft)": {
       display_name: "Lando Calrissian",
-      text: "君がダイスを振った後、もし君がストレス状態でなければ、君はストレス・トークンを1つ得て、全ての空白の結果を振り直しても良い。%LINEBREAK%<strong>Co-Pilot:</strong> 君がドックされている間、君をドックしている宇宙船は君のパイロット能力を元の能力と追加で得る。"
+      text: "君がダイスを振った後、もし君がストレス状態でなければ、君はストレス・トークンを1つ得て、全ての空白の結果を振り直しても良い。"
     },
     "Latts Razzi": {
       display_name: "Latts Razzi",
@@ -14943,7 +14943,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Lieutenant Bastian": {
       display_name: "Lieutenant Bastian",
-      text: "レンジ1-2の宇宙船がダメージ・カードを受け取った後、君はその宇宙船へのロックを得ても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "レンジ1-2の宇宙船がダメージ・カードを受け取った後、君はその宇宙船へのロックを得ても良い。"
     },
     "Lieutenant Blount": {
       display_name: "Lieutenant Blount",
@@ -14951,7 +14951,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Lieutenant Dormitz": {
       display_name: "Lieutenant Dormitz",
-      text: "<b>セットアップ:</b> 君が置かれた後、友軍の小型宇宙船を君からレンジ0-2のプレイ・エリアのどこでも置くことができる。%LINEBREAK%<strong>Linked Battery:</strong> 君が%CANNON%攻撃を実行する際、攻撃ダイスを追加で1つ振る。"
+      text: "<b>セットアップ:</b> 君が置かれた後、友軍の小型宇宙船を君からレンジ0-2のプレイ・エリアのどこでも置くことができる。"
     },
     "Lieutenant Karsabi": {
       display_name: "Lieutenant Karsabi",
@@ -14971,7 +14971,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Lieutenant Tavson": {
       display_name: "Lieutenant Tavson",
-      text: "君がダメージを受けた後、君は%CHARGE%を1つ消費してアクションを実行しても良い。%LINEBREAK%<strong>Linked Battery:</strong> 君が%CANNON%攻撃を実行する際、攻撃ダイスを追加で1つ振る。"
+      text: "君がダメージを受けた後、君は%CHARGE%を1つ消費してアクションを実行しても良い。"
     },
     "Lok Revenant": {
       display_name: "Lok Revenant",
@@ -14979,7 +14979,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Lothal Rebel": {
       display_name: "Lothal Rebel",
-      text: "<i class = flavor_text>Another successful Corellian Engineering Corporation freighter design, the VCX-100 is larger than the ubiquitous YT-series, boasting more living space and customizability.</i>%LINEBREAK%<strong>Tail Gun:</strong> 君に宇宙船がドックされているなら、君は主武装の%REARARC%攻撃を、ドックされた宇宙船の主武装の%FRONTARC%攻撃値と同じ攻撃値で持つ。"
+      text: "<i class = flavor_text>Another successful Corellian Engineering Corporation freighter design, the VCX-100 is larger than the ubiquitous YT-series, boasting more living space and customizability.</i>"
     },
     "Lowhhrick": {
       display_name: "Lowhhrick",
@@ -14991,27 +14991,27 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Luminara Unduli": {
       display_name: "Luminara Unduli",
-      text: "レンジ0-2の友軍宇宙船が防御する際、それが攻撃者の%BULLSEYEARC%内にいないなら、君は%FORCE%を1つ消費しても良い。もしそうするなら、%CRIT%の結果1つを%HIT%の結果に変更するか、%HIT%の結果1つを%FOCUS%の結果に変更しても良い。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船が防御する際、それが攻撃者の%BULLSEYEARC%内にいないなら、君は%FORCE%を1つ消費しても良い。もしそうするなら、%CRIT%の結果1つを%HIT%の結果に変更するか、%HIT%の結果1つを%FOCUS%の結果に変更しても良い。"
     },
     "Luminara Unduli (Delta-7b)": {
       display_name: "Luminara Unduli",
-      text: "レンジ0-2の友軍宇宙船が防御する際、それが攻撃者の%BULLSEYEARC%内にいないなら、君は%FORCE%を1つ消費しても良い。もしそうするなら、%CRIT%の結果1つを%HIT%の結果に変更するか、%HIT%の結果1つを%FOCUS%の結果に変更しても良い。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船が防御する際、それが攻撃者の%BULLSEYEARC%内にいないなら、君は%FORCE%を1つ消費しても良い。もしそうするなら、%CRIT%の結果1つを%HIT%の結果に変更するか、%HIT%の結果1つを%FOCUS%の結果に変更しても良い。"
     },
     "L'ulo L'ampar": {
       display_name: "L’ulo L’ampar",
-      text: "君が防御するか主武装による攻撃を実行する際、もし君がストレス状態なら、君は防御ダイスを1つ少なく振るか、攻撃ダイスを1つ多く振るか<b>しなければならない</b>。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "君が防御するか主武装による攻撃を実行する際、もし君がストレス状態なら、君は防御ダイスを1つ少なく振るか、攻撃ダイスを1つ多く振るか<b>しなければならない</b>。"
     },
     "Maarek Stele": {
       display_name: "Maarek Stele",
-      text: "君が攻撃を実行する際、もし防御者が表向きのダメージ・カードを受け取ろうとするなら、代わりに3枚ダメージ・カードを引き、1つ選び、残りを捨て札にする。%LINEBREAK%<strong>Advanced Targeting Computer:</strong> 君がロックを持っている防御者に対し、君が主武装で攻撃を実行する際、君は攻撃ダイスを追加で1つ振り、%HIT%の結果1つを%CRIT%の結果に変更する。"
+      text: "君が攻撃を実行する際、もし防御者が表向きのダメージ・カードを受け取ろうとするなら、代わりに3枚ダメージ・カードを引き、1つ選び、残りを捨て札にする。"
     },
     "Mace Windu": {
       display_name: "Mace Windu",
-      text: "君は赤のマニューバを完全に実行した後、%FORCE%を1つ回復する。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "君は赤のマニューバを完全に実行した後、%FORCE%を1つ回復する。"
     },
     "Mace Windu (Delta-7b)": {
       display_name: "Mace Windu",
-      text: "君は赤のマニューバを完全に実行した後、%FORCE%を1つ回復する。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "君は赤のマニューバを完全に実行した後、%FORCE%を1つ回復する。"
     },
     "Magva Yarro": {
       display_name: "Magva Yarro",
@@ -15019,15 +15019,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Major Rhymer": {
       display_name: "Major Rhymer",
-      text: "君が%TORPEDO%あるいは%MISSILE%攻撃を実行する際、君はレンジ制限を0-3の範囲で1増やすか減らすかしても良い。%LINEBREAK%<strong>Nimble Bomber:</strong> もし君が%STRAIGHT%テンプレートを使ってデバイスを投下する時、君は代わりに同じ速度の%BANKLEFT%あるいは%BANKRIGHT%テンプレートを使用しても良い。"
+      text: "君が%TORPEDO%あるいは%MISSILE%攻撃を実行する際、君はレンジ制限を0-3の範囲で1増やすか減らすかしても良い。"
     },
     "Major Stridan": {
       display_name: "Major Stridan",
-      text: "君がコーディネートするか、君のアップグレードのうち1つの効果を解決する際、君はレンジ2-3の友軍宇宙船をレンジ0あるいはレンジ1にいると扱っても良い。%LINEBREAK%<strong>Linked Battery:</strong> 君が%CANNON%攻撃を実行する際、攻撃ダイスを追加で1つ振る。"
+      text: "君がコーディネートするか、君のアップグレードのうち1つの効果を解決する際、君はレンジ2-3の友軍宇宙船をレンジ0あるいはレンジ1にいると扱っても良い。"
     },
     "Major Vermeil": {
       display_name: "Major Vermeil",
-      text: "君が攻撃を実行する際、もし防御者が緑のトークンを全く持っていなければ、君は空白あるいは%FOCUS%の結果のうち1つを%HIT%の結果に変えても良い。%LINEBREAK%<strong>Controlled Ailerons:</strong> 君が君のダイヤルを公開する前に、君がストレス状態でなければ、君はブーストをしても良い。"
+      text: "君が攻撃を実行する際、もし防御者が緑のトークンを全く持っていなければ、君は空白あるいは%FOCUS%の結果のうち1つを%HIT%の結果に変えても良い。"
     },
     "Major Vynder": {
       display_name: "Major Vynder",
@@ -15039,11 +15039,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Mining Guild Sentry": {
       display_name: "Mining Guild Sentry",
-      text: "<i class = flavor_text>As part of its arrangement with the Empire, the Mining Guild receives modified TIE/ln Fighters to protect its operations. These craft have solar panels removed from their stabilizers for improved visibility, and feature more extensive life support systems for the benefit of their corporate pilots.</i>%LINEBREAK%<strong>Notched Stabilizers:</strong> 君が移動する際、君はアステロイドを無視する。"
+      text: "<i class = flavor_text>As part of its arrangement with the Empire, the Mining Guild receives modified TIE/ln Fighters to protect its operations. These craft have solar panels removed from their stabilizers for improved visibility, and feature more extensive life support systems for the benefit of their corporate pilots.</i>"
     },
     "Mining Guild Surveyor": {
       display_name: "Mining Guild Surveyor",
-      text: "<i class = flavor_text>With Imperial construction projects consuming raw materials at an unprecedented rate, the Mining Guild ruthlessly exploits newly discovered deposits of doonium ore on worlds such as Batonn, Lothal, and Umbara.</i>%LINEBREAK%<strong>Notched Stabilizers:</strong> 君が移動する際、君はアステロイドを無視する。"
+      text: "<i class = flavor_text>With Imperial construction projects consuming raw materials at an unprecedented rate, the Mining Guild ruthlessly exploits newly discovered deposits of doonium ore on worlds such as Batonn, Lothal, and Umbara.</i>"
     },
     "Miranda Doni": {
       display_name: "Miranda Doni",
@@ -15055,7 +15055,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Nien Nunb": {
       display_name: "Nien Nunb",
-      text: "君がストレス・トークンを得た後、もし敵宇宙船が君の%FRONTARC%レンジ0-1にいるなら、君はそのストレス・トークンを取り除いても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君がストレス・トークンを得た後、もし敵宇宙船が君の%FRONTARC%レンジ0-1にいるなら、君はそのストレス・トークンを取り除いても良い。"
     },
     "Norra Wexley (Y-Wing)": {
       display_name: "Norra Wexley",
@@ -15075,11 +15075,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Obi-Wan Kenobi": {
       display_name: "Obi-Wan Kenobi",
-      text: "レンジ0-2の友軍宇宙船がフォーカス・トークンを消費した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船はフォーカス・トークンを1つ得る。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船がフォーカス・トークンを消費した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船はフォーカス・トークンを1つ得る。"
     },
     "Obi-Wan Kenobi (Delta-7b)": {
       display_name: "Obi-Wan Kenobi",
-      text: "レンジ0-2の友軍宇宙船がフォーカス・トークンを消費した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船はフォーカス・トークンを1つ得る。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船がフォーカス・トークンを消費した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船はフォーカス・トークンを1つ得る。"
     },
     "Obsidian Squadron Pilot": {
       display_name: "Obsidian Squadron Pilot",
@@ -15087,7 +15087,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Old Teroch": {
       display_name: "Old Teroch",
-      text: "エンゲージメント・フェイズの開始時、君はレンジ1の敵宇宙船を1つ選んでも良い。もしそうして、君がそれの%FRONTARC%内にいるなら、それの緑のトークンを全て取り除く。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "エンゲージメント・フェイズの開始時、君はレンジ1の敵宇宙船を1つ選んでも良い。もしそうして、君がそれの%FRONTARC%内にいるなら、それの緑のトークンを全て取り除く。"
     },
     "Omega Squadron Ace": {
       display_name: "Omega Squadron Ace",
@@ -15095,7 +15095,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Omega Squadron Expert": {
       display_name: "Omega Squadron Expert",
-      text: "<i class = flavor_text>The TIE/sf is a versatile starfighter that carries specialized armament and experimental systems for long-range operations by First Order Special Forces.</i>%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は%SINGLETURRETARC%インジケーターを%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない。</b>"
+      text: "<i class = flavor_text>The TIE/sf is a versatile starfighter that carries specialized armament and experimental systems for long-range operations by First Order Special Forces.</i></b>"
     },
     "Omicron Group Pilot": {
       display_name: "Omicron Group Pilot",
@@ -15103,7 +15103,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Onyx Squadron Ace": {
       display_name: "Onyx Squadron Ace",
-      text: "<i class = flavor_text>The experimental TIE defender outclasses all other contemporary starfighters, though its size, speed, and array of weapons come at a tremendous cost in credits.</i>%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "<i class = flavor_text>The experimental TIE defender outclasses all other contemporary starfighters, though its size, speed, and array of weapons come at a tremendous cost in credits.</i>"
     },
     "Onyx Squadron Scout": {
       display_name: "Onyx Squadron Scout",
@@ -15111,7 +15111,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Outer Rim Pioneer": {
       display_name: "Outer Rim Pioneer",
-      text: "レンジ0-1の友軍宇宙船は障害物からレンジ0でも攻撃を実行することができる。%LINEBREAK%<strong>Co-Pilot:</strong> 君がドックされている間、君をドックしている宇宙船は君のパイロット能力を元の能力と追加で得る。"
+      text: "レンジ0-1の友軍宇宙船は障害物からレンジ0でも攻撃を実行することができる。"
     },
     "Outer Rim Smuggler": {
       display_name: "Outer Rim Smuggler",
@@ -15119,11 +15119,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Overseer Yushyn": {
       display_name: "Overseer Yushyn",
-      text: "レンジ1の友軍宇宙船が武装解除トークンを得ようとする前に、もしその宇宙船がストレス状態でなければ、君は%CHARGE%を1つ消費しても良い。もしそうするなら、その宇宙船はストレス・トークンを代わりに1つ得る。%LINEBREAK%<strong>Notched Stabilizers:</strong> 君が移動する際、君はアステロイドを無視する。"
+      text: "レンジ1の友軍宇宙船が武装解除トークンを得ようとする前に、もしその宇宙船がストレス状態でなければ、君は%CHARGE%を1つ消費しても良い。もしそうするなら、その宇宙船はストレス・トークンを代わりに1つ得る。"
     },
     "Padmé Amidala": {
       display_name: "Padmé Amidala",
-      text: "君の%FRONTARC%内にいる敵宇宙船が防御あるいは攻撃を実行する際、その宇宙船は%FOCUS%の結果を1つだけ修正できる。(他の結果は修正できる)%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君の%FRONTARC%内にいる敵宇宙船が防御あるいは攻撃を実行する際、その宇宙船は%FOCUS%の結果を1つだけ修正できる。(他の結果は修正できる)"
     },
     "Palob Godalhi": {
       display_name: "Palob Godalhi",
@@ -15142,35 +15142,35 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Petty Officer Thanisson": {
       display_name: "Petty Officer Thanisson",
-      text: "アクティベーションあるいはエンゲージメント・フェイズの間、君の%FRONTARC%内レンジ0-2の宇宙船がストレス・トークンを1つ得た後、君は%CHARGE%を1つ消費しても良い。もしそうするなら、その宇宙船はトラクター・トークンを1つ得る。%LINEBREAK%<strong>Linked Battery:</strong> 君が%CANNON%攻撃を実行する際、攻撃ダイスを追加で1つ振る。"
+      text: "アクティベーションあるいはエンゲージメント・フェイズの間、君の%FRONTARC%内レンジ0-2の宇宙船がストレス・トークンを1つ得た後、君は%CHARGE%を1つ消費しても良い。もしそうするなら、その宇宙船はトラクター・トークンを1つ得る。"
     },
     "Phoenix Squadron Pilot": {
       display_name: "Phoenix Squadron Pilot",
-      text: "<i class = flavor_text>Led by Commander Jun Sato, the brave but inexperienced pilots of Phoenix Squadron face staggering odds in their battle against the Galactic Empire.</i>%LINEBREAK%<strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "<i class = flavor_text>Led by Commander Jun Sato, the brave but inexperienced pilots of Phoenix Squadron face staggering odds in their battle against the Galactic Empire.</i>"
     },
     "Planetary Sentinel": {
       display_name: "Planetary Sentinel",
-      text: "<i class = flavor_text>To protect its many military installations, the Empire requires a swift and vigilant defense force.</i>%LINEBREAK% <strong>Adaptive Ailerons:</strong> 君が君のダイヤルを公開する前に、もし君がストレス状態でなければ、君はブースト<b>しなければならない</b>。"
+      text: "<i class = flavor_text>To protect its many military installations, the Empire requires a swift and vigilant defense force.</i>"
     },
     "Plo Koon": {
       display_name: "Plo Koon",
-      text: "エンゲージメント・フェイズの開始時、君は%FORCE%を1つ消費し、レンジ0-2の他の友軍宇宙船を選んでも良い。もしそうするなら、君はその宇宙船に緑のトークンを1つ転送するか、その宇宙船から君にオレンジのトークン1つを転送しても良い。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "エンゲージメント・フェイズの開始時、君は%FORCE%を1つ消費し、レンジ0-2の他の友軍宇宙船を選んでも良い。もしそうするなら、君はその宇宙船に緑のトークンを1つ転送するか、その宇宙船から君にオレンジのトークン1つを転送しても良い。"
     },
     "Plo Koon (Delta-7b)": {
       display_name: "Plo Koon",
-      text: "エンゲージメント・フェイズの開始時、君は%FORCE%を1つ消費し、レンジ0-2の他の友軍宇宙船を選んでも良い。もしそうするなら、君はその宇宙船に緑のトークンを1つ転送するか、その宇宙船から君にオレンジのトークン1つを転送しても良い。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "エンゲージメント・フェイズの開始時、君は%FORCE%を1つ消費し、レンジ0-2の他の友軍宇宙船を選んでも良い。もしそうするなら、君はその宇宙船に緑のトークンを1つ転送するか、その宇宙船から君にオレンジのトークン1つを転送しても良い。"
     },
     "Poe Dameron": {
       display_name: "Poe Dameron",
-      text: "君がアクションを実行した後、君は白のアクションを、それを赤と扱って実行するために%CHARGE%を1つ消費しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君がアクションを実行した後、君は白のアクションを、それを赤と扱って実行するために%CHARGE%を1つ消費しても良い。"
     },
     "Prince Xizor": {
       display_name: "Prince Xizor",
-      text: "君が防御する際、結果の相殺ステップの後に、レンジ0-1でその攻撃アーク内にいる他の友軍宇宙船は%HIT%あるいは%CRIT%ダメージを1つ受けても良い。もしそうするなら、一致する結果を1つキャンセルする。%LINEBREAK%<strong>Microthrusters:</strong> 君がバレル・ロールを実行する際、君は%STRAIGHT%テンプレートの代わりに%BANKLEFT%あるいは%BANKRIGHT%テンプレートを<b>使用しなければならない<\b>。"
+      text: "君が防御する際、結果の相殺ステップの後に、レンジ0-1でその攻撃アーク内にいる他の友軍宇宙船は、%HIT%あるいは%CRIT%ダメージを1つ受けても良い。もしそうするなら、一致する結果を1つキャンセルする。"
     },
     "Quinn Jast": {
       display_name: "Quinn Jast",
-      text: "エンゲージメント・フェイズの開始時、君は武装解除トークンを1つ得、君の装備したアップグレードのうちの1つの上にある%CHARGE%トークンを1つ回復させても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "エンゲージメント・フェイズの開始時、君は武装解除トークンを1つ得、君の装備したアップグレードのうちの1つの上にある%CHARGE%トークンを1つ回復させても良い。"
     },
     "Rear Admiral Chiraneau": {
       display_name: "Rear Admiral Chiraneau",
@@ -15182,7 +15182,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Red Squadron Expert": {
       display_name: "Red Squadron Expert",
-      text: "<i class = flavor_text>Although the bulk of the Resistance Starfighter Corps is made up of young volunteers from the New Republic, their ranks are bolstered by veterans of the Galactic Civil War determined to finish what they started decades ago.</i>%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "<i class = flavor_text>Although the bulk of the Resistance Starfighter Corps is made up of young volunteers from the New Republic, their ranks are bolstered by veterans of the Galactic Civil War determined to finish what they started decades ago.</i>"
     },
     "Red Squadron Veteran": {
       display_name: "Red Squadron Veteran",
@@ -15194,7 +15194,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Rexler Brath": {
       display_name: "Rexler Brath",
-      text: "君が攻撃を実行し、それが命中した後、もし君が回避状態なら、防御者のダメージ・カードのうち1枚をエクスポーズする。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君が攻撃を実行し、それが命中した後、もし君が回避状態なら、防御者のダメージ・カードのうち1枚をエクスポーズする。"
     },
     "Rey": {
       display_name: "Rey",
@@ -15210,18 +15210,18 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Rogue Squadron Escort": {
       display_name: "Rogue Squadron Escort",
-      text: "<i class = flavor_text>The elite pilots of Rogue Squadron are among the Rebellion’s very best.</i> %LINEBREAK% <strong>Experimental Scanners:</strong> 君はレンジ3を越えてロックを得ることができる。君はレンジ1のロックを得ることができない。"
+      text: "<i class = flavor_text>The elite pilots of Rogue Squadron are among the Rebellion’s very best.</i> "
     },
     "Rose Tico": {
       text: "君が防御するか攻撃を実行する際、君は君の結果をその攻撃アーク内の他の友軍宇宙船ごとに1つまで振り直しても良い。"
     },
     "Saber Squadron Ace": {
       display_name: "Saber Squadron Ace",
-      text: "<i class = flavor_text>Led by Baron Soontir Fel, the pilots of Saber Squadron are among the Empire’s best. Their TIE interceptors are marked with red stripes to designate pilots with at least ten confirmed kills. </i> %LINEBREAK%  <strong> Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "<i class = flavor_text>Led by Baron Soontir Fel, the pilots of Saber Squadron are among the Empire’s best. Their TIE interceptors are marked with red stripes to designate pilots with at least ten confirmed kills. </i> "
     },
     "Sabine Wren": {
       display_name: "Sabine Wren",
-      text: "君がアクティベートする前に、君は%BARRELROLL%あるいは%BOOST%アクションを実行しても良い。%LINEBREAK%<strong>Locked and Loaded:</strong> 君がドックされている際、君のキャリア宇宙船が主武装の%FRONTARC%あるいは%SINGLETURRETARC%による攻撃を実行した後、その宇宙船はボーナスの主武装の%REARARC%攻撃を実行しても良い。"
+      text: "君がアクティベートする前に、君は%BARRELROLL%あるいは%BOOST%アクションを実行しても良い。"
     },
     "Sabine Wren (TIE Fighter)": {
       display_name: "Sabine Wren",
@@ -15233,15 +15233,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Saesee Tiin": {
       display_name: "Saesee Tiin",
-      text: "レンジ0-2の友軍宇宙船がそのダイヤルを公開した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、それのダイヤルを同じ速度で同じ難易度の別のマニューバにセットする。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船がそのダイヤルを公開した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、それのダイヤルを同じ速度で同じ難易度の別のマニューバにセットする。"
     },
     "Saesee Tiin (Delta-7b)": {
       display_name: "Saesee Tiin",
-      text: "レンジ0-2の友軍宇宙船がそのダイヤルを公開した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、それのダイヤルを同じ速度で同じ難易度の別のマニューバにセットする。%LINEBREAK%<strong>Fine-tuned Controls:</strong> 君がマニューバを完全に実行した後、君は%FORCE%を1つ消費して、%BOOST%あるいは%BARRELROLL%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船がそのダイヤルを公開した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、それのダイヤルを同じ速度で同じ難易度の別のマニューバにセットする。"
     },
     "Sarco Plank": {
       display_name: "Sarco Plank",
-      text: "君が防御する際、君は君の敏捷値を、このラウンド君が実行したマニューバの速度と同じ値として扱っても良い。%LINEBREAK%<strong>Spacetug Tractor Array:</strong> <b>アクション:</b> レンジ1の君の%FRONTARC%内の宇宙船を1つ選ぶ。その宇宙船はトラクター・トークンを1つ得るか、あるいは君の%BULLSEYEARC%内レンジ1にいるならトラクター・トークンを2つ得る。"
+      text: "君が防御する際、君は君の敏捷値を、このラウンド君が実行したマニューバの速度と同じ値として扱っても良い。"
     },
     "Saw Gerrera": {
       display_name: "Saw Gerrera",
@@ -15249,23 +15249,23 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Scarif Base Pilot": {
       display_name: "Scarif Base Pilot",
-      text: "<i class = flavor_text>The TIE reaper was designed to ferry elite troops to flashpoints on the battlefield, notably carrying Director Krennic’s dreaded death troopers at the Battle of Scarif.</i>%LINEBREAK%<strong>Controlled Ailerons:</strong> 君が君のダイヤルを公開する前に、君がストレス状態でなければ、君はブーストをしても良い。"
+      text: "<i class = flavor_text>The TIE reaper was designed to ferry elite troops to flashpoints on the battlefield, notably carrying Director Krennic’s dreaded death troopers at the Battle of Scarif.</i>"
     },
     "Scimitar Squadron Pilot": {
       display_name: "Scimitar Squadron Pilot",
-      text: "<i class = flavor_text>The TIE/sa is exceptionally nimble for a bomber, allowing it to pinpoint its target while avoiding excessive collateral damage to the surrounding area.</i> %LINEBREAK%<strong>Nimble Bomber:</strong> もし君が%STRAIGHT%テンプレートを使ってデバイスを投下する時、君は代わりに同じ速度の%BANKLEFT%あるいは%BANKRIGHT%テンプレートを使用しても良い。"
+      text: "<i class = flavor_text>The TIE/sa is exceptionally nimble for a bomber, allowing it to pinpoint its target while avoiding excessive collateral damage to the surrounding area.</i> "
     },
     "Separatist Bomber": {
       display_name: "Separatist Bomber",
-      text: "<i class = flavor_text>The droid armies of the Separatists are callous to the plight of civilians and make no effort to limit collateral damage.</i>%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "<i class = flavor_text>The droid armies of the Separatists are callous to the plight of civilians and make no effort to limit collateral damage.</i>"
     },
     "Separatist Drone": {
       display_name: "Separatist Drone",
-      text: "<i class = flavor_text>As the Clone Wars escalate, the Separatist Alliance continues to develop the technology of droid starfighters, as well as the tactical droids that command them.</i>%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "<i class = flavor_text>As the Clone Wars escalate, the Separatist Alliance continues to develop the technology of droid starfighters, as well as the tactical droids that command them.</i>"
     },
     "Serissu": {
       display_name: "Serissu",
-      text: "レンジ0-1の友軍宇宙船が防御する際、それはそのダイスのうち1つを振り直しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "レンジ0-1の友軍宇宙船が防御する際、それはそのダイスのうち1つを振り直しても良い。"
     },
     "Seventh Sister": {
       display_name: "Seventh Sister",
@@ -15289,11 +15289,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Sienar-Jaemus Engineer": {
       display_name: "Sienar-Jaemus Engineer",
-      text: "<i class = flavor_text>Developed by Sienar-Jaemus Fleet Systems as a successor to the vaunted TIE Defender, the TIE/vn Silencer incorporates bleeding-edge technologies developed at research facilities hidden in the Unknown Regions.</i>%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "<i class = flavor_text>Developed by Sienar-Jaemus Fleet Systems as a successor to the vaunted TIE Defender, the TIE/vn Silencer incorporates bleeding-edge technologies developed at research facilities hidden in the Unknown Regions.</i>"
     },
     "Sigma Squadron Ace": {
       display_name: "Sigma Squadron Ace",
-      text: "<i class = flavor_text>Featuring a hyperdrive and shields, the TIE phantom is also equipped with five laser cannons, giving it substantial firepower for an Imperial fighter.</i>%LINEBREAK%<strong>Stygium Array:</strong> 君がデクロークした後、君は%EVADE%アクションを実行しても良い。終了フェイズの開始時、君は回避トークンを1つ消費してクローク・トークンを1つ得ても良い。"
+      text: "<i class = flavor_text>Featuring a hyperdrive and shields, the TIE phantom is also equipped with five laser cannons, giving it substantial firepower for an Imperial fighter.</i>"
     },
     "Skakoan Ace": {
       display_name: "Skakoan Ace",
@@ -15301,7 +15301,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Skull Squadron Pilot": {
       display_name: "Skull Squadron Pilot",
-      text: "<i class = flavor_text>The aces of Skull Squadron favor an aggressive approach, using their craft’s pivot wing technology to achieve unmatched agility in the pursuit of their quarry.</i> %LINEBREAK% <strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "<i class = flavor_text>The aces of Skull Squadron favor an aggressive approach, using their craft’s pivot wing technology to achieve unmatched agility in the pursuit of their quarry.</i> "
     },
     "Sol Sixxa": {
       display_name: "Sol Sixxa",
@@ -15309,7 +15309,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Soontir Fel": {
       display_name: "Soontir Fel",
-      text: "エンゲージメント・フェイズの開始時、もし敵宇宙船が君の%BULLSEYEARC%内にいるなら、フォーカス・トークンを1つ得る。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "エンゲージメント・フェイズの開始時、もし敵宇宙船が君の%BULLSEYEARC%内にいるなら、フォーカス・トークンを1つ得る。"
     },
     "Spice Runner": {
       display_name: "Spice Runner",
@@ -15321,15 +15321,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Starkiller Base Pilot": {
       display_name: "Starkiller Base Pilot",
-      text: "<i class = flavor_text>The Upsilon-class command shuttle serves as a base of operations for many of the First Order's senior officers and agents. Its powerful sensors and communications equipment allow them to orchestrate the spread of terror across the galaxy.</i>%LINEBREAK%<strong>Linked Battery:</strong> 君が%CANNON%攻撃を実行する際、攻撃ダイスを追加で1つ振る。"
+      text: "<i class = flavor_text>The Upsilon-class command shuttle serves as a base of operations for many of the First Order's senior officers and agents. Its powerful sensors and communications equipment allow them to orchestrate the spread of terror across the galaxy.</i>"
     },
     "Storm Squadron Ace": {
       display_name: "Storm Squadron Ace",
-      text: "<i class = flavor_text>The TIE Advanced x1 was produced in limited quantities, but Sienar engineers incorporated many of its best qualities into their next TIE model: the TIE Interceptor.</i>%LINEBREAK%<strong>Advanced Targeting Computer:</strong> 君がロックを持っている防御者に対し、君が主武装で攻撃を実行する際、君は攻撃ダイスを追加で1つ振り、%HIT%の結果1つを%CRIT%の結果に変更する。"
+      text: "<i class = flavor_text>The TIE Advanced x1 was produced in limited quantities, but Sienar engineers incorporated many of its best qualities into their next TIE model: the TIE Interceptor.</i>"
     },
     "Sunny Bounder": {
       display_name: "Sunny Bounder",
-      text: "君が防御するか攻撃を実行する際、君がダイスを振った後か振り直した後、もし全てのダイスが同じ結果なら、君は一致した結果を1つ追加しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君が防御するか攻撃を実行する際、君がダイスを振った後か振り直した後、もし全てのダイスが同じ結果なら、君は一致した結果を1つ追加しても良い。"
     },
     "TN-3465": {
       display_name: "TN-3465",
@@ -15341,7 +15341,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Tallissan Lintra": {
       display_name: "Tallissan Lintra",
-      text: "君の%BULLSEYEARC%内の敵宇宙船が攻撃を実行する際、君は%CHARGE%を1つ消費しても良い。もしそうするなら、防御者はダイスを追加で1つ振る。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "君の%BULLSEYEARC%内の敵宇宙船が攻撃を実行する際、君は%CHARGE%を1つ消費しても良い。もしそうするなら、防御者はダイスを追加で1つ振る。"
     },
     "Talonbane Cobra": {
       display_name: "Talonbane Cobra",
@@ -15349,11 +15349,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Tansarii Point Veteran": {
       display_name: "Tansarii Point Veteran",
-      text: "<i class = flavor_text>The defeat of Black Sun ace Talonbane Cobra by Car’das smugglers turned the tide of the Battle of Tansarii Point Station. Survivors of the clash are respected throughout the sector.</i> %LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "<i class = flavor_text>The defeat of Black Sun ace Talonbane Cobra by Car’das smugglers turned the tide of the Battle of Tansarii Point Station. Survivors of the clash are respected throughout the sector.</i> "
     },
     "Techno Union Bomber": {
       display_name: "Techno Union Bomber",
-      text: "<i class = flavor_text>Baktoid Armor Workshop developed the Hyena as a strike craft compatible with Trade Federation Vulture swarm tactics.</i>%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "<i class = flavor_text>Baktoid Armor Workshop developed the Hyena as a strike craft compatible with Trade Federation Vulture swarm tactics.</i>"
     },
     "Tel Trevura": {
       display_name: "Tel Trevura",
@@ -15361,11 +15361,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Temmin Wexley": {
       display_name: "Temmin Wexley",
-      text: "君がレンジ2-4のマニューバを完全に実行した後、君は%BOOST%アクションを実行しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君が速度 2-4 のマニューバを完全に実行した後、君は%BOOST%アクションを実行しても良い。"
     },
     "Tempest Squadron Pilot": {
       display_name: "Tempest Squadron Pilot",
-      text: "<i class = flavor_text>The TIE Advanced improved on the popular TIE/ln design by adding shielding, better weapons systems, curved solar panels, and a hyperdrive.</i>%LINEBREAK%<strong>Advanced Targeting Computer:</strong> 君がロックを持っている防御者に対し、君が主武装で攻撃を実行する際、君は攻撃ダイスを追加で1つ振り、%HIT%の結果1つを%CRIT%の結果に変更する。"
+      text: "<i class = flavor_text>The TIE Advanced improved on the popular TIE/ln design by adding shielding, better weapons systems, curved solar panels, and a hyperdrive.</i>"
     },
     "Ten Numb": {
       display_name: "Ten Numb",
@@ -15377,11 +15377,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Tomax Bren": {
       display_name: "Tomax Bren",
-      text: "君が%RELOAD%アクションを実行した後、君は装備した%TALENT%アップグレード・カードのうちの1つの上にある%CHARGE%トークンを1つ回復しても良い。%LINEBREAK%<strong>Nimble Bomber:</strong> もし君が%STRAIGHT%テンプレートを使ってデバイスを投下する時、君は代わりに同じ速度の%BANKLEFT%あるいは%BANKRIGHT%テンプレートを使用しても良い。"
+      text: "君が%RELOAD%アクションを実行した後、君は装備した%TALENT%アップグレード・カードのうちの1つの上にある%CHARGE%トークンを1つ回復しても良い。"
     },
     "Torani Kulda": {
       display_name: "Torani Kulda",
-      text: "君が攻撃を実行する際、君の%BULLSEYEARC%内の各敵宇宙船は、緑のトークンを1つ取り除かない限り、%HIT%ダメージを1つ受ける。%LINEBREAK%<strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の%BULLSEYEARC%内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "君が攻撃を実行する際、君の%BULLSEYEARC%内の各敵宇宙船は、緑のトークンを1つ取り除かない限り、%HIT%ダメージを1つ受ける。"
     },
     "Torkil Mux": {
       display_name: "Torkil Mux",
@@ -15389,7 +15389,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Trade Federation Drone": {
       display_name: "Trade Federation Drone",
-      text: "<i class = flavor_text>The Trade Federation deployed countless Vulture Droids at the Battle of Naboo, and continues to use these inexpensive starfighters in the Clone Wars.</i>%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "<i class = flavor_text>The Trade Federation deployed countless Vulture Droids at the Battle of Naboo, and continues to use these inexpensive starfighters in the Clone Wars.</i>"
     },
     "Trandoshan Slaver": {
       display_name: "Trandoshan Slaver",
@@ -15397,11 +15397,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Turr Phennir": {
       display_name: "Turr Phennir",
-      text: "君が攻撃を実行した後、君は%BARRELROLL%あるいは%BOOST%アクションを実行しても良い(君がストレス状態であっても)。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "君が攻撃を実行した後、君は%BARRELROLL%あるいは%BOOST%アクションを実行しても良い(君がストレス状態であっても)。"
     },
     "Unkar Plutt": {
       display_name: "Unkar Plutt",
-      text: "エンゲージメント・フェイズの開始時、レンジ0に他の宇宙船が1つ以上いるなら、君とレンジ0の他の各宇宙船はトラクター・トークンを1つ得る。%LINEBREAK%<strong>Spacetug Tractor Array:</strong> <b>アクション:</b> レンジ1の君の%FRONTARC%内の宇宙船を1つ選ぶ。その宇宙船はトラクター・トークンを1つ得るか、あるいは君の%BULLSEYEARC%内レンジ1にいるならトラクター・トークンを2つ得る。"
+      text: "エンゲージメント・フェイズの開始時、レンジ0に他の宇宙船が1つ以上いるなら、君とレンジ0の他の各宇宙船はトラクター・トークンを1つ得る。"
     },
     "Valen Rudor": {
       display_name: "Valen Rudor",
@@ -15409,7 +15409,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Ved Foslo": {
       display_name: "Ved Foslo",
-      text: "君がマニューバを実行する際、代わりに君は同じ向きで同じ難易度の、速度が1高いか低いマニューバを実行しても良い。%LINEBREAK%<strong>Advanced Targeting Computer:</strong> 君がロックを持っている防御者に対し、君が主武装で攻撃を実行する際、君は攻撃ダイスを追加で1つ振り、%HIT%の結果1つを%CRIT%の結果に変更する。"
+      text: "君がマニューバを実行する際、代わりに君は同じ向きで同じ難易度の、速度が1高いか低いマニューバを実行しても良い。"
     },
     "Vennie": {
       display_name: "Vennie",
@@ -15433,7 +15433,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Wild Space Fringer": {
       display_name: "Wild Space Fringer",
-      text: "<i class = flavor_text>Although stock YT-2400 light freighters have plenty of room for cargo, that space is often annexed to support modified weapon systems and oversized engines.</i>%LINEBREAK%<strong>Sensor Blindspot:</strong> 君がレンジ0-1の主武装による攻撃を実行する際、レンジ0-1ボーナスを適用せず、攻撃ダイスを1つ少なく振る。"
+      text: "<i class = flavor_text>Although stock YT-2400 light freighters have plenty of room for cargo, that space is often annexed to support modified weapon systems and oversized engines.</i>"
     },
     "Wullffwarro": {
       display_name: "Wullffwarro",
@@ -15441,15 +15441,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Zari Bangel": {
       display_name: "Zari Bangel",
-      text: "君は君がマニューバを部分的に実行した後、君のアクションの実行ステップをスキップしない。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "君は君がマニューバを部分的に実行した後、君のアクションの実行ステップをスキップしない。"
     },
     "Zealous Recruit": {
       display_name: "Zealous Recruit",
-      text: "<i class = flavor_text>Mandalorian Fang fighter pilots must master the Concordia Faceoff maneuver, leveraging their ships’ narrow attack profile to execute deadly head-on charges.</i> %LINEBREAK% <strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "<i class = flavor_text>Mandalorian Fang fighter pilots must master the Concordia Faceoff maneuver, leveraging their ships’ narrow attack profile to execute deadly head-on charges.</i>"
     },
     "Zertik Strom": {
       display_name: "Zertik Strom",
-      text: "終了フェイズの間、君は敵宇宙船へのロックを消費して、その宇宙船のダメージ・カードを1枚エクスポーズしても良い。%LINEBREAK%<strong>Advanced Targeting Computer:</strong> 君がロックを持っている防御者に対し、君が主武装で攻撃を実行する際、君は攻撃ダイスを追加で1つ振り、%HIT%の結果1つを%CRIT%の結果に変更する。"
+      text: "終了フェイズの間、君は敵宇宙船へのロックを消費して、その宇宙船のダメージ・カードを1枚エクスポーズしても良い。"
     },
     "Zeta Squadron Pilot": {
       display_name: "Zeta Squadron Pilot",
@@ -15457,7 +15457,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Zeta Squadron Survivor": {
       display_name: "Zeta Squadron Survivor",
-      text: "<i class = flavor_text>Humiliated by their failure, the remaining pilots from Starkiller Base are eager to prove their worth in pursuit of the Resistance.</i>%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は%SINGLETURRETARC%インジケーターを%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "<i class = flavor_text>Humiliated by their failure, the remaining pilots from Starkiller Base are eager to prove their worth in pursuit of the Resistance.</i>"
     },
     "Zuckuss": {
       display_name: "Zuckuss",
@@ -15465,7 +15465,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Avenger"': {
       display_name: "“Avenger”",
-      text: "他の友軍宇宙船が破壊された後、君はアクションを1つ実行しても良い(ストレス状態でも)。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "他の友軍宇宙船が破壊された後、君はアクションを1つ実行しても良い(ストレス状態でも)。"
     },
     '"Axe"': {
       display_name: "“Axe”",
@@ -15473,23 +15473,23 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Backdraft"': {
       display_name: "“Backdraft”",
-      text: "君が%SINGLETURRETARC%の主武装による攻撃を実行する際、もし防御者が君の%REARARC%内にいるなら、攻撃ダイスを追加で1つ振る。%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は%SINGLETURRETARC%インジケーターを%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "君が%SINGLETURRETARC%の主武装による攻撃を実行する際、もし防御者が君の%REARARC%内にいるなら、攻撃ダイスを追加で1つ振る。"
     },
     '"Blackout"': {
       display_name: "“Blackout”",
-      text: "君が攻撃を実行する際、もし攻撃が障害物によって妨害されたなら、防御者は防御ダイスを2つ少なく振る。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "君が攻撃を実行する際、もし攻撃が障害物によって妨害されたなら、防御者は防御ダイスを2つ少なく振る。"
     },
     '"Chopper"': {
       display_name: "“Chopper”",
-      text: "エンゲージメント・フェイズの開始時、レンジ0の各敵宇宙船はジャム・トークンを2つ受け取る。%LINEBREAK%<strong>Tail Gun:</strong> 君に宇宙船がドックされているなら、君は主武装の%REARARC%攻撃を、ドックされた宇宙船の主武装の%FRONTARC%攻撃値と同じ攻撃値で持つ。"
+      text: "エンゲージメント・フェイズの開始時、レンジ0の各敵宇宙船はジャム・トークンを2つ受け取る。"
     },
     '"Countdown"': {
       display_name: "“Countdown”",
-      text: "君が防御する際、結果の相殺ステップの後に、もし君がストレス状態でなければ、君は%HIT%ダメージを1つ受け、ストレス・トークン1つを受け取っても良い。もしそうするなら、全てのダイスの結果をキャンセルする。%LINEBREAK%<strong>Adaptive Ailerons:</strong> 君が君のダイヤルを公開する前に、もし君がストレス状態でなければ、君はブースト<b>しなければならない</b>。"
+      text: "君が防御する際、結果の相殺ステップの後に、もし君がストレス状態でなければ、君は%HIT%ダメージを1つ受け、ストレス・トークン1つを受け取っても良い。もしそうするなら、全てのダイスの結果をキャンセルする。"
     },
     '"Deathfire"': {
       display_name: "“Deathfire”",
-      text: "君が破壊された後、君が取り除かれる前に、君は1回攻撃し、デバイスを1つ投下あるいは射出しても良い。%LINEBREAK%<strong>Nimble Bomber:</strong> もし君が%STRAIGHT%テンプレートを使ってデバイスを投下する時、君は代わりに同じ速度の%BANKLEFT%あるいは%BANKRIGHT%テンプレートを使用しても良い。"
+      text: "君が破壊された後、君が取り除かれる前に、君は1回攻撃し、デバイスを1つ投下あるいは射出しても良い。"
     },
     '"Deathrain"': {
       display_name: "“Deathrain”",
@@ -15501,7 +15501,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Duchess"': {
       display_name: "“Duchess”",
-      text: "君は君の<strong>Adaptive Ailerons</strong>を使わないことを選んでも良い。%LINEBREAK%君は君の<strong>Adaptive Ailerons</strong>をストレス状態でも使っても良い。%LINEBREAK%<strong>Adaptive Ailerons:</strong> 君が君のダイヤルを公開する前に、もし君がストレス状態でなければ、君はブースト<b>しなければならない</b>。"
+      text: "君は君の<strong>Adaptive Ailerons</strong>を使わないことを選んでも良い。%LINEBREAK%君は君の<strong>Adaptive Ailerons</strong>をストレス状態でも使っても良い。"
     },
     '"Dutch" Vander': {
       display_name: "“Dutch” Vander",
@@ -15509,7 +15509,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Echo"': {
       display_name: "“Echo”",
-      text: "君がデクロークする際、君は[%STRAIGHT%2]テンプレートの代わりに[%BANKLEFT%2]あるいは[%BANKRIGHT%2]テンプレートを<b>使用しなければならない</b>。%LINEBREAK%<strong>Stygium Array:</strong> 君がデクロークした後、君は%EVADE%アクションを実行しても良い。終了フェイズの開始時、君は回避トークンを1つ消費してクローク・トークンを1つ得ても良い。"
+      text: "君がデクロークする際、君は[%STRAIGHT%2]テンプレートの代わりに[%BANKLEFT%2]あるいは[%BANKRIGHT%2]テンプレートを<b>使用しなければならない</b>。"
     },
     '"Howlrunner"': {
       display_name: "“Howlrunner”",
@@ -15525,7 +15525,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Leebo"': {
       display_name: "“Leebo”",
-      text: "君が防御するか攻撃を実行した後、もし君がカリキュレート・トークンを消費したなら、カリキュレート・トークンを1つ得る。%LINEBREAK%<strong>Sensor Blindspot:</strong> 君がレンジ0-1の主武装による攻撃を実行する際、レンジ0-1ボーナスを適用せず、攻撃ダイスを1つ少なく振る。"
+      text: "君が防御するか攻撃を実行した後、もし君がカリキュレート・トークンを消費したなら、カリキュレート・トークンを1つ得る。"
     },
     '"Longshot"': {
       display_name: "“Longshot”",
@@ -15561,15 +15561,15 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Pure Sabacc"': {
       display_name: "“Pure Sabacc”",
-      text: "君が攻撃を実行する際、もし君のダメージ・カードが1枚以下なら、君は攻撃ダイスを追加で1つ振っても良い。%LINEBREAK%<strong>Adaptive Ailerons:</strong> 君が君のダイヤルを公開する前に、もし君がストレス状態でなければ、君はブースト<b>しなければならない</b>。"
+      text: "君が攻撃を実行する際、もし君のダメージ・カードが1枚以下なら、君は攻撃ダイスを追加で1つ振っても良い。"
     },
     '"Quickdraw"': {
       display_name: "“Quickdraw”",
-      text: "君がシールドを失った後、君は%CHARGE%を1つ消費しても良い。もしそうするなら、君はボーナスの主武装による攻撃を実行しても良い。%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は%SINGLETURRETARC%インジケーターを%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "君がシールドを失った後、君は%CHARGE%を1つ消費しても良い。もしそうするなら、君はボーナスの主武装による攻撃を実行しても良い。"
     },
     '"Recoil"': {
       display_name: "“Recoil”",
-      text: "君がストレス状態の際、君はレンジ0-1の%FRONTARC%内の敵宇宙船を君の%BULLSEYEARC%内にいるとして扱っても良い。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "君がストレス状態の際、君はレンジ0-1の%FRONTARC%内の敵宇宙船を君の%BULLSEYEARC%内にいるとして扱っても良い。"
     },
     '"Redline"': {
       display_name: "“Redline”",
@@ -15601,7 +15601,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Vizier"': {
       display_name: "“Vizier”",
-      text: "君が君の<strong>Controlled Ailerons</strong>宇宙船能力を使った移動の後、君は%COORDINATE%アクションを実行しても良い。もしそうするなら、君のアクション実行ステップを飛ばす。%LINEBREAK%<strong>Controlled Ailerons:</strong> 君が君のダイヤルを公開する前に、君がストレス状態でなければ、君はブーストをしても良い。"
+      text: "君が君の<strong>Controlled Ailerons</strong>宇宙船能力を使った移動の後、君は%COORDINATE%アクションを実行しても良い。もしそうするなら、君のアクション実行ステップを飛ばす。"
     },
     '"Wampa"': {
       display_name: "“Wampa”",
@@ -15609,7 +15609,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Whisper"': {
       display_name: "“Whisper”",
-      text: "君の攻撃が命中した後、回避トークンを1つ得る。%LINEBREAK%<strong>Stygium Array:</strong> 君がデクロークした後、君は%EVADE%アクションを実行しても良い。終了フェイズの開始時、君は回避トークンを1つ消費してクローク・トークンを1つ得ても良い。"
+      text: "君の攻撃が命中した後、回避トークンを1つ得る。"
     },
     '"Wolffe"': {
       display_name: "“Wolffe”",
@@ -15617,26 +15617,26 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Zeb" Orrelios': {
       display_name: "“Zeb” Orrelios",
-      text: "君が防御する際、君は%HIT%の結果の前に%CRIT%の結果を相殺しても良い。%LINEBREAK%<strong>Locked and Loaded:</strong> 君がドックされている際、君のキャリア宇宙船が主武装の%FRONTARC%あるいは%SINGLETURRETARC%による攻撃を実行した後、その宇宙船はボーナスの主武装の%REARARC%攻撃を実行しても良い。"
+      text: "君が防御する際、君は%HIT%の結果の前に%CRIT%の結果を相殺しても良い。"
     },
     '"Zeb" Orrelios (Sheathipede)': {
       display_name: "“Zeb” Orrelios",
-      text: "君が防御する際、君は%HIT%の結果の前に%CRIT%の結果を相殺しても良い。%LINEBREAK%<strong>Comms Shuttle:</strong> 君がドックされている際、君のキャリア宇宙船は%COORDINATE%を得る。君のキャリア宇宙船のアクティベートの前に、それは%COORDINATE%アクションを実行しても良い。"
+      text: "君が防御する際、君は%HIT%の結果の前に%CRIT%の結果を相殺しても良い。"
     },
     '"Zeb" Orrelios (TIE Fighter)': {
       display_name: "“Zeb” Orrelios",
       text: "君が防御する際、君は%HIT%の結果の前に%CRIT%の結果を相殺しても良い。"
     },
     "Bombardment Drone": {
-      text: "もし君がデバイスを投下しようとする時、君は代わりに同じテンプレートを用いて射出しても良い。%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "もし君がデバイスを投下しようとする時、君は代わりに同じテンプレートを用いて射出しても良い。"
     },
     "Haor Chall Prototype": {
       display_name: "Haor Chall Prototype",
-      text: "君の%BULLSEYEARC%内レンジ0-2の敵宇宙船が他の友軍宇宙船を防御者と宣言した後、君は%CALCULATE%あるいは%LOCK%アクションを実行しても良い。%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "君の%BULLSEYEARC%内レンジ0-2の敵宇宙船が他の友軍宇宙船を防御者と宣言した後、君は%CALCULATE%あるいは%LOCK%アクションを実行しても良い。"
     },
     "Precise Hunter": {
       display_name: "Precise Hunter",
-      text: "君が攻撃を実行する際、もし防御者が君の%BULLSEYEARC%内にいるなら、君は空白の結果を1つ振り直しても良い。%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "君が攻撃を実行する際、もし防御者が君の%BULLSEYEARC%内にいるなら、君は空白の結果を1つ振り直しても良い。"
     },
     "Rose Tico": {
       display_name: "Rose Tico",
@@ -15648,27 +15648,27 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Padmé Amidala": {
       display_name: "Padmé Amidala",
-      text: "君の%FRONTARC%内にいる敵宇宙船が防御あるいは攻撃を実行する際、その宇宙船は%FOCUS%の結果を1つだけ修正できる。(他の結果は修正できる)%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君の%FRONTARC%内にいる敵宇宙船が防御あるいは攻撃を実行する際、その宇宙船は%FOCUS%の結果を1つだけ修正できる。(他の結果は修正できる)"
     },
     "Anakin Skywalker (N-1 Starfighter)": {
       display_name: "Anakin Skywalker",
-      text: "君が君のマニューバを公開する前に、君は%FORCE%を1つ消費して、バレル・ロールを実行しても良い(これはアクションではない)。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君が君のマニューバを公開する前に、君は%FORCE%を1つ消費して、バレル・ロールを実行しても良い(これはアクションではない)。"
     },
     "Ric Olié": {
       display_name: "Ric Olié",
-      text: "君が防御するか主武装による攻撃を実行する際、もし君の公開したマニューバの速度が敵宇宙船よりも高いなら、ダイスを1つ追加で振る。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君が防御するか主武装による攻撃を実行する際、もし君の公開したマニューバの速度が敵宇宙船よりも高いなら、ダイスを1つ追加で振る。"
     },
     "Dineé Ellberger": {
       display_name: "Dineé Ellberger",
-      text: "君が防御時あるいは攻撃を実行する際、もし君の公開したマニューバの速度が敵宇宙船と同じなら、その宇宙船のダイスは修正できない。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君が防御時あるいは攻撃を実行する際、もし君の公開したマニューバの速度が敵宇宙船と同じなら、その宇宙船のダイスは修正できない。"
     },
     "Naboo Handmaiden": {
       display_name: "Naboo Handmaiden",
-      text: "<b>セットアップ:</b> 戦力の配置後、<strong>Naboo Handmaiden</strong>以外の友軍宇宙船1つに<strong>Decoyed</strong>コンディションをつける。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "<b>セットアップ:</b> 戦力の配置後、<strong>Naboo Handmaiden</strong>以外の友軍宇宙船1つに<strong>Decoyed</strong>コンディションをつける。"
     },
     "Bravo Flight Officer": {
       display_name: "Bravo Flight Officer",
-      text: "<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: ""
     },
     "BB-8": {
       display_name: "BB-8",
@@ -15691,73 +15691,73 @@ exportObj.cardLoaders.日本語 = function() {
       text: "<b>セットアップ:</b> 戦力の配置後、<strong>Compromising Intel</strong>コンディションを敵宇宙船1つにつける。"
     },
     "Shadow Squadron Veteran": {
-      text: "<strong>Plated Hull:</strong> 君が防御する際、もし君がクリティカル・ダメージ状態でないなら、%CRIT%の結果を1つ%HIT%に変更する。"
+      text: ""
     },
     "Red Squadron Bomber": {
-      text: "<strong>Plated Hull:</strong> 君が防御する際、もし君がクリティカル・ダメージ状態でないなら、%CRIT%の結果を1つ%HIT%に変更する。"
+      text: ""
     },
     '"Goji"': {
-      text: "レンジ0-3の友軍宇宙船が防御する際、それはそれのレンジ0-1にある友軍の爆弾1つにつき防御ダイスを追加で1つ振っても良い。%LINEBREAK%<strong>Plated Hull:</strong> 君が防御する際、もし君がクリティカル・ダメージ状態でないなら、%CRIT%の結果を1つ%HIT%に変更する。"
+      text: "レンジ0-3の友軍宇宙船が防御する際、それはそれのレンジ0-1にある友軍の爆弾1つにつき防御ダイスを追加で1つ振っても良い。"
     },
     '"Broadside"': {
-      text: "君が%SINGLETURRETARC%攻撃を実行する際、もし%SINGLETURRETARC%インジケーターが%LEFTARC%あるいは%RIGHTARC%にあるなら、君は空白の結果を1つ%FOCUS%に変えても良い。%LINEBREAK%<strong>Plated Hull:</strong> 君が防御する際、もし君がクリティカル・ダメージ状態でないなら、%CRIT%の結果を1つ%HIT%に変更する。"
+      text: "君が%SINGLETURRETARC%攻撃を実行する際、もし%SINGLETURRETARC%インジケーターが%LEFTARC%あるいは%RIGHTARC%にあるなら、君は空白の結果を1つ%FOCUS%に変えても良い。"
     },
     '"Matchstick"': {
-      text: "君が主武装あるいは%SINGLETURRETARC%による攻撃を実行する際、君は君が持っている赤のトークン1つにつき攻撃ダイスを1つ振り直しても良い。%LINEBREAK%<strong>Plated Hull:</strong> 君が防御する際、もし君がクリティカル・ダメージ状態でないなら、%CRIT%の結果を1つ%HIT%に変更する。"
+      text: "君が主武装あるいは%SINGLETURRETARC%による攻撃を実行する際、君は君が持っている赤のトークン1つにつき攻撃ダイスを1つ振り直しても良い。"
     },
     '"Odd Ball" (Y-Wing)': {
-      text: "君が赤のマニューバを完全に実行するか、赤のアクションを実行した後、もし敵宇宙船が%BULLSEYEARC%内にいるなら、君はその宇宙船へのロックを得ても良い。%LINEBREAK%<strong>Plated Hull:</strong> 君が防御する際、もし君がクリティカル・ダメージ状態でないなら、%CRIT%の結果を1つ%HIT%に変更する。"
+      text: "君が赤のマニューバを完全に実行するか、赤のアクションを実行した後、もし敵宇宙船が%BULLSEYEARC%内にいるなら、君はその宇宙船へのロックを得ても良い。"
     },
     "R2-D2": {
-      text: "エンゲージメント・フェイズの開始時、もし敵宇宙船が%REARARC%内にいるなら、カリキュレート・トークンを1つ得る。%LINEBREAK%<strong>Plated Hull:</strong> 君が防御する際、もし君がクリティカル・ダメージ状態でないなら、%CRIT%の結果を1つ%HIT%に変更する。"
+      text: "エンゲージメント・フェイズの開始時、もし敵宇宙船が%REARARC%内にいるなら、カリキュレート・トークンを1つ得る。"
     },
     "Anakin Skywalker (Y-Wing)": {
-      text: "君がマニューバを完全に実行した後、もし敵宇宙船が%FRONTARC%内レンジ0-1かあるいは%BULLSEYEARC%にいるなら、君は%FORCE%を1つ消費してストレス・トークンを1つ取り除いても良い。%LINEBREAK%<strong>Plated Hull:</strong> 君が防御する際、もし君がクリティカル・ダメージ状態でないなら、%CRIT%の結果を1つ%HIT%に変更する。"
+      text: "君がマニューバを完全に実行した後、もし敵宇宙船が%FRONTARC%内レンジ0-1かあるいは%BULLSEYEARC%にいるなら、君は%FORCE%を1つ消費してストレス・トークンを1つ取り除いても良い。"
     },
     "Sun Fac": {
-      text: "君が主武装による攻撃を実行する際、もし防御者がトラクター状態なら、攻撃ダイスを追加で1つ振る。%LINEBREAK%<strong>Pinpoint Tractor Array:</strong> 君は君の%SINGLETURRETARC%を%REARARC%に回転できない。君がマニューバを完全に実行した後、君はトラクター・トークンを1つ得て、%ROTATEARC%アクションを実行しても良い。"
+      text: "君が主武装による攻撃を実行する際、もし防御者がトラクター状態なら、攻撃ダイスを追加で1つ振る。"
     },
     "Stalgasin Hive Guard": {
-      text: "<strong>Pinpoint Tractor Array:</strong> 君は君の%SINGLETURRETARC%を%REARARC%に回転できない。君がマニューバを完全に実行した後、君はトラクター・トークンを1つ得て、%ROTATEARC%アクションを実行しても良い。"
+      text: ""
     },
     "Petranaki Arena Ace": {
-      text: "<strong>Pinpoint Tractor Array:</strong> 君は君の%SINGLETURRETARC%を%REARARC%に回転できない。君がマニューバを完全に実行した後、君はトラクター・トークンを1つ得て、%ROTATEARC%アクションを実行しても良い。"
+      text: ""
     },
     "Berwer Kret": {
-      text: "君が攻撃を実行しそれが命中した後、アクション・バーに%CALCULATE%を持ち、防御者へのロックを持つ各宇宙船は、赤の%CALCULATE%アクションを実行しても良い。%LINEBREAK%<strong>Pinpoint Tractor Array:</strong> 君は君の%SINGLETURRETARC%を%REARARC%に回転できない。君がマニューバを完全に実行した後、君はトラクター・トークンを1つ得て、%ROTATEARC%アクションを実行しても良い。"
+      text: "君が攻撃を実行しそれが命中した後、アクション・バーに%CALCULATE%を持ち、防御者へのロックを持つ各宇宙船は、赤の%CALCULATE%アクションを実行しても良い。"
     },
     "Chertek": {
-      text: "君が主武装による攻撃を実行する際、もし防御者がトラクター状態なら、君は攻撃ダイスを2つまで振り直しても良い。%LINEBREAK%<strong>Pinpoint Tractor Array:</strong> 君は君の%SINGLETURRETARC%を%REARARC%に回転できない。君がマニューバを完全に実行した後、君はトラクター・トークンを1つ得て、%ROTATEARC%アクションを実行しても良い。"
+      text: "君が主武装による攻撃を実行する際、もし防御者がトラクター状態なら、君は攻撃ダイスを2つまで振り直しても良い。"
     },
     "Gorgol": {
-      text: "システム・フェイズの間に、君は武装解除トークンを1つ得て、レンジ1-2の友軍宇宙船を1つ選んでも良い。もしそうするなら、それはトラクター・トークンを1つ得、その後それの表向きの宇宙船トレイトのダメージ・カードを1つ修理する。%LINEBREAK%<strong>Pinpoint Tractor Array:</strong> 君は君の%SINGLETURRETARC%を%REARARC%に回転できない。君がマニューバを完全に実行した後、君はトラクター・トークンを1つ得て、%ROTATEARC%アクションを実行しても良い。"
+      text: "システム・フェイズの間に、君は武装解除トークンを1つ得て、レンジ1-2の友軍宇宙船を1つ選んでも良い。もしそうするなら、それはトラクター・トークンを1つ得、その後それの表向きの宇宙船トレイトのダメージ・カードを1つ修理する。"
     },
     "Kazuda Xiono": {
-      text: "君が防御するか主武装による攻撃を実行する際、もし敵宇宙船のイニシアチブが君の持っているダメージ・カードの数よりも大きいなら、君はダイスを追加で1つ振っても良い。%LINEBREAK%<strong>Explosion with Wings:</strong> 君は裏向きのダメージ・カード1枚を受けている。君が%SLAM%アクションを実行した後、君は1枚ダメージ・カードをエクスポーズし、武装解除トークンを1つ取り除いても良い。"
+      text: "君が防御するか主武装による攻撃を実行する際、もし敵宇宙船のイニシアチブが君の持っているダメージ・カードの数よりも大きいなら、君はダイスを追加で1つ振っても良い。"
     },
     "Major Vonreg": {
-      text: "システム・フェイズの間、君は君の%BULLSEYEARC%内の敵宇宙船1つを選んでも良い。その宇宙船は君が選んだデプリートあるいはストレイン・トークン1つを得る。%LINEBREAK%<strong>Fine-Tuned Thrusters:</strong> 君がマニューバを完全に実行した後、君がデプリート状態でもストレイン状態でもなければ、%LOCK%あるいは%BARRELROLL%アクションを実行するためにデプリートあるいはストレイン・トークンを1つ得ても良い。"
+      text: "システム・フェイズの間、君は君の%BULLSEYEARC%内の敵宇宙船1つを選んでも良い。その宇宙船は君が選んだデプリートあるいはストレイン・トークン1つを得る。"
     },
     "First Order Provocateur": {
-      text: "<strong>Fine-Tuned Thrusters:</strong> 君がマニューバを完全に実行した後、君がデプリート状態でもストレイン状態でもなければ、%LOCK%あるいは%BARRELROLL%アクションを実行するためにデプリートあるいはストレイン・トークンを1つ得ても良い。"
+      text: ""
     },
     '"Ember"': {
-      text: "君が攻撃を実行する際、もし防御者のレンジ0-1に防御者の友軍であるダメージ状態の宇宙船がいるなら、その宇宙船はフォーカスあるいはカリキュレート・トークンを消費することができない。%LINEBREAK%<strong>Fine-Tuned Thrusters:</strong> 君がマニューバを完全に実行した後、君がデプリート状態でもストレイン状態でもなければ、%LOCK%あるいは%BARRELROLL%アクションを実行するためにデプリートあるいはストレイン・トークンを1つ得ても良い。"
+      text: "君が攻撃を実行する際、もし防御者のレンジ0-1に防御者の友軍であるダメージ状態の宇宙船がいるなら、その宇宙船はフォーカスあるいはカリキュレート・トークンを消費することができない。"
     },
     '"Holo"': {
-      text: "エンゲージメント・フェイズの開始時、君はレンジ0-2の他の友軍宇宙船1つに君のトークンのうち1つを転送しなければならない。%LINEBREAK%<strong>Fine-Tuned Thrusters:</strong> 君がマニューバを完全に実行した後、君がデプリート状態でもストレイン状態でもなければ、%LOCK%あるいは%BARRELROLL%アクションを実行するためにデプリートあるいはストレイン・トークンを1つ得ても良い。"
+      text: "エンゲージメント・フェイズの開始時、君はレンジ0-2の他の友軍宇宙船1つに君のトークンのうち1つを転送しなければならない。"
     },
     "Captain Phasma": {
-      text: "君が防御する際、結果の相殺ステップの後に、レンジ0-1の他の友軍宇宙船は%HIT%/%CRIT%ダメージを1つ受け、マッチする結果1つを<b>キャンセルしなければならない</b>。%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は%SINGLETURRETARC%インジケーターを%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "君が防御する際、結果の相殺ステップの後に、レンジ0-1の他の友軍宇宙船は%HIT%/%CRIT%ダメージを1つ受け、マッチする結果1つを<b>キャンセルしなければならない</b>。"
     },
     '"Rush"': {
-      text: "君がダメージ状態の際、君のイニシアチブを6として扱う。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "君がダメージ状態の際、君のイニシアチブを6として扱う。"
     },
     "Zizi Tlo": {
-      text: "君が防御するか攻撃を実行した後、君は%CHARGE%を1つ消費して、フォーカスあるいは回避トークンを得ても良い。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "君が防御するか攻撃を実行した後、君は%CHARGE%を1つ消費して、フォーカスあるいは回避トークンを得ても良い。"
     },
     "Ronith Blario": {
-      text: "君が防御するか攻撃を実行する際、もしその敵宇宙船が他の友軍宇宙船の%SINGLETURRETARC%にいるなら、君はその友軍宇宙船からフォーカス・トークンを消費し、君の%FOCUS%の結果のうち1つを%EVADE%あるいは%HIT%の結果に変更しても良い。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "君が防御するか攻撃を実行する際、もしその敵宇宙船が他の友軍宇宙船の%SINGLETURRETARC%にいるなら、君はその友軍宇宙船からフォーカス・トークンを消費し、君の%FOCUS%の結果のうち1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
     },
     "Gina Moonsong": {
       text: "エンゲージメント・フェイズの開始時、君は君のストレス・トークンのうち1つを、レンジ0-2の他の友軍宇宙船に<b>転送しなければならない</b>。"
@@ -15766,7 +15766,7 @@ exportObj.cardLoaders.日本語 = function() {
       text: "君がストレス・トークンを得た後、カリキュレート・トークンを1つ得る。"
     },
     "Alexsandr Kallus": {
-      text: "君が防御する際、もし攻撃者がいずれかの攻撃ダイスを修正したなら、君は防御ダイスを追加で1つ振っても良い。%LINEBREAK%<strong>Tail Gun:</strong> 君に宇宙船がドックされているなら、君は主武装の%REARARC%攻撃を、ドックされた宇宙船の主武装の%FRONTARC%攻撃値と同じ攻撃値で持つ。"
+      text: "君が防御する際、もし攻撃者がいずれかの攻撃ダイスを修正したなら、君は防御ダイスを追加で1つ振っても良い。"
     },
     "Leia Organa": {
       text: "友軍宇宙船が赤のマニューバを完全に実行した後、もしそれがレンジ0-3にいるなら、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船はフォーカス・トークンを1つ得るか、%FORCE%を1つ回復する。"
@@ -15778,82 +15778,82 @@ exportObj.cardLoaders.日本語 = function() {
       text: "君が攻撃を実行する際、結果の相殺ステップの後に、もし攻撃が命中したなら、%FORCE%を2つ消費して、%CRIT%の結果を1つ追加しても良い。"
     },
     '"Vagabond"': {
-      text: "君が君の<strong>Adaptive Ailerons</strong>を使った移動の後、もし君がストレス状態でなければ、君はデバイスを1つ投下しても良い。 %LINEBREAK%<strong>Adaptive Ailerons:</strong> 君が君のダイヤルを公開する前に、もし君がストレス状態でなければ、君はブースト<b>しなければならない</b>。"
+      text: "君が君の<strong>Adaptive Ailerons</strong>を使った移動の後、もし君がストレス状態でなければ、君はデバイスを1つ投下しても良い。 "
     },
     "Morna Kee": {
       text: "終了フェイズの間、君は%CHARGE%1つ消費して、君のリインフォース・トークンのうち1つを取り除く代わりにそれを裏返し別の全アークにしても良い。"
     },
     "Lieutenant LeHuse": {
-      text: "君が攻撃を実行する際、君は任意の数の君の結果をリロールするために、他の友軍宇宙船の防御者へのロックを消費しても良い。%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は%SINGLETURRETARC%インジケーターを%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "君が攻撃を実行する際、君は任意の数の君の結果をリロールするために、他の友軍宇宙船の防御者へのロックを消費しても良い。"
     },
     "Bossk (Z-95 Headhunter)": {
       display_name: "Bossk",
-      text: "君が主武装による攻撃を実行する際、結果の相殺ステップの後に、君は%CRIT%の結果を1つ消費して%HIT%の結果2つを追加しても良い。%LINEBREAK%<strong>Pursuit Craft:</strong> 君を配置した後、君は友軍の<strong>Hound’s Tooth</strong>がロックしていた宇宙船へのロックを得ても良い。"
+      text: "君が主武装による攻撃を実行する際、結果の相殺ステップの後に、君は%CRIT%の結果を1つ消費して%HIT%の結果2つを追加しても良い。"
     },
     "G4R-GOR V/M": {
-      text: "君が防御する際、レンジ0の他の各宇宙船は%CRIT%ダメージを1つ受ける。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君が防御する際、レンジ0の他の各宇宙船は%CRIT%ダメージを1つ受ける。"
     },
     "Nom Lumb": {
       text: "君が防御者になった後、もし攻撃者が君の%SINGLETURRETARC%内にいないなら、君は君の%SINGLETURRETARC%インジケーターをスタンダードアークに攻撃者が入るように<b>ローテートしなければならない</b>。"
     },
     "Jarek Yeager": {
-      text: "君の持っているストレス・トークンの数が2つ以下の際、もし君がダメージ状態なら、君はストレス状態でも赤の基本マニューバを実行することができる。もし君がクリティカル・ダメージ状態なら、君はストレス状態でも赤の上級マニューバを実行することができる。%LINEBREAK%<strong>Explosion with Wings:</strong> 君は裏向きのダメージ・カード1枚を受けている。君が%SLAM%アクションを実行した後、君は1枚ダメージ・カードをエクスポーズし、武装解除トークンを1つ取り除いても良い。"
+      text: "君の持っているストレス・トークンの数が2つ以下の際、もし君がダメージ状態なら、君はストレス状態でも赤の基本マニューバを実行することができる。もし君がクリティカル・ダメージ状態なら、君はストレス状態でも赤の上級マニューバを実行することができる。"
     },
     "R1-J5": {
-      text: "君がダメージ・カードを1枚エクスポーズする前に、君は代わりに裏向きのダメージ・カードを見て、1枚選びそのカードをエクスポーズしても良い。%LINEBREAK%<strong>Explosion with Wings:</strong> 君は裏向きのダメージ・カード1枚を受けている。君が%SLAM%アクションを実行した後、君は1枚ダメージ・カードをエクスポーズし、武装解除トークンを1つ取り除いても良い。"
+      text: "君がダメージ・カードを1枚エクスポーズする前に、君は代わりに裏向きのダメージ・カードを見て、1枚選びそのカードをエクスポーズしても良い。"
     },
     "Colossus Station Mechanic": {
-      text: "<strong>Explosion with Wings:</strong> 君は裏向きのダメージ・カード1枚を受けている。君が%SLAM%アクションを実行した後、君は1枚ダメージ・カードをエクスポーズし、武装解除トークンを1つ取り除いても良い。"
+      text: ""
     },
     "212th Battalion Pilot": {
-      text: "<strong>Fire Convergence:</strong> 友軍宇宙船が%SINGLETURRETARC%ではない攻撃を実行する際、もし防御者が君の%SINGLETURRETARC%内にいるなら、君は%CHARGE%を1つ消費しても良い。もしそうするなら、攻撃者は攻撃ダイスを2つまで振り直しても良い。"
+      text: ""
     },
     '"Hawk"': {
-      text: "終了フェイズの開始時、速度3-5のマニューバを公開したレンジ0-1の各友軍宇宙船は、ストレイン・トークンを1つ得て%BARRELROLL%あるいは%BOOST%アクションを実行しても良い。%LINEBREAK%<strong>Fire Convergence:</strong> 友軍宇宙船が%SINGLETURRETARC%ではない攻撃を実行する際、もし防御者が君の%SINGLETURRETARC%内にいるなら、君は%CHARGE%を1つ消費しても良い。もしそうするなら、攻撃者は攻撃ダイスを2つまで振り直しても良い。"
+      text: "終了フェイズの開始時、速度3-5のマニューバを公開したレンジ0-1の各友軍宇宙船は、ストレイン・トークンを1つ得て%BARRELROLL%あるいは%BOOST%アクションを実行しても良い。"
     },
     '"Hound"': {
-      text: "君の%SINGLETURRETARC%内にいる友軍の小型宇宙船がデプリートあるいはストレイン・トークンを得た後、もし君がそのタイプのトークンを持っていないなら、君はそのトークンを君自身に転送しても良い。%LINEBREAK%<strong>Fire Convergence:</strong> 友軍宇宙船が%SINGLETURRETARC%ではない攻撃を実行する際、もし防御者が君の%SINGLETURRETARC%内にいるなら、君は%CHARGE%を1つ消費しても良い。もしそうするなら、攻撃者は攻撃ダイスを2つまで振り直しても良い。"
+      text: "君の%SINGLETURRETARC%内にいる友軍の小型宇宙船がデプリートあるいはストレイン・トークンを得た後、もし君がそのタイプのトークンを持っていないなら、君はそのトークンを君自身に転送しても良い。"
     },
     '"Warthog"': {
-      text: "君かレンジ0-2の非制限宇宙船がエンゲージメント・フェイズの間に破壊された後、その宇宙船はそのフェイズの終了まで取り除かれない。%LINEBREAK%<strong>Fire Convergence:</strong> 友軍宇宙船が%SINGLETURRETARC%ではない攻撃を実行する際、もし防御者が君の%SINGLETURRETARC%内にいるなら、君は%CHARGE%を1つ消費しても良い。もしそうするなら、攻撃者は攻撃ダイスを2つまで振り直しても良い。"
+      text: "君かレンジ0-2の非制限宇宙船がエンゲージメント・フェイズの間に破壊された後、その宇宙船はそのフェイズの終了まで取り除かれない。"
     },
     "Baktoid Drone": {
-      text: "%LINEBREAK%<strong>Networked Aim:</strong> 君は攻撃ダイスを振り直すために君のロックを消費できない。君が攻撃を実行する際、君は防御者への友軍のロックの数だけ攻撃ダイスを振り直すことができる。"
+      text: ""
     },
     "Separatist Predator": {
-      text: "%LINEBREAK%<strong>Networked Aim:</strong> 君は攻撃ダイスを振り直すために君のロックを消費できない。君が攻撃を実行する際、君は防御者への友軍のロックの数だけ攻撃ダイスを振り直すことができる。"
+      text: ""
     },
     "DGS-286": {
-      text: "君がエンゲージする前に、君はレンジ0-1の他の友軍宇宙船1つを選んでも良い。その宇宙船は君にカリキュレート・トークン1つを転送する。%LINEBREAK%<strong>Networked Aim:</strong> 君は攻撃ダイスを振り直すために君のロックを消費できない。君が攻撃を実行する際、君は防御者への友軍のロックの数だけ攻撃ダイスを振り直すことができる。"
+      text: "君がエンゲージする前に、君はレンジ0-1の他の友軍宇宙船1つを選んでも良い。その宇宙船は君にカリキュレート・トークン1つを転送する。"
     },
     "DGS-047": {
-      text: "君が攻撃した後、もし防御者が君の%FRONTARC%内にいるなら、君はそれへのロックを得ても良い。その後、もし防御者が君の%BULLSEYEARC%にいるなら、それはストレイン・トークンを1つ得る。%LINEBREAK%<strong>Networked Aim:</strong> 君は攻撃ダイスを振り直すために君のロックを消費できない。君が攻撃を実行する際、君は防御者への友軍のロックの数だけ攻撃ダイスを振り直すことができる。"
+      text: "君が攻撃した後、もし防御者が君の%FRONTARC%内にいるなら、君はそれへのロックを得ても良い。その後、もし防御者が君の%BULLSEYEARC%にいるなら、それはストレイン・トークンを1つ得る。"
     },
     "Geonosian Prototype": {
-      text: "君が%MISSILE%あるいは%CANNON%による攻撃を実行する際、君は防御者からトラクター・トークンを1つ取り除き、攻撃ダイスを2つまで振り直しても良い。%LINEBREAK%<strong>Networked Aim:</strong> 君は攻撃ダイスを振り直すために君のロックを消費できない。君が攻撃を実行する際、君は防御者への友軍のロックの数だけ攻撃ダイスを振り直すことができる。"
+      text: "君が%MISSILE%あるいは%CANNON%による攻撃を実行する際、君は防御者からトラクター・トークンを1つ取り除き、攻撃ダイスを2つまで振り直しても良い。"
     },
     "Onderon Oppressor": {
-      text: "君がバレル・ロールあるいはサイドスリップした後、もし君がストレス状態なら、カリキュレート・トークンを1つ得る。%LINEBREAK%<strong>Networked Aim:</strong> 君は攻撃ダイスを振り直すために君のロックを消費できない。君が攻撃を実行する際、君は防御者への友軍のロックの数だけ攻撃ダイスを振り直すことができる。"
+      text: "君がバレル・ロールあるいはサイドスリップした後、もし君がストレス状態なら、カリキュレート・トークンを1つ得る。"
     },
     "Jedi General": {
-      text: "<strong>Intuitive Controls:</strong> システム・フェイズの間、君は紫%BARRELROLL%あるいは紫%BOOST%アクションを実行しても良い。"
+      text: ""
     },
     "Yoda": {
-      text: "レンジ0-3の他の友軍宇宙船が%FORCE%を1つ以上消費した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船は%FORCE%を1つ回復する。%LINEBREAK%<strong>Intuitive Controls:</strong> システム・フェイズの間、君は紫%BARRELROLL%あるいは紫%BOOST%アクションを実行しても良い。"
+      text: "レンジ0-3の他の友軍宇宙船が%FORCE%を1つ以上消費した後、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船は%FORCE%を1つ回復する。"
     },
     "Shaak Ti": {
-      text: "終了フェイズの開始時、君は好きな数の%FORCE%を消費し、同じ数のレンジ0-2の友軍宇宙船を選択しても良い。選んだ各宇宙船は終了フェイズの間にフォーカスあるいは回避トークンを1つ取り除かない。%LINEBREAK%<strong>Intuitive Controls:</strong> システム・フェイズの間、君は紫%BARRELROLL%あるいは紫%BOOST%アクションを実行しても良い。"
+      text: "終了フェイズの開始時、君は好きな数の%FORCE%を消費し、同じ数のレンジ0-2の友軍宇宙船を選択しても良い。選んだ各宇宙船は終了フェイズの間にフォーカスあるいは回避トークンを1つ取り除かない。"
     },
     "Aayla Secura": {
-      text: "君の%FRONTARC%内レンジ0-1の敵宇宙船が攻撃を実行する際、防御者は空白の結果1つを%FOCUS%の結果に変更しても良い。%LINEBREAK%<strong>Intuitive Controls:</strong> システム・フェイズの間、君は紫%BARRELROLL%あるいは紫%BOOST%アクションを実行しても良い。"
+      text: "君の%FRONTARC%内レンジ0-1の敵宇宙船が攻撃を実行する際、防御者は空白の結果1つを%FOCUS%の結果に変更しても良い。"
     },
     "Obi-Wan Kenobi (Eta-2)": {
       display_name: "Obi-Wan Kenobi",
-      text: "君かレンジ0-3の友軍の<b>Anakin Skywalker</b>宇宙船がマニューバを実行した後、もしその宇宙船のレンジ0-1の敵宇宙船が他の友軍宇宙船よりも多いとき、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船はフォーカス・トークンを1つ得る。%LINEBREAK%<strong>Intuitive Controls:</strong> システム・フェイズの間、君は紫%BARRELROLL%あるいは紫%BOOST%アクションを実行しても良い。"
+      text: "君かレンジ0-3の友軍の<b>Anakin Skywalker</b>宇宙船がマニューバを実行した後、もしその宇宙船のレンジ0-1の敵宇宙船が他の友軍宇宙船よりも多いとき、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船はフォーカス・トークンを1つ得る。"
     },
     "Anakin Skywalker (Eta-2)": {
       display_name: "Anakin Skywalker",
-      text: "君かレンジ0-3の友軍の<b>Obi-Wan Kenobi</b>宇宙船がマニューバを実行した後、もしその宇宙船のレンジ0-1の敵宇宙船が他の友軍宇宙船よりも多いとき、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船は君が選んだ赤のトークンを1つ取り除く。%LINEBREAK%<strong>Intuitive Controls:</strong> システム・フェイズの間、君は紫%BARRELROLL%あるいは紫%BOOST%アクションを実行しても良い。"
+      text: "君かレンジ0-3の友軍の<b>Obi-Wan Kenobi</b>宇宙船がマニューバを実行した後、もしその宇宙船のレンジ0-1の敵宇宙船が他の友軍宇宙船よりも多いとき、君は%FORCE%を1つ消費しても良い。もしそうするなら、その宇宙船は君が選んだ赤のトークンを1つ取り除く。"
     },
     "TransGalMeg Control Link": {
       text: "<strong>Hyperspace Docking Ring:</strong> Delta-7 Aethersprite, Eta-2 ActissあるいはNimbus-class V-wing1つを君にドックできる。%LINEBREAK%宇宙船が君にドックされている際、君はその宇宙船のイニシアチブを得て、その宇宙船のダイヤルがアサインされる。君がマニューバを実行する際、その速度を1に減らす。君が上級マニューバを実行する前に、代わりに白の停止マニューバ(%STOP%)を実行し、その後君は90度あるいは180度回転しても良い。%LINEBREAK%君に宇宙船がドックされていない間、君はマニューバダイヤルをアサインされず、アクティベートあるいはエンゲージもしない。"
@@ -15862,58 +15862,58 @@ exportObj.cardLoaders.日本語 = function() {
       text: "君が防御するか主武装による攻撃を実行する際、もし敵宇宙船の公開したマニューバよりも君の公開したマニューバの方が難易度が低いなら、君は敵宇宙船の%FOCUS%の結果1つを空白の結果に変更しても良い。"
     },
     "Separatist Interceptor": {
-      text: " %LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: " "
     },
     "Colicoid Interceptor": {
-      text: " %LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: " "
     },
     "Phlac-Arphocc Prototype": {
-      text: "システム・フェイズの間、君は君のある宇宙船へのロックを消費してその宇宙船のダイヤルを見ても良い。%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "システム・フェイズの間、君は君のある宇宙船へのロックを消費してその宇宙船のダイヤルを見ても良い。"
     },
     "Fearsome Predator": {
-      text: "<b>セットアップ:</b> 戦力の配置後、敵宇宙船1つに<b>Fearful Prey</b>を付ける。%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "<b>セットアップ:</b> 戦力の配置後、敵宇宙船1つに<b>Fearful Prey</b>を付ける。"
     },
     "DIS-347": {
-      text: "エンゲージメント・フェイズの開始時、君は友軍からのロックを持つレンジ1-3のオブジェクトへのロックを得ても良い。%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "エンゲージメント・フェイズの開始時、君は友軍からのロックを持つレンジ1-3のオブジェクトへのロックを得ても良い。"
     },
     "DIS-T81": {
-      text: "君が防御するか攻撃を実行する際、君は敵宇宙船のファイアリング・アーク内にいる友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。%LINEBREAK%<strong>Networked Calculations:</strong> 君が防御するか攻撃を実行する際、君はレンジ0-1の友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
+      text: "君が防御するか攻撃を実行する際、君は敵宇宙船のファイアリング・アーク内にいる友軍宇宙船のカリキュレート・トークンを1つ消費し、%FOCUS%の結果1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
     },
     "Lyttan Dree": {
-      text: "レンジ0-2の友軍宇宙船が攻撃を実行する際、もし君が防御者の%LEFTARC%あるいは%RIGHTARC%にいるなら、攻撃者は攻撃ダイスを1つ振り直しても良い。%LINEBREAK% <strong>Rotating Cannons:</strong> 君は%SINGLETURRETARC%インジケーターを君の%FRONTARC%あるいは%REARARC%にだけローテートできる。君は君の装備した%CANNON%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "レンジ0-2の友軍宇宙船が攻撃を実行する際、もし君が防御者の%LEFTARC%あるいは%RIGHTARC%にいるなら、攻撃者は攻撃ダイスを1つ振り直しても良い。"
     },
     '"Rampage"': {
-      text: "君が速度3-4のマニューバを実行した後、君は君の%SINGLETURRETARC%内レンジ0-1の宇宙船1つを選んでも良い。もしそうするなら、その宇宙船はストレイン・トークンを1つ得るか、もし君がダメージ状態なら2つ得る。%LINEBREAK% <strong>Rotating Cannons:</strong> 君は%SINGLETURRETARC%インジケーターを君の%FRONTARC%あるいは%REARARC%にだけローテートできる。君は君の装備した%CANNON%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "君が速度3-4のマニューバを実行した後、君は君の%SINGLETURRETARC%内レンジ0-1の宇宙船1つを選んでも良い。もしそうするなら、その宇宙船はストレイン・トークンを1つ得るか、もし君がダメージ状態なら2つ得る。"
     },
     "Onyx Squadron Sentry": {
-      text: "%LINEBREAK% <strong>Rotating Cannons:</strong> 君は%SINGLETURRETARC%インジケーターを君の%FRONTARC%あるいは%REARARC%にだけローテートできる。君は君の装備した%CANNON%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: ""
     },
     "Carida Academy Cadet": {
-      text: "%LINEBREAK% <strong>Rotating Cannons:</strong> 君は%SINGLETURRETARC%インジケーターを君の%FRONTARC%あるいは%REARARC%にだけローテートできる。君は君の装備した%CANNON%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: ""
     },
     "Poe Dameron (HoH)": {
-      text: "レンジ0-2の友軍宇宙船が自身のアクティベーションでアクションを実行した後、君は%CHARGE%を2つ消費しても良い。もしそうするなら、その宇宙船は白のアクションを、それを赤と扱って実行しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "レンジ0-2の友軍宇宙船が自身のアクティベーションでアクションを実行した後、君は%CHARGE%を2つ消費しても良い。もしそうするなら、その宇宙船は白のアクションを、それを赤と扱って実行しても良い。"
     },
     "Temmin Wexley (HoH)": {
-      text: "エンゲージメント・フェイズの開始時、レンジ0-3の各友軍T-70 X-wingは、装備した%CONFIGURATION%アップグレードを裏返すためにストレイン・トークンを1つ得ても良い。もしそうするなら、その宇宙船はカリキュレート・トークンを1つ得る。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "エンゲージメント・フェイズの開始時、レンジ0-3の各友軍T-70 X-wingは、装備した%CONFIGURATION%アップグレードを裏返すためにストレイン・トークンを1つ得ても良い。もしそうするなら、その宇宙船はカリキュレート・トークンを1つ得る。"
     },
     "C'ai Threnalli": {
-      text: "君がマニューバを完全に実行した後、もし君が友軍宇宙船を通過したなら、君は%EVADE%アクションを実行しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君がマニューバを完全に実行した後、もし君が友軍宇宙船を通過したなら、君は%EVADE%アクションを実行しても良い。"
     },
     "Nimi Chireen": {
-      text: "君が攻撃を実行する際、もし防御者のイニシアチブが君のイニシアチブよりも高いなら、君は空白の結果1つを%FOCUS%の結果に変更しても良い。%LINEBREAK%<strong>Weapon Hardpoint:</strong> 君は%CANNON%、%TORPEDO%あるいは%MISSILE%アップグレードを1つ装備できる。"
+      text: "君が攻撃を実行する際、もし防御者のイニシアチブが君のイニシアチブよりも高いなら、君は空白の結果1つを%FOCUS%の結果に変更しても良い。"
     },
     "Merl Cobben": {
-      text: "レンジ0-2の友軍宇宙船が主武装による攻撃を実行する際、もし君が防御者の%BULLSEYEARC%にいるなら、防御者は防御ダイスを1つ少なく振る。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船が主武装による攻撃を実行する際、もし君が防御者の%BULLSEYEARC%にいるなら、防御者は防御ダイスを1つ少なく振る。"
     },
     "Seftin Vanik": {
-      text: "君が%BOOST%アクションを実行した後、君はレンジ1の友軍宇宙船に回避トークンを転送しても良い。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "君が%BOOST%アクションを実行した後、君はレンジ1の友軍宇宙船に回避トークンを転送しても良い。"
     },
     "Suralinda Javos": {
-      text: "君がマニューバを部分的に実行した後、君はストレイン・トークンを1つ得て、90度あるいは180度回転しても良い。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "君がマニューバを部分的に実行した後、君はストレイン・トークンを1つ得て、90度あるいは180度回転しても良い。"
     },
     "Wrobie Tyce": {
-      text: "君が攻撃レンジ1で防御した後、もし攻撃者が自分のダイスを修正したなら、攻撃者はデプリート・トークンを1つ得る。%LINEBREAK%<strong>Refined Gyrostabilizers:</strong> 君は君の%SINGLETURRETARC%インジケーターを%FRONTARC%あるいは%REARARC%にのみ回転できる。君がアクションを実行した後、君は赤の%BOOST%あるいは赤の%ROTATEARC%アクションを実行しても良い。"
+      text: "君が攻撃レンジ1で防御した後、もし攻撃者が自分のダイスを修正したなら、攻撃者はデプリート・トークンを1つ得る。"
     },
     "Agent Terex": {
       text: "<b>セットアップ:</b> 戦力の配置後、君が装備した%ILLICIT%アップグレードを好きな数選び、それらをTIE/fo FighterあるいはTIE/sf Fighterに装備させる。各宇宙船はこの方法で1つの%ILLICIT%だけを割り当てられる。%LINEBREAK% <b>ゲームの終了時:</b> すべての%ILLICIT%アップグレードをもとの宇宙船に戻す。"
@@ -15927,23 +15927,23 @@ exportObj.cardLoaders.日本語 = function() {
       text: "君かレンジ0-2の友軍の小型宇宙船がダメージ状態の防御者に主武装による攻撃を実行する際、もし攻撃者が2つ以下の攻撃ダイスを振ったなら、それはストレイン・トークンを1つ得て攻撃ダイスを追加で1つ振る。"
     },
     "Loyalist Volunteer": {
-      text: "<strong>Twin Ion Engines:</strong> アップグレード・カードの\"TIE\"制約を無視する。"
+      text: ""
     },
     "Shadow Squadron Escort": {
-      text: "<strong>Twin Ion Engines:</strong> アップグレード・カードの\"TIE\"制約を無視する。"
+      text: ""
     },
     "Wilhuff Tarkin": {
-      text: "システム・フェイズの間、君はレンジ1-3の君がロックしたオブジェクトを1つ選んでも良い。レンジ1-3の他の友軍宇宙船はそのオブジェクトへのロックを得ても良い。%LINEBREAK%<strong>Twin Ion Engines:</strong> アップグレード・カードの\"TIE\"制約を無視する。"
+      text: "システム・フェイズの間、君はレンジ1-3の君がロックしたオブジェクトを1つ選んでも良い。レンジ1-3の他の友軍宇宙船はそのオブジェクトへのロックを得ても良い。"
     },
     '"Klick"': {
-      text: "君がロックしたレンジ1-3の宇宙船が防御あるいは攻撃を実行する際、君は%CHARGE%を1つ消費してレンジ・ボーナスが適用されるのを妨げても良い。%LINEBREAK%<strong>Twin Ion Engines:</strong> アップグレード・カードの\"TIE\"制約を無視する。"
+      text: "君がロックしたレンジ1-3の宇宙船が防御あるいは攻撃を実行する際、君は%CHARGE%を1つ消費してレンジ・ボーナスが適用されるのを妨げても良い。"
     },
     '"Contrail"': {
-      text: "君が防御するか攻撃を実行する際、もし君が公開したマニューバの方向が敵の公開したマニューバのものと同じなら、君は敵の%FOCUS%の結果のうち1つを空白の結果に変更しても良い。%LINEBREAK%<strong>Twin Ion Engines:</strong> アップグレード・カードの\"TIE\"制約を無視する。"
+      text: "君が防御するか攻撃を実行する際、もし君が公開したマニューバの方向が敵の公開したマニューバのものと同じなら、君は敵の%FOCUS%の結果のうち1つを空白の結果に変更しても良い。"
     },
     '"Odd Ball" (V-Wing)': {
       display_name: "“Odd Ball”",
-      text: "君が赤のマニューバを完全に実行するか赤のアクションを実行した後に、君の%BULLSEYEARC%内に敵宇宙船がいるなら、君はその宇宙船へのロックを得ても良い。%LINEBREAK%<strong>Twin Ion Engines:</strong> アップグレード・カードの\"TIE\"制約を無視する。"
+      text: "君が赤のマニューバを完全に実行するか赤のアクションを実行した後に、君の%BULLSEYEARC%内に敵宇宙船がいるなら、君はその宇宙船へのロックを得ても良い。"
     },
     "Boba Fett (Separatist)": {
       display_name: "Boba Fett",
@@ -15964,56 +15964,56 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Hera Syndulla (A-Wing)": {
       display_name: "Hera Syndulla",
-      text: "他のレンジ1-2の友軍宇宙船が防御するか攻撃を実行する際、ダイスの修正ステップの間、君は君のフォーカス・トークン、回避トークンあるいはロックのうち1つをその宇宙船に転送しても良い。%LINEBREAK%<strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "他のレンジ1-2の友軍宇宙船が防御するか攻撃を実行する際、ダイスの修正ステップの間、君は君のフォーカス・トークン、回避トークンあるいはロックのうち1つをその宇宙船に転送しても良い。"
     },
     "Wedge Antilles (A-Wing)": {
       display_name: "Wedge Antilles",
-      text: "君が主武装攻撃を実行する際、もし防御者が君の%FRONTARC%にいるなら、防御者は防御ダイスを1つ少なく振る。%LINEBREAK%<strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "君が主武装攻撃を実行する際、もし防御者が君の%FRONTARC%にいるなら、防御者は防御ダイスを1つ少なく振る。"
     },
     "Sabine Wren (A-Wing)": {
       display_name: "Sabine Wren",
-      text: "君が防御するか主武装攻撃を実行する際、もし攻撃レンジが1で君が敵宇宙船の%FRONTARC%内にいるなら、君は君の結果のうち1つを%EVADE%あるいは%HIT%の結果に変更しても良い。%LINEBREAK%<strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "君が防御するか主武装攻撃を実行する際、もし攻撃レンジが1で君が敵宇宙船の%FRONTARC%内にいるなら、君は君の結果のうち1つを%EVADE%あるいは%HIT%の結果に変更しても良い。"
     },
     "Derek Klivian": {
-      text: "君がロックを得るか消費した後、君は君自身から赤のトークンを1つ取り除いても良い。%LINEBREAK%<strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "君がロックを得るか消費した後、君は君自身から赤のトークンを1つ取り除いても良い。"
     },
     "Ahsoka Tano (A-Wing)": {
       display_name: "Ahsoka Tano",
-      text: "君がマニューバを完全に実行した後、君はレンジ1-2の友軍宇宙船を1つ選び%FORCE%を2つ消費しても良い。その宇宙船はたとえストレス状態でもアクションを1つ実行しても良い。%LINEBREAK%<strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "君がマニューバを完全に実行した後、君はレンジ1-2の友軍宇宙船を1つ選び%FORCE%を2つ消費しても良い。その宇宙船はたとえストレス状態でもアクションを1つ実行しても良い。"
     },
     "Shara Bey (A-Wing)": {
       display_name: "Shara Bey",
-      text: "君が防御するか主武装攻撃を実行する際、君は君が持っているその敵宇宙船のロックを消費し、%FOCUS%の結果を1つ君のダイスの結果に追加しても良い。 %LINEBREAK%<strong>Vectored Thrusters:</strong> 君がアクションを実行した後、君は赤の%BOOST%アクションを実行しても良い。"
+      text: "君が防御するか主武装攻撃を実行する際、君は君が持っているその敵宇宙船のロックを消費し、%FOCUS%の結果を1つ君のダイスの結果に追加しても良い。 "
     },
     "Darth Vader (TIE Defender)": {
       display_name: "Darth Vader",
-      text: "君は攻撃中を除いて%FORCE%を消費することができない。%LINEBREAK%君が攻撃を実行する際、君は%FORCE%を1つ消費し、空白の結果を命中に変更しても良い。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "君は攻撃中を除いて%FORCE%を消費することができない。%LINEBREAK%君が攻撃を実行する際、君は%FORCE%を1つ消費し、空白の結果を命中に変更しても良い。"
     },
     "Captain Dobbs": {
-      text: "レンジ0-1の他の宇宙船が防御する際、結果の相殺ステップの前に、もし君がその攻撃アーク内にいて、かつイオン状態でなければ、君はイオン・トークンを1つ得て、%HIT%の結果1つをキャンセルしても良い。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "レンジ0-1の他の宇宙船が防御する際、結果の相殺ステップの前に、もし君がその攻撃アーク内にいて、かつイオン状態でなければ、君はイオン・トークンを1つ得て、%HIT%の結果1つをキャンセルしても良い。"
     },
     "Vult Skerris": {
-      text: "<b>アクション:</b>ストレイン・トークンを1つ得て、%CHARGE%を1つ回復する。%LINEBREAK% 君がエンゲージする前に、君は%CHARGE%を1つ消費し、アクションを実行しても良い。%LINEBREAK%<strong>Full Throttle:</strong> 君が速度3-5のマニューバを完全に実行した後、君は%EVADE%アクションを実行しても良い。"
+      text: "<b>アクション:</b>ストレイン・トークンを1つ得て、%CHARGE%を1つ回復する。%LINEBREAK% 君がエンゲージする前に、君は%CHARGE%を1つ消費し、アクションを実行しても良い。"
     },
     "Vult Skerris (TIE Interceptor)": {
       display_name: "Vult Skerris",
-      text: "<b>アクション:</b>ストレイン・トークンを1つ得て、%CHARGE%を1つ回復する。%LINEBREAK% 君がエンゲージする前に、君は%CHARGE%を1つ消費し、アクションを実行しても良い。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "<b>アクション:</b>ストレイン・トークンを1つ得て、%CHARGE%を1つ回復する。%LINEBREAK% 君がエンゲージする前に、君は%CHARGE%を1つ消費し、アクションを実行しても良い。"
     },
     "Gideon Hask (TIE Interceptor)": {
       display_name: "Gideon Hask",
-      text: "君がダメージ状態の防御者に攻撃を実行する際、攻撃ダイスを追加で1つ振る。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "君がダメージ状態の防御者に攻撃を実行する際、攻撃ダイスを追加で1つ振る。"
     },
     "Commandant Goran": {
-      text: "エンゲージメント・フェイズの開始時、レンジ0-3の君よりもイニシアチブが低い友軍宇宙船を1つ選ぶ。選ばれた宇宙船は回避トークンを1つ得て、ストレスではない赤のトークン1つを取り除く。 %LINEBREAK% <strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "エンゲージメント・フェイズの開始時、レンジ0-3の君よりもイニシアチブが低い友軍宇宙船を1つ選ぶ。選ばれた宇宙船は回避トークンを1つ得て、ストレスではない赤のトークン1つを取り除く。 "
     },
     "Nash Windrider": {
-      text: "エンゲージメント・フェイズの間、レンジ0-3の友軍宇宙船が破壊された後、もしその宇宙船がこのフェイズ、エンゲージしなかったなら、君は%CHARGE%を1つ消費しても良い。もしそうするなら、その宇宙船は現在のイニシアチブでエンゲージする。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "エンゲージメント・フェイズの間、レンジ0-3の友軍宇宙船が破壊された後、もしその宇宙船がこのフェイズ、エンゲージしなかったなら、君は%CHARGE%を1つ消費しても良い。もしそうするなら、その宇宙船は現在のイニシアチブでエンゲージする。"
     },
     "Ciena Ree": {
-      text: "君が攻撃を実行した後、もしその防御者が破壊されたなら、ストレス・トークンを1つ得る。%LINEBREAK%レンジ0-3の友軍宇宙船が破壊された後、ストレス・トークンを1つ取り除く。%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "君が攻撃を実行した後、もしその防御者が破壊されたなら、ストレス・トークンを1つ得る。%LINEBREAK%レンジ0-3の友軍宇宙船が破壊された後、ストレス・トークンを1つ取り除く。"
     },
     "Lieutenant Lorrir": {
-      text: "君がバレル・ロールをする際、君は%STRAIGHT%テンプレートの代わりに、(%BANKLEFT%あるいは%BANKRIGHT%)テンプレートを<b>使用しなければならない。</b>%LINEBREAK%<strong>Autothrusters:</strong> 君がアクションを実行した後、君は赤の%BARRELROLL%あるいは赤の%BOOST%アクションを実行しても良い。"
+      text: "君がバレル・ロールをする際、君は%STRAIGHT%テンプレートの代わりに、(%BANKLEFT%あるいは%BANKRIGHT%)テンプレートを<b>使用しなければならない。</b>"
     },
     "Kanan Jarrus (HWK-290)": {
       display_name: "Kanan Jarrus",
@@ -16035,93 +16035,93 @@ exportObj.cardLoaders.日本語 = function() {
       text: "君がロックした友軍デバイスが爆発した後、そのデバイスのレンジ0-1の各敵宇宙船はストレイン・トークンを1つ得る。"
     },
     "New Republic Patrol": {
-      text: "%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: ""
     },
     "Kijimi Spice Runner": {
-      text: "%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: ""
     },
     "Corus Kapellim": {
-      text: "君がエンゲージする前に、君は君のファイアリング・アーク内レンジ0-1の宇宙船を1機選んでも良い。もしそうするなら、その宇宙船から君自身に緑のトークンを1つ転送する。%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: "君がエンゲージする前に、君は君のファイアリング・アーク内レンジ0-1の宇宙船を1機選んでも良い。もしそうするなら、その宇宙船から君自身に緑のトークンを1つ転送する。"
     },
     "C'ai Threnalli (Y-Wing)": {
       display_name: "C'ai Threnalli",
-      text: "君がマニューバを完全に実行した後、もし君が友軍宇宙船を通過したなら、君は%EVADE%アクションを実行しても良い。%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: "君がマニューバを完全に実行した後、もし君が友軍宇宙船を通過したなら、君は%EVADE%アクションを実行しても良い。"
     },
     "Lega Fossang": {
-      text: "君が主武装あるいは%TURRET%攻撃を行う際、君はその攻撃アーク内の友軍のデバイスあるいはカリキュレート状態の友軍宇宙船につき1つ、攻撃ダイスを振り直しても良い。%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: "君が主武装あるいは%TURRET%攻撃を行う際、君はその攻撃アーク内の友軍のデバイスあるいはカリキュレート状態の友軍宇宙船につき1つ、攻撃ダイスを振り直しても良い。"
     },
     "Shasa Zaro": {
-      text: "君が防御した後、君は君の%FULLREARARC%にいてレンジ0-2の友軍宇宙船と、君の緑のトークンのうち1つを選んでも良い。もしそうするなら、その宇宙船は一致するトークンを得る。%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: "君が防御した後、君は君の%FULLREARARC%にいてレンジ0-2の友軍宇宙船と、君の緑のトークンのうち1つを選んでも良い。もしそうするなら、その宇宙船は一致するトークンを得る。"
     },
     "Teza Nasz": {
-      text: "レンジ0-2の友軍宇宙船が攻撃を実行する際、もし防御者のそれぞれのサイドアーク(%LEFTARC%あるいは%RIGHTARC%)に、攻撃者の友軍である宇宙船がいるなら、攻撃者は攻撃ダイスを1つ振り直しても良い。%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍宇宙船が攻撃を実行する際、もし防御者のそれぞれのサイドアーク(%LEFTARC%あるいは%RIGHTARC%)に、攻撃者の友軍である宇宙船がいるなら、攻撃者は攻撃ダイスを1つ振り直しても良い。"
     },
     "Wilsa Teshlo": {
-      text: "君が攻撃を実行した後、もし防御者が表向きのダメージ・カードを受け取ったなら、防御者は、装備したアップグレードの1つから自動変化しない%CHARGE%を1つ選び、その%CHARGE%を失わない限り、ストレイン・トークンを1つ得る。%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: "君が攻撃を実行した後、もし防御者が表向きのダメージ・カードを受け取ったなら、防御者は、装備したアップグレードの1つから自動変化しない%CHARGE%を1つ選び、その%CHARGE%を失わない限り、ストレイン・トークンを1つ得る。"
     },
     "Aftab Ackbar": {
-      text: "君が赤の基本マニューバを実行するか赤のアクションを実行した後、もし君がストレス・トークンをちょうど1つ持っているなら、君はストレイン・トークンを1つ得てそのストレス・トークンを取り除いても良い。%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: "君が赤の基本マニューバを実行するか赤のアクションを実行した後、もし君がストレス・トークンをちょうど1つ持っているなら、君はストレイン・トークンを1つ得てそのストレス・トークンを取り除いても良い。"
     },
     "Zorii Bliss": {
-      text: "レンジ1の宇宙船が、それのアクションの実行ステップにアクションを実行した後、もしそのアクションが君のアクション・バーにあるなら、君は%CHARGE%を1つ消費し、そのアクションを赤と扱って実行しても良い。%LINEBREAK%<strong>Intuitive Interface:</strong> 君が%TALENT%、%ILLICIT%、あるいは%MODIFICATION%アップグレードによってアクション・バーに追加されたアクションを実行した後、君は%CALCULATE%アクションを実行しても良い。"
+      text: "レンジ1の宇宙船が、それのアクションの実行ステップにアクションを実行した後、もしそのアクションが君のアクション・バーにあるなら、君は%CHARGE%を1つ消費し、そのアクションを赤と扱って実行しても良い。"
     },
     "Kylo Ren (TIE Whisper)": {
       display_name: "Kylo Ren",
-      text: "君の%BULLSEYEARC%内の敵宇宙船が裏向きのダメージ・カードを受け取る前に、君は%FORCE%を1つ消費しても良い。もしそうするなら、それは代わりに表向きのダメージ・カードを受け取る。%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は君の%SINGLETURRETARC%インジケーターを、%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "君の%BULLSEYEARC%内の敵宇宙船が裏向きのダメージ・カードを受け取る前に、君は%FORCE%を1つ消費しても良い。もしそうするなら、それは代わりに表向きのダメージ・カードを受け取る。"
     },
     '"Wrath"': {
-      text: "君が%BULLSEYEARC%攻撃を実行した後、もし君が1つ以上のロック以外の赤かオレンジのトークンを持っているなら、君は違うターゲットに対してボーナス攻撃を行っても良い。%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は君の%SINGLETURRETARC%インジケーターを、%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "君が%BULLSEYEARC%攻撃を実行した後、もし君が1つ以上のロック以外の赤かオレンジのトークンを持っているなら、君は違うターゲットに対してボーナス攻撃を行っても良い。"
     },
     '"Nightfall"': {
-      text: "君がマニューバを完全に実行するか、%BOOST%アクションを実行した後、君が通過した各宇宙船はジャム・トークンを2つ得る。%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は君の%SINGLETURRETARC%インジケーターを、%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "君がマニューバを完全に実行するか、%BOOST%アクションを実行した後、君が通過した各宇宙船はジャム・トークンを2つ得る。"
     },
     '"Whirlwind"': {
-      text: "君がエンゲージする前に、君は好きな数のジャム・トークンを取り除いても良く、その後、君は君を%FRONTARC%内に持つ敵宇宙船につき1つのフォーカス・トークンを得ても良い。%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は君の%SINGLETURRETARC%インジケーターを、%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: "君がエンゲージする前に、君は好きな数のジャム・トークンを取り除いても良く、その後、君は君を%FRONTARC%内に持つ敵宇宙船につき1つのフォーカス・トークンを得ても良い。"
     },
     "709th Legion Ace": {
-      text: "%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は君の%SINGLETURRETARC%インジケーターを、%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: ""
     },
     "Red Fury Zealot": {
-      text: "%LINEBREAK%<strong>Heavy Weapon Turret:</strong> 君は君の%SINGLETURRETARC%インジケーターを、%FRONTARC%か%REARARC%にだけローテートすることができる。君は装備した%MISSILE%アップグレードの%FRONTARC%必要条件を%SINGLETURRETARC%として<b>扱わなければならない</b>。"
+      text: ""
     },
     "Sienar-Jaemus Test Pilot": {
-      text: "%LINEBREAK%<strong>Pursuit Thrusters:</strong> システム・フェイズの間、 君は%BOOST%アクションを実行しても良い。"
+      text: ""
     },
     "First Order Cadet": {
-      text: "%LINEBREAK%<strong>Pursuit Thrusters:</strong> システム・フェイズの間、 君は%BOOST%アクションを実行しても良い。"
+      text: ""
     },
     '"Grudge"': {
-      text: "レンジ0-2の友軍の爆弾あるいは機雷が爆発する際、それの効果の解決のために攻撃ダイスが振られるたびに、君はそれらのダイスのうち1つを振り直しても良い。%LINEBREAK%<strong>Pursuit Thrusters:</strong> システム・フェイズの間、 君は%BOOST%アクションを実行しても良い。"
+      text: "レンジ0-2の友軍の爆弾あるいは機雷が爆発する際、それの効果の解決のために攻撃ダイスが振られるたびに、君はそれらのダイスのうち1つを振り直しても良い。"
     },
     '"Dread"': {
-      text: "君がリロードした後、君の%BULLSEYEARC%内の各宇宙船はデプリート・トークンを1つ得る。%LINEBREAK%<strong>Pursuit Thrusters:</strong> システム・フェイズの間、 君は%BOOST%アクションを実行しても良い。"
+      text: "君がリロードした後、君の%BULLSEYEARC%内の各宇宙船はデプリート・トークンを1つ得る。"
     },
     '"Scorch" (TIE/Se Bomber)': {
       display_name: '"Scorch"',
-      text: "レンジ0-1の友軍宇宙船が主武装攻撃を行う際、それは%HIT%の結果を1つ消費しても良い。もしそうするなら、防御の後に、防御者はストレイン・トークンを1つ得る。%LINEBREAK%<strong>Pursuit Thrusters:</strong> システム・フェイズの間、 君は%BOOST%アクションを実行しても良い。"
+      text: "レンジ0-1の友軍宇宙船が主武装攻撃を行う際、それは%HIT%の結果を1つ消費しても良い。もしそうするなら、防御の後に、防御者はストレイン・トークンを1つ得る。"
     },
     '"Breach"': {
-      text: "君がマニューバを完全に実行するか、%BOOST%アクションを実行した後、もし君が敵宇宙船を通過したなら、君はその宇宙船へのロックを得ても良い。%LINEBREAK%<strong>Pursuit Thrusters:</strong> システム・フェイズの間、 君は%BOOST%アクションを実行しても良い。"
+      text: "君がマニューバを完全に実行するか、%BOOST%アクションを実行した後、もし君が敵宇宙船を通過したなら、君はその宇宙船へのロックを得ても良い。"
     },
     "Fenn Rau (Rebel Fang)": {
       display_name: "Fenn Rau",
-      text: "レンジ1-2の友軍宇宙船がエンゲージする前に、もしその宇宙船の%FRONTARC%レンジ1に敵宇宙船がいるなら、その友軍宇宙船はロックではない赤のトークンを1つ取り除いても良い。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "レンジ1-2の友軍宇宙船がエンゲージする前に、もしその宇宙船の%FRONTARC%レンジ1に敵宇宙船がいるなら、その友軍宇宙船はロックではない赤のトークンを1つ取り除いても良い。"
     },
     "Bodica Venj": {
       display_name: "Bodica Venj",
-      text: "他の友軍宇宙船が防御した後、もし君がデプリート状態でないなら、君は攻撃者に対してボーナスの主武装攻撃を実行しても良い。もし君がそうするなら、その攻撃の実行の後、デプリート・トークンを1つ得る。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "他の友軍宇宙船が防御した後、もし君がデプリート状態でないなら、君は攻撃者に対してボーナスの主武装攻撃を実行しても良い。もし君がそうするなら、その攻撃の実行の後、デプリート・トークンを1つ得る。"
     },
     "Dirk Ullodin": {
       display_name: "Dirk Ullodin",
-      text: "君が赤のマニューバを完全に実行するか、赤のアクションを実行した後、君は君の%FRONTARC%内レンジ1の敵宇宙船へのロックを得ても良い。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "君が赤のマニューバを完全に実行するか、赤のアクションを実行した後、君は君の%FRONTARC%内レンジ1の敵宇宙船へのロックを得ても良い。"
     },
     "Clan Wren Volunteer": {
       display_name: "Clan Wren Volunteer",
-      text: "君がレンジ1で攻撃を実行する際、もし君が公開したマニューバの速度が、レンジ1の友軍宇宙船のものと一致するなら、君は攻撃ダイスを1つ振り直しても良い。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "君がレンジ1で攻撃を実行する際、もし君が公開したマニューバの速度が、レンジ1の友軍宇宙船のものと一致するなら、君は攻撃ダイスを1つ振り直しても良い。"
     },
     "Mandalorian Royal Guard": {
       display_name: "Mandalorian Royal Guard",
-      text: "友軍の、小型ではない宇宙船が防御する際、もし君がその攻撃アーク内にいるなら、君はデプリート・トークン1つとストレイン・トークン1つを得ても良い。もし君がそうするなら、防御者は結果を1つ%EVADE%の結果に変更しても良い。%LINEBREAK%<strong>Concordia Faceoff:</strong> 君が防御する際、もし攻撃レンジが1であり、君が攻撃者の%FRONTARC%内にいるとき、結果の1つを%EVADE%に変更する。"
+      text: "友軍の、小型ではない宇宙船が防御する際、もし君がその攻撃アーク内にいるなら、君はデプリート・トークン1つとストレイン・トークン1つを得ても良い。もし君がそうするなら、防御者は結果を1つ%EVADE%の結果に変更しても良い。"
     },
     "ISB Jingoist": {
       display_name: "ISB Jingoist",
@@ -16181,79 +16181,79 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Cad Bane": {
       display_name: "Cad Bane",
-      text: "君が攻撃を実行し命中した後、君はロックではない赤のトークンあるいはオレンジのトークン1つを防御者に転送するために、 %CHARGE% を2つ消費しても良い。 %LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "君が攻撃を実行し命中した後、君はロックではない赤のトークンあるいはオレンジのトークン1つを防御者に転送するために、 %CHARGE% を2つ消費しても良い。"
     },
     "Cad Bane (Separatist)": {
       display_name: "Cad Bane",
-      text: "エンゲージメント・フェイズの間、レンジ0-3の他の宇宙船が破壊された後、君は %CHARGE% を1つ消費し、たとえストレス状態でも、アクションを1つ実行しても良い。 %LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "エンゲージメント・フェイズの間、レンジ0-3の他の宇宙船が破壊された後、君は %CHARGE% を1つ消費し、たとえストレス状態でも、アクションを1つ実行しても良い。"
     },
     "Viktor Hel (Rogue)": {
       display_name: "Viktor Hel",
-      text: "君が防御した後、君が振った防御ダイスがちょうど2個ではないなら、攻撃者はストレス・トークンを1つ得る。 %LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "君が防御した後、君が振った防御ダイスがちょうど2個ではないなら、攻撃者はストレス・トークンを1つ得る。"
     },
     "Nom Lumb (Rogue)": {
       display_name: "Nom Lumb",
-      text: "エンゲージメント・フェイズの開始時、君は君の %FRONTARC% 内の敵宇宙船を1つ選んでも良い。もし君がそうするなら、ラウンドの終了まで、君のイニシアチブをその宇宙船のイニシアチブと同じとして扱う。 %LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "エンゲージメント・フェイズの開始時、君は君の %FRONTARC% 内の敵宇宙船を1つ選んでも良い。もし君がそうするなら、ラウンドの終了まで、君のイニシアチブをその宇宙船のイニシアチブと同じとして扱う。"
     },
     "Outer Rim Hunter": {
       display_name: "Outer Rim Hunter",
-      text: "%LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: ""
     },
     "IG-101": {
       display_name: "IG-101",
-      text: "システム・フェイズの間、君は表向きのダメージ・カードを1枚修理しても良い。%LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "システム・フェイズの間、君は表向きのダメージ・カードを1枚修理しても良い。"
     },
     "IG-102": {
       display_name: "IG-102",
-      text: "君が防御する際、もし攻撃者のイニシアチブが君のイニシアチブ以上なら、君は空白の結果1つを %FOCUS% の結果に変更しても良い。%LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "君が防御する際、もし攻撃者のイニシアチブが君のイニシアチブ以上なら、君は空白の結果1つを %FOCUS% の結果に変更しても良い。"
     },
     "IG-111": {
       display_name: "IG-111",
-      text: "君が攻撃を実行しそれがミスした後、 %BULLSEYEARC% 内の敵宇宙船1つ選び、デプリート・トークンを得ても良い。もし君がそうするなら、その宇宙船は %HIT% ダメージを1つ受ける。%LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "君が攻撃を実行しそれがミスした後、 %BULLSEYEARC% 内の敵宇宙船1つ選び、デプリート・トークンを得ても良い。もし君がそうするなら、その宇宙船は %HIT% ダメージを1つ受ける。"
     },
     "MagnaGuard Executioner": {
       display_name: "MagnaGuard Executioner",
-      text: "%LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: ""
     },
     "MagnaGuard Protector": {
       display_name: "MagnaGuard Protector",
-      text: "<b>セットアップ</b>: 戦力の配置後、<b>MagnaGuard Protector</b>以外の友軍宇宙船1つに<b>Guarded</b>コンディションをつける。%LINEBREAK% <strong>Dead to Rights:</strong> 君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使って修正できない。"
+      text: "<b>セットアップ</b>: 戦力の配置後、<b>MagnaGuard Protector</b>以外の友軍宇宙船1つに<b>Guarded</b>コンディションをつける。"
     },
     '"Killer"': {
       display_name: "“Killer”",
-      text: "君が攻撃を実行する際、もし防御者の残り装甲値が2以下なら、君は攻撃ダイスを追加で1つ振っても良い。もし君がそうするなら、攻撃ダイスを振った後に、デプリート・トークンを1つ得る。%LINEBREAK%<strong>Versatile Frame:</strong> 君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開している際、君のアクション・バーに白の %BOOST% を追加する。"
+      text: "君が攻撃を実行する際、もし防御者の残り装甲値が2以下なら、君は攻撃ダイスを追加で1つ振っても良い。もし君がそうするなら、攻撃ダイスを振った後に、デプリート・トークンを1つ得る。"
     },
     '"Drift"': {
       display_name: "“Drift”",
-      text: "レンジ0-1の友軍宇宙船が攻撃を実行する際、もし君がちょうど1つのロックではない赤のトークンを持っているか、ちょうど1つのオレンジのトークンを持っているなら、その宇宙船は攻撃ダイスを1つ振り直しても良い。%LINEBREAK%<strong>Versatile Frame:</strong> 君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開している際、君のアクション・バーに白の %BOOST% を追加する。"
+      text: "レンジ0-1の友軍宇宙船が攻撃を実行する際、もし君がちょうど1つのロックではない赤のトークンを持っているか、ちょうど1つのオレンジのトークンを持っているなら、その宇宙船は攻撃ダイスを1つ振り直しても良い。"
     },
     '"Boost"': {
       display_name: "“Boost”",
-      text: "エンゲージメント・フェイズの開始時、もしレンジ0-1に青のマニューバを公開した友軍宇宙船がいるなら、君は %BOOST% アクションを実行しても良い。%LINEBREAK%<strong>Versatile Frame:</strong> 君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開している際、君のアクション・バーに白の %BOOST% を追加する。"
+      text: "エンゲージメント・フェイズの開始時、もしレンジ0-1に青のマニューバを公開した友軍宇宙船がいるなら、君は %BOOST% アクションを実行しても良い。"
     },
     '"Stub"': {
       display_name: "“Stub”",
-      text: "君が防御する際、もし君が公開したマニューバの速度が偶数なら、防御ダイスを1つ追加で振る。君が主武装攻撃を実行する際、もし君が公開したマニューバの速度が奇数なら、攻撃ダイスを1つ追加で振る。%LINEBREAK%<strong>Versatile Frame:</strong> 君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開している際、君のアクション・バーに白の %BOOST% を追加する。"
+      text: "君が防御する際、もし君が公開したマニューバの速度が偶数なら、防御ダイスを1つ追加で振る。君が主武装攻撃を実行する際、もし君が公開したマニューバの速度が奇数なら、攻撃ダイスを1つ追加で振る。"
     },
-    '"Hawk (Z-95)"': {
+    '"Hawk" (Z-95)': {
       display_name: "“Hawk”",
-      text: "終了フェイズの開始時、速度3-5のマニューバを公開したレンジ0-1の各宇宙船は、ストレイン・トークンを1つ得て、 %BARRELROLL% あるいは %BOOST% アクションを実行しても良い。%LINEBREAK%<strong>Versatile Frame:</strong> 君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開している際、君のアクション・バーに白の %BOOST% を追加する。"
+      text: "終了フェイズの開始時、速度3-5のマニューバを公開したレンジ0-1の各宇宙船は、ストレイン・トークンを1つ得て、 %BARRELROLL% あるいは %BOOST% アクションを実行しても良い。"
     },
     '"Slider"': {
       display_name: "“Slider”",
-      text: "君が [2 %BANKLEFT%] あるいは [2 %BANKRIGHT%] を公開する時、君は %CHARGE% を2つを消費してそれをサイドスリップとして実行しても良い。%LINEBREAK%<strong>Versatile Frame:</strong> 君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開している際、君のアクション・バーに白の %BOOST% を追加する。"
+      text: "君が [2 %BANKLEFT%] あるいは [2 %BANKRIGHT%] を公開する時、君は %CHARGE% を2つを消費してそれをサイドスリップとして実行しても良い。"
     },
-    '"Warthog (Z-95)"': {
+    '"Warthog" (Z-95)': {
       display_name: "“Warthog”",
-      text: "エンゲージメント・フェイズの間、君かレンジ0-2の非制限の宇宙船が破壊された後、その宇宙船はそのフェイズの終了まで取り除かれない。%LINEBREAK%<strong>Versatile Frame:</strong> 君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開している際、君のアクション・バーに白の %BOOST% を追加する。"
+      text: "エンゲージメント・フェイズの間、君かレンジ0-2の非制限の宇宙船が破壊された後、その宇宙船はそのフェイズの終了まで取り除かれない。"
     },
     '"Knack"': {
       display_name: "“Knack”",
-      text: "君が破壊された後、君はレンジ0-2の友軍の非制限宇宙船を1つ選び、それに君が装備した %TALENT% アップグレードのうち1つをつけても良い。%LINEBREAK% <b>ゲーム終了時</b>: 全ての %TALENT% アップグレードを元の宇宙船に戻す。%LINEBREAK%<strong>Versatile Frame:</strong> 君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開している際、君のアクション・バーに白の %BOOST% を追加する。"
+      text: "君が破壊された後、君はレンジ0-2の友軍の非制限宇宙船を1つ選び、それに君が装備した %TALENT% アップグレードのうち1つをつけても良い。%LINEBREAK% <b>ゲーム終了時</b>: 全ての %TALENT% アップグレードを元の宇宙船に戻す。"
     },
     "Reaper Squadron Scout": {
       display_name: "Reaper Squadron Scout",
-      text: "%LINEBREAK%<strong>Versatile Frame:</strong> 君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開している際、君のアクション・バーに白の %BOOST% を追加する。"
+      text: ""
     },
     "Republic Judiciary": {
       display_name: "Republic Judiciary",
@@ -17582,7 +17582,7 @@ exportObj.cardLoaders.日本語 = function() {
       text: "君がジャムする際、君は君自身あるいは君以外の友軍宇宙船をジャムできる。%LINEBREAK%君が防御する際、もし攻撃者が緑のトークンを持っていないかあるいはその攻撃アーク内にジャム状態の宇宙船がいるなら、君は防御ダイスを1つ多く振っても良い。"
     },
     "Compassion": {
-      text: "レンジ0-2の他に友軍宇宙船が表向きの<b>パイロット</b>あるいは<b>クルー</b>のダメージ・カードを受け取ろうとする時、君は%FORCE%を1つ消費しても良い。もしそうするなら、そのダメージ・カードは代わりに捨て札にされ、そして君は裏向きのダメージ・カードを1枚受け取る。その後、もし君がダメージ・カードを2枚以上持っているなら、%CHARGE%を2つ回復する。"
+      text: "レンジ0-2の他に友軍宇宙船が表向きの<b>パイロット</b>あるいは<b>クルー</b>のダメージ・カードを受け取ろうとする時、君は %FORCE% を1つ消費しても良い。もしそうするなら、そのダメージ・カードは代わりに捨て札にされ、そして君は裏向きのダメージ・カードを1枚受け取る。その後、もし君がダメージ・カードを2枚以上持っているなら、 %FORCE% を2つ回復する。"
     },
     "Malice": {
       text: "君が攻撃を実行する際、君は%FORCE%を1つ消費し、%FOCUS%あるいは%HIT%の結果1つを%CRIT%に変更しても良い。もしそうするなら、君がその攻撃を実行した後、もし防御者が1枚以上の<b>パイロット</b>あるいは<b>クルー</b>ダメージ・カードを受け取ったなら、%FORCE%を2つ回復する。"
@@ -17771,6 +17771,14 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Xanadu Blood": {
       text: "%CREW% および %DEVICE% スロットを追加する。"
+    },
+    "Fanatic": {
+      display_name: "Fanatic",
+      text: "While you perform a primary attack, if you are damaged, you may change 1 %FOCUS% result to a %HIT% result."
+    },
+    "Chewbacca (BoY)": {
+      display_name: "Chewbacca",
+      text: "After you perform an %EVADE% action, you may gain 1 focus token."
     },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
@@ -18176,8 +18184,143 @@ exportObj.cardLoaders.日本語 = function() {
     }
   };
   chassis_translations = {
+    "Vectored Thrusters": {
+      text: "君がアクションを実行した後、君は %BOOST% アクションを実行しても良い。"
+    },
+    "Advanced Targeting Computer": {
+      text: "君がロックしている防御者に対し、君が攻撃を実行する際、攻撃ダイスを1つ追加で振り、 %HIT% の結果1つを %CRIT% の結果に変更する。"
+    },
+    "Autothrusters": {
+      text: "君がアクションを実行した後、君は赤の %BARRELROLL% あるいは赤の %BOOST% アクションを実行しても良い。"
+    },
+    "Nimble Bomber": {
+      text: "君が %STRAIGHT% テンプレートを使ってデバイスを投下しようとする時、君は代わりに同じ速度の %BANKLEFT% あるいは %BANKRIGHT% テンプレートを使っても良い。"
+    },
+    "Full Throttle": {
+      text: "君が速度 3-5 のマニューバを完全に実行した後、君は %EVADE% アクションを実行しても良い。"
+    },
+    "Experimental Scanners": {
+      text: "君はレンジ3を超えてロックを得ることができる。君はレンジ1でロックを得ることができない。"
+    },
+    "Stygium Array": {
+      text: "君がデクロークした後、君は %EVADE% アクションを実行しても良い。終了フェイズの開始時、君は回避トークンを1つ消費し、クローク・トークンを1つ得ても良い。"
+    },
+    "Sensor Blindspot": {
+      text: "君が攻撃レンジ 0-1 主武装攻撃を実行する際、レンジ 0-1 ボーナスを適用せず、攻撃ダイスを1つ少なく振る。"
+    },
+    "Microthrusters": {
+      text: "君がバレル・ロールを実行する際、君は %STRAIGHT% テンプレートの代わりに %BANKLEFT% あるいは %BANKRIGHT% テンプレートを<b>使用しなければならない。</b>"
+    },
+    "Weapon Hardpoint": {
+      text: "君は %CANNON%, %TORPEDO%, あるいは %MISSILE% アップグレードを1つ装備できる。"
+    },
+    "Advanced Droid Brain": {
+      text: "君が %CALCULATE% アクションを実行した後、カリキュレート・トークンを1つ得る。"
+    },
+    "Tail Gun": {
+      text: "君が宇宙船をドックしている際、 君は君がドックした宇宙船の主武装 %FRONTARC% 攻撃値と同じ攻撃値の主武装 %REARARC% 武器を持つ。"
+    },
+    "Locked and Loaded": {
+      text: "君がドック状態の際、君のキャリア宇宙船が主武装 %FRONTARC% あるいは %TURRET% 攻撃を実行した後、それはボーナスの主武装 %REARARC% 攻撃を実行しても良い。"
+    },
+    "Concordia Faceoff": {
+      text: "君が防御する際、もしその攻撃レンジが 1 で君が攻撃者の %FRONTARC% 内にいるなら、結果を1つ %EVADE% の結果に変更する。"
+    },
+    "Spacetug Tractor Array": {
+      text: " <b>アクション:</b> 君の %FRONTARC% 内レンジ 1 の宇宙船を選ぶ。その宇宙船はトラクター・トークンを1つ得るか、あるいはもしそれが君の %BULLSEYEARC% 内レンジ 1 にいるならトラクター・トークンを2つ得る。"
+    },
+    "Hope": {
+      text: "レンジ 0-3 の他の友軍宇宙船が破壊された後、君は %FOCUS% あるいは %BOOST% アクションを実行しても良い。"
+    },
+    "Sensitive Controls": {
+      text: "システム・フェイズの間、君は赤の %BARRELROLL% あるいは赤の %BOOST% アクションを実行しても良い。"
+    },
+    "Vectored Cannons": {
+      text: "システム・フェイズの間、君は赤の %BOOST% あるいは赤の %ROTATEARC% アクションを実行しても良い。君は君の %SINGLETURRETARC% インジケーターを君の %FRONTARC% あるいは %REARARC% にだけローテートできる。"
+    },
+    "Advanced Fire Control": {
+      text: "君が %CANNON% あるいは %MISSILE% 攻撃を実行した後、もし君が防御者へのロックを持っているなら、君はその防御者に対しボーナスの主武装攻撃を実行しても良い。"
+    },
+    "Networked Calculations": {
+      text: "君が防御あるいは攻撃を実行する際、君はレンジ 0-1 の友軍宇宙船からカリキュレート・トークンを1つ消費し、 %FOCUS% の結果1つを %EVADE% あるいは %HIT% の結果に変更しても良い。"
+    },
+    "Independent Calculations": {
+      text: "君が白の %CALCULATE% アクションを実行する際、君はそれを赤と扱い、追加でカリキュレート・トークンを1つ得ても良い。他の宇宙船は君のカリキュレート・トークンを <strong>Networked Calculations</strong> 宇宙船能力を使用して消費することができない。"
+    },
+    "Adaptive Ailerons": {
+      text: "君が君のダイヤルを公開する前に、もし君がストレス状態でないなら、君はブーストを <b>しなければならない。</b>"
+    },
+    "Pursuit Craft": {
+      text: "君がデプロイした後、君は友軍の <strong>Hound's Tooth</strong> がロックした宇宙船へのロックを得ても良い。"
+    },
+    "Dead to Rights": {
+      text: "君が攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、防御ダイスは緑のトークンを使用して修正されることができない。"
+    },
+    "Comms Shuttle": {
+      text: "君がドック状態の際、君のキャリア宇宙船は %COORDINATE% を得る。君のキャリア宇宙船がアクティベートする前に、それは %COORDINATE% アクションを実行しても良い。"
+    },
+    "Controlled Ailerons": {
+      text: "君が君のダイヤルを公開する前に、もし君がストレス状態でないなら、君はブーストをしても良い。</i>"
+    },
+    "Co-Pilot": {
+      text: "君がドック状態の際、君のキャリア宇宙船はそれ自身のものに加え、君のパイロット能力を得る。"
+    },
+    "Rigged Energy Cells": {
+      text: "システム・フェイズの間、もし君がドック状態でないなら、 %CHARGE% を1つ失う。アクティベーション・フェイズの終了時、もし君の %CHARGE% が0なら、君は破壊される。 君が取り除かれる前に、レンジ 0-1 の各宇宙船は %CRIT% ダメージを1つ受ける。"
+    },
+    "Refined Gyrostabilizers": {
+      text: "君は君の %SINGLETURRETARC% インジケーターを君の %FRONTARC% あるいは %REARARC% にだけローテートできる。君がアクションを実行した後、君が赤の %BOOST% あるいは 赤の %ROTATEARC% アクションを実行しても良い。"
+    },
+    "Heavy Weapon Turret": {
+      text: "君は君の %SINGLETURRETARC% インジケーターを君の %FRONTARC% あるいは %REARARC% にだけローテートできる。君は君の装備した %MISSILE% アップグレードの %FRONTARC% 必要条件を %SINGLETURRETARC% として<b>扱わなければならない。</b>"
+    },
+    "Linked Battery": {
+      text: "君が %CANNON% 攻撃を実行する際、追加で攻撃ダイスを1つ振る。"
+    },
+    "Notched Stabilizers": {
+      text: "君が移動する際、君はアステロイドを無視する。"
+    },
+    "Fine-Tuned Controls": {
+      text: "君が完全にマニューバを実行した後、君は %FORCE% を1つ消費し、 %BOOST% あるいは %BARRELROLL% アクションを実行しても良い。"
+    },
+    "Pinpoint Tractor Array": {
+      text: "君は君の %SINGLETURRETARC% インジケーターを君の %REARARC% にローテートできない。君が完全にマニューバを実行した後、君はトラクター・トークンを1つ得て、 %ROTATEARC% アクションを実行しても良い。"
+    },
+    "Plated Hull": {
+      text: "君が防御する際、もし君がクリティカル・ダメージ状態でないなら、 %CRIT% の結果を1つ %HIT% の結果に変更する。"
+    },
+    "Explosion with Wings": {
+      text: "君は裏向きのダメージ・カードを1枚得る。君が %SLAM% アクションを実行した後、君はダメージ・カードを1枚エクスポーズし、武装解除トークンを1つ取り除く。"
+    },
+    "Fine-Tuned Thrusters": {
+      text: "君がマニューバを完全に実行した後、もし君がデプリート状態でもストレイン状態でもないなら、君はデプリートあるいはストレイン・トークンを1つ得て、 %LOCK% あるいは %BARRELROLL% アクションを実行しても良い。"
+    },
+    "Networked Aim": {
+      text: "君は攻撃ダイスを振り直すために君のロックを消費できない。君が攻撃を実行する際、君は友軍の、防御者へのロックの数まで攻撃ダイスを振り直しても良い。"
+    },
+    "Fire Convergence": {
+      text: "友軍宇宙船が %SINGLETURRETARC% ではない攻撃を実行する際、もし防御者が君の %SINGLETURRETARC% 内にいるなら、君は %CHARGE% を1つ消費しても良い。もし君がそうするなら、攻撃者は結果を2つまで振り直しても良い。"
+    },
+    "Rotating Cannons": {
+      text: "君は君の %SINGLETURRETARC% インジケーターを君の %FRONTARC% あるいは %REARARC% にだけローテートできる。君は君の装備した %CANNON% アップグレードの %FRONTARC% 必要条件を %SINGLETURRETARC% として<b>扱わなければならない。</b>"
+    },
+    "Twin Ion Engines": {
+      text: "アップグレード・カードの \"TIE\" 宇宙船制約を無視する。"
+    },
+    "Intuitive Controls": {
+      text: "システム・フェイズの間、君は紫の %BARRELROLL% あるいは紫の %BOOST% アクションを実行しても良い。"
+    },
+    "Intuitive Interface": {
+      text: "君が %TALENT%, %ILLICIT%, あるいは %MODIFICATION% アップグレードによって君のアクション・バーに追加されたアクションを実行した後、君は %CALCULATE% アクションを実行しても良い。"
+    },
+    "Devastating Barrage": {
+      text: "君が %TORPEDO% あるいは %MISSILE% 攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、君の %CRIT% の結果は %EVADE% の結果でキャンセルできない。"
+    },
+    "Pursuit Thrusters": {
+      text: "システム・フェイズの間、君は %BOOST% アクションを実行しても良い。"
+    },
     "Versatile Frame": {
-      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+      text: "君は %TORPEDO% あるいは %MISSILE% を1つ装備できる。君が青のマニューバを公開した際、君のアクション・バーに白の %BOOST% を追加する。"
     }
   };
   return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
