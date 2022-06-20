@@ -568,7 +568,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "AP-5": {
       display_name: "AP-5",
-      text: "Solange du koordinierst, falls du ein Schiff mit genau 1 Stressmarker wählst, kann es Aktionen durchführen.%LINEBREAK%<strong>Kommunikationsantennen:</strong> Solange du angedockt bist, erhält dein Trägerschiff %COORDINATE%. Bevor dein Trägerschiff aktiviert wird, darf es eine %COORDINATE%-Aktion durchführen."
+      text: "Solange du koordinierst, falls du ein Schiff mit genau 1 Stressmarker wählst, kann es Aktionen durchführen."
     },
     "Academy Pilot": {
       display_name: "Pilot der Akademie",
@@ -576,11 +576,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Ahhav": {
       display_name: "Ahhav",
-      text: "Solange du verteidigst oder einen Angriff durchführst, falls das feindliche Schiff eine größere Größenkategorie hat als du, wirf 1 zusätzlichen Würfel.%LINEBREAK%<strong>Stabilisatorkerbe:</strong> Solange du dich bewegst, ignorierst du Asteroiden."
+      text: "Solange du verteidigst oder einen Angriff durchführst, falls das feindliche Schiff eine größere Größenkategorie hat als du, wirf 1 zusätzlichen Würfel."
     },
     "Ahsoka Tano": {
       display_name: "Ahsoka Tano",
-      text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du ein befreundetes Schiff in Reichweite 0-1 wählen und 1 %FORCE% ausgeben. Jenes Schiff darf eine Aktion durchführen, auch falls es gestresst ist. %LINEBREAK%<strong>Präzisionssteuerung:</strong> Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%Aktion durchzuführen."
+      text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du ein befreundetes Schiff in Reichweite 0-1 wählen und 1 %FORCE% ausgeben. Jenes Schiff darf eine Aktion durchführen, auch falls es gestresst ist. "
     },
     "Airen Cracken": {
       display_name: "Airen Cracken",
@@ -588,23 +588,23 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Alpha Squadron Pilot": {
       display_name: "Pilot der Alpha-Staffel",
-      text: "<i class = flavor_text>Sienar Flottensysteme konzipierte den TIE-Abfangjäger mit vier Laserkanonen an den Tragflächenspitzen. Dadurch ist er seinen Vorgängermodellen waffentechnisch weit überlegen.</i>%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "<i class = flavor_text>Sienar Flottensysteme konzipierte den TIE-Abfangjäger mit vier Laserkanonen an den Tragflächenspitzen. Dadurch ist er seinen Vorgängermodellen waffentechnisch weit überlegen.</i>"
     },
     "Anakin Skywalker": {
       display_name: "Anakin Skywalker",
-      text: "Nachdem du ein Manöver vollständig ausgeführt hast, falls ein feindliches Schiff in deinem %FRONTARC% in Reichweite 0-1 oder in deinem %BULLSEYEARC% ist, darfst du 1 %FORCE% ausgeben, um 1 Stressmarker zu entfernen.%LINEBREAK%<strong>Präzisionssteuerung:</strong> Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."
+      text: "Nachdem du ein Manöver vollständig ausgeführt hast, falls ein feindliches Schiff in deinem %FRONTARC% in Reichweite 0-1 oder in deinem %BULLSEYEARC% ist, darfst du 1 %FORCE% ausgeben, um 1 Stressmarker zu entfernen."
     },
     "Anakin Skywalker (N-1 Starfighter)": {
       display_name: "Anakin Skywalker",
-      text: "Bevor du dein Manöver aufdeckst, darfst du 1&nbsp;%FORCE% ausgeben, um eine Fassrolle zu fliegen (dies ist keine Aktion).%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%&nbsp;-Aktion durchführen."
+      text: "Bevor du dein Manöver aufdeckst, darfst du 1&nbsp;%FORCE% ausgeben, um eine Fassrolle zu fliegen (dies ist keine Aktion)."
     },
     "Anakin Skywalker (Y-Wing)": {
       display_name: "Anakin Skywalker",
-      text: "Nachdem du ein Manöver vollständig ausgeführt hast, falls ein feindliches Schiff in deinem %FRONTARC% in Reichweite&nbsp;0-1 oder in deinem %BULLSEYEARC%, ist, darfst du 1&nbsp;%FORCE% ausgeben, um 1&nbsp;Stressmarker zu entfernen.%LINEBREAK%<strong>Gepanzerte Hülle:</strong> Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."
+      text: "Nachdem du ein Manöver vollständig ausgeführt hast, falls ein feindliches Schiff in deinem %FRONTARC% in Reichweite&nbsp;0-1 oder in deinem %BULLSEYEARC%, ist, darfst du 1&nbsp;%FORCE% ausgeben, um 1&nbsp;Stressmarker zu entfernen."
     },
     "Arvel Crynyd": {
       display_name: "Arvel Crynyd",
-      text: "Du kannst Primärangriffe in Reichweite 0 durchführen.%LINEBREAK%Falls du durch Überschneidung mit einem anderen Schiff an einer %BOOST%-Aktion scheitern würdest, handle sie stattdessen so ab, als würdest du ein Manöver teilweise ausführen.%LINEBREAK%<strong>Schwenkbare Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%-Aktion durchführen."
+      text: "Falls du durch Überschneidung mit einem anderen Schiff an einer %BOOST%-Aktion scheitern würdest, darfst du sie stattdessen so abhandeln, als würdest du ein Manöver teilweise ausführen.%LINEBREAK% Solange du einen Angriff in Angriffsreichweite 0 durchführst, behandle ihn als Angriff in Angriffsreichweite 1.%LINEBREAK%<i>Errata: Ersten Satz entfernt und dafür neuen letzten Satz ergänzt. Die andere Fähigkeit optional gemacht („darfst du...“) </i>"
     },
     "Asajj Ventress": {
       display_name: "Asajj Ventress",
@@ -612,7 +612,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Autopilot Drone": {
       display_name: "Autopilot-Drone",
-      text: "<i class = flavor_text>Manchmal sind Herstellerwarnungen dazu gemacht, um sie zu ignorieren.</i>%LINEBREAK%<strong>Manipulierte Energiezellen:</strong> Während der Systemphase, falls du nicht angedockt bist, verliere 1 %CHARGE%. Am Ende der Aktivierungsphase, falls du 0 %CHARGE% hast, wirst du zerstört. Bevor du entfernt wirst, erleidet jedes Schiff in Reichweite 0-1 1 %CRIT%-Schaden."
+      text: "<i class = flavor_text>Manchmal sind Herstellerwarnungen dazu gemacht, um sie zu ignorieren.</i>"
     },
     "BB-8": {
       display_name: "BB-8",
@@ -628,7 +628,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Barriss Offee": {
       display_name: "Barriss Offee",
-      text: "Solange ein befreundetes Schiff in Reichweite 0-2 einen Angriff durchführt, falls der Verteidiger in seinem %BULLSEYEARC% ist, darfst du 1 %FORCE% ausgeben, um 1 %FOCUS%-Ergebnis in ein %HIT%-Ergebnis oder 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis zu ändern. %LINEBREAK%<strong>Präzisionssteuerung:</strong> Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."
+      text: "Solange ein befreundetes Schiff in Reichweite 0-2 einen Angriff durchführt, falls der Verteidiger in seinem %BULLSEYEARC% ist, darfst du 1 %FORCE% ausgeben, um 1 %FOCUS%-Ergebnis in ein %HIT%-Ergebnis oder 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis zu ändern. "
     },
     "Ben Teene": {
       display_name: "Ben Teene",
@@ -640,7 +640,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Berwer Kret": {
       display_name: "Berwer Kret",
-      text: "Nachdem du einen Angriff durchgeführt hast, der getroffen hat, darf jedes befreundete Schiff mit %CALCULATE% in seiner Aktionsleiste, das den Verteidiger als Ziel erfasst hat, eine rote&nbsp;%CALCULATE%&nbsp;-Aktion durchführen. %LINEBREAK%<strong>Fangstrahl-Zielsystem:</strong> Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC%rotieren. Nachdem du ein Manöver ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine&nbsp;%ROTATEARC%&nbsp;-Aktion durchzuführen."
+      text: "Nachdem du einen Angriff durchgeführt hast, der getroffen hat, darf jedes befreundete Schiff mit %CALCULATE% in seiner Aktionsleiste, das den Verteidiger als Ziel erfasst hat, eine rote&nbsp;%CALCULATE%&nbsp;-Aktion durchführen. "
     },
     "Biggs Darklighter": {
       display_name: "Biggs Darklighter",
@@ -656,11 +656,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Black Squadron Ace (T-70)": {
       display_name: "Fliegerass der schwarzen Staffel",
-      text: "<i class = flavor_text>Während des Kalten Krieges führte Poe Damerons schwarze Staffel gewagte Geheimoperationen gegen die Erste Ordnung durch und verstieß dabei gegen Verträge, die vom Senat der Neuen Republik ratifiziert worden waren.</i>%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "<i class = flavor_text>Während des Kalten Krieges führte Poe Damerons schwarze Staffel gewagte Geheimoperationen gegen die Erste Ordnung durch und verstieß dabei gegen Verträge, die vom Senat der Neuen Republik ratifiziert worden waren.</i>"
     },
     "Black Squadron Scout": {
       display_name: "Aufklärer der schwarzen Staffel",
-      text: "<i class = flavor_text>Schwenkbare Tragflächen verleihen dem schwerbewaffneten Atmosphärenflieger zusätzliche Geschwindigkeit und Manövrierbarkeit.</i>%LINEBREAK% <strong>Adaptive Querruder:</strong> Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du ein weißes [1 %BANKLEFT%]-, [1 %STRAIGHT%]- oder [1 %BANKRIGHT%]-Manöver ausführen."
+      text: "<i class = flavor_text>Schwenkbare Tragflächen verleihen dem schwerbewaffneten Atmosphärenflieger zusätzliche Geschwindigkeit und Manövrierbarkeit.</i>"
     },
     "Black Sun Ace": {
       display_name: "Fliegerass der Schwarzen Sonne",
@@ -668,11 +668,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Black Sun Assassin": {
       display_name: "Attentäter der Schwarzen Sonne",
-      text: "<i class = flavor_text>Ein Attentat kann mit einem Schuss im Dunkeln oder mit einem vergifteten Getränk verübt werden. Aussagekräftiger ist jedoch eine brennende Raumfähre, die hilflos vom Himmel trudelt. </i>%LINEBREAK%<strong>Mikrodüsen:</strong> Solange du eine Fassrolle durchführst, <b>musst</b> du die %BANKLEFT%- oder %BANKRIGHT%-Schablone anstatt der %STRAIGHT%-Schablone verwenden."
+      text: "<i class = flavor_text>Ein Attentat kann mit einem Schuss im Dunkeln oder mit einem vergifteten Getränk verübt werden. Aussagekräftiger ist jedoch eine brennende Raumfähre, die hilflos vom Himmel trudelt. </i>"
     },
     "Black Sun Enforcer": {
       display_name: "Vollstrecker der Schwarzen Sonne",
-      text: "<i class = flavor_text>Prinz Xizor persönlich entwickelte die Angriffsplattform der SternenViper-Klasse in Zusammenarbeit mit MandalMotors und schuf so einen der vorzüglichsten Sternenjäger der Galaxis. </i>%LINEBREAK%<strong>Mikrodüsen:</strong> Solange du eine Fassrolle durchführst, <b>musst</b> du die %BANKLEFT%- oder %BANKRIGHT%-Schablone anstatt der %STRAIGHT%-Schablone verwenden."
+      text: "<i class = flavor_text>Prinz Xizor persönlich entwickelte die Angriffsplattform der SternenViper-Klasse in Zusammenarbeit mit MandalMotors und schuf so einen der vorzüglichsten Sternenjäger der Galaxis. </i>"
     },
     "Black Sun Soldier": {
       display_name: "Kampfpilot der Schwarzen Sonne",
@@ -696,11 +696,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Blue Squadron Recruit": {
       display_name: "Rekrut der blauen Staffel",
-      text: "<i class = flavor_text>Überall in der Galaxis wachsen junge Leute mit Geschichten über die Helden des Galaktischen Bürgerkriegs auf. Viele lernen das Fliegen in den Cockpits, in denen ihre Eltern einst das Imperium bekämpften.</i>%LINEBREAK%<strong>Optimierte Gyrostabilisatoren:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen."
+      text: "<i class = flavor_text>Überall in der Galaxis wachsen junge Leute mit Geschichten über die Helden des Galaktischen Bürgerkriegs auf. Viele lernen das Fliegen in den Cockpits, in denen ihre Eltern einst das Imperium bekämpften.</i>"
     },
     "Blue Squadron Rookie": {
       display_name: "Anfängerpilot der blauen Staffel",
-      text: "<i class = flavor_text>Incom-FreiTek setzte bei der Entwicklung des T-70-X-Flüglers auf eine Verbesserung der taktischen Flexibilität des altehrwürdigen T-65-Modells. Sein moderner Droidenport ist mit fast allen gängigen Astromechs kompatibel, und dank seiner modularen Waffenkapseln kann er für jeden Einsatz mit maßgeschneiderter Bewaffnung ausgestattet werden.</i>%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "<i class = flavor_text>Incom-FreiTek setzte bei der Entwicklung des T-70-X-Flüglers auf eine Verbesserung der taktischen Flexibilität des altehrwürdigen T-65-Modells. Sein moderner Droidenport ist mit fast allen gängigen Astromechs kompatibel, und dank seiner modularen Waffenkapseln kann er für jeden Einsatz mit maßgeschneiderter Bewaffnung ausgestattet werden.</i>"
     },
     "Blue Squadron Scout": {
       display_name: "Aufklärer der blauen Staffel",
@@ -724,7 +724,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Bravo Flight Officer": {
       display_name: "Flugoffizier der Bravo-Staffel",
-      text: "<i class = flavor_text>Die freiwilligen Piloten der Königlichen Sicherheitskräfte von Naboo haben sich dem Schutz des Volkes und der Ideale ihrer Heimatwelt verschrieben und vertrauen darauf, dass ihre Königin sie nur als letzten Ausweg ins Gefecht schicken wird.</i>%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%&nbsp;-Aktion durchführen."
+      text: "<i class = flavor_text>Die freiwilligen Piloten der Königlichen Sicherheitskräfte von Naboo haben sich dem Schutz des Volkes und der Ideale ihrer Heimatwelt verschrieben und vertrauen darauf, dass ihre Königin sie nur als letzten Ausweg ins Gefecht schicken wird.</i>"
     },
     "Braylen Stramm": {
       display_name: "Braylen Stramm",
@@ -732,15 +732,15 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Captain Cardinal": {
       display_name: "Captain Cardinal",
-      text: "Solange ein befreundetes Schiff in Reichweite 1-2 mit niedrigerer Initiative als du verteidigt oder einen Angriff durchführt, falls du mindestens 1 %CHARGE% hast, darf jenes Schiff 1 %FOCUS%-Ergebnis neu werfen.%LINEBREAK%Nachdem ein feindliches Schiff in Reichweite 0-3 zerstört worden ist, verliere 1 %CHARGE%.%LINEBREAK%<strong>Gekoppelte Geschützbatterie:</strong> Solange du einen %CANNON%-Angriff durchführst, wirf 1 zusätzlichen Würfel."
+      text: "Solange ein befreundetes Schiff in Reichweite 1-2 mit niedrigerer Initiative als du verteidigt oder einen Angriff durchführt, falls du mindestens 1 %CHARGE% hast, darf jenes Schiff 1 %FOCUS%-Ergebnis neu werfen.%LINEBREAK%Nachdem ein feindliches Schiff in Reichweite 0-3 zerstört worden ist, verliere 1 %CHARGE%."
     },
     "Captain Feroph": {
       display_name: "Captain Feroph",
-      text: "Solange du verteidigst, falls der Angreifer keine grünen Marker hat, darfst du 1 deiner Leerseiten- oder %FOCUS%-Ergebnisse in ein %EVADE%-Ergebnis ändern.%LINEBREAK%<strong>Adaptive Querruder:</strong> Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du ein weißes [1 %BANKLEFT%]-, [1 %STRAIGHT%]- oder [1 %BANKRIGHT%]-Manöver ausführen."
+      text: "Solange du verteidigst, falls der Angreifer keine grünen Marker hat, darfst du 1 deiner Leerseiten- oder %FOCUS%-Ergebnisse in ein %EVADE%-Ergebnis ändern. %LINEBREAK% <i>Errata: „oder“ statt „/“ (1. Edition)</i>"
     },
     "Captain Jonus": {
       display_name: "Captain Jonus",
-      text: "Solange ein befreundetes Schiff in Reichweite 0-1 einen %TORPEDO%- oder %MISSILE%-Angriff durchführt, darf jenes Schiff bis zu 2 Angriffswürfel neu werfen. %LINEBREAK%<strong>Wendiger Bomber:</strong> Falls du unter Verwendung einer %STRAIGHT%-Schablone ein Gerät abwerfen würdest, darfst du stattdessen eine %BANKLEFT%- oder %BANKRIGHT%-Schablone derselben Geschwindigkeit verwenden."
+      text: "Solange ein befreundetes Schiff in Reichweite 0-1 einen %TORPEDO%- oder %MISSILE%-Angriff durchführt, darf jenes Schiff bis zu 2 Angriffswürfel neu werfen. "
     },
     "Captain Jostero": {
       display_name: "Captain Jostero",
@@ -768,11 +768,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Captain Seevor": {
       display_name: "Captain Seevor",
-      text: "Solange du verteidigst oder einen Angriff durchführst, bevor die Angriffswürfel geworfen werden, falls du nicht im %BULLSEYEARC% des feindlichen Schiffes bist, darfst du 1 %CHARGE% ausgeben. Falls du das tust, erhält das feindliche Schiff 1 Störsignalmarker.%LINEBREAK%<strong>Stabilisatorkerbe:</strong> Solange du dich bewegst, ignorierst du Asteroiden."
+      text: "Solange du verteidigst oder einen Angriff durchführst, bevor die Angriffswürfel geworfen werden, falls du nicht im %BULLSEYEARC% des feindlichen Schiffes bist, darfst du 1 %CHARGE% ausgeben. Falls du das tust, erhält das feindliche Schiff 1 Störsignalmarker."
     },
     "Cartel Executioner": {
       display_name: "Killer des Kartells",
-      text: "<i class = flavor_text>Viele erfahrene Piloten, die im Dienst der huttischen Kajidics und anderer Verbrecherorganisationen stehen, entscheiden sich für den M12-L-Kimogila-Jäger aufgrund seiner beträchtlichen Feuerkraft und seines furchteinflößenden Rufes.</i>%LINEBREAK% <strong>Todsicherer Treffer:</strong> Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, können Verteidigungswürfel nicht unter Verwendung von grünen Markern modifiziert werden."
+      text: "<i class = flavor_text>Viele erfahrene Piloten, die im Dienst der huttischen Kajidics und anderer Verbrecherorganisationen stehen, entscheiden sich für den M12-L-Kimogila-Jäger aufgrund seiner beträchtlichen Feuerkraft und seines furchteinflößenden Rufes.</i>"
     },
     "Cartel Marauder": {
       display_name: "Kartell-Marodeur",
@@ -780,7 +780,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Cartel Spacer": {
       display_name: "Raumfahrer des Kartells",
-      text: "<i class = flavor_text>Der M3-A-„Scyk“-Abfangjäger von MandalMotors wurde in großer Stückzahl vom Hutt-Kartell und den Car’das-Schmugglern angeschafft. Grund dafür waren der günstige Einstiegspreis und die vielen Ausstattungsoptionen des Jägers. </i>%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "<i class = flavor_text>Der M3-A-„Scyk“-Abfangjäger von MandalMotors wurde in großer Stückzahl vom Hutt-Kartell und den Car’das-Schmugglern angeschafft. Grund dafür waren der günstige Einstiegspreis und die vielen Ausstattungsoptionen des Jägers. </i>"
     },
     "Cassian Andor": {
       display_name: "Cassian Andor",
@@ -796,7 +796,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Chertek": {
       display_name: "Chertek",
-      text: "Solange du einen Primärangriff durchführst, falls der Verteidiger gefangen ist, darfst du bis zu 2&nbsp;Angriffswürfel neu werfen.%LINEBREAK%<strong>Pinpoint Tractor Array:</strong> You cannot rotate your %SINGLETURRETARC% to your %REARARC%. After you execute a maneuver, you may gain 1&nbsp;tractor token to perform a&nbsp;%ROTATEARC%&nbsp;action."
+      text: "Solange du einen Primärangriff durchführst, falls der Verteidiger gefangen ist, darfst du bis zu 2&nbsp;Angriffswürfel neu werfen."
     },
     "Chewbacca": {
       display_name: "Chewbacca",
@@ -824,7 +824,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Constable Zuvio": {
       display_name: "Constable Zuvio",
-      text: "Falls du ein Gerät abwerfen würdest, darfst du es stattdessen unter Verwendung der [1 %STRAIGHT%]-Schablone starten.%LINEBREAK%<strong>Schlepperstrahl:</strong> <strong>Aktion:</strong> Wähle ein Schiff in deinem %FRONTARC% in Reichweite 1. Jenes Schiff erhält 1 Fangstrahlmarker oder 2 Fangstrahlmarker, falls es in deinem %BULLSEYEARC% in Reichweite 1 ist."
+      text: "Falls du ein Gerät abwerfen würdest, darfst du es stattdessen unter Verwendung der [1 %STRAIGHT%]-Schablone starten."
     },
     "Contracted Scout": {
       display_name: "Angeheuerter Kundschafter",
@@ -832,7 +832,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Corran Horn": {
       display_name: "Corran Horn",
-      text: "Bei Initiative 0 darfst du einen Bonus-Primärangriff gegen ein feindliches Schiff in deinem %BULLSEYEARC% durchführen. Falls du das tust, erhalte zu Beginn der nächsten Planungsphase 1 Entwaffnet-Marker.%LINEBREAK%<strong>Experimentelle Scanner:</strong> Du kannst Ziele jenseits von Reichweite 3 erfassen. Du kannst keine Ziele in Reichweite 1 erfassen."
+      text: "Bei Initiative 0 darfst du einen Bonus-Primärangriff gegen ein feindliches Schiff in deinem %BULLSEYEARC% durchführen. Falls du das tust, erhalte zu Beginn der nächsten Planungsphase 1 Entwaffnet-Marker."
     },
     "Count Dooku": {
       display_name: "Count Dooku",
@@ -856,19 +856,19 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "DBS-32C": {
       display_name: "DBS-32C",
-      text: "Zu Beginn der Kampfphase darfst du 1&nbsp;Berechnungsmarker ausgeben, um eine %COORDINATE%-Aktion durchzuführen. Du kannst keine Schiffe koordinieren, die die Schiffs­fähigkeit <strong>Vernetzte Berechnungssysteme</strong> nicht haben. %LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1&nbsp;Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1&nbsp;%FOCUS%-Ergebnis in ein %EVADE% oder %HIT%-Ergebnis zu ändern."
+      text: "Zu Beginn der Kampfphase darfst du 1&nbsp;Berechnungsmarker ausgeben, um eine %COORDINATE%-Aktion durchzuführen. Du kannst keine Schiffe koordinieren, die die Schiffs­fähigkeit <strong>Vernetzte Berechnungssysteme</strong> nicht haben. "
     },
     "DBS-404": {
       display_name: "DBS-404",
-      text: "Du kannst Primärangriffe in Reichweite&nbsp;0 durchführen. Solange du einen Angriff in Angriffsreichweite&nbsp;0-1 durchführst, musst du 1&nbsp;zusätzlichen Würfel werfen. Nachdem der Angriff getroffen hat, erleide 1&nbsp;%CRIT%-Schaden.%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1&nbsp;Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1&nbsp;%FOCUS%-Ergebnis in ein %EVADE% oder %HIT%-Ergebnis zu ändern."
+      text: "Du kannst Primärangriffe in Reichweite&nbsp;0 durchführen. Solange du einen Angriff in Angriffsreichweite&nbsp;0-1 durchführst, musst du 1&nbsp;zusätzlichen Würfel werfen. Nachdem der Angriff getroffen hat, erleide 1&nbsp;%CRIT%-Schaden."
     },
     "DFS-081": {
       display_name: "DFS-081",
-      text: "Solange ein befreundetes Schiff in Reichweite 0-1 verteidigt, darf es 1 Berechnungsmarker ausgeben, um alle %CRIT%-Ergebnisse in %HIT%-Ergebnisse zu ändern.%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1 %FOCUS%-Ergebnis in ein %EVADE%-oder %HIT%-Ergebnis zu ändern."
+      text: "Solange ein befreundetes Schiff in Reichweite 0-1 verteidigt, darf es 1 Berechnungsmarker ausgeben, um alle %CRIT%-Ergebnisse in %HIT%-Ergebnisse zu ändern."
     },
     "DFS-311": {
       display_name: "DFS-311",
-      text: "Zu Beginn der Kampfphase darfst du 1 deiner Berechnungsmarker auf ein anderes befreundetes Schiff in Reichweite 0-3 transferieren.%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 1 ausgeben, um 1 %FOCUS%-Ergebnis in ein %EVADE%- oder %HIT%-Ergebnis zu ändern."
+      text: "Zu Beginn der Kampfphase darfst du 1 deiner Berechnungsmarker auf ein anderes befreundetes Schiff in Reichweite 0-3 transferieren."
     },
     "Dace Bonearm": {
       display_name: "Dace Bonearm",
@@ -876,11 +876,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Dalan Oberos (StarViper)": {
       display_name: "Dalan Oberos (StarViper)",
-      text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 Stressmarker erhalten, um dein Schiff um 90° zu drehen.%LINEBREAK%<strong>Mikrodüsen:</strong> Solange du eine Fassrolle durchführst, <b>musst</b> du die %BANKLEFT%- oder %BANKRIGHT%-Schablone anstatt der %STRAIGHT%-Schablone verwenden."
+      text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 Stressmarker erhalten, um dein Schiff um 90° zu drehen."
     },
     "Dalan Oberos": {
       display_name: "Dalan Oberos",
-      text: "Zu Beginn der Kampfphase darfst du 1 Schiff, das Schilde hat, in deinem %BULLSEYEARC% wählen und 1 %CHARGE% ausgeben. Falls du das tust, verliert jenes Schiff 1 Schild und du stellst 1 Schild wieder her.%LINEBREAK%<strong>Todsicherer Treffer:</strong> Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, können Verteidigungswürfel nicht unter Verwendung von grünen Markern modifiziert werden."
+      text: "Zu Beginn der Kampfphase darfst du 1 Schiff, das Schilde hat, in deinem %BULLSEYEARC% wählen und 1 %CHARGE% ausgeben. Falls du das tust, verliert jenes Schiff 1 Schild und du stellst 1 Schild wieder her."
     },
     "Dark Courier": {
       display_name: "Dunkler Bote",
@@ -892,11 +892,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Darth Vader": {
       display_name: "Darth Vader",
-      text: "Nachdem du eine Aktion durchgeführt hast, darfst du 1 %FORCE% ausgeben, um eine Aktion durchzuführen.%LINEBREAK%<strong>Verbesserter Zielcomputer:</strong> Solange du einen Primärangriff gegen einen Verteidiger durchführst, den du als Ziel erfasst hast, wirf 1 zusätzlichen Angriffswürfel und ändere 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis."
+      text: "Nachdem du eine Aktion durchgeführt hast, darfst du 1 %FORCE% ausgeben, um eine Aktion durchzuführen."
     },
     "Dash Rendar": {
       display_name: "Dash Rendar",
-      text: "Solange du dich bewegst, ignorierst du Hindernisse.%LINEBREAK%<strong>Toter Winkel:</strong> Solange du einen Primärangriff in Reichweite 0-1 durchführst, wende den Bonus für Reichweite 0-1 nicht an und wirf 1 Angriffswürfel weniger."
+      text: "Solange du dich bewegst, ignorierst du Hindernisse."
     },
     "Del Meeko": {
       display_name: "Del Meeko",
@@ -912,7 +912,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Dineé Ellberger": {
       display_name: "Dineé Ellberger",
-      text: "Solange du verteidigst oder einen Angriff durchführst, falls dein aufgedecktes Manöver dieselbe Geschwindigkeit hat wie das des feindlichen Schiffes, können die Würfel jenes Schiffes nicht modifiziert werden.%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%&nbsp;-Aktion durchführen."
+      text: "Solange du verteidigst oder einen Angriff durchführst, falls dein aufgedecktes Manöver dieselbe Geschwindigkeit hat wie das des feindlichen Schiffes, können die Würfel jenes Schiffes nicht modifiziert werden."
     },
     "Drea Renthal": {
       display_name: "Drea Renthal",
@@ -924,11 +924,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Edrio Two Tubes": {
       display_name: "Edrio Two Tubes",
-      text: "Bevor du aktiviert wirst, falls du fokussiert bist, darfst du eine Aktion durchführen."
+      text: "Bevor du aktiviert wirst, falls du fokussiert bist, darfst du eine Aktion durchführen. %LINEBREAK% <i>Errata: „Bevor“ statt „Nachdem“ (Saws Rebellenmiliz)</i>"
     },
     "Ello Asty": {
       display_name: "Ello Asty",
-      text: "Nachdem du ein rotes Tallon-Rolle-Manöver [%TROLLLEFT% oder %TROLLRIGHT%] aufgedeckt hast, falls du 2 oder weniger Stressmarker hast, behandle jenes Manöver, als wäre es weiß.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Nachdem du ein rotes Tallon-Rolle-Manöver [%TROLLLEFT% oder %TROLLRIGHT%] aufgedeckt hast, falls du 2 oder weniger Stressmarker hast, behandle jenes Manöver, als wäre es weiß."
     },
     "Emon Azzameen": {
       display_name: "Emon Azzameen",
@@ -948,11 +948,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Ezra Bridger": {
       display_name: "Ezra Bridger",
-      text: "Solange du verteidigst oder einen Angriff durchführst, falls du gestresst bist, darfst du 1 %FORCE% ausgeben, um bis zu 2 deiner %FOCUS%-Ergebnisse in %EVADE%- oder %HIT%-Ergebnisse zu ändern.%LINEBREAK%<strong>Geladen und entsichert:</strong> Solange du angedockt bist, nachdem dein Trägerschiff einen %FRONTARC%-Primärangriff oder %TURRET%-Angriff durchgeführt hat, darf es einen Bonus-%REARARC%-Primärangriff durchführen."
+      text: "Solange du verteidigst oder einen Angriff durchführst, falls du gestresst bist, darfst du 1 %FORCE% ausgeben, um bis zu 2 deiner %FOCUS%-Ergebnisse in %EVADE%- oder %HIT%-Ergebnisse zu ändern."
     },
     "Ezra Bridger (Sheathipede)": {
       display_name: "Ezra Bridger (Sheathipede)",
-      text: "Solange du verteidigst oder einen Angriff durchführst, falls du gestresst bist, darfst du 1 %FORCE% ausgeben, um bis zu 2 deiner %FOCUS%-Ergebnisse in %EVADE%- oder %HIT%-Ergebnisse zu ändern. %LINEBREAK%<strong>Kommunikationsantennen:</strong> Solange du angedockt bist, erhält dein Trägerschiff %COORDINATE%. Bevor dein Trägerschiff aktiviert wird, darf es eine %COORDINATE%-Aktion durchführen."
+      text: "Solange du verteidigst oder einen Angriff durchführst, falls du gestresst bist, darfst du 1 %FORCE% ausgeben, um bis zu 2 deiner %FOCUS%-Ergebnisse in %EVADE%- oder %HIT%-Ergebnisse zu ändern. "
     },
     "Ezra Bridger (TIE Fighter)": {
       display_name: "Ezra Bridger (TIE Fighter)",
@@ -964,11 +964,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Fenn Rau (Sheathipede)": {
       display_name: "Fenn Rau (Sheathipede)",
-      text: "Nachdem ein feindliches Schiff in deinem Feuerwinkel begonnen hat zu kämpfen, falls du nicht gestresst bist, darfst du 1 Stressmarker erhalten. Falls du das tust, kann jenes Schiff keine Marker ausgeben, um Würfel zu modifizieren, solange es während dieser Phase einen Angriff durchführt.%LINEBREAK%<strong>Kommunikationsantennen:</strong> Solange du angedockt bist, erhält dein Trägerschiff %COORDINATE%. Bevor dein Trägerschiff aktiviert wird, darf es eine %COORDINATE%-Aktion durchführen."
+      text: "Bevor ein feindliches Schiff in deinem Feuerwinkel begonnen hat zu kämpfen, falls du nicht gestresst bist, darfst du 1 Stressmarker erhalten. Falls du das tust, kann jenes Schiff keine Marker ausgeben, um Würfel zu modifizieren, solange es während dieser Phase einen Angriff durchführt. %LINEBREAK% <i>Errata: „Bevor“ statt „Nachdem“</i>"
     },
     "Fenn Rau": {
       display_name: "Fenn Rau",
-      text: "Solange du verteidigst oder einen Angriff durchführst, falls die Angriffsreichweite 1 ist, darfst du 1 zusätzlichen Würfel werfen.%LINEBREAK%<strong>Concordianischer Wirbel:</strong> Solange du verteidigst, falls die Angriffsreichweite 1 ist und du im%FRONTARC% des Angreifers bist, ändere 1 Ergebnis in ein %EVADE%-Ergebnis."
+      text: "Solange du verteidigst oder einen Angriff durchführst, falls die Angriffsreichweite 1 ist, darfst du 1 zusätzlichen Würfel werfen."
     },
     "Finch Dallow": {
       display_name: "Finch Dallow",
@@ -980,11 +980,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "First Order Test Pilot": {
       display_name: "Testpilot der Ersten Ordnung",
-      text: "<i class = flavor_text>Extreme Schubkraft und präzises Handling sind die Hauptmerkmale des TIE-Dämpfers, der sein volles Vernichtungspotential nur in den Händen eines wahren Spitzenpiloten entfaltet. Jeder andere wäre schnell überfordert und würde die Kontrolle über das wendige Schiff verlieren.</i>%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "<i class = flavor_text>Extreme Schubkraft und präzises Handling sind die Hauptmerkmale des TIE-Dämpfers, der sein volles Vernichtungspotential nur in den Händen eines wahren Spitzenpiloten entfaltet. Jeder andere wäre schnell überfordert und würde die Kontrolle über das wendige Schiff verlieren.</i>"
     },
     "Foreman Proach": {
       display_name: "Vorarbeiter Proach",
-      text: "Bevor du kämpfst, darfst du 1 feindliches Schiff in deinem %BULLSEYEARC% in Reichweite 1-2 wählen und 1 Entwaffnet-Marker erhalten. Falls du das tust, erhält jenes Schiff 1 Fangstrahlmarker.%LINEBREAK%<strong>Stabilisatorkerbe:</strong> Solange du dich bewegst, ignorierst du Asteroiden."
+      text: "Bevor du kämpfst, darfst du 1 feindliches Schiff in deinem %BULLSEYEARC% in Reichweite 1-2 wählen und 1 Entwaffnet-Marker erhalten. Falls du das tust, erhält jenes Schiff 1 Fangstrahlmarker."
     },
     "Freighter Captain": {
       display_name: "Frachtercaptain",
@@ -992,7 +992,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Gamma Squadron Ace": {
       display_name: "Fliegerass der Gamma-Staffel",
-      text: "<i class = flavor_text>Der TIE-Bomber ist zwar nicht so schnell und wendig wie ein TIE/ln, dafür besitzt er genügend Feuerkraft, um praktisch jedes feindliche Ziel auszulöschen. </i>%LINEBREAK%<strong>Wendiger Bomber:</strong> Falls du unter Verwendung einer %STRAIGHT%-Schablone ein Gerät abwerfen würdest, darfst du stattdessen eine %BANKLEFT%- oder %BANKRIGHT%-Schablone derselben Geschwindigkeit verwenden."
+      text: "<i class = flavor_text>Der TIE-Bomber ist zwar nicht so schnell und wendig wie ein TIE/ln, dafür besitzt er genügend Feuerkraft, um praktisch jedes feindliche Ziel auszulöschen. </i>"
     },
     "Gand Findsman": {
       display_name: "Gand-Finder",
@@ -1008,7 +1008,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Gavin Darklighter": {
       display_name: "Gavin Darklighter",
-      text: "Solange ein befreundetes Schiff einen Angriff durchführt, falls der Verteidiger in deinem %FRONTARC% ist, darf der Angreifer 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis ändern.%LINEBREAK%<strong>Experimentelle Scanner:</strong> Du kannst Ziele jenseits von Reichweite 3 erfassen. Du kannst keine Ziele in Reichweite 1 erfassen."
+      text: "Solange ein befreundetes Schiff einen Angriff durchführt, falls der Verteidiger in deinem %FRONTARC% ist, darf der Angreifer 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis ändern."
     },
     "General Grievous": {
       display_name: "General Grievous",
@@ -1016,7 +1016,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Genesis Red": {
       display_name: "Genesis Red",
-      text: "Nachdem du ein Ziel erfasst hast, musst du alle deine Fokus- und Ausweichmarker entfernen. Dann erhalte dieselbe Anzahl an Fokus- und Ausweichmarkern, die das erfasste Schiff hat.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Nachdem du ein Ziel erfasst hast, musst du alle deine Fokus- und Ausweichmarker entfernen. Dann erhalte dieselbe Anzahl an Fokus- und Ausweichmarkern, die das erfasste Schiff hat."
     },
     "Gideon Hask": {
       display_name: "Gideon Hask",
@@ -1032,7 +1032,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Gorgol": {
       display_name: "Gorgol",
-      text: "Während der Systemphase darfst du 1 Entwaffnet-Marker erhalten und ein befreundetes Schiff in Reichweite&nbsp;1-2 wählen. Falls du das tust, erhält es 1&nbsp;Fangstrahlmarker, dann repariert es 1 seiner offenen <strong>Schiff</strong>&nbsp;-Schadenskarten.%LINEBREAK%<strong>Fangstrahl-Zielsystem:</strong> Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC%rotieren. Nachdem du ein Manöver ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine&nbsp;%ROTATEARC%&nbsp;-Aktion durchzuführen."
+      text: "Während der Systemphase darfst du 1 Entwaffnet-Marker erhalten und ein befreundetes Schiff in Reichweite&nbsp;1-2 wählen. Falls du das tust, erhält es 1&nbsp;Fangstrahlmarker, dann repariert es 1 seiner offenen <strong>Schiff</strong>&nbsp;-Schadenskarten."
     },
     "Grand Inquisitor": {
       display_name: "Großinquisitor",
@@ -1048,19 +1048,19 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Green Squadron Expert": {
       display_name: "Elitepilot der grünen Staffel",
-      text: "<i class = flavor_text>Viele langjährig bewährte Modifikationen wurden in die Serienausstattung des RZ-2 übernommen. Für waghalsige Piloten ist die höhere Stabilität des Jägers nur ein Anreiz, noch weiter an seine Grenzen zu gehen.</i>%LINEBREAK%<strong>Optimierte Gyrostabilisatoren:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen."
+      text: "<i class = flavor_text>Viele langjährig bewährte Modifikationen wurden in die Serienausstattung des RZ-2 übernommen. Für waghalsige Piloten ist die höhere Stabilität des Jägers nur ein Anreiz, noch weiter an seine Grenzen zu gehen.</i>"
     },
     "Green Squadron Pilot": {
       display_name: "Pilot der grünen Staffel",
-      text: "<i class = flavor_text>Aufgrund seiner empfindlichen Steuerung und extremen Wendigkeit war das Cockpit des A-Flüglers nur für besonders begabte Piloten bestimmt.</i>%LINEBREAK%<strong>Schwenkbare Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%-Aktion durchführen."
+      text: "<i class = flavor_text>Aufgrund seiner empfindlichen Steuerung und extremen Wendigkeit war das Cockpit des A-Flüglers nur für besonders begabte Piloten bestimmt.</i>"
     },
     "Greer Sonnel": {
       display_name: "Greer Sonnel",
-      text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du deinen %SINGLETURRETARC% rotieren.%LINEBREAK%<strong>Optimierte Gyrostabilisatoren:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen."
+      text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du deinen %SINGLETURRETARC% rotieren."
     },
     "Guri": {
       display_name: "Guri",
-      text: "Zu Beginn der Kampfphase, falls mindestens 1 feindliches Schiff in Reichweite 0-1 ist, darfst du 1 Fokusmarker erhalten.%LINEBREAK%<strong>Mikrodüsen:</strong> Solange du eine Fassrolle durchführst, <b>musst</b> du die %BANKLEFT%- oder %BANKRIGHT%-Schablone anstatt der %STRAIGHT%-Schablone verwenden."
+      text: "Zu Beginn der Kampfphase, falls mindestens 1 feindliches Schiff in Reichweite 0-1 ist, darfst du 1 Fokusmarker erhalten."
     },
     "Han Solo": {
       display_name: "Han Solo",
@@ -1080,11 +1080,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Hera Syndulla": {
       display_name: "Hera Syndulla",
-      text: "Nachdem du ein rotes oder blaues Manöver aufgedeckt hast, darfst du dein Rad auf ein anderes Manöver derselben Schwierigkeit einstellen.%LINEBREAK%<strong>Geladen und entsichert:</strong> Solange du angedockt bist, nachdem dein Trägerschiff einen %FRONTARC%-Primärangriff oder %TURRET%-Angriff durchgeführt hat, darf es einen Bonus-%REARARC%-Primärangriff durchführen."
+      text: "Nachdem du ein rotes oder blaues Manöver aufgedeckt hast, darfst du dein Rad auf ein anderes Manöver derselben Schwierigkeit einstellen."
     },
     "Hera Syndulla (VCX-100)": {
       display_name: "Hera Syndulla (VCX-100)",
-      text: "Nachdem du ein rotes oder blaues Manöver aufgedeckt hast, darfst du dein Rad auf ein anderes Manöver derselben Schwierigkeit einstellen.%LINEBREAK%<strong>Heckgeschütz:</strong> Solange du ein angedocktes Schiff hast, hast du eine %REARARC%-Primärwaffe mit einem Angriffswert in Höhe des Angriffswertes der %FRONTARC%-Primärwaffe deines angedockten Schiffes."
+      text: "Nachdem du ein rotes oder blaues Manöver aufgedeckt hast, darfst du dein Rad auf ein anderes Manöver derselben Schwierigkeit einstellen."
     },
     "Hired Gun": {
       display_name: "Söldner",
@@ -1096,19 +1096,19 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "IG-88A": {
       display_name: "IG-88A",
-      text: "Zu Beginn der Kampfphase darfst du 1 befreundetes Schiff mit %CALCULATE% in seiner Aufwertungsleiste in Reichweite 1-3 wählen. Falls du das tust, transferiere 1 deiner Berechnungsmarker auf es. %LINEBREAK%<strong>Hochentwickeltes Droidengehirn:</strong> Nachdem du eine %CALCULATE%-Aktion durchgeführt hast, erhalte 1 Berechnungsmarker."
+      text: "Zu Beginn der Kampfphase darfst du 1 befreundetes Schiff mit %CALCULATE% in seiner Aufwertungsleiste in Reichweite 1-3 wählen. Falls du das tust, transferiere 1 deiner Berechnungsmarker auf es. "
     },
     "IG-88B": {
       display_name: "IG-88B",
-      text: "Nachdem du einen Angriff durchgeführt hast, der verfehlt hat, darfst du einen Bonus-%CANNON%-Angriff durchführen.%LINEBREAK%<strong>Hochentwickeltes Droidengehirn:</strong> Nachdem du eine %CALCULATE%-Aktion durchgeführt hast, erhalte 1 Berechnungsmarker."
+      text: "Nachdem du einen Angriff durchgeführt hast, der verfehlt hat, darfst du einen Bonus-%CANNON%-Angriff durchführen."
     },
     "IG-88C": {
       display_name: "IG-88C",
-      text: "Nachdem du eine %BOOST%-Aktion durchgeführt hast, darfst du eine %EVADE%-Aktion durchführen.%LINEBREAK%<strong>Hochentwickeltes Droidengehirn:</strong> Nachdem du eine %CALCULATE%-Aktion durchgeführt hast, erhalte 1 Berechnungsmarker."
+      text: "Nachdem du eine %BOOST%-Aktion durchgeführt hast, darfst du eine %EVADE%-Aktion durchführen."
     },
     "IG-88D": {
       display_name: "IG-88D",
-      text: "Solange du einen Segnor-Looping (%SLOOPLEFT% oder %SLOOPRIGHT%)ausführst, darfst du stattdessen eine andere Schablone derselben Geschwindigkeit verwenden: entweder die Wende (%TURNLEFT% oder %TURNRIGHT%) mit gleicher Orientierung oder die Gerade (%STRAIGHT%).%LINEBREAK%<strong>Hochentwickeltes Droidengehirn:</strong> Nachdem du eine %CALCULATE%-Aktion durchgeführt hast, erhalte 1 Berechnungsmarker."
+      text: "Solange du einen Segnor-Looping (%SLOOPLEFT% oder %SLOOPRIGHT%)ausführst, darfst du stattdessen eine andere Schablone derselben Geschwindigkeit verwenden: entweder die Wende (%TURNLEFT% oder %TURNRIGHT%) mit gleicher Orientierung oder die Gerade (%STRAIGHT%)."
     },
     "Ibtisam": {
       display_name: "Ibtisam",
@@ -1120,11 +1120,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Imdaar Test Pilot": {
       display_name: "Testpilot von Imdaar",
-      text: "<i class = flavor_text>In einem geheimen Forschungsprojekt auf dem Mond Imdaar Alpha wurde entwickelt, was viele für unmöglich gehalten hatten: der TIE-Phantom, ein kleiner Sternenjäger mit Tarnvorrichtung.</i>%LINEBREAK%<strong>Stygium-Gitter:</strong> Nachdem du dich enttarnt hast, darfst du eine %EVADE%-Aktion durchführen. Zu Beginn der Endphase darfst du 1 Ausweichmarker ausgeben, um 1 Tarnungsmarker zu erhalten."
+      text: "<i class = flavor_text>In einem geheimen Forschungsprojekt auf dem Mond Imdaar Alpha wurde entwickelt, was viele für unmöglich gehalten hatten: der TIE-Phantom, ein kleiner Sternenjäger mit Tarnvorrichtung.</i>"
     },
     "Inaldra": {
       display_name: "Inaldra",
-      text: "Solange du verteidigst oder einen Angriff durchführst, darfst du 1 %HIT%-Schaden erleiden, um beliebig viele deiner Würfel neu zu werfen.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Solange du verteidigst oder einen Angriff durchführst, darfst du 1 %HIT%-Schaden erleiden, um beliebig viele deiner Würfel neu zu werfen."
     },
     "Inquisitor": {
       display_name: "Inquisitor",
@@ -1132,11 +1132,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Jake Farrell": {
       display_name: "Jake Farrell",
-      text: "Nachdem du eine %BARRELROLL%- oder %BOOST%-Aktion durchgeführt hast, darfst du ein befreundetes Schiff in Reichweite 0-1 wählen. Jenes Schiff darf eine %FOCUS%-Aktion durchführen.%LINEBREAK%<strong>Schwenkbare Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%-Aktion durchführen."
+      text: "Nachdem du eine %BARRELROLL%- oder %BOOST%-Aktion durchgeführt hast, darfst du ein befreundetes Schiff in Reichweite 0-1 wählen. Jenes Schiff darf eine %FOCUS%-Aktion durchführen."
     },
     "Jakku Gunrunner": {
       display_name: "Waffenschmuggler von Jakku",
-      text: "<i class = flavor_text>Der Quadrijet-Transferschlepper, im Volksmund „Quadjumper“ genannt, ist gleichermaßen behände in Weltall und Atmosphäre, was ihn zu einem beliebten Schmuggler- und Entdeckerschiff macht. </i>%LINEBREAK%<strong>Schlepperstrahl:</strong> <strong>Aktion:</strong> Wähle ein Schiff in deinem %FRONTARC% in Reichweite 1. Jenes Schiff erhält 1 Fangstrahlmarker oder 2 Fangstrahlmarker, falls es in deinem %BULLSEYEARC% in Reichweite 1 ist."
+      text: "<i class = flavor_text>Der Quadrijet-Transferschlepper, im Volksmund „Quadjumper“ genannt, ist gleichermaßen behände in Weltall und Atmosphäre, was ihn zu einem beliebten Schmuggler- und Entdeckerschiff macht. </i>"
     },
     "Jan Ors": {
       display_name: "Jan Ors",
@@ -1144,11 +1144,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Jaycris Tubbs": {
       display_name: "Jaycris Tubbs",
-      text: "Nachdem du ein blaues Manöver vollständig ausgeführt hast, darfst du ein befreundetes Schiff in Reichweite 0-1 wählen. Falls du das tust, entfernt jenes Schiff 1 Stressmarker.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Nachdem du ein blaues Manöver vollständig ausgeführt hast, darfst du ein befreundetes Schiff in Reichweite 0-1 wählen. Falls du das tust, entfernt jenes Schiff 1 Stressmarker."
     },
     "Jedi Knight": {
       display_name: "Jedi-Ritter",
-      text: "<i class = flavor_text>Nach Ausbruch der Klonkriege gelobten die Jedi-Ritter die Republik zu bewahren und übernahmen das Kommando über eine Legion von Klontruppen, die sie seither in die Schlacht führen.</i>%LINEBREAK%<strong>Präzisionssteuerung:</strong> Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."
+      text: "<i class = flavor_text>Nach Ausbruch der Klonkriege gelobten die Jedi-Ritter die Republik zu bewahren und übernahmen das Kommando über eine Legion von Klontruppen, die sie seither in die Schlacht führen.</i>"
     },
     "Jek Porkins": {
       display_name: "Jek Porkins",
@@ -1156,11 +1156,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Jessika Pava": {
       display_name: "Jessika Pava",
-      text: "Solange du verteidigst oder einen Angriff durchführst, darfst du 1 %CHARGE% oder 1 nicht-wiederkehrende %CHARGE% von deiner ausgerüsteten %ASTROMECH%-Aufwertung ausgeben, um für jedes andere befreundete Schiff in Reichweite 0-1 bis zu 1 deiner Würfel neu zu werfen.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Solange du verteidigst oder einen Angriff durchführst, darfst du 1 %CHARGE% oder 1 nicht-wiederkehrende %CHARGE% von deiner ausgerüsteten %ASTROMECH%-Aufwertung ausgeben, um für jedes andere befreundete Schiff in Reichweite 0-1 bis zu 1 deiner Würfel neu zu werfen."
     },
     "Joph Seastriker": {
       display_name: "Joph Seastriker",
-      text: "Nachdem du 1 Schild verloren hast, erhalte 1 Ausweichmarker.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Nachdem du 1 Schild verloren hast, erhalte 1 Ausweichmarker."
     },
     "Joy Rekkoff": {
       display_name: "Joy Rekkoff",
@@ -1176,11 +1176,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Kanan Jarrus": {
       display_name: "Kanan Jarrus",
-      text: "Solange ein befreundetes Schiff in deinem Feuerwinkel verteidigt, darfst du 1 %FORCE% ausgeben. Falls du das tust, wirft der Angreifer 1 Angriffswürfel weniger.%LINEBREAK%<strong>Heckgeschütz:</strong> Solange du ein angedocktes Schiff hast, hast du eine %REARARC%-Primärwaffe mit einem Angriffswert in Höhe des Angriffswertes der %FRONTARC%-Primärwaffe deines angedockten Schiffes."
+      text: "Solange ein befreundetes Schiff in deinem Feuerwinkel verteidigt, darfst du 1 %FORCE% ausgeben. Falls du das tust, wirft der Angreifer 1 Angriffswürfel weniger."
     },
     "Kare Kun": {
       display_name: "Kare Kun",
-      text: "Solange du Schub gibst, darfst du stattdessen die [1 %TURNLEFT%]- oder [1 %TURNRIGHT%]-Schablone verwenden.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Solange du Schub gibst, darfst du stattdessen die [1 %TURNLEFT%]- oder [1 %TURNRIGHT%]-Schablone verwenden."
     },
     "Kashyyyk Defender": {
       display_name: "Verteidiger von Kashyyyk",
@@ -1220,7 +1220,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Kylo Ren": {
       display_name: "Kylo Ren",
-      text: "Nachdem du verteidigt hast, darfst du 1 %FORCE% ausgeben, um dem Angreifer den Zustand <strong>Ich zeige dir die dunkle Seite</strong> zuzuordnen.%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "Nachdem du verteidigt hast, darfst du 1 %FORCE% ausgeben, um dem Angreifer den Zustand <strong>Ich zeige dir die dunkle Seite</strong> zuzuordnen."
     },
     "L3-37": {
       display_name: "L3-37",
@@ -1228,11 +1228,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "L3-37 (Escape Craft)": {
       display_name: "L3-37 (Escape Craft)",
-      text: "Falls du keine Schilde hast, verringere die Schwierigkeit deiner Drehmanöver (%BANKLEFT% und %BANKRIGHT%) .%LINEBREAK%<strong>Co-Pilot:</strong> Solange du angedockt bist, hat dein Träger-Schiff deine Piloten-Fähigkeit zusätzlich zu seiner eigenen."
+      text: "Falls du keine Schilde hast, verringere die Schwierigkeit deiner Drehmanöver (%BANKLEFT% und %BANKRIGHT%) ."
     },
     "Laetin A'shera": {
       display_name: "Laetin A’shera",
-      text: "Nachdem du verteidigt oder einen Angriff durchgeführt hast, falls der Angriff verfehlt hat, erhalte 1 Ausweichmarker.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Nachdem du verteidigt oder einen Angriff durchgeführt hast, falls der Angriff verfehlt hat, erhalte 1 Ausweichmarker."
     },
     "Lando Calrissian": {
       display_name: "Lando Calrissian",
@@ -1244,7 +1244,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Lando Calrissian (Scum) (Escape Craft)": {
       display_name: "Lando Calrissian (Scum) (Escape Craft)",
-      text: "Nachdem du Würfel geworfen hast, falls du nicht gestresst bist, darfst du 1 Stressmarker erhalten um alle deine Leerseiten neu zu werfen.%LINEBREAK%<strong>Co-Pilot:</strong> Solange du angedockt bist, hat dein Träger-Schiff deine Piloten-Fähigkeit zusätzlich zu seiner eigenen."
+      text: "Nachdem du Würfel geworfen hast, falls du nicht gestresst bist, darfst du 1 Stressmarker erhalten um alle deine Leerseiten neu zu werfen."
     },
     "Latts Razzi": {
       display_name: "Latts Razzi",
@@ -1256,7 +1256,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Lieutenant Bastian": {
       display_name: "Lieutenant Bastian",
-      text: "Nachdem einem Schiff in Reichweite 1-2 eine Schadenskarte zugeteilt worden ist, darfst du jenes Schiff als Ziel erfassen.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Nachdem einem Schiff in Reichweite 1-2 eine Schadenskarte zugeteilt worden ist, darfst du jenes Schiff als Ziel erfassen."
     },
     "Lieutenant Blount": {
       display_name: "Lieutenant Blount",
@@ -1264,7 +1264,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Lieutenant Dormitz": {
       display_name: "Lieutenant Dormitz",
-      text: "<strong>Aufbau</strong>: Nachdem du platziert worden bist, können andere befreundete Schiffe irgendwo auf der Spielfläche in Reichweite 0-2 von dir platziert werden.%LINEBREAK%<strong>Gekoppelte Geschützbatterie:</strong> Solange du einen %CANNON%-Angriff durchführst, wirf 1 zusätzlichen Würfel."
+      text: "<strong>Aufbau</strong>: Nachdem du platziert worden bist, können andere befreundete Schiffe irgendwo auf der Spielfläche in Reichweite 0-2 von dir platziert werden."
     },
     "Lieutenant Karsabi": {
       display_name: "Lieutenant Karsabi",
@@ -1284,7 +1284,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Lieutenant Tavson": {
       display_name: "Lieutenant Tavson",
-      text: "Nachdem du Schaden erlitten hast, darfst du 1 %CHARGE% ausgeben, um eine Aktion durchzuführen.%LINEBREAK%<strong>Gekoppelte Geschützbatterie:</strong> Solange du einen %CANNON%-Angriff durchführst, wirf 1 zusätzlichen Würfel."
+      text: "Nachdem du Schaden erlitten hast, darfst du 1 %CHARGE% ausgeben, um eine Aktion durchzuführen."
     },
     "Logistics Division Pilot": {
       display_name: "Pilot der Logistikdivision",
@@ -1296,7 +1296,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Lothal Rebel": {
       display_name: "Rebell von Lothal",
-      text: "<i class = flavor_text>Der VCX-100 ist ein weiteres Erfolgsmodell der Corellianischen Ingenieursgesellschaft, geräumiger und mit mehr Ausstattungsoptionen als die beliebte YT-Serie.</i>%LINEBREAK%<strong>Heckgeschütz:</strong> Solange du ein angedocktes Schiff hast, hast du eine %REARARC%-Primärwaffe mit einem Angriffswert in Höhe des Angriffswertes der %FRONTARC%-Primärwaffe deines angedockten Schiffes."
+      text: "<i class = flavor_text>Der VCX-100 ist ein weiteres Erfolgsmodell der Corellianischen Ingenieursgesellschaft, geräumiger und mit mehr Ausstattungsoptionen als die beliebte YT-Serie.</i>"
     },
     "Lowhhrick": {
       display_name: "Lowhhrick",
@@ -1308,11 +1308,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Luminara Unduli": {
       display_name: "Luminara Unduli",
-      text: "Solange ein befreundetes Schiff in Reichweite 0-2 verteidigt, falls es nicht im %BULLSEYEARC% des Angreifers ist, darfst du 1 %FORCE% ausgeben. Falls du das tust, ändere 1 %CRIT%-Ergebnis in ein %HIT%-Ergebnis oder 1%HIT%-Ergebnis in ein %FOCUS%-Ergebnis. %LINEBREAK%<strong>Präzisionssteuerung:</strong> Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."
+      text: "Solange ein befreundetes Schiff in Reichweite 0-2 verteidigt, falls es nicht im %BULLSEYEARC% des Angreifers ist, darfst du 1 %FORCE% ausgeben. Falls du das tust, ändere 1 %CRIT%-Ergebnis in ein %HIT%-Ergebnis oder 1%HIT%-Ergebnis in ein %FOCUS%-Ergebnis. "
     },
     "L'ulo L'ampar": {
       display_name: "L’ulo L’ampar",
-      text: "Solange du verteidigst oder einen Primärangriff durchführst, falls du gestresst bist, <b>musst</b> du 1 Verteidigungswürfel weniger oder 1 zusätzlichen Angriffswürfel werfen.%LINEBREAK%<strong>Optimierte Gyrostabilisatoren:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen."
+      text: "Solange du verteidigst oder einen Primärangriff durchführst, falls du gestresst bist, <b>musst</b> du 1 Verteidigungswürfel weniger oder 1 zusätzlichen Angriffswürfel werfen."
     },
     "Maarek Stele": {
       display_name: "Maarek Stele",
@@ -1320,7 +1320,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Mace Windu": {
       display_name: "Mace Windu",
-      text: "Nachdem du ein rotes Manöver vollständig ausgeführt hast, stelle 1 %FORCE% wieder her. %LINEBREAK%<strong>Präzisionssteuerung:</strong> Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."
+      text: "Nachdem du ein rotes Manöver vollständig ausgeführt hast, stelle 1 %FORCE% wieder her. "
     },
     "Magva Yarro": {
       display_name: "Magva Yarro",
@@ -1328,15 +1328,15 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Major Rhymer": {
       display_name: "Major Rhymer",
-      text: "Solange du einen %TORPEDO%- oder %MISSILE%-Angriff durchführst, darfst du die Reichweitenbedingung um 1 erhöhen oder verringern, bis zu einem Limit von 0-3. %LINEBREAK%<strong>Wendiger Bomber:</strong> Falls du unter Verwendung einer %STRAIGHT%-Schablone ein Gerät abwerfen würdest, darfst du stattdessen eine %BANKLEFT%- oder %BANKRIGHT%-Schablone derselben Geschwindigkeit verwenden."
+      text: "Solange du einen %TORPEDO%- oder %MISSILE%-Angriff durchführst, darfst du die Reichweitenbedingung um 1 erhöhen oder verringern, bis zu einem Limit von 0-3. "
     },
     "Major Stridan": {
       display_name: "Major Stridan",
-      text: "Solange du koordinierst oder den Effekt 1 deiner Aufwertungen abhandelst, darfst du befreundete Schiffe in Reichweite 2-3 behandeln, als wären sie in Reichweite 0 oder Reichweite 1.%LINEBREAK%<strong>Gekoppelte Geschützbatterie:</strong> Solange du einen %CANNON%-Angriff durchführst, wirf 1 zusätzlichen Würfel."
+      text: "Solange du koordinierst oder den Effekt 1 deiner Aufwertungen abhandelst, darfst du befreundete Schiffe in Reichweite 2-3 behandeln, als wären sie in Reichweite 0 oder Reichweite 1."
     },
     "Major Vermeil": {
       display_name: "Major Vermeil",
-      text: "Solange du einen Angriff durchführst, falls der Verteidiger keine grünen Marker hat, darfst du 1 deiner Leerseiten- oder %FOCUS%-Ergebnisse in ein %HIT%-Ergebnis ändern. %LINEBREAK%<strong>Adaptive Querruder:</strong> Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du ein weißes [1 %BANKLEFT%]-, [1 %STRAIGHT%]- oder [1 %BANKRIGHT%]-Manöver ausführen."
+      text: "Solange du einen Angriff durchführst, falls der Verteidiger keine grünen Marker hat, darfst du 1 deiner Leerseiten- oder %FOCUS%-Ergebnisse in ein %HIT%-Ergebnis ändern. %LINEBREAK% <i>Errata: „oder“ statt „/“ (1. Edition)</i>"
     },
     "Major Vynder": {
       display_name: "Major Vynder",
@@ -1348,11 +1348,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Mining Guild Sentry": {
       display_name: "Wachposten der Minengilde",
-      text: "<i class = flavor_text>Im Rahmen ihrer Kooperation mit dem Imperium erhält die Minengilde modifizierte TIE/ln-Jäger zum Schutz ihrer Anlagen. Aus den Stabilisatoren dieser Schiffe wurden Solarzellen entfernt, um das Sichtfeld des Piloten zu vergrößern. Darüber hinaus profitieren die Firmenpiloten von einem deutlich umfangreicheren Lebenserhaltungssystem. </i>%LINEBREAK%<strong>Stabilisatorkerbe:</strong> Solange du dich bewegst, ignorierst du Asteroiden."
+      text: "<i class = flavor_text>Im Rahmen ihrer Kooperation mit dem Imperium erhält die Minengilde modifizierte TIE/ln-Jäger zum Schutz ihrer Anlagen. Aus den Stabilisatoren dieser Schiffe wurden Solarzellen entfernt, um das Sichtfeld des Piloten zu vergrößern. Darüber hinaus profitieren die Firmenpiloten von einem deutlich umfangreicheren Lebenserhaltungssystem. </i>"
     },
     "Mining Guild Surveyor": {
       display_name: "Rohstoffsucher der Minengilde",
-      text: "<i class = flavor_text>Da die Bauprojekte des Imperiums unglaubliche Mengen an Rohmaterial verschlingen, sucht die Minengilde aggressiv nach Vorkommen von Doonium-Erz und beutet neu entdeckte Adern auf Batonn, Lothal und Umbara gnadenlos aus.</i>%LINEBREAK%<strong>Stabilisatorkerbe:</strong> Solange du dich bewegst, ignorierst du Asteroiden."
+      text: "<i class = flavor_text>Da die Bauprojekte des Imperiums unglaubliche Mengen an Rohmaterial verschlingen, sucht die Minengilde aggressiv nach Vorkommen von Doonium-Erz und beutet neu entdeckte Adern auf Batonn, Lothal und Umbara gnadenlos aus.</i>"
     },
     "Miranda Doni": {
       display_name: "Miranda Doni",
@@ -1364,7 +1364,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Nien Nunb": {
       display_name: "Nien Nunb",
-      text: "Nachdem du einen Stressmarker erhalten hast, falls ein feindliches Schiff in deinem %FRONTARC% in Reichweite 0-1 ist, darfst du jenen Stressmarker entfernen.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Nachdem du einen Stressmarker erhalten hast, falls ein feindliches Schiff in deinem %FRONTARC% in Reichweite 0-1 ist, darfst du jenen Stressmarker entfernen."
     },
     "Nodin Chavdri": {
       display_name: "Nodin Chavdri",
@@ -1376,7 +1376,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Norra Wexley": {
       display_name: "Norra Wexley",
-      text: "Solange du verteidigst, falls ein feindliches Schiff in Reichweite 0-1 ist, füge 1 %EVADE%-Ergebnis zu deinen Würfelergebnissen hinzu."
+      text: "Solange du verteidigst, falls ein feindliches Schiff in Reichweite 0-1 ist, füge 1 %EVADE%-Ergebnis zu deinen Würfelergebnissen hinzu. %LINEBREAK% <i>Errata: „du darfst“ gestrichen</i>"
     },
     "Nu Squadron Pilot": {
       display_name: "Pilot der Nu-Staffel",
@@ -1388,7 +1388,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Obi-Wan Kenobi": {
       display_name: "Obi-Wan Kenobi",
-      text: "Nachdem ein befreundetes Schiff in Reichweite 0-2 einen Fokusmarker ausgegeben hat, darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält jenes Schiff 1 Fokusmarker. %LINEBREAK%<strong>Präzisionssteuerung:</strong> Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."
+      text: "Nachdem ein befreundetes Schiff in Reichweite 0-2 einen Fokusmarker ausgegeben hat, darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält jenes Schiff 1 Fokusmarker. "
     },
     "Obsidian Squadron Pilot": {
       display_name: "Pilot der Obsidian-Staffel",
@@ -1404,7 +1404,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Omega Squadron Expert": {
       display_name: "Elitepilot der Omega-Staffel",
-      text: "<i class = flavor_text>Der TIE/se ist ein vielseitiger Jäger, der mit seinen spezialisierten Waffen und Bordsystemen bestens für die Einsätze der Spezialeinheiten ausgerüstet ist.</i>%LINEBREAK%<strong>Schwerer Geschützturm:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du <b>musst</b> die %FRONTARC%-Voraussetzung deiner ausgerüsteten %MISSILE%-Aufwertungen behandeln, als wäre sie %SINGLETURRETARC%."
+      text: "<i class = flavor_text>Der TIE/se ist ein vielseitiger Jäger, der mit seinen spezialisierten Waffen und Bordsystemen bestens für die Einsätze der Spezialeinheiten ausgerüstet ist.</i>"
     },
     "Omicron Group Pilot": {
       display_name: "Pilot der Omicron-Gruppe",
@@ -1420,7 +1420,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Outer Rim Pioneer": {
       display_name: "Pionier aus dem Outer Rim",
-      text: "Befreundete Schiffe in Reichweite 0-1 können Angriffe in Reichweite 0 zu Hindernissen durchführen.%LINEBREAK%<strong>Co-Pilot:</strong> Solange du angedockt bist, hat dein Träger-Schiff deine Piloten-Fähigkeit zusätzlich zu seiner eigenen."
+      text: "Befreundete Schiffe in Reichweite 0-1 können Angriffe in Reichweite 0 zu Hindernissen durchführen."
     },
     "Outer Rim Smuggler": {
       display_name: "Schmuggler aus dem ",
@@ -1428,11 +1428,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Overseer Yushyn": {
       display_name: "Raffineriebetreiber Yushyn",
-      text: "Bevor ein befreundetes Schiff in Reichweite 1 einen Entwaffnet-Marker erhalten würde, falls jenes Schiff nicht gestresst ist, darfst du 1 %CHARGE% ausgeben. Falls du das tust, erhält jenes Schiff stattdessen 1 Stressmarker.%LINEBREAK%<strong>Stabilisatorkerbe:</strong> Solange du dich bewegst, ignorierst du Asteroiden."
+      text: "Bevor ein befreundetes Schiff in Reichweite 1 einen Entwaffnet-Marker erhalten würde, falls jenes Schiff nicht gestresst ist, darfst du 1 %CHARGE% ausgeben. Falls du das tust, erhält jenes Schiff stattdessen 1 Stressmarker."
     },
     "Padmé Amidala": {
       display_name: "Padmé Amidala",
-      text: "Solange ein feindliches Schiff in deinem %FRONTARC% verteidigt oder einen Angriff durchführt, kann jenes Schiff nur 1&nbsp;%FOCUS% -Ergebnis modifizieren (andere Ergebnisse können weiterhin modifiziert werden).%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%&nbsp;-Aktion durchführen."
+      text: "Solange ein feindliches Schiff in deinem %FRONTARC% verteidigt oder einen Angriff durchführt, kann jenes Schiff nur 1&nbsp;%FOCUS% -Ergebnis modifizieren (andere Ergebnisse können weiterhin modifiziert werden)."
     },
     "Palob Godalhi": {
       display_name: "Palob Godalhi",
@@ -1452,27 +1452,27 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Petranaki Arena Ace": {
       display_name: "Ass der Petranaki-Arena",
-      text: "<i class = flavor_text>Die Petranaki-Arena ist ein gewaltiges Bauwerk auf dem Planeten Geonosis und der Ort, an dem die erste Schlacht der Klonkriege geschlagen wurde.</i> %LINEBREAK%<strong>Fangstrahl-Zielsystem:</strong> Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC%rotieren. Nachdem du ein Manöver ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine&nbsp;%ROTATEARC%&nbsp;-Aktion durchzuführen."
+      text: "<i class = flavor_text>Die Petranaki-Arena ist ein gewaltiges Bauwerk auf dem Planeten Geonosis und der Ort, an dem die erste Schlacht der Klonkriege geschlagen wurde.</i> "
     },
     "Petty Officer Thanisson": {
       display_name: "Unteroffizier Thanisson",
-      text: "Während der Aktivierungs- oder Kampfphase, nachdem ein Schiff in deinem %FRONTARC% in Reichweite 0-2 1 Stressmarker erhalten hat, darfst du 1 %CHARGE% ausgeben. Falls du das tust, erhält jenes Schiff 1 Fangstrahlmarker.%LINEBREAK%<strong>Gekoppelte Geschützbatterie:</strong> Solange du einen %CANNON%-Angriff durchführst, wirf 1 zusätzlichen Würfel."
+      text: "Während der Aktivierungs- oder Kampfphase, nachdem ein Schiff in deinem %FRONTARC% in Reichweite 0-2 1 Stressmarker erhalten hat, darfst du 1 %CHARGE% ausgeben. Falls du das tust, erhält jenes Schiff 1 Fangstrahlmarker."
     },
     "Phoenix Squadron Pilot": {
       display_name: "Pilot der Phönix-Staffel",
-      text: "<i class = flavor_text>Unter der Führung von Commander Jun Sato stellen sich die tapferen, aber unerfahrenen Piloten der Phönix-Staffel dem aussichtslosen Kampf gegen das Galaktische Imperium.</i>%LINEBREAK%<strong>Schwenkbare Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%-Aktion durchführen."
+      text: "<i class = flavor_text>Unter der Führung von Commander Jun Sato stellen sich die tapferen, aber unerfahrenen Piloten der Phönix-Staffel dem aussichtslosen Kampf gegen das Galaktische Imperium.</i>"
     },
     "Planetary Sentinel": {
       display_name: "Planetarer Wachposten",
-      text: "<i class = flavor_text>Zum Schutz seiner vielen militärischen Einrichtungen benötigt das Imperium eine mobile und wachsame Verteidigungsstreitmacht.</i>%LINEBREAK% <strong>Adaptive Querruder:</strong> Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du ein weißes [1 %BANKLEFT%]-, [1 %STRAIGHT%]- oder [1 %BANKRIGHT%]-Manöver ausführen."
+      text: "<i class = flavor_text>Zum Schutz seiner vielen militärischen Einrichtungen benötigt das Imperium eine mobile und wachsame Verteidigungsstreitmacht.</i>"
     },
     "Plo Koon": {
       display_name: "Plo Koon",
-      text: "Zu Beginn der Kampfphase darfst du 1 %FORCE% ausgeben und ein anderes befreundetes Schiff in Reichweite 0-2 wählen. Falls du das tust, darfst du 1 grünen Marker auf es transferieren oder 1 orangefarbenen Marker von ihm auf dich transferieren. %LINEBREAK%<strong>Präzisionssteuerung:</strong> Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."
+      text: "Zu Beginn der Kampfphase darfst du 1 %FORCE% ausgeben und ein anderes befreundetes Schiff in Reichweite 0-2 wählen. Falls du das tust, darfst du 1 grünen Marker auf es transferieren oder 1 orangefarbenen Marker von ihm auf dich transferieren. "
     },
     "Poe Dameron": {
       display_name: "Poe Dameron",
-      text: "Nachdem du eine Aktion durchgeführt hast, darfst du 1 %CHARGE% ausgeben, um eine weiße Aktion durchzuführen, wobei du sie behandelst, als wäre sie rot.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Nachdem du eine Aktion durchgeführt hast, darfst du 1 %CHARGE% ausgeben, um eine weiße Aktion durchzuführen, wobei du sie behandelst, als wäre sie rot."
     },
     "Prince Xizor": {
       display_name: "Prinz Xizor",
@@ -1480,11 +1480,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Quinn Jast": {
       display_name: "Quinn Jast",
-      text: "Zu Beginn der Kampfphase darfst du 1 Entwaffnet-Marker erhalten, um 1 %CHARGE% von 1 deiner ausgerüsteten Aufwertungen wiederherzustellen.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Zu Beginn der Kampfphase darfst du 1 Entwaffnet-Marker erhalten, um 1 %CHARGE% von 1 deiner ausgerüsteten Aufwertungen wiederherzustellen."
     },
     "R2-D2": {
       display_name: "R2-D2",
-      text: "Zu Beginn der Kampfphase, falls ein feindliches Schiff in deinem %REARARC% ist, erhalte 1&nbsp;Berechnungsmarker.%LINEBREAK%%LINEBREAK%<strong>Gepanzerte Hülle:</strong> Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."
+      text: "Zu Beginn der Kampfphase, falls ein feindliches Schiff in deinem %REARARC% ist, erhalte 1&nbsp;Berechnungsmarker.%LINEBREAK%"
     },
     "Rear Admiral Chiraneau": {
       display_name: "Konteradmiral Chiraneau",
@@ -1496,11 +1496,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Red Squadron Bomber": {
       display_name: "Bomber der Roten Staffel",
-      text: "<i class = flavor_text>Bei der Schlacht von Geonosis gab die rote Staffel den TFAT-Kanonenbooten Feuerschutz, damit sie sicher die Oberfläche erreichten.</i>%LINEBREAK%<strong>Gepanzerte Hülle:</strong> Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."
+      text: "<i class = flavor_text>Bei der Schlacht von Geonosis gab die rote Staffel den TFAT-Kanonenbooten Feuerschutz, damit sie sicher die Oberfläche erreichten.</i>"
     },
     "Red Squadron Expert": {
       display_name: "Elitepilot der roten Staffel",
-      text: "<i class = flavor_text>Hauptsächlich besteht das Sternenjägerkorps des Widerstands aus jungen Bürgern der Neuen Republik. Verstärkt werden sie von Veteranen des Galaktischen Bürgerkriegs, die fest entschlossen sind, zu beenden, was damals begonnen wurde.</i>%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "<i class = flavor_text>Hauptsächlich besteht das Sternenjägerkorps des Widerstands aus jungen Bürgern der Neuen Republik. Verstärkt werden sie von Veteranen des Galaktischen Bürgerkriegs, die fest entschlossen sind, zu beenden, was damals begonnen wurde.</i>"
     },
     "Red Squadron Veteran": {
       display_name: "Veteran der roten Staffel",
@@ -1524,7 +1524,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Ric Olié": {
       display_name: "Ric Olié",
-      text: "Solange du verteidigst oder einen Primärangriff durchführst, falls die Geschwindigkeit deines aufgedeckten Manövers höher als die des feindlichen Schiffes ist, wirf 1 &nbsp;zusätzlichen Würfel.%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%&nbsp;-Aktion durchführen."
+      text: "Solange du verteidigst oder einen Primärangriff durchführst, falls die Geschwindigkeit deines aufgedeckten Manövers höher als die des feindlichen Schiffes ist, wirf 1 &nbsp;zusätzlichen Würfel."
     },
     "Roark Garnet": {
       display_name: "Roark Garnet",
@@ -1540,11 +1540,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Saber Squadron Ace": {
       display_name: "Fliegerass der Saber-Staffel",
-      text: "<i class = flavor_text>Angeführt von Baron Soontir Fel, gehören die Piloten der Saber-Staffel zur absoluten Elite des Imperiums. Ihre TIE-Abfangjäger werden mit blutroten Streifen markiert, um Piloten mit mindestens zehn bestätigten Abschüssen zu kennzeichnen.</i>%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "<i class = flavor_text>Angeführt von Baron Soontir Fel, gehören die Piloten der Saber-Staffel zur absoluten Elite des Imperiums. Ihre TIE-Abfangjäger werden mit blutroten Streifen markiert, um Piloten mit mindestens zehn bestätigten Abschüssen zu kennzeichnen.</i>"
     },
     "Sabine Wren": {
       display_name: "Sabine Wren",
-      text: "Bevor du aktiviert wirst, darfst du eine %BARRELROLL%- oder %BOOST%-Aktion durchführen.%LINEBREAK%<strong>Geladen und entsichert:</strong> Solange du angedockt bist, nachdem dein Trägerschiff einen %FRONTARC%-Primärangriff oder %TURRET%-Angriff durchgeführt hat, darf es einen Bonus-%REARARC%-Primärangriff durchführen."
+      text: "Bevor du aktiviert wirst, darfst du eine %BARRELROLL%- oder %BOOST%-Aktion durchführen."
     },
     "Sabine Wren (TIE Fighter)": {
       display_name: "Sabine Wren (TIE Fighter)",
@@ -1556,11 +1556,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Saesee Tiin": {
       display_name: "Saesee Tiin",
-      text: "Nachdem ein befreundetes Schiff in Reichweite 0-2 sein Rad aufgedeckt hat, darfst du 1 %FORCE% ausgeben. Falls du das tust, stelle sein Rad auf ein anderes Manöver derselben Geschwindigkeit und Schwierigkeit ein. %LINEBREAK%<strong>Präzisionssteuerung:</strong> Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."
+      text: "Nachdem ein befreundetes Schiff in Reichweite 0-2 sein Rad aufgedeckt hat, darfst du 1 %FORCE% ausgeben. Falls du das tust, stelle sein Rad auf ein anderes Manöver derselben Geschwindigkeit und Schwierigkeit ein. "
     },
     "Sarco Plank": {
       display_name: "Sarco Plank",
-      text: "Solange du verteidigst, darfst du deinen Wendigkeitswert so behandeln, als würde er der Geschwindigkeit des Manövers entsprechen, das du in dieser Runde ausgeführt hast.%LINEBREAK%<strong>Schlepperstrahl:</strong> <strong>Aktion:</strong> Wähle ein Schiff in deinem %FRONTARC% in Reichweite 1. Jenes Schiff erhält 1 Fangstrahlmarker oder 2 Fangstrahlmarker, falls es in deinem %BULLSEYEARC% in Reichweite 1 ist."
+      text: "Solange du verteidigst, darfst du deinen Wendigkeitswert so behandeln, als würde er der Geschwindigkeit des Manövers entsprechen, das du in dieser Runde ausgeführt hast."
     },
     "Saw Gerrera": {
       display_name: "Saw Gerrera",
@@ -1568,23 +1568,23 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Scarif Base Pilot": {
       display_name: "Pilot der Scarif-Basis",
-      text: "<i class = flavor_text>Der TIE-Schnitter war für den Transport von Elitetruppen in besonders hart umkämpfte Gefechtszonen konzipiert. Berühmt wurde er in der Schlacht von Scarif, wo er Direktor Krennics gefürchtete Todestruppen transportierte.</i>%LINEBREAK%<strong>Adaptive Querruder:</strong> Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du ein weißes [1 %BANKLEFT%]-, [1 %STRAIGHT%]- oder [1 %BANKRIGHT%]-Manöver ausführen."
+      text: "<i class = flavor_text>Der TIE-Schnitter war für den Transport von Elitetruppen in besonders hart umkämpfte Gefechtszonen konzipiert. Berühmt wurde er in der Schlacht von Scarif, wo er Direktor Krennics gefürchtete Todestruppen transportierte.</i>"
     },
     "Scimitar Squadron Pilot": {
       display_name: "Pilot der Scimitar-Staffel",
-      text: "<i class = flavor_text>Der TIE/sa ist außergewöhnlich wendig für einen Bomber und kann sein Ziel mit absoluter Präzision anvisieren, um den Kollateralschaden zu minimieren. </i>%LINEBREAK%<strong>Wendiger Bomber:</strong> Falls du unter Verwendung einer %STRAIGHT%-Schablone ein Gerät abwerfen würdest, darfst du stattdessen eine %BANKLEFT%- oder %BANKRIGHT%-Schablone derselben Geschwindigkeit verwenden."
+      text: "<i class = flavor_text>Der TIE/sa ist außergewöhnlich wendig für einen Bomber und kann sein Ziel mit absoluter Präzision anvisieren, um den Kollateralschaden zu minimieren. </i>"
     },
     "Separatist Bomber": {
       display_name: "Separatistenbomber",
-      text: "<i class = flavor_text>Die Droidenarmeen der Separatisten empfinden kein Mitleid und vermeiden daher keine Kollateralschäden an der Zivilbevölkerung.</i>%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1&nbsp;Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1&nbsp;%FOCUS%-Ergebnis in ein %EVADE% oder %HIT%-Ergebnis zu ändern."
+      text: "<i class = flavor_text>Die Droidenarmeen der Separatisten empfinden kein Mitleid und vermeiden daher keine Kollateralschäden an der Zivilbevölkerung.</i>"
     },
     "Separatist Drone": {
       display_name: "Separatistendrohne",
-      text: "<i class = flavor_text>Je weiter die Klonkriege eskalieren, desto mehr setzen die Separatisten auf die Entwicklung neuartiger Droidenjäger und Taktikdroiden, die sie steuern.</i>%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1 %FOCUS%-Ergebnis in ein %EVADE%- oder %HIT%-Ergebnis zu ändern."
+      text: "<i class = flavor_text>Je weiter die Klonkriege eskalieren, desto mehr setzen die Separatisten auf die Entwicklung neuartiger Droidenjäger und Taktikdroiden, die sie steuern.</i>"
     },
     "Serissu": {
       display_name: "Serissu",
-      text: "Solange ein befreundetes Schiff in Reichweite 0-1 verteidigt, darf es 1 seiner Würfel neu werfen.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Solange ein befreundetes Schiff in Reichweite 0-1 verteidigt, darf es 1 seiner Würfel neu werfen."
     },
     "Seventh Sister": {
       display_name: "Siebte Schwester",
@@ -1596,7 +1596,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Shadow Squadron Veteran": {
       display_name: "Veteran der Schatten-Staffel",
-      text: "<i class = flavor_text>Die Schatten-Staffel, ausgebildet von Jedi-Fliegerass Anakin Skywalker, ist seit Beginn der Klonkriege im Einsatz und hat bei Kadavo und gegen General Grievous‘ Flaggschiff, die Malevolencebedeutende Siege errungen.</i>%LINEBREAK%<strong>Gepanzerte Hülle:</strong> Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."
+      text: "<i class = flavor_text>Die Schatten-Staffel, ausgebildet von Jedi-Fliegerass Anakin Skywalker, ist seit Beginn der Klonkriege im Einsatz und hat bei Kadavo und gegen General Grievous‘ Flaggschiff, die Malevolencebedeutende Siege errungen.</i>"
     },
     "Shadowport Hunter": {
       display_name: "Schattenhafen-Jäger",
@@ -1612,11 +1612,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Sienar-Jaemus Engineer": {
       display_name: "Ingenieur von Sienar-Jaemus",
-      text: "<i class = flavor_text>In einer geheimen Forschungseinrichtung in den Unbekannten Regionen entwickelte Sienar-Jaemus Flottensysteme einen Nachfolger des vielgerühmten TIE-Abwehrjägers, den hochmodernen TIE-Dämpfer.</i>%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "<i class = flavor_text>In einer geheimen Forschungseinrichtung in den Unbekannten Regionen entwickelte Sienar-Jaemus Flottensysteme einen Nachfolger des vielgerühmten TIE-Abwehrjägers, den hochmodernen TIE-Dämpfer.</i>"
     },
     "Sigma Squadron Ace": {
       display_name: "Fliegerass der Sigma-Staffel",
-      text: "<i class = flavor_text>Der TIE-Phantom ist nicht nur mit Schilden und einem Hyperantrieb, sondern auch mit fünf Laserkanonen ausgestattet, was ihn zu einem der schlagkräftigsten Jäger des Imperiums macht.</i>%LINEBREAK%<strong>Stygium-Gitter:</strong> Nachdem du dich enttarnt hast, darfst du eine %EVADE%-Aktion durchführen. Zu Beginn der Endphase darfst du 1 Ausweichmarker ausgeben, um 1 Tarnungsmarker zu erhalten."
+      text: "<i class = flavor_text>Der TIE-Phantom ist nicht nur mit Schilden und einem Hyperantrieb, sondern auch mit fünf Laserkanonen ausgestattet, was ihn zu einem der schlagkräftigsten Jäger des Imperiums macht.</i>"
     },
     "Skakoan Ace": {
       display_name: "Skakoanisches Fliegerass",
@@ -1632,7 +1632,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Soontir Fel": {
       display_name: "Soontir Fel",
-      text: "Zu Beginn der Kampfphase, falls ein feindliches Schiff in deinem %BULLSEYEARC% ist, erhalte 1 Fokusmarker.%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "Zu Beginn der Kampfphase, falls ein feindliches Schiff in deinem %BULLSEYEARC% ist, erhalte 1 Fokusmarker."
     },
     "Spice Runner": {
       display_name: "Spiceschmuggler",
@@ -1644,23 +1644,23 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Stalgasin Hive Guard": {
       display_name: "Schwarmgarde der Stalgasin-Kolonie ",
-      text: "<i class = flavor_text>Speziell auf die physiologischen Besonderheiten der Geonosianer angepasst, kann der Sternenjäger der Nantex-Klasse Manöver fliegen, welche die meisten anderen Schiffe - und ihre Piloten - auseinanderreißen würden.</i> %LINEBREAK%<strong>Fangstrahl-Zielsystem:</strong> Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC%rotieren. Nachdem du ein Manöver ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine&nbsp;%ROTATEARC%&nbsp;-Aktion durchzuführen."
+      text: "<i class = flavor_text>Speziell auf die physiologischen Besonderheiten der Geonosianer angepasst, kann der Sternenjäger der Nantex-Klasse Manöver fliegen, welche die meisten anderen Schiffe - und ihre Piloten - auseinanderreißen würden.</i> "
     },
     "Starkiller Base Pilot": {
       display_name: "Pilot der Starkiller-Basis",
-      text: "<i class = flavor_text>Das Kommandoshuttle der Ypsilon-Klasse dient als mobile Einsatzbasis für viele leitende Offiziere und Agenten der Ersten Ordnung. Sie nutzen seine leistungsstarken Sensoren und Kommunikationsanlagen, um die Verbreitung von Angst und Schrecken in der Galaxis zu koordinieren.</i>%LINEBREAK%<strong>Gekoppelte Geschützbatterie:</strong> Solange du einen %CANNON%-Angriff durchführst, wirf 1 zusätzlichen Würfel."
+      text: "<i class = flavor_text>Das Kommandoshuttle der Ypsilon-Klasse dient als mobile Einsatzbasis für viele leitende Offiziere und Agenten der Ersten Ordnung. Sie nutzen seine leistungsstarken Sensoren und Kommunikationsanlagen, um die Verbreitung von Angst und Schrecken in der Galaxis zu koordinieren.</i>"
     },
     "Storm Squadron Ace": {
       display_name: "Fliegerass der Storm-Staffel",
-      text: "<i class = flavor_text>Der TIE-x1-Turbojäger wurde nur in geringer Stückzahl produziert, dafür wurden viele seiner Innovationen bei der Entwicklung von Sienars nächstem TIE-Modell, dem TIE-Abfangjäger, übernommen.</i>%LINEBREAK%<strong>Verbesserter Zielcomputer:</strong> Solange du einen Primärangriff gegen einen Verteidiger durchführst, den du als Ziel erfasst hast, wirf 1 zusätzlichen Angriffswürfel und ändere 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis."
+      text: "<i class = flavor_text>Der TIE-x1-Turbojäger wurde nur in geringer Stückzahl produziert, dafür wurden viele seiner Innovationen bei der Entwicklung von Sienars nächstem TIE-Modell, dem TIE-Abfangjäger, übernommen.</i>"
     },
     "Sun Fac": {
       display_name: "Sun Fac",
-      text: "Solange du einen Primärangriff durchführst, falls der Verteidiger gefangen ist, wirf 1 zusätzlichen Angriffswürfel.%LINEBREAK%<strong>Fangstrahl-Zielsystem:</strong> Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC%rotieren. Nachdem du ein Manöver ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine&nbsp;%ROTATEARC%&nbsp;-Aktion durchzuführen."
+      text: "Solange du einen Primärangriff durchführst, falls der Verteidiger gefangen ist, wirf 1 zusätzlichen Angriffswürfel."
     },
     "Sunny Bounder": {
       display_name: "Sunny Bounder",
-      text: "Solange du verteidigst oder einen Angriff durchführst, nachdem du deine Würfel geworfen oder neu geworfen hast, falls du auf jedem deiner Würfel dasselbe Ergebnis hast, darfst du 1 passendes Ergebnis hinzufügen.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Solange du verteidigst oder einen Angriff durchführst, nachdem du deine Würfel geworfen oder neu geworfen hast, falls du auf jedem deiner Würfel dasselbe Ergebnis hast, darfst du 1 passendes Ergebnis hinzufügen."
     },
     "TN-3465": {
       display_name: "TN-3465",
@@ -1672,7 +1672,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Tallissan Lintra": {
       display_name: "Tallissan Lintra",
-      text: "Solange ein feindliches Schiff in deinem %BULLSEYEARC% einen Angriff durchführt, darfst du 1 %CHARGE% ausgeben. Falls du das tust, wirft der Verteidiger 1 zusätzlichen Würfel.%LINEBREAK%<strong>Optimierte Gyrostabilisatoren:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen."
+      text: "Solange ein feindliches Schiff in deinem %BULLSEYEARC% einen Angriff durchführt, darfst du 1 %CHARGE% ausgeben. Falls du das tust, wirft der Verteidiger 1 zusätzlichen Würfel."
     },
     "Talonbane Cobra": {
       display_name: "Talonbane Cobra",
@@ -1680,11 +1680,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Tansarii Point Veteran": {
       display_name: "Veteran von Tansarii ",
-      text: "<i class = flavor_text>Mit dem Abschuss von Talonbane Cobra, einem Spitzenpiloten der Schwarzen Sonne, entschieden die Car’das-Schmuggler die Schlacht um Tansarii Point für sich. Bis heute sind die Veteranen dieses Scharmützels im ganzen Sektor hochangesehen. </i>%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "<i class = flavor_text>Mit dem Abschuss von Talonbane Cobra, einem Spitzenpiloten der Schwarzen Sonne, entschieden die Car’das-Schmuggler die Schlacht um Tansarii Point für sich. Bis heute sind die Veteranen dieses Scharmützels im ganzen Sektor hochangesehen. </i>"
     },
     "Techno Union Bomber": {
       display_name: "Bomber der Techno-Union",
-      text: "<i class = flavor_text>Baktoid Rüstungswerke entwickelte die Hyäne als einen mit den Schwarmtaktiken der Vultures kompatiblen Offensivbomber.</i>%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1&nbsp;%FOCUS%-Ergebnis in ein %EVADE% oder %HIT%-Ergebnis zu ändern."
+      text: "<i class = flavor_text>Baktoid Rüstungswerke entwickelte die Hyäne als einen mit den Schwarmtaktiken der Vultures kompatiblen Offensivbomber.</i>"
     },
     "Tel Trevura": {
       display_name: "Tel Trevura",
@@ -1692,11 +1692,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Temmin Wexley": {
       display_name: "Temmin Wexley",
-      text: "Nachdem du ein Manöver mit Geschwindigkeit 2-4 vollständig ausgeführt hast, darfst du eine %BOOST%-Aktion durchführen.%LINEBREAK%<strong>Waffenaufhängung:</strong> Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+      text: "Nachdem du ein Manöver mit Geschwindigkeit 2-4 vollständig ausgeführt hast, darfst du eine %BOOST%-Aktion durchführen."
     },
     "Tempest Squadron Pilot": {
       display_name: "Pilot der Tornado-Staffel",
-      text: "<i class = flavor_text>Der TIE-Turbojäger war eine Weiterentwicklung der erfolgreichen TIE/ln-Baureihe, zusätzlich ausgestattet mit Deflektorschilden, besseren Waffen, geknickten Solarzellen und einem Hyperantrieb.</i>%LINEBREAK%<strong>Verbesserter Zielcomputer:</strong> Solange du einen Primärangriff gegen einen Verteidiger durchführst, den du als Ziel erfasst hast, wirf 1 zusätzlichen Angriffswürfel und ändere 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis."
+      text: "<i class = flavor_text>Der TIE-Turbojäger war eine Weiterentwicklung der erfolgreichen TIE/ln-Baureihe, zusätzlich ausgestattet mit Deflektorschilden, besseren Waffen, geknickten Solarzellen und einem Hyperantrieb.</i>"
     },
     "Ten Numb": {
       display_name: "Ten Numb",
@@ -1708,11 +1708,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Tomax Bren": {
       display_name: "Tomax Bren",
-      text: "Nachdem du eine %RELOAD%-Aktion durchgeführt hast, darfst du 1 %CHARGE% von 1 deiner ausgerüsteten %TALENT%-Aufwertungskarten wiederherstellen. %LINEBREAK%<strong>Wendiger Bomber:</strong> Falls du unter Verwendung einer %STRAIGHT%-Schablone ein Gerät abwerfen würdest, darfst du stattdessen eine %BANKLEFT%- oder %BANKRIGHT%-Schablone derselben Geschwindigkeit verwenden."
+      text: "Nachdem du eine %RELOAD%-Aktion durchgeführt hast, darfst du 1 %CHARGE% von 1 deiner ausgerüsteten %TALENT%-Aufwertungskarten wiederherstellen. "
     },
     "Torani Kulda": {
       display_name: "Torani Kulda",
-      text: "Nachdem du einen Angriff durchgeführt hast, erleidet jedes feindliche Schiff in deinem %BULLSEYEARC%1 %HIT%-Schaden, es sei denn, es entfernt 1 grünen Marker.%LINEBREAK%<strong>Todsicherer Treffer:</strong> Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, können Verteidigungswürfel nicht unter Verwendung von grünen Markern modifiziert werden."
+      text: "Nachdem du einen Angriff durchgeführt hast, erleidet jedes feindliche Schiff in deinem %BULLSEYEARC%1 %HIT%-Schaden, es sei denn, es entfernt 1 grünen Marker."
     },
     "Torkil Mux": {
       display_name: "Torkil Mux",
@@ -1720,7 +1720,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Trade Federation Drone": {
       display_name: "Drohne der Handelsförderation",
-      text: "<i class = flavor_text>In der Schlacht von Naboo kämpften zahllose Droidenjäger aufseiten der Handelsföderation. Bis heute werden die preisgünstigen Schiffe in den Klonkriegen eingesetzt.</i>%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1 %FOCUS%-Ergebnis in ein %EVADE%- oder %HIT%-Ergebnis zu ändern."
+      text: "<i class = flavor_text>In der Schlacht von Naboo kämpften zahllose Droidenjäger aufseiten der Handelsföderation. Bis heute werden die preisgünstigen Schiffe in den Klonkriegen eingesetzt.</i>"
     },
     "Trandoshan Slaver": {
       display_name: "Trandoshanischer Sklavenjäger",
@@ -1728,11 +1728,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Turr Phennir": {
       display_name: "Turr Phennir",
-      text: "Nachdem du einen Angriff durchgeführt hast, darfst du eine %BARRELROLL%- oder %BOOST%-Aktion durchführen, auch falls du gestresst bist.%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "Nachdem du einen Angriff durchgeführt hast, darfst du eine %BARRELROLL%- oder %BOOST%-Aktion durchführen, auch falls du gestresst bist."
     },
     "Unkar Plutt": {
       display_name: "Unkar Plutt",
-      text: "Zu Beginn der Kampfphase, falls 1 oder mehrere andere Schiffe in Reichweite 0 sind, erhalten du und jedes andere Schiff in Reichweite 0 je 1 Fangstrahlmarker.%LINEBREAK%<strong>Schlepperstrahl:</strong> <strong>Aktion:</strong> Wähle ein Schiff in deinem %FRONTARC% in Reichweite 1. Jenes Schiff erhält 1 Fangstrahlmarker oder 2 Fangstrahlmarker, falls es in deinem %BULLSEYEARC% in Reichweite 1 ist."
+      text: "Zu Beginn der Kampfphase, falls 1 oder mehrere andere Schiffe in Reichweite 0 sind, erhalten du und jedes andere Schiff in Reichweite 0 je 1 Fangstrahlmarker."
     },
     "Valen Rudor": {
       display_name: "Valen Rudor",
@@ -1740,7 +1740,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Ved Foslo": {
       display_name: "Ved Foslo",
-      text: "Solange du ein Manöver ausführst, darfst du stattdessen ein Manöver derselben Flugrichtung und Schwierigkeit, aber einer um 1 höheren oder niedrigeren Geschwindigkeit ausführen.%LINEBREAK%<strong>Verbesserter Zielcomputer:</strong> Solange du einen Primärangriff gegen einen Verteidiger durchführst, den du als Ziel erfasst hast, wirf 1 zusätzlichen Angriffswürfel und ändere 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis."
+      text: "Solange du ein Manöver ausführst, darfst du stattdessen ein Manöver derselben Flugrichtung und Schwierigkeit, aber einer um 1 höheren oder niedrigeren Geschwindigkeit ausführen."
     },
     "Vennie": {
       display_name: "Vennie",
@@ -1768,7 +1768,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Wild Space Fringer": {
       display_name: "Grenzgänger aus dem Wilden Raum",
-      text: "<i class = flavor_text>Serienmäßig bietet der YT-2400 reichlich Laderaum. Allerdings opfern die meisten Besitzer einen Teil davon, um Platz für modifizierte Waffensysteme und extragroße Triebwerke zu schaffen.</i>%LINEBREAK%<strong>Toter Winkel:</strong> Solange du einen Primärangriff in Reichweite 0-1 durchführst, wende den Bonus für Reichweite 0-1 nicht an und wirf 1 Angriffswürfel weniger."
+      text: "<i class = flavor_text>Serienmäßig bietet der YT-2400 reichlich Laderaum. Allerdings opfern die meisten Besitzer einen Teil davon, um Platz für modifizierte Waffensysteme und extragroße Triebwerke zu schaffen.</i>"
     },
     "Wullffwarro": {
       display_name: "Wullffwarro",
@@ -1776,7 +1776,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Zari Bangel": {
       display_name: "Zari Bangel",
-      text: "Du überspringst deinen Schritt „Aktion durchführen“ nicht, nachdem du ein Manöver teilweise ausgeführt hast.%LINEBREAK%<strong>Optimierte Gyrostabilisatoren:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen."
+      text: "Du überspringst deinen Schritt „Aktion durchführen“ nicht, nachdem du ein Manöver teilweise ausgeführt hast."
     },
     "Zealous Recruit": {
       display_name: "Fanatischer Rekrut",
@@ -1784,7 +1784,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Zertik Strom": {
       display_name: "Zertik Strom",
-      text: "Während der Endphase darfst du eine Zielerfassung ausgeben, die du auf einem feindlichen Schiff hast, um 1 der Schadenskarten jenes Schiffes offenzulegen.%LINEBREAK%<strong>Verbesserter Zielcomputer:</strong> Solange du einen Primärangriff gegen einen Verteidiger durchführst, den du als Ziel erfasst hast, wirf 1 zusätzlichen Angriffswürfel und ändere 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis."
+      text: "Während der Endphase darfst du eine Zielerfassung ausgeben, die du auf einem feindlichen Schiff hast, um 1 der Schadenskarten jenes Schiffes offenzulegen."
     },
     "Zeta Squadron Pilot": {
       display_name: "Pilot der Zeta-Staffel",
@@ -1792,7 +1792,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Zeta Squadron Survivor": {
       display_name: "Überlebender der Zeta-Staffel",
-      text: "<i class = flavor_text>Seit ihrer beschämenden Niederlage kämpfen die Piloten der Starkiller-Basis noch erbitterter gegen den Widerstand, um sich zu rehabilitieren.</i>%LINEBREAK%<strong>Schwerer Geschützturm:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du <b>musst</b> die %FRONTARC%-Voraussetzung deiner ausgerüsteten %MISSILE%-Aufwertungen behandeln, als wäre sie %SINGLETURRETARC%."
+      text: "<i class = flavor_text>Seit ihrer beschämenden Niederlage kämpfen die Piloten der Starkiller-Basis noch erbitterter gegen den Widerstand, um sich zu rehabilitieren.</i>"
     },
     "Zuckuss": {
       display_name: "Zuckuss",
@@ -1800,7 +1800,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Avenger"': {
       display_name: "„Avenger“",
-      text: "Nachdem ein anderes befreundetes Schiff zerstört worden ist, darfst du eine Aktion durchführen, auch solange du gestresst bist.%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "Nachdem ein anderes befreundetes Schiff zerstört worden ist, darfst du eine Aktion durchführen, auch solange du gestresst bist."
     },
     '"Axe"': {
       display_name: "„Axe“",
@@ -1808,27 +1808,27 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Backdraft"': {
       display_name: "„Backdraft“",
-      text: "Solange du einen %SINGLETURRETARC%-Primärangriff durchführst, falls der Verteidiger in deinem %REARARC% ist, wirf 1 zusätzlichen Würfel.%LINEBREAK%<strong>Schwerer Geschützturm:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du <b>musst</b> die %FRONTARC%-Voraussetzung deiner ausgerüsteten %MISSILE%-Aufwertungen behandeln, als wäre sie %SINGLETURRETARC%."
+      text: "Solange du einen %SINGLETURRETARC%-Primärangriff durchführst, falls der Verteidiger in deinem %REARARC% ist, wirf 1 zusätzlichen Würfel."
     },
     '"Blackout"': {
       display_name: "„Blackout“",
-      text: "Solange du einen Angriff durchführst, falls der Angriff durch ein Hindernis versperrt ist, wirft der Verteidiger 2 Verteidigungswürfel weniger.%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "Solange du einen Angriff durchführst, falls der Angriff durch ein Hindernis versperrt ist, wirft der Verteidiger 2 Verteidigungswürfel weniger."
     },
     '"Broadside"': {
       display_name: "“Broadside”",
-      text: "Solange du einen %SINGLETURRETARC%&nbsp;Angriff durchführst, falls dein %SINGLETURRETARC%&nbsp;-Anzeiger in deinem %LEFTARC%&nbsp;oder&nbsp;%RIGHTARC%ist, darfst du 1&nbsp;Leerseiten-Ergebnis in ein&nbsp;&nbsp;%FOCUS%&nbsp;-Ergebnis ändern.%LINEBREAK%<strong>Gepanzerte Hülle:</strong> Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."
+      text: "Solange du einen %SINGLETURRETARC%&nbsp;Angriff durchführst, falls dein %SINGLETURRETARC%&nbsp;-Anzeiger in deinem %LEFTARC%&nbsp;oder&nbsp;%RIGHTARC%ist, darfst du 1&nbsp;Leerseiten-Ergebnis in ein&nbsp;&nbsp;%FOCUS%&nbsp;-Ergebnis ändern."
     },
     '"Chopper"': {
       display_name: "„Chopper“",
-      text: "Zu Beginn der Kampfphase erhält jedes feindliche Schiff in Reichweite 0 2 Störsignalmarker. %LINEBREAK%<strong>Heckgeschütz:</strong> Solange du ein angedocktes Schiff hast, hast du eine %REARARC%-Primärwaffe mit einem Angriffswert in Höhe des Angriffswertes der %FRONTARC%-Primärwaffe deines angedockten Schiffes."
+      text: "Zu Beginn der Kampfphase erhält jedes feindliche Schiff in Reichweite 0 2 Störsignalmarker. "
     },
     '"Countdown"': {
       display_name: "„Countdown“",
-      text: "Solange du verteidigst, nach dem Schritt „Ergebnisse neutralisieren“, falls du nicht gestresst bist, darfst du 1 %HIT%-Schaden erleiden und 1 Stressmarker erhalten. Falls du das tust, negiere alle Würfelergebnisse.%LINEBREAK%<strong>Adaptive Querruder:</strong> Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du ein weißes [1 %BANKLEFT%]-, [1 %STRAIGHT%]- oder [1 %BANKRIGHT%]-Manöver ausführen."
+      text: "Solange du verteidigst, nach dem Schritt „Ergebnisse neutralisieren“, falls du nicht gestresst bist, darfst du 1 %HIT%-Schaden erleiden und 1 Stressmarker erhalten. Falls du das tust, negiere alle Würfelergebnisse."
     },
     '"Deathfire"': {
       display_name: "„Todesfeuer“",
-      text: "Nachdem du zerstört worden bist, bevor du entfernt wirst, darfst du einen Angriff durchführen und 1 Gerät abwerfen oder starten.%LINEBREAK%<strong>Wendiger Bomber:</strong> Falls du unter Verwendung einer %STRAIGHT%-Schablone ein Gerät abwerfen würdest, darfst du stattdessen eine %BANKLEFT%- oder %BANKRIGHT%-Schablone derselben Geschwindigkeit verwenden."
+      text: "Nachdem du zerstört worden bist, bevor du entfernt wirst, darfst du einen Angriff durchführen und 1 Gerät abwerfen oder starten."
     },
     '"Deathrain"': {
       display_name: "„Todesregen“",
@@ -1840,7 +1840,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Duchess"': {
       display_name: "„Herzogin“",
-      text: "Du darfst wählen, <strong>Adaptive Querruder</strong> nicht zu verwenden. %LINEBREAK%Du darfst <strong>Adaptive Querruder</strong> verwenden, auch solange du gestresst bist.%LINEBREAK%<strong>Adaptive Querruder:</strong> Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du ein weißes [1 %BANKLEFT%]-, [1 %STRAIGHT%]- oder [1 %BANKRIGHT%]-Manöver ausführen."
+      text: "Du darfst wählen, <strong>Adaptive Querruder</strong> nicht zu verwenden. %LINEBREAK%Du darfst <strong>Adaptive Querruder</strong> verwenden, auch solange du gestresst bist."
     },
     '"Dutch" Vander': {
       display_name: "„Dutch“ Vander",
@@ -1848,11 +1848,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Echo"': {
       display_name: "„Echo“",
-      text: "Solange du dich enttarnst, <b>musst</b> du die [2 %BANKLEFT%]- oder [2 %BANKRIGHT%]-Schablone anstatt der [2 %STRAIGHT%]-Schablone verwenden.%LINEBREAK%<strong>Stygium-Gitter:</strong> Nachdem du dich enttarnt hast, darfst du eine %EVADE%-Aktion durchführen. Zu Beginn der Endphase darfst du 1 Ausweichmarker ausgeben, um 1 Tarnungsmarker zu erhalten."
+      text: "Solange du dich enttarnst, <b>musst</b> du die [2 %BANKLEFT%]- oder [2 %BANKRIGHT%]-Schablone anstatt der [2 %STRAIGHT%]-Schablone verwenden."
     },
     '"Goji"': {
       display_name: "“Goji”",
-      text: "Solange ein befreundetes Schiff in Reichweite&nbsp;0-3 verteidigt, darf es für jede befreundete Bombe oder Mine, die in Reichweite&nbsp;0-1 zu ihm ist, 1&nbsp;zusätzlichen Verteidigungswürfel werfen.%LINEBREAK%<strong>Gepanzerte Hülle:</strong> Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."
+      text: "Solange ein befreundetes Schiff in Reichweite&nbsp;0-3 verteidigt, darf es für jede befreundete Bombe, die in Reichweite&nbsp;0-1 zu ihm ist, 1&nbsp;zusätzlichen Verteidigungswürfel werfen.%LINEBREAK% <i>Errata: „oder Mine“ gestrichen</i>"
     },
     '"Howlrunner"': {
       display_name: "„Howlrunner“",
@@ -1868,7 +1868,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Leebo"': {
       display_name: "„Leebo“",
-      text: "Nachdem du verteidigt oder einen Angriff durchgeführt hast, falls du einen Berechnungsmarker ausgegeben hast, erhalte 1 Berechnungsmarker.%LINEBREAK%<strong>Toter Winkel:</strong> Solange du einen Primärangriff in Reichweite 0-1 durchführst, wende den Bonus für Reichweite 0-1 nicht an und wirf 1 Angriffswürfel weniger."
+      text: "Nachdem du verteidigt oder einen Angriff durchgeführt hast, falls du einen Berechnungsmarker ausgegeben hast, erhalte 1 Berechnungsmarker."
     },
     '"Longshot"': {
       display_name: "„Longshot“",
@@ -1876,7 +1876,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Matchstick"': {
       display_name: "“Matchstick”",
-      text: "Solange du einen Primär- oder %SINGLETURRETARC% -Angriff durchführst, darfst du für jeden roten Marker, den du hast, 1&nbsp;Angriffswürfel neu werfen.%LINEBREAK%<strong>Gepanzerte Hülle:</strong> Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."
+      text: "Solange du einen Primär- oder %SINGLETURRETARC% -Angriff durchführst, darfst du für jeden roten Marker, den du hast, 1&nbsp;Angriffswürfel neu werfen."
     },
     '"Mauler" Mithel': {
       display_name: "„Mauler“ Mithel",
@@ -1908,19 +1908,19 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Odd Ball" (Y-Wing)': {
       display_name: "“Oddball”",
-      text: "Nachdem du ein rotes Manöver ausgeführt oder eine rote Aktion durchgeführt hast, falls ein feindliches Schiff in deinem%BULLSEYEARC%ist, darfst du jenes Schiff als Ziel erfassen.%LINEBREAK%<strong>Gepanzerte Hülle:</strong> Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."
+      text: "Nachdem du ein rotes Manöver vollständig ausgeführt oder eine rote Aktion durchgeführt hast, falls ein feindliches Schiff in deinem%BULLSEYEARC%ist, darfst du jenes Schiff als Ziel erfassen. %LINEBREAK% <i>Errata: „vollständig“ ergänzt</i>"
     },
     '"Pure Sabacc"': {
       display_name: "„Voller Sabacc“",
-      text: "Solange du einen Angriff durchführst, falls du 1 oder weniger Schadenskarten hast, darfst du 1 zusätzlichen Angriffswürfel werfen.%LINEBREAK%<strong>Adaptive Querruder:</strong> Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du ein weißes [1 %BANKLEFT%]-, [1 %STRAIGHT%]- oder [1 %BANKRIGHT%]-Manöver ausführen."
+      text: "Solange du einen Angriff durchführst, falls du 1 oder weniger Schadenskarten hast, darfst du 1 zusätzlichen Angriffswürfel werfen."
     },
     '"Quickdraw"': {
       display_name: "„Quickdraw“",
-      text: "Nachdem du ein Schild verloren hast, darfst du 1 %CHARGE% ausgeben. Falls du das tust, darfst du einen Bonus-Primärangriff durchführen.%LINEBREAK%<strong>Schwerer Geschützturm:</strong> Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du <b>musst</b> die %FRONTARC%-Voraussetzung deiner ausgerüsteten %MISSILE%-Aufwertungen behandeln, als wäre sie %SINGLETURRETARC%."
+      text: "Nachdem du ein Schild verloren hast, darfst du 1 %CHARGE% ausgeben. Falls du das tust, darfst du einen Bonus-Primärangriff durchführen."
     },
     '"Recoil"': {
       display_name: "„Recoil“",
-      text: "Solange du gestresst bist, darfst du feindliche Schiffe in deinem %FRONTARC% in Reichweite 0-1 behandeln, als wären sie in deinem %BULLSEYEARC%.%LINEBREAK%<strong>Automatische Schubdüsen:</strong> Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+      text: "Solange du gestresst bist, darfst du feindliche Schiffe in deinem %FRONTARC% in Reichweite 0-1 behandeln, als wären sie in deinem %BULLSEYEARC%."
     },
     '"Redline"': {
       display_name: "„Rote Linie“",
@@ -1952,7 +1952,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Vizier"': {
       display_name: "„Wesir“",
-      text: "Nachdem du unter Verwendung deiner Schiffsfähigkeit <strong>Adaptive Querruder</strong> ein Manöver mit Geschwindigkeit 1 vollständig ausgeführt hast, darfst du eine %COORDINATE%-Aktion durchführen. Falls du das tust, überspringe deinen Schritt „Aktion durchführen“.%LINEBREAK%<strong>Adaptive Querruder:</strong> Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du ein weißes [1 %BANKLEFT%]-, [1 %STRAIGHT%]- oder [1 %BANKRIGHT%]-Manöver ausführen."
+      text: "Nachdem du unter Verwendung deiner Schiffsfähigkeit <strong>Adaptive Querruder</strong> ein Manöver mit Geschwindigkeit 1 vollständig ausgeführt hast, darfst du eine %COORDINATE%-Aktion durchführen. Falls du das tust, überspringe deinen Schritt „Aktion durchführen“."
     },
     '"Wampa"': {
       display_name: "„Wampa“",
@@ -1960,7 +1960,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Whisper"': {
       display_name: "„Geflüster“",
-      text: "Nachdem du einen Angriff durchgeführt hast, der getroffen hat, erhalte 1 Ausweichmarker.%LINEBREAK%<strong>Stygium-Gitter:</strong> Nachdem du dich enttarnt hast, darfst du eine %EVADE%-Aktion durchführen. Zu Beginn der Endphase darfst du 1 Ausweichmarker ausgeben, um 1 Tarnungsmarker zu erhalten."
+      text: "Nachdem du einen Angriff durchgeführt hast, der getroffen hat, erhalte 1 Ausweichmarker."
     },
     '"Wolffe"': {
       display_name: "„Wolffe“",
@@ -1968,11 +1968,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Zeb" Orrelios': {
       display_name: "„Zeb“ Orrelios",
-      text: "Solange du verteidigst, werden %CRIT%-Ergebnisse neutralisiert, bevor %HIT%-Ergebnisse neutralisiert werden.%LINEBREAK%<strong>Geladen und entsichert:</strong> Solange du angedockt bist, nachdem dein Trägerschiff einen %FRONTARC%-Primärangriff oder %TURRET%-Angriff durchgeführt hat, darf es einen Bonus-%REARARC%-Primärangriff durchführen."
+      text: "Solange du verteidigst, werden %CRIT%-Ergebnisse neutralisiert, bevor %HIT%-Ergebnisse neutralisiert werden."
     },
     '"Zeb" Orrelios (Sheathipede)': {
       display_name: "„Zeb“ Orrelios (Sheathipede)",
-      text: "Solange du verteidigst, werden %CRIT%-Ergebnisse neutralisiert, bevor %HIT%-Ergebnisse neutralisiert werden.%LINEBREAK%<strong>Kommunikationsantennen:</strong> Solange du angedockt bist, erhält dein Trägerschiff %COORDINATE%. Bevor dein Trägerschiff aktiviert wird, darf es eine %COORDINATE%-Aktion durchführen."
+      text: "Solange du verteidigst, werden %CRIT%-Ergebnisse neutralisiert, bevor %HIT%-Ergebnisse neutralisiert werden."
     },
     '"Zeb" Orrelios (TIE Fighter)': {
       display_name: "„Zeb“ Orrelios (TIE Fighter)",
@@ -1980,23 +1980,23 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Baktoid Prototype": {
       display_name: "Prototyp von Baktoid",
-      text: "Solange du einen Spezialangriff durchführst, falls ein befreundetes Schiff mit der Schiffsfähigkeit <strong>Vernetzte Berechnungssysteme</strong> den Verteidiger als Ziel erfasst hat, darfst du die &nbsp;%FOCUS%, %CALCULATE%, oder&nbsp;%LOCK%-Voraussetzung jenes Angriffs ignorieren.%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1&nbsp;Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1&nbsp;%FOCUS%-Ergebnis in ein %EVADE% oder %HIT%-Ergebnis zu ändern."
+      text: "Solange du einen Spezialangriff durchführst, falls ein befreundetes Schiff mit der Schiffsfähigkeit <strong>Vernetzte Berechnungssysteme</strong> den Verteidiger als Ziel erfasst hat, darfst du die &nbsp;%FOCUS%, %CALCULATE%, oder&nbsp;%LOCK%-Voraussetzung jenes Angriffs ignorieren."
     },
     "Haor Chall Prototype": {
       display_name: "Prototyp von Haor Chall",
-      text: "Nachdem ein feindliches Schiff in deinem %BULLSEYEARC% in Reichweite 0-2 ein anderes befreundetes Schiff zum Verteidiger deklariert hat, darfst du eine %CALCULATE%- oder %LOCK%-Aktion durchführen.%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1 %FOCUS%-Ergebnis in ein %EVADE%- oder %HIT%-Ergebnis zu ändern."
+      text: "Nachdem ein feindliches Schiff in deinem %BULLSEYEARC% in Reichweite 0-2 ein anderes befreundetes Schiff zum Verteidiger deklariert hat, darfst du eine %CALCULATE%- oder %LOCK%-Aktion durchführen."
     },
     "Naboo Handmaiden": {
       display_name: "Zofe von Naboo",
-      text: "<strong>Aufbau:</strong>Nachdem die Streitkräfte platziert worden sind, ordne 1&nbsp;anderem befreundeten Schiff als <strong>Zofe von Naboo</strong>den Zustand <strong>Durch ein Double geschützt</strong>zu.%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%&nbsp;-Aktion durchführen."
+      text: "<strong>Aufbau:</strong>Nachdem die Streitkräfte platziert worden sind, ordne 1&nbsp;anderem befreundeten Schiff als <strong>Zofe von Naboo</strong>den Zustand <strong>Durch ein Double geschützt</strong>zu."
     },
     "Bombardment Drone": {
       display_name: "Bombendrohne",
-      text: "Falls du ein Gerät abwerfen würdest, darfst du jenes Gerät stattdessen unter Verwendung derselben Schablone starten.%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1&nbsp;Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1&nbsp;%FOCUS%-Ergebnis in ein %EVADE% oder %HIT%-Ergebnis zu ändern."
+      text: "Falls du ein Gerät abwerfen würdest, darfst du jenes Gerät stattdessen unter Verwendung derselben Schablone starten."
     },
     "Precise Hunter": {
       display_name: "Präzisionsjäger",
-      text: "Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, darfst du 1 Leerseiten-Ergebnis neu werfen.%LINEBREAK%<strong>Vernetzte Berechnungssysteme:</strong> Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1 %FOCUS%-Ergebnis in ein %EVADE%- oder %HIT%-Ergebnis zu ändern."
+      text: "Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, darfst du 1 Leerseiten-Ergebnis neu werfen."
     }
   };
   upgrade_translations = {
@@ -2222,7 +2222,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Advanced Sensors": {
       display_name: "Verbesserte Sensoren",
-      text: "Nachdem du dein Rad aufgedeckt hast, darfst du 1 Aktion durchführen.%LINEBREAK%Falls du das tust, kannst du während deiner Aktivierung keine weitere Aktion durchführen."
+      text: "Nachdem du dein Rad aufgedeckt hast, darfst du 1 Aktion durchführen.%LINEBREAK%Falls du das tust, kannst du während deiner Aktivierung keine weitere Aktion durchführen.%LINEBREAK% <i>Errata: „kannst du während deiner Aktivierung keine weitere Aktion durchführen“ statt „überspringe deinen Schritt Aktion durchführen“</i>"
     },
     "Afterburners": {
       display_name: "Nachbrenner",
@@ -2248,6 +2248,10 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Ahsoka Tano",
       text: "Nachdem du ein Manöver ausgeführt hast, darfst du 1&nbsp;%FORCE% ausgeben und 1&nbsp;befreundetes Schiff in Reichweite&nbsp;1-3 in deinem Feuerwinkel wählen. Falls du das tust, darf es eine rote&nbsp;%FOCUS%&nbsp;-Aktion durchführen, auch solange es gestresst ist."
     },
+    "Alexsandr Kallus": {
+      display_name: "Alexsandr Kallus",
+      text: "Solange du verteidigst, falls der Angreifer irgendwelche Angriffswürfel modifiziert hat, darfst du 1 zusätzlichen Verteidigungswürfel werfen.%LINEBREAK%<i>Errata (since rules reference 1.2.0): Fehlende Schiffsfähigkeit ergänzt"
+    },
     'Alpha-3B "Besh"': {
       display_name: "Alpha-3B „Besh“",
       text: "Solange du einen Primärangriff durchführst, darfst du deine Zielerfassung auf dem Verteidiger ausgeben, um 1 deiner Leerseiten- oder%FOCUS%-Ergebnisse in ein&nbsp;%HIT%&nbsp;-Ergebnis zu ändern.%LINEBREAK%Füge den %DEVICE%-Slot hinzu."
@@ -2263,6 +2267,10 @@ exportObj.cardLoaders.Deutsch = function() {
     "Angled Deflectors": {
       display_name: "Ausgerichtete Deflektoren",
       text: "<i class = flavor_text>Sternenjägerschilde haben oft manuelle Überbrückungsschalter, mit denen die Energie in bestimmte Richtungen umgeleitet werden kann, um Front oder Heck besser zu schützen. Ein Pilot, der seine Situation nicht richtig überblickt, kann jedoch seinem Feind eine offene Flanke bieten.</i>"
+    },
+    "Arliz Hadrassian": {
+      display_name: "Arliz Hadrassian",
+      text: "Solange du einen %FRONTARC%-Angriff durchführst, falls du beschädigt bist, darfst du 1 deiner %FOCUS%-Ergebnisse in ein %CRIT%-Ergebnis ändern. %LINEBREAK% Solange du verteidigst, falls du beschädigt bist, <b>musst</b> du vor dem Schritt „Verteidigungswürfel modifizieren“ 1 deiner %FOCUS%-Ergebnisse in ein Leerseiten-Ergebnis ändern.. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Timingfenster vor dem Schritt „Verteidigungswürfel modifizieren“ ergänzt</i>"
     },
     "Asajj Ventress (Command)": {
       display_name: "Asajj Ventress",
@@ -2798,7 +2806,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Independent Calculations": {
       display_name: "Autonome Berechnungssysteme",
-      text: "Ersetze deine Schiffsfähigkeit <strong>Vernetzte Berechnungssysteme</strong> durch:%LINEBREAK%<sasmall><strong>Autonome Berechnungssysteme:</strong> Solange du eine weiße&nbsp;%CALCULATE%-Aktion durchführst, darfst du sie behandeln, als wäre sie rot, um 1 zusätzlichen Berechnungsmarker zu erhalten. Andere Schiffe können deine Berechnungsmarker nicht unter Verwendung der Schiffsfähigkeit <strong>Vernetzte Berechnungssysteme</strong> ausgeben.</sasmall>"
+      text: "Ersetze deine Schiffsfähigkeit <strong>Vernetzte Berechnungssysteme</strong> durch:%LINEBREAK%<strong>Autonome Berechnungssysteme:</strong> Solange du eine weiße&nbsp;%CALCULATE%-Aktion durchführst, darfst du sie behandeln, als wäre sie rot, um 1 zusätzlichen Berechnungsmarker zu erhalten. Andere Schiffe können deine Berechnungsmarker nicht unter Verwendung der Schiffsfähigkeit <strong>Vernetzte Berechnungssysteme</strong> ausgeben."
     },
     "Inertial Dampeners": {
       display_name: "Trägheitsdämpfer",
@@ -3086,7 +3094,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Pivot Wing": {
       display_name: "Schwenkflügel",
-      text: "<strong>Geschlossen:</strong> Nachdem du ein [0 %STOP%]-Manöver ausgeführt hast, darfst du dein Schiff um 90° oder um 180° drehen.%LINEBREAK%Bevor du aktiviert wirst, darfst du diese Karte umdrehen. %LINEBREAK%<strong>Geöffnet:</strong> Bevor du aktiviert wirst, darfst du diese Karte umdrehen."
+      text: "<strong>Geschlossen:</strong> Nachdem du ein [0 %STOP%]-Manöver ausgeführt hast, darfst du dein Schiff um 90° oder um 180° drehen.%LINEBREAK%Bevor du aktiviert wirst, darfst du diese Karte umdrehen. %LINEBREAK%<strong>Geöffnet:</strong> Bevor du aktiviert wirst, darfst du diese Karte umdrehen. %LINEBREAK% <i>Errata: Voraussetzung „UT-D60“ statt „UT-60D“</i> "
     },
     "Plasma Torpedoes": {
       display_name: "Plasmatorpedos",
@@ -3194,7 +3202,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "R3 Astromech": {
       display_name: "R3-Astromechdroide",
-      text: "Du kannst bis zu 2 Zielerfassungen aufrechterhalten. Jede Zielerfassung muss ein anderes Objekt als Ziel haben.%LINEBREAK%Nachdem du eine %LOCK%-Aktion durchgeführt hast, darfst du ein Ziel erfassen."
+      text: "Du kannst bis zu 2 Zielerfassungen aufrechterhalten. Jede Zielerfassung muss ein anderes Objekt als Ziel haben.%LINEBREAK%Nachdem du eine %LOCK%-Aktion durchgeführt hast, darfst du ein Ziel erfassen.%LINEBREAK% <i>Errata: „Jede Zielerfassung muss ein anderes Objekt als Ziel haben“ hinzugefügt </i> "
     },
     "R4 Astromech": {
       display_name: "R4-Astromechdroide",
@@ -3406,7 +3414,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Swarm Tactics": {
       display_name: "Schwarmtaktik",
-      text: "Zu Beginn der Kampfphase darfst du 1 befreundetes Schiff in Reichweite 1 wählen. Falls du das tust, behandelt jenes Schiff seine Initiative bis zum Ende der Runde so, als würde sie deiner Initiative entsprechen."
+      text: "Zu Beginn der Kampfphase darfst du 1 befreundetes Schiff in Reichweite 1 wählen. Falls du das tust, behandelt jenes Schiff seine Initiative bis zum Ende der Runde so, als würde sie deiner Initiative entsprechen.  %LINEBREAK% <i>Errata: Begrenzung auf Imperium entfernt</i>"
     },
     "Synced Laser Cannons": {
       display_name: "Synchronisierte Laserkanonen",
@@ -3422,7 +3430,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "TIE Defender Elite": {
       display_name: "TIE-Abwehrjäger-Elite",
-      text: "Verringere die Schwierigkeit deiner Wendemanöver [%TURNLEFT%&nbsp;oder&nbsp;%TURNRIGHT%]. Erhöhe die Schwierigkeit deiner Koiogran-Wenden [%KTURN%]. Ersetze deine Schiffsfähigkeit <strong>Vollgas</strong> durch:%LINEBREAK%<sasmall><strong>Verbesserte Feuerkontrolle:</strong> Nachdem du einen&nbsp;%CANNON%- oder&nbsp;%MISSILE%-Angriff durchgeführt hast, falls du den Verteidiger als Ziel erfasst hast, darfst du einen Bonus-Primärangriff gegen den Verteidiger durchführen.</sasmall>"
+      text: "Verringere die Schwierigkeit deiner Wendemanöver [%TURNLEFT%&nbsp;oder&nbsp;%TURNRIGHT%]. Erhöhe die Schwierigkeit deiner Koiogran-Wenden [%KTURN%]. Ersetze deine Schiffsfähigkeit <strong>Vollgas</strong> durch:%LINEBREAK%<strong>Verbesserte Feuerkontrolle:</strong> Nachdem du einen&nbsp;%CANNON%- oder&nbsp;%MISSILE%-Angriff durchgeführt hast, falls du den Verteidiger als Ziel erfasst hast, darfst du einen Bonus-Primärangriff gegen den Verteidiger durchführen."
     },
     "TV-94": {
       display_name: "TV-94",
@@ -3514,7 +3522,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Vectored Cannons (RZ-1)": {
       display_name: "Schwenkbare Kanonen (RZ-1)",
-      text: "Du erhältst einen %SINGLETURRETARC%-Anzeiger. Behandle die Winkelbedingung deines %FRONTARC%-Primärangriffs, als wäre sie %SINGLETURRETARC%.%LINEBREAK%Ersetze deine Schiffsfähigkeit <strong>Schwenkbare Schubdüsen</strong> durch:%LINEBREAK%<sasmall><strong>Schwenkbare Kanonen:</strong> Während der Systemphase darfst du eine rote&nbsp;%BOOST%- oder eine rote&nbsp;%ROTATEARC%-Aktion durchführen. Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren.</sasmall>"
+      text: "Du erhältst einen %SINGLETURRETARC%-Anzeiger. Behandle die Winkelbedingung deines %FRONTARC%-Primärangriffs, als wäre sie %SINGLETURRETARC%.%LINEBREAK%Ersetze deine Schiffsfähigkeit <strong>Schwenkbare Schubdüsen</strong> durch:%LINEBREAK%<strong>Schwenkbare Kanonen:</strong> Während der Systemphase darfst du eine rote&nbsp;%BOOST%- oder eine rote&nbsp;%ROTATEARC%-Aktion durchführen. Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren."
     },
     "Veteran Tail Gunner": {
       display_name: "Kampferprobter Heckschütze",
@@ -3612,7 +3620,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     'Optimized Prototype': {
       display_name: 'Optimierter Prototyp',
-      text: 'Solange du einen %FRONTARC%-Primärangriff gegen ein Schiff durchführst, das von einem befreundeten Schiff mit der Aufwertung <strong>Direktor Krennic</strong> als Ziel erfasst ist, darfst du 1 %HIT%/%CRIT%/%FOCUS%-Ergebnis ausgeben. Falls du das tust, wähle 1 der folgenden Optionen: Der Verteidiger verliert 1 Schild oder der Verteidiger dreht 1 seiner verdeckten Schadenskarten um.'
+      text: 'Solange du einen %FRONTARC%-Primärangriff gegen ein Schiff durchführst, das von einem befreundeten Schiff mit der Aufwertung <strong>Direktor Krennic</strong> als Ziel erfasst ist, darfst du 1 %HIT%-, %CRIT%- oder %FOCUS%-Ergebnis ausgeben. Falls du das tust, wähle 1 der folgenden Optionen: Der Verteidiger verliert 1 Schild oder der Verteidiger dreht 1 seiner verdeckten Schadenskarten um.  %LINEBREAK% <i>Errata: „oder“ statt „/“ (1. Edition)</i>'
     },
     'Proton Bomb': {
       display_name: "Protonenbombe",
@@ -3648,8 +3656,141 @@ exportObj.cardLoaders.Deutsch = function() {
     }
   };
   chassis_translations = {
-    "Versatile Frame": {
-      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+    "Vectored Thrusters": {
+      display_name: 'Schwenkbare Schubdüsen',
+      text: "Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%-Aktion durchführen."
+    },
+    "Advanced Targeting Computer": {
+      display_name: "Verbesserter Zielcomputer",
+      text: "Solange du einen Primärangriff gegen einen Verteidiger durchführst, den du als Ziel erfasst hast, wirf 1 zusätzlichen Angriffswürfel und ändere 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis."
+    },
+    "Autothrusters": {
+      display_name: "Automatische Schubdüsen",
+      text: "Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."
+    },
+    "Nimble Bomber": {
+      display_name: "Wendiger Bomber",
+      text: "Falls du unter Verwendung einer %STRAIGHT%-Schablone ein Gerät abwerfen würdest, darfst du stattdessen eine %BANKLEFT%- oder %BANKRIGHT%-Schablone derselben Geschwindigkeit verwenden."
+    },
+    "Full Throttle": {
+      display_name: "Vollgas",
+      text: "Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%&nbsp;-Aktion durchführen."
+    },
+    "Experimental Scanners": {
+      display_name: "Experimentelle Scanner",
+      text: "Du kannst Ziele jenseits von Reichweite 3 erfassen. Du kannst keine Ziele in Reichweite 1 erfassen."
+    },
+    "Stygium Array": {
+      display_name: "Stygium-Gitter",
+      text: "Nachdem du dich enttarnt hast, darfst du eine %EVADE%-Aktion durchführen. Zu Beginn der Endphase darfst du 1 Ausweichmarker ausgeben, um 1 Tarnungsmarker zu erhalten."
+    },
+    "Sensor Blindspot": {
+      display_name: "Toter Winkel",
+      text: "Solange du einen Primärangriff in Reichweite 0-1 durchführst, wende den Bonus für Reichweite 0-1 nicht an und wirf 1 Angriffswürfel weniger."
+    },
+    "Microthrusters": {
+      display_name: "Mikrodüsen",
+      text: "Solange du eine Fassrolle durchführst, <b>musst</b> du die %BANKLEFT%- oder %BANKRIGHT%-Schablone anstatt der %STRAIGHT%-Schablone verwenden."
+    },
+    "Weapon Hardpoint": {
+      display_name: "Waffenaufhängung",
+      text: "Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."
+    },
+    "Advanced Droid Brain": {
+      display_name: "Hochentwickeltes Droidengehirn",
+      text: "Nachdem du eine %CALCULATE%-Aktion durchgeführt hast, erhalte 1 Berechnungsmarker."
+    },
+    "Tail Gun": {
+      display_name: "Heckgeschütz",
+      text: "Solange du ein angedocktes Schiff hast, hast du eine %REARARC%-Primärwaffe mit einem Angriffswert in Höhe des Angriffswertes der %FRONTARC%-Primärwaffe deines angedockten Schiffes."
+    },
+    "Locked and Loaded": {
+      display_name: "Geladen und entsichert",
+      text: "Solange du angedockt bist, nachdem dein Trägerschiff einen %FRONTARC%-Primärangriff oder %TURRET%-Angriff durchgeführt hat, darf es einen Bonus-%REARARC%-Primärangriff durchführen."
+    },
+    "Concordia Faceoff": {
+      display_name: "Concordianischer Wirbel",
+      text: "Solange du verteidigst, falls die Angriffsreichweite 1 ist und du im %FRONTARC% des Angreifers bist, ändere 1 Ergebnis in ein %EVADE%-Ergebnis."
+    },
+    "Spacetug Tractor Array": {
+      display_name: "Schlepperstrahl",
+      text: "<strong>Aktion:</strong> Wähle ein Schiff in deinem %FRONTARC% in Reichweite 1. Jenes Schiff erhält 1 Fangstrahlmarker oder 2 Fangstrahlmarker, falls es in deinem %BULLSEYEARC% in Reichweite 1 ist."
+    },
+    "Hope": {
+      display_name: "Hoffnung",
+      text: "Nachdem ein anderes befreundetes Schiff in Reichweite 0-3 zerstört worden ist, darfst du eine &nbsp;%FOCUS%- oder&nbsp;%BOOST%-Aktion durchführen."
+    },
+    "Sensitive Controls": {
+      display_name: "Genaue Steuerung",
+      text: "Während der Systemphase darfst du eine rote&nbsp;%BARRELROLL%- oder eine rote&nbsp;%BOOST%-Aktion durchführen."
+    },
+    "Vectored Cannons": {
+      display_name: "Schwenkbare Kanonen",
+      text: "Während der Systemphase darfst du eine rote&nbsp;%BOOST%- oder eine rote&nbsp;%ROTATEARC%-Aktion durchführen. Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren."
+    },
+    "Advanced Fire Control": {
+      display_name: "Verbesserte Feuerkontrolle",
+      text: "Nachdem du einen&nbsp;%CANNON%- oder&nbsp;%MISSILE%-Angriff durchgeführt hast, falls du den Verteidiger als Ziel erfasst hast, darfst du einen Bonus-Primärangriff gegen den Verteidiger durchführen."
+    },
+    "Networked Calculations": {
+      display_name: "Vernetzte Berechnungssysteme",
+      text: "Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1 %FOCUS%-Ergebnis in ein %EVADE%-oder %HIT%-Ergebnis zu ändern."
+    },
+    "Independent Calculations": {
+      display_name: "Autonome Berechnungssysteme",
+      text: "Solange du eine weiße&nbsp;%CALCULATE%-Aktion durchführst, darfst du sie behandeln, als wäre sie rot, um 1 zusätzlichen Berechnungsmarker zu erhalten. Andere Schiffe können deine Berechnungsmarker nicht unter Verwendung der Schiffsfähigkeit <strong>Vernetzte Berechnungssysteme</strong> ausgeben."
+    },
+    "Adaptive Ailerons": {
+      display_name: "Adaptive Querruder",
+      text: "Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du Schub geben.  %LINEBREAK% <i>Errata (seit Referenzhandbuch 1.4.2): Schub statt weißem 1 Manöver</i>"
+    },
+    "Dead to Rights": {
+      display_name: "Todsicherer Treffer",
+      text: "Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, können Verteidigungswürfel nicht unter Verwendung von grünen Markern modifiziert werden."
+    },
+    "Comms Shuttle": {
+      display_name: "Kommunikationsantennen",
+      text: "Solange du angedockt bist, erhält dein Trägerschiff %COORDINATE%. Bevor dein Trägerschiff aktiviert wird, darf es eine %COORDINATE%-Aktion durchführen."
+    },
+    "Controlled Ailerons": {
+      display_name: "Kontrollierte Querruder",
+      text: "Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, darfst du Schub geben. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Schub statt weißem 1 Manöver</i>"
+    },
+    "Co-Pilot": {
+      display_name: "Co-Pilot",
+      text: "Solange du angedockt bist, hat dein Träger-Schiff deine Piloten-Fähigkeit zusätzlich zu seiner eigenen."
+    },
+    "Rigged Energy Cells": {
+      display_name: "Manipulierte Energiezellen",
+      text: "Während der Systemphase, falls du nicht angedockt bist, verliere 1 %CHARGE%. Am Ende der Aktivierungsphase, falls du 0 %CHARGE% hast, wirst du zerstört. Bevor du entfernt wirst, erleidet jedes Schiff in Reichweite 0-1 1 %CRIT%-Schaden."
+    },
+    "Refined Gyrostabilizers": {
+      display_name: "Optimierte Gyrostabilisatoren",
+      text: "Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen."
+    },
+    "Heavy Weapon Turret": {
+      display_name: "Schwerer Geschützturm",
+      text: "Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du <b>musst</b> die %FRONTARC%-Voraussetzung deiner ausgerüsteten %MISSILE%-Aufwertungen behandeln, als wäre sie %SINGLETURRETARC%."
+    },
+    "Linked Battery": {
+      display_name: "Gekoppelte Geschützbatterie",
+      text: "Solange du einen %CANNON%-Angriff durchführst, wirf 1 zusätzlichen Würfel."
+    },
+    "Notched Stabilizers": {
+      display_name: "Stabilisatorkerbe",
+      text: "Solange du dich bewegst, ignorierst du Asteroiden."
+    },
+    "Fine-Tuned Controls": {
+      display_name: "Präzisionssteuerung",
+      text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."
+    },
+    "Pinpoint Tractor Array": {
+      display_name: "Fangstrahl-Zielsystem",
+      text: "%LINEBREAK%<strong>Fangstrahl-Zielsystem:</strong> Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC%rotieren. Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine&nbsp;%ROTATEARC%&nbsp;-Aktion durchzuführen. %LINEBREAK%<i>Errata (since rules reference 1.4):  \"vollständig\" ergänzt</i>"
+    },
+    "Plated Hull": {
+      display_name: "Gepanzerte Hülle",
+      text: "Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."
     }
   };
   return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
