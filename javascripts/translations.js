@@ -586,6 +586,10 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Airen Cracken",
       text: "Nachdem du einen Angriff durchgeführt hast, darfst du 1 befreundetes Schiff in Reichweite 1 wählen. Jenes Schiff darf eine Aktion durchführen, die es als rot behandelt."
     },
+    "Alexsandr Kallus": {
+      display_name: "Alexsandr Kallus",
+      text: "Solange du verteidigst, falls der Angreifer irgendwelche Angriffswürfel modifiziert hat, darfst du 1 zusätzlichen Verteidigungswürfel werfen.%LINEBREAK%<i>Errata (since rules reference 1.2.0): Fehlende Schiffsfähigkeit ergänzt"
+    },
     "Alpha Squadron Pilot": {
       display_name: "Pilot der Alpha-Staffel",
       text: "<i class = flavor_text>Sienar Flottensysteme konzipierte den TIE-Abfangjäger mit vier Laserkanonen an den Tragflächenspitzen. Dadurch ist er seinen Vorgängermodellen waffentechnisch weit überlegen.</i>"
@@ -601,6 +605,10 @@ exportObj.cardLoaders.Deutsch = function() {
     "Anakin Skywalker (Y-Wing)": {
       display_name: "Anakin Skywalker",
       text: "Nachdem du ein Manöver vollständig ausgeführt hast, falls ein feindliches Schiff in deinem %FRONTARC% in Reichweite&nbsp;0-1 oder in deinem %BULLSEYEARC%, ist, darfst du 1&nbsp;%FORCE% ausgeben, um 1&nbsp;Stressmarker zu entfernen."
+    },
+    "Arliz Hadrassian": {
+      display_name: "Arliz Hadrassian",
+      text: "Solange du einen %FRONTARC%-Angriff durchführst, falls du beschädigt bist, darfst du 1 deiner %FOCUS%-Ergebnisse in ein %CRIT%-Ergebnis ändern. %LINEBREAK% Solange du verteidigst, falls du beschädigt bist, <b>musst</b> du vor dem Schritt „Verteidigungswürfel modifizieren“ 1 deiner %FOCUS%-Ergebnisse in ein Leerseiten-Ergebnis ändern.. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Timingfenster vor dem Schritt „Verteidigungswürfel modifizieren“ ergänzt</i>"
     },
     "Arvel Crynyd": {
       display_name: "Arvel Crynyd",
@@ -756,7 +764,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Captain Oicunn": {
       display_name: "Captain Oicunn",
-      text: "Du kannst Primärangriffe in Reichweite 0 durchführen."
+      text: "Solange du einen Angriff in Angriffsreichweite 0 durchführst, behandle ihn als Angriff in Angriffsreichweite 1. %LINEBREAK% <i>Errata: Für 2.5 überarbeitet</i>"
     },
     "Captain Rex": {
       display_name: "Captain Rex",
@@ -818,9 +826,17 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Colonel Vessery",
       text: "Solange du einen Angriff gegen ein erfasstes Schiff durchführst, nachdem du Angriffswürfel geworfen hast, darfst du den Verteidiger als Ziel erfassen.%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%-Aktion durchführen."
     },
+    "Commandant Goran": {
+      display_name: "Kommandant Goran",
+      text: "Wähle zu Beginn der Kampfphase ein befreundetes Schiff in Reichweite 0–3, dessen Initiative niedriger als deine ist. Das gewählte Schiff erhält 1 Ausweichmarker und entfernt 1 roten Nicht-Stressmarker.%LINEBREAK%<i>Errata (since rules reference 1.4): Komplett überarbeitet</i>"
+    },
     "Commander Malarus": {
       display_name: "Commander Malarus",
       text: "Zu Beginn der Kampfphase darfst du 1 %CHARGE% ausgeben und 1 Stressmarker erhalten. Falls du das tust, darfst du bis zum Ende der Runde, solange du verteidigst oder einen Angriff durchführst, alle deine %FOCUS%-Ergebnisse in %EVADE%- oder %HIT%-Ergebnisse ändern."
+    },
+    "Commander Malarus (Xi Shuttle)": {
+      display_name: "Commander Malarus",
+      text: "Solange ein befreundetes Schiff in Reichweite 0–2 einen Primärangriff durchführt, falls es vor dem Schritt „Würfel modifizieren“ 1 oder mehrere Leerseiten-Ergebnisse hat, <strong>muss</strong> jenes Schiff 1 Anstrengungsmarker erhalten, um 1 Leerseiten-Ergebnis neu zu werfen, falls möglich. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Genaues Timingfenster ergänzt</i>"
     },
     "Constable Zuvio": {
       display_name: "Constable Zuvio",
@@ -860,7 +876,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "DBS-404": {
       display_name: "DBS-404",
-      text: "Du kannst Primärangriffe in Reichweite&nbsp;0 durchführen. Solange du einen Angriff in Angriffsreichweite&nbsp;0-1 durchführst, musst du 1&nbsp;zusätzlichen Würfel werfen. Nachdem der Angriff getroffen hat, erleide 1&nbsp;%CRIT%-Schaden."
+      text: "Solange du einen Angriff in Angriffsreichweite&nbsp;1 durchführst, musst du 1&nbsp;zusätzlichen Würfel werfen. Nachdem der Angriff getroffen hat, erleide 1&nbsp;%CRIT%-Schaden. %LINEBREAK% <i>Errata: Reichweite geändert</i>"
     },
     "DFS-081": {
       display_name: "DFS-081",
@@ -1082,6 +1098,14 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Hera Syndulla",
       text: "Nachdem du ein rotes oder blaues Manöver aufgedeckt hast, darfst du dein Rad auf ein anderes Manöver derselben Schwierigkeit einstellen."
     },
+    "Hera Syndulla (A-Wing)": {
+      display_name: "Hera Syndulla",
+      text: "Solange ein anderes befreundetes Schiff in Reichweite 1–2 verteidigt oder einen Angriff durchführt, darfst du während eines Schrittes „Würfel modifizieren“ 1 deiner Fokusmarker, Ausweichmarker oder Zielerfassungen auf jenes Schiff transferieren. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Zeitfenster genauer spezifiziert</i>"
+    },
+    "Hera Syndulla (B-Wing)": {
+      display_name: "Hera Syndulla",
+      text: "Solange ein anderes befreundetes Schiff in Reichweite 1–2 verteidigt oder einen Angriff durchführt, darfst du während eines Schrittes „Würfel modifizieren“ 1 deiner Fokusmarker, Ausweichmarker oder Zielerfassungen auf jenes Schiff transferieren. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Zeitfenster genauer spezifiziert</i>"
+    },
     "Hera Syndulla (VCX-100)": {
       display_name: "Hera Syndulla (VCX-100)",
       text: "Nachdem du ein rotes oder blaues Manöver aufgedeckt hast, darfst du dein Rad auf ein anderes Manöver derselben Schwierigkeit einstellen."
@@ -1264,7 +1288,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Lieutenant Dormitz": {
       display_name: "Lieutenant Dormitz",
-      text: "<strong>Aufbau</strong>: Nachdem du platziert worden bist, können andere befreundete Schiffe irgendwo auf der Spielfläche in Reichweite 0-2 von dir platziert werden."
+      text: "<strong>Aufbau</strong>: Nachdem du platziert worden bist, können befreundete kleine Schiffe irgendwo auf der Spielfläche in Reichweite 0-2 von dir platziert werden.%LINEBREAK%<i>Errata: „andere befreundete Schiffe“ durch „befreundete kleine Schiffe“ ersetzt</i>"
     },
     "Lieutenant Karsabi": {
       display_name: "Lieutenant Karsabi",
@@ -1734,6 +1758,10 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Unkar Plutt",
       text: "Zu Beginn der Kampfphase, falls 1 oder mehrere andere Schiffe in Reichweite 0 sind, erhalten du und jedes andere Schiff in Reichweite 0 je 1 Fangstrahlmarker."
     },
+    '"Vagabond"': {
+      display_name: '„Vagabond“',
+      text: "Nachdem du dich unter Verwendung deiner Schiffsfähigkeit <strong>Adaptive Querruder</strong> bewegt has, falls du nicht gestresst bist, darfst du 1 Gerät abwerfen. %LINEBREAK%<i>Errata: An neue Schiffsfähigkeit angepasst. </i>"
+    },
     "Valen Rudor": {
       display_name: "Valen Rudor",
       text: "Nachdem ein befreundetes Schiff in Reichweite 0-1 verteidigt hat (nachdem ggf. Schaden abgehandelt worden ist), darfst du eine Aktion durchführen."
@@ -1908,7 +1936,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Odd Ball" (Y-Wing)': {
       display_name: "“Oddball”",
-      text: "Nachdem du ein rotes Manöver vollständig ausgeführt oder eine rote Aktion durchgeführt hast, falls ein feindliches Schiff in deinem%BULLSEYEARC%ist, darfst du jenes Schiff als Ziel erfassen. %LINEBREAK% <i>Errata: „vollständig“ ergänzt</i>"
+      text: "Nachdem du ein rotes Manöver vollständig ausgeführt oder eine rote Aktion durchgeführt hast, falls ein feindliches Schiff in deinem %BULLSEYEARC%ist, darfst du jenes Schiff als Ziel erfassen. %LINEBREAK% <i>Errata: „vollständig“ ergänzt</i>"
     },
     '"Pure Sabacc"': {
       display_name: "„Voller Sabacc“",
@@ -1952,7 +1980,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Vizier"': {
       display_name: "„Wesir“",
-      text: "Nachdem du unter Verwendung deiner Schiffsfähigkeit <strong>Adaptive Querruder</strong> ein Manöver mit Geschwindigkeit 1 vollständig ausgeführt hast, darfst du eine %COORDINATE%-Aktion durchführen. Falls du das tust, überspringe deinen Schritt „Aktion durchführen“."
+      text: "Nachdem du unter Verwendung deiner Schiffsfähigkeit <strong>Kontrollierte Querruder</strong> bewegt hast, darfst du eine %COORDINATE%-Aktion durchführen. Falls du das tust, überspringe deinen Schritt „Aktion durchführen“.%LINEBREAK%<i>Errata: An neue Schiffsfähigkeit angepasst. </i>"
     },
     '"Wampa"': {
       display_name: "„Wampa“",
@@ -2066,7 +2094,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Outrider": {
       display_name: "Outrider",
-      text: "Solange du einen versperrten Angriff durchführst, wirft der Verteidiger 1 Verteidigungswürfel weniger.%LINEBREAK%Nachdem du ein Manöver vollständig ausgeführt hast, falls du dich durch ein Hindernis hindurchbewegt oder dich mit ihm überschnitten hast, darfst du 1 deiner roten oder orangefarbenen Marker entfernen."
+      text: "Solange du einen Angriff durchführst, der durch ein Hindernis versperrt wird, wirft der Verteidiger 1 Verteidigungswürfel weniger.%LINEBREAK%Nachdem du ein Manöver vollständig ausgeführt hast, falls du dich durch ein Hindernis hindurchbewegt oder dich mit ihm überschnitten hast, darfst du 1 deiner roten oder orangefarbenen Marker entfernen.%LINEBREAK%<i>Umformulierung zur Klarstellung</i>"
     },
     "Phantom": {
       display_name: "Phantom",
@@ -2114,11 +2142,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Assailer": {
       display_name: "Sturmbringer",
-      text: "Füge den&nbsp;%GUNNER%-\nSlot hinzu.%LINEBREAK%Solange du verteidigst, falls die Angriffs-reichweite 1 ist, darfst du 1 zusätzlichen Verteidi-gungs würfel werfen."
+      text: "Füge den&nbsp;%GUNNER%-Slot hinzu.%LINEBREAK%Solange du verteidigst, falls die Angriffs-reichweite 1 ist, darfst du 1 zusätzlichen Verteidi-gungs würfel werfen."
     },
     "Blood Crow": {
       display_name: "Blood Crow",
-      text: "Füge den&nbsp;%GUNNER%-\nSlot hinzu.%LINEBREAK%Solange du einen Angriff in Angriffsreichweite 1-2 durchführst, darfst du 1&nbsp;%FOCUS%-Ergebnis hinzufügen."
+      text: "Füge den&nbsp;%GUNNER%-Slot hinzu.%LINEBREAK%Solange du einen Angriff in Angriffsreichweite 1-2 durchführst, darfst du 1&nbsp;%FOCUS%-Ergebnis hinzufügen."
     },
     "Bright Hope": {
       display_name: "Bright Hope",
@@ -2230,7 +2258,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Agent Kallus": {
       display_name: "Agent Kallus",
-      text: "<strong>Aufbau:</strong> Ordne 1 feindlichen Schiff den Zustand <strong>Gejagt</strong> zu.%LINEBREAK%Solange du einen Angriff gegen ein Schiff mit dem Zustand <strong>Gejagt</strong> durchführst, darfst du 1 deiner %FOCUS%-Ergebnisse in ein %HIT%-Ergebnis ändern."
+      text: "<strong>Aufbau:</strong> Nachdem die Streitkräfte platziert worden sind, ordne 1 feindlichen Schiff den Zustand <strong>Gejagt</strong> zu.%LINEBREAK%Solange du einen Angriff gegen ein Schiff mit dem Zustand <strong>Gejagt</strong> durchführst, darfst du 1 deiner %FOCUS%-Ergebnisse in ein %HIT%-Ergebnis ändern.%LINEBREAK%<i>Errata: „Nachdem die Streitkräfte platziert worden sind“ ergänzt</i>"
     },
     "Agent Terex": {
       display_name: "Agent Terex",
@@ -2248,10 +2276,6 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Ahsoka Tano",
       text: "Nachdem du ein Manöver ausgeführt hast, darfst du 1&nbsp;%FORCE% ausgeben und 1&nbsp;befreundetes Schiff in Reichweite&nbsp;1-3 in deinem Feuerwinkel wählen. Falls du das tust, darf es eine rote&nbsp;%FOCUS%&nbsp;-Aktion durchführen, auch solange es gestresst ist."
     },
-    "Alexsandr Kallus": {
-      display_name: "Alexsandr Kallus",
-      text: "Solange du verteidigst, falls der Angreifer irgendwelche Angriffswürfel modifiziert hat, darfst du 1 zusätzlichen Verteidigungswürfel werfen.%LINEBREAK%<i>Errata (since rules reference 1.2.0): Fehlende Schiffsfähigkeit ergänzt"
-    },
     'Alpha-3B "Besh"': {
       display_name: "Alpha-3B „Besh“",
       text: "Solange du einen Primärangriff durchführst, darfst du deine Zielerfassung auf dem Verteidiger ausgeben, um 1 deiner Leerseiten- oder%FOCUS%-Ergebnisse in ein&nbsp;%HIT%&nbsp;-Ergebnis zu ändern.%LINEBREAK%Füge den %DEVICE%-Slot hinzu."
@@ -2268,13 +2292,9 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Ausgerichtete Deflektoren",
       text: "<i class = flavor_text>Sternenjägerschilde haben oft manuelle Überbrückungsschalter, mit denen die Energie in bestimmte Richtungen umgeleitet werden kann, um Front oder Heck besser zu schützen. Ein Pilot, der seine Situation nicht richtig überblickt, kann jedoch seinem Feind eine offene Flanke bieten.</i>"
     },
-    "Arliz Hadrassian": {
-      display_name: "Arliz Hadrassian",
-      text: "Solange du einen %FRONTARC%-Angriff durchführst, falls du beschädigt bist, darfst du 1 deiner %FOCUS%-Ergebnisse in ein %CRIT%-Ergebnis ändern. %LINEBREAK% Solange du verteidigst, falls du beschädigt bist, <b>musst</b> du vor dem Schritt „Verteidigungswürfel modifizieren“ 1 deiner %FOCUS%-Ergebnisse in ein Leerseiten-Ergebnis ändern.. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Timingfenster vor dem Schritt „Verteidigungswürfel modifizieren“ ergänzt</i>"
-    },
     "Asajj Ventress (Command)": {
       display_name: "Asajj Ventress",
-      text: "Während der Systemphase darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält jedes feindliche Schiff in deinem %FRONTARC% in Reichweite 0-1 1 Anstrengungsmarker, es sei denn, es entscheidet sich dafür, 1 Störsignalmarker zu erhalten."
+      text: "Während der Systemphase darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält jedes feindliche Schiff in deinem %FRONTARC% in Reichweite 0-1 1 Anstrengungsmarker, es sei denn, es entscheidet sich dafür, 1 Störsignalmarker zu erhalten.%LINEBREAK%<i>Errata: Der Machtpunkt ist wiederkehrend</i>"
     },
     "Autoblasters": {
       display_name: "Autoblaster",
@@ -2298,11 +2318,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "BB Astromech": {
       display_name: "BB-Astromechdroide",
-      text: "Bevor du ein blaues Manöver ausführst, darfst du 1 %CHARGE% ausgeben, um eine %BARRELROLL%-Aktion durchzuführen."
+      text: "Während der Systemphase darfst du 1 %CHARGE% ausgeben, um eine %BARRELROLL%-Aktion durchzuführen.%LINEBREAK%<i>Errata: Timing geändert und Bedingung entfernt</i>"
     },
     "BB-8": {
       display_name: "BB-8",
-      text: "Bevor du ein blaues Manöver ausführst, darfst du 1 %CHARGE% ausgeben, um eine %BARRELROLL%- oder %BOOST%-Ak­tion durch­zu­fü­hren."
+      text: "Während der Systemphase darfst du 1 %CHARGE% ausgeben, um eine %BARRELROLL%- oder %BOOST%-Ak­tion durch­zu­fü­hren.%LINEBREAK%<i>Errata: Timing geändert und Bedingung entfernt</i>"
     },
     "BT-1": {
       display_name: "BT-1",
@@ -2378,7 +2398,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "C1-10P": {
       display_name: "C1-10P",
-      text: "<strong>Aufbau:</strong> Rüste diese Seite offen aus.%LINEBREAK%Nachdem du ein Manöver ausgeführt hast, darfst du 1&nbsp;%CHARGE% ausgeben, um eine rote&nbsp;%EVADE%&nbsp;-Aktion durchzuführen, auch solange du gestresst bist.%LINEBREAK%Während der Endphase, falls diese Karte 0 aktive&nbsp;active %CHARGE%hat, drehe sie um."
+      text: "<strong>Aufbau:</strong> Rüste diese Seite offen aus.%LINEBREAK%Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1&nbsp;%CHARGE% ausgeben, um eine rote&nbsp;%EVADE%&nbsp;-Aktion durchzuführen, auch solange du gestresst bist.%LINEBREAK%Während der Endphase, falls diese Karte 0 aktive&nbsp;active %CHARGE%hat, drehe sie um.%LINEBREAK%<strong>Rückseite: C1-10P (launisch):</strong>%LINEBREAK%Nachdem du ein Manöver vollständig ausgeführt hast, <strong>musst</strong> du ein Schiff in Reichweite 0–1 wählen. Es erhält 1 Störsignalmarker.%LINEBREAK%<i>Errata: Auf beiden Seiten„vollständig“ ergänzt</i>"
     },
     "Cad Bane": {
       display_name: "Cad Bane",
@@ -2466,11 +2486,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Composure": {
       display_name: "Gelassenheit",
-      text: "Nachdem eine deiner Aktionen scheitert, falls du keine grünen Marker hast, darfst du eine %FOCUS%-Aktion durchführen."
+      text: "Nachdem eine deiner Aktionen scheitert, falls du keine grünen Marker hast, darfst du eine %FOCUS%-Aktion durchführen. Falls du das tust, kannst du in dieser Runde keine zusätzlichen Aktionen durchführen.%LINEBREAK%<i>Errata: Zweiter Satz ergänzt</i>"
     },
     "Concussion Bombs": {
       display_name: "Erschütterungsbomben",
-      text: "Während der Systemphase, falls mindestens eine %CHARGE% dieser Karte inaktiv ist, <b>musst</b> du 1&nbsp;%CHARGE% ausgeben, um 1 Erschütterungsbombe abzuwerfen, falls möglich. Ansonsten darfst du 1 %CHARGE% ausgeben, um 1 Erschütterungsbombe abzuwerfen."
+      text: "Während der Systemphase, falls mindestens eine %CHARGE% dieser Karte inaktiv ist, <b>musst</b> du 1&nbsp;%CHARGE% ausgeben, um 1 Erschütterungsbombe unter Verwendung der [1 %STRAIGHT%]-Schablone abzuwerfen, falls möglich. Ansonsten darfst du 1 %CHARGE% ausgeben, um 1 Erschütterungsbombe abzuwerfen.%LINEBREAK%<i>Errata: „[1 %STRAIGHT%]-Schablone“ spezifiziert</i>"
     },
     "Concussion Missiles": {
       display_name: "Erschütterungsraketen",
@@ -2482,7 +2502,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Contraband Cybernetics": {
       display_name: "Illegale Kybernetik",
-      text: "Bevor du aktiviert wirst, darfst du 1 %CHARGE% ausgeben. Falls du das tust, kannst du bis zum Ende der Runde Aktionen durchführen und rote Manöver ausführen, auch solange du gestresst bist."
+      text: "Bevor du aktiviert wirst, darfst du 1 %CHARGE% ausgeben. Falls du das tust, kannst du bis zum Ende der Runde Aktionen durchführen und rote Manöver ausführen, auch solange du gestresst bist. Die %CHARGE% dieser Karte kann nicht wiederhergestellt werden.%LINEBREAK%<i>Errata: Letzten Satz ergänzt</i>"
     },
     "Corsair Crew": {
       display_name: "Korsarenmannschaft",
@@ -2490,7 +2510,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Count Dooku": {
       display_name: "Count Dooku",
-      text: "Bevor ein Schiff in Reichweite 0-2 Angriffs- oder Verteidigungswürfel wirft, falls alle deine %FORCE% aktiv sind, darfst du 1 %FORCE% ausgeben und ein Ergebnis benennen. Falls der Wurf das benannte Ergebnis nicht enthält, muss das Schiff 1 Würfel auf jenes Ergebnis ändern."
+      text: "Während eines Angriffs, bevor ein Schiff in Reichweite 0-2 Angriffs- oder Verteidigungswürfel wirft, falls alle deine %FORCE% aktiv sind, darfst du 1 %FORCE% ausgeben und ein Ergebnis benennen. Falls der Wurf das benannte Ergebnis nicht enthält, muss das Schiff 1 Würfel auf jenes Ergebnis ändern.%LINEBREAK%<i>Errata: „Während eines Angriffs“ ergänzt </i>"
     },
     "Crack Shot": {
       display_name: "Meisterhafter Schuss",
@@ -2538,7 +2558,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Dedicated": {
       display_name: "Pflichtbewusst",
-      text: "Solange ein anderes befreundetes Schiff in deinem %LEFTARC% oder %RIGHTARC% in Reichweite 0-2 verteidigt, falls es limitiert ist oder die Aufwertung <strong>Pflichtbewusst</strong> hat und du nicht angestrengt bist, darfst du 1 Anstrengungsmarker erhalten. Falls du das tust, wirft der Verteidiger 1 seiner Leerseiten-Ergebnisse neu."
+      text: "Solange ein anderes befreundetes Schiff in deinem %LEFTARC% oder %RIGHTARC% in Reichweite 0-2 verteidigt, falls es limitiert ist oder die Aufwertung <strong>Pflichtbewusst</strong> hat und du nicht angestrengt bist, darfst du 1 Anstrengungsmarker erhalten. Falls du das tust, wirft der Verteidiger 1 seiner Leerseiten-Ergebnisse neu.%LINEBREAK%<i>Errata: Einschränkung geändert</i>"
     },
     "Delayed Fuses": {
       display_name: "Zeitverzögerter Zünder",
@@ -2646,7 +2666,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Ferrosphere Paint": {
       display_name: "Ferrosphärenfarbe",
-      text: "Nachdem ein feindliches Schiff dich als Ziel erfasst hat, falls du nicht im %BULLSEYEARC% jenes Schiffes bist, erhält jenes Schiff 1 Stressmarker."
+      text: "Nachdem ein feindliches Schiff dich als Ziel erfasst hat, falls du nicht im %BULLSEYEARC% jenes Schiffes bist, erhält jenes Schiff 1 Stressmarker, außer es entscheidet sich, die Zielerfassung zu verlieren.%LINEBREAK%<i>Errata: Alternative ergänzt</i>"
     },
     "Fifth Brother": {
       display_name: "Fünfter Bruder",
@@ -2710,7 +2730,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Grappling Struts": {
       display_name: "Laufkrallen",
-      text: "<strong>Geschlossen: </strong>Aufbau: Rüste diese Seite offen aus.%LINEBREAK%Solange du ein Manöver ausführst, falls du einen Asteroiden oder eine Trümmerwolke überschneidest und 1 oder weniger andere befreundete Schiffe in Reichweite 0 jenes Hindernisses sind, darfst du diese Karte umdrehen.%LINEBREAK%<strong>Geöffnet (Rückseite):</strong>Du ignorierst Hindernisse in Reichweite 0 und solange du dich durch sie hindurchbewegst. Nachdem du dein Rad aufgedeckt hast, falls du ein anderes Manöver als [2 %STRAIGHT%] aufgedeckt hast und in Reichweite 0 eines Asteroiden oder einer Trümmerwolke bist, überspringe deinen Schritt „Manöver ausführen“ und entferne 1 Stressmarker; falls du ein rechtes oder linkes Manöver aufgedeckt hast, drehe dein Schiff um 90° in jene Richtung. Nachdem du ein Manöver ausgeführt hast, drehe diese Karte um."
+      text: "<strong>Geschlossen: </strong>%LINEBREAK%<strong>Aufbau:</strong> Rüste diese Seite offen aus.%LINEBREAK%Nachdem du ein Manöver ausgeführt hast, falls du einen Asteroiden oder eine Trümmerwolke überschneidest und 1 oder weniger andere befreundete Schiffe in Reichweite 0 jenes Hindernisses sind, darfst du diese Karte umdrehen. Falls du das tust, erleidest du nicht die Effekte der Überschneidung mit dem Asteroiden oder der Trümmerwolke.%LINEBREAK%<strong>Geöffnet</strong> (Rückseite)%LINEBREAK%Du ignorierst Hindernisse in Reichweite 0. Du kannst keine %BARRELROLL%-Aktionen durchführen. Nachdem du dein Rad aufgedeckt hast, falls du ein anderes Manöver als [2 %STRAIGHT%] aufgedeckt hast und in Reichweite 0 eines Asteroiden oder einer Trümmerwolke bist, überspringe deinen Schritt „Manöver ausführen“ und entferne 1 Stressmarker; falls du ein rechtes oder linkes Manöver aufgedeckt hast, drehe dein Schiff um 90° in jene Richtung. Nachdem du ein Manöver ausgeführt hast, drehe diese Karte um.%LINEBREAK%<i>Errata: Timing verändert und %BARRELROLL%-Aktionen verboten.</i>"
     },
     "Gravitic Deflection": {
       display_name: "Gravitationsdeflektor",
@@ -2830,7 +2850,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Interloper Turn": {
       display_name: "Knoten-Wende",
-      text: "Bevor du ein Wendemanöver (%TURNLEFT%&nbsp;oderr&nbsp;%TURNRIGHT%) mit Geschwindigkeit 1-2 oder eine Koiogran-Wende (%KTURN%) mit Geschwindigkeit 1-2 ausführst, falls du in Reichweite 0-1 eines Asteroiden, eines Konstrukts oder eines riesigen Schiffes bist, darfst du 1 Fangstrahlmarker erhalten."
+      text: "Bevor du ein Wendemanöver (%TURNLEFT%&nbsp;oderr&nbsp;%TURNRIGHT%) mit Geschwindigkeit 1-2 oder eine Koiogran-Wende (%KTURN%) mit Geschwindigkeit 1-2 ausführst, falls du in Reichweite 0-1 eines Asteroiden, eines Konstrukts oder eines riesigen Schiffes bist, darfst du 1 Fangstrahlmarker erhalten.%LINEBREAK%<i>Errata: „Bevor“ statt „Nachdem“</i>"
     },
     "Intimidation": {
       display_name: "Furchteinflößend",
@@ -2942,7 +2962,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Landing Struts": {
       display_name: "Landungskrallen",
-      text: "<strong>Aufbau:</strong> Rüste diese Seite offen aus.%LINEBREAK%Solange du ein Manöver ausführst, falls du einen Asteroiden oder eine Trümmerwolke überschneidest und 1 oder weniger andere befreundete Schiffe in Reichweite&nbsp;0 jenes Hindernisses sind, darfst du diese Karte umdrehen. %LINEBREAK%<strong>Offen:</strong> Du ignorierst Hindernisse in Reichweite 0 und solange du dich durch sie hindurchbewegst. Nachdem du dein Rad aufgedeckt hast, falls du ein anderes Manöver als [2%STRAIGHT%] aufgedeckt hast und in Reichweite 0 eines Asteroiden oder einer Trümmerwolke bist, überspringe deinen Schritt „Manöver ausführen“ und entferne 1 Stressmarker; falls du ein rechtes oder linkes Manöver aufgedeckt hast, drehe dein Schiff um 90° in jene Richtung. Nachdem du ein Manöver ausgeführt hast, drehe diese Karte um."
+      text: "<strong>Geschlossen:</strong>%LINEBREAK%<strong>Aufbau:</strong> Rüste diese Seite offen aus.%LINEBREAK%Nachdem du ein Manöver ausgeführt hast, falls du einen Asteroiden oder eine Trümmerwolke überschneidest und 1 oder weniger andere befreundete Schiffe in Reichweite&nbsp;0 jenes Hindernisses sind, darfst du diese Karte umdrehen. Falls du das tust, erleidest du nicht die Effekte der Überschneidung mit dem Asteroiden oder der Trümmerwolke.%LINEBREAK%<strong>Geöffnet:</strong> (Rückseite)%LINEBREAK% Du ignorierst Hindernisse in Reichweite 0. Du kannst keine %BARRELROLL%-Aktionen durchführen. Nachdem du dein Rad aufgedeckt hast, falls du ein anderes Manöver als [2%STRAIGHT%] aufgedeckt hast und in Reichweite 0 eines Asteroiden oder einer Trümmerwolke bist, überspringe deinen Schritt „Manöver ausführen“ und entferne 1 Stressmarker; falls du ein rechtes oder linkes Manöver aufgedeckt hast, drehe dein Schiff um 90° in jene Richtung. Nachdem du ein Manöver ausgeführt hast, drehe diese Karte um.%LINEBREAK%<i>Errata: Timing verändert und %BARRELROLL%-Aktionen verboten.</i>"
     },
     "Lando Calrissian": {
       display_name: "Lando Calrissian",
@@ -2954,7 +2974,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Lando's Millennium Falcon": {
       display_name: "Landos Millennium Falke",
-      text: "1 Rettungskapsel darf bei dir andocken.%LINEBREAK%Solange ein Rettungskapsel bei dir angedockt ist, darfst du seine Schilde ausgeben, als wären sie auf deiner Schiffskarte.%LINEBREAK%Solange du einen Primärangriff gegen ein gestresstes Schiff durchführst, wirfst du 1 zusätzlichen Angriffswürfel."
+      text: "1 Rettungskapsel darf bei dir andocken.%LINEBREAK%Solange ein Rettungskapsel bei dir angedockt ist, darfst du ihre Schilde behandeln, als wären sie auf deiner Schiffskarte.%LINEBREAK%Solange du einen Primärangriff gegen ein gestresstes Schiff durchführst, wirfst du 1 zusätzlichen Angriffswürfel.%LINEBREAKE%<i>Errata: „behandeln“ statt „ausgeben“</i>"
     },
     "Larma D'Acy": {
       display_name: "Larma D’Acy",
@@ -2970,7 +2990,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Leia Organa (Resistance)": {
       display_name: "Leia Organa (Resistance)",
-      text: "Nachdem ein befreundetes Schiff sein Rad aufgedeckt hat, darfst du 1&nbsp;%FORCE%ausgeben. Falls du das tust, verringert jenes Schiff die Schwierigkeit jenes Manövers."
+      text: "Nachdem ein befreundetes Schiff ein Nicht-[0 %STOP%]-Manöver aufgedeckt hat, darfst du 1&nbsp;%FORCE%ausgeben. Falls du das tust, verringert jenes Schiff die Schwierigkeit jenes Manövers.%LINEBREAK%<i>Errata: Manövertyp eingeschränkt</i>"
     },
     "Lone Wolf": {
       display_name: "Einsamer Wolf",
@@ -2978,7 +2998,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Luke Skywalker": {
       display_name: "Luke Skywalker",
-      text: "Zu Beginn der Kampfphase darfst du 1 %FORCE% ausgeben, um deinen %SINGLETURRETARC%-Anzeiger zu rotieren."
+      text: "Zu Beginn der Kampfphase darfst du 1 %FORCE% ausgeben und 1 Erschöpfungsmarker erhalten, um deinen %SINGLETURRETARC%-Anzeiger zu rotieren.%LINEBREAK%<i>Errata: Erschöpfung ergänzt</i>"
     },
     "M9-G8": {
       display_name: "M9-G8",
@@ -3130,7 +3150,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Protectorate Gleb": {
       display_name: "Schulleiterin Gleb",
-      text: "Nachdem du koordiniert hast, darfst du 1&nbsp;orangen oder roten Marker auf das von dir koordinierte Schiff transferieren."
+      text: "Nachdem du ein befreundetes Schiff koordiniert hast, darfst du 1&nbsp;orangen oder roten Marker auf das von dir koordinierte Schiff transferieren.%LINEBREAK%<i>Errata: Einschränkung auf befreundete Schiffe</i>"
     },
     "Proton Bombs": {
       display_name: "Protonenbomben",
@@ -3390,7 +3410,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Static Discharge Vanes": {
       display_name: "Elektrostatischer Entlader",
-      text: "Falls du einen Ionen- oder Störsignal-marker erhalten würdest, darfst du ein Schiff in Reichweite 0-1 wählen. Falls du das tust, erhalte 1 Stressmarker und transferiere 1 Ionen- oder Störsignalmarker auf jenes Schiff."
+      text: "Bevor du einen Ionen- oder Störsignalmarker erhalten würdest, falls du nicht gestresst bist, darfst du ein Schiff in Reichweite 0-1 wählen. Falls du das tust, erhält stattdessen das gewählte Schiff jenen Ionen oder Störsignalmarker, dann erleidest du 1 %HIT%-Schaden.%LINEBREAK%<i>Errata: Komplett überarbeitet</i>"
     },
     "Stealth Device": {
       display_name: "Tarnvorrichtung",
@@ -3482,7 +3502,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Tracking Torpedoes": {
       display_name: "Zielsuch-Torpedos",
-      text: "Während der Systemphase darfst du bis zu 3 %CHARGE% ausgeben, um ebenso viele Zielsuchtorpedos unter Verwendung der [%BANKLEFT% 3]-, [%STRAIGHT% 4]- und [%BANKRIGHT% 3]-Schablonen zu starten. Jedes Gerät muss eine andere Schablone verwenden. Dann darf jedes Gerät ein Objekt als Ziel erfassen, das du als Ziel erfasst hast, wobei es Reichweiten­beschränkungen ignoriert."
+      text: "Während der Systemphase darfst du bis zu 3 %CHARGE% ausgeben, um ebenso viele Zielsuchtorpedos unter Verwendung der [%BANKLEFT% 3]-, [%STRAIGHT% 4]- und [%BANKRIGHT% 3]-Schablonen zu starten. Jedes Gerät muss eine andere Schablone verwenden. Dann darf jedes Gerät ein Objekt als Ziel erfassen, das du als Ziel erfasst hast, wobei es Reichweiten­beschränkungen ignoriert. Soll die folgende Zeile beinhalten: „Die %CHARGE% dieser Karte können nicht wiederhergestellt werden%LINEBREAK%<i>Errata: %CHARGE% nicht wiederherstellbar</i>"
     },
     "Tractor Beam": {
       display_name: "Fangstrahl",
@@ -3519,6 +3539,10 @@ exportObj.cardLoaders.Deutsch = function() {
     "Unkar Plutt": {
       display_name: "Unkar Plutt",
       text: "Nachdem du ein Manöver teilweise ausgeführt hast, darfst du 1 %HIT%-Schaden erleiden, um 1 weiße Aktion durchzuführen."
+    },
+    "Ursa Wren": {
+      display_name: "Ursa Wren",
+      text: " Du kannst bis zu 2 Zielerfassungen aufrechterhalten. Jede Zielerfassung muss ein anderes Objekt als Ziel haben. Nachdem ein befreundetes Schiff in Reichweite 0–3 von einem feindlichen Schiff als Ziel erfasst worden ist, darfst du eine %LOCK%-Aktion durchführen. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Reaktion auf die Zielerfassung geändert</i>"
     },
     "Vectored Cannons (RZ-1)": {
       display_name: "Schwenkbare Kanonen (RZ-1)",
@@ -3582,7 +3606,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Zeb" Orrelios': {
       display_name: "„Zeb“ Orrelios",
-      text: "Du kannst Primärangriffe in Reichweite 0 durchführen. Feindliche Schiffe in Reichweite 0 können Primärangriffe gegen dich durchführen."
+      text: "Solange du einen Angriff in Angriffsreichweite 0 durchführst, darfst du Fokusmarker für ihren normalen Effekt ausgeben, um Ergebnisse zu modifizieren. Solange du in Angriffsreichweite 0 verteidigst, darf der Angreifer Fokusmarker für ihren normalen Effekt ausgeben, um Ergebnisse zu modifizieren.%LINEBREAK%<i>Errata: Komplett überarbeitet</i>"
     },
     "Corsair Refit": {
       display_name: "Kaperer-Aufrüstung",
@@ -3624,27 +3648,55 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     'Proton Bomb': {
       display_name: "Protonenbombe",
-      text: '(Bomben Token) - Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, erleidet jedes Schiff in Reichweite 0–1 1 %CRIT%-Schaden.'
+      text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, erleidet jedes Schiff und Remote in Reichweite 0–1 1 %CRIT%-Schaden.'
     },
     'Seismic Charge': {
       display_name: "Seismische Bombe",
-      text: '(Bomben Token) - Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wähle 1 Hindernis in Reichweite 0–1. Jedes Schiff in Reichweite 0–1 zu jenem Hindernis erleidet 1 %HIT%-Schaden. Dann entferne jenes Hindernis.'
+      text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wähle 1 Hindernis in Reichweite 0–1. Jedes Schiff und Remote in Reichweite 0–1 zu jenem Hindernis erleidet 1 %HIT%-Schaden. Dann entferne jenes Hindernis.'
     },
     'Bomblet': {
       display_name: "Streubombe",
-      text: '(Bomben Token) - Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff in Reichweite 0–1 2 Angriffswürfel. Jedes Schiff erleidet 1 %HIT%-Schaden für jedes %HIT%/%CRIT% Ergebnis.'
+      text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0–1 2 Angriffswürfel. Jedes Schiff und Remote erleidet 1 %HIT%-Schaden für jedes %HIT%/%CRIT%-Ergebnis.'
+    },
+    'Concussion Bomb': {
+      display_name: "Erschütterungsbombe",
+      text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wird jedem Schiff und Remote in Reichweite 0–1 1 verdeckte Schadenskarte zugeteilt. Dann <strong>muss</strong> jedes Schiff in Reichweite 0–1 1 Schadenskarte offenlegen, es sei denn, es erhält 1 Anstrengungsmarker.'
+    },
+    'Thermal Detonator': {
+      display_name: "Thermaldetonator",
+      text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0–1 1 Angriffswürfel. Jedes Schiff erhält 1 Anstrengungsmarker für jedes %FOCUS%-Ergebnis und jedes Schiff und Remote erleidet 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.'
+    },
+    'Blazer Bomb': {
+      display_name: "Brandbombe",
+      text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. %LINEBREAK% Sobald dieses Gerät detoniert, wirft jedes Schiff und jedes Remote in Reichweite 0–1 1 Angriffswürfel. Jedes Schiff oder Remote erleidet 1 %HIT%-Schaden für jedes %HIT%/%CRIT%-Ergebnis. %LINEBREAK% Nachdem dieses Gerät detoniert ist, wird ein Brand so platziert, dass seine Stopper bündig an der Aussparung des Geräts anliegen. %LINEBREAK% Ein Brand ist ein Hindernis. Nachdem dieses Hindernis platziert worden ist, wird ein Zeitzünder darauf platziert.%LINEBREAK% Während der Endphase wird jeder Brand ohne Zeitzünder entfernt, dann wird 1 Zeitzünder von jedem Brand entfernt..'
     },
     'Loose Cargo': {
       display_name: "Freie Fracht",
-      text: '(Debris Token) - Freie Fracht ist eine Trümmerwolke..'
+      text: '<strong>Typ:</strong> Hindernis, platziert %LINEBREAK% Freie Fracht ist eine Trümmerwolke..'
+    },
+    'Spare Parts': {
+      display_name: "Ersatzteile",
+      text: '<strong>Typ:</strong> Hindernis, platziert %LINEBREAK% Ersatzteile sind eine Trümmerwolke. %LINEBREAK% Sobald dieses Objekt abgeworfen wird, wird es zwischen den hinteren Stopper des Schiffes angelegt.'
     },
     'Conner Net': {
       display_name: "Connernetz",
-      text: '(Mine Token) - Nachdem ein Schiff sich durch dieses Gerät hindurchbewegt oder sich mit ihm überschnitten hat, detoniert es. Sobald dieses Gerät detoniert, erleidet das Schiff 1 %HIT%-Schaden und erhält 3 Ionenmarker.'
+      text: '<strong>Typ:</strong> Gerät, Mine %LINEBREAK% Nachdem ein Schiff sich durch dieses Gerät hindurchbewegt oder sich mit ihm überschnitten hat, detoniert es. Sobald dieses Gerät detoniert, erleidet das Schiff 1 %HIT%-Schaden und erhält 3 Ionenmarker.'
+    },
+    'Electro-Proton Bomb': {
+      display_name: "Elektro-Protonen-Bombe",
+      text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und jedes Remote in Reichweite 0–2 4 Angriffswürfel. Jedes Schiff verliert 1 Schild für jedes Leerseiten-Ergebnis, erhält 1 Ionenmarker für jedes %FOCUS%/%HIT%-Ergebnis und erhält 1 Entwaffnet-Marker für jedes %CRIT%-Ergebnis. Jedes Remote in Reichweite 0–1 verliert 1 Schild für jedes Leerseiten-Ergebnis und erleidet 1 Schaden für jedes %FOCUS%/%HIT%-Ergebnis.'
+    },
+    'Ion Bomb': {
+      display_name: "Ionenbombe",
+      text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, erhält jedes Schiff in Reichweite 0–1 3 Ionenmarker und jedes Remote in Reichweite 0–1 erleidet 1 %HIT%-Schaden.'
     },
     'Proximity Mine': {
       display_name: "Annäherungsmine",
-      text: '(Mine Token) - Nachdem sich ein Schiff durch dieses Gerät hindurchbewegt oder mit ihm überschnitten hat, detoniert es. Sobald dieses Gerät detoniert, wirft jenes Schiff 2 Angriffswürfel. Jenes Schiff erleidet dann 1 %HIT%-Schaden sowie 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.'
+      text: '<strong>Typ:</strong> Gerät, Mine %LINEBREAK% Nachdem sich ein Schiff durch dieses Gerät hindurchbewegt oder mit ihm überschnitten hat, detoniert es. Sobald dieses Gerät detoniert, wirft jenes Schiff 2 Angriffswürfel. Jenes Schiff erleidet dann 1 %HIT%-Schaden plus 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.%LINEBREAK%<i>Errata: Zusätzlicher automatischer Schaden</i>'
+    },
+    'Cluster Mine': {
+      display_name: "Clustermine",
+      text: '<strong>Typ:</strong> Gerät, Mine %LINEBREAK%Ein Clusterminenset besteht aus 3 einzelnen Clusterminen-Geräten. %LINEBREAK% Sobald ein Clusterminenset platziert wird, platziert man die mittlere Clustermine wie gewohnt, dann werden zwei zusätzliche Clusterminen in den Aussparungen platziert.%LINEBREAK% Nachdem sich ein Schiff durch eine einzelne Clustermine hindurchbewegt oder sie überschnitten hat, detoniert sie. Andere Clusterminen des Sets, die nicht von der Bewegung oder Überschneidung betroffen waren, detonieren nicht. %LINEBREAK% Sobald eines dieser Geräte detoniert, wirft jenes Schiff 2 Angriffswürfel. Jenes Schiff erleidet dann 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.'
     },
     'Rattled': {
       display_name: 'Aus der Fassung',
@@ -3653,6 +3705,26 @@ exportObj.cardLoaders.Deutsch = function() {
     'I\'ll Show You the Dark Side': {
       display_name: 'Ich zeige dir die dunkle Seite',
       text: 'Sobald diese Karte zugeordnet wird, falls keine offene Schadenskarte darauf liegt, sucht der Spieler, der sie zugeordnet hat, im Schadensstapel nach 1 <strong>Pilot</strong>-Schadenskarte und platziert sie offen auf dieser Karte. Dann mische den Schadensstapel. %LINEBREAK%Sobald du 1 %CRIT%-Schaden erleiden würdest, wird dir stattdessen die offene Schadenskarte auf dieser Karte zugeteilt. Dann entferne diese Karte. '
+    },
+    'Buzz Droid Swarm': {
+      display_name: 'Buzz-Droidenschwarm',
+      text: 'INIT: 0 <br>Wendigkeit: 1 <br>Hülle: 1 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% <strong>System-, Aktivierungs- und Endphase:</strong> Kein Effekt. %LINEBREAK%<strong>Kampfphase:</strong> Sobald du kämpfst, erleidet jedes feindliche Schiff in Reichweite 0 des Buzz-Droidenschwarms 1 %CRIT%-Schaden. %LINEBREAK%<strong>Sonstige Regeln:</strong>Nachdem sich ein feindliches Schiff durch einen Buzz-Droidenschwarm hindurchbewegt oder ihn überschnitten hat, positioniert der kontrollierende Spieler des Schwarms diesen neu, indem er ihn an die vorderen oder hinteren Stopper jenes Schiffes anlegt (das Schiff ist in Reichweite 0 des Schwarms). Würde dies zur Überschneidung mit einem Objekt führen, kann der Schwarm nicht angelegt werden. Falls der Schwarm am gewählten Stopperpaar nicht platziert werden kann, muss sein kontrollierender Spieler ihn an das andere Stopperpaar des Schiffes anlegen. Kann er auch am anderen Stopperpaar nicht angelegt werden, erhalten der Schwarm und das feindliche Schiff, das sich durch ihn hindurchbewegt oder ihn überschnitten hat, je 1 %HIT%-Schaden. %LINEBREAK%<i>Errata (since rules reference 1.4): Wendigkeit angepasst.</i>'
+    },
+    'DRK-1 Probe Droid': {
+      display_name: 'DRK-1-Sondendroide',
+      text: 'INIT: 0 <br>Wendigkeit: 3 <br>Hülle: 1 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK%  <strong>Systemphase:</strong> Der kontrollierende Spieler des DRK-1-Sondendroiden darf die [2 %BANKLEFT%]-, [2 %STRAIGHT%]- oder [2 %BANKRIGHT%]-Schablone wählen und an einem beliebigen Stopperpaar des DRK-1-Sondendroiden anlegen. Dann positioniert er das Remote neu, indem er den DRK-1-Sondendroiden am anderen Ende der Schablone platziert.Er kann dabei auch in Überschneidung mit einem Objekt platziert werden. Falls der DRK-1-Sondendroide ein Schiff überschneidet, wird die Position des Schiffes mit einer Positionsmarkierung festgehalten. Dann wird das Schiff auf dem Remote platziert.%LINEBREAK%<strong>Aktivierungs-, Kampf- und Endphase:</strong> Kein Effekt. %LINEBREAK%<strong>Sonstige Regeln:</strong> Solange ein Schiff ein Objekt als Ziel erfasst oder ein Störsignal zu einem feindlichen Schiff sendet, darf es die Reichweite von einem befreundeten DRK-1-Sondendroiden aus messen. Nachdem ein feindliches Schiff ein Manöver ausgeführt hat, das zur Überschneidung mit einem DRK-1-Sondendroiden führt, wirft der kontrollierende Spieler des Schiffes 1 Angriffswürfel. Bei einem %FOCUS%-Ergebnis erleidet der DRK-1-Sondendroide 1 %HIT%-Schaden.'
+    },
+    'Sensor Buoy': {
+      display_name: "Sensorboje",
+      text: 'INIT: 0 <br>Wendigkeit: 3 <br>Hülle: 2 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% Sensorbojen sind Remotes, die paarweise auftauchen (eine ist rot, eine blau und beide haben eine eigene Remotekarte) und durch die Aufwertungskarte <strong>Sensorbojen</strong> platziert werden. Abgesehen davon, dass sie Remotes sind und mit jener Karte interagieren, haben sie keine zusätzlichen Regeln.'
+    },
+    'Tracking Torpedoes': {
+      display_name: 'Zielsuch-Torpedos',
+      text: 'INIT: 0 <br>Wendigkeit: 3 <br>Hülle: 3 %LINEBREAK%<strong>Typ:</strong> Gerät, Remote %LINEBREAK% <strong>Systemphase:</strong> Bei der Initiative dieses Remotes positioniert sein kontrollierender Spieler dieses Remote unter Verwendung der [3 %BANKLEFT%]-, [3 %BANKRIGHT%]-, oder [4 %STRAIGHT%]-Schablone vorwärts neu. %LINEBREAK% <strong>Aktivierungsphase:</strong> Kein Effekt. %LINEBREAK% <strong>Kampfphase:</strong> Bei der Initiative dieses Remotes detoniert es, falls ein Objekt, das von ihm als Ziel erfasst ist, in seinem %FRONTARC% in Reichweite 0–1 ist.%LINEBREAK%<strong>Endphase:</strong> Während der Endphase <strong>muss</strong> dieses Remote, falls es kein Objekt als Ziel erfasst hat, ein Objekt in seinem %FRONTARC% in Reichweite 1–3 als Ziel erfassen, falls möglich. %LINEBREAK% <strong>Sonstige Regeln:</strong> Nachdem dieses Remote zerstört worden ist, wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis detoniert es. %LINEBREAK% Sobald dieses Remote detoniert, wirft jedes Schiff, Remote und Konstrukt in Reichweite 0 oder in seinem %FRONTARC% in Reichweite 1 4 Angriffswürfel und erleidet 1 Schaden für jedes passende %HIT%- oder %CRIT%-Ergebnis.'
+    },
+    'Electro-Chaff Cloud': {
+      display_name: 'Elektrodüppel-Wolke',
+      text: '<strong>Typ:</strong>Hindernis, Gerät %LINEBREAK% Während der Endphase wird jede Elektrodüppel-Wolke ohne Zeitzünder entfernt, dann wird ein Zeitzünder von jeder Elektrodüppel-Wolke entfernt. Eine Elektrodüppel-Wolke kann nie mehr als 1 Zeitzünder haben.'
     }
   };
   chassis_translations = {
@@ -3754,7 +3826,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Controlled Ailerons": {
       display_name: "Kontrollierte Querruder",
-      text: "Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, darfst du Schub geben. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Schub statt weißem 1 Manöver</i>"
+      text: "Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, darfst du Schub geben. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Schiffsfähigkeit umbenannt, Schub statt weißem 1 Manöver und optional</i>"
     },
     "Co-Pilot": {
       display_name: "Co-Pilot",
@@ -3786,7 +3858,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Pinpoint Tractor Array": {
       display_name: "Fangstrahl-Zielsystem",
-      text: "%LINEBREAK%<strong>Fangstrahl-Zielsystem:</strong> Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC%rotieren. Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine&nbsp;%ROTATEARC%&nbsp;-Aktion durchzuführen. %LINEBREAK%<i>Errata (since rules reference 1.4):  \"vollständig\" ergänzt</i>"
+      text: "Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC%rotieren. Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine&nbsp;%ROTATEARC%&nbsp;-Aktion durchzuführen. %LINEBREAK%<i>Errata (since rules reference 1.4):  \"vollständig\" ergänzt</i>"
     },
     "Plated Hull": {
       display_name: "Gepanzerte Hülle",
