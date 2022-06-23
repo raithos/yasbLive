@@ -19160,7 +19160,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Stub"': {
       display_name: "“Stub”",
-      text: "While you defend, if the speed of your revealed maneuver is even, roll 1 additional defende die. While you perform a primary attack, if the speed of your revealed maneuver is odd, roll 1 additional attack die. "
+      text: "While you defend, if the speed of your revealed maneuver is even, roll 1 additional defense die. While you perform a primary attack, if the speed of your revealed maneuver is odd, roll 1 additional attack die. "
     },
     '"Hawk" (Z-95)': {
       display_name: "“Hawk”",
@@ -20510,7 +20510,7 @@ exportObj.cardLoaders.English = function() {
       text: "<strong>Setup:</strong> Gain 1 Cloak token. %LINEBREAK% While you are cloaked, other ships cannot acquire locks on you. %LINEBREAK% During the End Phase, if you are cloaked and there is an enemy ship at range 0-3, you must decloak. If you do and that decloak fails, lose 1 cloak token."
     },
     "Enhanced Jamming Suite": {
-      text: "While you jam, you can choose yourself or another friendly ship. %LINEBREAK% While you defend, if the attacker has no green tokens or there is a jammed ship in the attack arc, you may roll 1 additional defence die."
+      text: "While you jam, you can choose yourself or another friendly ship. %LINEBREAK% While you defend, if the attacker has no green tokens or there is a jammed ship in the attack arc, you may roll 1 additional defense die."
     },
     "Compassion": {
       text: "Before another friendly ship at range 0-2 would be dealt a faceup <b>Pilot</b> or <b>Crew</b> damage card, you may spend 1 %FORCE%. If you do, that damage card is discarded instead, and you are dealt 1 facedown damage card. Then, if  you have 2 or more damage cards, recover 2 %FORCE%."
