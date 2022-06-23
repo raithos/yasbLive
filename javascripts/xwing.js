@@ -243,7 +243,7 @@ exportObj.SquadBuilderBackend = (function() {
           } else {
             hasNotArchivedSquads = true;
           }
-          li.append($.trim("<div class=\"row\">\n    <div class=\"col-md-9\">\n        <h4>" + squad.name + "</h4>\n    </div>\n    <div class=\"col-md-3\">\n        <h5>" + ((_ref5 = squad.additional_data) != null ? _ref5.points : void 0) + " " + (exportObj.translate('ui', "Points")) + "</h5>\n    </div>\n</div>\n<div class=\"row squad-description\">\n    <div class=\"col-md-9\">\n        " + ((_ref6 = squad.additional_data) != null ? _ref6.description : void 0) + "\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-modal convert-squad\"><i class=\"xwing-miniatures-font xwing-miniatures-font-first-player-1\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-modal load-squad\"><i class=\"fa fa-download\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-danger delete-squad\"><i class=\"fa fa-times\"></i></button>\n    </div>\n</div>\n<div class=\"row squad-convert-confirm\">\n    <div class=\"col-md-9 translated\" defaultText=\"Convert to Extended?\">\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-danger confirm-convert-squad translated\" defaultText=\"Convert\"></button>\n        &nbsp;\n        <button class=\"btn btn-modal cancel-convert-squad translated\" defaultText=\"Cancel\"></button>\n    </div>\n</div>\n<div class=\"row squad-delete-confirm\">\n    <div class=\"col-md-9\">\n        " + (exportObj.translate('ui', 'reallyDeleteSquadXY', "<em>" + squad.name + "</em>")) + "\n    </div>\n    <div class=\"col-md-3\">\n        <button class=\"btn btn-danger confirm-delete-squad translated\" defaultText=\"Delete\"></button>\n        &nbsp;\n        <button class=\"btn btn-modal cancel-delete-squad translated\" defaultText=\"Cancel\"></button>\n    </div>\n</div>"));
+          li.append($.trim("<div class=\"row\">\n    <div class=\"col-md-9\">\n        <h4>" + squad.name + "</h4>\n    </div>\n    <div class=\"col-md-3\">\n        <h5>" + ((_ref5 = squad.additional_data) != null ? _ref5.points : void 0) + " " + (exportObj.translate('ui', "Points")) + "</h5>\n    </div>\n</div>\n<div class=\"row squad-description\">\n    <div class=\"col-md-9\">\n        " + ((_ref6 = squad.additional_data) != null ? _ref6.description : void 0) + "\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-modal convert-squad\"><i class=\"xwing-miniatures-font xwing-miniatures-font-first-player-1\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-modal load-squad\"><i class=\"fa fa-download\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-danger delete-squad\"><i class=\"fa fa-times\"></i></button>\n    </div>\n</div>\n<div class=\"row squad-convert-confirm\">\n    <div class=\"col-md-9 translated\" defaultText=\"Convert to Extended?\">\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-danger confirm-convert-squad translated\" defaultText=\"Convert\"></button>\n        &nbsp;\n        <button class=\"btn btn-modal cancel-convert-squad translated\" defaultText=\"Cancel\"></button>\n    </div>\n</div>\n<div class=\"row squad-delete-confirm\">\n    <div class=\"col-md-6\">\n        " + (exportObj.translate('ui', 'reallyDeleteSquadXY', "<em>" + squad.name + "</em>")) + "\n    </div>\n    <div class=\"col-md-6 btn-group\">\n        <button class=\"btn btn-danger confirm-delete-squad translated\" defaultText=\"Delete\"></button>\n        <button class=\"btn confirm-archive-squad translated\" defaultText=\"Archive\"></button>\n        <button class=\"btn btn-modal cancel-delete-squad translated\" defaultText=\"Unselect\"></button>\n    </div>\n</div>"));
           li.find('.squad-convert-confirm').hide();
           li.find('.squad-delete-confirm').hide();
           if (squad.serialized.search(/v\d+Zh/) === -1) {
@@ -366,6 +366,34 @@ exportObj.SquadBuilderBackend = (function() {
                 }
               } else {
                 return li.html($.trim("Error deleting " + (li.data('squad').name) + ": <em>" + results.error + "</em>"));
+              }
+            });
+          });
+          li.find('button.confirm-archive-squad').click(function(e) {
+            var button;
+            e.preventDefault();
+            button = $(e.target);
+            li = button.closest('li');
+            builder = li.data('builder');
+            li.find('.confirm-delete-squad').addClass('disabled');
+            li.find('.confirm-delete-squad').text(exportObj.translate('ui', 'Archiving...'));
+            return _this.archive(li.data('squad'), li.data('builder').faction, function(results) {
+              if (results.success) {
+                li.slideUp('fast', function() {
+                  $(li).hide();
+                  $(li).find('.confirm-delete-squad').removeClass('disabled');
+                  $(li).find('.confirm-delete-squad').text(exportObj.translate('ui', 'Delete'));
+                  $(li).data('selectedForDeletion', false);
+                  return $(li).find('.squad-delete-confirm').fadeOut('fast', function() {
+                    return $(li).find('.squad-description').fadeIn('fast');
+                  });
+                });
+                _this.number_of_selected_squads_to_be_deleted -= 1;
+                if (!_this.number_of_selected_squads_to_be_deleted) {
+                  return _this.squad_list_modal.find('div.delete-multiple-squads').hide();
+                }
+              } else {
+                return li.html($.trim("Error archiving " + (li.data('squad').name) + ": <em>" + results.error + "</em>"));
               }
             });
           });
@@ -1073,7 +1101,7 @@ exportObj.SquadBuilderBackend = (function() {
                 return headers = arguments[0];
               };
             })(),
-            lineno: 959
+            lineno: 987
           }));
           __iced_deferrals._fulfill();
         });
@@ -2560,7 +2588,7 @@ exportObj.setupTranslationSupport = function() {
                     parent: ___iced_passed_deferral
                   });
                   builder.container.trigger('xwing:beforeLanguageLoad', __iced_deferrals.defer({
-                    lineno: 2170
+                    lineno: 2198
                   }));
                   __iced_deferrals._fulfill();
                 })(_next);
@@ -3461,7 +3489,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3132
+              lineno: 3160
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4395,7 +4423,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4015
+              lineno: 4043
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4405,7 +4433,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4016
+                lineno: 4044
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -6697,7 +6725,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5679
+                  lineno: 5707
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6926,7 +6954,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5801
+                          lineno: 5829
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -6976,7 +7004,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5834
+                                  lineno: 5862
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7082,7 +7110,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5899
+                      lineno: 5927
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7166,7 +7194,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5935
+                lineno: 5963
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7257,7 +7285,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 5977
+              lineno: 6005
             }));
           }
         }
@@ -7345,7 +7373,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6032
+                lineno: 6060
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8566,7 +8594,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6942
+                lineno: 6970
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8725,7 +8753,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7036
+                  lineno: 7064
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8752,7 +8780,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7043
+                      lineno: 7071
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8896,7 +8924,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7118
+            lineno: 7146
           }));
         }
         __iced_deferrals._fulfill();
