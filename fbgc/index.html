@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><title>YASB 2</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:url" content="http://raithos.github.io/"><meta property="og:image" content="http://raithos.github.io/android-chrome-192x192.png"><meta property="og:description" content="YASB 2 is a simple, fast, and easy to use squad builder for X-Wing Miniatures by Fantasy Flight Games."><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"><link rel="manifest" href="site.webmanifest"><link rel="shortcut icon" type="image/x-icon" href="favicon.ico"><link rel="stylesheet" href="bower_components/select2/select2.css?1655705828"><link rel="stylesheet" href="bootstrap/css/bootstrap.css?1655705828"><link rel="stylesheet" href="stylesheets/xwing.css?1655705828"><link rel="stylesheet" href="stylesheets/xwing-screen.css?1655705828" media="screen"><link rel="stylesheet" href="stylesheets/xwing-print.css?1655705828" media="print"><link rel="stylesheet" href="stylesheets/backgrounds.css?1655705828" media="screen"><link rel="stylesheet" href="fonts/xwing-miniatures.css?1655705828" media="screen,print"><link rel="stylesheet" href="bower_components/font-awesome/css/all.min.css?1655705828"></head><body><!-- body layout--><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WQ43KS2P7F"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+</script><div class="tabbable d-print-none"><ul class="nav nav-pills main-top-nav-bar"><li class="nav-item"><a class="nav-link" id="rebelTab" data-toggle="tab" href="#rebelContent" title="Rebel Alliance"><i class="xwing-miniatures-font xwing-miniatures-font-rebel"></i></a></li><li class="nav-item"><a class="nav-link" id="empireTab" data-toggle="tab" href="#empireContent" title="Galactic Empire"><i class="xwing-miniatures-font xwing-miniatures-font-empire"></i></a></li><li class="nav-item float-right"><a class="nav-link" href="#" target="_blank">Week 1 </a></li></ul><div class="tab-content"><div class="tab-pane fade" id="rebelContent"><div id="rebel-builder"></div></div><div class="tab-pane fade" id="empireContent"><div id="empire-builder"></div></div></div></div><div class="footer"><div class="msie8-hax"></div></div><div class="d-none d-print-block" id="printable"><div class="printable-header"></div><div class="printable-body"></div><div class="printable-footer">Created at<strong class="site-placeholder"></strong></div></div><!-- JS linkages--><script src="bower_components/jquery/js/jquery.js?1655705828"></script><script src="bower_components/jquery-ui/js/jquery-ui.min.js?1655705828"></script><script src="bower_components/jquery-ajaxtransport-xdomainrequest/jquery.xdomainrequest.min.js?1655705828"></script><script src="bower_components/jquery.qrcode/js/jquery-qrcode.min.js?1655705828"></script><script src="bower_components/select2/select2.js?1655705828"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="bootstrap/js/bootstrap.js?1655705828"></script><script src="javascripts/translations.min.js?1655705828"></script><script src="javascripts/xwing.min.js?1655705828"></script><script src="javascripts/xwingcontent.min.js?1655705828"></script><script src="javascripts/translations.min.js?1655705828"></script><script>(function() {
+  $(function() {
+    window.setupTranslationSupport();
+    switch (window.location.hash) {
+      case '#rebelContent':
+        window.location.replace('?f=Rebel Alliance');
+        break;
+      case '#empireContent':
+        window.location.replace('?f=Galactic Empire');
+    }
+    window.rebel_sb = new window.SquadBuilder({
+      tab: '#rebelTab',
+      faction: 'Rebel Alliance',
+      container: '#rebel-builder',
+      printable_container: '#printable'
+    });
+    window.registerBuilderForTranslation(window.rebel_sb);
+    window.empire_sb = new window.SquadBuilder({
+      tab: '#empireTab',
+      faction: 'Galactic Empire',
+      container: '#empire-builder',
+      printable_container: '#printable'
+    });
+    window.registerBuilderForTranslation(window.empire_sb);
+    switch ($.getParameterByName('f')) {
+      case 'Rebel Alliance':
+        $('#rebelTab').tab('show');
+        break;
+      case 'Galactic Empire':
+        $('#empireTab').tab('show');
+        break;
+      default:
+        $('#rebelTab').tab('show');
+    }
+    return window.setupTranslationUI(window.backend);
+  });
+
+}).call(this);
+</script><div class="font-hax"><span style="font-family: BankGothicHD">&nbsp;</span><span style="font-family: kimberley">&nbsp;</span><span style="font-family: XWing">&nbsp;</span><span style="font-family: XWingShip">&nbsp;</span></div><img class="d-none" src="images/coreasteroid0.png"><img class="d-none" src="images/coreasteroid1.png"><img class="d-none" src="images/coreasteroid2.png"><img class="d-none" src="images/coreasteroid3.png"><img class="d-none" src="images/coreasteroid4.png"><img class="d-none" src="images/coreasteroid5.png"><img class="d-none" src="images/yt2400debris0.png"><img class="d-none" src="images/yt2400debris1.png"><img class="d-none" src="images/yt2400debris2.png"><img class="d-none" src="images/vt49decimatordebris0.png"><img class="d-none" src="images/vt49decimatordebris1.png"><img class="d-none" src="images/vt49decimatordebris2.png"><img class="d-none" src="images/core2asteroid0.png"><img class="d-none" src="images/core2asteroid1.png"><img class="d-none" src="images/core2asteroid2.png"><img class="d-none" src="images/core2asteroid3.png"><img class="d-none" src="images/core2asteroid4.png"><img class="d-none" src="images/core2asteroid5.png"><img class="d-none" src="images/gascloud1.png"><img class="d-none" src="images/gascloud2.png"><img class="d-none" src="images/gascloud3.png"><img class="d-none" src="images/gascloud4.png"><img class="d-none" src="images/gascloud5.png"><img class="d-none" src="images/gascloud6.png"><img class="d-none" src="images/pomasteroid1.png"><img class="d-none" src="images/pomasteroid2.png"><img class="d-none" src="images/pomasteroid3.png"><img class="d-none" src="images/pomdebris1.png"><img class="d-none" src="images/pomdebris2.png"><img class="d-none" src="images/pomdebris3.png"></body></html>
