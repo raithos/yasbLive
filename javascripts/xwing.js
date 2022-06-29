@@ -8230,7 +8230,7 @@ Ship = (function() {
     _ref = this.upgrades;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       upgrade = _ref[_i];
-      if (upgrade === upgrade_obj || !exportObj.slotsMatching(upgrade.slot, upgradeslot)) {
+      if (upgrade === upgrade_obj || !exportObj.slotsMatching(upgrade.slot, upgradeslot) || upgrade.slot === "HardpointShip" || upgrade.slot === "VersatileShip") {
         continue;
       }
       if (!upgrade.isOccupied()) {
@@ -8337,7 +8337,7 @@ Ship = (function() {
               }
               break;
             case "Slot":
-              if (!this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]) && !upgrade_obj.occupiesAnUpgradeSlot(r[1])) {
+              if ((!this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]) && !upgrade_obj.occupiesAnUpgradeSlot(r[1])) || upgrade_obj.slot === "HardpointShip" || upgrade_obj.slot === "VersatileShip") {
                 return false;
               }
               break;
