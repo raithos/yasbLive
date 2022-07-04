@@ -9673,11 +9673,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "Gozanti-class Cruiser",
         faction: "Galactic Empire",
-        points: 7,
-        modifier_func: function(stats) {
-          stats.hull -= 1;
-          return stats.energy += 1;
-        }
+        points: 7
       }, {
         name: "Suppressor",
         id: 303,
@@ -29646,6 +29642,10 @@ exportObj.manifestByExpansion = {
       name: 'Blazer Bomb',
       type: 'upgrade',
       count: 2
+    }, {
+      name: 'Veteran Tail Gunner',
+      type: 'upgrade',
+      count: 1
     }, {
       name: 'Enduring',
       type: 'upgrade',

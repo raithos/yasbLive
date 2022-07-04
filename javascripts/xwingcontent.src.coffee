@@ -14904,9 +14904,6 @@ exportObj.basicCardData = ->
             ship: "Gozanti-class Cruiser"
             faction: "Galactic Empire"
             points: 7
-            modifier_func: (stats) ->
-                stats.hull -= 1
-                stats.energy += 1
         }
         {
             name: "Suppressor"
@@ -39051,6 +39048,11 @@ exportObj.manifestByExpansion =
             name: 'Blazer Bomb'
             type: 'upgrade'
             count: 2
+        }
+        {
+            name: 'Veteran Tail Gunner'
+            type: 'upgrade'
+            count: 1
         }
         {
             name: 'Enduring'
