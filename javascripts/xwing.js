@@ -5574,9 +5574,9 @@ exportObj.SquadBuilder = (function() {
           container.find('tr.info-attack-left').toggle(ship.attackl != null);
           container.find('tr.info-attack-right td.info-data').text(ship.attackr);
           container.find('tr.info-attack-right').toggle(ship.attackr != null);
-          container.find('tr.info-attack-back td.info-data').text(ship.attackb != null);
+          container.find('tr.info-attack-back td.info-data').text(ship.attackb);
           container.find('tr.info-attack-back').toggle(ship.attackb != null);
-          container.find('tr.info-attack-turret td.info-data').text(ship.attackt != null);
+          container.find('tr.info-attack-turret td.info-data').text(ship.attackt);
           container.find('tr.info-attack-turret').toggle(ship.attackt != null);
           container.find('tr.info-attack-doubleturret td.info-data').text(ship.attackdt);
           container.find('tr.info-attack-doubleturret').toggle(ship.attackdt != null);
