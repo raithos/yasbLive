@@ -3567,7 +3567,7 @@ exportObj.SquadBuilder = (function() {
     } else {
       intro = "";
     }
-    return "" + intro + "\n<div class=\"card info-well\">\n    <div class=\"info-name\"></div>\n    <div class=\"info-type\"></div>\n    <span class=\"info-collection\"></span>\n    <table class=\"table-sm\">\n        <tbody>\n            <tr class=\"info-faction\">\n                <td class=\"info-header translated\" defaultText=\"Faction\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-ship\">\n                <td class=\"info-header translated\" defaultText=\"Ship\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-loadout\">\n                <td class=\"info-header translated\" defaultText=\"Loadout\"></td>\n                <td class=\"info-data info-loadout\"></td>\n            </tr>\n            <tr class=\"info-base\">\n                <td class=\"info-header translated\" defaultText=\"Base\"></td>\n                <td class=\"info-data\"></td> \n            </tr>\n            <tr class=\"info-skill\">\n                <td class=\"info-header translated\" defaultText=\"Initiative\"></td>\n                <td class=\"info-data info-skill\"></td>\n            </tr>\n            <tr class=\"info-points\">\n                <td class=\"info-header translated\" defaultText=\"Points\"></td>\n                <td class=\"info-data info-points\"></td>\n            </tr>\n            <tr class=\"info-engagement\">\n                <td class=\"info-header translated\" defaultText=\"Engagement\"></td>\n                <td class=\"info-data info-engagement\"></td>\n            </tr>\n            <tr class=\"info-attack-bullseye\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-bullseyearc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-frontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-fullfront\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-fullfrontarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-left\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-leftarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-right\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-rightarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-back\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-reararc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-turret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-singleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-attack-doubleturret\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-doubleturretarc\"></i></td>\n                <td class=\"info-data info-attack\"></td>\n            </tr>\n            <tr class=\"info-agility\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-agility xwing-miniatures-font-agility\"></i></td>\n                <td class=\"info-data info-agility\"></td>\n            </tr>\n            <tr class=\"info-hull\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-hull xwing-miniatures-font-hull\"></i></td>\n                <td class=\"info-data info-hull\"></td>\n            </tr>\n            <tr class=\"info-shields\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-shield xwing-miniatures-font-shield\"></i></td>\n                <td class=\"info-data info-shields\"></td>\n            </tr>\n            <tr class=\"info-force\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-force xwing-miniatures-font-forcecharge\"></i></td>\n                <td class=\"info-data info-force\"></td>\n            </tr>\n            <tr class=\"info-charge\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-charge xwing-miniatures-font-charge\"></i></td>\n                <td class=\"info-data info-charge\"></td>\n            </tr>\n            <tr class=\"info-energy\">\n                <td class=\"info-header\"><i class=\"xwing-miniatures-font header-energy xwing-miniatures-font-energy\"></i></td>\n                <td class=\"info-data info-energy\"></td>\n            </tr>\n            <tr class=\"info-range\">\n                <td class=\"info-header translated\" defaultText=\"Range\"></td>\n                <td class=\"info-data info-range\"></td><td class=\"info-rangebonus\"><i class=\"xwing-miniatures-font red header-range xwing-miniatures-font-rangebonusindicator\"></i></td>\n            </tr>\n            <tr class=\"info-actions\">\n                <td class=\"info-header translated\" defaultText=\"Actions\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-upgrades\">\n                <td class=\"info-header translated\" defaultText=\"Upgrades\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n        </tbody>\n    </table>\n    <p class=\"info-restrictions\"></p>\n    <p class=\"info-text\"></p>\n    <p class=\"info-chassis\"></p>\n    <p class=\"info-maneuvers\"></p>\n    <br />\n    <span class=\"info-header info-sources translated\" defaultText=\"Sources:\"></span> \n    <span class=\"info-data info-sources\"></span>\n</div>";
+    return "" + intro + "\n<div class=\"card info-well\">\n    <div class=\"info-name\"></div>\n    <div class=\"info-type\"></div>\n    <span class=\"info-collection\"></span>\n    <div class=\"row\">\n        <div class=\"col-sm-5\">\n            <table class=\"table-sm\">\n                <tbody>\n                    <tr class=\"info-attack-bullseye\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-bullseyearc\"></i></td>\n                        <td class=\"info-data info-attack\"></td>\n                    </tr>\n                    <tr class=\"info-attack\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-frontarc\"></i></td>\n                        <td class=\"info-data info-attack\"></td>\n                    </tr>\n                    <tr class=\"info-attack-fullfront\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-fullfrontarc\"></i></td>\n                        <td class=\"info-data info-attack\"></td>\n                    </tr>\n                    <tr class=\"info-attack-left\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-leftarc\"></i></td>\n                        <td class=\"info-data info-attack\"></td>\n                    </tr>\n                    <tr class=\"info-attack-right\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-rightarc\"></i></td>\n                        <td class=\"info-data info-attack\"></td>\n                    </tr>\n                    <tr class=\"info-attack-back\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-reararc\"></i></td>\n                        <td class=\"info-data info-attack\"></td>\n                    </tr>\n                    <tr class=\"info-attack-turret\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-singleturretarc\"></i></td>\n                        <td class=\"info-data info-attack\"></td>\n                    </tr>\n                    <tr class=\"info-attack-doubleturret\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-attack xwing-miniatures-font-doubleturretarc\"></i></td>\n                        <td class=\"info-data info-attack\"></td>\n                    </tr>\n                    <tr class=\"info-agility\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-agility xwing-miniatures-font-agility\"></i></td>\n                        <td class=\"info-data info-agility\"></td>\n                    </tr>\n                    <tr class=\"info-hull\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-hull xwing-miniatures-font-hull\"></i></td>\n                        <td class=\"info-data info-hull\"></td>\n                    </tr>\n                    <tr class=\"info-shields\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-shield xwing-miniatures-font-shield\"></i></td>\n                        <td class=\"info-data info-shields\"></td>\n                    </tr>\n                    <tr class=\"info-force\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-force xwing-miniatures-font-forcecharge\"></i></td>\n                        <td class=\"info-data info-force\"></td>\n                    </tr>\n                    <tr class=\"info-charge\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-charge xwing-miniatures-font-charge\"></i></td>\n                        <td class=\"info-data info-charge\"></td>\n                    </tr>\n                    <tr class=\"info-energy\">\n                        <td class=\"info-header\"><i class=\"xwing-miniatures-font header-energy xwing-miniatures-font-energy\"></i></td>\n                        <td class=\"info-data info-energy\"></td>\n                    </tr>\n                    <tr class=\"info-range\">\n                        <td class=\"info-header translated\" defaultText=\"Range\"></td>\n                        <td class=\"info-data info-range\"></td><td class=\"info-rangebonus\"><i class=\"xwing-miniatures-font red header-range xwing-miniatures-font-rangebonusindicator\"></i></td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n        <div class=\"col-sm-7\">\n            <table class=\"table-sm\">\n                <tbody>\n                    <tr class=\"info-skill\">\n                        <td class=\"info-header translated\" defaultText=\"Initiative\"></td>\n                        <td class=\"info-data info-skill\"></td>\n                    </tr>\n                    <tr class=\"info-engagement\">\n                        <td class=\"info-header translated\" defaultText=\"Engagement\"></td>\n                        <td class=\"info-data info-engagement\"></td>\n                    </tr>\n                    <tr class=\"info-ship\">\n                        <td class=\"info-header translated\" defaultText=\"Ship\"></td>\n                        <td class=\"info-data\"></td>\n                    </tr>\n                    <tr class=\"info-faction\">\n                        <td class=\"info-header translated\" defaultText=\"Faction\"></td>\n                        <td class=\"info-data\"></td>\n                    </tr>\n                    <tr class=\"info-base\">\n                        <td class=\"info-header translated\" defaultText=\"Base\"></td>\n                        <td class=\"info-data\"></td> \n                    </tr>\n                    <tr class=\"info-points\">\n                        <td class=\"info-header translated\" defaultText=\"Points\"></td>\n                        <td class=\"info-data info-points\"></td>\n                    </tr>\n                    <tr class=\"info-loadout\">\n                        <td class=\"info-header translated\" defaultText=\"Loadout\"></td>\n                        <td class=\"info-data info-loadout\"></td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n    <table class=\"table-sm\">\n        <tbody>\n            <tr class=\"info-actions\">\n                <td class=\"info-header translated\" defaultText=\"Actions\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n            <tr class=\"info-upgrades\">\n                <td class=\"info-header translated\" defaultText=\"Upgrades\"></td>\n                <td class=\"info-data\"></td>\n            </tr>\n        </tbody>\n    </table>\n    <p class=\"info-restrictions\"></p>\n    <p class=\"info-text\"></p>\n    <p class=\"info-chassis\"></p>\n    <p class=\"info-maneuvers\"></p>\n    <br />\n    <span class=\"info-header info-sources translated\" defaultText=\"Sources:\"></span> \n    <span class=\"info-data info-sources\"></span>\n</div>";
   };
 
   SquadBuilder.prototype.setupEventHandlers = function() {
@@ -4423,7 +4423,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4043
+              lineno: 4057
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4433,7 +4433,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4044
+                lineno: 4058
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -5402,6 +5402,8 @@ exportObj.SquadBuilder = (function() {
           container.find('tr.info-base').show();
           container.find('tr.info-skill td.info-data').text(data.skill);
           container.find('tr.info-skill').show();
+          container.find('tr.info-points td.info-data').text(data.points);
+          container.find('tr.info-points').show();
           container.find('tr.info-loadout td.info-data').text(data.loadout);
           container.find('tr.info-loadout').show();
           if (data.engagement != null) {
@@ -5410,7 +5412,6 @@ exportObj.SquadBuilder = (function() {
           } else {
             container.find('tr.info-engagement').hide();
           }
-          container.find('tr.info-points').hide();
           container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass((_ref21 = ship.attack_icon) != null ? _ref21 : 'xwing-miniatures-font-attack');
           container.find('tr.info-attack td.info-data').text(statAndEffectiveStat((_ref22 = (_ref23 = data.ship_override) != null ? _ref23.attack : void 0) != null ? _ref22 : ship.attack, effective_stats, 'attack'));
           container.find('tr.info-attack').toggle((ship.attack != null) || ((effective_stats != null ? effective_stats.attack : void 0) != null));
@@ -6725,7 +6726,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5707
+                  lineno: 5724
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6954,7 +6955,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5829
+                          lineno: 5846
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -7004,7 +7005,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5862
+                                  lineno: 5879
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7110,7 +7111,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5927
+                      lineno: 5944
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7194,7 +7195,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5963
+                lineno: 5980
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7285,7 +7286,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6005
+              lineno: 6022
             }));
           }
         }
@@ -7373,7 +7374,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6060
+                lineno: 6077
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8594,7 +8595,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6970
+                lineno: 6987
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8753,7 +8754,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7064
+                  lineno: 7081
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8780,7 +8781,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7071
+                      lineno: 7088
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8924,7 +8925,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7146
+            lineno: 7163
           }));
         }
         __iced_deferrals._fulfill();
