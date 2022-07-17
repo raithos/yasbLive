@@ -87,21 +87,22 @@ body {
     font-family: EurostileStandard, Impact, sans-serif; }
     #printable .fancy-header .squad-name {
       position: absolute;
-      font-size: 0.28125in;
-      margin-top: 0.0375in;
+      font-size: 0.3in;
       font-weight: 100; }
       #printable .fancy-header .squad-name .xwing-miniatures-font {
-        font-size: 0.2625in; }
+        position: relative;
+        bottom: 0.04in;
+        font-size: 0.24in; }
     #printable .fancy-header .squad-faction {
       position: absolute;
-      margin-top: 0;
-      right: 0.984375in;
+      margin-top: 0.04in;
+      right: 0.7in;
       font-weight: 100; }
       #printable .fancy-header .squad-faction .xwing-miniatures-font {
         font-size: 0.2625in; }
     #printable .fancy-header .mask {
       position: absolute;
-      right: 0;
+      right: -0.25in;
       width: 0.5625in;
       background-color: white;
       height: 0.5625in;
@@ -190,10 +191,10 @@ body {
       border-left-color: transparent;
       border-bottom-color: transparent;
       border-right-color: transparent;
-      margin-bottom: -0.6in; }
+      margin-bottom: -0.5in; }
       #printable .fancy-ship .fancy-pilot-stats .pilot-stats-content {
         position: relative;
-        margin-top: -0.2in; }
+        margin-top: -0.27in; }
         #printable .fancy-ship .fancy-pilot-stats .pilot-stats-content .xwing-miniatures-font {
           vertical-align: middle; }
         #printable .fancy-ship .fancy-pilot-stats .pilot-stats-content .action {
@@ -204,19 +205,30 @@ body {
     #printable .fancy-ship .fancy-pilot-text, #printable .fancy-ship .fancy-pilot-chassis {
       margin-left: 0.6in;
       padding: 5px;
-      color: black; }
+      color: black;
+      font-size: 0.18in;
+      margin-bottom: 0.2in; }
     #printable .fancy-ship .fancy-upgrade-container {
       color: black;
-      position: relative; }
+      position: relative;
+      margin-left: 0.365in;
+      margin-right: 0.365in;
+      margin-bottom: 10px; }
       #printable .fancy-ship .fancy-upgrade-container .upgrade-container {
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
         position: relative;
+        margin-left: 0.04in;
+        margin-right: 0.04in;
         margin-bottom: 0.04in;
-        margin-left: 0.75in;
-        margin-right: 0.365in;
+        font-size: 0.163in;
         border: 1px dotted lightgray;
         clear: both; }
         #printable .fancy-ship .fancy-upgrade-container .upgrade-container .upgrade-stats {
           min-height: 0.38in; }
+          #printable .fancy-ship .fancy-upgrade-container .upgrade-container .upgrade-stats .upgrade-name {
+            font-size: 0.19in; }
         #printable .fancy-ship .fancy-upgrade-container .upgrade-container .card-restriction-container {
           padding-top: 0.10in; }
         #printable .fancy-ship .fancy-upgrade-container .upgrade-container .mask {
@@ -283,7 +295,7 @@ body {
           #printable .fancy-ship .fancy-upgrade-container .upgrade-container .upgrade-attack .info-attack, #printable .fancy-ship .fancy-upgrade-container .upgrade-container .upgrade-energy .info-attack, #printable .fancy-ship .fancy-upgrade-container .upgrade-container .upgrade-charge .info-attack, #printable .fancy-ship .fancy-upgrade-container .upgrade-container .upgrade-force .info-attack {
             margin-right: 0.02in; }
         #printable .fancy-ship .fancy-upgrade-container .upgrade-container .upgrade-text {
-          padding-right: 0.3375in;
+          padding-right: 0.1in;
           padding-left: 0.27in;
           margin-left: 0.10in; }
     #printable .fancy-ship .ship-points-total {
@@ -343,7 +355,9 @@ body {
   #printable .print-notes {
     color: black; }
   #printable .version {
-    color: black; }
+    position: relative;
+    bottom: 0.2in;
+    color: white; }
   #printable .qrcode-container {
     color: black;
     width: 7in;
