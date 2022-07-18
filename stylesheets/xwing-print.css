@@ -254,6 +254,8 @@ body {
       margin-left: 0.365in;
       margin-right: 0.365in;
       margin-bottom: 10px; }
+      #printable .fancy-ship .fancy-upgrade-container .wide {
+        width: 60% !important; }
       #printable .fancy-ship .fancy-upgrade-container .upgrade-container {
         width: 49%;
         display: inline-block;
