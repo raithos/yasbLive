@@ -7134,7 +7134,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 20,
         chassis: "Hope",
-        upgrades: ["Dorsal Turret (BoY)", "Adv. Proton Torpedoes", "Precise Astromech (BoY)"]
+        upgrades: ["Dorsal Turret", "Adv. Proton Torpedoes", "Precise Astromech (BoY)"]
       }, {
         name: "Darth Vader (BoY)",
         canonical_name: 'Darth Vader'.canonicalize(),
