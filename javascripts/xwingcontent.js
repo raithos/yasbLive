@@ -4270,7 +4270,7 @@ exportObj.basicCardData = function() {
         charge: 1,
         recurring: 1,
         points: 3,
-        slots: ["Missile", "Modification"]
+        slots: ["Talent", "Modification"]
       }, {
         name: "Mining Guild Sentry",
         id: 304,
