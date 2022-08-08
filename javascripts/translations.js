@@ -582,6 +582,10 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Ahsoka Tano",
       text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du ein befreundetes Schiff in Reichweite 0-1 wählen und 1 %FORCE% ausgeben. Jenes Schiff darf eine Aktion durchführen, auch falls es gestresst ist. "
     },
+    "Ahsoka Tano (Delta-7b)": {
+      display_name: "Ahsoka Tano",
+      text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du ein befreundetes Schiff in Reichweite 0-1 wählen und 1 %FORCE% ausgeben. Jenes Schiff darf eine Aktion durchführen, auch falls es gestresst ist. "
+    },
     "Airen Cracken": {
       display_name: "Airen Cracken",
       text: "Nachdem du einen Angriff durchgeführt hast, darfst du 1 befreundetes Schiff in Reichweite 1 wählen. Jenes Schiff darf eine Aktion durchführen, die es als rot behandelt."
@@ -595,6 +599,10 @@ exportObj.cardLoaders.Deutsch = function() {
       text: "<i class = flavor_text>Sienar Flottensysteme konzipierte den TIE-Abfangjäger mit vier Laserkanonen an den Tragflächenspitzen. Dadurch ist er seinen Vorgängermodellen waffentechnisch weit überlegen.</i>"
     },
     "Anakin Skywalker": {
+      display_name: "Anakin Skywalker",
+      text: "Nachdem du ein Manöver vollständig ausgeführt hast, falls ein feindliches Schiff in deinem %FRONTARC% in Reichweite 0-1 oder in deinem %BULLSEYEARC% ist, darfst du 1 %FORCE% ausgeben, um 1 Stressmarker zu entfernen."
+    },
+    "Anakin Skywalker (Delta-7b)": {
       display_name: "Anakin Skywalker",
       text: "Nachdem du ein Manöver vollständig ausgeführt hast, falls ein feindliches Schiff in deinem %FRONTARC% in Reichweite 0-1 oder in deinem %BULLSEYEARC% ist, darfst du 1 %FORCE% ausgeben, um 1 Stressmarker zu entfernen."
     },
@@ -635,6 +643,10 @@ exportObj.cardLoaders.Deutsch = function() {
       text: "<i class = flavor_text>Sienars TIE-v1-Turbojäger war eine bahnbrechende Entwicklung auf dem Gebiet der Sternenjäger-Technologie. Er verfügt über stärkere Triebwerke, einen Raketenwerfer sowie klappbare S-Flügel.</i>"
     },
     "Barriss Offee": {
+      display_name: "Barriss Offee",
+      text: "Solange ein befreundetes Schiff in Reichweite 0-2 einen Angriff durchführt, falls der Verteidiger in seinem %BULLSEYEARC% ist, darfst du 1 %FORCE% ausgeben, um 1 %FOCUS%-Ergebnis in ein %HIT%-Ergebnis oder 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis zu ändern. "
+    },
+    "Barriss Offee (Delta-7b)": {
       display_name: "Barriss Offee",
       text: "Solange ein befreundetes Schiff in Reichweite 0-2 einen Angriff durchführt, falls der Verteidiger in seinem %BULLSEYEARC% ist, darfst du 1 %FORCE% ausgeben, um 1 %FOCUS%-Ergebnis in ein %HIT%-Ergebnis oder 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis zu ändern. "
     },
@@ -824,7 +836,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Colonel Vessery": {
       display_name: "Colonel Vessery",
-      text: "Solange du einen Angriff gegen ein erfasstes Schiff durchführst, nachdem du Angriffswürfel geworfen hast, darfst du den Verteidiger als Ziel erfassen.%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%-Aktion durchführen."
+      text: "Solange du einen Angriff gegen ein erfasstes Schiff durchführst, nachdem du Angriffswürfel geworfen hast, darfst du den Verteidiger als Ziel erfassen."
     },
     "Commandant Goran": {
       display_name: "Kommandant Goran",
@@ -856,7 +868,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Countess Ryad": {
       display_name: "Gräfin Ryad",
-      text: "Solange du ein %STRAIGHT%-Manöver ausführen würdest, darfst du die Schwierigkeit des Manövers erhöhen. Falls du das tust, führe es stattdessen als %KTURN%-Manöver aus.%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%-Aktion durchführen."
+      text: "Solange du ein %STRAIGHT%-Manöver ausführen würdest, darfst du die Schwierigkeit des Manövers erhöhen. Falls du das tust, führe es stattdessen als %KTURN%-Manöver aus."
     },
     "Cova Nell": {
       display_name: "Cova Nell",
@@ -920,7 +932,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Delta Squadron Pilot": {
       display_name: "Pilot der Delta-Staffel",
-      text: "<i class = flavor_text>Der TIE-Abwehrjäger ist nicht nur mit Raketenwerfern und sechs Kanonen an den Tragflächenspitzen, sondern auch mit Deflektorschilden und einem Hyperantrieb ausgestattet.</i>%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%-Aktion durchführen."
+      text: "<i class = flavor_text>Der TIE-Abwehrjäger ist nicht nur mit Raketenwerfern und sechs Kanonen an den Tragflächenspitzen, sondern auch mit Deflektorschilden und einem Hyperantrieb ausgestattet.</i>"
     },
     "Dengar": {
       display_name: "Dengar",
@@ -1174,6 +1186,10 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Jedi-Ritter",
       text: "<i class = flavor_text>Nach Ausbruch der Klonkriege gelobten die Jedi-Ritter die Republik zu bewahren und übernahmen das Kommando über eine Legion von Klontruppen, die sie seither in die Schlacht führen.</i>"
     },
+    "Jedi Knight (Delta-7b)": {
+      display_name: "Jedi-Ritter",
+      text: "<i class = flavor_text>Nach Ausbruch der Klonkriege gelobten die Jedi-Ritter die Republik zu bewahren und übernahmen das Kommando über eine Legion von Klontruppen, die sie seither in die Schlacht führen.</i>"
+    },
     "Jek Porkins": {
       display_name: "Jek Porkins",
       text: "Nachdem du einen Stressmarker bekommen hast, darfst du 1 Angriffswürfel werfen, um ihn zu entfernen. Bei einem %HIT%-Ergebnis erleide 1 %HIT%-Schaden."
@@ -1334,6 +1350,10 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Luminara Unduli",
       text: "Solange ein befreundetes Schiff in Reichweite 0-2 verteidigt, falls es nicht im %BULLSEYEARC% des Angreifers ist, darfst du 1 %FORCE% ausgeben. Falls du das tust, ändere 1 %CRIT%-Ergebnis in ein %HIT%-Ergebnis oder 1%HIT%-Ergebnis in ein %FOCUS%-Ergebnis. "
     },
+    "Luminara Unduli (Delta-7b)": {
+      display_name: "Luminara Unduli",
+      text: "Solange ein befreundetes Schiff in Reichweite 0-2 verteidigt, falls es nicht im %BULLSEYEARC% des Angreifers ist, darfst du 1 %FORCE% ausgeben. Falls du das tust, ändere 1 %CRIT%-Ergebnis in ein %HIT%-Ergebnis oder 1%HIT%-Ergebnis in ein %FOCUS%-Ergebnis. "
+    },
     "L'ulo L'ampar": {
       display_name: "L’ulo L’ampar",
       text: "Solange du verteidigst oder einen Primärangriff durchführst, falls du gestresst bist, <b>musst</b> du 1 Verteidigungswürfel weniger oder 1 zusätzlichen Angriffswürfel werfen."
@@ -1343,6 +1363,10 @@ exportObj.cardLoaders.Deutsch = function() {
       text: "Solange du einen Angriff durchführst, falls dem Verteidiger eine offene Scha­dens­karte zugeteilt werden würde, ziehe stattdessen 3 Schadenskarten, wähle 1 und lege die übrigen ab.%LINEBREAK%<strong>Verbesserter Zielcomputer:</strong> Solange du einen Primärangriff gegen einen Ver­tei­diger durchführst, den du als Ziel erfasst hast, wirf 1 zusätzlichen An­griffs­würfel und ändere 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis."
     },
     "Mace Windu": {
+      display_name: "Mace Windu",
+      text: "Nachdem du ein rotes Manöver vollständig ausgeführt hast, stelle 1 %FORCE% wieder her. "
+    },
+    "Mace Windu (Delta-7b)": {
       display_name: "Mace Windu",
       text: "Nachdem du ein rotes Manöver vollständig ausgeführt hast, stelle 1 %FORCE% wieder her. "
     },
@@ -1414,6 +1438,10 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Obi-Wan Kenobi",
       text: "Nachdem ein befreundetes Schiff in Reichweite 0-2 einen Fokusmarker ausgegeben hat, darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält jenes Schiff 1 Fokusmarker. "
     },
+    "Obi-Wan Kenobi (Delta-7b)": {
+      display_name: "Obi-Wan Kenobi",
+      text: "Nachdem ein befreundetes Schiff in Reichweite 0-2 einen Fokusmarker ausgegeben hat, darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält jenes Schiff 1 Fokusmarker. "
+    },
     "Obsidian Squadron Pilot": {
       display_name: "Pilot der Obsidian-Staffel",
       text: "<i class = flavor_text>Der Zwillingsionenantrieb des TIE-Jägers war auf Geschwindigkeit optimiert und machte den TIE/ln zu einem der wendigsten Raumschiffe, die je in Massen produziert wurden.</i>"
@@ -1436,7 +1464,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Onyx Squadron Ace": {
       display_name: "Fliegerass der Onyx-Staffel",
-      text: "<i class = flavor_text>Der experimentelle TIE-Abwehrjäger stellt alle anderen modernen Sternenjäger in den Schatten, wenngleich Größe, Schubkraft und Bewaffnung das Gewicht und den Preis des Modells in die Höhe treiben.</i>%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%-Aktion durchführen."
+      text: "<i class = flavor_text>Der experimentelle TIE-Abwehrjäger stellt alle anderen modernen Sternenjäger in den Schatten, wenngleich Größe, Schubkraft und Bewaffnung das Gewicht und den Preis des Modells in die Höhe treiben.</i>"
     },
     "Onyx Squadron Scout": {
       display_name: "Aufklärer der Onyx-Staffel",
@@ -1494,6 +1522,10 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Plo Koon",
       text: "Zu Beginn der Kampfphase darfst du 1 %FORCE% ausgeben und ein anderes befreundetes Schiff in Reichweite 0-2 wählen. Falls du das tust, darfst du 1 grünen Marker auf es transferieren oder 1 orangefarbenen Marker von ihm auf dich transferieren. "
     },
+    "Plo Koon (Delta-7b)": {
+      display_name: "Plo Koon",
+      text: "Zu Beginn der Kampfphase darfst du 1 %FORCE% ausgeben und ein anderes befreundetes Schiff in Reichweite 0-2 wählen. Falls du das tust, darfst du 1 grünen Marker auf es transferieren oder 1 orangefarbenen Marker von ihm auf dich transferieren. "
+    },
     "Poe Dameron": {
       display_name: "Poe Dameron",
       text: "Nachdem du eine Aktion durchgeführt hast, darfst du 1 %CHARGE% ausgeben, um eine weiße Aktion durchzuführen, wobei du sie behandelst, als wäre sie rot."
@@ -1536,7 +1568,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Rexler Brath": {
       display_name: "Rexler Brath",
-      text: "Nachdem du einen Angriff durchgeführt hast, der getroffen hat, falls du ausweichst, lege 1 der Schadenskarten des Verteidigers offen.%LINEBREAK%<strong>Vollgas:</strong> Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%-Aktion durchführen."
+      text: "Nachdem du einen Angriff durchgeführt hast, der getroffen hat, falls du ausweichst, lege 1 der Schadenskarten des Verteidigers offen."
     },
     "Rey": {
       display_name: "Rey",
@@ -1579,6 +1611,10 @@ exportObj.cardLoaders.Deutsch = function() {
       text: "Solange du verteidigst, falls der Angreifer in deinem %SINGLETURRETARC% in Reichweite 0-2 ist, darfst du 1 %FOCUS%-Ergebnis zu deinen Würfelergebnissen hinzufügen."
     },
     "Saesee Tiin": {
+      display_name: "Saesee Tiin",
+      text: "Nachdem ein befreundetes Schiff in Reichweite 0-2 sein Rad aufgedeckt hat, darfst du 1 %FORCE% ausgeben. Falls du das tust, stelle sein Rad auf ein anderes Manöver derselben Geschwindigkeit und Schwierigkeit ein. "
+    },
+    "Saesee Tiin (Delta-7b)": {
       display_name: "Saesee Tiin",
       text: "Nachdem ein befreundetes Schiff in Reichweite 0-2 sein Rad aufgedeckt hat, darfst du 1 %FORCE% ausgeben. Falls du das tust, stelle sein Rad auf ein anderes Manöver derselben Geschwindigkeit und Schwierigkeit ein. "
     },
@@ -2842,7 +2878,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Integrated S-Foils": {
       display_name: "Integrierte S-Flügel",
-      text: "<strong>Geschlossen: </strong>Solange du einen Primärangriff durchführst, falls der Verteidiger nicht in deinem %BULLSEYEARC% ist, wirf 1 Angriffswürfel weniger. Bevor du aktiviert wirst, darfst du diese Karte umdrehen.%LINEBREAK%<strong>Geöffnet:</strong> (Keine %BARRELROLL, %FOCUS%&nbsp;<i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i>&nbsp;<r>%BARRELROLL%</r>)  Bevor du aktiviert wirst, darfst du diese Karte umdrehen."
+      text: "<strong>Geschlossen: </strong>Solange du einen Primärangriff durchführst, falls der Verteidiger nicht in deinem %BULLSEYEARC% ist, wirf 1 Angriffswürfel weniger. Bevor du aktiviert wirst, darfst du diese Karte umdrehen.%LINEBREAK%<strong>Geöffnet:</strong> (Keine %BARRELROLL%, %FOCUS%&nbsp;<i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i>&nbsp;<r>%BARRELROLL%</r>)  Bevor du aktiviert wirst, darfst du diese Karte umdrehen."
     },
     "Intercept Booster": {
       display_name: "Abfang-Booster",
@@ -3398,7 +3434,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Stabilized S-Foils": {
       display_name: "Stabilisierte S-Flügel",
-      text: "<strong>Geschlossen:</strong> Fügt <r>%RELOAD%</r> und %BARRELROLL%&nbsp;<i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"><r>%EVADE%</r></i> hinzu. Before you activate, if you are not critically damaged, you may flip this card. %LINEBREAK%<strong>Geöffnet:</strong><i>Fügt %BARRELROLL%&nbsp;<i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i>&nbsp;<r>%LOCK%</r> hinzu</i>%LINEBREAK% Nachdem du einen Angriff durchgeführt hast, darfst du deine Zielerfassung auf dem Verteidiger ausgeben, um unter Verwendung einer %CANNON%-Aufwertung, mit der du in diesem Zug noch nicht angegriffen hast, einen Bonus-%CANNON%-Angriff gegen jenes Schiff durchzuführen.%LINEBREAK% Bevor du aktiviert wirst, falls du nicht kritisch beschädigt bist, darfst du diese Karte umdrehen."
+      text: "<strong>Geschlossen:</strong> Fügt <r>%RELOAD%</r> und %BARRELROLL%&nbsp;<i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i><r>%EVADE%</r> hinzu. Bevor du aktiviert wirst, falls du nicht kritisch beschädigt bist, darfst du diese Karte umdrehen. %LINEBREAK%<strong>Geöffnet:</strong> <i>Fügt %BARRELROLL%&nbsp;<i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i>&nbsp;<r>%LOCK%</r> hinzu</i>%LINEBREAK% Nachdem du einen Angriff durchgeführt hast, darfst du deine Zielerfassung auf dem Verteidiger ausgeben, um unter Verwendung einer %CANNON%-Aufwertung, mit der du in diesem Zug noch nicht angegriffen hast, einen Bonus-%CANNON%-Angriff gegen jenes Schiff durchzuführen.%LINEBREAK% Bevor du aktiviert wirst, falls du nicht kritisch beschädigt bist, darfst du diese Karte umdrehen."
     },
     "Stalwart Captain": {
       display_name: "Standhafter Captain",

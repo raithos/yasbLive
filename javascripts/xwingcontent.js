@@ -5526,7 +5526,7 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-Fighter",
         points: 4,
         loadout: 14,
-        slots: ["Talent", "Sensor", "Missile", "Modification", "Configuration"]
+        slots: ["Talent", "Sensor", "Missile", "Modification", "Modification", "Configuration"]
       }, {
         name: "DIS-T81",
         id: 422,
