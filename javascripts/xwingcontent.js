@@ -2985,7 +2985,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 14,
-        slots: ["Talent", "Talent", "Sensor", "Missile", "Modification", "Modification"]
+        slots: ["Talent", "Talent", "Sensor", "Missile", "Modification"]
       }, {
         name: "Ved Foslo",
         id: 175,
@@ -2995,7 +2995,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 8,
-        slots: ["Talent", "Talent", "Sensor", "Missile", "Modification", "Modification"]
+        slots: ["Talent", "Sensor", "Missile", "Modification"]
       }, {
         name: "Zertik Strom",
         id: 176,
@@ -3005,7 +3005,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 6,
-        slots: ["Talent", "Sensor", "Missile", "Modification"]
+        slots: ["Sensor", "Missile", "Modification"]
       }, {
         name: "Storm Squadron Ace",
         id: 177,
@@ -3014,7 +3014,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 2,
-        slots: ["Sensor", "Missile", "Modification"]
+        slots: ["Talent", "Sensor", "Modification"]
       }, {
         name: "Tempest Squadron Pilot",
         id: 178,
@@ -3023,7 +3023,7 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 4,
-        slots: ["Sensor", "Modification", "Modification"]
+        slots: ["Sensor", "Modification"]
       }, {
         name: "Soontir Fel",
         id: 179,
@@ -3331,7 +3331,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
-        slots: ["Talent", "Gunner", "Device", "Modification", "Modification"]
+        slots: ["Talent", "Gunner", "Device", "Modification"]
       }, {
         name: '"Duchess"',
         id: 211,
@@ -3341,7 +3341,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 15,
-        slots: ["Talent", "Talent", "Gunner", "Device", "Modification", "Modification"]
+        slots: ["Talent", "Talent", "Gunner", "Device", "Modification"]
       }, {
         name: "Black Squadron Scout",
         id: 212,
@@ -5495,7 +5495,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/rb Heavy",
         points: 5,
         loadout: 14,
-        slots: ["Sensor", "Cannon", "Cannon", "Gunner", "Modification", "Modification", "Configuration"]
+        slots: ["Sensor", "Cannon", "Cannon", "Gunner", "Modification", "Configuration"]
       }, {
         name: '"Rampage"',
         id: 419,
@@ -5505,7 +5505,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/rb Heavy",
         points: 5,
         loadout: 16,
-        slots: ["Talent", "Cannon", "Cannon", "Gunner", "Modification", "Modification", "Configuration"]
+        slots: ["Talent", "Cannon", "Cannon", "Gunner", "Modification", "Configuration"]
       }, {
         name: "Fearsome Predator",
         id: 420,
