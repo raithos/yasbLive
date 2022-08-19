@@ -10292,7 +10292,7 @@ exportObj.basicCardData = function() {
         id: 344,
         slot: "Talent",
         points: 1,
-        restrictions: [["Keyword", "A-Wing"]]
+        restrictions: [["Keyword", "A-wing"]]
       }, {
         name: "Overdrive Thruster",
         id: 345,
@@ -10413,7 +10413,7 @@ exportObj.basicCardData = function() {
         id: 357,
         slot: "Talent",
         points: 2,
-        restrictions: [["Keyword", "X-Wing"], ["Equipped", "Configuration"]]
+        restrictions: [["Keyword", "X-wing"], ["Equipped", "Configuration"]]
       }, {
         name: "R2-D2 (Resistance)",
         canonical_name: 'R2-D2'.canonicalize(),
@@ -10440,7 +10440,7 @@ exportObj.basicCardData = function() {
         range: "1",
         rangebonus: true,
         faction: "Resistance",
-        restrictions: [["Keyword", "X-Wing"]],
+        restrictions: [["Keyword", "X-wing"]],
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'Rotate Arc') < 0) {
             return stats.actions.push('Rotate Arc');
@@ -10602,7 +10602,7 @@ exportObj.basicCardData = function() {
         id: 376,
         points: 0,
         slot: "Talent",
-        restrictions: [["Keyword", "Y-Wing"]]
+        restrictions: [["Keyword", "Y-wing"]]
       }, {
         name: "B6 Blade Wing Prototype (Epic)",
         canonical_name: 'B6 Blade Wing Prototype'.canonicalize(),
