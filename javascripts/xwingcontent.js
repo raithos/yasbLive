@@ -16956,7 +16956,7 @@ exportObj.standardShipInclusions = [
     name: 'TIE/se Bomber',
     faction: 'First Order'
   }, {
-    name: 'TIE/wi Whisper',
+    name: 'TIE/wi Whisper Modified Interceptor',
     faction: 'First Order'
   }, {
     name: 'Xi-class Light Shuttle',
