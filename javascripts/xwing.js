@@ -7093,7 +7093,7 @@ Ship = (function() {
       this.builder.current_squad.dirty = true;
       same_ship = (this.pilot != null) && (new_pilot != null ? new_pilot.ship : void 0) === this.pilot.ship;
       old_upgrades = {};
-      if (same_ship) {
+      if (same_ship && (this.pilot.upgrades == null)) {
         _ref = this.upgrades;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           upgrade = _ref[_i];
@@ -8005,7 +8005,7 @@ Ship = (function() {
       }
       return _results;
     }).call(this);
-    if (slotted_upgrades.length > 0) {
+    if (slotted_upgrades.length > 0 && (this.pilot.upgrades == null)) {
       for (_i = 0, _len = slotted_upgrades.length; _i < _len; _i++) {
         upgrade = slotted_upgrades[_i];
         upgrade_tts = upgrade.toTTSText();
