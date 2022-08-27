@@ -7155,6 +7155,9 @@ exportObj.basicCardData = function() {
         points: 20,
         charge: 2,
         chassis: "Sensitive Controls",
+        ship_override: {
+          hull: 4
+        },
         upgrades: ["Sensor Jammer (BoY)", "Elusive"]
       }, {
         name: "Sigma 6",
@@ -7166,6 +7169,9 @@ exportObj.basicCardData = function() {
         points: 20,
         charge: 2,
         chassis: "Sensitive Controls",
+        ship_override: {
+          hull: 4
+        },
         upgrades: ["Daredevil", "Afterburners"]
       }, {
         name: "Sigma 7",
@@ -7178,6 +7184,7 @@ exportObj.basicCardData = function() {
         charge: 2,
         chassis: "Sensitive Controls",
         ship_override: {
+          hull: 4,
           actions: ["Focus", "Evade", "Barrel Roll", "Boost", "Lock"]
         },
         upgrades: ["Marksmanship", "Fire-Control System"]
