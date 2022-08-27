@@ -7153,8 +7153,9 @@ exportObj.basicCardData = function() {
         ship: "TIE/in Interceptor",
         skill: 4,
         points: 20,
+        charge: 2,
         chassis: "Sensitive Controls",
-        upgrades: ["Fanatic (BoY)"]
+        upgrades: ["Sensor Jammer (BoY)", "Elusive"]
       }, {
         name: "Sigma 6",
         unique: true,
@@ -7163,8 +7164,9 @@ exportObj.basicCardData = function() {
         ship: "TIE/in Interceptor",
         skill: 4,
         points: 20,
+        charge: 2,
         chassis: "Sensitive Controls",
-        upgrades: ["Fanatic (BoY)"]
+        upgrades: ["Daredevil", "Afterburners"]
       }, {
         name: "Sigma 7",
         unique: true,
@@ -11713,6 +11715,11 @@ exportObj.basicCardData = function() {
         unique: true,
         slot: "Astromech",
         charge: 2
+      }, {
+        name: "Sensor Jammer (BoY)",
+        id: 485,
+        standard: true,
+        slot: "Sensor"
       }
     ],
     conditionsById: [
@@ -19408,6 +19415,14 @@ exportObj.cardLoaders.English = function() {
       display_name: "Sigma 4",
       text: "After you perform a %BARRELROLL% action, you may spend 1 %CHARGE% to perform a %BOOST% action."
     },
+    "Sigma 5": {
+      display_name: "Sigma 5",
+      text: "After you perform an attack that hits, you may spend 1 %CHARGE% to perform an %EVADE% action."
+    },
+    "Sigma 6": {
+      display_name: "Sigma 6",
+      text: "After you fully execute a speed 3-5 maneuver, you may spend 1 %CHARGE% to perform a %SLAM% action."
+    },
     "Sigma 7": {
       display_name: "Sigma 7",
       text: "During the System Phase, you may spend 1 %CHARGE% to acquire a lock on an enemy ship at range 0-1."
@@ -20984,6 +20999,10 @@ exportObj.cardLoaders.English = function() {
     "Dorsal Turret (BoY)": {
       display_name: "Dorsal Turret",
       text: "<strong>Attack</strong>"
+    },
+    "Sensor Jammer (BoY)": {
+      display_name: "Sensor Jammer",
+      text: "While defending, if there is a friendly lock on the attacker, you may change 1 of the attacker's %HIT% results to a %FOCUS% result."
     },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
