@@ -7067,8 +7067,8 @@ Ship = (function() {
         upgrade = _ref1[_i];
         if (exportObj.slotsMatching(upgrade.slot, this.builder.standard_list['Upgrade'][idx].slot)) {
           restrictions = (upgrade_to_be_equipped.restrictions ? upgrade_to_be_equipped.restrictions : void 0);
-          allowed_to_equip = this.restriction_check(restrictions, upgrade, 0, 0);
-          if (allowed_to_equip) {
+          allowed_to_equip = this.restriction_check(restrictions, upgrade);
+          if (allowed_to_equip && (upgrade.data == null)) {
             upgrade.setData(upgrade_to_be_equipped);
             break;
           } else {
@@ -7120,7 +7120,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5950
+                      lineno: 5946
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7204,7 +7204,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5986
+                lineno: 5982
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7295,7 +7295,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6028
+              lineno: 6024
             }));
           }
         }
@@ -7383,7 +7383,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6083
+                lineno: 6079
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8267,6 +8267,12 @@ Ship = (function() {
 
   Ship.prototype.restriction_check = function(restrictions, upgrade_obj, points, current_upgrade_points) {
     var action, b, base, check, effective_stats, r, w, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
+    if (points == null) {
+      points = 0;
+    }
+    if (current_upgrade_points == null) {
+      current_upgrade_points = 0;
+    }
     effective_stats = this.effectiveStats();
     if ((this.pilot.loadout != null) && (points + current_upgrade_points > this.pilot.loadout)) {
       return false;
@@ -8604,7 +8610,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6990
+                lineno: 6986
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8763,7 +8769,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7084
+                  lineno: 7080
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8790,7 +8796,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7091
+                      lineno: 7087
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8855,7 +8861,7 @@ GenericAddon = (function() {
         _results = [];
         for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
           ship = _ref1[_i];
-          if (((_ref2 = ship.data) != null ? _ref2.name : void 0) === this.ship.data.name) {
+          if (((_ref2 = ship.data) != null ? _ref2.name : void 0) === this.ship.data.name && ship !== this.ship) {
             _results.push((function() {
               var _j, _len1, _ref3, _ref4, _results1;
               _ref3 = ship.upgrades;
@@ -8934,7 +8940,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7166
+            lineno: 7160
           }));
         }
         __iced_deferrals._fulfill();
