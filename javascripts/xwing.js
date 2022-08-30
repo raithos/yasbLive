@@ -8149,7 +8149,7 @@ Ship = (function() {
   };
 
   Ship.prototype.validate = function() {
-    var addCommand, equipped_upgrades, func, i, max_checks, meets_restrictions, pilot_func, restrictions, unchanged, upgrade, valid, _i, _j, _k, _l, _len, _len1, _ref, _ref1, _ref10, _ref11, _ref12, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+    var addCommand, equipped_upgrades, func, i, max_checks, meets_restrictions, pilot_func, pilot_upgrades_check, restrictions, unchanged, upgrade, valid, _i, _j, _k, _l, _len, _len1, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
     if (this.pilot == null) {
       return true;
     }
@@ -8185,6 +8185,7 @@ Ship = (function() {
     for (i = _k = 0; 0 <= max_checks ? _k < max_checks : _k > max_checks; i = 0 <= max_checks ? ++_k : --_k) {
       valid = true;
       pilot_func = (_ref2 = (_ref3 = (_ref4 = this.pilot) != null ? _ref4.validation_func : void 0) != null ? _ref3 : (_ref5 = this.pilot) != null ? _ref5.restriction_func : void 0) != null ? _ref2 : void 0;
+      pilot_upgrades_check = this.pilot.upgrades != null;
       if (((pilot_func != null) && !pilot_func(this, this.pilot)) || !(this.builder.isItemAvailable(this.pilot, true))) {
         this.builder.removeShip(this);
         return false;
@@ -8195,13 +8196,16 @@ Ship = (function() {
       for (_l = 0, _len1 = _ref6.length; _l < _len1; _l++) {
         upgrade = _ref6[_l];
         meets_restrictions = true;
-        func = (_ref7 = upgrade != null ? (_ref8 = upgrade.data) != null ? _ref8.validation_func : void 0 : void 0) != null ? _ref7 : void 0;
-        if (func != null) {
-          meets_restrictions = meets_restrictions && (upgrade != null ? (_ref9 = upgrade.data) != null ? _ref9.validation_func(this, upgrade) : void 0 : void 0);
+        if (!pilot_upgrades_check) {
+          func = (_ref7 = upgrade != null ? (_ref8 = upgrade.data) != null ? _ref8.validation_func : void 0 : void 0) != null ? _ref7 : void 0;
+          if (func != null) {
+            meets_restrictions = meets_restrictions && (upgrade != null ? (_ref9 = upgrade.data) != null ? _ref9.validation_func(this, upgrade) : void 0 : void 0);
+          }
+          restrictions = (_ref10 = upgrade != null ? (_ref11 = upgrade.data) != null ? _ref11.restrictions : void 0 : void 0) != null ? _ref10 : void 0;
+          meets_restrictions = meets_restrictions && this.restriction_check(restrictions, upgrade, upgrade.getPoints(), this.upgrade_points_total);
         }
-        restrictions = (_ref10 = upgrade != null ? (_ref11 = upgrade.data) != null ? _ref11.restrictions : void 0 : void 0) != null ? _ref10 : void 0;
-        meets_restrictions = meets_restrictions && this.restriction_check(restrictions, upgrade, upgrade.getPoints(), this.upgrade_points_total);
-        if (((!meets_restrictions) || ((this.pilot.upgrades == null) && (((upgrade != null ? upgrade.data : void 0) != null) && (upgrade.data.standard != null))) || (((upgrade != null ? upgrade.data : void 0) != null) && ((_ref12 = upgrade.data, __indexOf.call(equipped_upgrades, _ref12) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !this.builder.isQuickbuild) {
+        if ((!meets_restrictions || (((upgrade != null ? upgrade.data : void 0) != null) && ((_ref12 = upgrade.data, __indexOf.call(equipped_upgrades, _ref12) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !pilot_upgrades_check && !this.builder.isQuickbuild) {
+          console.log("Invalid upgrade: " + (upgrade != null ? (_ref13 = upgrade.data) != null ? _ref13.name : void 0 : void 0) + ", check " + (this.pilot.upgrades != null));
           upgrade.setById(null);
           valid = false;
           unchanged = false;
@@ -8610,7 +8614,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 6986
+                lineno: 6989
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8769,7 +8773,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7080
+                  lineno: 7083
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8796,7 +8800,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7087
+                      lineno: 7090
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8940,7 +8944,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7160
+            lineno: 7163
           }));
         }
         __iced_deferrals._fulfill();
