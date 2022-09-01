@@ -4517,6 +4517,7 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 7,
         loadout: 24,
+        keyword: ["Dark Side", "Sith"],
         slots: ["Force", "Cannon", "Torpedo", "Crew", "Crew", "Device", "Modification", "Title", "Tactical Relay"]
       }, {
         name: "0-66",
