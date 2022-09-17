@@ -40566,20 +40566,20 @@ class exportObj.Collection
 
                 
         # Create list of released singletons
-        singletonsByType = {}
+        @singletonsByType = {}
         for expname, items of exportObj.manifestByExpansion
             for item in items
-                (singletonsByType[item.type] ?= {})[item.name] = true
-        for type, names of singletonsByType
+                (@singletonsByType[item.type] ?= {})[item.name] = true
+        for type, names of @singletonsByType
             sorted_names = (name for name of names).sort((a,b) -> sortWithoutQuotes(a,b,type))
-            singletonsByType[type] = sorted_names
+            @singletonsByType[type] = sorted_names
                 
         component_content = $ @modal.find('.collection-inventory-content')
         component_content.text ''
         card_totals_by_type = {}
         card_different_by_type = {}
         for own type, things of @counts
-            if singletonsByType[type]?
+            if @singletonsByType[type]?
                 card_totals_by_type[type] = 0
                 card_different_by_type[type] = 0
                 contents = component_content.append $.trim """
@@ -40592,8 +40592,8 @@ class exportObj.Collection
                 """
                 ul = $ contents.find("ul#counts-#{type}")
                 for thing in Object.keys(things).sort((a,b) -> sortWithoutQuotes(a,b,type))
-                    card_totals_by_type[type] += things[thing]
-                    if thing in singletonsByType[type]
+                    if thing in @singletonsByType[type]
+                        card_totals_by_type[type] += things[thing]
                         card_different_by_type[type]++
                         if type == 'pilot'
                             ul.append """<li>#{if exportObj.pilots[thing].display_name then exportObj.pilots[thing].display_name else thing} - #{things[thing]}</li>"""
@@ -40658,15 +40658,6 @@ class exportObj.Collection
         backend.loadCollection cb
 
     setupUI: ->
-        # Create list of released singletons
-        singletonsByType = {}
-        for expname, items of exportObj.manifestByExpansion
-            for item in items
-                (singletonsByType[item.type] ?= {})[item.name] = true
-        for type, names of singletonsByType
-            sorted_names = (name for name of names).sort((a,b) -> sortWithoutQuotes(a,b,type))
-            singletonsByType[type] = sorted_names
-        
         @modal = $ document.createElement 'DIV'
         @modal.addClass 'modal fade collection-modal d-print-none'
         @modal.tabindex = "-1"
@@ -40738,7 +40729,7 @@ class exportObj.Collection
                 collection_content.append row
 
         shipcollection_content = $ @modal.find('.collection-ship-content')
-        for ship in singletonsByType.ship
+        for ship in @singletonsByType.ship
             count = parseInt(@singletons.ship?[ship] ? 0)
             row = $.parseHTML $.trim """
                 <div class="row">
@@ -40758,7 +40749,7 @@ class exportObj.Collection
             shipcollection_content.append row
 
         pilotcollection_content = $ @modal.find('.collection-pilot-content')
-        for pilot in singletonsByType.pilot
+        for pilot in @singletonsByType.pilot
             count = parseInt(@singletons.pilot?[pilot] ? 0)
             row = $.parseHTML $.trim """
                 <div class="row">
@@ -40778,7 +40769,7 @@ class exportObj.Collection
             pilotcollection_content.append row
 
         upgradecollection_content = $ @modal.find('.collection-upgrade-content')
-        for upgrade in singletonsByType.upgrade
+        for upgrade in @singletonsByType.upgrade
             count = parseInt(@singletons.upgrade?[upgrade] ? 0)
             row = $.parseHTML $.trim """
                 <div class="row">
