@@ -30878,7 +30878,7 @@ exportObj.Collection = (function() {
   }
 
   Collection.prototype.reset = function() {
-    var card, card_different_by_type, card_totals_by_type, component_content, contents, count, counts, expansion, expname, item, items, name, names, sorted_names, summary, thing, things, type, ul, _, _base1, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _base9, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _name, _name1, _name2, _o, _p, _ref, _ref1, _ref10, _ref11, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+    var card, card_different_by_type, card_totals_by_type, component_content, contents, count, counts, expansion, expname, item, items, name, names, singletonsByType, sorted_names, summary, thing, things, type, ul, _, _base1, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _name, _name1, _name2, _o, _p, _ref, _ref1, _ref10, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
     this.shelf = {};
     this.table = {};
     _ref = this.expansions;
@@ -30930,18 +30930,17 @@ exportObj.Collection = (function() {
         this.counts[type][thing] += this.shelf[type][thing].length;
       }
     }
-    this.singletonsByType = {};
+    singletonsByType = {};
     _ref7 = exportObj.manifestByExpansion;
     for (expname in _ref7) {
       items = _ref7[expname];
       for (_n = 0, _len1 = items.length; _n < _len1; _n++) {
         item = items[_n];
-        ((_base9 = this.singletonsByType)[_name2 = item.type] != null ? _base9[_name2] : _base9[_name2] = {})[item.name] = true;
+        (singletonsByType[_name2 = item.type] != null ? singletonsByType[_name2] : singletonsByType[_name2] = {})[item.name] = true;
       }
     }
-    _ref8 = this.singletonsByType;
-    for (type in _ref8) {
-      names = _ref8[type];
+    for (type in singletonsByType) {
+      names = singletonsByType[type];
       sorted_names = ((function() {
         var _results;
         _results = [];
@@ -30952,27 +30951,27 @@ exportObj.Collection = (function() {
       })()).sort(function(a, b) {
         return sortWithoutQuotes(a, b, type);
       });
-      this.singletonsByType[type] = sorted_names;
+      singletonsByType[type] = sorted_names;
     }
     component_content = $(this.modal.find('.collection-inventory-content'));
     component_content.text('');
     card_totals_by_type = {};
     card_different_by_type = {};
-    _ref9 = this.counts;
-    for (type in _ref9) {
-      if (!__hasProp.call(_ref9, type)) continue;
-      things = _ref9[type];
-      if (this.singletonsByType[type] != null) {
+    _ref8 = this.counts;
+    for (type in _ref8) {
+      if (!__hasProp.call(_ref8, type)) continue;
+      things = _ref8[type];
+      if (singletonsByType[type] != null) {
         card_totals_by_type[type] = 0;
         card_different_by_type[type] = 0;
         contents = component_content.append($.trim("<div class=\"row\">\n    <div class=\"col\"><h5>" + (type.capitalize()) + "</h5></div>\n</div>\n<div class=\"row\">\n    <ul id=\"counts-" + type + "\" class=\"col\"></ul>\n</div>"));
         ul = $(contents.find("ul#counts-" + type));
-        _ref10 = Object.keys(things).sort(function(a, b) {
+        _ref9 = Object.keys(things).sort(function(a, b) {
           return sortWithoutQuotes(a, b, type);
         });
-        for (_o = 0, _len2 = _ref10.length; _o < _len2; _o++) {
-          thing = _ref10[_o];
-          if (__indexOf.call(this.singletonsByType[type], thing) >= 0) {
+        for (_o = 0, _len2 = _ref9.length; _o < _len2; _o++) {
+          thing = _ref9[_o];
+          if (__indexOf.call(singletonsByType[type], thing) >= 0) {
             card_totals_by_type[type] += things[thing];
             card_different_by_type[type]++;
             if (type === 'pilot') {
@@ -30989,9 +30988,9 @@ exportObj.Collection = (function() {
       }
     }
     summary = "";
-    _ref11 = Object.keys(card_totals_by_type);
-    for (_p = 0, _len3 = _ref11.length; _p < _len3; _p++) {
-      type = _ref11[_p];
+    _ref10 = Object.keys(card_totals_by_type);
+    for (_p = 0, _len3 = _ref10.length; _p < _len3; _p++) {
+      type = _ref10[_p];
       summary += "<li>" + (type.capitalize()) + " - " + card_totals_by_type[type] + " (" + card_different_by_type[type] + " different)</li>";
     }
     return component_content.append($.trim("<div class=\"row\">\n    <div class=\"col\"><h5>Summary</h5></div>\n</div>\n<div class = \"row\">\n    <ul id=\"counts-summary\" class=\"col\">\n        " + summary + "\n    </ul>\n</div>"));
@@ -31060,7 +31059,30 @@ exportObj.Collection = (function() {
   };
 
   Collection.prototype.setupUI = function() {
-    var collection_content, count, expansion, input, pilot, pilotcollection_content, row, ship, shipcollection_content, upgrade, upgradecollection_content, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref10, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results;
+    var collection_content, count, expansion, expname, input, item, items, name, names, pilot, pilotcollection_content, row, ship, shipcollection_content, singletonsByType, sorted_names, type, upgrade, upgradecollection_content, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _name, _ref, _ref1, _ref10, _ref11, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results;
+    singletonsByType = {};
+    _ref = exportObj.manifestByExpansion;
+    for (expname in _ref) {
+      items = _ref[expname];
+      for (_i = 0, _len = items.length; _i < _len; _i++) {
+        item = items[_i];
+        (singletonsByType[_name = item.type] != null ? singletonsByType[_name] : singletonsByType[_name] = {})[item.name] = true;
+      }
+    }
+    for (type in singletonsByType) {
+      names = singletonsByType[type];
+      sorted_names = ((function() {
+        var _results;
+        _results = [];
+        for (name in names) {
+          _results.push(name);
+        }
+        return _results;
+      })()).sort(function(a, b) {
+        return sortWithoutQuotes(a, b, type);
+      });
+      singletonsByType[type] = sorted_names;
+    }
     this.modal = $(document.createElement('DIV'));
     this.modal.addClass('modal fade collection-modal d-print-none');
     this.modal.tabindex = "-1";
@@ -31078,10 +31100,10 @@ exportObj.Collection = (function() {
     }
     this.modal.find('.checkbox-check-collection').show();
     collection_content = $(this.modal.find('.collection-content'));
-    _ref = exportObj.expansions;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      expansion = _ref[_i];
-      count = parseInt((_ref1 = this.expansions[expansion]) != null ? _ref1 : 0);
+    _ref1 = exportObj.expansions;
+    for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+      expansion = _ref1[_j];
+      count = parseInt((_ref2 = this.expansions[expansion]) != null ? _ref2 : 0);
       row = $.parseHTML($.trim("<div class=\"row\">\n    <div class=\"col\">\n        <label>\n            <input class=\"expansion-count\" type=\"number\" size=\"3\" value=\"" + count + "\" />\n            <span class=\"expansion-name\">" + expansion + "</span>\n        </label>\n    </div>\n</div>"));
       input = $($(row).find('input'));
       input.data('expansion', expansion);
@@ -31092,10 +31114,10 @@ exportObj.Collection = (function() {
       }
     }
     shipcollection_content = $(this.modal.find('.collection-ship-content'));
-    _ref2 = this.singletonsByType.ship;
-    for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
-      ship = _ref2[_j];
-      count = parseInt((_ref3 = (_ref4 = this.singletons.ship) != null ? _ref4[ship] : void 0) != null ? _ref3 : 0);
+    _ref3 = singletonsByType.ship;
+    for (_k = 0, _len2 = _ref3.length; _k < _len2; _k++) {
+      ship = _ref3[_k];
+      count = parseInt((_ref4 = (_ref5 = this.singletons.ship) != null ? _ref5[ship] : void 0) != null ? _ref4 : 0);
       row = $.parseHTML($.trim("<div class=\"row\">\n    <div class=\"col\">\n        <label>\n            <input class=\"singleton-count\" type=\"number\" size=\"3\" value=\"" + count + "\" />\n            <span class=\"ship-name\">" + (exportObj.ships[ship].display_name ? exportObj.ships[ship].display_name : ship) + "</span>\n        </label>\n    </div>\n</div>"));
       input = $($(row).find('input'));
       input.data('singletonType', 'ship');
@@ -31105,10 +31127,10 @@ exportObj.Collection = (function() {
       shipcollection_content.append(row);
     }
     pilotcollection_content = $(this.modal.find('.collection-pilot-content'));
-    _ref5 = this.singletonsByType.pilot;
-    for (_k = 0, _len2 = _ref5.length; _k < _len2; _k++) {
-      pilot = _ref5[_k];
-      count = parseInt((_ref6 = (_ref7 = this.singletons.pilot) != null ? _ref7[pilot] : void 0) != null ? _ref6 : 0);
+    _ref6 = singletonsByType.pilot;
+    for (_l = 0, _len3 = _ref6.length; _l < _len3; _l++) {
+      pilot = _ref6[_l];
+      count = parseInt((_ref7 = (_ref8 = this.singletons.pilot) != null ? _ref8[pilot] : void 0) != null ? _ref7 : 0);
       row = $.parseHTML($.trim("<div class=\"row\">\n    <div class=\"col\">\n        <label>\n            <input class=\"singleton-count\" type=\"number\" size=\"3\" value=\"" + count + "\" />\n            <span class=\"pilot-name\"><i class=\"xwing-miniatures-ship xwing-miniatures-ship-" + (exportObj.ships[exportObj.pilots[pilot].ship].icon ? exportObj.ships[exportObj.pilots[pilot].ship].icon : exportObj.ships[exportObj.pilots[pilot].ship].xws) + "\"></i> " + (exportObj.pilots[pilot].display_name ? exportObj.pilots[pilot].display_name : pilot) + "</span>\n        </label>\n    </div>\n</div>"));
       input = $($(row).find('input'));
       input.data('singletonType', 'pilot');
@@ -31118,11 +31140,11 @@ exportObj.Collection = (function() {
       pilotcollection_content.append(row);
     }
     upgradecollection_content = $(this.modal.find('.collection-upgrade-content'));
-    _ref8 = this.singletonsByType.upgrade;
+    _ref9 = singletonsByType.upgrade;
     _results = [];
-    for (_l = 0, _len3 = _ref8.length; _l < _len3; _l++) {
-      upgrade = _ref8[_l];
-      count = parseInt((_ref9 = (_ref10 = this.singletons.upgrade) != null ? _ref10[upgrade] : void 0) != null ? _ref9 : 0);
+    for (_m = 0, _len4 = _ref9.length; _m < _len4; _m++) {
+      upgrade = _ref9[_m];
+      count = parseInt((_ref10 = (_ref11 = this.singletons.upgrade) != null ? _ref11[upgrade] : void 0) != null ? _ref10 : 0);
       row = $.parseHTML($.trim("<div class=\"row\">\n    <div class=\"col\">\n        <label>\n            <input class=\"singleton-count\" type=\"number\" size=\"3\" value=\"" + count + "\" />\n            <span class=\"upgrade-name\">" + (exportObj.upgrades[upgrade].slot ? exportObj.translate('sloticon', exportObj.upgrades[upgrade].slot) : void 0) + " " + (exportObj.upgrades[upgrade].display_name ? exportObj.upgrades[upgrade].display_name : upgrade) + " \n            " + (exportObj.upgrades[upgrade].faction ? "(" + exportObj.upgrades[upgrade].faction + ")" : '') + "</span>\n        </label>\n    </div>\n</div>"));
       input = $($(row).find('input'));
       input.data('singletonType', 'upgrade');
