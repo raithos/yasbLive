@@ -8945,10 +8945,9 @@ GenericAddon = (function() {
   };
 
   GenericAddon.prototype.conferAddons = function() {
-    var addon, args, cls, _i, _len, _ref, _results;
+    var addon, args, cls, _i, _j, _len, _len1, _ref, _ref1, _results;
     if ((this.data.confersAddons != null) && !this.ship.builder.isQuickbuild && this.data.confersAddons.length > 0) {
       _ref = this.data.confersAddons;
-      _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         addon = _ref[_i];
         cls = addon.type;
@@ -8978,42 +8977,38 @@ GenericAddon = (function() {
           throw new Error("Unexpected addon type for addon " + addon);
         }
         this.conferredAddons.push(addon);
-        _results.push((function() {
-          var _j, _len1, _ref1, _results1;
-          _ref1 = exportObj.chassis[this.data.chassis].conferredAddons;
-          _results1 = [];
-          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-            addon = _ref1[_j];
-            cls = addon.type;
-            args = {
-              ship: this.ship,
-              container: this.container
-            };
-            if (addon.slot != null) {
-              args.slot = addon.slot;
-            }
-            if (addon.adjustment_func != null) {
-              args.adjustment_func = addon.adjustment_func;
-            }
-            if (addon.filter_func != null) {
-              args.filter_func = addon.filter_func;
-            }
-            if (addon.auto_equip != null) {
-              args.auto_equip = addon.auto_equip;
-            }
-            if (addon.placeholderMod_func != null) {
-              args.placeholderMod_func = addon.placeholderMod_func;
-            }
-            addon = new cls(args);
-            if (addon instanceof exportObj.Upgrade) {
-              this.ship.upgrades.push(addon);
-            } else {
-              throw new Error("Unexpected addon type for addon " + addon);
-            }
-            _results1.push(this.conferredAddons.push(addon));
-          }
-          return _results1;
-        }).call(this));
+      }
+      _ref1 = exportObj.chassis[this.data.chassis].conferredAddons;
+      _results = [];
+      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+        addon = _ref1[_j];
+        cls = addon.type;
+        args = {
+          ship: this.ship,
+          container: this.container
+        };
+        if (addon.slot != null) {
+          args.slot = addon.slot;
+        }
+        if (addon.adjustment_func != null) {
+          args.adjustment_func = addon.adjustment_func;
+        }
+        if (addon.filter_func != null) {
+          args.filter_func = addon.filter_func;
+        }
+        if (addon.auto_equip != null) {
+          args.auto_equip = addon.auto_equip;
+        }
+        if (addon.placeholderMod_func != null) {
+          args.placeholderMod_func = addon.placeholderMod_func;
+        }
+        addon = new cls(args);
+        if (addon instanceof exportObj.Upgrade) {
+          this.ship.upgrades.push(addon);
+        } else {
+          throw new Error("Unexpected addon type for addon " + addon);
+        }
+        _results.push(this.conferredAddons.push(addon));
       }
       return _results;
     }
@@ -9034,7 +9029,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7216
+            lineno: 7217
           }));
         }
         __iced_deferrals._fulfill();
