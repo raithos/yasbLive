@@ -7001,6 +7001,7 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 20,
         charge: 4,
+        chassis: "Solo",
         upgrades: ["Chewbacca (BoY)", "Rigged Cargo Chute", "Millennium Falcon", "L3-37's Programming (BoY)"]
       }, {
         name: 'Jon "Dutch" Vander (BoY)',
@@ -12654,6 +12655,9 @@ exportObj.basicCardData = function() {
             return _results;
           }
         }
+      }, {
+        name: "Solo",
+        id: 48
       }
     ],
     quickbuildsById: [
@@ -20014,6 +20018,10 @@ exportObj.cardLoaders.English = function() {
       display_name: "Reaper Squadron Scout",
       text: ""
     },
+    "Han Solo (BoY)": {
+      display_name: "Han Solo (BoY)",
+      text: "After performing an attack that hits, you may spend 1 %CHARGE% to perform a %COORDINATE% action."
+    },
     "Garven Dreis (BoY)": {
       display_name: "Garven Dreis (BoY)",
       text: "After you spend a focus token, you may choose 1 friendly ship at range 1-3. That ship gains 1 focus token."
@@ -22366,6 +22374,10 @@ exportObj.cardLoaders.English = function() {
     "Hope": {
       display_name: "Hope",
       text: "After another friendly ship at range 0-3 is destroyed, you may perform a %FOCUS% or %BOOST% action."
+    },
+    "Solo": {
+      display_name: "Solo",
+      text: "While you defend or perform an attack, if there are no other friendly ships at range 0-1, you may spend 1 %CHARGE% to reroll one of your dice."
     },
     "Sensitive Controls": {
       display_name: "Sensitive Controls",
