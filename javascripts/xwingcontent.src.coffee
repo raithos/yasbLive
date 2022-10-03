@@ -11917,7 +11917,7 @@ exportObj.basicCardData = ->
             upgrades: [
                 "Adv. Proton Torpedoes"
                 "R5-D8 (BoY)"
-                "Unstable Engines (BoY)"
+                "Unstable Sublight Engines (BoY)"
             ]
         }
         {
@@ -17948,7 +17948,7 @@ exportObj.basicCardData = ->
             standard: true
         }
         {
-            name: "Unstable Engines (BoY)"
+            name: "Unstable Sublight Engines (BoY)"
             id: 476
             slot: "Modification"
             standard: true
@@ -29667,6 +29667,9 @@ exportObj.cardLoaders.English = () ->
         "L3-37's Programming (BoY)":
            display_name: """L3-37's Programming"""
            text: """If you are not shielded, decrease the difficulty of your bank (%BANKLEFT% and %BANKRIGHT%) maneuvers."""
+        "Unstable Sublight Engines (BoY)":
+           display_name: """Unstable Sublight Engines"""
+           text: """After you are destroyed, you <b>must</b> execute a [1 %STRAIGHT%] maneuver"""
         "Attack Speed (BoY)":
            display_name: """Attack Speed"""
            text: """After you fully execute a [3 %STRAIGHT%] or [4 %STRAIGHT%] maneuver, you may perform a boost using the [1 %STRAIGHT%] template. (This is not an action)."""

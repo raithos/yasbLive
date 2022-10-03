@@ -6965,7 +6965,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 20,
         chassis: "Hope",
-        upgrades: ["Adv. Proton Torpedoes", "R5-D8 (BoY)", "Unstable Engines (BoY)"]
+        upgrades: ["Adv. Proton Torpedoes", "R5-D8 (BoY)", "Unstable Sublight Engines (BoY)"]
       }, {
         name: "Biggs Darklighter (BoY)",
         canonical_name: 'Biggs Darklighter'.canonicalize(),
@@ -12253,7 +12253,7 @@ exportObj.basicCardData = function() {
         slot: "Talent",
         standard: true
       }, {
-        name: "Unstable Engines (BoY)",
+        name: "Unstable Sublight Engines (BoY)",
         id: 476,
         slot: "Modification",
         standard: true
@@ -21854,6 +21854,10 @@ exportObj.cardLoaders.English = function() {
     "L3-37's Programming (BoY)": {
       display_name: "L3-37's Programming",
       text: "If you are not shielded, decrease the difficulty of your bank (%BANKLEFT% and %BANKRIGHT%) maneuvers."
+    },
+    "Unstable Sublight Engines (BoY)": {
+      display_name: "Unstable Sublight Engines",
+      text: "After you are destroyed, you <b>must</b> execute a [1 %STRAIGHT%] maneuver"
     },
     "Attack Speed (BoY)": {
       display_name: "Attack Speed",
