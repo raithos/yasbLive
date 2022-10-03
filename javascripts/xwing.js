@@ -8978,6 +8978,8 @@ GenericAddon = (function() {
         }
         this.conferredAddons.push(addon);
       }
+    }
+    if ((this.data.chassis != null) && !this.ship.builder.isQuickbuild) {
       _ref1 = exportObj.chassis[this.data.chassis].conferredAddons;
       _results = [];
       for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
