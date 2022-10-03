@@ -8133,30 +8133,36 @@ Ship = (function() {
       forcerecurring: 1,
       charge: (_ref27 = (_ref28 = this.pilot.ship_override) != null ? _ref28.charge : void 0) != null ? _ref27 : this.pilot.charge,
       actions: ((_ref29 = (_ref30 = this.pilot.ship_override) != null ? _ref30.actions : void 0) != null ? _ref29 : this.data.actions).slice(0),
-      chassis: (_ref31 = (_ref32 = (_ref33 = this.pilot.ship_override) != null ? _ref33.chassis : void 0) != null ? _ref32 : this.pilot.chassis) != null ? _ref31 : ""
+      chassis: (_ref31 = (_ref32 = this.pilot.chassis) != null ? _ref32 : this.data.chassis) != null ? _ref31 : ""
     };
     stats.maneuvers = [];
-    for (s = _i = 0, _ref34 = ((_ref35 = this.data.maneuvers) != null ? _ref35 : []).length; 0 <= _ref34 ? _i < _ref34 : _i > _ref34; s = 0 <= _ref34 ? ++_i : --_i) {
+    for (s = _i = 0, _ref33 = ((_ref34 = this.data.maneuvers) != null ? _ref34 : []).length; 0 <= _ref33 ? _i < _ref33 : _i > _ref33; s = 0 <= _ref33 ? ++_i : --_i) {
       stats.maneuvers[s] = this.data.maneuvers[s].slice(0);
     }
     if ((this.pilot.keyword != null) && (__indexOf.call(this.pilot.keyword, "Droid") >= 0) && (stats.actions != null)) {
       new_stats = [];
-      _ref36 = stats.actions;
-      for (_j = 0, _len = _ref36.length; _j < _len; _j++) {
-        statentry = _ref36[_j];
+      _ref35 = stats.actions;
+      for (_j = 0, _len = _ref35.length; _j < _len; _j++) {
+        statentry = _ref35[_j];
         new_stats.push(statentry.replace("Focus", "Calculate"));
       }
       stats.actions = new_stats;
     }
-    _ref37 = this.upgrades;
-    for (_k = 0, _len1 = _ref37.length; _k < _len1; _k++) {
-      upgrade = _ref37[_k];
+    _ref36 = this.upgrades;
+    for (_k = 0, _len1 = _ref36.length; _k < _len1; _k++) {
+      upgrade = _ref36[_k];
+      if ((upgrade != null ? (_ref37 = upgrade.data) != null ? _ref37.chassis : void 0 : void 0) != null) {
+        stats.chassis = upgrade.data.chassis;
+      }
       if ((upgrade != null ? (_ref38 = upgrade.data) != null ? _ref38.modifier_func : void 0 : void 0) != null) {
         upgrade.data.modifier_func(stats);
       }
     }
     if (((_ref39 = this.pilot) != null ? _ref39.modifier_func : void 0) != null) {
       this.pilot.modifier_func(stats);
+    }
+    if ((exportObj.chassis[stats.chassis] != null) && (exportObj.chassis[stats.chassis].modifier_func != null)) {
+      exportObj.chassis[stats.chassis].modifier_func(stats);
     }
     return stats;
   };
@@ -8488,8 +8494,14 @@ Ship = (function() {
     if ((_ref = this.data.name) != null ? _ref.includes(keyword) : void 0) {
       return true;
     }
-    if (((this.data.chassis != null) && this.data.chassis === keyword) || ((this.pilot.chassis != null) && this.pilot.chassis === keyword)) {
-      return true;
+    if (this.pilot.chassis != null) {
+      if (this.pilot.chassis === keyword) {
+        return true;
+      }
+    } else {
+      if ((this.data.chassis != null) && this.data.chassis === keyword) {
+        return true;
+      }
     }
     _ref2 = (_ref1 = this.data.keyword) != null ? _ref1 : [];
     for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
@@ -8656,7 +8668,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7017
+                lineno: 7026
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8815,7 +8827,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7111
+                  lineno: 7120
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8842,7 +8854,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7118
+                      lineno: 7127
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8965,7 +8977,43 @@ GenericAddon = (function() {
         } else {
           throw new Error("Unexpected addon type for addon " + addon);
         }
-        _results.push(this.conferredAddons.push(addon));
+        this.conferredAddons.push(addon);
+        _results.push((function() {
+          var _j, _len1, _ref1, _results1;
+          _ref1 = exportObj.chassis[this.data.chassis].conferredAddons;
+          _results1 = [];
+          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+            addon = _ref1[_j];
+            cls = addon.type;
+            args = {
+              ship: this.ship,
+              container: this.container
+            };
+            if (addon.slot != null) {
+              args.slot = addon.slot;
+            }
+            if (addon.adjustment_func != null) {
+              args.adjustment_func = addon.adjustment_func;
+            }
+            if (addon.filter_func != null) {
+              args.filter_func = addon.filter_func;
+            }
+            if (addon.auto_equip != null) {
+              args.auto_equip = addon.auto_equip;
+            }
+            if (addon.placeholderMod_func != null) {
+              args.placeholderMod_func = addon.placeholderMod_func;
+            }
+            addon = new cls(args);
+            if (addon instanceof exportObj.Upgrade) {
+              this.ship.upgrades.push(addon);
+            } else {
+              throw new Error("Unexpected addon type for addon " + addon);
+            }
+            _results1.push(this.conferredAddons.push(addon));
+          }
+          return _results1;
+        }).call(this));
       }
       return _results;
     }
@@ -8986,7 +9034,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7191
+            lineno: 7216
           }));
         }
         __iced_deferrals._fulfill();
