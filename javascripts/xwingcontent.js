@@ -7040,9 +7040,9 @@ exportObj.basicCardData = function() {
         chassis: "Hope",
         upgrades: ["Ion Cannon Turret", "Adv. Proton Torpedoes", "R4 Astromech"]
       }, {
-        name: "Hol Okland (BoY)",
-        canonical_name: 'Hol Okland'.canonicalize(),
-        xws: "holokland-battleofyavin",
+        name: "Hol Okand (BoY)",
+        canonical_name: 'Hol Okand'.canonicalize(),
+        xws: "holokand-battleofyavin",
         unique: true,
         id: 563,
         faction: "Rebel Alliance",
@@ -20042,8 +20042,8 @@ exportObj.cardLoaders.English = function() {
       display_name: "Jek Porkins (BoY)",
       text: "After you receive a stress token, you may roll 1 attack die to remove it. On a %HIT% result, suffer 1 %HIT% damage."
     },
-    "Hol Okland (BoY)": {
-      display_name: "Hol Okland (BoY)",
+    "Hol Okand (BoY)": {
+      display_name: "Hol Okand (BoY)",
       text: "During the System Phasse, if there are no enemy ships at range 1-2, you may recover 1 %CHARGE% on any upgrade."
     },
     '"Pops" Krail (BoY)': {
