@@ -2393,7 +2393,7 @@ exportObj.RulesBrowser = (function() {
       this.rule_selector.remove();
     }
     this.rule_selector = $(document.createElement('SELECT'));
-    this.rule_selector.addClass('card-selector');
+    this.rule_selector.addClass('card-selector form-select form-select-lg mb-3');
     this.rule_selector.attr('size', 25);
     this.rule_selector_container.append(this.rule_selector);
     _ref = this.ruletype;

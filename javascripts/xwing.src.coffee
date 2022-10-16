@@ -2050,7 +2050,7 @@ class exportObj.RulesBrowser
         # Selects previously selected rule if there is one
         @rule_selector.remove() if @rule_selector?
         @rule_selector = $ document.createElement('SELECT')
-        @rule_selector.addClass 'card-selector'
+        @rule_selector.addClass 'card-selector form-select form-select-lg mb-3'
         @rule_selector.attr 'size', 25
         @rule_selector_container.append @rule_selector
         
