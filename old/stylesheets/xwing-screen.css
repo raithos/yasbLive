@@ -130,7 +130,7 @@
     background-size: 5px 5px; }
   .fancy-ship .fancy-dial table > tbody > tr > td ~ td {
     background-color: #a29199; }
-  .fancy-ship .fancy-pilot-text {
+  .fancy-ship .fancy-pilot-text, .fancy-ship .fancy-pilot-chassis {
     clear: both;
     margin-left: 68px;
     padding: 5px;
