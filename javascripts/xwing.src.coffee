@@ -4700,7 +4700,10 @@ class exportObj.SquadBuilder
                     container.find('tr.info-points').show()
 
                     container.find('tr.info-loadout td.info-data').text data.loadout
-                    container.find('tr.info-loadout').show()
+                    if data.upgrades?
+                        container.find('tr.info-loadout').hide()
+                    else
+                        container.find('tr.info-loadout').show()
                     if data.engagement?
                         container.find('tr.info-engagement td.info-data').text data.engagement
                         container.find('tr.info-engagement').show()
