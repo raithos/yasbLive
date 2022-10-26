@@ -3348,9 +3348,9 @@ exportObj.basicCardData = function() {
         skill: 1,
         recurring: 1,
         charge: 1,
-        points: 2,
-        loadout: 2,
-        slots: ["Talent"]
+        points: 3,
+        loadout: 5,
+        slots: ["Talent", "Modification"]
       }, {
         name: "Del Meeko",
         id: 222,
@@ -3388,9 +3388,9 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/ln Fighter",
         skill: 3,
-        points: 2,
-        loadout: 1,
-        slots: ["Talent"]
+        points: 3,
+        loadout: 5,
+        slots: ["Talent", "Talent"]
       }, {
         name: '"Night Beast"',
         id: 226,
@@ -3408,8 +3408,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/ln Fighter",
         skill: 3,
         points: 2,
-        loadout: 2,
-        slots: ["Talent"]
+        loadout: 0,
+        slots: []
       }, {
         name: "Obsidian Squadron Pilot",
         id: 228,
@@ -3426,8 +3426,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/ln Fighter",
         skill: 1,
         points: 2,
-        loadout: 3,
-        slots: ["Modification"]
+        loadout: 0,
+        slots: []
       }, {
         name: "Spice Runner",
         id: 230,
@@ -3793,7 +3793,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/fo Fighter",
         skill: 5,
         points: 3,
-        loadout: 5,
+        loadout: 4,
         charge: 2,
         slots: ["Talent", "Talent", "Missile", "Tech", "Modification"]
       }, {
@@ -5347,8 +5347,8 @@ exportObj.basicCardData = function() {
         charge: 2,
         recurring: 1,
         ship: "LAAT/i Gunship",
-        points: 5,
-        loadout: 23,
+        points: 6,
+        loadout: 20,
         keyword: ["Clone"],
         slots: ["Sensor", "Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -5374,7 +5374,7 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "LAAT/i Gunship",
         points: 5,
-        loadout: 20,
+        loadout: 12,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -6061,7 +6061,7 @@ exportObj.basicCardData = function() {
         ship: "BTA-NR2 Y-wing",
         skill: 5,
         points: 5,
-        loadout: 24,
+        loadout: 19,
         charge: 1,
         recurring: 1,
         slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Illicit", "Configuration"]
@@ -6073,7 +6073,7 @@ exportObj.basicCardData = function() {
         ship: "BTA-NR2 Y-wing",
         skill: 4,
         points: 4,
-        loadout: 17,
+        loadout: 12,
         slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "Wilsa Teshlo",
@@ -6082,8 +6082,8 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "BTA-NR2 Y-wing",
         skill: 4,
-        points: 3,
-        loadout: 14,
+        points: 4,
+        loadout: 12,
         slots: ["Tech", "Turret", "Astromech", "Device", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "Shasa Zaro",
@@ -6092,7 +6092,7 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "BTA-NR2 Y-wing",
         skill: 3,
-        points: 3,
+        points: 4,
         loadout: 13,
         slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
@@ -6103,7 +6103,7 @@ exportObj.basicCardData = function() {
         ship: "BTA-NR2 Y-wing",
         skill: 3,
         points: 4,
-        loadout: 19,
+        loadout: 14,
         slots: ["Talent", "Tech", "Turret", "Missile", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "Aftab Ackbar",
@@ -6113,7 +6113,7 @@ exportObj.basicCardData = function() {
         ship: "BTA-NR2 Y-wing",
         skill: 2,
         points: 4,
-        loadout: 18,
+        loadout: 13,
         slots: ["Talent", "Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Configuration"]
       }, {
         name: "Corus Kapellim",
@@ -6123,7 +6123,7 @@ exportObj.basicCardData = function() {
         ship: "BTA-NR2 Y-wing",
         skill: 1,
         points: 4,
-        loadout: 20,
+        loadout: 15,
         slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Illicit", "Configuration"]
       }, {
         name: "C'ai Threnalli (Y-Wing)",
@@ -6134,8 +6134,8 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "BTA-NR2 Y-wing",
         skill: 2,
-        points: 3,
-        loadout: 15,
+        points: 4,
+        loadout: 10,
         slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "New Republic Patrol",
@@ -6341,10 +6341,10 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/ln Fighter",
         skill: 4,
-        points: 2,
-        loadout: 3,
+        points: 3,
+        loadout: 5,
         max_per_squad: 2,
-        slots: ["Illicit"]
+        slots: ["Talent", "Illicit"]
       }, {
         name: "Mandalorian Royal Guard",
         id: 505,
@@ -6939,7 +6939,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 4,
-        points: 20,
+        points: 4,
         chassis: "Hope",
         upgrades: ["Adv. Proton Torpedoes", "R5-K6 (BoY)"]
       }, {
@@ -6951,7 +6951,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 5,
-        points: 20,
+        points: 6,
         chassis: "Hope",
         upgrades: ["Instinctive Aim", "Attack Speed (BoY)", "Proton Torpedoes", "R2-D2 (BoY)"]
       }, {
@@ -6963,7 +6963,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 4,
-        points: 20,
+        points: 4,
         chassis: "Hope",
         upgrades: ["Adv. Proton Torpedoes", "R5-D8 (BoY)", "Unstable Sublight Engines (BoY)"]
       }, {
@@ -6975,7 +6975,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 3,
-        points: 20,
+        points: 5,
         chassis: "Hope",
         upgrades: ["Attack Speed (BoY)", "Selfless", "Proton Torpedoes", "R2-F2 (BoY)"]
       }, {
@@ -6987,7 +6987,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 5,
-        points: 20,
+        points: 5,
         chassis: "Hope",
         upgrades: ["Attack Speed (BoY)", "Marksmanship", "Proton Torpedoes", "R2-A3 (BoY)"]
       }, {
@@ -6999,7 +6999,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "Modified YT-1300 Light Freighter",
         skill: 6,
-        points: 20,
+        points: 7,
         charge: 4,
         chassis: "Solo",
         upgrades: ["Chewbacca (BoY)", "Rigged Cargo Chute", "Millennium Falcon", "L3-37's Programming (BoY)"]
@@ -7012,7 +7012,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "BTL-A4 Y-wing",
         skill: 5,
-        points: 20,
+        points: 4,
         chassis: "Hope",
         upgrades: ["Ion Cannon Turret", "Adv. Proton Torpedoes", "Targeting Astromech (BoY)"]
       }, {
@@ -7024,7 +7024,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "BTL-A4 Y-wing",
         skill: 2,
-        points: 20,
+        points: 4,
         chassis: "Hope",
         upgrades: ["Dorsal Turret", "Adv. Proton Torpedoes", "R4 Astromech"]
       }, {
@@ -7036,7 +7036,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "BTL-A4 Y-wing",
         skill: 4,
-        points: 20,
+        points: 4,
         chassis: "Hope",
         upgrades: ["Ion Cannon Turret", "Adv. Proton Torpedoes", "R4 Astromech"]
       }, {
@@ -7048,7 +7048,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "BTL-A4 Y-wing",
         skill: 4,
-        points: 20,
+        points: 4,
         chassis: "Hope",
         upgrades: ["Dorsal Turret", "Adv. Proton Torpedoes", "Precise Astromech (BoY)"]
       }, {
@@ -7060,7 +7060,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Advanced x1",
         skill: 6,
-        points: 20,
+        points: 6,
         force: 3,
         keyword: ["Dark Side", "Sith"],
         ship_override: {
@@ -7076,7 +7076,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/ln Fighter",
         skill: 5,
-        points: 20,
+        points: 4,
         ship_override: {
           hull: 4
         },
@@ -7090,7 +7090,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/ln Fighter",
         skill: 5,
-        points: 20,
+        points: 3,
         ship_override: {
           hull: 4
         },
@@ -7103,7 +7103,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/ln Fighter",
         skill: 6,
-        points: 20,
+        points: 4,
         ship_override: {
           hull: 4
         },
@@ -7119,7 +7119,7 @@ exportObj.basicCardData = function() {
         skill: 1,
         charge: 1,
         recurring: 1,
-        points: 20,
+        points: 3,
         ship_override: {
           hull: 4
         },
@@ -7133,7 +7133,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/in Interceptor",
         skill: 4,
-        points: 20,
+        points: 6,
         charge: 2,
         recurring: 1,
         chassis: "Sensitive Controls",
@@ -7150,7 +7150,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/in Interceptor",
         skill: 4,
-        points: 20,
+        points: 4,
         charge: 2,
         chassis: "Sensitive Controls",
         ship_override: {
@@ -7166,7 +7166,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/in Interceptor",
         skill: 4,
-        points: 20,
+        points: 4,
         charge: 2,
         chassis: "Sensitive Controls",
         ship_override: {
@@ -7182,7 +7182,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/in Interceptor",
         skill: 4,
-        points: 20,
+        points: 4,
         charge: 2,
         chassis: "Sensitive Controls",
         ship_override: {
@@ -7198,7 +7198,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/in Interceptor",
         skill: 4,
-        points: 20,
+        points: 4,
         charge: 2,
         chassis: "Sensitive Controls",
         ship_override: {
@@ -7215,7 +7215,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Eta-2 Actis",
         skill: 6,
-        points: 20,
+        points: 5,
         force: 3,
         chassis: "Intuitive Controls",
         keyword: ["Dark Side"],
@@ -7229,7 +7229,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Eta-2 Actis",
         skill: 5,
-        points: 20,
+        points: 4,
         force: 3,
         chassis: "Intuitive Controls",
         upgrades: ["Patience", "Ancillary Ion Weapons (SoC)", "R4-P17 (SoC)"]
@@ -7242,7 +7242,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Eta-2 Actis",
         skill: 4,
-        points: 20,
+        points: 4,
         force: 2,
         chassis: "Intuitive Controls",
         upgrades: ["Marksmanship", "Brilliant Evasion", "Ancillary Ion Weapons (SoC)", "R4-P Astromech"]
@@ -7255,7 +7255,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "ARC-170 Starfighter",
         skill: 5,
-        points: 20,
+        points: 5,
         chassis: "Born for This",
         upgrades: []
       }, {
@@ -7267,7 +7267,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "ARC-170 Starfighter",
         skill: 4,
-        points: 20,
+        points: 4,
         chassis: "Born for This",
         upgrades: []
       }, {
@@ -7279,7 +7279,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "ARC-170 Starfighter",
         skill: 3,
-        points: 20,
+        points: 4,
         chassis: "Born for This",
         upgrades: []
       }, {
@@ -7291,7 +7291,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Nimbus-class V-wing",
         skill: 5,
-        points: 20,
+        points: 3,
         chassis: "Born for This",
         upgrades: []
       }, {
@@ -7303,7 +7303,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Nimbus-class V-wing",
         skill: 4,
-        points: 20,
+        points: 3,
         chassis: "Born for This",
         upgrades: []
       }, {
@@ -7315,7 +7315,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "V-19 Torrent Starfighter",
         skill: 4,
-        points: 20,
+        points: 3,
         chassis: "Born for This",
         upgrades: []
       }, {
@@ -7327,7 +7327,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "V-19 Torrent Starfighter",
         skill: 3,
-        points: 20,
+        points: 4,
         chassis: "Born for This",
         upgrades: ["Deadeye Shot", "Barrage Rockets"]
       }, {
@@ -7339,7 +7339,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Sith Infiltrator",
         skill: 3,
-        points: 20,
+        points: 6,
         force: 3,
         keyword: ["Dark Side"],
         upgrades: ["Malice", "Roiling Anger (SoC)", "Scimitar"]
@@ -7352,7 +7352,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Hyena-class Droid Bomber",
         skill: 3,
-        points: 20,
+        points: 3,
         chassis: "Networked Calculations",
         ship_override: {
           actions: ["Calculate", "Lock", "Barrel Roll", "R-> Lock", "R-Jam"]
@@ -7367,7 +7367,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Hyena-class Droid Bomber",
         skill: 4,
-        points: 20,
+        points: 3,
         chassis: "Networked Calculations",
         upgrades: []
       }, {
@@ -7390,7 +7390,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Droid Tri-fighter",
         skill: 3,
-        points: 20,
+        points: 4,
         chassis: "Networked Calculations",
         upgrades: []
       }, {
@@ -7402,7 +7402,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Droid Tri-fighter",
         skill: 4,
-        points: 20,
+        points: 5,
         chassis: "Networked Calculations",
         upgrades: ["Outmaneuver", "Afterburners", "Contingency Protocol (SoC)"]
       }, {
@@ -7413,7 +7413,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Droid Tri-fighter",
         skill: 1,
-        points: 20,
+        points: 4,
         chassis: "Networked Calculations",
         upgrades: []
       }, {
@@ -7425,7 +7425,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 3,
-        points: 20,
+        points: 2,
         chassis: "Networked Calculations",
         upgrades: []
       }, {
@@ -7437,7 +7437,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 1,
-        points: 20,
+        points: 3,
         chassis: "Networked Calculations",
         upgrades: []
       }, {
@@ -7448,7 +7448,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 1,
-        points: 20,
+        points: 2,
         chassis: "Networked Calculations",
         upgrades: []
       }, {
@@ -7829,12 +7829,12 @@ exportObj.basicCardData = function() {
         name: "R3 Astromech",
         id: 4,
         slot: "Astromech",
-        points: 3
+        points: 4
       }, {
         name: "R4 Astromech",
         id: 5,
         slot: "Astromech",
-        points: 2,
+        points: 3,
         restrictions: [["Base", "Small"]],
         modifier_func: function(stats) {
           var turn, _i, _ref, _results;
@@ -8405,7 +8405,7 @@ exportObj.basicCardData = function() {
         name: "Proximity Mines",
         id: 70,
         slot: "Device",
-        points: 6,
+        points: 8,
         charge: 2,
         applies_condition: 'Proximity Mine'.canonicalize()
       }, {
@@ -10647,7 +10647,7 @@ exportObj.basicCardData = function() {
         id: 316,
         slot: "Device",
         charge: 1,
-        points: 5,
+        points: 7,
         applies_condition: 'Cluster Mine'.canonicalize()
       }, {
         name: "Ion Bombs",
@@ -11564,7 +11564,7 @@ exportObj.basicCardData = function() {
         name: "Wartime Loadout",
         id: 409,
         slot: "Configuration",
-        points: 10,
+        points: 5,
         ship: "BTA-NR2 Y-wing",
         standardized: true,
         chassis: "Devastating Barrage",
@@ -11669,7 +11669,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Electro-Chaff Missiles",
         id: 420,
-        points: 4,
+        points: 9,
         slot: "Missile",
         max_per_squad: 2,
         charge: 1,
@@ -12040,7 +12040,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Notorious",
         id: 455,
-        points: 2,
+        points: 5,
         charge: 2,
         recurring: 1,
         slot: "Talent",
