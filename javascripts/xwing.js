@@ -8572,11 +8572,13 @@ Ship = (function() {
       xws.multisection = this.data.multisection.slice(0);
     }
     upgrade_obj = {};
-    _ref2 = this.upgrades;
-    for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
-      upgrade = _ref2[_i];
-      if ((upgrade != null ? upgrade.data : void 0) != null) {
-        upgrade.toXWS(upgrade_obj);
+    if (!this.pilot.upgrades) {
+      _ref2 = this.upgrades;
+      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+        upgrade = _ref2[_i];
+        if ((upgrade != null ? upgrade.data : void 0) != null) {
+          upgrade.toXWS(upgrade_obj);
+        }
       }
     }
     if (Object.keys(upgrade_obj).length > 0) {
@@ -8672,7 +8674,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7029
+                lineno: 7030
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8831,7 +8833,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7123
+                  lineno: 7124
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8858,7 +8860,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7130
+                      lineno: 7131
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9035,7 +9037,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7220
+            lineno: 7221
           }));
         }
         __iced_deferrals._fulfill();
