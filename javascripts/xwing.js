@@ -8442,17 +8442,17 @@ Ship = (function() {
   };
 
   Ship.prototype.standardized_check = function(upgrade_data) {
-    var ship, slotfree, upgrade, _i, _j, _len, _len1, _ref, _ref1;
+    var ship, slotfree, upgrade, _i, _j, _len, _len1, _ref, _ref1, _ref2;
     if (upgrade_data.standardized != null) {
       _ref = this.builder.ships;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         ship = _ref[_i];
         if (((ship != null ? ship.data : void 0) != null) && ship.data.name === this.data.name) {
-          if ((upgrade_data.restrictions != null) && ship.restriction_check(upgrade_data.restrictions != null, upgrade_data)) {
+          if ((upgrade_data.restrictions != null) && ship.restriction_check(upgrade_data.restrictions != null, upgrade_data) && !(((_ref1 = ship.pilot) != null ? _ref1.upgrades : void 0) != null)) {
             slotfree = false;
-            _ref1 = ship.upgrades;
-            for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-              upgrade = _ref1[_j];
+            _ref2 = ship.upgrades;
+            for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
+              upgrade = _ref2[_j];
               if (upgrade_data.slot === upgrade.slot && (upgrade.data == null)) {
                 slotfree = true;
               }
