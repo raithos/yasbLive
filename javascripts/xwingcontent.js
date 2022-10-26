@@ -7011,7 +7011,7 @@ exportObj.basicCardData = function() {
         id: 560,
         faction: "Rebel Alliance",
         ship: "BTL-A4 Y-wing",
-        skill: 5,
+        skill: 4,
         points: 4,
         chassis: "Hope",
         upgrades: ["Ion Cannon Turret", "Adv. Proton Torpedoes", "Targeting Astromech (BoY)"]
@@ -18096,7 +18096,7 @@ exportObj.translations.English = {
     "Name in use": "You already have a squad with that name",
     "select OAuth provider": "Select one of the OAuth providers below to log in and start saving squads.",
     "OAuth explanation": "<p>\n    <a href=\"http://en.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> is an authorization system which lets you prove your identity at a web site without having to create a new account.  Instead, you tell some provider with whom you already have an account (e.g. Google or Facebook) to prove to this web site that you say who you are.  That way, the next time you visit, this site remembers that you're that user from Google.\n</p>\n<p>\n    The best part about this is that you don't have to come up with a new username and password to remember.  And don't worry, I'm not collecting any data from the providers about you.  I've tried to set the scope of data to be as small as possible, but some places send a bunch of data at minimum.  I throw it away.  All I look at is a unique identifier (usually some giant number).\n</p>\n<p>\n    For more information, check out this <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">introduction to OAuth</a>.\n</p>",
-    "Intro Card YASB": "<h2>YASB for X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<p>Current Version: 06/15/2022</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n\n<p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button> <button class=\"btn btn-primary paypal\" onclick=\"window.open('https://www.patreon.com/raithos');\">Patreon</button></p>",
+    "Intro Card YASB": "<h2>YASB for X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<p>Current Version: 10/28/2022</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n\n<p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button> <button class=\"btn btn-primary paypal\" onclick=\"window.open('https://www.patreon.com/raithos');\">Patreon</button></p>",
     "Continue to OAuth provider": "This will open a new window to let you authenticate with the chosen provider. You may have to allow pop ups for this site.",
     "iOS requires cross-site control": "Due to a new feature in iOS systems OAuth won't work unless you enable \"cross-site control\".",
     "login in progress": "OAuth login is in progress. Please finish authorization at the specified provider using the window that was just created.",
@@ -20186,7 +20186,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Dutch" Vander (BoY)': {
       display_name: "“Dutch” Vander (BoY)",
-      text: "After you spend a %LOCK%, you may choose 1 friendly ship at range 1-3. That ship may acquire a lock on the defender."
+      text: "After you spend a lock during an attack, choose a friendly ship at range 1-3. The chosen ship may acquire a lock on the defender.<i>Errata (since rules reference 1.4.4): Corrected pilot ability and adjusted initiative value</i>"
     },
     "Dex Tiree (BoY)": {
       display_name: "Dex Tiree (BoY)",
@@ -20206,7 +20206,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Iden Versio (BoY)": {
       display_name: "Iden Versio (BoY)",
-      text: "Before a friendly TIE at range 0-1 would suffer damage, you may spend 2 %CHARGE%. If you do, prevent 1 %HIT% or %CRIT%. "
+      text: "Before a friendly TIE at range 0-1 would suffer damage, you may spend 2 %CHARGE%. If you do, prevent 1 damage. <i>Errata (since rules reference 1.4.4): Corrected pilot ability</i>"
     },
     '"Backstabber" (BoY)': {
       display_name: "“Backstabber” (BoY)",
@@ -32058,8 +32058,8 @@ exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
 exportObj.rulesEntries = function() {
   return {
     version: {
-      number: "1.4.31",
-      date: "06/15/22"
+      number: "1.4.4",
+      date: "10/28/22"
     },
     glossary: {
       "ABILITIES": {
@@ -32328,7 +32328,7 @@ exportObj.rulesEntries = function() {
       },
       "ION": {
         name: "Ion",
-        text: "A ship is <strong>ionized</strong> while it has a number of ion tokens relative to its size: at least one for a small ship, two or more for a medium ship, and three or more for a large ship. Ion tokens are red tokens. <br><br>A ship that is ionized cannot acquire or maintain locks. When a ship becomes ionized, it breaks all locks it is maintaining.<br><br>During the Activation Phase, an ionized ship activates as normal, with the following exceptions: <br><br>1. During the Execute Maneuver step, the ionized ship flips its maneuver dial faceup and executes an <strong>ion maneuver</strong> with the same direction shown on the dial. An ion maneuver is a blue speed 1 bank or straight [%BANKLEFT%, %STRAIGHT%, %BANKRIGHT%] maneuver.<br> • If an ionized ship's dial shows a stop [%STOP%] maneuver, they perform their ion maneuver as a [1 %STRAIGHT%] maneuver.<br>• The bearing, difficulty, and speed of this maneuver cannot be changed unless an ability explicitly affects the ion maneuver.<br>2. During the Perform Action step, the ship can perform only the %FOCUS% action. <br>3. At the end of a ship's activation, if it executed an ion maneuver, it removes all of its ion tokens. <br><br>Additionally: <br>• An ionized ship cannot perform any action except the %FOCUS% action. <br>• Ships cannot use abilities that trigger from an ionized ship revealing its dial.<br>• If a ship that was ionized during the Planning Phase is no longer ionized at the beginning of its activation, it activates as normal."
+        text: "A ship is <strong>ionized</strong> while it has a number of ion tokens relative to its size: at least one for a small ship, two or more for a medium ship, and three or more for a large ship. Ion tokens are red tokens. <br><br>A ship that is ionized cannot acquire or maintain locks. When a ship becomes ionized, it breaks all locks it is maintaining.<br><br>During the Activation Phase, an ionized ship activates as follows: <br><br>1. The ionized ship reveals its dial as normal <br><br>2. During the Execute Maneuver step, the ionized ship flips its maneuver dial faceup and executes an <strong>ion maneuver</strong> with the same direction shown on the dial. An ion maneuver is a blue speed 1 bank or straight [%BANKLEFT%, %STRAIGHT%, %BANKRIGHT%] maneuver.<br> • If an ionized ship's dial shows a stop [%STOP%] maneuver, they perform their ion maneuver as a [1 %STRAIGHT%] maneuver.<br>• The bearing, difficulty, and speed of this maneuver cannot be changed unless an ability explicitly affects the ion maneuver.<br>3. During the Perform Action step, the ship can perform only the %FOCUS% action. <br>4. At the end of a ship's activation, if it executed an ion maneuver, it removes all of its ion tokens. <br><br>Additionally: <br>• An ionized ship cannot perform any action except the %FOCUS% action. <br>• Ships cannot use abilities that trigger from an ionized ship revealing its dial.<br>• If a ship that was ionized during the Planning Phase is no longer ionized at the beginning of its activation, it activates as normal."
       },
       "INFLICT": {
         name: "Inflict",
@@ -32560,11 +32560,15 @@ exportObj.rulesEntries = function() {
       },
       "STANDARDIZED": {
         name: "Standardized",
-        text: "Some upgrade cards have the <strong>standardized</strong> restriction. During squad building, if a player selects a ship with a standardized card equipped, each ship of that ship type (i.e., full ship name) in that player's squad must be equipped with a copy of that standardized card."
+        text: "Some upgrade cards have the <strong>standardized</strong> restriction. During squad building, if a player selects a ship with a standardized card equipped, each ship of that ship type included in that player's squad must be equipped with a copy of that standardized card if it has the ship ability referenced by that card.<br><br>• Standard loadouts cannot equip additional upgrades and ignore the standardized restriction."
       },
       "STANDARD ARC": {
         name: "Standard Arc",
         text: "See Arc."
+      },
+      "STANDARD LOADOUTS": {
+        name: "Standard Arc",
+        text: "Some ship cards are <b>standard loadouts</b>. Standard loadout cards are larger than normal ship cards and list all the ship's equipped upgrades. Some standard loadouts have unique ship abilities, upgrade abilities, and action bars. Standard loadout ships cannot equip any additional upgrades."
       },
       "STANDARD SHIP": {
         name: "Standard Ship",
