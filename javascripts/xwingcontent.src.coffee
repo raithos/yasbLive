@@ -11976,17 +11976,20 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: 'Jon "Dutch" Vander (BoY)'
+            name: '"Dutch" Vander (BoY)'
             canonical_name: '"Dutch" Vander'.canonicalize()
-            xws: "jondutchvader-battleofyavin"
+            xws: "dutchvader-battleofyavin"
             unique: true
             id: 560
             faction: "Rebel Alliance"
             ship: "BTL-A4 Y-wing"
-            skill: 4
+            skill: 5
             points: 20
             chassis: "Hope"
             upgrades: [
+                "Ion Cannon Turret"
+                "Adv. Proton Torpedoes"
+                "Targeting Astromech (BoY)"
             ]
         }
         {
@@ -12265,6 +12268,9 @@ exportObj.basicCardData = ->
             force: 3
             chassis: "Intuitive Controls"
             upgrades: [
+                "Patience"
+                "Ancillary Ion Weapons (SoC)"
+                "R4-P17 (SoC)"
             ]
         }
         {
@@ -12595,7 +12601,7 @@ exportObj.basicCardData = ->
             id: 598
             unique: true
             faction: "Rebel Alliance"
-            ship: "T-65 X-wing"
+            ship: "BTL-A4 Y-wing"
             skill: 5
             points: 20
             slots: [
@@ -12802,6 +12808,16 @@ exportObj.basicCardData = ->
             slots: [
                 "Modification"
             ]
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Evade"
+                    "Lock"
+                    "Barrel Roll"
+                    "R-> Evade"
+                    "Boost"
+                    "R-> Focus"
+                ]
         }
         {
             name: "Aurra Sing"
@@ -12851,6 +12867,16 @@ exportObj.basicCardData = ->
             slots: [
                 "Modification"
             ]
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Evade"
+                    "Lock"
+                    "Barrel Roll"
+                    "R-> Evade"
+                    "Boost"
+                    "R-> Focus"
+                ]
         }
         {
             name: "Adi Gallia"
@@ -18056,6 +18082,19 @@ exportObj.basicCardData = ->
             standard: true
             charge: 2
             slot: "Configuration"
+        }
+        {
+            name: "R4-P17 (SoC)"
+            id: 490
+            standard: true
+            charge: 2
+            slot: "Astromech"
+        }
+        {
+            name: "Targeting Astromech (BoY)"
+            id: 491
+            standard: true
+            slot: "Astromech"
         }
     ]
 
@@ -26608,6 +26647,102 @@ exportObj.standardCheckBrowser = (data, faction='', type) ->
     else
         return data.name not in exportObj.standardUpgradeExclusions
 
+#not functional yet
+String::serialtoxws = ->
+    list = this.getParameterByName('d')
+    re = if "Z" in list then /^v(\d+)Z(.*)/ else /^v(\d+)!(.*)/
+    matches = re.exec list
+    if matches? and version > 7 and !serialized_ships?
+        version = parseInt matches[1]
+        ship_splitter = 'Y'
+        [g, p, s] = matches[2].split('Z')
+        [ game_type_abbrev, desired_points, serialized_ships ] = [g, parseInt(p), s]
+
+        ships_with_unmet_dependencies = []
+        if serialized_ships.length?
+            for serialized_ship in serialized_ships.split(ship_splitter)
+                unless serialized_ship == ''
+                    new_ship = @addShip()
+                    if (not new_ship.fromSerialized version, serialized_ship) or not new_ship.pilot # also check, if the pilot has been set (the pilot himself was not invalid)
+                        ships_with_unmet_dependencies.push [new_ship, serialized_ship]
+            for ship in ships_with_unmet_dependencies
+                # 2nd attempt to load ships with unmet dependencies.
+                if not ship[0].pilot
+                    # create ship, if the ship was so invalid, that it in fact decided to not exist
+                    ship[0] = @addShip()
+                ship[0].fromSerialized version, ship[1]
+
+    @suppress_automatic_new_ship = false
+    # Finally, the unassigned ship
+
+    pilot_splitter = 'X'
+    upgrade_splitter = 'W'
+    [ pilot_id, upgrade_ids, conferredaddon_pairs ] = serialized.split pilot_splitter
+    upgrade_ids = upgrade_ids.split upgrade_splitter
+    # set the pilot
+    @setPilotById parseInt(pilot_id), true
+    # make sure the pilot is valid 
+    
+    for _ in [1 ... 3] # try adding each upgrade a few times, as the required slots might be added in by titles etc and are not yet available on the first try
+        `upgradeloop: //` 
+        for i in [upgrade_ids.length - 1 ... -1]
+            upgrade_id = upgrade_ids[i]
+            upgrade = exportObj.upgradesById[upgrade_id]
+            if not upgrade? 
+                upgrade_ids.splice(i,1) # Remove unknown or empty ID
+                if upgrade_id != ""
+                    console.log("Unknown upgrade id " + upgrade_id + " could not be added. Please report that error")
+                    everythingadded = false
+                continue
+            for upgrade_selection in @upgrades
+                if upgrade_selection?.data?.name == upgrade.name
+                    # for some reason the correct upgrade already was equipped (e.g. an earlier ship alread had a standardized that was added on creation here)
+                    upgrade_ids.splice(i,1) # was already added successfully, remove from list
+                    `continue upgradeloop`
+
+            for upgrade_selection in @upgrades
+                if exportObj.slotsMatching(upgrade.slot, upgrade_selection.slot) and not upgrade_selection.isOccupied()
+                    upgrade_selection.setById upgrade_id
+                    if upgrade_selection.lastSetValid
+                        upgrade_ids.splice(i,1) # added successfully, remove from list
+                    break    
+
+    # create the xws json now that ships/pilots have been made
+    xws =
+        description: "List generated by yasb.app URL"
+        faction: this.getParameterByName('f')
+        name: this.getParameterByName('sn') ? ""
+        pilots: []
+        points: desired_points
+        vendor:
+            yasb:
+                builder: 'YASB - X-Wing 2.5'
+                builder_url: window.location.href.split('?')[0]
+                link: @getPermaLink()
+        version: '06/15/2022'
+        # there is no point to have this version identifier, if we never actually increase it, right?
+
+    # create xws entry
+    for ship in @ships
+        if ship.pilot?
+            xwsship =
+                id: (ship.pilot.xws ? ship.pilot.canonical_name)
+                name: (ship.pilot.xws ? ship.pilot.canonical_name) 
+                points: ship.getPoints()
+                ship: ship.data.name.canonicalize()
+
+            upgrade_obj = {}
+
+            for upgrade in ship.upgrades
+                if upgrade?.data?
+                    upgrade.toXWS 
+                    (upgrade_obj[exportObj.toXWSUpgrade[@data.slot] ? @data.slot.canonicalize()] ?= []).push (@data.xws ? @data.canonical_name)
+
+            if Object.keys(upgrade_obj).length > 0
+                xwsship.upgrades = upgrade_obj
+
+            xwsship.pilots.push = xws
+    xwsship
 exportObj.codeToLanguage ?= {}
 exportObj.codeToLanguage.en = 'English'
 
@@ -28336,6 +28471,9 @@ exportObj.cardLoaders.English = () ->
         '"Pops" Krail (BoY)':
            display_name: """“Pops” Krail (BoY)"""
            text: """While you perform a %SINGLETURRETARC% attack, you may reroll up to 2 attack dice."""
+        '"Dutch" Vander (BoY)':
+           display_name: """“Dutch” Vander (BoY)"""
+           text: """After you spend a %LOCK%, you may choose 1 friendly ship at range 1-3. That ship may acquire a lock on the defender."""
         "Dex Tiree (BoY)":
            display_name: """Dex Tiree (BoY)"""
            text: """While you defend, if there is at least 1 other friendly ship at range 0-1, you may roll 1 additional defense die."""
@@ -28343,7 +28481,7 @@ exportObj.cardLoaders.English = () ->
            display_name: """“Wampa” (BoY)"""
            text: """While you perform an attack, you may spend 1 %CHARGE% to roll 1 additional attack die.%LINEBREAK%After defending, lose 1 %CHARGE%."""
         '"Dark Curse" (BoY)':
-           display_name: """“Dark Curse (BoY)”"""
+           display_name: """“Dark Curse” (BoY)"""
            text: """While you defend, the attacker's dice cannot be modified."""
         "Darth Vader (BoY)":
            display_name: """Darth Vader (BoY)"""
@@ -28376,7 +28514,7 @@ exportObj.cardLoaders.English = () ->
            text: """After you or a friendly <b>Obi-Wan Kenobi</b> ship at range 0-3 fully executes a maneuver, if there are more enemy ships than other friendly ships at range 0-1 of that ship, you may spend 1 %FORCE%. If you do, that ship may perform a %BARRELROLL% action."""
         "Obi-Wan Kenobi (SoC)":
            display_name: """Obi-Wan Kenobi (SoC)"""
-           text: """ """
+           text: """After you or a friendly <b>Anakin Skywalker</b> at range 0-3 executes a maneuver, if there are more enemy ships than other friendly ships at range 0-1 of that ship, you may spend 1 %FORCE%. If you do, that ship may perform a %BOOST% action."""
         "Shaak Ti (SoC)":
            display_name: """Shaak Ti (SoC)"""
            text: """At the start of the End Phase, you may perfrom a purple %COORDINATE% action, even while stressed %LINEBREAK% After you perform a %COORDINATE% action, if the chosen ship has the <b>Born for This</b> ship ability, you may coordinate 1 additional ship."""
@@ -29694,6 +29832,9 @@ exportObj.cardLoaders.English = () ->
         "Precise Astromech (BoY)":
            display_name: """Precise Astromech"""
            text: """After you perform an action, you may spend 1 %CHARGE% to perform a red %LOCK% action."""
+        "Targeting Astromech (BoY)":
+           display_name: """Targeting Astromech"""
+           text: """After you perform a %LOCK% action, you may perform a red %ROTATEARC% action."""
         "Dorsal Turret (BoY)":
            display_name: """Dorsal Turret"""
            text: """<strong>Attack</strong>"""
@@ -29712,6 +29853,9 @@ exportObj.cardLoaders.English = () ->
         "Strut-Lock Override (SoC)":
            display_name: """Strut-Lock Override"""
            text: """At the start of your activation, you may spend 1 %CHARGE%. If you do, ignore obstacles while you move through them this round."""
+        "R4-P17 (SoC)":
+           display_name: """R4-P17"""
+           text: """When you would be dealt a damage card, if you are not defending, you may spend 1 %CHARGE% and gain 1 strain to discard it instead."""
 
 
         # Epic upgrades

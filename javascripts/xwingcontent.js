@@ -7004,17 +7004,17 @@ exportObj.basicCardData = function() {
         chassis: "Solo",
         upgrades: ["Chewbacca (BoY)", "Rigged Cargo Chute", "Millennium Falcon", "L3-37's Programming (BoY)"]
       }, {
-        name: 'Jon "Dutch" Vander (BoY)',
+        name: '"Dutch" Vander (BoY)',
         canonical_name: '"Dutch" Vander'.canonicalize(),
-        xws: "jondutchvader-battleofyavin",
+        xws: "dutchvader-battleofyavin",
         unique: true,
         id: 560,
         faction: "Rebel Alliance",
         ship: "BTL-A4 Y-wing",
-        skill: 4,
+        skill: 5,
         points: 20,
         chassis: "Hope",
-        upgrades: []
+        upgrades: ["Ion Cannon Turret", "Adv. Proton Torpedoes", "Targeting Astromech (BoY)"]
       }, {
         name: "Dex Tiree (BoY)",
         canonical_name: 'Dex Tiree'.canonicalize(),
@@ -7232,7 +7232,7 @@ exportObj.basicCardData = function() {
         points: 20,
         force: 3,
         chassis: "Intuitive Controls",
-        upgrades: []
+        upgrades: ["Patience", "Ancillary Ion Weapons (SoC)", "R4-P17 (SoC)"]
       }, {
         name: "Shaak Ti (SoC)",
         canonical_name: 'Shaak Ti'.canonicalize(),
@@ -7493,7 +7493,7 @@ exportObj.basicCardData = function() {
         id: 598,
         unique: true,
         faction: "Rebel Alliance",
-        ship: "T-65 X-wing",
+        ship: "BTL-A4 Y-wing",
         skill: 5,
         points: 20,
         slots: ["Modification"]
@@ -7647,7 +7647,10 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 20,
         chassis: "Modified for Organics",
-        slots: ["Modification"]
+        slots: ["Modification"],
+        ship_override: {
+          actions: ["Focus", "Evade", "Lock", "Barrel Roll", "R-> Evade", "Boost", "R-> Focus"]
+        }
       }, {
         name: "Aurra Sing",
         id: 615,
@@ -7684,7 +7687,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 20,
         chassis: "Modified for Organics",
-        slots: ["Modification"]
+        slots: ["Modification"],
+        ship_override: {
+          actions: ["Focus", "Evade", "Lock", "Barrel Roll", "R-> Evade", "Boost", "R-> Focus"]
+        }
       }, {
         name: "Adi Gallia",
         id: 619,
@@ -12351,6 +12357,17 @@ exportObj.basicCardData = function() {
         standard: true,
         charge: 2,
         slot: "Configuration"
+      }, {
+        name: "R4-P17 (SoC)",
+        id: 490,
+        standard: true,
+        charge: 2,
+        slot: "Astromech"
+      }, {
+        name: "Targeting Astromech (BoY)",
+        id: 491,
+        standard: true,
+        slot: "Astromech"
       }
     ],
     conditionsById: [
@@ -17789,6 +17806,120 @@ exportObj.standardCheckBrowser = function(data, faction, type) {
   }
 };
 
+String.prototype.serialtoxws = function() {
+  var conferredaddon_pairs, desired_points, everythingadded, g, game_type_abbrev, i, list, matches, new_ship, p, pilot_id, pilot_splitter, re, s, serialized_ship, serialized_ships, ship, ship_splitter, ships_with_unmet_dependencies, upgrade, upgrade_id, upgrade_ids, upgrade_obj, upgrade_selection, upgrade_splitter, version, xws, xwsship, _, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _m, _n, _name, _o, _p, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+  list = this.getParameterByName('d');
+  re = __indexOf.call(list, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
+  matches = re.exec(list);
+  if ((matches != null) && version > 7 && (typeof serialized_ships === "undefined" || serialized_ships === null)) {
+    version = parseInt(matches[1]);
+    ship_splitter = 'Y';
+    _ref = matches[2].split('Z'), g = _ref[0], p = _ref[1], s = _ref[2];
+    _ref1 = [g, parseInt(p), s], game_type_abbrev = _ref1[0], desired_points = _ref1[1], serialized_ships = _ref1[2];
+    ships_with_unmet_dependencies = [];
+    if (serialized_ships.length != null) {
+      _ref2 = serialized_ships.split(ship_splitter);
+      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+        serialized_ship = _ref2[_i];
+        if (serialized_ship !== '') {
+          new_ship = this.addShip();
+          if ((!new_ship.fromSerialized(version, serialized_ship)) || !new_ship.pilot) {
+            ships_with_unmet_dependencies.push([new_ship, serialized_ship]);
+          }
+        }
+      }
+      for (_j = 0, _len1 = ships_with_unmet_dependencies.length; _j < _len1; _j++) {
+        ship = ships_with_unmet_dependencies[_j];
+        if (!ship[0].pilot) {
+          ship[0] = this.addShip();
+        }
+        ship[0].fromSerialized(version, ship[1]);
+      }
+    }
+  }
+  this.suppress_automatic_new_ship = false;
+  pilot_splitter = 'X';
+  upgrade_splitter = 'W';
+  _ref3 = serialized.split(pilot_splitter), pilot_id = _ref3[0], upgrade_ids = _ref3[1], conferredaddon_pairs = _ref3[2];
+  upgrade_ids = upgrade_ids.split(upgrade_splitter);
+  this.setPilotById(parseInt(pilot_id), true);
+  for (_ = _k = 1; _k < 3; _ = ++_k) {
+    upgradeloop: //;
+    for (i = _l = _ref4 = upgrade_ids.length - 1; _ref4 <= -1 ? _l < -1 : _l > -1; i = _ref4 <= -1 ? ++_l : --_l) {
+      upgrade_id = upgrade_ids[i];
+      upgrade = exportObj.upgradesById[upgrade_id];
+      if (upgrade == null) {
+        upgrade_ids.splice(i, 1);
+        if (upgrade_id !== "") {
+          console.log("Unknown upgrade id " + upgrade_id + " could not be added. Please report that error");
+          everythingadded = false;
+        }
+        continue;
+      }
+      _ref5 = this.upgrades;
+      for (_m = 0, _len2 = _ref5.length; _m < _len2; _m++) {
+        upgrade_selection = _ref5[_m];
+        if ((upgrade_selection != null ? (_ref6 = upgrade_selection.data) != null ? _ref6.name : void 0 : void 0) === upgrade.name) {
+          upgrade_ids.splice(i, 1);
+          continue upgradeloop;
+        }
+      }
+      _ref7 = this.upgrades;
+      for (_n = 0, _len3 = _ref7.length; _n < _len3; _n++) {
+        upgrade_selection = _ref7[_n];
+        if (exportObj.slotsMatching(upgrade.slot, upgrade_selection.slot) && !upgrade_selection.isOccupied()) {
+          upgrade_selection.setById(upgrade_id);
+          if (upgrade_selection.lastSetValid) {
+            upgrade_ids.splice(i, 1);
+          }
+          break;
+        }
+      }
+    }
+  }
+  xws = {
+    description: "List generated by yasb.app URL",
+    faction: this.getParameterByName('f'),
+    name: (_ref8 = this.getParameterByName('sn')) != null ? _ref8 : "",
+    pilots: [],
+    points: desired_points,
+    vendor: {
+      yasb: {
+        builder: 'YASB - X-Wing 2.5',
+        builder_url: window.location.href.split('?')[0],
+        link: this.getPermaLink()
+      }
+    },
+    version: '06/15/2022'
+  };
+  _ref9 = this.ships;
+  for (_o = 0, _len4 = _ref9.length; _o < _len4; _o++) {
+    ship = _ref9[_o];
+    if (ship.pilot != null) {
+      xwsship = {
+        id: (_ref10 = ship.pilot.xws) != null ? _ref10 : ship.pilot.canonical_name,
+        name: (_ref11 = ship.pilot.xws) != null ? _ref11 : ship.pilot.canonical_name,
+        points: ship.getPoints(),
+        ship: ship.data.name.canonicalize()
+      };
+      upgrade_obj = {};
+      _ref12 = ship.upgrades;
+      for (_p = 0, _len5 = _ref12.length; _p < _len5; _p++) {
+        upgrade = _ref12[_p];
+        if ((upgrade != null ? upgrade.data : void 0) != null) {
+          upgrade.toXWS;
+          (upgrade_obj[_name = (_ref14 = exportObj.toXWSUpgrade[this.data.slot]) != null ? _ref14 : this.data.slot.canonicalize()] != null ? upgrade_obj[_name] : upgrade_obj[_name] = []).push((_ref13 = this.data.xws) != null ? _ref13 : this.data.canonical_name);
+        }
+      }
+      if (Object.keys(upgrade_obj).length > 0) {
+        xwsship.upgrades = upgrade_obj;
+      }
+      xwsship.pilots.push = xws;
+    }
+  }
+  return xwsship;
+};
+
 if (exportObj.codeToLanguage == null) {
   exportObj.codeToLanguage = {};
 }
@@ -20053,6 +20184,10 @@ exportObj.cardLoaders.English = function() {
       display_name: "“Pops” Krail (BoY)",
       text: "While you perform a %SINGLETURRETARC% attack, you may reroll up to 2 attack dice."
     },
+    '"Dutch" Vander (BoY)': {
+      display_name: "“Dutch” Vander (BoY)",
+      text: "After you spend a %LOCK%, you may choose 1 friendly ship at range 1-3. That ship may acquire a lock on the defender."
+    },
     "Dex Tiree (BoY)": {
       display_name: "Dex Tiree (BoY)",
       text: "While you defend, if there is at least 1 other friendly ship at range 0-1, you may roll 1 additional defense die."
@@ -20062,7 +20197,7 @@ exportObj.cardLoaders.English = function() {
       text: "While you perform an attack, you may spend 1 %CHARGE% to roll 1 additional attack die.%LINEBREAK%After defending, lose 1 %CHARGE%."
     },
     '"Dark Curse" (BoY)': {
-      display_name: "“Dark Curse (BoY)”",
+      display_name: "“Dark Curse” (BoY)",
       text: "While you defend, the attacker's dice cannot be modified."
     },
     "Darth Vader (BoY)": {
@@ -20103,7 +20238,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Obi-Wan Kenobi (SoC)": {
       display_name: "Obi-Wan Kenobi (SoC)",
-      text: " "
+      text: "After you or a friendly <b>Anakin Skywalker</b> at range 0-3 executes a maneuver, if there are more enemy ships than other friendly ships at range 0-1 of that ship, you may spend 1 %FORCE%. If you do, that ship may perform a %BOOST% action."
     },
     "Shaak Ti (SoC)": {
       display_name: "Shaak Ti (SoC)",
@@ -21890,6 +22025,10 @@ exportObj.cardLoaders.English = function() {
       display_name: "Precise Astromech",
       text: "After you perform an action, you may spend 1 %CHARGE% to perform a red %LOCK% action."
     },
+    "Targeting Astromech (BoY)": {
+      display_name: "Targeting Astromech",
+      text: "After you perform a %LOCK% action, you may perform a red %ROTATEARC% action."
+    },
     "Dorsal Turret (BoY)": {
       display_name: "Dorsal Turret",
       text: "<strong>Attack</strong>"
@@ -21913,6 +22052,10 @@ exportObj.cardLoaders.English = function() {
     "Strut-Lock Override (SoC)": {
       display_name: "Strut-Lock Override",
       text: "At the start of your activation, you may spend 1 %CHARGE%. If you do, ignore obstacles while you move through them this round."
+    },
+    "R4-P17 (SoC)": {
+      display_name: "R4-P17",
+      text: "When you would be dealt a damage card, if you are not defending, you may spend 1 %CHARGE% and gain 1 strain to discard it instead."
     },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
