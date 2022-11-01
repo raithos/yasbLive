@@ -7157,7 +7157,7 @@ Ship = (function() {
                   }
                 }
               }
-              if (same_ship) {
+              if (same_ship && (_this.pilot.upgrades == null)) {
                 for (_ = _l = 1; _l <= 2; _ = ++_l) {
                   delayed_upgrades = {};
                   _ref4 = _this.upgrades;
