@@ -7468,6 +7468,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 5,
+        charge: 1,
+        recurring: 1,
         points: 20,
         slots: ["Modification"]
       }, {
@@ -7485,8 +7487,10 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Rebel Alliance",
         ship: "RZ-1 A-wing",
-        skill: 5,
+        skill: 3,
         points: 20,
+        force: 1,
+        forcerecurring: 0,
         slots: ["Modification"]
       }, {
         name: '"Pops" Krail',
@@ -7494,7 +7498,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Rebel Alliance",
         ship: "BTL-A4 Y-wing",
-        skill: 5,
+        skill: 3,
         points: 20,
         slots: ["Modification"]
       }, {
@@ -20318,7 +20322,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Wes Janson": {
       display_name: "Wes Janson",
-      text: "  "
+      text: "After you perform an attack, you may spend 1 %CHARGE% to assign the defender 1 jam token. %LINEBREAK% After you defend, you may spend 1 %CHARGE% to assign the attacker 1 jam token."
     },
     "Tycho Celchu": {
       display_name: "Tycho Celchu",
@@ -20326,11 +20330,11 @@ exportObj.cardLoaders.English = function() {
     },
     "Keo Venzee": {
       display_name: "Keo Venzee",
-      text: "  "
+      text: "If you have no active %FORCE%, after you reveal a bank [%BANKLEFT% or %BANKRIGHT%] or turn [%TURNLEFT% or %TURNRIGHT%] maneuver, you may increase the difficulty of the maneuver. If yo udo, perform that maneuver as a sideslip and recover 1 %FORCE%."
     },
     '"Pops" Krail': {
       display_name: "“Pops” Krail",
-      text: "  "
+      text: "After you fully execute a white maneuver, you may choose a friendly ship at range 0-1. If you do, it may perform a %FOCUS% action."
     },
     "Flight Leader Ubbel": {
       display_name: "Flight Leader Ubbel",
