@@ -8874,6 +8874,7 @@ GenericAddon = (function() {
               return __iced_k();
             }
           })(function() {
+            var _ref2;
             _this.data = _this.unadjusted_data = new_data;
             if (_this.data != null) {
               if (_this.data.superseded_by_id) {
@@ -8882,9 +8883,11 @@ GenericAddon = (function() {
               if (_this.adjustment_func != null) {
                 _this.data = _this.adjustment_func(_this.data);
               }
-              _this.unequipOtherUpgrades();
-              _this.occupyOtherUpgrades();
-              _this.conferAddons();
+              if (((_ref2 = _this.ship.pilot) != null ? _ref2.upgrades : void 0) == null) {
+                _this.unequipOtherUpgrades();
+                _this.occupyOtherUpgrades();
+                _this.conferAddons();
+              }
               if ((_this.data.standardized != null) && !_this.ship.hasFixedUpgrades) {
                 _this.addToStandardizedList();
               }
@@ -9037,7 +9040,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7221
+            lineno: 7222
           }));
         }
         __iced_deferrals._fulfill();
