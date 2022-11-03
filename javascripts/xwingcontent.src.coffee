@@ -12578,6 +12578,7 @@ exportObj.basicCardData = ->
             ship: "T-65 X-wing"
             skill: 5
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12592,6 +12593,7 @@ exportObj.basicCardData = ->
             charge: 1
             recurring: 1
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12604,6 +12606,7 @@ exportObj.basicCardData = ->
             ship: "RZ-1 A-wing"
             skill: 5
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12618,6 +12621,7 @@ exportObj.basicCardData = ->
             points: 20
             force: 1
             forcerecurring: 0
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12630,6 +12634,7 @@ exportObj.basicCardData = ->
             ship: "BTL-A4 Y-wing"
             skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12642,6 +12647,7 @@ exportObj.basicCardData = ->
             ship: "TIE/rb Heavy"
             skill: 5
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12654,6 +12660,7 @@ exportObj.basicCardData = ->
             ship: "TIE Advanced x1"
             skill: 5
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12667,6 +12674,7 @@ exportObj.basicCardData = ->
             skill: 4
             force: 2
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12677,8 +12685,9 @@ exportObj.basicCardData = ->
             unique: true
             faction: "Galactic Empire"
             ship: "TIE/ln Fighter"
-            skill: 5
+            skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12689,8 +12698,9 @@ exportObj.basicCardData = ->
             unique: true
             faction: "Galactic Empire"
             ship: "TIE/ln Fighter"
-            skill: 5
+            skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12707,6 +12717,7 @@ exportObj.basicCardData = ->
             charge: 2
             recurring: 1
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12720,6 +12731,7 @@ exportObj.basicCardData = ->
             ship: "Scavenged YT-1300"
             skill: 5
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12732,6 +12744,7 @@ exportObj.basicCardData = ->
             ship: "T-70 X-wing"
             skill: 4
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
                 "HardpointShip"
@@ -12745,6 +12758,7 @@ exportObj.basicCardData = ->
             ship: "T-70 X-wing"
             skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
                 "HardpointShip"
@@ -12758,6 +12772,7 @@ exportObj.basicCardData = ->
             ship: "Resistance Transport"
             skill: 5
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12770,6 +12785,7 @@ exportObj.basicCardData = ->
             ship: "Firespray-class Patrol Craft"
             skill: 1
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12782,6 +12798,7 @@ exportObj.basicCardData = ->
             ship: "Fang Fighter"
             skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12794,6 +12811,7 @@ exportObj.basicCardData = ->
             ship: "Rogue-class Starfighter"
             skill: 1
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12806,6 +12824,7 @@ exportObj.basicCardData = ->
             ship: "YV-666 Light Freighter"
             skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12818,6 +12837,7 @@ exportObj.basicCardData = ->
             ship: "Modified TIE/ln Fighter"
             skill: 1
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12830,6 +12850,7 @@ exportObj.basicCardData = ->
             ship: "Droid Tri-fighter"
             skill: 5
             points: 20
+            loadout: 99
             chassis: "Modified for Organics"
             slots: [
                 "Modification"
@@ -12853,6 +12874,7 @@ exportObj.basicCardData = ->
             ship: "Firespray-class Patrol Craft"
             skill: 4
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12866,6 +12888,7 @@ exportObj.basicCardData = ->
             ship: "Rogue-class Starfighter"
             skill: 1
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12878,6 +12901,7 @@ exportObj.basicCardData = ->
             ship: "Vulture-class Droid Fighter"
             skill: 1
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12889,6 +12913,7 @@ exportObj.basicCardData = ->
             ship: "Droid Tri-fighter"
             skill: 1
             points: 20
+            loadout: 99
             chassis: "Modified for Organics"
             slots: [
                 "Modification"
@@ -12912,6 +12937,7 @@ exportObj.basicCardData = ->
             ship: "Delta-7 Aethersprite"
             skill: 5
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12926,6 +12952,7 @@ exportObj.basicCardData = ->
             ship: "Delta-7b Aethersprite"
             skill: 5
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12938,6 +12965,7 @@ exportObj.basicCardData = ->
             ship: "LAAT/i Gunship"
             skill: 2
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12951,6 +12979,7 @@ exportObj.basicCardData = ->
             skill: 4
             force: 2
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12963,6 +12992,7 @@ exportObj.basicCardData = ->
             ship: "V-19 Torrent Starfighter"
             skill: 4
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12975,6 +13005,7 @@ exportObj.basicCardData = ->
             ship: "Naboo Royal N-1 Starfighter"
             skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12987,6 +13018,7 @@ exportObj.basicCardData = ->
             ship: "TIE/fo Fighter"
             skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -12999,6 +13031,7 @@ exportObj.basicCardData = ->
             ship: "TIE/se Bomber"
             skill: 4
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -13011,6 +13044,7 @@ exportObj.basicCardData = ->
             ship: "TIE/fo Fighter"
             skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -13023,6 +13057,7 @@ exportObj.basicCardData = ->
             ship: "TIE/fo Fighter"
             skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -13035,6 +13070,7 @@ exportObj.basicCardData = ->
             ship: "Xi-class Light Shuttle"
             skill: 3
             points: 20
+            loadout: 99
             slots: [
                 "Modification"
             ]
@@ -28622,7 +28658,7 @@ exportObj.cardLoaders.English = () ->
            text: """After you fully execute a white maneuver, you may choose a friendly ship at range 0-1. If you do, it may perform a %FOCUS% action."""
         "Flight Leader Ubbel":
            display_name: """Flight Leader Ubbel"""
-           text: """  """
+           text: """After a friendly ship at range 0-2 defends, if it was dealt a damage card, you may perform a bonus attack against the attacker."""
         "Juno Eclipse":
            display_name: """Juno Eclipse"""
            text: """After you perform an action, you may perform a red %BOOST% action."""
@@ -28631,10 +28667,10 @@ exportObj.cardLoaders.English = () ->
            text: """While you perform an attack, after the Neutralize Results step, if the attack hit, you may spend 2 %FORCE%. If you do, change all of your %HIT% results to %CRIT% results."""
         "Magna Tolvan":
            display_name: """Magna Tolvan"""
-           text: """  """
+           text: """While you have 2 or fewer stress tokens, you can perform white actions, even while stressed. %LINEBREAK% After you gain a stress token, you may perform a white action, if able."""
         "Yrica Quell":
            display_name: """Yrica Quell"""
-           text: """  """
+           text: """After you fully execute a maneuver, you may acquire a lock on an enemy ship in your %BULLSEYEARC%."""
         "Poe Dameron (YT-1300)":
            display_name: """Poe Dameron"""
            text: """Before you execute a maneuver, you may spend 1 %CHARGE%. If you do, ignore obstacles during that maneuver.%LINEBREAK% After you fully execute a maneuver, you may spend 2 %CHARGE% to perform a white %BOOST% or red %BARRELROLL% action. Then if you performed a red %BARRELROLL% action, expose 1 damage card, if able."""
@@ -41314,6 +41350,290 @@ exportObj.manifestByExpansion =
         }
         {
             name: 'Sigma 7 (BoY)'
+            type: 'pilot'
+            count: 1
+        }
+    ]
+    "Siege of Coruscant Battle Pack": [
+        {
+            name: 'Anakin Skywalker (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Obi-Wan Kenobi (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Shaak Ti (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Odd Ball" (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Wolffe" (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Jag" (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Contrail" (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Klick" (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Kickback" (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Axe" (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Count Dooku (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'DBS-32C (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'DBS-404 (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Baktoid Prototype (SoC)'
+            type: 'pilot'
+            count: 2
+        }
+        {
+            name: 'DIS-347 (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'DIS-T81 (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Phlac-Arphocc Prototype (SoC)'
+            type: 'pilot'
+            count: 2
+        }
+        {
+            name: 'DFS-081 (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'DFS-311 (SoC)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Haor Chall Prototype (SoC)'
+            type: 'pilot'
+            count: 2
+        }
+    ]
+    "Hotshots and Aces II Reinforcements Pack": [
+        {
+            name: 'Corran Horn (X-Wing)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Wes Janson'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Tycho Celchu'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Keo Venzee'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Pops" Krail'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Flight Leader Ubbel'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Juno Eclipse'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Second Sister'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Magna Tolvan'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Yrica Quell'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Poe Dameron (YT-1300)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Lando Calrissian (Resistance)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Venisa Doza'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Zay Versio'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Taka Jamoreesa'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Hondo Ohnaka'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Tor Phun'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Durge'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Doctor Aphra'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Lapin'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Volan Das'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Aurra Sing'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Durge (Separatist)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'The Iron Assembler'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Kelrodo-Ai Holdout'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Adi Gallia'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Adi Gallia (Delta-7B)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Sicko"'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Kit Fisto'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Slammer"'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Gavyn Sykes'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Lieutenant Galek'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Jul Jerjerrod'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'DT-798'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Lin Gaava'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Agent Tierny'
             type: 'pilot'
             count: 1
         }
