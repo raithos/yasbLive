@@ -20289,7 +20289,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Obi-Wan Kenobi (SoC)": {
       display_name: "Obi-Wan Kenobi (SoC)",
-      text: "After you or a friendly <b>Anakin Skywalker</b> at range 0-3 executes a maneuver, if there are more enemy ships than other friendly ships at range 0-1 of that ship, you may spend 1 %FORCE%. If you do, that ship may perform a %BOOST% action."
+      text: "After you or a friendly <b>Anakin Skywalker</b> at range 0-3 fully executes a maneuver, if there are more enemy ships than other friendly ships at range 0-1 of that ship, you may spend 1 %FORCE%. If you do, that ship may perform a %BOOST% action."
     },
     "Shaak Ti (SoC)": {
       display_name: "Shaak Ti (SoC)",
