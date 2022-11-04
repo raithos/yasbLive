@@ -12422,7 +12422,7 @@ exportObj.basicCardData = ->
             id: 584
             faction: "Separatist Alliance"
             ship: "Sith Infiltrator"
-            skill: 3
+            skill: 5
             points: 6
             force: 3
             keyword: ["Dark Side"]
@@ -12537,9 +12537,13 @@ exportObj.basicCardData = ->
             faction: "Separatist Alliance"
             ship: "Vulture-class Droid Fighter"
             skill: 3
+            charge: 2
             points: 2
             chassis: "Networked Calculations"
             upgrades: [
+                "Discord Missiles"
+                "Contingency Protocol (SoC)"
+                "Strut-Lock Override (SoC)"
             ]
         }
         {
@@ -12554,6 +12558,9 @@ exportObj.basicCardData = ->
             points: 3
             chassis: "Networked Calculations"
             upgrades: [
+                "Discord Missiles"
+                "Contingency Protocol (SoC)"
+                "Strut-Lock Override (SoC)"
             ]
         }
         {
@@ -12567,6 +12574,9 @@ exportObj.basicCardData = ->
             points: 2
             chassis: "Networked Calculations"
             upgrades: [
+                "Ion Missiles"
+                "Contingency Protocol (SoC)"
+                "Strut-Lock Override (SoC)"
             ]
         }
         {
@@ -28632,13 +28642,13 @@ exportObj.cardLoaders.English = () ->
            text: """  """
         "DFS-081 (SoC)":
            display_name: """DFS-081 (SoC)"""
-           text: """  """
+           text: """While defending, you may spend 1 %CHARGE% and 1 calculate token to cancel 1 %CRIT% result."""
         "DFS-311 (SoC)":
            display_name: """DFS-311 (SoC)"""
-           text: """  """
+           text: """At the start of the Engagement Phase, you may transfer 1 of your calculate tokens to another friendly ship at range 0-3."""
         "Haor Chall Prototype (SoC)":
            display_name: """Haor Chall Prototype (SoC)"""
-           text: """  """
+           text: """After an enemy ship in your %BULLSEYEARC% declares a scenario feature another friendly ship as the defender, you may perform a %CALCULATE% or %LOCK% action."""
 
         # Hotshots and Aces 2
         "Corran Horn (X-Wing)":

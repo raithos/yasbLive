@@ -7341,7 +7341,7 @@ exportObj.basicCardData = function() {
         id: 584,
         faction: "Separatist Alliance",
         ship: "Sith Infiltrator",
-        skill: 3,
+        skill: 5,
         points: 6,
         force: 3,
         keyword: ["Dark Side"],
@@ -7428,9 +7428,10 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 3,
+        charge: 2,
         points: 2,
         chassis: "Networked Calculations",
-        upgrades: []
+        upgrades: ["Discord Missiles", "Contingency Protocol (SoC)", "Strut-Lock Override (SoC)"]
       }, {
         name: "DFS-311 (SoC)",
         canonical_name: 'DFS-311'.canonicalize(),
@@ -7442,7 +7443,7 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         chassis: "Networked Calculations",
-        upgrades: []
+        upgrades: ["Discord Missiles", "Contingency Protocol (SoC)", "Strut-Lock Override (SoC)"]
       }, {
         name: "Haor Chall Prototype (SoC)",
         canonical_name: 'Haor Chall Prototype'.canonicalize(),
@@ -7453,7 +7454,7 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 2,
         chassis: "Networked Calculations",
-        upgrades: []
+        upgrades: ["Ion Missiles", "Contingency Protocol (SoC)", "Strut-Lock Override (SoC)"]
       }, {
         name: "Corran Horn (X-Wing)",
         id: 594,
@@ -20352,15 +20353,15 @@ exportObj.cardLoaders.English = function() {
     },
     "DFS-081 (SoC)": {
       display_name: "DFS-081 (SoC)",
-      text: "  "
+      text: "While defending, you may spend 1 %CHARGE% and 1 calculate token to cancel 1 %CRIT% result."
     },
     "DFS-311 (SoC)": {
       display_name: "DFS-311 (SoC)",
-      text: "  "
+      text: "At the start of the Engagement Phase, you may transfer 1 of your calculate tokens to another friendly ship at range 0-3."
     },
     "Haor Chall Prototype (SoC)": {
       display_name: "Haor Chall Prototype (SoC)",
-      text: "  "
+      text: "After an enemy ship in your %BULLSEYEARC% declares a scenario feature another friendly ship as the defender, you may perform a %CALCULATE% or %LOCK% action."
     },
     "Corran Horn (X-Wing)": {
       display_name: "Corran Horn",
