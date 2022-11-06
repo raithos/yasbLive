@@ -7257,6 +7257,9 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         chassis: "Born for This",
+        ship_override: {
+          shields: 4
+        },
         upgrades: ["Selfless", "Veteran Tail Gunner", "R4-P Astromech"]
       }, {
         name: '"Wolffe" (SoC)',
@@ -7308,6 +7311,9 @@ exportObj.basicCardData = function() {
         charge: 1,
         recurring: 1,
         chassis: "Born for This",
+        ship_override: {
+          shields: 3
+        },
         upgrades: ["R3 Astromech", "Precision Ion Engines", 'Alpha-3E "Esk"']
       }, {
         name: '"Kickback" (SoC)',
@@ -7317,9 +7323,12 @@ exportObj.basicCardData = function() {
         id: 582,
         faction: "Galactic Republic",
         ship: "V-19 Torrent Starfighter",
-        skill: 4,
+        skill: 5,
         points: 3,
         chassis: "Born for This",
+        ship_override: {
+          hull: 6
+        },
         upgrades: ["Diamond-Boron Missiles", "Munitions Failsafe"]
       }, {
         name: '"Axe" (SoC)',
@@ -7332,6 +7341,9 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         chassis: "Born for This",
+        ship_override: {
+          hull: 6
+        },
         upgrades: ["Deadeye Shot", "Barrage Rockets"]
       }, {
         name: "Count Dooku (SoC)",
