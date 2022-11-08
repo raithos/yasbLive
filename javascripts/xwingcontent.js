@@ -6952,6 +6952,7 @@ exportObj.basicCardData = function() {
         ship: "T-65 X-wing",
         skill: 5,
         points: 6,
+        force: 2,
         chassis: "Hope",
         upgrades: ["Instinctive Aim", "Attack Speed (BoY)", "Proton Torpedoes", "R2-D2 (BoY)"]
       }, {
