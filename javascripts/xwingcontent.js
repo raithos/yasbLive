@@ -7655,7 +7655,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Scum and Villainy",
         ship: "Rogue-class Starfighter",
-        skill: 1,
+        skill: 5,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7668,6 +7668,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 20,
         loadout: 99,
+        charge: 3,
         slots: ["Modification"]
       }, {
         name: "Lapin",
@@ -7675,7 +7676,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Scum and Villainy",
         ship: "Modified TIE/ln Fighter",
-        skill: 1,
+        skill: 2,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -20446,15 +20447,15 @@ exportObj.cardLoaders.English = function() {
     },
     "Durge": {
       display_name: "Durge",
-      text: "  "
+      text: "While you defend, after the Neutralize Results step, if there are more %HIT%/%CRIT% results than your active %SHIELD%, you may change 1 %HIT% result to a %CRIT% and cancel 1 %HIT% result."
     },
     "Doctor Aphra": {
       display_name: "Doctor Aphra",
-      text: "  "
+      text: "Before you engage, you may spend 1 green token and 1 %CHARGE%. If you do, you may choose another ship at range 0-1 that is not stressed. The chosen ship gains 1 stress token."
     },
     "Lapin": {
       display_name: "Lapin",
-      text: "  "
+      text: "While you defend or perform an attack, if the enemy ship is stressed, that ship's dice cannot be modified."
     },
     "Volan Das": {
       display_name: "Volan Das",
