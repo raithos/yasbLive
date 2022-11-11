@@ -6479,7 +6479,7 @@ exportObj.SquadBuilder = (function() {
           link: this.getPermaLink()
         }
       },
-      version: '06/15/2022'
+      version: '10/28/2022'
     };
     _ref = this.ships;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {

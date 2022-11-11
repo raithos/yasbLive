@@ -7746,6 +7746,7 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         skill: 5,
         points: 20,
+        force: 2,
         loadout: 99,
         slots: ["Modification"]
       }, {
@@ -7757,6 +7758,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "Delta-7b Aethersprite",
         skill: 5,
+        force: 2,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7767,9 +7769,12 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "LAAT/i Gunship",
         skill: 2,
+        charge: 2,
+        recurring: 1,
         points: 20,
         loadout: 99,
-        slots: ["Modification"]
+        slots: ["Modification"],
+        applies_condition: 'Sickening Maneuver'.canonicalize()
       }, {
         name: "Kit Fisto",
         id: 622,
@@ -7787,7 +7792,9 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Galactic Republic",
         ship: "V-19 Torrent Starfighter",
-        skill: 4,
+        skill: 1,
+        charge: 2,
+        recurring: 1,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -12571,6 +12578,9 @@ exportObj.basicCardData = function() {
       }, {
         name: 'Guarded',
         id: 40
+      }, {
+        name: 'Sickening Maneuver',
+        id: 41
       }
     ],
     chassisById: [
@@ -17955,7 +17965,7 @@ String.prototype.serialtoxws = function() {
         link: this.getPermaLink()
       }
     },
-    version: '06/15/2022'
+    version: '10/28/2022'
   };
   _ref9 = this.ships;
   for (_o = 0, _len4 = _ref9.length; _o < _len4; _o++) {
@@ -20515,7 +20525,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Slammer"': {
       display_name: "“Slammer”",
-      text: "  "
+      text: "After you fully execute a maneuver, you may spend 2 %CHARGE% to peform a %SLAM% action, even while stressed."
     },
     "Gavyn Sykes": {
       display_name: "Gavyn Sykes",
@@ -22527,6 +22537,9 @@ exportObj.cardLoaders.English = function() {
     },
     'Guarded': {
       text: 'While you defend, if you are not in the attacker\'s %BULLSEYEARC%, roll 1 additional defense die for each friendly calculating or evading <b>MagnaGuard Protector</b> in the attack arc.'
+    },
+    'Sickening Maneuver': {
+      text: 'You can execute red maneuvers even while stressed. %LINEBREAK% After you reveal a bank [%BANKLEFT% or %BANKRIGHT%] or turn [%TURNLEFT% or %TURNRIGHT%] maneuver, you <b>must</b> gain 1 strain and execute the maneuver as a slideslip.%LINEBREAK% After you reveal a straight [%STRAIGHT%] maneuver, you must execute that maneuver as a red koiogran turn [%KTURN%]. %LINEBREAK% After you execute a maneuver, remove this condition.'
     }
   };
   chassis_translations = {
