@@ -7394,7 +7394,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Hyena-class Droid Bomber",
         skill: 1,
-        points: 20,
+        points: 3,
         chassis: "Networked Calculations",
         upgrades: []
       }, {
@@ -7596,6 +7596,8 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "Scavenged YT-1300",
         skill: 5,
+        charge: 3,
+        recurring: 1,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7625,7 +7627,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Resistance",
         ship: "Resistance Transport",
-        skill: 5,
+        skill: 2,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7701,6 +7703,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Firespray-class Patrol Craft",
         skill: 4,
+        force: 1,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7712,6 +7715,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Rogue-class Starfighter",
         skill: 1,
+        charge: 1,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7722,6 +7726,7 @@ exportObj.basicCardData = function() {
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
         skill: 1,
+        charge: 3,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7730,13 +7735,14 @@ exportObj.basicCardData = function() {
         id: 618,
         faction: "Separatist Alliance",
         ship: "Droid Tri-fighter",
-        skill: 1,
+        skill: 2,
         points: 20,
+        max_per_squad: 3,
         loadout: 99,
         chassis: "Modified for Organics",
         slots: ["Modification"],
         ship_override: {
-          actions: ["Focus", "Evade", "Lock", "Barrel Roll", "R-> Evade", "Boost", "R-> Focus"]
+          actions: ["Calculate", "Lock", "Barrel Roll", "R-> Focus"]
         }
       }, {
         name: "Adi Gallia",
@@ -7814,7 +7820,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "First Order",
         ship: "TIE/fo Fighter",
-        skill: 3,
+        skill: 5,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7825,6 +7831,7 @@ exportObj.basicCardData = function() {
         faction: "First Order",
         ship: "TIE/se Bomber",
         skill: 4,
+        charge: 3,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7834,7 +7841,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "First Order",
         ship: "TIE/fo Fighter",
-        skill: 3,
+        skill: 4,
         points: 20,
         loadout: 99,
         slots: ["Modification"]
@@ -7847,7 +7854,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 20,
         loadout: 99,
-        slots: ["Modification"]
+        slots: ["Modification"],
+        applies_condition: 'Primed For Speed'.canonicalize()
       }, {
         name: "Agent Tierny",
         id: 629,
@@ -7857,7 +7865,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 20,
         loadout: 99,
-        slots: ["Modification"]
+        slots: ["Modification"],
+        applies_condition: 'Broken Trust'.canonicalize()
       }
     ],
     upgradesById: [
@@ -12581,6 +12590,12 @@ exportObj.basicCardData = function() {
       }, {
         name: 'Sickening Maneuver',
         id: 41
+      }, {
+        name: 'Primed For Speed',
+        id: 42
+      }, {
+        name: 'Broken Trust',
+        id: 43
       }
     ],
     chassisById: [
@@ -20433,11 +20448,11 @@ exportObj.cardLoaders.English = function() {
     },
     "Lando Calrissian (Resistance)": {
       display_name: "Lando Calrissian",
-      text: "  "
+      text: "After you fully execute a red maneuver or perform a red action, you may spend any number of %CHARGE% to choose that many friendly ships at range 0-2. The chosen ships may perform an action, even while stressed."
     },
     "Venisa Doza": {
       display_name: "Venisa Doza",
-      text: "  "
+      text: "While you perform a %TORPEDO% or %MISSILE% attack, you may treat the %FRONTARC% requirement as %REARARC% for that attack. If you do, treat the range requirement as 1-2."
     },
     "Zay Versio": {
       display_name: "Zay Versio",
@@ -20445,7 +20460,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Taka Jamoreesa": {
       display_name: "Taka Jamoreesa",
-      text: "  "
+      text: "After you jam, you <b>must</b> assign 1 jam token to another ship at range 0-1 of the jammed ship, if able."
     },
     "Hondo Ohnaka": {
       display_name: "Hondo Ohnaka",
@@ -20473,35 +20488,35 @@ exportObj.cardLoaders.English = function() {
     },
     "Aurra Sing": {
       display_name: "Aurra Sing",
-      text: "  "
+      text: "Before you engage, you may spend 1 %FORCE% to choose 2 enemy ships at range 0-1. Transfer any number of orange and red tokens between those two ships."
     },
     "Durge (Separatist)": {
       display_name: "Durge",
-      text: "  "
+      text: "WHen you would be destroyed, you may spend 1 %CHARGE% to reveal all of your facedown damage cards. If you do, discard each <strong>Direct Hit!</strong> and each of your damage cards with the <strong>Pilot</strong> trait, then repair all of your faceup damage cards."
     },
     "The Iron Assembler": {
       display_name: "The Iron Assembler",
-      text: "  "
+      text: "After a friendly ship at range 0-1 skips its execute maneuver step, you may spend 1 %CHARGE%. If you do, if there is an asteroid or debris cloud at range 0 of it, that ship may repair 1 damage."
     },
     "Kelrodo-Ai Holdout": {
       display_name: "Kelrodo-Ai Holdout",
-      text: "  "
+      text: "After you are destroyed, you may transfer each of your locks and green tokens to another friendly Kelrodo-Ai Holdout at range 0-3"
     },
     "Lieutenant Galek": {
       display_name: "Lieutenant Galek",
-      text: "  "
+      text: "After another friendly ship at range 0-2 is destroyed, you may perform a %COORDINATE% action, even while stressed. While you coordinate, the ship you choose can perform an action only if that action is also on your action bar."
     },
     "Jul Jerjerrod": {
       display_name: "Jul Jerjerrod",
-      text: "  "
+      text: "After you perform a %BOOST% action, you may spend 1 %CHARGE% to remove 1 non-lock red or orange token."
     },
     "DT-798": {
       display_name: "DT-798",
-      text: "  "
+      text: "While you perform a primary attack, if you are not strained, you may gain 1 strain token to roll 1 additional die."
     },
     "Lin Gaava": {
       display_name: "Lin Gaava",
-      text: "  "
+      text: "<strong>Setup:</strong> After placing forces, assign the <strong>Primed for Speed</strong> condition to yourself and up to 2 other friendly TIE/fo or TIE/sf Fighters that have no equipped %MODIFICATION% upgrades."
     },
     "Agent Tierny": {
       display_name: "Agent Tierny",
@@ -22540,6 +22555,12 @@ exportObj.cardLoaders.English = function() {
     },
     'Sickening Maneuver': {
       text: 'You can execute red maneuvers even while stressed. %LINEBREAK% After you reveal a bank [%BANKLEFT% or %BANKRIGHT%] or turn [%TURNLEFT% or %TURNRIGHT%] maneuver, you <b>must</b> gain 1 strain and execute the maneuver as a slideslip.%LINEBREAK% After you reveal a straight [%STRAIGHT%] maneuver, you must execute that maneuver as a red koiogran turn [%KTURN%]. %LINEBREAK% After you execute a maneuver, remove this condition.'
+    },
+    'Primed For Speed': {
+      text: 'Add a white %SLAM% action to your action bar. %LINEBREAK% After you perform a %SLAM%, you must suffer 1 %HIT% damage to remove 1 disarm token.'
+    },
+    'Broken Trust': {
+      text: 'Treat friendly ships as allied.%LINEBREAK% Non-enemy ships treat you as allied.%LINEBREAK% While performing an attack, before declaring the defender, each allied ship in the attack arc that is not stressed gains 1 stress token. After you defend or perform an attack, if the defender was dealt at least 1 faceup damage card, or was destroyed, remove this condition.'
     }
   };
   chassis_translations = {
