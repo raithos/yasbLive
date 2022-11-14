@@ -17245,6 +17245,62 @@ exportObj.basicCardData = function() {
         ship: "Gauntlet Fighter",
         threat: 2,
         upgrades: ["Outmaneuver", "Veteran Tail Gunner", "Concussion Bombs", "Hull Upgrade"]
+      }, {
+        id: 621,
+        faction: "Rebel Alliance",
+        pilot: "Fenn Rau (Rebel Fang)",
+        ship: "Fang Fighter",
+        threat: 3,
+        upgrades: ["Clan Training", "Ion Torpedoes", "Afterburners"]
+      }, {
+        id: 622,
+        faction: "Rebel Alliance",
+        pilot: "Clan Wren Volunteer",
+        ship: "Fang Fighter",
+        threat: 2,
+        upgrades: ["Predator"]
+      }, {
+        id: 623,
+        faction: "Rebel Alliance",
+        pilot: "Bodica Venj",
+        ship: "Fang Fighter",
+        threat: 3,
+        upgrades: ["Outmaneuver", "Beskar Reinforced Plating", "Mandalorian Optics"]
+      }, {
+        id: 624,
+        faction: "Rebel Alliance",
+        pilot: "Dirk Ullodin",
+        ship: "Fang Fighter",
+        threat: 3,
+        upgrades: ["Clan Training", "Proton Torpedoes", "Hull Upgrade", "Mandalorian Optics"]
+      }, {
+        id: 625,
+        faction: "Galactic Empire",
+        pilot: "Moff Gideon",
+        ship: "TIE/ln Fighter",
+        threat: 2,
+        upgrades: ["Deadeye Shot", "Outmaneuver", "Overtuned Modulators", "Hull Upgrade"]
+      }, {
+        id: 626,
+        faction: "Galactic Empire",
+        pilot: "ISB Jingoist",
+        ship: "TIE/ln Fighter",
+        threat: 2,
+        upgrades: ["Ion Limiter Override", "False Transponder Codes", "Afterburners", "Shield Upgrade"]
+      }, {
+        id: 627,
+        faction: "Scum and Villainy",
+        pilot: "Mandalorian Royal Guard",
+        ship: "Fang Fighter",
+        threat: 2,
+        upgrades: ["Afterburners", "Beskar Reinforced Plating"]
+      }, {
+        id: 628,
+        faction: "Scum and Villainy",
+        pilot: "Mandalorian Royal Guard",
+        ship: "Fang Fighter",
+        threat: 2,
+        upgrades: ["Clan Training", "Mandalorian Optics"]
       }
     ]
   };
@@ -20400,7 +20456,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Haor Chall Prototype (SoC)": {
       display_name: "Haor Chall Prototype (SoC)",
-      text: "After an enemy ship in your %BULLSEYEARC% declares a scenario feature another friendly ship as the defender, you may perform a %CALCULATE% or %LOCK% action."
+      text: "After an enemy ship in your %BULLSEYEARC% declares a scenario feature or another friendly ship as the defender, you may perform a %CALCULATE% or %LOCK% action."
     },
     "Corran Horn (X-Wing)": {
       display_name: "Corran Horn",
