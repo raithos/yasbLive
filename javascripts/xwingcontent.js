@@ -4175,7 +4175,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Modified TIE/ln Fighter",
         skill: 2,
-        loadout: 6,
+        loadout: 7,
         charge: 1,
         recurring: 1,
         points: 3,
