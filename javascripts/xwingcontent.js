@@ -7883,6 +7883,7 @@ exportObj.basicCardData = function() {
         id: 0,
         slot: "Astromech",
         canonical_name: '"Chopper"'.canonicalize(),
+        xws: "chopper",
         points: 2,
         unique: true,
         faction: "Rebel Alliance"
@@ -11809,6 +11810,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Bo-Katan Kryze (Republic/Separatist)",
         canonical_name: 'Bo-Katan Kryze'.canonicalize(),
+        xws: "bokatankryze",
         id: 425,
         points: 6,
         slot: "Crew",
