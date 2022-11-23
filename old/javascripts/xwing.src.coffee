@@ -3556,7 +3556,7 @@ class exportObj.SquadBuilder
 
             # Version number
             @printable_container.find('.fancy-under-header').append $.trim """
-                <div class="version">Points Version: 06/15/2022</div>
+                <div class="version">Points Version: 10/28/2022</div>
             """
                     
             # Notes, if present
@@ -5526,7 +5526,7 @@ class exportObj.SquadBuilder
                     builder: 'YASB - X-Wing 2.5'
                     builder_url: window.location.href.split('?')[0]
                     link: @getPermaLink()
-            version: '06/15/2022'
+            version: '10/28/2022'
             # there is no point to have this version identifier, if we never actually increase it, right?
 
         for ship in @ships
@@ -5965,7 +5965,7 @@ class Ship
                         for upgrade in @upgrades
                             if exportObj.slotsMatching(upgrade.slot, auto_equip_upgrade.slot)
                                 upgrade.setData auto_equip_upgrade
-                if same_ship
+                if same_ship and not @pilot.upgrades?
                     # two cycles, in case an old upgrade is adding slots that are required for other old upgrades
                     for _ in [1..2]
                         delayed_upgrades = {}
@@ -6907,7 +6907,7 @@ class Ship
         if upgrade_data.standardized?
             for ship in @builder.ships
                 if ship?.data? and ship.data.name == @data.name
-                    if upgrade_data.restrictions? and ship.restriction_check(upgrade_data.restrictions?, upgrade_data)
+                    if upgrade_data.restrictions? and ship.restriction_check(upgrade_data.restrictions?, upgrade_data) and not (ship.pilot?.upgrades?)
                         slotfree = false
                         for upgrade in ship.upgrades
                             if upgrade_data.slot == upgrade.slot and not upgrade.data?
@@ -6970,9 +6970,10 @@ class Ship
 
         upgrade_obj = {}
 
-        for upgrade in @upgrades
-            if upgrade?.data?
-                upgrade.toXWS upgrade_obj
+        if not @pilot.upgrades
+            for upgrade in @upgrades
+                if upgrade?.data?
+                    upgrade.toXWS upgrade_obj
 
         if Object.keys(upgrade_obj).length > 0
             xws.upgrades = upgrade_obj
@@ -7141,9 +7142,10 @@ class GenericAddon
                     return @setById @data.superseded_by_id
                 if @adjustment_func?
                     @data = @adjustment_func(@data)
-                @unequipOtherUpgrades()
-                @occupyOtherUpgrades()
-                @conferAddons()
+                if not @ship.pilot?.upgrades?
+                    @unequipOtherUpgrades()
+                    @occupyOtherUpgrades()
+                    @conferAddons()
                 if @data.standardized? and not @ship.hasFixedUpgrades
                     @addToStandardizedList()
             else

@@ -3830,7 +3830,7 @@ exportObj.SquadBuilder = (function() {
         if (_this.isEpic) {
           _this.printable_container.find('.squad-name').append(" <i class=\"xwing-miniatures-font xwing-miniatures-font-energy\"></i>");
         }
-        _this.printable_container.find('.fancy-under-header').append($.trim("<div class=\"version\">Points Version: 06/15/2022</div>"));
+        _this.printable_container.find('.fancy-under-header').append($.trim("<div class=\"version\">Points Version: 10/28/2022</div>"));
         if ($.trim(_this.notes.val()) !== '') {
           _this.printable_container.find('.printable-body').append($.trim("<h5 class=\"print-notes translated\" defaultText=\"Notes:\"></h5>\n<pre class=\"print-notes\"></pre>"));
           _this.printable_container.find('.printable-body pre.print-notes').text(_this.notes.val());
@@ -6479,7 +6479,7 @@ exportObj.SquadBuilder = (function() {
           link: this.getPermaLink()
         }
       },
-      version: '06/15/2022'
+      version: '10/28/2022'
     };
     _ref = this.ships;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -7157,7 +7157,7 @@ Ship = (function() {
                   }
                 }
               }
-              if (same_ship) {
+              if (same_ship && (_this.pilot.upgrades == null)) {
                 for (_ = _l = 1; _l <= 2; _ = ++_l) {
                   delayed_upgrades = {};
                   _ref4 = _this.upgrades;
@@ -8442,17 +8442,17 @@ Ship = (function() {
   };
 
   Ship.prototype.standardized_check = function(upgrade_data) {
-    var ship, slotfree, upgrade, _i, _j, _len, _len1, _ref, _ref1;
+    var ship, slotfree, upgrade, _i, _j, _len, _len1, _ref, _ref1, _ref2;
     if (upgrade_data.standardized != null) {
       _ref = this.builder.ships;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         ship = _ref[_i];
         if (((ship != null ? ship.data : void 0) != null) && ship.data.name === this.data.name) {
-          if ((upgrade_data.restrictions != null) && ship.restriction_check(upgrade_data.restrictions != null, upgrade_data)) {
+          if ((upgrade_data.restrictions != null) && ship.restriction_check(upgrade_data.restrictions != null, upgrade_data) && !(((_ref1 = ship.pilot) != null ? _ref1.upgrades : void 0) != null)) {
             slotfree = false;
-            _ref1 = ship.upgrades;
-            for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-              upgrade = _ref1[_j];
+            _ref2 = ship.upgrades;
+            for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
+              upgrade = _ref2[_j];
               if (upgrade_data.slot === upgrade.slot && (upgrade.data == null)) {
                 slotfree = true;
               }
@@ -8572,11 +8572,13 @@ Ship = (function() {
       xws.multisection = this.data.multisection.slice(0);
     }
     upgrade_obj = {};
-    _ref2 = this.upgrades;
-    for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
-      upgrade = _ref2[_i];
-      if ((upgrade != null ? upgrade.data : void 0) != null) {
-        upgrade.toXWS(upgrade_obj);
+    if (!this.pilot.upgrades) {
+      _ref2 = this.upgrades;
+      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+        upgrade = _ref2[_i];
+        if ((upgrade != null ? upgrade.data : void 0) != null) {
+          upgrade.toXWS(upgrade_obj);
+        }
       }
     }
     if (Object.keys(upgrade_obj).length > 0) {
@@ -8672,7 +8674,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7029
+                lineno: 7030
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8831,7 +8833,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7123
+                  lineno: 7124
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8858,7 +8860,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7130
+                      lineno: 7131
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -8872,6 +8874,7 @@ GenericAddon = (function() {
               return __iced_k();
             }
           })(function() {
+            var _ref2;
             _this.data = _this.unadjusted_data = new_data;
             if (_this.data != null) {
               if (_this.data.superseded_by_id) {
@@ -8880,9 +8883,11 @@ GenericAddon = (function() {
               if (_this.adjustment_func != null) {
                 _this.data = _this.adjustment_func(_this.data);
               }
-              _this.unequipOtherUpgrades();
-              _this.occupyOtherUpgrades();
-              _this.conferAddons();
+              if (((_ref2 = _this.ship.pilot) != null ? _ref2.upgrades : void 0) == null) {
+                _this.unequipOtherUpgrades();
+                _this.occupyOtherUpgrades();
+                _this.conferAddons();
+              }
               if ((_this.data.standardized != null) && !_this.ship.hasFixedUpgrades) {
                 _this.addToStandardizedList();
               }
@@ -9035,7 +9040,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7220
+            lineno: 7222
           }));
         }
         __iced_deferrals._fulfill();
