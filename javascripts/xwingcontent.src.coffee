@@ -13067,7 +13067,7 @@ exportObj.basicCardData = ->
             name: "Kelrodo-Ai Holdout"
             id: 618
             faction: "Separatist Alliance"
-            ship: "Vulture-class Droid Fighter"
+            ship: "Droid Tri-fighter"
             skill: 2
             max_per_squad: 3
             points: 2
@@ -27319,7 +27319,7 @@ exportObj.translations.English =
         "Intro Card YASB": """
                     <h2>YASB for X-Wing 2.5</h2>
                     <p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a>.</p>
-                    <p>Current Version: 10/28/2022</p>
+                    <p>Current Version: 11/25/2022</p>
                     <h5>Credits</h5>
                     <p>Built upon the amazing original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
                     <p>YASB is updated and maintained by Stephen Kim.</p>
