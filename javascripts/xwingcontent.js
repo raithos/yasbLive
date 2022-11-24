@@ -7715,7 +7715,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Separatist Alliance",
         ship: "Rogue-class Starfighter",
-        skill: 1,
+        skill: 5,
         charge: 1,
         points: 4,
         loadout: 10,
