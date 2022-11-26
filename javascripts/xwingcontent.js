@@ -18359,7 +18359,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Arvel Crynyd": {
       display_name: "Arvel Crynyd",
-      text: "If you would fail a %BOOST% action by overlapping another ship, you may resolve it as though you were partially executing a maneuver instead. While you perform an attack at attack range 0, treat it as an attack at attack range 1.\"  %LINEBREAK%<i>Errata (since rules reference 1.4): Changed the second portion of the ability.</i>"
+      text: "If you would fail a %BOOST% action by overlapping another ship, you may resolve it as though you were partially executing a maneuver instead. While you perform an attack at attack range 0, treat it as an attack at attack range 1. %LINEBREAK%<i>Errata (since rules reference 1.4): Changed the second portion of the ability.</i>"
     },
     "Asajj Ventress": {
       display_name: "Asajj Ventress",
@@ -20347,7 +20347,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Dutch" Vander (BoY)': {
       display_name: "“Dutch” Vander (BoY)",
-      text: "After you spend a lock during an attack, choose a friendly ship at range 1-3. The chosen ship may acquire a lock on the defender.<i>Errata (since rules reference 1.4.4): Corrected pilot ability and adjusted initiative value</i>"
+      text: "After you spend a lock during an attack, choose a friendly ship at range 1-3. The chosen ship may acquire a lock on the defender. %LINEBREAK% <i>Errata (since rules reference 1.4.4): Corrected pilot ability and adjusted initiative value</i>"
     },
     "Dex Tiree (BoY)": {
       display_name: "Dex Tiree (BoY)",
@@ -20487,7 +20487,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Keo Venzee": {
       display_name: "Keo Venzee",
-      text: "If you have no active %FORCE%, after you reveal a bank [%BANKLEFT% or %BANKRIGHT%] or turn [%TURNLEFT% or %TURNRIGHT%] maneuver, you may increase the difficulty of the maneuver. If yo udo, perform that maneuver as a sideslip and recover 1 %FORCE%."
+      text: "If you have no active %FORCE%, after you reveal a bank [%BANKLEFT% or %BANKRIGHT%] or turn [%TURNLEFT% or %TURNRIGHT%] maneuver, you may increase the difficulty of the maneuver. If you do, perform that maneuver as a sideslip and recover 1 %FORCE%."
     },
     '"Pops" Krail': {
       display_name: "“Pops” Krail",
