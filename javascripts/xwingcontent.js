@@ -7677,7 +7677,7 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Scum and Villainy",
         ship: "Modified TIE/ln Fighter",
-        skill: 2,
+        skill: 3,
         points: 3,
         loadout: 7,
         slots: ["Talent", "Cannon", "Modification", "Modification"]
@@ -7738,7 +7738,7 @@ exportObj.basicCardData = function() {
         id: 618,
         faction: "Separatist Alliance",
         ship: "Vulture-class Droid Fighter",
-        skill: 2,
+        skill: 1,
         max_per_squad: 3,
         points: 2,
         loadout: 7,
@@ -7874,6 +7874,9 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 15,
         slots: ["Talent", "Talent", "Tech", "Crew", "Crew", "Modification", "Modification"],
+        ship_override: {
+          actions: ["Focus", "Lock", "R-Coordinate", "Jam"]
+        },
         applies_condition: 'Broken Trust'.canonicalize()
       }
     ],
