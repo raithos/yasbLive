@@ -6440,10 +6440,10 @@ exportObj.SquadBuilder = (function() {
           upgrade = _ref4[_j];
           if (upgrade.data != null) {
             upgrade_is_available = this.collection.use('upgrade', upgrade.data.name);
-            if (!upgrade_is_available) {
+            if (!(upgrade_is_available && (upgrade.data.standard == null))) {
               validity = false;
             }
-            if (!upgrade_is_available) {
+            if (!(upgrade_is_available && (upgrade.data.standard == null))) {
               missingStuff.push(upgrade.data);
             }
           }

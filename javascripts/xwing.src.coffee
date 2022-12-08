@@ -5503,8 +5503,8 @@ class exportObj.SquadBuilder
                     if upgrade.data?
                         upgrade_is_available = @collection.use('upgrade', upgrade.data.name)
                         # console.log "#{@faction}: Upgrade #{upgrade.data.name} available: #{upgrade_is_available}"
-                        validity = false unless upgrade_is_available
-                        missingStuff.push upgrade.data unless upgrade_is_available
+                        validity = false unless upgrade_is_available and not upgrade.data.standard?
+                        missingStuff.push upgrade.data unless upgrade_is_available and not upgrade.data.standard?
         [validity, missingStuff]
 
     checkCollection: ->
