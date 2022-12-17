@@ -20566,7 +20566,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Durge (Separatist)": {
       display_name: "Durge",
-      text: "WHen you would be destroyed, you may spend 1 %CHARGE% to reveal all of your facedown damage cards. If you do, discard each <strong>Direct Hit!</strong> and each of your damage cards with the <strong>Pilot</strong> trait, then repair all of your faceup damage cards."
+      text: "When you would be destroyed, you may spend 1 %CHARGE% to reveal all of your facedown damage cards. If you do, discard each <strong>Direct Hit!</strong> and each of your damage cards with the <strong>Pilot</strong> trait, then repair all of your faceup damage cards."
     },
     "The Iron Assembler": {
       display_name: "The Iron Assembler",
@@ -22017,7 +22017,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Satine Kryze": {
       display_name: "Satine Kryze",
-      text: "At the start of the Engagement Phase, you may spend 2 %CHARGE%. If you do, each friendly ship may choose to gain 1 deplete token and 1 focus tokken or to gain 1 disarm token and 1 evade token."
+      text: "At the start of the Engagement Phase, you may spend 2 %CHARGE%. If you do, each friendly ship may choose to gain 1 deplete token and 1 focus token or to gain 1 disarm token and 1 evade token."
     },
     "Savage Opress": {
       display_name: "Savage Opress",

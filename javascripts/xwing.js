@@ -3755,7 +3755,7 @@ exportObj.SquadBuilder = (function() {
     })(this));
     this.print_list_button.click((function(_this) {
       return function(e) {
-        var container, expanded_hull_and_shield, faction, obstaclelist, obstaclename, obstacles, query, ship, text, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref, _ref1, _ref2, _ref3;
+        var container, expanded_hull_and_shield, faction, obstaclelist, obstaclename, obstacles, query, sectiontext, ship, text, triggertext, upgrade, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _len6, _m, _n, _o, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
         e.preventDefault();
         _this.printable_container.find('.printable-header').html(_this.list_modal.find('.modal-header').html());
         _this.printable_container.find('.printable-body').text('');
@@ -3850,9 +3850,10 @@ exportObj.SquadBuilder = (function() {
         }
         query = _this.getPermaLinkParams(['sn', 'obs']);
         if ((query != null) && _this.list_modal.find('.toggle-juggler-qrcode').prop('checked')) {
-          _this.printable_container.find('.printable-body').append($.trim("<div class=\"qrcode-container\">\n    <div class=\"permalink-container\">\n        <div class=\"qrcode\"></div>\n        <div class=\"qrcode-text translated\" defaultText=\"Scan QR-Code\"></div>\n    </div>\n    <div class=\"juggler-container\">\n        <div class=\"qrcode\"></div>\n        <div class=\"qrcode-text translated\" defaultText=\"List Juggler QR-Code\"></div>\n    </div>\n</div>"));
-          text = "https://yasb-xws.herokuapp.com/juggler" + query;
-          _this.printable_container.find('.juggler-container .qrcode').qrcode({
+          _this.printable_container.find('.printable-body').append($.trim("<div class=\"qrcode-container\">\n    <div class=\"permalink-container\">\n        <div class=\"qrcode\">YASB Link</div>\n        <div class=\"qrcode-text translated\" defaultText=\"Scan QR-Code\"></div>\n    </div>\n    <div class=\"xws-container\">\n        <div class=\"qrcode\">XWS Data</div>\n        <div class=\"qrcode-text translated\" defaultText=\"XWS QR-Code\"></div>\n    </div>\n</div>"));
+          text = JSON.stringify(_this.toXWS());
+          console.log("" + text);
+          _this.printable_container.find('.xws-container .qrcode').qrcode({
             render: 'div',
             ec: 'M',
             size: text.length < 144 ? 144 : 160,
@@ -3865,6 +3866,22 @@ exportObj.SquadBuilder = (function() {
             size: text.length < 144 ? 144 : 160,
             text: text
           });
+        }
+        triggertext = "while you perform";
+        sectiontext = "";
+        _ref4 = _this.ships;
+        for (_n = 0, _len5 = _ref4.length; _n < _len5; _n++) {
+          ship = _ref4[_n];
+          if ((((_ref5 = ship.pilot) != null ? _ref5.text : void 0) != null) && (ship.pilot.text.match(triggertext) > -1)) {
+            sectiontext = sectiontext + ("" + ship.pilot.name + " <br><br>");
+          }
+          _ref6 = ship.upgrades;
+          for (_o = 0, _len6 = _ref6.length; _o < _len6; _o++) {
+            upgrade = _ref6[_o];
+            if ((upgrade.text != null) && (upgrade.text.match(triggertext) > -1)) {
+              sectiontext = sectiontext + ("" + upgrade.name + " <br><br>");
+            }
+          }
         }
         return window.print();
       };
@@ -4432,7 +4449,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4063
+              lineno: 4075
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4442,7 +4459,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4064
+                lineno: 4076
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -6741,7 +6758,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5735
+                  lineno: 5747
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -6970,7 +6987,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 5857
+                          lineno: 5869
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -7020,7 +7037,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 5890
+                                  lineno: 5902
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7129,7 +7146,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 5957
+                      lineno: 5969
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7212,7 +7229,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 5993
+                lineno: 6005
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7305,7 +7322,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6037
+              lineno: 6049
             }));
           }
         }
@@ -7393,7 +7410,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6092
+                lineno: 6104
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8676,7 +8693,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7032
+                lineno: 7044
               })
             ]);
             __iced_deferrals._fulfill();
@@ -8835,7 +8852,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7126
+                  lineno: 7138
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -8862,7 +8879,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7133
+                      lineno: 7145
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9042,7 +9059,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7224
+            lineno: 7236
           }));
         }
         __iced_deferrals._fulfill();
