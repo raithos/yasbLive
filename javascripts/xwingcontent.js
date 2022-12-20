@@ -7371,6 +7371,7 @@ exportObj.basicCardData = function() {
         ship: "Hyena-class Droid Bomber",
         skill: 3,
         points: 3,
+        charge: 2,
         ship_override: {
           actions: ["Calculate", "Lock", "Barrel Roll", "R-> Lock", "R-Jam"]
         },
