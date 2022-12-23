@@ -13428,7 +13428,7 @@ String.prototype.ParseParameter = function(name) {
 };
 
 String.prototype.serialtoxws = function() {
-  var conferredaddon_pairs, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, slot, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7;
+  var desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, slot, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7;
   xws = {
     description: "",
     faction: this.ParseParameter('f').canonicalize(),
@@ -13473,41 +13473,40 @@ String.prototype.serialtoxws = function() {
         serialized_ship = _ref2[_i];
         pilot_splitter = 'X';
         upgrade_splitter = 'W';
-        _ref3 = serialized_ship.split(pilot_splitter), pilot_id = _ref3[0], upgrade_ids = _ref3[1], conferredaddon_pairs = _ref3[2];
+        _ref3 = serialized_ship.split(pilot_splitter), pilot_id = _ref3[0], upgrade_ids = _ref3[1];
         pilot_data = exportObj.pilotsById[pilot_id];
-        if (pilot_data == null) {
-          return "error: unknown pilot (" + pilot_id + ")";
-        }
-        pilot_xws = {
-          id: (_ref4 = pilot_data.xws) != null ? _ref4 : pilot_data.canonical_name,
-          name: (_ref5 = pilot_data.xws) != null ? _ref5 : pilot_data.canonical_name,
-          points: pilot_data.points,
-          ship: pilot_data.ship.canonicalize(),
-          upgrades: []
-        };
-        if (pilot_data.upgrades == null) {
-          upgrade_ids = upgrade_ids.split(upgrade_splitter);
-          upgrade_obj = {};
-          for (i = _j = _ref6 = upgrade_ids.length - 1; _ref6 <= -1 ? _j < -1 : _j > -1; i = _ref6 <= -1 ? ++_j : --_j) {
-            upgrade_id = upgrade_ids[i];
-            upgrade_data = exportObj.upgradesById[upgrade_id];
-            if (upgrade_data) {
-              switch (upgrade_data.slot) {
-                case 'Force':
-                  slot = 'force-power';
-                  break;
-                case 'Tactical Relay':
-                  slot = 'tactical-relay';
-                  break;
-                default:
-                  slot = upgrade_data.slot.canonicalize();
+        if (pilot_data) {
+          pilot_xws = {
+            id: (_ref4 = pilot_data.xws) != null ? _ref4 : pilot_data.canonical_name,
+            name: (_ref5 = pilot_data.xws) != null ? _ref5 : pilot_data.canonical_name,
+            points: pilot_data.points,
+            ship: pilot_data.ship.canonicalize(),
+            upgrades: []
+          };
+          if (pilot_data.upgrades == null) {
+            upgrade_ids = upgrade_ids.split(upgrade_splitter);
+            upgrade_obj = {};
+            for (i = _j = _ref6 = upgrade_ids.length - 1; _ref6 <= -1 ? _j < -1 : _j > -1; i = _ref6 <= -1 ? ++_j : --_j) {
+              upgrade_id = upgrade_ids[i];
+              upgrade_data = exportObj.upgradesById[upgrade_id];
+              if (upgrade_data) {
+                switch (upgrade_data.slot) {
+                  case 'Force':
+                    slot = 'force-power';
+                    break;
+                  case 'Tactical Relay':
+                    slot = 'tactical-relay';
+                    break;
+                  default:
+                    slot = upgrade_data.slot.canonicalize();
+                }
+                (upgrade_obj[slot] != null ? upgrade_obj[slot] : upgrade_obj[slot] = []).push((_ref7 = upgrade_data.xws) != null ? _ref7 : upgrade_data.canonical_name);
               }
-              (upgrade_obj[slot] != null ? upgrade_obj[slot] : upgrade_obj[slot] = []).push((_ref7 = upgrade_data.xws) != null ? _ref7 : upgrade_data.canonical_name);
             }
+            pilot_xws.upgrades = upgrade_obj;
           }
-          pilot_xws.upgrades = upgrade_obj;
+          xws.pilots.push(pilot_xws);
         }
-        xws.pilots.push(pilot_xws);
       }
     }
   } else {
