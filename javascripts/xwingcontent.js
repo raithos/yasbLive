@@ -13439,7 +13439,7 @@ String.prototype.serialtoxws = function() {
       yasb: {
         builder: 'YASB - X-Wing 2.5',
         builder_url: "https://yasb.app",
-        link: "https://yasb.app/" + this
+        link: "https://yasb.app/index.html" + this
       }
     },
     version: '11/25/2022'
