@@ -13428,10 +13428,10 @@ String.prototype.ParseParameter = function(name) {
 };
 
 String.prototype.serialtoxws = function() {
-  var conferredaddon_pairs, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _len, _name, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7;
+  var conferredaddon_pairs, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, slot, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7;
   xws = {
     description: "",
-    faction: this.ParseParameter('f'),
+    faction: this.ParseParameter('f').canonicalize(),
     name: this.ParseParameter('sn'),
     pilots: [],
     points: 20,
@@ -13439,7 +13439,7 @@ String.prototype.serialtoxws = function() {
       yasb: {
         builder: 'YASB - X-Wing 2.5',
         builder_url: "https://yasb.app",
-        link: this
+        link: "https://yasb.app/" + this
       }
     },
     version: '11/25/2022'
@@ -13491,13 +13491,22 @@ String.prototype.serialtoxws = function() {
           for (i = _j = _ref6 = upgrade_ids.length - 1; _ref6 <= -1 ? _j < -1 : _j > -1; i = _ref6 <= -1 ? ++_j : --_j) {
             upgrade_id = upgrade_ids[i];
             upgrade_data = exportObj.upgradesById[upgrade_id];
-            if (upgrade_data == null) {
-              return "error: unknown upgrade (" + upgrade_id + ")";
+            if (upgrade_data) {
+              switch (upgrade_data.slot) {
+                case 'Force':
+                  slot = 'force-power';
+                  break;
+                case 'Tactical Relay':
+                  slot = 'tactical-relay';
+                  break;
+                default:
+                  slot = upgrade_data.slot.canonicalize();
+              }
+              (upgrade_obj[slot] != null ? upgrade_obj[slot] : upgrade_obj[slot] = []).push((_ref7 = upgrade_data.xws) != null ? _ref7 : upgrade_data.canonical_name);
             }
-            (upgrade_obj[_name = upgrade_data.slot.canonicalize()] != null ? upgrade_obj[_name] : upgrade_obj[_name] = []).push((_ref7 = upgrade_data.xws) != null ? _ref7 : upgrade_data.canonical_name);
           }
+          pilot_xws.upgrades = upgrade_obj;
         }
-        pilot_xws.upgrades = upgrade_obj;
         xws.pilots.push(pilot_xws);
       }
     }
