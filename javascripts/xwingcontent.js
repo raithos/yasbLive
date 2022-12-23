@@ -13494,6 +13494,19 @@ String.prototype.serialtoxws = function() {
   return JSON.stringify(xws);
 };
 
+$.getParameterByName = function(name) {
+  var regex, regexS, results;
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  regexS = "[\\?&]" + name + "=([^&#]*)";
+  regex = new RegExp(regexS);
+  results = regex.exec(window.location.search);
+  if (results === null) {
+    return "";
+  } else {
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+};
+
 /*
 //@ sourceMappingURL=xwingcontent.js.map
 */
