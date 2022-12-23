@@ -13428,7 +13428,7 @@ String.prototype.ParseParameter = function(name) {
 };
 
 String.prototype.serialtoxws = function() {
-  var conferredaddon_pairs, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, upgrade_data, upgrade_id, upgrade_ids, upgrade_splitter, version, xws, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
+  var conferredaddon_pairs, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, upgrade_data, upgrade_id, upgrade_ids, upgrade_splitter, version, xws, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7;
   xws = {
     description: "",
     faction: this.ParseParameter('f'),
@@ -13451,9 +13451,7 @@ String.prototype.serialtoxws = function() {
     version = parseInt(matches[1]);
     ship_splitter = 'Y';
     _ref = matches[2].split('Z'), g = _ref[0], p = _ref[1], s = _ref[2];
-    game_type_abbrev = g;
-    desired_points = parseInt(p);
-    serialized_ships = s;
+    _ref1 = [g, parseInt(p), s], game_type_abbrev = _ref1[0], desired_points = _ref1[1], serialized_ships = _ref1[2];
     switch (game_type_abbrev) {
       case 's':
         gamemode = 'extended';
@@ -13470,32 +13468,32 @@ String.prototype.serialtoxws = function() {
       return "error: serialization read failed";
     }
     if (serialized_ships.length != null) {
-      _ref1 = serialized_ships.split(ship_splitter);
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        serialized_ship = _ref1[_i];
+      _ref2 = serialized_ships.split(ship_splitter);
+      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+        serialized_ship = _ref2[_i];
         pilot_splitter = 'X';
         upgrade_splitter = 'W';
-        _ref2 = serialized.split(pilot_splitter), pilot_id = _ref2[0], upgrade_ids = _ref2[1], conferredaddon_pairs = _ref2[2];
+        _ref3 = serialized.split(pilot_splitter), pilot_id = _ref3[0], upgrade_ids = _ref3[1], conferredaddon_pairs = _ref3[2];
         pilot_data = exportObj.pilotsById[pilot_id];
         if (pilot_data == null) {
           return "error: unknown pilot (" + pilot_id + ")";
         }
         pilot_xws = {
-          id: (_ref3 = pilot_data.xws) != null ? _ref3 : pilot_data.canonical_name,
-          name: (_ref4 = pilot_data.xws) != null ? _ref4 : pilot_data.canonical_name,
+          id: (_ref4 = pilot_data.xws) != null ? _ref4 : pilot_data.canonical_name,
+          name: (_ref5 = pilot_data.xws) != null ? _ref5 : pilot_data.canonical_name,
           points: pilot_data.points,
           ship: pilot_data.canonicalize(),
           upgrades: []
         };
         if (pilot_data.upgrades == null) {
           upgrade_ids = upgrade_ids.split(upgrade_splitter);
-          for (i = _j = _ref5 = upgrade_ids.length - 1; _ref5 <= -1 ? _j < -1 : _j > -1; i = _ref5 <= -1 ? ++_j : --_j) {
+          for (i = _j = _ref6 = upgrade_ids.length - 1; _ref6 <= -1 ? _j < -1 : _j > -1; i = _ref6 <= -1 ? ++_j : --_j) {
             upgrade_id = upgrade_ids[i];
             upgrade_data = exportObj.upgradesById[upgrade_id];
             if (upgrade_data == null) {
               return "error: unknown upgrade (" + upgrade_id + ")";
             }
-            pilot_xws.upgrades[upgrade_data.slot].push((_ref6 = upgrade_data.xws) != null ? _ref6 : upgrade_data.canonical_name);
+            pilot_xws.upgrades[upgrade_data.slot].push((_ref7 = upgrade_data.xws) != null ? _ref7 : upgrade_data.canonical_name);
           }
         }
         xws.pilot.push(pilot_xws);
