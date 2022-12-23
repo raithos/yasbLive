@@ -17,8 +17,101 @@ exportObj.isReleased = function(data) {
   return false;
 };
 
+$.ParseParameter = function(name) {
+  var regex, regexS, results;
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  regexS = "[\\?&]" + name + "=([^&#]*)";
+  regex = new RegExp(regexS);
+  results = regex.exec(window.location.search);
+  if (results === null) {
+    return "";
+  } else {
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+};
+
 String.prototype.canonicalize = function() {
   return this.toLowerCase().replace(/[^a-z0-9]/g, '').replace(/\s+/g, '-');
+};
+
+String.prototype.serialtoxws = function() {
+  var conferredaddon_pairs, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, upgrade_data, upgrade_id, upgrade_ids, upgrade_splitter, version, xws, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
+  xws = {
+    description: "",
+    faction: this.ParseParameter('f'),
+    name: this.ParseParameter('sn'),
+    pilots: [],
+    points: 20,
+    vendor: {
+      yasb: {
+        builder: 'YASB - X-Wing 2.5',
+        builder_url: "https://yasb.app",
+        link: this
+      }
+    },
+    version: '11/25/2022'
+  };
+  serialized = this.ParseParameter('d');
+  re = __indexOf.call(serialized, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
+  matches = re.exec(serialized);
+  if (matches != null) {
+    version = parseInt(matches[1]);
+    ship_splitter = 'Y';
+    _ref = matches[2].split('Z'), g = _ref[0], p = _ref[1], s = _ref[2];
+    game_type_abbrev = g;
+    desired_points = parseInt(p);
+    serialized_ships = s;
+    switch (game_type_abbrev) {
+      case 's':
+        gamemode = 'extended';
+        break;
+      case 'h':
+        gamemode = 'standard';
+        break;
+      case 'e':
+        return "error: game mode not supported";
+      case 'q':
+        return "error: game mode not supported";
+    }
+    if (serialized_ships == null) {
+      return "error: serialization read failed";
+    }
+    if (serialized_ships.length != null) {
+      _ref1 = serialized_ships.split(ship_splitter);
+      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+        serialized_ship = _ref1[_i];
+        pilot_splitter = 'X';
+        upgrade_splitter = 'W';
+        _ref2 = serialized.split(pilot_splitter), pilot_id = _ref2[0], upgrade_ids = _ref2[1], conferredaddon_pairs = _ref2[2];
+        pilot_data = exportObj.pilotsById[pilot_id];
+        if (pilot_data == null) {
+          return "error: unknown pilot (" + pilot_id + ")";
+        }
+        pilot_xws = {
+          id: (_ref3 = pilot_data.xws) != null ? _ref3 : pilot_data.canonical_name,
+          name: (_ref4 = pilot_data.xws) != null ? _ref4 : pilot_data.canonical_name,
+          points: pilot_data.points,
+          ship: pilot_data.canonicalize(),
+          upgrades: []
+        };
+        if (pilot_data.upgrades == null) {
+          upgrade_ids = upgrade_ids.split(upgrade_splitter);
+          for (i = _j = _ref5 = upgrade_ids.length - 1; _ref5 <= -1 ? _j < -1 : _j > -1; i = _ref5 <= -1 ? ++_j : --_j) {
+            upgrade_id = upgrade_ids[i];
+            upgrade_data = exportObj.upgradesById[upgrade_id];
+            if (upgrade_data == null) {
+              return "error: unknown upgrade (" + upgrade_id + ")";
+            }
+            pilot_xws.upgrades[upgrade_data.slot].push((_ref6 = upgrade_data.xws) != null ? _ref6 : upgrade_data.canonical_name);
+          }
+        }
+        xws.pilot.push(pilot_xws);
+      }
+    }
+  } else {
+    return "error: could not read URL";
+  }
+  return JSON.stringify(xws);
 };
 
 exportObj.basicCardData = function() {
@@ -13412,99 +13505,6 @@ exportObj.standardCheckBrowser = function(data, faction, type) {
   } else {
     return _ref4 = data.name, __indexOf.call(exportObj.standardUpgradeExclusions, _ref4) < 0;
   }
-};
-
-$.ParseParameter = function(name) {
-  var regex, regexS, results;
-  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-  regexS = "[\\?&]" + name + "=([^&#]*)";
-  regex = new RegExp(regexS);
-  results = regex.exec(window.location.search);
-  if (results === null) {
-    return "";
-  } else {
-    return decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-};
-
-String.prototype.serialtoxws = function() {
-  var conferredaddon_pairs, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, upgrade_data, upgrade_id, upgrade_ids, upgrade_splitter, version, xws, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
-  xws = {
-    description: "",
-    faction: this.ParseParameter('f'),
-    name: this.ParseParameter('sn'),
-    pilots: [],
-    points: 20,
-    vendor: {
-      yasb: {
-        builder: 'YASB - X-Wing 2.5',
-        builder_url: "https://yasb.app",
-        link: this
-      }
-    },
-    version: '11/25/2022'
-  };
-  serialized = this.ParseParameter('d');
-  re = __indexOf.call(serialized, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
-  matches = re.exec(serialized);
-  if (matches != null) {
-    version = parseInt(matches[1]);
-    ship_splitter = 'Y';
-    _ref = matches[2].split('Z'), g = _ref[0], p = _ref[1], s = _ref[2];
-    game_type_abbrev = g;
-    desired_points = parseInt(p);
-    serialized_ships = s;
-    switch (game_type_abbrev) {
-      case 's':
-        gamemode = 'extended';
-        break;
-      case 'h':
-        gamemode = 'standard';
-        break;
-      case 'e':
-        return "error: game mode not supported";
-      case 'q':
-        return "error: game mode not supported";
-    }
-    if (serialized_ships == null) {
-      return "error: serialization read failed";
-    }
-    if (serialized_ships.length != null) {
-      _ref1 = serialized_ships.split(ship_splitter);
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        serialized_ship = _ref1[_i];
-        pilot_splitter = 'X';
-        upgrade_splitter = 'W';
-        _ref2 = serialized.split(pilot_splitter), pilot_id = _ref2[0], upgrade_ids = _ref2[1], conferredaddon_pairs = _ref2[2];
-        pilot_data = exportObj.pilotsById[pilot_id];
-        if (pilot_data == null) {
-          return "error: unknown pilot (" + pilot_id + ")";
-        }
-        pilot_xws = {
-          id: (_ref3 = pilot_data.xws) != null ? _ref3 : pilot_data.canonical_name,
-          name: (_ref4 = pilot_data.xws) != null ? _ref4 : pilot_data.canonical_name,
-          points: pilot_data.points,
-          ship: pilot_data.canonicalize(),
-          upgrades: []
-        };
-        if (pilot_data.upgrades == null) {
-          upgrade_ids = upgrade_ids.split(upgrade_splitter);
-          for (i = _j = _ref5 = upgrade_ids.length - 1; _ref5 <= -1 ? _j < -1 : _j > -1; i = _ref5 <= -1 ? ++_j : --_j) {
-            upgrade_id = upgrade_ids[i];
-            upgrade_data = exportObj.upgradesById[upgrade_id];
-            if (upgrade_data == null) {
-              return "error: unknown upgrade (" + upgrade_id + ")";
-            }
-            pilot_xws.upgrades[upgrade_data.slot].push((_ref6 = upgrade_data.xws) != null ? _ref6 : upgrade_data.canonical_name);
-          }
-        }
-        xws.pilot.push(pilot_xws);
-      }
-    }
-  } else {
-    return "error: could not read URL";
-  }
-  return JSON.stringify(xws);
 };
 
 /*
