@@ -13428,7 +13428,7 @@ String.prototype.ParseParameter = function(name) {
 };
 
 String.prototype.serialtoxws = function() {
-  var desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, slot, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7;
+  var card_data, card_pilots, cards_upgrades, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, slot, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _k, _l, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
   xws = {
     description: "",
     faction: this.ParseParameter('f').canonicalize(),
@@ -13467,18 +13467,41 @@ String.prototype.serialtoxws = function() {
     if (serialized_ships == null) {
       return "error: serialization read failed";
     }
+    card_data = exportObj.basicCardData();
+    card_pilots = {};
+    _ref2 = card_data.pilotsById;
+    for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+      pilot_data = _ref2[_i];
+      if (pilot_data.skip == null) {
+        if (pilot_data.canonical_name == null) {
+          pilot_data.canonical_name = pilot_data.name.canonicalize();
+        }
+        card_pilots[pilot_data.id] = pilot_data;
+      }
+    }
+    cards_upgrades = {};
+    _ref3 = card_data.upgradesById;
+    for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
+      upgrade_data = _ref3[_j];
+      if (upgrade_data.skip == null) {
+        if (upgrade_data.canonical_name == null) {
+          upgrade_data.canonical_name = upgrade_data.name.canonicalize();
+        }
+        cards_upgrades[upgrade_data.id] = upgrade_data;
+      }
+    }
     if (serialized_ships.length != null) {
-      _ref2 = serialized_ships.split(ship_splitter);
-      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
-        serialized_ship = _ref2[_i];
+      _ref4 = serialized_ships.split(ship_splitter);
+      for (_k = 0, _len2 = _ref4.length; _k < _len2; _k++) {
+        serialized_ship = _ref4[_k];
         pilot_splitter = 'X';
         upgrade_splitter = 'W';
-        _ref3 = serialized_ship.split(pilot_splitter), pilot_id = _ref3[0], upgrade_ids = _ref3[1];
-        pilot_data = exportObj.pilotsById[pilot_id];
+        _ref5 = serialized_ship.split(pilot_splitter), pilot_id = _ref5[0], upgrade_ids = _ref5[1];
+        pilot_data = card_pilots[parseInt(pilot_id)];
         if (pilot_data) {
           pilot_xws = {
-            id: (_ref4 = pilot_data.xws) != null ? _ref4 : pilot_data.canonical_name,
-            name: (_ref5 = pilot_data.xws) != null ? _ref5 : pilot_data.canonical_name,
+            id: (_ref6 = pilot_data.xws) != null ? _ref6 : pilot_data.canonical_name,
+            name: (_ref7 = pilot_data.xws) != null ? _ref7 : pilot_data.canonical_name,
             points: pilot_data.points,
             ship: pilot_data.ship.canonicalize(),
             upgrades: []
@@ -13486,9 +13509,9 @@ String.prototype.serialtoxws = function() {
           if (pilot_data.upgrades == null) {
             upgrade_ids = upgrade_ids.split(upgrade_splitter);
             upgrade_obj = {};
-            for (i = _j = _ref6 = upgrade_ids.length - 1; _ref6 <= -1 ? _j < -1 : _j > -1; i = _ref6 <= -1 ? ++_j : --_j) {
+            for (i = _l = _ref8 = upgrade_ids.length - 1; _ref8 <= -1 ? _l < -1 : _l > -1; i = _ref8 <= -1 ? ++_l : --_l) {
               upgrade_id = upgrade_ids[i];
-              upgrade_data = exportObj.upgradesById[upgrade_id];
+              upgrade_data = cards_upgrades[parseInt(upgrade_id)];
               if (upgrade_data) {
                 switch (upgrade_data.slot) {
                   case 'Force':
@@ -13500,7 +13523,7 @@ String.prototype.serialtoxws = function() {
                   default:
                     slot = upgrade_data.slot.canonicalize();
                 }
-                (upgrade_obj[slot] != null ? upgrade_obj[slot] : upgrade_obj[slot] = []).push((_ref7 = upgrade_data.xws) != null ? _ref7 : upgrade_data.canonical_name);
+                (upgrade_obj[slot] != null ? upgrade_obj[slot] : upgrade_obj[slot] = []).push((_ref9 = upgrade_data.xws) != null ? _ref9 : upgrade_data.canonical_name);
               }
             }
             pilot_xws.upgrades = upgrade_obj;
