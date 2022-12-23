@@ -13414,12 +13414,25 @@ exportObj.standardCheckBrowser = function(data, faction, type) {
   }
 };
 
+$.ParseParameter = function(name) {
+  var regex, regexS, results;
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  regexS = "[\\?&]" + name + "=([^&#]*)";
+  regex = new RegExp(regexS);
+  results = regex.exec(window.location.search);
+  if (results === null) {
+    return "";
+  } else {
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+};
+
 String.prototype.serialtoxws = function() {
   var conferredaddon_pairs, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, upgrade_data, upgrade_id, upgrade_ids, upgrade_splitter, version, xws, _i, _j, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
   xws = {
     description: "",
-    faction: this.getParameterByName('f'),
-    name: this.getParameterByName('sn'),
+    faction: this.ParseParameter('f'),
+    name: this.ParseParameter('sn'),
     pilots: [],
     points: 20,
     vendor: {
@@ -13431,7 +13444,7 @@ String.prototype.serialtoxws = function() {
     },
     version: '11/25/2022'
   };
-  serialized = this.getParameterByName('d');
+  serialized = this.ParseParameter('d');
   re = __indexOf.call(serialized, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
   matches = re.exec(serialized);
   if (matches != null) {
@@ -13492,19 +13505,6 @@ String.prototype.serialtoxws = function() {
     return "error: could not read URL";
   }
   return JSON.stringify(xws);
-};
-
-$.getParameterByName = function(name) {
-  var regex, regexS, results;
-  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-  regexS = "[\\?&]" + name + "=([^&#]*)";
-  regex = new RegExp(regexS);
-  results = regex.exec(window.location.search);
-  if (results === null) {
-    return "";
-  } else {
-    return decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
 };
 
 /*
