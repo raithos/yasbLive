@@ -685,7 +685,7 @@
   },
   {
     "file": "index.html",
-    "hash": "e7fabbcbf99d90d9eae09dd8af0c5d5a"
+    "hash": "ec55e1c1e123aae9f9e8badc46dccd8c"
   },
   {
     "file": "javascripts/manifest.js",
@@ -705,19 +705,19 @@
   },
   {
     "file": "javascripts/translation-en.js",
-    "hash": "6d2f99ebaa8314fada14f6e9b0e940f3"
+    "hash": "78f6ddd155621244130ee89ea6b1cf92"
   },
   {
     "file": "javascripts/translation-en.js.map",
-    "hash": "7157236240dbe310c14f00b5dc530211"
+    "hash": "9ef82fba3a511779b302da4ce7665bb2"
   },
   {
     "file": "javascripts/translation-en.min.js",
-    "hash": "c73df185ea406c04df8884a1ca19276f"
+    "hash": "54fb49a7b06d01e576260f56747f55fe"
   },
   {
     "file": "javascripts/translation-en.min.js.map",
-    "hash": "fa2d7d4f2ff701ccb90d78eb949b8f79"
+    "hash": "eed8fdfcf924290658abec759083761a"
   },
   {
     "file": "javascripts/translations.js",
