@@ -6,6 +6,6 @@
   "ios_identifier": "com.raithos.yasb",
   "android_identifier": "com.raithos.yasb",
   "update": "resume",
-  "content_url": "https://yasb.app/",
-  "release": "2023.01.02-00.57.40"
+  "content_url": "https://yasb.app",
+  "release": "2023.01.02-01.05.40"
 }
