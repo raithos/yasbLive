@@ -1,8 +1,11 @@
 {
   "name": "YASB",
-  "ios_identifier": "",
-  "android_identifier": "yasb.raithos.com",
+  "s3bucket": "yasb-2",
+  "s3prefix": "",
+  "s3region": "us-east-1",
+  "ios_identifier": "com.raithos.yasb",
+  "android_identifier": "com.raithos.yasb",
   "update": "resume",
-  "content_url": "http://yasb.app/",
-  "release": "2023.01.01-23.45.21"
+  "content_url": "https://yasb.app/",
+  "release": "2023.01.02-00.29.44"
 }
