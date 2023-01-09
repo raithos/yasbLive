@@ -685,11 +685,11 @@
   },
   {
     "file": "index.html",
-    "hash": "ec55e1c1e123aae9f9e8badc46dccd8c"
+    "hash": "fd2e6c68cfd269fd73065b6f81f3096d"
   },
   {
     "file": "javascripts/manifest.js",
-    "hash": "d5279114bd4e8ae6f2ad69b5a2f44044"
+    "hash": "1d992854aa43adae30d85c8ddad607e6"
   },
   {
     "file": "javascripts/manifest.js.map",
@@ -697,7 +697,7 @@
   },
   {
     "file": "javascripts/manifest.min.js",
-    "hash": "12a58ef5dbed179eb51001b5734cd2d4"
+    "hash": "87c2f07c54410fc6effa99f18172df62"
   },
   {
     "file": "javascripts/manifest.min.js.map",
@@ -705,19 +705,19 @@
   },
   {
     "file": "javascripts/translation-en.js",
-    "hash": "78f6ddd155621244130ee89ea6b1cf92"
+    "hash": "4e4770279fa0a2928f8c09d148d3227b"
   },
   {
     "file": "javascripts/translation-en.js.map",
-    "hash": "9ef82fba3a511779b302da4ce7665bb2"
+    "hash": "058e987864a889c141dea4ac2e8971de"
   },
   {
     "file": "javascripts/translation-en.min.js",
-    "hash": "54fb49a7b06d01e576260f56747f55fe"
+    "hash": "f7cf3967b78675bde0829508e4b4c56a"
   },
   {
     "file": "javascripts/translation-en.min.js.map",
-    "hash": "eed8fdfcf924290658abec759083761a"
+    "hash": "ba189f5ce52cb8a0869d997c42441ea1"
   },
   {
     "file": "javascripts/translations.js",
