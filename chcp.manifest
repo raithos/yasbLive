@@ -685,7 +685,7 @@
   },
   {
     "file": "index.html",
-    "hash": "5b16751cd49e9e53e74c3262e5b09d66"
+    "hash": "ee2e3bb193779edd986569105a9a2a8d"
   },
   {
     "file": "javascripts/manifest.js",
@@ -705,19 +705,19 @@
   },
   {
     "file": "javascripts/translation-en.js",
-    "hash": "4e4770279fa0a2928f8c09d148d3227b"
+    "hash": "1183489460bbeecb9622e6e5af5bea75"
   },
   {
     "file": "javascripts/translation-en.js.map",
-    "hash": "058e987864a889c141dea4ac2e8971de"
+    "hash": "bf70ac6204561ffc97e088d4d1429c09"
   },
   {
     "file": "javascripts/translation-en.min.js",
-    "hash": "f7cf3967b78675bde0829508e4b4c56a"
+    "hash": "f5c5a7daf88cba4f7a06f88f96caf823"
   },
   {
     "file": "javascripts/translation-en.min.js.map",
-    "hash": "ba189f5ce52cb8a0869d997c42441ea1"
+    "hash": "e3680f2dde49723a65494c5ae9d97605"
   },
   {
     "file": "javascripts/translations.js",
@@ -741,39 +741,39 @@
   },
   {
     "file": "javascripts/xwing.js",
-    "hash": "9792578b7216533dd23ed3f29260a6b6"
+    "hash": "006e5383a62f3a72147671f15d8eb85d"
   },
   {
     "file": "javascripts/xwing.js.map",
-    "hash": "fae50c8900b0f37bb52898688fd2cdce"
+    "hash": "0fac082df2de2bd8c194e65d6cafdad4"
   },
   {
     "file": "javascripts/xwing.min.js",
-    "hash": "f0b0e94aaa7a4e1567744b4af210fabd"
+    "hash": "5fc3ea58216b79f29231f9fcfbba86da"
   },
   {
     "file": "javascripts/xwing.min.js.map",
-    "hash": "dfa557d423235ee65c9a3861972fd29e"
+    "hash": "3dc19417af40be32c2a5ecee78859864"
   },
   {
     "file": "javascripts/xwing.src.coffee",
-    "hash": "fb8b4e14b5c8178b41619cccf70c36e8"
+    "hash": "fd76dbae65d53b780ab733be4856e2df"
   },
   {
     "file": "javascripts/xwingcontent.js",
-    "hash": "e8f18c045c074508dd892c44f5e207f0"
+    "hash": "4fb355f0d158d13ee0d4c5df2745db74"
   },
   {
     "file": "javascripts/xwingcontent.js.map",
-    "hash": "b7cb1cad4f8cdd4ef7ecb3e2d8c702c5"
+    "hash": "22dc425df9deb8a5ea0c673256ffbaf6"
   },
   {
     "file": "javascripts/xwingcontent.min.js",
-    "hash": "4fb044a34de83730ec99f4f60a565e84"
+    "hash": "7c648d4a5432e6e1225727d4108c1aaa"
   },
   {
     "file": "javascripts/xwingcontent.min.js.map",
-    "hash": "fbe95e4d5dc79cf605a919133d560401"
+    "hash": "f237937f11e7f134cfd8e825f11367e7"
   },
   {
     "file": "javascripts/xwingcontent.src.coffee",

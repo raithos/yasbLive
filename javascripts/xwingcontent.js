@@ -6977,7 +6977,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         chassis: "Hope",
-        upgrades: ["Attack Speed (BoY)", "Selfless", "Proton Torpedoes", "R2-F2 (BoY)"]
+        upgrades: ["Attack Speed (BoY)", "Selfless (BoY)", "Proton Torpedoes", "R2-F2 (BoY)"]
       }, {
         name: "Wedge Antilles (BoY)",
         canonical_name: 'Wedge Antilles'.canonicalize(),
@@ -10311,8 +10311,12 @@ exportObj.basicCardData = function() {
         slot: "Cargo",
         points: 7
       }, {
+        name: "Selfless (BoY)",
+        canonical_name: 'Selfless'.canonicalize(),
+        unique: true,
         id: 284,
-        skip: true
+        slot: "Talent",
+        standard: true
       }, {
         name: "Tibanna Reserves",
         id: 285,
