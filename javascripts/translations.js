@@ -3150,7 +3150,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Pivot Wing": {
       display_name: "Schwenkflügel",
-      text: "<strong>Geschlossen:</strong> Nachdem du ein [0 %STOP%]-Manöver ausgeführt hast, darfst du dein Schiff um 90° oder um 180° drehen.%LINEBREAK%Bevor du aktiviert wirst, darfst du diese Karte umdrehen. %LINEBREAK%<strong>Geöffnet:</strong> Bevor du aktiviert wirst, darfst du diese Karte umdrehen. %LINEBREAK% <i>Errata: Voraussetzung „UT-D60“ statt „UT-60D“</i> "
+      text: "<strong>Geschlossen:</strong>Solange du verteidigst, wirfst du 1 Verteidigungswürfel weniger. %LINEBREAK%Nachdem du ein [0 %STOP%]-Manöver ausgeführt hast, darfst du dein Schiff um 90° oder um 180° drehen.%LINEBREAK%Bevor du aktiviert wirst, darfst du diese Karte umdrehen. %LINEBREAK%<strong>Geöffnet:</strong> Bevor du aktiviert wirst, darfst du diese Karte umdrehen. %LINEBREAK% <i>Errata: Voraussetzung „UT-D60“ statt „UT-60D“</i> "
     },
     "Plasma Torpedoes": {
       display_name: "Plasmatorpedos",

@@ -12450,8 +12450,10 @@ exportObj.basicCardData = function() {
         slot: "Configuration"
       }, {
         name: "R4-P17 (SoC)",
+        canonical_name: 'R4-P17'.canonicalize(),
         id: 490,
         standard: true,
+        unique: true,
         charge: 2,
         slot: "Astromech"
       }, {
