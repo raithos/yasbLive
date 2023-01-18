@@ -685,23 +685,23 @@
   },
   {
     "file": "index.html",
-    "hash": "e62aa31cfd220a9dad46d69d4006f3bd"
+    "hash": "e30223d98c3bedfbcbd09610b1983448"
   },
   {
     "file": "javascripts/manifest.js",
-    "hash": "b85119522b5c3ea0ea42d64c906174ff"
+    "hash": "ce3e834b16a9960a0c21be1884de67f9"
   },
   {
     "file": "javascripts/manifest.js.map",
-    "hash": "5c8ee23503334984983cc3f78c044b4a"
+    "hash": "28b39f617513c5c42c3336f953a742e1"
   },
   {
     "file": "javascripts/manifest.min.js",
-    "hash": "abe7802b4de61eb63caea4d057f92c14"
+    "hash": "9f58bc4c720ab7146947bdd4ddf178dc"
   },
   {
     "file": "javascripts/manifest.min.js.map",
-    "hash": "7fe9459470de4b2009921f1a0ba45428"
+    "hash": "7bb30f831169e02cf91780369e345388"
   },
   {
     "file": "javascripts/translation-en.js",
