@@ -685,59 +685,59 @@
   },
   {
     "file": "index.html",
-    "hash": "91f2d053ab0fe4e09fc6d20c8ce233ee"
+    "hash": "351cb4da62adab10b46600e0f4c2de99"
   },
   {
     "file": "javascripts/manifest.js",
-    "hash": "ce3e834b16a9960a0c21be1884de67f9"
+    "hash": "aefaaef37c78945d16dbd05fc30c4df0"
   },
   {
     "file": "javascripts/manifest.js.map",
-    "hash": "28b39f617513c5c42c3336f953a742e1"
+    "hash": "8e14cf7b9a836ebd8d84ae835a1e511d"
   },
   {
     "file": "javascripts/manifest.min.js",
-    "hash": "9f58bc4c720ab7146947bdd4ddf178dc"
+    "hash": "9cf24c6768f224199ca53d0a80221f11"
   },
   {
     "file": "javascripts/manifest.min.js.map",
-    "hash": "7bb30f831169e02cf91780369e345388"
+    "hash": "c810344113b57278ead43b8182a988c8"
   },
   {
     "file": "javascripts/translation-en.js",
-    "hash": "d06d956d090eb2e185ae4a5a3e1f07ae"
+    "hash": "d0a73b4443ce3ff9b515531e49828295"
   },
   {
     "file": "javascripts/translation-en.js.map",
-    "hash": "8baddb76dff872df0ad6091e923051fe"
+    "hash": "1a90f8816fcbf873e91444663c6ac2c5"
   },
   {
     "file": "javascripts/translation-en.min.js",
-    "hash": "e2b0e43acedfe6106bc0c82175916124"
+    "hash": "e2825363afa5faaf2190458113d853af"
   },
   {
     "file": "javascripts/translation-en.min.js.map",
-    "hash": "2af49707589751d7741500be23a8420f"
+    "hash": "2aacc7d5d393417c4063c4f46933243f"
   },
   {
     "file": "javascripts/translations.js",
-    "hash": "2e43c2b84319ba18235d717e669aedaf"
+    "hash": "9cf1c084878630b2b571c484b8bcb54e"
   },
   {
     "file": "javascripts/translations.js.map",
-    "hash": "ae8d0e22cb5c070fa83af18f9429d10d"
+    "hash": "2a6fc5eca0d17bb8dc9c41cd0765aac6"
   },
   {
     "file": "javascripts/translations.min.js",
-    "hash": "62fd3453f8e3a99cd7e5b5c396000b77"
+    "hash": "445cc9d36b03125c9957352727bacdbf"
   },
   {
     "file": "javascripts/translations.min.js.map",
-    "hash": "2317ef9bb8c400a1c41b20b16c22f4ca"
+    "hash": "423106e7009d75ccaaee6ff992759572"
   },
   {
     "file": "javascripts/translations.src.coffee",
-    "hash": "7fa087e856df406ba624319f95ed965d"
+    "hash": "138fe977ba4f1c3c3c68f92e65ba9cd2"
   },
   {
     "file": "javascripts/xwing.js",
