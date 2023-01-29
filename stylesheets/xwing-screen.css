@@ -258,7 +258,7 @@
   background-repeat: no-repeat; }
 
 .obstacle-sources-container {
-  display: block; }
+  display: flex; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 2dppx) {
   .select2-container .select2-choice abbr {

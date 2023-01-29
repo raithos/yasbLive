@@ -685,7 +685,7 @@
   },
   {
     "file": "index.html",
-    "hash": "2381aa100e091c6cfdc86754ae05d0ed"
+    "hash": "7128c1c041eaa0bf97726717a2921122"
   },
   {
     "file": "javascripts/manifest.js",
@@ -701,7 +701,7 @@
   },
   {
     "file": "javascripts/manifest.min.js.map",
-    "hash": "da2b89da1c3380b715e27f83d7c934da"
+    "hash": "eca41015d742119dde653a56acbd4214"
   },
   {
     "file": "javascripts/translation-en.js",
@@ -717,7 +717,7 @@
   },
   {
     "file": "javascripts/translation-en.min.js.map",
-    "hash": "2aacc7d5d393417c4063c4f46933243f"
+    "hash": "146e3e060a9b78190f7bb1e8f433f92d"
   },
   {
     "file": "javascripts/translations.js",
@@ -733,7 +733,7 @@
   },
   {
     "file": "javascripts/translations.min.js.map",
-    "hash": "423106e7009d75ccaaee6ff992759572"
+    "hash": "43cd762f98c5d1d62bec90fa2c667dbe"
   },
   {
     "file": "javascripts/translations.src.coffee",
@@ -741,23 +741,23 @@
   },
   {
     "file": "javascripts/xwing.js",
-    "hash": "006e5383a62f3a72147671f15d8eb85d"
+    "hash": "c4bf8350ed06af3f418392a0070566c0"
   },
   {
     "file": "javascripts/xwing.js.map",
-    "hash": "0fac082df2de2bd8c194e65d6cafdad4"
+    "hash": "6b781f76f0841ad679e36e61cd374d8a"
   },
   {
     "file": "javascripts/xwing.min.js",
-    "hash": "5fc3ea58216b79f29231f9fcfbba86da"
+    "hash": "31e993a7040161e392013a1b6f3cfaeb"
   },
   {
     "file": "javascripts/xwing.min.js.map",
-    "hash": "3dc19417af40be32c2a5ecee78859864"
+    "hash": "b22fcba6b5f93dda2014209991c5a214"
   },
   {
     "file": "javascripts/xwing.src.coffee",
-    "hash": "fd76dbae65d53b780ab733be4856e2df"
+    "hash": "c2254e1a8574551fdf3582d5f374d27b"
   },
   {
     "file": "javascripts/xwingcontent.js",
@@ -773,7 +773,7 @@
   },
   {
     "file": "javascripts/xwingcontent.min.js.map",
-    "hash": "f237937f11e7f134cfd8e825f11367e7"
+    "hash": "3ef0cf6c4f54e31de0cd9c1a2e5a8b2f"
   },
   {
     "file": "javascripts/xwingcontent.src.coffee",
@@ -793,7 +793,7 @@
   },
   {
     "file": "javascripts/xwingquickbuilds.min.js.map",
-    "hash": "46f7b61deefcdd31391cda7d9c033690"
+    "hash": "2ebd456245f5c8fd93982ef649e1151b"
   },
   {
     "file": "javascripts/xwingrules.js",
@@ -829,7 +829,7 @@
   },
   {
     "file": "stylesheets/xwing-screen.css",
-    "hash": "344d3dbe970ee8c53c5d655d5c87ebfd"
+    "hash": "2eb75862b285b66c77641324cc54a566"
   },
   {
     "file": "stylesheets/xwing.css",
