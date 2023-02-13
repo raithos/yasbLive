@@ -7121,7 +7121,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 3,
         ship_override: {
-          hull: 4
+          hull: 4,
+          actions: ["Focus", "Lock", "Evade", "Barrel Roll"]
         },
         upgrades: ["Elusive", "Vengeful (BoY)"]
       }, {

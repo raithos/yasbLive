@@ -3928,10 +3928,6 @@ exportObj.manifestByExpansion = {
       type: 'upgrade',
       count: 2
     }, {
-      name: 'Cluster Missiles',
-      type: 'upgrade',
-      count: 1
-    }, {
       name: 'Afterburners',
       type: 'upgrade',
       count: 3
@@ -6883,6 +6879,10 @@ exportObj.manifestByExpansion = {
       type: 'upgrade',
       count: 1
     }, {
+      name: 'Jamming Beam',
+      type: 'upgrade',
+      count: 1
+    }, {
       name: 'Slave I (Separatist)',
       type: 'upgrade',
       count: 1
@@ -8791,6 +8791,10 @@ exportObj.manifestByExpansion = {
       count: 1
     }, {
       name: 'Burnout Thrusters',
+      type: 'upgrade',
+      count: 1
+    }, {
+      name: 'Overtuned Modulators',
       type: 'upgrade',
       count: 1
     }, {
