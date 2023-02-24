@@ -685,11 +685,11 @@
   },
   {
     "file": "index.html",
-    "hash": "cdbb17489283a72224c962098d32a89a"
+    "hash": "82bc96f02fac74ee8b2c4fd264a87f33"
   },
   {
     "file": "javascripts/manifest.js",
-    "hash": "4b0fc1a09f252cdaa99fa205a3738057"
+    "hash": "61711748901ee5f0d13bd2fd501160c2"
   },
   {
     "file": "javascripts/manifest.js.map",
@@ -697,11 +697,11 @@
   },
   {
     "file": "javascripts/manifest.min.js",
-    "hash": "d44ca344337637901f6a537bacf29590"
+    "hash": "82912ae9275165ebdf3f2de50e31cc31"
   },
   {
     "file": "javascripts/manifest.min.js.map",
-    "hash": "67b071b13b92eff2ad8b7d4f41c61abe"
+    "hash": "f8153b4701e97d22cb68c8bb6817d88c"
   },
   {
     "file": "javascripts/translation-en.js",
@@ -721,59 +721,59 @@
   },
   {
     "file": "javascripts/translations.js",
-    "hash": "dc28635b50413cad830921c905eaea74"
+    "hash": "a0f6d933ff3623841ccfea1f16a716d7"
   },
   {
     "file": "javascripts/translations.js.map",
-    "hash": "dff9bc2260f71d3a3a498748fde8d76c"
+    "hash": "abdeeef73b403e99ed789d439f5dd1ac"
   },
   {
     "file": "javascripts/translations.min.js",
-    "hash": "f780eec519d06d48531a5eb92daeaa64"
+    "hash": "806f50982455ee019b6d623ad6694e82"
   },
   {
     "file": "javascripts/translations.min.js.map",
-    "hash": "702b184bbc9e59a338ffbb7454302518"
+    "hash": "3268a0accbf68e8ca02e3b392336ff85"
   },
   {
     "file": "javascripts/translations.src.coffee",
-    "hash": "ab0fe341926a9c0f30d530983d1a445b"
+    "hash": "a47f0c9e3388a4bb730fdbccd6c45b8f"
   },
   {
     "file": "javascripts/xwing.js",
-    "hash": "a970d91438c7ac2f62e5947908d1e5a6"
+    "hash": "be2a1e7b075e33771564ae717fe2df67"
   },
   {
     "file": "javascripts/xwing.js.map",
-    "hash": "babdd3f541b262c92226af13ac3ed6ff"
+    "hash": "40da855b71645be92d3f9607c23420dc"
   },
   {
     "file": "javascripts/xwing.min.js",
-    "hash": "49225584d6224b8618f2b5dbcd7f7315"
+    "hash": "507898a97c45b52bf62faa1b230f1f98"
   },
   {
     "file": "javascripts/xwing.min.js.map",
-    "hash": "1c3b3bc3e926b797bc3dd1fc7631eac1"
+    "hash": "226d0d9d3aa7df60b4f4eca2b447bb65"
   },
   {
     "file": "javascripts/xwing.src.coffee",
-    "hash": "60d375fb440f10334747e7ed19277f2f"
+    "hash": "e5677553f94850f4f5d41fb1b36fab47"
   },
   {
     "file": "javascripts/xwingcontent.js",
-    "hash": "7b3ae16eb380b31a604c3a1cef38eb5f"
+    "hash": "97125221a6926fb671affbd8e8c96bba"
   },
   {
     "file": "javascripts/xwingcontent.js.map",
-    "hash": "041c1d692c2625a5289defa7cfaa524f"
+    "hash": "2560b355a1e50047927bd4bb0a4e8c4f"
   },
   {
     "file": "javascripts/xwingcontent.min.js",
-    "hash": "d4695a0558df94ae12568054a32e7b0e"
+    "hash": "1ab5ffb7047eb5854a2cb98a3d62759a"
   },
   {
     "file": "javascripts/xwingcontent.min.js.map",
-    "hash": "7190d1191d8f4ca9349cac8f00ffb19f"
+    "hash": "126ef29ee257669cb704f203a86a2441"
   },
   {
     "file": "javascripts/xwingcontent.src.coffee",
