@@ -6794,7 +6794,7 @@ exportObj.manifestByExpansion = {
     }, {
       name: 'Snap Shot',
       type: 'upgrade',
-      count: 1
+      count: 2
     }, {
       name: 'Ablative Plating',
       type: 'upgrade',

@@ -2693,7 +2693,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 4,
-        slots: ["Missile", "Illicit", "Modification"]
+        slots: ["Illicit", "Modification"]
       }, {
         name: "Binayre Pirate",
         id: 159,

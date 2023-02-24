@@ -5267,7 +5267,7 @@ exportObj.SquadBuilder = (function() {
             }
           }
           possible_inis.sort();
-          container.find('.info-type').text(type);
+          container.find('.info-type').text(exportObj.translate("types", type));
           container.find('.info-name').html("" + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) ? "" : " (" + (this.uitranslation('unreleased')) + ")"));
           if (((_ref2 = this.collection) != null ? _ref2.counts : void 0) != null) {
             ship_count = (_ref3 = (_ref4 = this.collection.counts) != null ? (_ref5 = _ref4.ship) != null ? _ref5[data.name] : void 0 : void 0) != null ? _ref3 : 0;
@@ -5402,7 +5402,7 @@ exportObj.SquadBuilder = (function() {
           container.find('.info-sources').show();
           break;
         case 'Pilot':
-          container.find('.info-type').text(type);
+          container.find('.info-type').text(exportObj.translate("types", type));
           container.find('.info-sources.info-data').text(((function() {
             var _k, _len2, _ref12, _results;
             _ref12 = data.sources;
@@ -5728,7 +5728,7 @@ exportObj.SquadBuilder = (function() {
           container.find('p.info-maneuvers').html(this.getManeuverTableHTML(ship.maneuvers, ship.maneuvers));
           break;
         case 'Addon':
-          container.find('.info-type').text(additional_opts.addon_type);
+          container.find('.info-type').text(exportObj.translate("slot", additional_opts.addon_type));
           container.find('.info-sources.info-data').text(((function() {
             var _k, _len2, _ref76, _results;
             _ref76 = data.sources;
@@ -6404,11 +6404,11 @@ exportObj.SquadBuilder = (function() {
         comma = ', ';
       }
       if (card.solitary) {
-        othertext += comma + exportObj.translate('faction', "Solitary");
+        othertext += comma + exportObj.translate('gameterms', "Solitary");
         comma = ', ';
       }
       if (card.standardized) {
-        othertext += comma + exportObj.translate('faction', "Standardized");
+        othertext += comma + exportObj.translate('gameterms', "Standardized");
         comma = ', ';
       }
     }
@@ -7014,7 +7014,6 @@ Ship = (function() {
             _this.wingmate_selector.parent().hide();
             if ((_this.wingmates != null) && _this.wingmates.length > 0) {
               _this.setWingmates(0);
-              _this.linkedShip = null;
             }
             _this.quickbuildId = id;
             _this.builder.current_squad.dirty = true;
