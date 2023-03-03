@@ -3888,14 +3888,14 @@ exportObj.SquadBuilder = (function() {
           _this.printable_container.find('.xws-container .qrcode').qrcode({
             render: 'div',
             ec: 'M',
-            size: text.length < 144 ? 144 : 160,
+            size: text.length < 144 ? 144 : 256,
             text: text
           });
           text = "https://yasb.app/" + query;
           _this.printable_container.find('.permalink-container .qrcode').qrcode({
             render: 'div',
             ec: 'M',
-            size: text.length < 144 ? 144 : 160,
+            size: text.length < 144 ? 144 : 256,
             text: text
           });
         }

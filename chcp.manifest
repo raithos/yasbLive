@@ -685,7 +685,7 @@
   },
   {
     "file": "index.html",
-    "hash": "eb7e522b45f252fb6ac4836385573645"
+    "hash": "739d01b366c981e496548f04c4d3e7f3"
   },
   {
     "file": "javascripts/manifest.js",
@@ -741,7 +741,7 @@
   },
   {
     "file": "javascripts/xwing.js",
-    "hash": "25069539caf14bd842d0dcf3a9d361ae"
+    "hash": "16bbefea1355dadd6eb7cd99894e3c15"
   },
   {
     "file": "javascripts/xwing.js.map",
@@ -749,7 +749,7 @@
   },
   {
     "file": "javascripts/xwing.min.js",
-    "hash": "6bc659f2b5d53e26e6c37eb4f3efca0c"
+    "hash": "117850e62c64b58bad36e6e775ec6451"
   },
   {
     "file": "javascripts/xwing.min.js.map",
@@ -757,7 +757,7 @@
   },
   {
     "file": "javascripts/xwing.src.coffee",
-    "hash": "5871cd8e0d15b5e7f8af2fade9c25e7d"
+    "hash": "e95905c3e8ff9c555cee6d3b49ff85eb"
   },
   {
     "file": "javascripts/xwingcontent.js",
