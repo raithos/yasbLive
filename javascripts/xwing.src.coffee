@@ -3509,11 +3509,10 @@ class exportObj.SquadBuilder
                 else
                     if previous_obstacles.length < 3
                         previous_obstacles.push(x)
- 
-            @current_obstacles = previous_obstacles
-            @obstacles_select.val(@current_obstacles)
 
-            @current_squad.additional_data.obstacles = @current_obstacles
+            @updateObstacleSelect(previous_obstacles)
+
+            @current_squad.additional_data.obstacles = previous_obstacles
             @current_squad.dirty = true
             @container.trigger 'xwing-backend:squadDirtinessChanged'
             @container.trigger 'xwing:pointsUpdated'
