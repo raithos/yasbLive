@@ -1016,7 +1016,15 @@ class exportObj.SquadBuilderBackend
         else
             @collectioncheck = true
             cb true
-                
+
+    resetCollection: (collection, cb=$.noop) ->
+        post_args =
+            expansions: {}
+            singletons: {}
+            checks: {}
+        $.post("#{@server}/collection", post_args).done (data, textStatus, jqXHR) ->
+            cb data.success
+
     saveCollection: (collection, cb=$.noop) ->
         post_args =
             expansions: collection.expansions
@@ -6954,7 +6962,7 @@ class Ship
         if upgrade_data.standardized?
             for ship in @builder.ships
                 if ship?.data? and ship.data.name == @data.name
-                    if upgrade_data.restrictions? and ship.restriction_check(upgrade_data.restrictions?, upgrade_data) and not (ship.pilot?.upgrades?)
+                    if upgrade_data.restrictions? and ship.restriction_check(upgrade_data.restrictions, upgrade_data) and not (ship.pilot?.upgrades?)
                         slotfree = false
                         for upgrade in ship.upgrades
                             if upgrade_data.slot == upgrade.slot and not upgrade.data?
