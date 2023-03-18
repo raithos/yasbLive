@@ -59,6 +59,7 @@ class exportObj.SquadBuilderBackend
         @show_archived = false
 
         @collection_save_timer = null
+        @collection_reset_timer = null
 
         @setupHandlers()
         @setupUI()
@@ -453,6 +454,12 @@ class exportObj.SquadBuilderBackend
         @unsaved_modal.data 'builder', builder
         @unsaved_modal.data 'callback', action
         @unsaved_modal.modal 'show'
+
+    warnCollectionReset: (builder, action) ->
+        @reset_collection_modal.data 'builder', builder
+        @reset_collection_modal.data 'callback', action
+        @reset_collection_modal.modal 'show'
+
 
     setupUI: () ->
         @auth_status.addClass 'disabled'
@@ -919,7 +926,42 @@ class exportObj.SquadBuilderBackend
             @unsaved_modal.data('builder').current_squad.dirty = false
             @unsaved_modal.data('callback')()
             @unsaved_modal.modal 'hide'
-            
+
+
+        @reset_collection_modal = $ document.createElement('DIV')
+        @reset_collection_modal.addClass 'modal fade d-print-none'
+        @reset_collection_modal.tabindex = "-1"
+        @reset_collection_modal.role = "dialog"
+        $(document.body).append @reset_collection_modal
+        @reset_collection_modal.append $.trim """
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="translated" defaultText="Reset Collection"></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="translated" defaultText="Reset Collection Warning"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-modal btn-primary translated" aria-hidden="true" data-dismiss="modal" defaultText="Go Back"></button>
+                <button class="btn btn-danger resetcollection translated" aria-hidden="true" defaultText="Reset Collection"></button>
+            </div>
+        </div>
+    </div>
+        """
+        @reset_collection_modal = $ @reset_collection_modal.find('button.resetcollection')
+        @reset_collection_modal.click (e) =>
+            e.preventDefault()
+            clearTimeout(@collection_reset_timer) if @collection_reset_timer?
+            @collection_reset_timer = setTimeout =>
+                @resetCollection collection, (res) ->
+                    if res
+                        $(window).trigger 'xwing-collection:saved', collection
+            , 1000
+
+
+
         # this is dynamically created UI, so we need to translate it after creation
         exportObj.translateUIElements(@unsaved_modal)
 
@@ -5990,6 +6032,40 @@ class Ship
                         upgrade.setData upgrade_to_be_equipped
                         return
 
+    addToStandardizedList: (upgrade_data) ->
+        # check first if standard combo exists and return if it does
+        idx = @builder.standard_list['Ship'].indexOf @data.name
+        if idx > -1
+            if @builder.standard_list['Upgrade'][idx]?.name == upgrade_data.name
+                return
+        @builder.standard_list['Upgrade'].push upgrade_data
+        @builder.standard_list['Ship'].push @data.name
+
+    removeStandardizedList: (upgrade_data) ->
+        # removes the ship upgrade combo from the stanard list array
+        idx = @builder.standard_list['Ship'].indexOf @data.name
+        if idx > -1
+            if @builder.standard_list['Upgrade'][idx]?.name == upgrade_data.name
+                @builder.standard_list['Upgrade'].splice idx,1 
+                @builder.standard_list['Ship'].splice idx,1
+                
+                # now remove all upgrades of the same name
+                for ship in @builder.ships
+                    if ship.data?.name == @data.name and ship != this
+                        for upgrade in ship.upgrades
+                            if upgrade.data?.name == upgrade_data.name
+                                upgrade.setData null
+                                break
+
+    checkStandardizedList: (ship_name) ->
+        # check first if standard combo exists and return if it does
+        idx = @builder.standard_list['Ship'].indexOf ship_name
+        if idx > -1
+            if @builder.standard_list['Upgrade'][idx]?.name?
+                return @builder.standard_list['Upgrade'][idx]
+        else
+            return undefined
+
     setPilot: (new_pilot, noautoequip = false) ->
         # don't call this method directly, unless you know what you do. Use setPilotById for proper quickbuild handling
 
@@ -6035,7 +6111,16 @@ class Ship
                                     delayed_upgrades[old_upgrade] = upgrade
                         for id, upgrade of delayed_upgrades
                             upgrade.setById id
-                #@addStandardizedUpgrades()
+                        # last check for standardized
+                    # see if ship is supposed to be standardized
+                    standard_upgrade_to_check = @checkStandardizedList(@pilot.ship)
+                    standard_check = false
+                    for upgrade in @upgrades
+                        if standard_upgrade_to_check? and (upgrade?.data?.name? and (upgrade.data.name == standard_upgrade_to_check.name))
+                            standard_check = true                         
+                    if standard_upgrade_to_check? and (standard_check == false)
+                        @removeStandardizedList(standard_upgrade_to_check)
+
             else
                 @copy_button.hide()
             @row.removeClass('unsortable')
@@ -7090,7 +7175,7 @@ class GenericAddon
                 if ship.data? and (@ship.data.name == ship.data.name) and (@ship != ship)
                     isLastShip = false
             if isLastShip == true
-                @removeStandardized()
+                @ship.removeStandardizedList(@data)
         @destroyed = true
         @rescindAddons()
         @deoccupyOtherUpgrades()
@@ -7178,8 +7263,8 @@ class GenericAddon
         if new_data?.id != @data?.id
             if @data?.unique? or @data?.solitary?
                 await @ship.builder.container.trigger 'xwing:releaseUnique', [ @unadjusted_data, @type, defer() ]
-            if @data?.standardized? and not @ship.hasFixedUpgrades
-                @removeStandardized()
+            if @data?.standardized? and not @ship.hasFixedUpgrades and (@data?.restrictions? and @ship.restriction_check(@data.restrictions,@data))
+                @ship.removeStandardizedList(@data)
             @rescindAddons()
             @deoccupyOtherUpgrades()
             if new_data?.unique? or new_data?.solitary?
@@ -7202,39 +7287,13 @@ class GenericAddon
                     @occupyOtherUpgrades()
                     @conferAddons()
                 if @data.standardized? and not @ship.hasFixedUpgrades
-                    @addToStandardizedList()
+                    @ship.addToStandardizedList(@data)
             else
                 @deoccupyOtherUpgrades()
 
             # this will remove not allowed upgrades (is also done on pointsUpdated). We do it explicitly so we can tell if the setData was successfull
             @lastSetValid = @ship.validate()
             @ship.builder.container.trigger 'xwing:pointsUpdated'
-
-    addToStandardizedList: ->
-        # check first if standard combo exists and return if it does
-        idx = @ship.builder.standard_list['Ship'].indexOf @ship.data.name
-        if idx > -1
-            if @ship.builder.standard_list['Upgrade'][idx]?.name == @data.name
-                return
-        @ship.builder.standard_list['Upgrade'].push @data
-        @ship.builder.standard_list['Ship'].push @ship.data.name
-
-    removeStandardized: ->
-        # removes the ship upgrade combo from the stanard list array
-        idx = @ship.builder.standard_list['Ship'].indexOf @ship.data.name
-        if idx > -1
-            if @ship.builder.standard_list['Upgrade'][idx]?.name == @data.name
-                @ship.builder.standard_list['Upgrade'].splice idx,1 
-                @ship.builder.standard_list['Ship'].splice idx,1
-                
-                # now remove all upgrades of the same name
-                nameToRemove = @data.name
-                for ship in @ship.builder.ships
-                    if ship.data?.name == @ship.data.name and ship != @ship
-                        for upgrade in ship.upgrades
-                            if upgrade.data?.name == nameToRemove
-                                upgrade.setData null
-                                break
 
     conferAddons: ->
         if @data.confersAddons? and !@ship.builder.isQuickbuild and @data.confersAddons.length > 0
