@@ -215,9 +215,11 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.English = function() {
-  var chassis_translations, condition_translations, data, name, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, data, name, pilot_translations, ship, upgrade_translations;
   exportObj.cardLanguage = 'English';
-  exportObj.renameShip("TIE/ba Interceptor", "TIE/ba Interceptor");
+  for (ship in exportObj.ships) {
+    exportObj.renameShip(ship, ship);
+  }
   pilot_translations = {
     "0-66": {
       display_name: "0-66",
