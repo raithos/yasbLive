@@ -59,6 +59,7 @@ class exportObj.SquadBuilderBackend
         @show_archived = false
 
         @collection_save_timer = null
+        @collection_reset_timer = null
 
         @setupHandlers()
         @setupUI()
@@ -453,6 +454,12 @@ class exportObj.SquadBuilderBackend
         @unsaved_modal.data 'builder', builder
         @unsaved_modal.data 'callback', action
         @unsaved_modal.modal 'show'
+
+    warnCollectionReset: (builder, action) ->
+        @reset_collection_modal.data 'builder', builder
+        @reset_collection_modal.data 'callback', action
+        @reset_collection_modal.modal 'show'
+
 
     setupUI: () ->
         @auth_status.addClass 'disabled'
@@ -919,7 +926,42 @@ class exportObj.SquadBuilderBackend
             @unsaved_modal.data('builder').current_squad.dirty = false
             @unsaved_modal.data('callback')()
             @unsaved_modal.modal 'hide'
-            
+
+
+        @reset_collection_modal = $ document.createElement('DIV')
+        @reset_collection_modal.addClass 'modal fade d-print-none'
+        @reset_collection_modal.tabindex = "-1"
+        @reset_collection_modal.role = "dialog"
+        $(document.body).append @reset_collection_modal
+        @reset_collection_modal.append $.trim """
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="translated" defaultText="Reset Collection"></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="translated" defaultText="Reset Collection Warning"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-modal btn-primary translated" aria-hidden="true" data-dismiss="modal" defaultText="Go Back"></button>
+                <button class="btn btn-danger resetcollection translated" aria-hidden="true" defaultText="Reset Collection"></button>
+            </div>
+        </div>
+    </div>
+        """
+        @reset_collection_modal = $ @reset_collection_modal.find('button.resetcollection')
+        @reset_collection_modal.click (e) =>
+            e.preventDefault()
+            clearTimeout(@collection_reset_timer) if @collection_reset_timer?
+            @collection_reset_timer = setTimeout =>
+                @resetCollection collection, (res) ->
+                    if res
+                        $(window).trigger 'xwing-collection:saved', collection
+            , 1000
+
+
+
         # this is dynamically created UI, so we need to translate it after creation
         exportObj.translateUIElements(@unsaved_modal)
 
@@ -1016,7 +1058,15 @@ class exportObj.SquadBuilderBackend
         else
             @collectioncheck = true
             cb true
-                
+
+    resetCollection: (collection, cb=$.noop) ->
+        post_args =
+            expansions: {}
+            singletons: {}
+            checks: {}
+        $.post("#{@server}/collection", post_args).done (data, textStatus, jqXHR) ->
+            cb data.success
+
     saveCollection: (collection, cb=$.noop) ->
         post_args =
             expansions: collection.expansions
@@ -3083,8 +3133,8 @@ class exportObj.SquadBuilder
             <div class="modal-header">
                 <label class='choose-obstacles-description translated' defaultText="Choose obstacles dialog"></label>
             </div>
-            <div class="modal-body">
-                <div class="obstacle-select-container" style="float:left">
+            <div class="modal-body row">
+                <div class="obstacle-select-container col-md-5" style="float:left">
                     <select multiple class='obstacle-select' size="18">
                         <option class="coreasteroid0-select obstacle-option translated" value="coreasteroid0" defaultText="Core Asteroid 0"></option>
                         <option class="coreasteroid1-select obstacle-option translated" value="coreasteroid1" defaultText="Core Asteroid 1"></option>
@@ -3118,7 +3168,7 @@ class exportObj.SquadBuilder
                         <option class="pomdebris3-select obstacle-option translated" value="pomdebris3" defaultText="Pride of Mandalore Debris 3"></option>
                     </select>
                 </div>
-                <div>
+                <div class="col-md-6">
                     <div class="obstacle-image-container" style="display:none;">
                         <img class="obstacle-image" src="images/core2asteroid0.png" />
                     </div>
@@ -7213,7 +7263,7 @@ class GenericAddon
         if new_data?.id != @data?.id
             if @data?.unique? or @data?.solitary?
                 await @ship.builder.container.trigger 'xwing:releaseUnique', [ @unadjusted_data, @type, defer() ]
-            if @data?.standardized? and not @ship.hasFixedUpgrades and (@data?.restrictions? and @ship.restriction_check(@data.restrictions,@data))
+            if @data?.standardized? and not @ship.hasFixedUpgrades and ((@data?.restrictions? and @ship.restriction_check(@data.restrictions,@data)) or not @data?.restrictions?)
                 @ship.removeStandardizedList(@data)
             @rescindAddons()
             @deoccupyOtherUpgrades()
