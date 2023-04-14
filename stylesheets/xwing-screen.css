@@ -1,3 +1,7 @@
+@media (max-width: 400px) and (min-width: 350px) {
+  .modal-dialog {
+    margin: calc(min(.5rem, (100vw - 350px)*0.5)); } }
+
 .text-list-modal .modal-header {
   overflow: hidden; }
 

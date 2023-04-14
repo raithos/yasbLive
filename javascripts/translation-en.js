@@ -111,6 +111,9 @@ exportObj.translations.English = {
     upgradeHeader: function(translator, slot) {
       return "" + (translator('slot', slot)) + " Upgrade";
     },
+    damageHeader: function(translator, type) {
+      return "Damage Card (" + (translator('type', type)) + ")";
+    },
     "unreleased": "unreleased",
     "epic": "epic",
     "Quickbuild": "Quick Build",
@@ -199,7 +202,8 @@ exportObj.translations.English = {
     'Pilot': 'Pilot',
     'Modification': 'Modification',
     'Title': 'Title',
-    'Ship': 'Ship'
+    'Ship': 'Ship',
+    'Damage': 'Damage'
   },
   rulestypes: {
     'glossary': 'Glossary',
@@ -215,7 +219,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.English = function() {
-  var chassis_translations, condition_translations, data, name, pilot_translations, ship, upgrade_translations;
+  var chassis_translations, condition_translations, damage_translations, data, name, pilot_translations, ship, upgrade_translations;
   exportObj.cardLanguage = 'English';
   for (ship in exportObj.ships) {
     exportObj.renameShip(ship, ship);
@@ -4759,6 +4763,50 @@ exportObj.cardLoaders.English = function() {
       text: "This ship is not affected by the <strong>Standardized</strong> restriction. Reduce the difficulty of your speed 2 and 3 bank [%BANKLEFT% or %BANKRIGHT%] maneuvers. Increase the difficulty of your speed 3 turn [%TURNLEFT% or %TURNRIGHT%] maneuvers."
     }
   };
+  damage_translations = {
+    "Panicked Pilot": {
+      text: "Gain 2 stress tokens. Then repair this card."
+    },
+    "Blinded Pilot": {
+      text: "While you perform an attack, you can modify your dice only by spending %FORCE% for their default effect.%LINEBREAK%<strong>Action:</strong> Repair this card. "
+    },
+    "Wounded Pilot": {
+      text: "After you perform an action, roll 1 attack die. On a %HIT% or %CRIT% result, gain 1 stress token.%LINEBREAK%<strong>Action:</strong> Repair this card. "
+    },
+    "Stunned Pilot": {
+      text: "After you execute a maneuver, if you moved through or overlapped an obstacle, suffer 1 %HIT% damage. "
+    },
+    "Console Fire": {
+      text: "Before you engage, roll 1 attack die. On a %HIT% result, suffer 1 %HIT% damage. %LINEBREAK%<strong>Action:</strong> Repair this card. "
+    },
+    "Damaged Engine": {
+      text: "Increase the difficulty of your turn maneuvers (%TURNLEFT% and %TURNRIGHT%)"
+    },
+    "Weapons Failure": {
+      text: "While you perform an attack, roll 1 fewer attack die. %LINEBREAK%<strong>Action:</strong> Repair this card. "
+    },
+    "Hull Breach": {
+      text: "Before you would suffer 1 or more %HIT% damage, suffer that much %CRIT% damage instead.%LINEBREAK%<strong>Action:</strong> Repair this card.  "
+    },
+    "Structural Damage": {
+      text: "While you defend, roll 1 fewer defense die."
+    },
+    "Damaged Sensor Array": {
+      text: "You cannot perform any actions except the %FOCUS% action and actions from damage cards.%LINEBREAK%<strong>Action:</strong> Repair this card.  "
+    },
+    "Loose Stabilizer": {
+      text: "After you execute a non-straight maneuver (%STRAIGHT%) suffer 1 %HIT% damage and repair this card. %LINEBREAK%<strong>Action:</strong> Repair this card.  "
+    },
+    "Disabled Power Regulator": {
+      text: "Before you engage, gain 1 ion token. After you execute an ion maneuver, repair this card."
+    },
+    "Fuel Leak": {
+      text: "After you suffer 1 %CRIT% damage, suffer 1 %HIT% damage and repair this card.%LINEBREAK%<strong>Action:</strong> Repair this card.  "
+    },
+    "Direct Hit!": {
+      text: "Suffer 1 %HIT% damage. Then repair this card. "
+    }
+  };
   for (name in pilot_translations) {
     data = pilot_translations[name];
     if (data.display_name == null) {
@@ -4783,7 +4831,13 @@ exportObj.cardLoaders.English = function() {
       data['display_name'] = name;
     }
   }
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
+  for (name in damage_translations) {
+    data = damage_translations[name];
+    if (data.display_name == null) {
+      data['display_name'] = name;
+    }
+  }
+  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations, damage_translations);
 };
 
 /*

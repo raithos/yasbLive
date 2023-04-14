@@ -12794,12 +12794,85 @@ exportObj.basicCardData = function() {
         name: "Solo",
         id: 48
       }
+    ],
+    damageById: [
+      {
+        name: "Panicked Pilot",
+        quantity: 2,
+        type: "Pilot",
+        id: 0
+      }, {
+        name: "Blinded Pilot",
+        quantity: 2,
+        type: "Pilot",
+        id: 1
+      }, {
+        name: "Wounded Pilot",
+        quantity: 2,
+        type: "Pilot",
+        id: 2
+      }, {
+        name: "Stunned Pilot",
+        quantity: 2,
+        type: "Pilot",
+        id: 3
+      }, {
+        name: "Console Fire",
+        quantity: 2,
+        type: "Ship",
+        id: 4
+      }, {
+        name: "Damaged Engine",
+        quantity: 2,
+        type: "Ship",
+        id: 5
+      }, {
+        name: "Weapons Failure",
+        quantity: 2,
+        type: "Ship",
+        id: 6
+      }, {
+        name: "Hull Breach",
+        quantity: 2,
+        type: "Ship",
+        id: 7
+      }, {
+        name: "Structural Damage",
+        quantity: 2,
+        type: "Ship",
+        id: 8
+      }, {
+        name: "Damaged Sensor Array",
+        quantity: 2,
+        type: "Ship",
+        id: 9
+      }, {
+        name: "Loose Stabilizer",
+        quantity: 2,
+        type: "Ship",
+        id: 10
+      }, {
+        name: "Disabled Power Regulator",
+        quantity: 2,
+        type: "Ship",
+        id: 11
+      }, {
+        name: "Fuel Leak",
+        quantity: 4,
+        type: "Ship",
+        id: 12
+      }, {
+        name: "Direct Hit!",
+        quantity: 5,
+        type: "Ship",
+        id: 13
+      }
     ]
   };
 };
 
 exportObj.setupCommonCardData = function(basic_cards) {
-  var card, cards, chassis, chassis_data, chassis_name, condition, condition_data, condition_name, e, expansion, i, name, pilot, pilot_data, pilot_name, ship_data, ship_name, source, upgrade, upgrade_data, upgrade_name, _base, _base1, _base10, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _base9, _i, _j, _k, _l, _len, _len1, _len10, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _name, _name1, _name10, _name2, _name3, _name4, _name5, _name6, _name7, _name8, _name9, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s;
+  var card, cards, chassis, chassis_data, chassis_name, condition, condition_data, condition_name, damage_data, e, expansion, i, name, pilot, pilot_data, pilot_name, ship_data, ship_name, source, upgrade, upgrade_data, upgrade_name, _base, _base1, _base10, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _base9, _i, _j, _k, _l, _len, _len1, _len10, _len11, _len12, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _name, _name1, _name10, _name2, _name3, _name4, _name5, _name6, _name7, _name8, _name9, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _s, _t, _u;
   _ref = basic_cards.pilotsById;
   for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
     pilot_data = _ref[i];
@@ -12828,10 +12901,17 @@ exportObj.setupCommonCardData = function(basic_cards) {
       throw new Error("ID mismatch: chassis at index " + i + " has ID " + chassis_data.id);
     }
   }
+  _ref4 = basic_cards.damageById;
+  for (i = _m = 0, _len4 = _ref4.length; _m < _len4; i = ++_m) {
+    damage_data = _ref4[i];
+    if (damage_data.id !== i) {
+      throw new Error("ID mismatch: damage card at index " + i + " has ID " + damage_data.id);
+    }
+  }
   exportObj.pilots = {};
-  _ref4 = basic_cards.pilotsById;
-  for (_m = 0, _len4 = _ref4.length; _m < _len4; _m++) {
-    pilot_data = _ref4[_m];
+  _ref5 = basic_cards.pilotsById;
+  for (_n = 0, _len5 = _ref5.length; _n < _len5; _n++) {
+    pilot_data = _ref5[_n];
     if (pilot_data.skip == null) {
       pilot_data.sources = [];
       if (pilot_data.canonical_name == null) {
@@ -12841,9 +12921,9 @@ exportObj.setupCommonCardData = function(basic_cards) {
     }
   }
   exportObj.upgrades = {};
-  _ref5 = basic_cards.upgradesById;
-  for (_n = 0, _len5 = _ref5.length; _n < _len5; _n++) {
-    upgrade_data = _ref5[_n];
+  _ref6 = basic_cards.upgradesById;
+  for (_o = 0, _len6 = _ref6.length; _o < _len6; _o++) {
+    upgrade_data = _ref6[_o];
     if (upgrade_data.skip == null) {
       upgrade_data.sources = [];
       if (upgrade_data.canonical_name == null) {
@@ -12853,9 +12933,9 @@ exportObj.setupCommonCardData = function(basic_cards) {
     }
   }
   exportObj.conditions = {};
-  _ref6 = basic_cards.conditionsById;
-  for (_o = 0, _len6 = _ref6.length; _o < _len6; _o++) {
-    condition_data = _ref6[_o];
+  _ref7 = basic_cards.conditionsById;
+  for (_p = 0, _len7 = _ref7.length; _p < _len7; _p++) {
+    condition_data = _ref7[_p];
     if (condition_data.skip == null) {
       if (condition_data.canonical_name == null) {
         condition_data.canonical_name = condition_data.name.canonicalize();
@@ -12864,9 +12944,9 @@ exportObj.setupCommonCardData = function(basic_cards) {
     }
   }
   exportObj.chassis = {};
-  _ref7 = basic_cards.chassisById;
-  for (_p = 0, _len7 = _ref7.length; _p < _len7; _p++) {
-    chassis_data = _ref7[_p];
+  _ref8 = basic_cards.chassisById;
+  for (_q = 0, _len8 = _ref8.length; _q < _len8; _q++) {
+    chassis_data = _ref8[_q];
     if (chassis_data.skip == null) {
       if (chassis_data.canonical_name == null) {
         chassis_data.canonical_name = chassis_data.name.canonicalize();
@@ -12874,20 +12954,32 @@ exportObj.setupCommonCardData = function(basic_cards) {
       exportObj.chassis[chassis_data.name] = chassis_data;
     }
   }
+  exportObj.damage = {};
+  _ref9 = basic_cards.damageById;
+  for (_r = 0, _len9 = _ref9.length; _r < _len9; _r++) {
+    damage_data = _ref9[_r];
+    if (damage_data.skip == null) {
+      if (damage_data.canonical_name == null) {
+        damage_data.canonical_name = damage_data.name.canonicalize();
+      }
+      exportObj.damage[damage_data.name] = damage_data;
+    }
+    damage_data.sources = [];
+  }
   exportObj.obstacles = {};
-  _ref8 = basic_cards.ships;
-  for (ship_name in _ref8) {
-    ship_data = _ref8[ship_name];
+  _ref10 = basic_cards.ships;
+  for (ship_name in _ref10) {
+    ship_data = _ref10[ship_name];
     if (ship_data.canonical_name == null) {
       ship_data.canonical_name = ship_data.name.canonicalize();
     }
     ship_data.sources = [];
   }
-  _ref9 = exportObj.manifestByExpansion;
-  for (expansion in _ref9) {
-    cards = _ref9[expansion];
-    for (_q = 0, _len8 = cards.length; _q < _len8; _q++) {
-      card = cards[_q];
+  _ref11 = exportObj.manifestByExpansion;
+  for (expansion in _ref11) {
+    cards = _ref11[expansion];
+    for (_s = 0, _len10 = cards.length; _s < _len10; _s++) {
+      card = cards[_s];
       if (card.skipForSource) {
         continue;
       }
@@ -12901,6 +12993,9 @@ exportObj.setupCommonCardData = function(basic_cards) {
             break;
           case 'ship':
             exportObj.ships[card.name].sources.push(expansion);
+            break;
+          case 'damage':
+            exportObj.damage[card.name].sources.push(expansion);
             break;
           case 'obstacle':
             if (!(card.name in exportObj.obstacles)) {
@@ -12920,26 +13015,26 @@ exportObj.setupCommonCardData = function(basic_cards) {
       }
     }
   }
-  _ref10 = exportObj.pilots;
-  for (name in _ref10) {
-    card = _ref10[name];
+  _ref12 = exportObj.pilots;
+  for (name in _ref12) {
+    card = _ref12[name];
     card.sources = card.sources.sort();
   }
-  _ref11 = exportObj.upgrades;
-  for (name in _ref11) {
-    card = _ref11[name];
+  _ref13 = exportObj.upgrades;
+  for (name in _ref13) {
+    card = _ref13[name];
     card.sources = card.sources.sort();
   }
   exportObj.expansions = {};
   exportObj.pilotsById = {};
-  _ref12 = exportObj.pilots;
-  for (pilot_name in _ref12) {
-    pilot = _ref12[pilot_name];
+  _ref14 = exportObj.pilots;
+  for (pilot_name in _ref14) {
+    pilot = _ref14[pilot_name];
     exportObj.fixIcons(pilot);
     exportObj.pilotsById[pilot.id] = pilot;
-    _ref13 = pilot.sources;
-    for (_r = 0, _len9 = _ref13.length; _r < _len9; _r++) {
-      source = _ref13[_r];
+    _ref15 = pilot.sources;
+    for (_t = 0, _len11 = _ref15.length; _t < _len11; _t++) {
+      source = _ref15[_t];
       if (!(source in exportObj.expansions)) {
         exportObj.expansions[source] = 1;
       }
@@ -12951,28 +13046,28 @@ exportObj.setupCommonCardData = function(basic_cards) {
   exportObj.pilotsByFactionCanonicalName = {};
   exportObj.pilotsByKeyword = {};
   exportObj.pilotsByUniqueName = {};
-  _ref14 = exportObj.pilots;
-  for (pilot_name in _ref14) {
-    pilot = _ref14[pilot_name];
+  _ref16 = exportObj.pilots;
+  for (pilot_name in _ref16) {
+    pilot = _ref16[pilot_name];
     ((_base = ((_base1 = exportObj.pilotsByFactionCanonicalName)[_name1 = pilot.faction] != null ? _base1[_name1] : _base1[_name1] = {}))[_name = pilot.canonical_name] != null ? _base[_name] : _base[_name] = []).push(pilot);
     ((_base2 = ((_base3 = exportObj.pilotsByKeyword)[_name3 = pilot.keyword] != null ? _base3[_name3] : _base3[_name3] = {}))[_name2 = pilot.canonical_name] != null ? _base2[_name2] : _base2[_name2] = []).push(pilot);
     ((_base4 = exportObj.pilotsByUniqueName)[_name4 = pilot.canonical_name.getXWSBaseName()] != null ? _base4[_name4] : _base4[_name4] = []).push(pilot);
   }
   exportObj.pilotsByFactionXWS = {};
-  _ref15 = exportObj.pilots;
-  for (pilot_name in _ref15) {
-    pilot = _ref15[pilot_name];
+  _ref17 = exportObj.pilots;
+  for (pilot_name in _ref17) {
+    pilot = _ref17[pilot_name];
     ((_base5 = ((_base6 = exportObj.pilotsByFactionXWS)[_name6 = pilot.faction] != null ? _base6[_name6] : _base6[_name6] = {}))[_name5 = pilot.xws] != null ? _base5[_name5] : _base5[_name5] = []).push(pilot);
   }
   exportObj.upgradesById = {};
-  _ref16 = exportObj.upgrades;
-  for (upgrade_name in _ref16) {
-    upgrade = _ref16[upgrade_name];
+  _ref18 = exportObj.upgrades;
+  for (upgrade_name in _ref18) {
+    upgrade = _ref18[upgrade_name];
     exportObj.fixIcons(upgrade);
     exportObj.upgradesById[upgrade.id] = upgrade;
-    _ref17 = upgrade.sources;
-    for (_s = 0, _len10 = _ref17.length; _s < _len10; _s++) {
-      source = _ref17[_s];
+    _ref19 = upgrade.sources;
+    for (_u = 0, _len12 = _ref19.length; _u < _len12; _u++) {
+      source = _ref19[_u];
       if (!(source in exportObj.expansions)) {
         exportObj.expansions[source] = 1;
       }
@@ -12985,18 +13080,18 @@ exportObj.setupCommonCardData = function(basic_cards) {
   exportObj.upgradesBySlotXWSName = {};
   exportObj.upgradesBySlotUniqueName = {};
   exportObj.upgradesByUniqueName = {};
-  _ref18 = exportObj.upgrades;
-  for (upgrade_name in _ref18) {
-    upgrade = _ref18[upgrade_name];
+  _ref20 = exportObj.upgrades;
+  for (upgrade_name in _ref20) {
+    upgrade = _ref20[upgrade_name];
     ((_base7 = exportObj.upgradesBySlotCanonicalName)[_name7 = upgrade.slot] != null ? _base7[_name7] : _base7[_name7] = {})[upgrade.canonical_name] = upgrade;
     ((_base8 = exportObj.upgradesBySlotXWSName)[_name8 = upgrade.slot] != null ? _base8[_name8] : _base8[_name8] = {})[upgrade.xws] = upgrade;
     ((_base9 = exportObj.upgradesBySlotUniqueName)[_name9 = upgrade.slot] != null ? _base9[_name9] : _base9[_name9] = {})[upgrade.canonical_name.getXWSBaseName()] = upgrade;
     ((_base10 = exportObj.upgradesByUniqueName)[_name10 = upgrade.canonical_name.getXWSBaseName()] != null ? _base10[_name10] : _base10[_name10] = []).push(upgrade);
   }
   exportObj.conditionsById = {};
-  _ref19 = exportObj.conditions;
-  for (condition_name in _ref19) {
-    condition = _ref19[condition_name];
+  _ref21 = exportObj.conditions;
+  for (condition_name in _ref21) {
+    condition = _ref21[condition_name];
     exportObj.fixIcons(condition);
     exportObj.conditionsById[condition.id] = condition;
   }
@@ -13004,9 +13099,9 @@ exportObj.setupCommonCardData = function(basic_cards) {
     throw new Error("At least one condition shares an ID with another");
   }
   exportObj.chassisById = {};
-  _ref20 = exportObj.chassis;
-  for (chassis_name in _ref20) {
-    chassis = _ref20[chassis_name];
+  _ref22 = exportObj.chassis;
+  for (chassis_name in _ref22) {
+    chassis = _ref22[chassis_name];
     exportObj.fixIcons(chassis);
     exportObj.chassisById[chassis.id] = chassis;
   }
@@ -13014,22 +13109,25 @@ exportObj.setupCommonCardData = function(basic_cards) {
     throw new Error("At least one chassis shares an ID with another");
   }
   exportObj.conditionsByCanonicalName = {};
-  _ref21 = exportObj.conditions;
-  for (condition_name in _ref21) {
-    condition = _ref21[condition_name];
+  _ref23 = exportObj.conditions;
+  for (condition_name in _ref23) {
+    condition = _ref23[condition_name];
     (exportObj.conditionsByCanonicalName != null ? exportObj.conditionsByCanonicalName : exportObj.conditionsByCanonicalName = {})[condition.canonical_name] = condition;
   }
   exportObj.chassisByCanonicalName = {};
-  _ref22 = exportObj.chassis;
-  for (chassis_name in _ref22) {
-    chassis = _ref22[chassis_name];
+  _ref24 = exportObj.chassis;
+  for (chassis_name in _ref24) {
+    chassis = _ref24[chassis_name];
     (exportObj.chassisByCanonicalName != null ? exportObj.chassisByCanonicalName : exportObj.chassisByCanonicalName = {})[chassis.canonical_name] = chassis;
   }
   return exportObj.expansions = Object.keys(exportObj.expansions).sort();
 };
 
-exportObj.setupTranslationCardData = function(pilot_translations, upgrade_translations, condition_translations, chassis_translations) {
-  var chassis_name, condition_name, e, field, pilot_name, translation, translations, upgrade_name, _results;
+exportObj.setupTranslationCardData = function(pilot_translations, upgrade_translations, condition_translations, chassis_translations, damage_translations) {
+  var chassis_name, condition_name, damage_name, e, field, pilot_name, translation, translations, upgrade_name, _results;
+  if (damage_translations == null) {
+    damage_translations = {};
+  }
   for (upgrade_name in upgrade_translations) {
     translations = upgrade_translations[upgrade_name];
     exportObj.fixIcons(translations);
@@ -13068,6 +13166,20 @@ exportObj.setupTranslationCardData = function(pilot_translations, upgrade_transl
       } catch (_error) {
         e = _error;
         console.error("Cannot find translation for attribute " + field + " for chassis " + chassis_name + ". Please report this Issue. ");
+        throw e;
+      }
+    }
+  }
+  for (damage_name in damage_translations) {
+    translations = damage_translations[damage_name];
+    exportObj.fixIcons(translations);
+    for (field in translations) {
+      translation = translations[field];
+      try {
+        exportObj.damage[damage_name][field] = translation;
+      } catch (_error) {
+        e = _error;
+        console.error("Cannot find translation for attribute " + field + " for damage card " + damage_name + ". Please report this Issue. ");
         throw e;
       }
     }
