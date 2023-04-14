@@ -100,7 +100,7 @@ exportObj.SquadBuilderBackend = (function() {
         icon: 'fab fa-facebook',
         text: 'Facebook'
       },
-      twitter2: {
+      twitter: {
         icon: 'fab fa-twitter',
         text: 'Twitter'
       },

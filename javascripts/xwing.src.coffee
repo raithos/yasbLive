@@ -47,7 +47,7 @@ class exportObj.SquadBuilderBackend
             facebook:
                 icon: 'fab fa-facebook'
                 text: 'Facebook'
-            twitter2:
+            twitter:
                 icon: 'fab fa-twitter'
                 text: 'Twitter'
             discord:
