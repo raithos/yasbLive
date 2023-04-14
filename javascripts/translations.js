@@ -23237,9 +23237,7 @@ exportObj.cardLoaders.Português = function() {
     "Tor Phun": {
       display_name: "Tor Phun",
       text: "Depois que você realizar um ataque, se o defensor foi destruído, você pode realizar uma ação, mesmo se estiver estressado. E então você pode receber 2 fichas de desgaste para realizar um ataque bônus."
-    }
-  };
-  ({
+    },
     "Cartel Marauder": {
       display_name: "Saqueador de Cartel",
       text: "<i class = flavor_text>A versátil Kihraxz foi projetada com base no popular caça estelar X-wing da Incom, porém uma série de kits de modificação garantiu uma gama enorme de variações.</i>"
@@ -24747,10 +24745,12 @@ exportObj.cardLoaders.Português = function() {
       display_name: "Jaycris Tubbs",
       text: "Após você executar completamente uma manobra azul, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, a nave escolhida remove 1 ficha de estresse."
     },
-    "Poe Dameron (AdE)": {
+    "Poe Dameron (HoH)": {
+      display_name: "Poe Dameron (AdE)",
       text: "Após uma nave amiga em alcance 0-2 realizar uma ação durante a ativação dela, você pode gastar 2 %CHARGE%. Se o fizer, a nave que realizou a ação pode realizar uma ação branca, tratando-a como vermelha."
     },
-    "Temmin Wexley (AdE)": {
+    "Temmin Wexley (HoH)": {
+      display_name: "Temmin Wexley (AdE)",
       text: "No início da Fase de Engajamento, cada X-wing T-70 amiga em alcance 0-3 pode receber 1 ficha de desgaste para virar sua melhoria %CONFIGURATION% equipada. Se a nave o fizer, ela ganha 1 ficha de cálculo."
     },
     "C'ai Threnalli": {
@@ -25129,7 +25129,7 @@ exportObj.cardLoaders.Português = function() {
       display_name: "Pre Vizsla",
       text: "Quando você estiver atacando, se a iniciativa do defensor for igual ou maior que a sua, você pode gastar 2 %CHARGE% para rolar 1 dado adicional."
     }
-  });
+  };
   upgrade_translations = {
     "Ahsoka Tano": {
       display_name: "Ahsoka Tano",
