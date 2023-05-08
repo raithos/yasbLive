@@ -8703,7 +8703,7 @@ Ship = (function() {
               }
               break;
             case "Slot":
-              if ((!this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]) && !upgrade_obj.occupiesAnUpgradeSlot(r[1])) || upgrade_obj.slot === "HardpointShip" || upgrade_obj.slot === "VersatileShip") {
+              if ((!this.hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]) && !(upgrade_obj != null ? typeof upgrade_obj.occupiesAnUpgradeSlot === "function" ? upgrade_obj.occupiesAnUpgradeSlot(r[1]) : void 0 : void 0)) || upgrade_obj.slot === "HardpointShip" || upgrade_obj.slot === "VersatileShip") {
                 return false;
               }
               break;
@@ -8769,6 +8769,9 @@ Ship = (function() {
         ship = _ref[_i];
         if (((ship != null ? ship.data : void 0) != null) && ship.data.name === this.data.name) {
           if ((upgrade_data.restrictions != null) && ship.restriction_check(upgrade_data.restrictions, upgrade_data) && !(((_ref1 = ship.pilot) != null ? _ref1.upgrades : void 0) != null)) {
+            if ((ship.pilot.loadout != null) && (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)) {
+              return false;
+            }
             slotfree = false;
             _ref2 = ship.upgrades;
             for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
@@ -8994,7 +8997,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7263
+                lineno: 7265
               })
             ]);
             __iced_deferrals._fulfill();
@@ -9153,7 +9156,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7357
+                  lineno: 7359
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -9164,8 +9167,8 @@ GenericAddon = (function() {
         });
       })(this)((function(_this) {
         return function() {
-          var _ref1, _ref2, _ref3;
-          if ((((_ref1 = _this.data) != null ? _ref1.standardized : void 0) != null) && !_this.ship.hasFixedUpgrades && (((((_ref2 = _this.data) != null ? _ref2.restrictions : void 0) != null) && _this.ship.restriction_check(_this.data.restrictions, _this.data)) || (((_ref3 = _this.data) != null ? _ref3.restrictions : void 0) == null))) {
+          var _ref1;
+          if ((((_ref1 = _this.data) != null ? _ref1.standardized : void 0) != null) && !_this.ship.hasFixedUpgrades) {
             _this.ship.removeStandardizedList(_this.data);
           }
           _this.rescindAddons();
@@ -9180,7 +9183,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7364
+                      lineno: 7366
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9194,7 +9197,7 @@ GenericAddon = (function() {
               return __iced_k();
             }
           })(function() {
-            var _ref4;
+            var _ref2;
             _this.data = _this.unadjusted_data = new_data;
             if (_this.data != null) {
               if (_this.data.superseded_by_id) {
@@ -9203,7 +9206,7 @@ GenericAddon = (function() {
               if (_this.adjustment_func != null) {
                 _this.data = _this.adjustment_func(_this.data);
               }
-              if (((_ref4 = _this.ship.pilot) != null ? _ref4.upgrades : void 0) == null) {
+              if (((_ref2 = _this.ship.pilot) != null ? _ref2.upgrades : void 0) == null) {
                 _this.unequipOtherUpgrades();
                 _this.occupyOtherUpgrades();
                 _this.conferAddons();
@@ -9311,7 +9314,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7429
+            lineno: 7431
           }));
         }
         __iced_deferrals._fulfill();
