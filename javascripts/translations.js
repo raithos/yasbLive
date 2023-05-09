@@ -6019,9 +6019,7 @@ exportObj.cardLoaders['Español'] = function() {
     "Braylen Stramm": {
       display_name: "Braylen Stramm",
       text: "Mientras te defiendes o efectúas un ataque, si estás bajo tensión, puedes volver a tirar hasta 2 de tus dados."
-    }
-  };
-  ({
+    },
     "Captain Cardinal": {
       display_name: "Capitán Cardenal",
       text: "Mientras una nave aliada que tienes a alcance 1-2 y cuya Iniciativa es menor que la tuya se defiende o efectúa un ataque, si tienes al menos 1 %CHARGE%, esa nave puede volver a tirar 1 resultado %FOCUS%.%LINEBREAK%Después de que una nave enemiga que tengas a alcance 0-3 sea destruida, pierdes 1 %CHARGE%."
@@ -7217,7 +7215,7 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "“Zeb” Orrelios (TIE Fighter)",
       text: "Mientras te defiendes, los resultados %CRIT% se neutralizan antes que los resultados %HIT%."
     }
-  });
+  };
   upgrade_translations = {
     "0-0-0": {
       display_name: "0-0-0",
@@ -7482,9 +7480,7 @@ exportObj.cardLoaders['Español'] = function() {
     "Crack Shot": {
       display_name: "Tiro certero",
       text: "Mientras efectúas un ataque principal, si el defensor está en tu %BULLSEYEARC%, antes del paso de “Neutralizar los resultados”, puedes gastar 1&nbsp;%CHARGE% para anular 1 resultado %EVADE%."
-    }
-  };
-  ({
+    },
     "DRK-1 Probe Droids": {
       display_name: "DRK-1 Probe Droids",
       text: "Durante la fase Final, puedes gastar 1 %CHARGE% para soltar o lanzar 1 droide sonda DRK-1 utilizando una plantilla de velocidad 3.%LINEBREAK%Las %CHARGE% de esta carta no pueden recuperarse."
@@ -8162,7 +8158,7 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "“Zeb” Orrelios",
       text: "<i>Sólo Rebelde</i>%LINEBREAK%Eres capaz de efectuar ataques principales a alcance 0. Las naves enemigas que tengas a alcance 0 son capaces de efectuar ataques principales contra ti."
     }
-  });
+  };
   condition_translations = {
     'Suppressive Fire': {
       display_name: "Fuego de supresión",
