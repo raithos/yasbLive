@@ -23935,7 +23935,7 @@ exportObj.translations.Português = {
     "shipSelectorPlaceholder": "Selecione uma Nave",
     "pilotSelectorPlaceholder": "Selecione um Piloto",
     upgradePlaceholder: function(translator, slot) {
-      return "Sem " + (translator('slot', slot)) + " Melhoria";
+      return "Sem Melhoria  " + (translator('slot', slot));
     },
     "modificationPlaceholder": "Sem Modificação",
     "titlePlaceholder": "Sem Título",
@@ -24005,7 +24005,7 @@ exportObj.translations.Português = {
     "Name in use": "Você já possui um esquadrão com esse nome",
     "select OAuth provider": "Selecione um dos provedores Oauth para entrar e começar a salvar esquadrões.",
     "OAuth explanation": "<p>\n    <a href=\"http://en.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> é um sistema de de autorização que permite que você prove sua identeidade em um site sem precisar criar uma nova conta. Ao invés disso, você pede para que algum provedor em que já possua uma conta (ex. Google ou Facebook) prove para este site que você é quem diz ser. Dessa forma, da próxima vez que você visitar, este site vai se lembrar que você é aquele usuário do Google.\n</p>\n<p>\n    A melhor parte disso é que você não precisa criar um novo nome de usuário ou se lembrar de outra senha. e não se preocupe, eu não vou coletar quaisquer dados seus do provedors about you. Eu defini o escopo de dados para o menor possível, mas alguns lugares enviam no mínimo um punhado de dados. Eu os descarto. Tudo o que eu olho é um identificador único (normalmente um número gigante).\n</p>\n<p>\n    Para mais informações, leia isso <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">introduction to OAuth</a>.\n</p>",
-    "Intro Card YASB": "<h2>YASB para X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) é uma forma simples, rápida e fácil de construir esquadrões para o X-Wing Miniatures da <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<p>Current Version: 11/25/2022</p>\n<h5>Creditos</h5>\n<p>Feito a partir do maravilhoso original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB é atualizado e mantido por Stephen Kim.</p>\n<p>Créditos adicionais:<br>\nDados de Atualização 2.5: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\nDados de Lançamento 2.0: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nEquipe de Tradução: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke<br>\nLogo do site: Thomas Kohler<br>\nSuporte de Quick Build: Patrick Mischke</p>\n<p>Este construtor não é oficial e não está afiliado a Atomic Mass Games, Lucasfilm Ltd., ou Disney.</p>\n<p>Este site sempre será gratuito, e sempre estára 100% para que todos possam usá-lo. Entretanto, se você quiser doar, há um botão preparado para você.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Faça uma Doação</button> <button class=\"btn btn-primary paypal\" onclick=\"window.open('https://www.patreon.com/raithos');\">Patreon</button></p>",
+    "Intro Card YASB": "<h2>YASB para X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) é uma forma simples, rápida e fácil de construir esquadrões para o X-Wing Miniatures da <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<p>Current Version: 11/25/2022</p>\n<h5>Creditos</h5>\n<p>Feito a partir do maravilhoso original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB é atualizado e mantido por Stephen Kim.</p>\n<p>Créditos adicionais:<br>\nDados de Atualização 2.5: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\nDados de Lançamento 2.0: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nEquipe de Tradução: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke, Rodrigo Marshal, Shavarski<br>\nLogo do site: Thomas Kohler<br>\nSuporte de Quick Build: Patrick Mischke</p>\n<p>Este construtor não é oficial e não está afiliado a Atomic Mass Games, Lucasfilm Ltd., ou Disney.</p>\n<p>Este site sempre será gratuito, e sempre estára 100% disponível para que todos possam usá-lo. Entretanto, se você quiser doar, há um botão preparado para você.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Faça uma Doação</button> <button class=\"btn btn-primary paypal\" onclick=\"window.open('https://www.patreon.com/raithos');\">Patreon</button></p>",
     "Continue to OAuth provider": "Isto abrirá uma nova janela para permitir que você autentique com o provedor escolhido. Você talvez precise permitir pop ups para este site.",
     "iOS requires cross-site control": "Devido a um novo recurso no sistema iOS o OAuth não irá funcionar a menos que você habilite \"cross-site control\".",
     "login in progress": "OAuth login em progresso. Por favor finalize a autorização no provedor específico usando a janela que acabou de ser criada.",
@@ -24230,6 +24230,14 @@ exportObj.translations.Português = {
     'modifications': 'Modificação',
     'titles': 'Título',
     'ships': 'Nave'
+  },
+  gameterms: {
+    'Small': 'Pequena',
+    'Medium': 'Média',
+    'Large': 'Grande',
+    'Huge': 'Enorme',
+    'Solitary': 'Solitário',
+    'Standardized': 'Padronizada'
   },
   types: {
     'Pilot': 'Piloto',
@@ -24855,7 +24863,7 @@ exportObj.cardLoaders.Português = function() {
     },
     "Fenn Rau": {
       display_name: "Fenn Rau",
-      text: "Quando você defender ou realizar um ataque, se o alcance do ataque for 1, você pode rolar 1 dado de ataque adicional."
+      text: "Quando você defender ou realizar um ataque, se o alcance do ataque for 1, você pode rolar 1 dado adicional."
     },
     "Mandalorian Royal Guard": {
       display_name: "Guarda Real Mandaloriana",
@@ -27097,6 +27105,10 @@ exportObj.cardLoaders.Português = function() {
       display_name: "Alpha-3E “Esk”",
       text: "Quando você realizar um ataque primário, antes de rolar os dados de ataque, você pode gastar 2 %CHARGE%. Se o fizer, seus resultados %CRIT% atribuem fichas de íon ao invés de causarem dano."
     },
+    "Swivel Wing": {
+      display_name: "Asas Giratórias",
+      text: "<strong>Asa Giratória (Abaixada)</strong> %LINEBREAK% Depois que você realizar uma manobra [0 %STOP%], você pode rotacionar sua nave 90º ou 180º. Se o fizer, você <b>deve</b> virar esta carta. %LINEBREAK% <strong>Asa Giratória (Erguida)</strong> %LINEBREAK% Quando você defender, role 1 dado de defesa a menos. %LINEBREAK% Depois que você realizar completamente uma manobra não estácionária [%STOP%], você pode virar esta carta."
+    },
     "Pivot Wing": {
       display_name: "Asas Pivotantes",
       text: "<strong>Fechadas: </strong>Quando você defender, role 1 dado de defesa a menos. %LINEBREAK%Após você executar uma manobra (0 %STOP%), você pode rotacionar sua nave 90º ou 180º.%LINEBREAK%Antes de você ativar, você pode virar esta carta.%LINEBREAK%<strong>Abertas:</Strong> Antes de você ativar, você pode virar esta carta."
@@ -27534,7 +27546,7 @@ exportObj.cardLoaders.Português = function() {
     },
     "Composure": {
       display_name: "Compostura",
-      text: "Depois que você falar uma ação, se você não possuir fichas verdes, você pode realizar uma ação %FOCUS% Se o fizer, você não pode realizar ações adicionais nesta rodada.%LINEBREAK% <i>Errata (desde RR 1.1.0): Adicionado \"Se o fizer, você não pode realizar ações adicionais nesta rodada.\"</i>"
+      text: "Depois que você falhar uma ação, se você não possuir fichas verdes, você pode realizar uma ação %FOCUS% Se o fizer, você não pode realizar ações adicionais nesta rodada.%LINEBREAK% <i>Errata (desde RR 1.1.0): Adicionado \"Se o fizer, você não pode realizar ações adicionais nesta rodada.\"</i>"
     },
     "Debris Gambit": {
       display_name: "Contornar Destroços",
@@ -28364,11 +28376,11 @@ exportObj.cardLoaders.Português = function() {
     },
     "R5-D8 (BoY)": {
       display_name: "R5-D8",
-      text: "<strong>Ação:</strong> Gaste 1 %CHARGE% para consertar 1 carta de dano virada para baixo. %LINEBREAK% <strong>Ação:</strong> Conserte 1 carta de dano virada para cima do tipo <strong>Ship</strong>."
+      text: "<strong>Ação:</strong> Gaste 1 %CHARGE% para consertar 1 carta de dano virada para baixo. %LINEBREAK% <strong>Ação:</strong> Conserte 1 carta de dano virada para cima do tipo <strong>Nave</strong>."
     },
     "R5-K6 (BoY)": {
       display_name: "R5-K6",
-      text: "<strong>Ação:</strong> Gaste 1 %CHARGE% para consertar 1 carta de dano virada para baixo. %LINEBREAK% <strong>Ação:</strong> Conserte 1 carta de dano virada para cima do tipo <strong>Ship</strong>."
+      text: "<strong>Ação:</strong> Gaste 1 %CHARGE% para consertar 1 carta de dano virada para baixo. %LINEBREAK% <strong>Ação:</strong> Conserte 1 carta de dano virada para cima do tipo <strong>Nave</strong>."
     },
     "Precise Astromech (BoY)": {
       display_name: "Astromecânico Preciso",
