@@ -3169,7 +3169,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/sa Bomber",
         skill: 4,
-        points: 5,
+        points: 4,
         loadout: 10,
         slots: ["Talent", "Torpedo", "Missile", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
@@ -3199,7 +3199,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/sa Bomber",
         skill: 2,
-        points: 4,
+        points: 3,
         loadout: 11,
         slots: ["Torpedo", "Torpedo", "Missile", "Gunner", "Device", "Modification"]
       }, {
