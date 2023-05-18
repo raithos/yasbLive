@@ -2474,7 +2474,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Lapin": {
       display_name: "Lapin",
-      text: "While you defend or perform an attack, if the enemy ship is stressed, that ship's dice cannot be modified."
+      text: "While you defend or perform an attack, if the enemy ship is stressed, that ship's dice cannot be modified. %LINEBREAK% <i>Errata (since rules reference 1.4.5): Changed Initiative value on the card to match the correct value on the ship token."
     },
     "Volan Das": {
       display_name: "Volan Das",
@@ -2494,7 +2494,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Kelrodo-Ai Holdout": {
       display_name: "Kelrodo-Ai Holdout",
-      text: "After you are destroyed, you may transfer each of your locks and green tokens to another friendly Kelrodo-Ai Holdout at range 0-3"
+      text: "After you are destroyed, you may transfer each of your locks and green tokens to another friendly Kelrodo-Ai Holdout at range 0-3 %LINEBREAK% <i>Errata (since rules reference 1.4.5): Changed Initiative value on the card to match the correct value on the ship token."
     },
     "Lieutenant Galek": {
       display_name: "Lieutenant Galek",
@@ -4473,7 +4473,7 @@ exportObj.cardLoaders.English = function() {
       text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0-1 suffers 1 %CRIT% damage.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
     },
     'Seismic Charge': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, choose 1 obstacle at range 0-1. Each ship and remote at range 0-1 of the obstacle suffers 1 %HIT% damage. Then remove that obstacle.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i> '
+      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, choose 1 obstacle at range 0-1. The obstacle deals 1 %HIT% damage to each ship and remote at range 0-1. Then remove that obstacle.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i> '
     },
     'Bomblet': {
       text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0-1 rolls 2 attack dice. Each ship and remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
