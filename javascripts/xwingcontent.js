@@ -5142,7 +5142,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 7,
         force: 2,
-        slots: ["Force", "Talent", "Sensor", "Cannon"]
+        slots: ["Force", "Talent", "Sensor", "Missile"]
       }, {
         name: '"Vagabond"',
         id: 395,
