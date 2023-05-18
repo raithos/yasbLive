@@ -7891,6 +7891,9 @@ exportObj.basicCardData = function() {
         points: 6,
         force: 3,
         keyword: ["Dark Side", "Sith"],
+        ship_override: {
+          shields: 3
+        },
         upgrades: []
       }, {
         name: "Maarek Stele (SSP)",
@@ -7902,7 +7905,7 @@ exportObj.basicCardData = function() {
         ship: "TIE Advanced x1",
         skill: 5,
         points: 6,
-        upgrades: []
+        upgrades: ["Elusive", "Outmaneuver", "Afterburners"]
       }, {
         name: "Captain Jonus (SSP)",
         canonical_name: 'Captain Jonus'.canonicalize(),
@@ -7968,7 +7971,7 @@ exportObj.basicCardData = function() {
         ship: "BTL-A4 Y-wing",
         skill: 4,
         points: 4,
-        upgrades: []
+        upgrades: ["Ion Cannon Turret", "Proton Bombs"]
       }, {
         name: "Horton Salm (SSP)",
         canonical_name: 'Horton Salm'.canonicalize(),
@@ -8022,6 +8025,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 5,
+        force: 2,
         points: 6,
         upgrades: []
       }, {
