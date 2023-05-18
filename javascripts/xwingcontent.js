@@ -3549,7 +3549,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/sf Fighter",
         skill: 4,
         points: 4,
-        loadout: 12,
+        loadout: 5,
         slots: ["Talent", "Sensor", "Tech", "Missile", "Gunner", "Modification"]
       }, {
         name: '"Quickdraw"',
@@ -3996,7 +3996,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/sf Fighter",
         skill: 3,
         points: 4,
-        loadout: 10,
+        loadout: 3,
         slots: ["Tech", "Missile", "Gunner", "Sensor", "Modification"]
       }, {
         name: "Sienar-Jaemus Engineer",
@@ -5041,7 +5041,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         ship: "TIE/sf Fighter",
         points: 4,
-        loadout: 14,
+        loadout: 6,
         slots: ["Talent", "Sensor", "Tech", "Missile", "Gunner", "Modification", "Modification"]
       }, {
         name: '"Rush"',
@@ -5183,8 +5183,8 @@ exportObj.basicCardData = function() {
         unique: true,
         skill: 4,
         ship: "Z-95-AF4 Headhunter",
-        points: 3,
-        loadout: 10,
+        points: 2,
+        loadout: 3,
         keyword: ["Bounty Hunter"],
         chassis: "Pursuit Craft",
         slots: ["Talent", "Talent", "Missile", "Illicit", "Modification"]
@@ -5324,7 +5324,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 15,
         keyword: ["Droid"],
-        slots: ["Missile", "Crew", "Device", "Modification", "Configuration"]
+        slots: ["Missile", "Missile", "Crew", "Device", "Modification", "Configuration"]
       }, {
         name: "212th Battalion Pilot",
         id: 412,
@@ -5683,8 +5683,8 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         ship: "T-70 X-wing",
         skill: 4,
-        points: 6,
-        loadout: 17,
+        points: 5,
+        loadout: 13,
         slots: ["Talent", "Tech", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Merl Cobben",
@@ -5783,7 +5783,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 5,
-        slots: ["Talent", "Talent", "Missile", "Modification", "Configuration"]
+        slots: ["Talent", "Talent", "Modification", "Configuration"]
       }, {
         name: "Sabine Wren (A-Wing)",
         canonical_name: 'Sabine Wren'.canonicalize(),
@@ -6536,7 +6536,7 @@ exportObj.basicCardData = function() {
         loadout: 16,
         unique: true,
         keyword: ["Droid"],
-        slots: ["Crew", "Crew", "Cannon", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
+        slots: ["Crew", "Cannon", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "The Mandalorian",
         id: 522,
@@ -6605,8 +6605,8 @@ exportObj.basicCardData = function() {
         ship: "Delta-7b Aethersprite",
         skill: 4,
         force: 3,
-        points: 6,
-        loadout: 8,
+        points: 5,
+        loadout: 7,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Astromech", "Modification"]
       }, {
@@ -6950,7 +6950,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 5,
-        points: 6,
+        points: 5,
         force: 2,
         chassis: "Hope",
         upgrades: ["Instinctive Aim", "Attack Speed (BoY)", "Proton Torpedoes", "R2-D2 (BoY)"]
@@ -7048,7 +7048,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "BTL-A4 Y-wing",
         skill: 4,
-        points: 4,
+        points: 3,
         chassis: "Hope",
         upgrades: ["Dorsal Turret", "Adv. Proton Torpedoes", "Precise Astromech (BoY)"]
       }, {
