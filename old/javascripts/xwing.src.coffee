@@ -59,6 +59,7 @@ class exportObj.SquadBuilderBackend
         @show_archived = false
 
         @collection_save_timer = null
+        @collection_reset_timer = null
 
         @setupHandlers()
         @setupUI()
@@ -453,6 +454,12 @@ class exportObj.SquadBuilderBackend
         @unsaved_modal.data 'builder', builder
         @unsaved_modal.data 'callback', action
         @unsaved_modal.modal 'show'
+
+    warnCollectionReset: (builder, action) ->
+        @reset_collection_modal.data 'builder', builder
+        @reset_collection_modal.data 'callback', action
+        @reset_collection_modal.modal 'show'
+
 
     setupUI: () ->
         @auth_status.addClass 'disabled'
@@ -919,7 +926,42 @@ class exportObj.SquadBuilderBackend
             @unsaved_modal.data('builder').current_squad.dirty = false
             @unsaved_modal.data('callback')()
             @unsaved_modal.modal 'hide'
-            
+
+
+        @reset_collection_modal = $ document.createElement('DIV')
+        @reset_collection_modal.addClass 'modal fade d-print-none'
+        @reset_collection_modal.tabindex = "-1"
+        @reset_collection_modal.role = "dialog"
+        $(document.body).append @reset_collection_modal
+        @reset_collection_modal.append $.trim """
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="translated" defaultText="Reset Collection"></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="translated" defaultText="Reset Collection Warning"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-modal btn-primary translated" aria-hidden="true" data-dismiss="modal" defaultText="Go Back"></button>
+                <button class="btn btn-danger resetcollection translated" aria-hidden="true" defaultText="Reset Collection"></button>
+            </div>
+        </div>
+    </div>
+        """
+        @reset_collection_modal = $ @reset_collection_modal.find('button.resetcollection')
+        @reset_collection_modal.click (e) =>
+            e.preventDefault()
+            clearTimeout(@collection_reset_timer) if @collection_reset_timer?
+            @collection_reset_timer = setTimeout =>
+                @resetCollection collection, (res) ->
+                    if res
+                        $(window).trigger 'xwing-collection:saved', collection
+            , 1000
+
+
+
         # this is dynamically created UI, so we need to translate it after creation
         exportObj.translateUIElements(@unsaved_modal)
 
@@ -1016,7 +1058,15 @@ class exportObj.SquadBuilderBackend
         else
             @collectioncheck = true
             cb true
-                
+
+    resetCollection: (collection, cb=$.noop) ->
+        post_args =
+            expansions: {}
+            singletons: {}
+            checks: {}
+        $.post("#{@server}/collection", post_args).done (data, textStatus, jqXHR) ->
+            cb data.success
+
     saveCollection: (collection, cb=$.noop) ->
         post_args =
             expansions: collection.expansions
@@ -1046,7 +1096,7 @@ exportObj = exports ? this
 
 # Assumes cards.js has been loaded
 
-TYPES = [ 'pilots', 'upgrades', 'ships' ]
+TYPES = [ 'pilots', 'upgrades', 'ships', 'damage' ]
 
 byName = (a, b) ->
     if a.display_name
@@ -1160,7 +1210,7 @@ class exportObj.CardBrowser
                                         </label>
                                         <br />
                                         <label class = "advanced-search-label toggle-unique">
-                                            <input type="checkbox" class="duplicate-slots-checkbox advanced-search-checkbox" /> #{exportObj.translate('ui', "Has multiple of the chosen slots")}
+                                            <input type="checkbox" class="duplicate-slots-checkbox advanced-search-checkbox" /> <span class="translated" defaultText="Has multiple of the chosen slots"></span> 
                                         </label>
                                     </div>
                                     <div class = "advanced-search-keyword-available-container">
@@ -1485,7 +1535,7 @@ class exportObj.CardBrowser
 
         exportObj.translateUIElements(@container)
 
-
+    
 
     setupHandlers: () ->
         @sort_selector.change (e) =>
@@ -1506,54 +1556,56 @@ class exportObj.CardBrowser
             @collection = null
 
         @card_search_text.oninput = => @renderList @sort_selector.val()
-        # TODO: Add a call to @renderList for added inputs, to start the actual search
-        
-        @faction_selection[0].onchange = => @renderList @sort_selector.val()
+
+        # I find myself often searching for just text. To speed this up, we skip
+        # everything else until the first one is changed        
+        @skip_nontext_search = true
+        @faction_selection[0].onchange = => @renderList_advanced @sort_selector.val()
         for basesize, checkbox of @base_size_checkboxes
-            checkbox.onclick = => @renderList @sort_selector.val()
-        @minimum_point_costs.oninput = => @renderList @sort_selector.val()
-        @maximum_point_costs.oninput = => @renderList @sort_selector.val()
-        @minimum_loadout_costs.oninput = => @renderList @sort_selector.val()
-        @maximum_loadout_costs.oninput = => @renderList @sort_selector.val()
-        @standard_checkbox.onclick = => @renderList @sort_selector.val()
-        @unique_checkbox.onclick = => @renderList @sort_selector.val()
-        @non_unique_checkbox.onclick = => @renderList @sort_selector.val()
-        @slot_available_selection[0].onchange = => @renderList @sort_selector.val()
-        @keyword_available_selection[0].onchange = => @renderList @sort_selector.val()
-        @duplicateslots.onclick = => @renderList @sort_selector.val()
-        @action_available_selection[0].onchange = => @renderList @sort_selector.val()
-        @linkedaction_available_selection[0].onchange = => @renderList @sort_selector.val()
-        @slot_used_selection[0].onchange = => @renderList @sort_selector.val()
-        @slot_used_second_selection[0].onchange = => @renderList @sort_selector.val()
-        @not_recurring_charge.onclick = => @renderList @sort_selector.val()
-        @recurring_charge.onclick = => @renderList @sort_selector.val()
-        @hassecondslot.onclick = => @renderList @sort_selector.val()
-        @minimum_charge.oninput = => @renderList @sort_selector.val()
-        @maximum_charge.oninput = => @renderList @sort_selector.val()
-        @minimum_ini.oninput = => @renderList @sort_selector.val()
-        @maximum_ini.oninput = => @renderList @sort_selector.val()
-        @minimum_hull.oninput = => @renderList @sort_selector.val()
-        @maximum_hull.oninput = => @renderList @sort_selector.val()
-        @minimum_force.oninput = => @renderList @sort_selector.val()
-        @maximum_force.oninput = => @renderList @sort_selector.val()
-        @minimum_shields.oninput = => @renderList @sort_selector.val()
-        @maximum_shields.oninput = => @renderList @sort_selector.val()
-        @minimum_agility.oninput = => @renderList @sort_selector.val()
-        @maximum_agility.oninput = => @renderList @sort_selector.val()
-        @minimum_attack.oninput = => @renderList @sort_selector.val()
-        @maximum_attack.oninput = => @renderList @sort_selector.val()
-        @minimum_attackt.oninput = => @renderList @sort_selector.val()
-        @maximum_attackt.oninput = => @renderList @sort_selector.val()
-        @minimum_attackdt.oninput = => @renderList @sort_selector.val()
-        @maximum_attackdt.oninput = => @renderList @sort_selector.val()
-        @minimum_attackf.oninput = => @renderList @sort_selector.val()
-        @maximum_attackf.oninput = => @renderList @sort_selector.val()
-        @minimum_attackb.oninput = => @renderList @sort_selector.val()
-        @maximum_attackb.oninput = => @renderList @sort_selector.val()
-        @minimum_attackbull.oninput = => @renderList @sort_selector.val()
-        @maximum_attackbull.oninput = => @renderList @sort_selector.val()
-        @minimum_owned_copies.oninput = => @renderList @sort_selector.val()
-        @maximum_owned_copies.oninput = => @renderList @sort_selector.val()
+            checkbox.onclick = => @renderList_advanced @sort_selector.val()
+        @minimum_point_costs.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_point_costs.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_loadout_costs.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_loadout_costs.oninput = => @renderList_advanced @sort_selector.val()
+        @standard_checkbox.onclick = => @renderList_advanced @sort_selector.val()
+        @unique_checkbox.onclick = => @renderList_advanced @sort_selector.val()
+        @non_unique_checkbox.onclick = => @renderList_advanced @sort_selector.val()
+        @slot_available_selection[0].onchange = => @renderList_advanced @sort_selector.val()
+        @keyword_available_selection[0].onchange = => @renderList_advanced @sort_selector.val()
+        @duplicateslots.onclick = => @renderList_advanced @sort_selector.val()
+        @action_available_selection[0].onchange = => @renderList_advanced @sort_selector.val()
+        @linkedaction_available_selection[0].onchange = => @renderList_advanced @sort_selector.val()
+        @slot_used_selection[0].onchange = => @renderList_advanced @sort_selector.val()
+        @slot_used_second_selection[0].onchange = => @renderList_advanced @sort_selector.val()
+        @not_recurring_charge.onclick = => @renderList_advanced @sort_selector.val()
+        @recurring_charge.onclick = => @renderList_advanced @sort_selector.val()
+        @hassecondslot.onclick = => @renderList_advanced @sort_selector.val()
+        @minimum_charge.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_charge.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_ini.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_ini.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_hull.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_hull.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_force.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_force.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_shields.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_shields.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_agility.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_agility.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_attack.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_attack.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_attackt.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_attackt.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_attackdt.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_attackdt.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_attackf.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_attackf.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_attackb.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_attackb.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_attackbull.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_attackbull.oninput = => @renderList_advanced @sort_selector.val()
+        @minimum_owned_copies.oninput = => @renderList_advanced @sort_selector.val()
+        @maximum_owned_copies.oninput = => @renderList_advanced @sort_selector.val()
 
 
 
@@ -1563,6 +1615,8 @@ class exportObj.CardBrowser
         for type in TYPES
             if type == 'upgrades'
                 @all_cards = @all_cards.concat ( { name: card_data.name, display_name: card_data.display_name, type: exportObj.translate('ui', 'upgradeHeader', card_data.slot), data: card_data, orig_type: card_data.slot } for card_name, card_data of exportObj[type] )
+            else if type == 'damage'
+                @all_cards = @all_cards.concat ( { name: card_data.name, display_name: card_data.display_name, type: exportObj.translate('ui', 'damageHeader', card_data.type), data: card_data, orig_type: "Damage" } for card_name, card_data of exportObj[type] )
             else
                 @all_cards = @all_cards.concat ( { name: card_data.name, display_name: card_data.display_name, type: exportObj.translate('singular', type), data: card_data, orig_type: exportObj.translateToLang('English','singular', type) } for card_name, card_data of exportObj[type] )
 
@@ -1570,6 +1624,10 @@ class exportObj.CardBrowser
         for card_name, card_data of exportObj.upgrades
             upgrade_text = exportObj.translate 'ui', 'upgradeHeader', card_data.slot
             @types.push upgrade_text if upgrade_text not in @types
+        for card_name, card_data of exportObj.damage
+            upgrade_text = exportObj.translate 'ui', 'damageHeader', card_data.type
+            @types.push upgrade_text if upgrade_text not in @types
+        
 
         @all_cards.sort byName
 
@@ -1594,6 +1652,9 @@ class exportObj.CardBrowser
         for source in sorted_sources
             @cards_by_source[source] = ( card for card in @all_cards when source in card.data.sources ).sort byName
 
+    renderList_advanced: (sort_by='name') ->
+        @skip_nontext_search = false
+        @renderList sort_by
 
     renderList: (sort_by='name') ->
         # sort_by is one of `name`, `type-by-name`, `source`, `type-by-points`
@@ -1608,6 +1669,8 @@ class exportObj.CardBrowser
             @card_selector.addClass 'card-selector'
             @card_selector.attr 'size', 25
             @card_selector_container.append @card_selector
+
+        @setupSearch()
 
         switch sort_by
             when 'type-by-name'
@@ -1663,7 +1726,7 @@ class exportObj.CardBrowser
         data = card.data 'card'
         orig_type = card.data 'orig_type'
 
-        if not (orig_type in ['Pilot', 'Ship', 'Quickbuild'])
+        if not (orig_type in ['Pilot', 'Ship', 'Quickbuild', 'Damage'])
             add_opts = {addon_type: orig_type}
             orig_type = 'Addon'
 
@@ -1693,7 +1756,7 @@ class exportObj.CardBrowser
 
     addCardTo: (container, card) ->
         option = $ document.createElement('OPTION')
-        option.text "#{if card.display_name then card.display_name else card.name} (#{if card.data.points? then card.data.points else '*'}#{if card.data.loadout? then "/#{card.data.loadout}" else ''})"
+        option.text "#{if card.display_name then card.display_name else card.name} (#{if card.data.points? then card.data.points else (if card.data.quantity? then card.data.quantity+'x' else '*')}#{if card.data.loadout? then "/#{card.data.loadout}" else ''})"
         option.data 'name', card.name
         option.data 'display_name', card.display_name
         option.data 'type', card.type
@@ -1717,30 +1780,48 @@ class exportObj.CardBrowser
                 owned_copies = exportObj.builders[7].collection.counts.upgrade?[card.name] ? 0
         owned_copies
 
+    setupSearch: () ->
+        # do some stuff like fetching text inputs only once, as running it for each card is time consuming
+        @searchInputs = {
+            "text": @card_search_text.value.toLowerCase()
+            "factions": @faction_selection.val()            
+            "required_slots": @slot_available_selection.val()
+            "required_actions": @action_available_selection.val()
+            "required_linked_actions": @linkedaction_available_selection.val()
+            "required_keywords": @keyword_available_selection.val()
+            "used_slots": @slot_used_selection.val()
+            "used_second_slots": @slot_used_second_selection.val()
+        }
+
+        if "Factionless" in @searchInputs.factions
+            @searchInputs.factions.push undefined
+
 
     checkSearchCriteria: (card) ->
         # check for text search
-        search_text = @card_search_text.value.toLowerCase()
-        text_search = card.name.toLowerCase().indexOf(search_text) > -1 or (card.data.text and card.data.text.toLowerCase().indexOf(search_text) > -1) or (card.display_name and card.display_name.toLowerCase().indexOf(search_text) > -1)
-        
-        if not text_search
-            return false unless card.data.ship
-            ship = card.data.ship
-            if ship instanceof Array
-                text_in_ship = false
-                for s in ship
-                    if s.toLowerCase().indexOf(search_text) > -1 or (exportObj.ships[s].display_name and exportObj.ships[s].display_name.toLowerCase().indexOf(search_text) > -1)
-                        text_in_ship = true
-                        break
-                return false unless text_in_ship
-            else
-                return false unless ship.toLowerCase().indexOf(search_text) > -1 or (exportObj.ships[ship].display_name and exportObj.ships[ship].display_name.toLowerCase().indexOf(search_text) > -1)
+        if @searchInputs.text?
+            text_search = card.name.toLowerCase().indexOf(@searchInputs.text) > -1 or (card.data.text and card.data.text.toLowerCase().indexOf(@searchInputs.text) > -1) or (card.display_name and card.display_name.toLowerCase().indexOf(@searchInputs.text) > -1)
+            
+            if not text_search
+                return false unless card.data.ship
+                ship = card.data.ship
+                if ship instanceof Array
+                    text_in_ship = false
+                    for s in ship
+                        if s.toLowerCase().indexOf(@searchInputs.text) > -1 or (exportObj.ships[s].display_name and exportObj.ships[s].display_name.toLowerCase().indexOf(@searchInputs.text) > -1)
+                            text_in_ship = true
+                            break
+                    return false unless text_in_ship
+                else
+                    return false unless ship.toLowerCase().indexOf(@searchInputs.text) > -1 or (exportObj.ships[ship].display_name and exportObj.ships[ship].display_name.toLowerCase().indexOf(@searchInputs.text) > -1)
     
+        # if no search field has changed, we are done here. 
+        if @skip_nontext_search
+            return true
+
         all_factions = (faction for faction, pilot of exportObj.pilotsByFactionXWS)
-        selected_factions = @faction_selection.val()
+        selected_factions = @searchInputs.factions
         if selected_factions.length > 0
-            if "Factionless" in selected_factions
-                selected_factions.push undefined
             return false unless card.data.faction in selected_factions or card.orig_type == 'Ship' or card.data.faction instanceof Array
             if card.data.faction instanceof Array
                faction_matches = false
@@ -1769,7 +1850,7 @@ class exportObj.CardBrowser
             return false unless standard_legal
 
         # check for slot requirements
-        required_slots = @slot_available_selection.val()
+        required_slots = @searchInputs.required_slots
         if required_slots.length > 0
             slots = card.data.slots
             
@@ -1784,7 +1865,7 @@ class exportObj.CardBrowser
                     return false if hasDuplicates.length == 0
 
         # check for keyword requirements
-        required_keywords = @keyword_available_selection.val()
+        required_keywords = @searchInputs.required_keywords 
         if required_keywords.length > 0
             keywords = card.data.keyword
 
@@ -1793,8 +1874,8 @@ class exportObj.CardBrowser
                 return false unless keywords? and keyword in keywords
 
         # check for action requirements
-        required_actions = @action_available_selection.val()
-        required_linked_actions = @linkedaction_available_selection.val()
+        required_actions = @searchInputs.required_actions
+        required_linked_actions = @searchInputs.required_linked_actions
         if (required_actions.length > 0) or (required_linked_actions.length > 0)
             actions = card.data.actions ? []
             if card.orig_type == 'Pilot'
@@ -1852,7 +1933,7 @@ class exportObj.CardBrowser
                 return false unless matching_loadout
 
         # check if used slot matches
-        used_slots = @slot_used_selection.val()
+        used_slots = @searchInputs.used_slots
         if used_slots.length > 0
             return false unless card.data.slot?
             matches = false
@@ -1863,7 +1944,7 @@ class exportObj.CardBrowser
             return false unless matches
 
         # check if used second slot matches
-        used_second_slots = @slot_used_second_selection.val()
+        used_second_slots = @searchInputs.used_second_slots
         if used_second_slots.length > 0
             return false unless card.data.also_occupies_upgrades?
             matches = false
@@ -2206,11 +2287,13 @@ exportObj.setupTranslationSupport = ->
 
     # Load cards one time
     basic_cards = exportObj.basicCardData()
+    quick_builds = exportObj.basicQuickBuilds()
     exportObj.canonicalizeShipNames basic_cards
     exportObj.ships = basic_cards.ships
 
     # Set up the common card data (e.g. stats)
     exportObj.setupCommonCardData basic_cards
+    exportObj.setupQuickBuilds quick_builds
 
     # do we need to load dfl as well? Not sure...
     exportObj.loadCards DFL_LANGUAGE
@@ -2655,13 +2738,16 @@ class exportObj.SquadBuilder
                 </div>
                 <div class="row btn-group list-display-mode">
                     <button class="btn btn-modal select-simple-view translated" defaultText="Simple"></button>
-                    <button class="btn btn-modal select-fancy-view d-none d-sm-block translated" defaultText="Fancy"></button>
+                    <button class="btn btn-modal select-fancy-view translated" defaultText="Fancy"></button>
                     <button class="btn btn-modal select-simplecopy-view translated" defaultText="Text"></button>
                     <button class="btn btn-modal select-reddit-view translated" defaultText="Reddit"></button>
-                    <button class="btn btn-modal select-tts-view translated" defaultText="TTS"></button>
+                    <button class="btn btn-modal select-tts-view d-none d-sm-block translated" defaultText="TTS"></button>
                     <button class="btn btn-modal select-xws-view translated" defaultText="XWS"></button>
                 </div>
-                <button class="btn btn-modal print-list d-none d-sm-block"><i class="fa fa-print"></i>&nbsp;<span class="translated" defaultText="Print"></span></button>
+                <div class="row btn-group list-display-mode">
+                    <button class="btn btn-modal copy-url translated" defaultText="Copy URL"></button>
+                    <button class="btn btn-modal print-list d-sm-block"><span class="d-none d-lg-block"><i class="fa fa-print"></i>&nbsp;<span class="translated" defaultText="Print"></span></span><span class="d-lg-none"><i class="fa fa-print"></i></span></button>
+                </div>
             </div>
         </div>
     </div>
@@ -2689,6 +2775,19 @@ class exportObj.SquadBuilder
         @toggle_qrcode_container = $ @list_modal.find('.qrcode-checkbox')
         @toggle_obstacle_container = $ @list_modal.find('.obstacles-checkbox')
         @btn_print_list = ($ @list_modal.find('.print-list'))[0]
+        @btn_copy_url = $ @list_modal.find('.copy-url')
+
+        @btn_copy_url.click (e) =>
+            @success =  window.navigator.clipboard.writeText(window.location.href);
+            @self = $(e.currentTarget)
+            if @success
+                @self.addClass 'btn-success'
+                setTimeout ( =>
+                    @self.removeClass 'btn-success'
+                ), 1000
+        
+        # the url copy button is only needed if the browser is hiding the address bar. This is the case for PWA links. 
+        @btn_copy_url.hide() unless ["fullscreen", "standalone", "minimal-ui"].some((displayMode) => window.matchMedia('(display-mode: ' + displayMode + ')').matches)
 
         @list_modal.on 'click', 'button.btn-copy', (e) =>
             @self = $(e.currentTarget)
@@ -3081,57 +3180,59 @@ class exportObj.SquadBuilder
             <div class="modal-header">
                 <label class='choose-obstacles-description translated' defaultText="Choose obstacles dialog"></label>
             </div>
-            <div class="modal-body">
-                <div class="obstacle-select-container" style="float:left">
+            <div class="modal-body row">
+                <div class="obstacle-select-container col-md-5" style="float:left">
                     <select multiple class='obstacle-select' size="18">
-                        <option class="coreasteroid0-select translated" value="coreasteroid0" defaultText="Core Asteroid 0"></option>
-                        <option class="coreasteroid1-select translated" value="coreasteroid1" defaultText="Core Asteroid 1"></option>
-                        <option class="coreasteroid2-select translated" value="coreasteroid2" defaultText="Core Asteroid 2"></option>
-                        <option class="coreasteroid3-select translated" value="coreasteroid3" defaultText="Core Asteroid 3"></option>
-                        <option class="coreasteroid4-select translated" value="coreasteroid4" defaultText="Core Asteroid 4"></option>
-                        <option class="coreasteroid5-select translated" value="coreasteroid5" defaultText="Core Asteroid 5"></option>
-                        <option class="yt2400debris0-select translated" value="yt2400debris0" defaultText="YT2400 Debris 0"></option>
-                        <option class="yt2400debris1-select translated" value="yt2400debris1" defaultText="YT2400 Debris 1"></option>
-                        <option class="yt2400debris2-select translated" value="yt2400debris2" defaultText="YT2400 Debris 2"></option>
-                        <option class="vt49decimatordebris0-select translated" value="vt49decimatordebris0" defaultText="VT49 Debris 0"></option>
-                        <option class="vt49decimatordebris1-select translated" value="vt49decimatordebris1" defaultText="VT49 Debris 1"></option>
-                        <option class="vt49decimatordebris2-select translated" value="vt49decimatordebris2" defaultText="VT49 Debris 2"></option>
-                        <option class="core2asteroid0-select translated" value="core2asteroid0" defaultText="Force Awakens Asteroid 0"></option>
-                        <option class="core2asteroid1-select translated" value="core2asteroid1" defaultText="Force Awakens Asteroid 1"></option>
-                        <option class="core2asteroid2-select translated" value="core2asteroid2" defaultText="Force Awakens Asteroid 2"></option>
-                        <option class="core2asteroid3-select translated" value="core2asteroid3" defaultText="Force Awakens Asteroid 3"></option>
-                        <option class="core2asteroid4-select translated" value="core2asteroid4" defaultText="Force Awakens Asteroid 4"></option>
-                        <option class="core2asteroid5-select translated" value="core2asteroid5" defaultText="Force Awakens Asteroid 5"></option>
-                        <option class="gascloud1-select translated" value="gascloud1" defaultText="Gas Cloud 1"></option>
-                        <option class="gascloud2-select translated" value="gascloud2" defaultText="Gas Cloud 2"></option>
-                        <option class="gascloud3-select translated" value="gascloud3" defaultText="Gas Cloud 3"></option>
-                        <option class="gascloud4-select translated" value="gascloud4" defaultText="Gas Cloud 4"></option>
-                        <option class="gascloud5-select translated" value="gascloud5" defaultText="Gas Cloud 5"></option>
-                        <option class="gascloud6-select translated" value="gascloud6" defaultText="Gas Cloud 6"></option>
-                        <option class="pomasteroid1-select translated" value="pomasteroid1" defaultText="Pride of Mandalore Rock 1"></option>
-                        <option class="pomasteroid2-select translated" value="pomasteroid2" defaultText="Pride of Mandalore Rock 2"></option>
-                        <option class="pomasteroid3-select translated" value="pomasteroid3" defaultText="Pride of Mandalore Rock 3"></option>
-                        <option class="pomdebris1-select translated" value="pomdebris1" defaultText="Pride of Mandalore Debris 1"></option>
-                        <option class="pomdebris2-select translated" value="pomdebris2" defaultText="Pride of Mandalore Debris 2"></option>
-                        <option class="pomdebris3-select translated" value="pomdebris3" defaultText="Pride of Mandalore Debris 3"></option>
+                        <option class="coreasteroid0-select obstacle-option translated" value="coreasteroid0" defaultText="Core Asteroid 0"></option>
+                        <option class="coreasteroid1-select obstacle-option translated" value="coreasteroid1" defaultText="Core Asteroid 1"></option>
+                        <option class="coreasteroid2-select obstacle-option translated" value="coreasteroid2" defaultText="Core Asteroid 2"></option>
+                        <option class="coreasteroid3-select obstacle-option translated" value="coreasteroid3" defaultText="Core Asteroid 3"></option>
+                        <option class="coreasteroid4-select obstacle-option translated" value="coreasteroid4" defaultText="Core Asteroid 4"></option>
+                        <option class="coreasteroid5-select obstacle-option translated" value="coreasteroid5" defaultText="Core Asteroid 5"></option>
+                        <option class="yt2400debris0-select obstacle-option translated" value="yt2400debris0" defaultText="YT2400 Debris 0"></option>
+                        <option class="yt2400debris1-select obstacle-option translated" value="yt2400debris1" defaultText="YT2400 Debris 1"></option>
+                        <option class="yt2400debris2-select obstacle-option translated" value="yt2400debris2" defaultText="YT2400 Debris 2"></option>
+                        <option class="vt49decimatordebris0-select obstacle-option translated" value="vt49decimatordebris0" defaultText="VT49 Debris 0"></option>
+                        <option class="vt49decimatordebris1-select obstacle-option translated" value="vt49decimatordebris1" defaultText="VT49 Debris 1"></option>
+                        <option class="vt49decimatordebris2-select obstacle-option translated" value="vt49decimatordebris2" defaultText="VT49 Debris 2"></option>
+                        <option class="core2asteroid0-select obstacle-option translated" value="core2asteroid0" defaultText="Force Awakens Asteroid 0"></option>
+                        <option class="core2asteroid1-select obstacle-option translated" value="core2asteroid1" defaultText="Force Awakens Asteroid 1"></option>
+                        <option class="core2asteroid2-select obstacle-option translated" value="core2asteroid2" defaultText="Force Awakens Asteroid 2"></option>
+                        <option class="core2asteroid3-select obstacle-option translated" value="core2asteroid3" defaultText="Force Awakens Asteroid 3"></option>
+                        <option class="core2asteroid4-select obstacle-option translated" value="core2asteroid4" defaultText="Force Awakens Asteroid 4"></option>
+                        <option class="core2asteroid5-select obstacle-option translated" value="core2asteroid5" defaultText="Force Awakens Asteroid 5"></option>
+                        <option class="gascloud1-select obstacle-option translated" value="gascloud1" defaultText="Gas Cloud 1"></option>
+                        <option class="gascloud2-select obstacle-option translated" value="gascloud2" defaultText="Gas Cloud 2"></option>
+                        <option class="gascloud3-select obstacle-option translated" value="gascloud3" defaultText="Gas Cloud 3"></option>
+                        <option class="gascloud4-select obstacle-option translated" value="gascloud4" defaultText="Gas Cloud 4"></option>
+                        <option class="gascloud5-select obstacle-option translated" value="gascloud5" defaultText="Gas Cloud 5"></option>
+                        <option class="gascloud6-select obstacle-option translated" value="gascloud6" defaultText="Gas Cloud 6"></option>
+                        <option class="pomasteroid1-select obstacle-option translated" value="pomasteroid1" defaultText="Pride of Mandalore Rock 1"></option>
+                        <option class="pomasteroid2-select obstacle-option translated" value="pomasteroid2" defaultText="Pride of Mandalore Rock 2"></option>
+                        <option class="pomasteroid3-select obstacle-option translated" value="pomasteroid3" defaultText="Pride of Mandalore Rock 3"></option>
+                        <option class="pomdebris1-select obstacle-option translated" value="pomdebris1" defaultText="Pride of Mandalore Debris 1"></option>
+                        <option class="pomdebris2-select obstacle-option translated" value="pomdebris2" defaultText="Pride of Mandalore Debris 2"></option>
+                        <option class="pomdebris3-select obstacle-option translated" value="pomdebris3" defaultText="Pride of Mandalore Debris 3"></option>
                     </select>
                 </div>
-                <div>
+                <div class="col-md-6">
                     <div class="obstacle-image-container" style="display:none;">
                         <img class="obstacle-image" src="images/core2asteroid0.png" />
                     </div>
                     <div class="obstacle-sources-container">
-                        <span class="info-header obstacle-sources translated" defaultText="Sources:"></span> 
-                        <span class="info-data obstacle-sources"></span>
+                        <span class="info-header obstacle-sources translated" defaultText="Sources:" style="padding-left: 8px;"></span> <br>
+                        <span class="info-data obstacle-sources" style="padding-left: 8px;"></span>
                     </div>
                 </div>
             </div>
             <div class="modal-footer d-print-none">
-                <button class="btn close-print-dialog translated" data-dismiss="modal" aria-hidden="true" defaultText="Close"></button>
+                <button class="btn btn-danger reset-obstacles translated" defaultText="Reset Obstacles"></button>
+                <button class="btn btn-danger close-print-dialog translated" data-dismiss="modal" aria-hidden="true" defaultText="Close"></button>
             </div>
         </div>
     </div>
         """
+        @obstacles_reset = @choose_obstacles_modal.find('.reset-obstacles')
         @obstacles_select = @choose_obstacles_modal.find('.obstacle-select')
         @obstacles_select_image = @choose_obstacles_modal.find('.obstacle-image-container')
         @obstacles_select_sources = @choose_obstacles_modal.find('.info-data.obstacle-sources')
@@ -3481,27 +3582,49 @@ class exportObj.SquadBuilder
         .on 'sortstop', (e, ui) =>
             @updateShipOrder(@oldIndex, ui.item.index())
 
-        @obstacles_select.change (e) =>
-            if @obstacles_select.val().length > 3
-                @obstacles_select.val(@current_squad.additional_data.obstacles)
-            else
-                previous_obstacles = @current_squad.additional_data.obstacles
-                @current_obstacles = (o for o in @obstacles_select.val())
-                if (previous_obstacles?)
-                    new_selection = @current_obstacles.filter((element) => return previous_obstacles.indexOf(element) == -1)
-                else
-                    new_selection = @current_obstacles
-                if new_selection.length > 0
-                    @showChooseObstaclesSelectInformation(new_selection[0])
+        @obstacles_reset.click (e) =>
+            if @current_obstacles != []
+                @current_obstacles = []
+                @obstacles_select.val("")
                 @current_squad.additional_data.obstacles = @current_obstacles
                 @current_squad.dirty = true
                 @container.trigger 'xwing-backend:squadDirtinessChanged'
-                @container.trigger 'xwing:pointsUpdated'
+                @container.trigger 'xwing:pointsUpdated'        
+
+        @obstacles_select.mouseup (e) =>
+            previous_obstacles = @current_squad.additional_data.obstacles
+            obst_changes = (o for o in @obstacles_select.val())
+            # parse changes from previous obstacles
+            intersect = (a, b) ->
+                [a, b] = [b, a] if a.length > b.length
+                value for value in a when value in b
+
+            intersection = intersect previous_obstacles,obst_changes
+            for x in obst_changes
+                if intersection.indexOf(x) > -1
+                    previous_obstacles.splice(previous_obstacles.indexOf(x), 1)
+                else
+                    if previous_obstacles.length < 3
+                        previous_obstacles.push(x)
+
+            @updateObstacleSelect(previous_obstacles)
+
+            @current_squad.additional_data.obstacles = previous_obstacles
+            @current_squad.dirty = true
+            @container.trigger 'xwing-backend:squadDirtinessChanged'
+            @container.trigger 'xwing:pointsUpdated'
+
+        $('option.obstacle-option').on 'mousemove', (e) =>
+            @showChooseObstaclesSelectInformation(e.target.getAttribute("value"))
+
+        $('option.obstacle-option').on 'touchmove', (e) =>
+            @showChooseObstaclesSelectInformation(e.target.getAttribute("value"))
 
         @view_list_button.click (e) =>
             e.preventDefault()
             @showTextListModal()
 
+        #Print Button
         @print_list_button.click (e) =>
             e.preventDefault()
             # Copy text list to printable
@@ -3556,7 +3679,7 @@ class exportObj.SquadBuilder
 
             # Version number
             @printable_container.find('.fancy-under-header').append $.trim """
-                <div class="version">Points Version: 10/28/2022</div>
+                <div class="version">Points Version: 11/25/2022</div>
             """
                     
             # Notes, if present
@@ -3587,33 +3710,44 @@ class exportObj.SquadBuilder
                     </div>
                 """
 
-            # Add List Juggler QR code
+            # Add QR code
             query = @getPermaLinkParams(['sn', 'obs'])
             if query? and @list_modal.find('.toggle-juggler-qrcode').prop('checked')
                 @printable_container.find('.printable-body').append $.trim """
                 <div class="qrcode-container">
                     <div class="permalink-container">
-                        <div class="qrcode"></div>
+                        <div class="qrcode">YASB Link</div>
                         <div class="qrcode-text translated" defaultText="Scan QR-Code"></div>
                     </div>
-                    <div class="juggler-container">
-                        <div class="qrcode"></div>
-                        <div class="qrcode-text translated" defaultText="List Juggler QR-Code"></div>
+                    <div class="xws-container">
+                        <div class="qrcode">XWS Data</div>
+                        <div class="qrcode-text translated" defaultText="XWS QR-Code"></div>
                     </div>
                 </div>
                 """
-                text = "https://yasb-xws.herokuapp.com/juggler#{query}"
-                @printable_container.find('.juggler-container .qrcode').qrcode
+                text = JSON.stringify(@toXWS())
+                console.log "#{text}"
+                @printable_container.find('.xws-container .qrcode').qrcode
                     render: 'div'
                     ec: 'M'
-                    size: if text.length < 144 then 144 else 160
+                    size: if text.length < 144 then 144 else 256
                     text: text
                 text = "https://yasb.app/#{query}"
                 @printable_container.find('.permalink-container .qrcode').qrcode
                     render: 'div'
                     ec: 'M'
-                    size: if text.length < 144 then 144 else 160
+                    size: if text.length < 144 then 144 else 256
                     text: text
+
+            #Trigger List
+            triggertext = "while you perform"
+            sectiontext = ""
+            for ship in @ships
+                if (ship.pilot?.text?) and (ship.pilot.text.match(triggertext) > -1)
+                    sectiontext = sectiontext + "#{ship.pilot.name} <br><br>"
+                for upgrade in ship.upgrades
+                    if (upgrade.text?) and (upgrade.text.match(triggertext) > -1)
+                        sectiontext = sectiontext + "#{upgrade.name} <br><br>"
 
             window.print()
 
@@ -4135,7 +4269,7 @@ class exportObj.SquadBuilder
             # select available pilots according to ususal pilot selection
             available_faction_pilots = (pilot for pilot_name, pilot of exportObj.pilots when (not ship? or pilot.ship == ship) and @isOurFaction(pilot.faction) and (@matcher(pilot_name, term) or (pilot.display_name and @matcher(pilot.display_name, term)) ) and (@isItemAvailable(pilot, true)))
 
-            eligible_faction_pilots = (pilot for pilot_name, pilot of available_faction_pilots when (not pilot.unique? or pilot not in @uniques_in_use['Pilot'] or pilot.canonical_name.getXWSBaseName() == include_pilot?.canonical_name.getXWSBaseName()) and (not pilot.max_per_squad? or @countPilots(pilot.canonical_name) < pilot.max_per_squad or pilot.canonical_name.getXWSBaseName() == include_pilot?.canonical_name.getXWSBaseName()) and (not pilot.restriction_func? or pilot.restriction_func((builder: @) , pilot)))
+            eligible_faction_pilots = (pilot for pilot_name, pilot of available_faction_pilots when (not pilot.unique? or pilot not in @uniques_in_use['Pilot'] or pilot.canonical_name.getXWSBaseName() == include_pilot?.canonical_name.getXWSBaseName()) and (not pilot.max_per_squad? or @countPilots(pilot.canonical_name) < pilot.max_per_squad or pilot.canonical_name.getXWSBaseName() == include_pilot?.canonical_name.getXWSBaseName()) and (not pilot.upgrades? or @standard_restriction_check(pilot)) and (not pilot.restriction_func? or pilot.restriction_func((builder: @) , pilot)))
 
             # Re-add selected pilot
             if include_pilot? and include_pilot.unique? and (@matcher(include_pilot.name, term) or (include_pilot.display_name and @matcher(include_pilot.display_name, term)) )
@@ -4201,6 +4335,17 @@ class exportObj.SquadBuilder
         retval
 
 
+    standard_restriction_check: (pilot) ->
+        if pilot.upgrades?
+            for upgrade in pilot.upgrades
+                upgrade_data = exportObj.upgrades[upgrade]
+                if upgrade_data.unique == true
+                    for ship in @ships
+                        for shipupgrade in ship.upgrades
+                            if shipupgrade?.data?.canonical_name == upgrade_data.canonical_name
+                                return false
+        return true
+
     dfl_filter_func = ->
         true
 
@@ -4244,7 +4389,7 @@ class exportObj.SquadBuilder
 
         points_without_include_upgrade = ship.upgrade_points_total - this_upgrade_obj.getPoints(include_upgrade)
 
-        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (not upgrade.unique? or upgrade not in @uniques_in_use['Upgrade']) and ship.standardized_check(upgrade) and ship.restriction_check((if upgrade.restrictions then upgrade.restrictions else undefined),this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
+        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (upgrade not in @uniques_in_use['Upgrade']) and ship.standardized_check(upgrade) and ship.restriction_check((if upgrade.restrictions then upgrade.restrictions else undefined),this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
 
         for equipped_upgrade in (upgrade.data for upgrade in ship.upgrades when upgrade?.data?)
             eligible_upgrades.removeItem equipped_upgrade
@@ -4512,7 +4657,7 @@ class exportObj.SquadBuilder
                                 
                     possible_inis.sort()
         
-                    container.find('.info-type').text type
+                    container.find('.info-type').text exportObj.translate("types", type)
                     container.find('.info-name').html """#{if data.display_name then data.display_name else data.name}#{if exportObj.isReleased(data) then "" else " (#{@uitranslation('unreleased')})"}"""
                     if @collection?.counts?
                         ship_count = @collection.counts?.ship?[data.name] ? 0
@@ -4626,7 +4771,7 @@ class exportObj.SquadBuilder
                     container.find('.info-sources.info-data').text if (sources.length > 1) or (not (exportObj.translate('sources', 'Loose Ships') in sources)) then (if sources.length > 0 then sources.join(', ') else exportObj.translate('ui', 'unreleased')) else @uitranslation("Only available from 1st edition")
                     container.find('.info-sources').show()
                 when 'Pilot'
-                    container.find('.info-type').text type
+                    container.find('.info-type').text exportObj.translate("types", type)
                     container.find('.info-sources.info-data').text (exportObj.translate('sources', source) for source in data.sources).sort().join(', ')
                     container.find('.info-sources').show()
                     if @collection?.counts?
@@ -4767,13 +4912,15 @@ class exportObj.SquadBuilder
                     
                     if (effective_stats?.force? and effective_stats.force > 0) or data.force?
                         recurringicon = ''
-                        if effective_stats?.forcerecurring?
-                            count = 0
-                            while count < effective_stats.forcerecurring
-                                recurringicon += '<sup><i class="fas fa-caret-up"></i></sup>'
-                                ++count
-                        else
+                        forcerecurring = 1
+                        if effective_stats?.forcerecurring? 
+                            forcerecurring = effective_stats.forcerecurring
+                        else if data.forcerecurring?
+                            forcerecurring = data.forcerecurring
+                        count = 0
+                        while count < forcerecurring                        
                             recurringicon += '<sup><i class="fas fa-caret-up"></i></sup>'
+                            ++count
                         container.find('tr.info-force td.info-data').html (statAndEffectiveStat((data.ship_override?.force ? data.force), effective_stats, 'force') + recurringicon)
                         container.find('tr.info-force').show()
                     else
@@ -4941,7 +5088,7 @@ class exportObj.SquadBuilder
                     container.find('p.info-maneuvers').show()
                     container.find('p.info-maneuvers').html(@getManeuverTableHTML(ship.maneuvers, ship.maneuvers))
                 when 'Addon'
-                    container.find('.info-type').text additional_opts.addon_type
+                    container.find('.info-type').text exportObj.translate("slot", additional_opts.addon_type)
                     container.find('.info-sources.info-data').text (exportObj.translate('sources', source) for source in data.sources).sort().join(', ')
                     container.find('.info-sources').show()
                     
@@ -5170,6 +5317,49 @@ class exportObj.SquadBuilder
                     container.find('td.info-rangebonus').hide()
                     container.find('tr.info-range').hide()
                     container.find('tr.info-force').hide()
+                when 'Damage'
+                    container.find('.info-type').text exportObj.translate("type", data.type)
+                    container.find('.info-sources.info-data').text (exportObj.translate('sources', source) for source in data.sources).sort().join(', ')
+                    container.find('.info-sources').show()
+
+                    if @collection?.counts?
+                        addon_count = @collection.counts?['damage']?[data.name] ? 0
+                        container.find('.info-collection').text @uitranslation("collectionContentUpgrades", addon_count)
+                        container.find('.info-collection').show()
+                    else
+                        container.find('.info-collection').hide()
+                    container.find('.info-name').html """#{if data.display_name then data.display_name else data.name} (#{data.quantity}x)"""
+                    
+                    container.find('p.info-restrictions').hide()
+                    container.find('p.info-text').html (data.text ? '')
+                    container.find('p.info-text').show()
+                    container.find('p.info-chassis').hide()
+                    container.find('tr.info-ship').hide()
+                    container.find('tr.info-faction').hide()
+                    container.find('tr.info-base').hide()
+                    container.find('tr.info-skill').hide()
+                    container.find('tr.info-points').hide()
+                    container.find('tr.info-loadout').hide()
+                    container.find('tr.info-engagement').hide()
+                    container.find('tr.info-energy').hide()
+                    container.find('tr.info-attack').hide()
+                    container.find('tr.info-attack-back').hide()
+                    container.find('tr.info-attack-turret').hide()
+                    container.find('tr.info-attack-right').hide()
+                    container.find('tr.info-attack-left').hide()
+                    container.find('tr.info-attack-doubleturret').hide()
+                    container.find('tr.info-attack-bullseye').hide()
+                    container.find('tr.info-attack-fullfront').hide()
+                    container.find('tr.info-charge').hide()
+                    container.find('tr.info-range').hide()
+                    container.find('td.info-rangebonus').hide()
+                    container.find('tr.info-force').hide()     
+                    container.find('tr.info-agility').hide()
+                    container.find('tr.info-hull').hide()
+                    container.find('tr.info-shields').hide()
+                    container.find('tr.info-actions').hide()
+                    container.find('tr.info-upgrades').hide()
+                    container.find('p.info-maneuvers').hide()
 
             if container != @mobile_tooltip_modal
                 container.find('.info-well').show()
@@ -5441,10 +5631,10 @@ class exportObj.SquadBuilder
                     othertext += comma + card.ship
                 comma = ', '
             if card.solitary
-                othertext += comma + exportObj.translate('faction', "Solitary")
+                othertext += comma + exportObj.translate('gameterms', "Solitary")
                 comma = ', '
             if card.standardized
-                othertext += comma + exportObj.translate('faction', "Standardized")
+                othertext += comma + exportObj.translate('gameterms', "Standardized")
                 comma = ', '
         text += othertext + uniquetext
         if text != ''
@@ -5501,8 +5691,8 @@ class exportObj.SquadBuilder
                     if upgrade.data?
                         upgrade_is_available = @collection.use('upgrade', upgrade.data.name)
                         # console.log "#{@faction}: Upgrade #{upgrade.data.name} available: #{upgrade_is_available}"
-                        validity = false unless upgrade_is_available
-                        missingStuff.push upgrade.data unless upgrade_is_available
+                        validity = false unless upgrade_is_available or upgrade.data.standard?
+                        missingStuff.push upgrade.data unless upgrade_is_available or upgrade.data.standard?
         [validity, missingStuff]
 
     checkCollection: ->
@@ -5526,7 +5716,7 @@ class exportObj.SquadBuilder
                     builder: 'YASB - X-Wing 2.5'
                     builder_url: window.location.href.split('?')[0]
                     link: @getPermaLink()
-            version: '10/28/2022'
+            version: '11/25/2022'
             # there is no point to have this version identifier, if we never actually increase it, right?
 
         for ship in @ships
@@ -5842,7 +6032,7 @@ class Ship
                 if @wingmates? and @wingmates.length > 0
                     # remove any wingmates, as the wing leader was just removed from the list
                     @setWingmates(0)
-                    @linkedShip = null
+                    # @linkedShip = null the ghost hera has wingmates and a linked phantom. We can't assume that we are done here...
                 @quickbuildId = id
                 @builder.current_squad.dirty = true
                 @resetPilot()
@@ -5935,6 +6125,40 @@ class Ship
                         upgrade.setData upgrade_to_be_equipped
                         return
 
+    addToStandardizedList: (upgrade_data) ->
+        # check first if standard combo exists and return if it does
+        idx = @builder.standard_list['Ship'].indexOf @data.name
+        if idx > -1
+            if @builder.standard_list['Upgrade'][idx]?.name == upgrade_data.name
+                return
+        @builder.standard_list['Upgrade'].push upgrade_data
+        @builder.standard_list['Ship'].push @data.name
+
+    removeStandardizedList: (upgrade_data) ->
+        # removes the ship upgrade combo from the stanard list array
+        idx = @builder.standard_list['Ship'].indexOf @data.name
+        if idx > -1
+            if @builder.standard_list['Upgrade'][idx]?.name == upgrade_data.name
+                @builder.standard_list['Upgrade'].splice idx,1 
+                @builder.standard_list['Ship'].splice idx,1
+                
+                # now remove all upgrades of the same name
+                for ship in @builder.ships
+                    if ship.data?.name == @data.name and ship != this
+                        for upgrade in ship.upgrades
+                            if upgrade.data?.name == upgrade_data.name
+                                upgrade.setData null
+                                break
+
+    checkStandardizedList: (ship_name) ->
+        # check first if standard combo exists and return if it does
+        idx = @builder.standard_list['Ship'].indexOf ship_name
+        if idx > -1
+            if @builder.standard_list['Upgrade'][idx]?.name?
+                return @builder.standard_list['Upgrade'][idx]
+        else
+            return undefined
+
     setPilot: (new_pilot, noautoequip = false) ->
         # don't call this method directly, unless you know what you do. Use setPilotById for proper quickbuild handling
 
@@ -5980,7 +6204,16 @@ class Ship
                                     delayed_upgrades[old_upgrade] = upgrade
                         for id, upgrade of delayed_upgrades
                             upgrade.setById id
-                #@addStandardizedUpgrades()
+                        # last check for standardized
+                    # see if ship is supposed to be standardized
+                    standard_upgrade_to_check = @checkStandardizedList(@pilot.ship)
+                    standard_check = false
+                    for upgrade in @upgrades
+                        if standard_upgrade_to_check? and (upgrade?.data?.name? and (upgrade.data.name == standard_upgrade_to_check.name))
+                            standard_check = true                         
+                    if standard_upgrade_to_check? and (standard_check == false)
+                        @removeStandardizedList(standard_upgrade_to_check)
+
             else
                 @copy_button.hide()
             @row.removeClass('unsortable')
@@ -6725,7 +6958,7 @@ class Ship
             hull: @pilot.ship_override?.hull ? @data.hull
             shields: @pilot.ship_override?.shields ? @data.shields
             force: (@pilot.ship_override?.force ? @pilot.force) ? 0
-            forcerecurring: 1
+            forcerecurring: @pilot.forcerecurring ? 1
             charge: @pilot.ship_override?.charge ? @pilot.charge
             actions: (@pilot.ship_override?.actions ? @data.actions).slice 0
             chassis: @pilot.chassis ? @data.chassis ? ""
@@ -6880,7 +7113,7 @@ class Ship
                         when "Equipped"
                             if not ((@doesSlotExist(r[1]) and @hasFilledSlotLike(upgrade_obj, r[1]))) then return false
                         when "Slot"
-                            if (not @hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]) and not upgrade_obj.occupiesAnUpgradeSlot(r[1])) or  upgrade_obj.slot == "HardpointShip" or  upgrade_obj.slot == "VersatileShip"  then return false
+                            if (not @hasAnotherUnoccupiedSlotLike(upgrade_obj, r[1]) and not upgrade_obj?.occupiesAnUpgradeSlot?(r[1])) or  upgrade_obj.slot == "HardpointShip" or  upgrade_obj.slot == "VersatileShip"  then return false
                         when "AttackArc"
                             if not @data.attackb? then return false
                         when "ShieldsGreaterThan"
@@ -6907,7 +7140,9 @@ class Ship
         if upgrade_data.standardized?
             for ship in @builder.ships
                 if ship?.data? and ship.data.name == @data.name
-                    if upgrade_data.restrictions? and ship.restriction_check(upgrade_data.restrictions?, upgrade_data) and not (ship.pilot?.upgrades?)
+                    if upgrade_data.restrictions? and ship.restriction_check(upgrade_data.restrictions, upgrade_data) and not (ship.pilot?.upgrades?)
+                        if ship.pilot.loadout? and (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)
+                            return false
                         slotfree = false
                         for upgrade in ship.upgrades
                             if upgrade_data.slot == upgrade.slot and not upgrade.data?
@@ -7035,7 +7270,7 @@ class GenericAddon
                 if ship.data? and (@ship.data.name == ship.data.name) and (@ship != ship)
                     isLastShip = false
             if isLastShip == true
-                @removeStandardized()
+                @ship.removeStandardizedList(@data)
         @destroyed = true
         @rescindAddons()
         @deoccupyOtherUpgrades()
@@ -7124,7 +7359,7 @@ class GenericAddon
             if @data?.unique? or @data?.solitary?
                 await @ship.builder.container.trigger 'xwing:releaseUnique', [ @unadjusted_data, @type, defer() ]
             if @data?.standardized? and not @ship.hasFixedUpgrades
-                @removeStandardized()
+                @ship.removeStandardizedList(@data)
             @rescindAddons()
             @deoccupyOtherUpgrades()
             if new_data?.unique? or new_data?.solitary?
@@ -7147,39 +7382,13 @@ class GenericAddon
                     @occupyOtherUpgrades()
                     @conferAddons()
                 if @data.standardized? and not @ship.hasFixedUpgrades
-                    @addToStandardizedList()
+                    @ship.addToStandardizedList(@data)
             else
                 @deoccupyOtherUpgrades()
 
             # this will remove not allowed upgrades (is also done on pointsUpdated). We do it explicitly so we can tell if the setData was successfull
             @lastSetValid = @ship.validate()
             @ship.builder.container.trigger 'xwing:pointsUpdated'
-
-    addToStandardizedList: ->
-        # check first if standard combo exists and return if it does
-        idx = @ship.builder.standard_list['Ship'].indexOf @ship.data.name
-        if idx > -1
-            if @ship.builder.standard_list['Upgrade'][idx]?.name == @data.name
-                return
-        @ship.builder.standard_list['Upgrade'].push @data
-        @ship.builder.standard_list['Ship'].push @ship.data.name
-
-    removeStandardized: ->
-        # removes the ship upgrade combo from the stanard list array
-        idx = @ship.builder.standard_list['Ship'].indexOf @ship.data.name
-        if idx > -1
-            if @ship.builder.standard_list['Upgrade'][idx]?.name == @data.name
-                @ship.builder.standard_list['Upgrade'].splice idx,1 
-                @ship.builder.standard_list['Ship'].splice idx,1
-                
-                # now remove all upgrades of the same name
-                nameToRemove = @data.name
-                for ship in @ship.builder.ships
-                    if ship.data?.name == @ship.data.name and ship != @ship
-                        for upgrade in ship.upgrades
-                            if upgrade.data?.name == nameToRemove
-                                upgrade.setData null
-                                break
 
     conferAddons: ->
         if @data.confersAddons? and !@ship.builder.isQuickbuild and @data.confersAddons.length > 0

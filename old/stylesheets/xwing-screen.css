@@ -1,3 +1,7 @@
+@media (max-width: 400px) and (min-width: 350px) {
+  .modal-dialog {
+    margin: calc(min(.5rem, (100vw - 350px)*0.5)); } }
+
 .text-list-modal .modal-header {
   overflow: hidden; }
 
@@ -258,7 +262,7 @@
   background-repeat: no-repeat; }
 
 .obstacle-sources-container {
-  display: block; }
+  display: flex; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 2dppx) {
   .select2-container .select2-choice abbr {
