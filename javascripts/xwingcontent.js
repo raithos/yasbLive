@@ -7258,7 +7258,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         ship: "ARC-170 Starfighter",
         skill: 5,
-        points: 5,
+        points: 4,
         chassis: "Born for This",
         ship_override: {
           shields: 4
