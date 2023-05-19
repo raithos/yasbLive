@@ -1846,7 +1846,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 8,
-        slots: ["Talent", "Torpedo", "Crew", "Crew", "Gunner", "Astromech", "Modification"]
+        slots: ["Talent", "Talent", "Torpedo", "Gunner", "Astromech", "Modification"]
       }, {
         name: "Shara Bey",
         id: 78,
@@ -1856,7 +1856,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 8,
-        slots: ["Talent", "Torpedo", "Missile", "Crew", "Crew", "Gunner", "Astromech", "Modification"]
+        slots: ["Talent", "Torpedo", "Missile", "Gunner", "Astromech", "Modification"]
       }, {
         name: "Garven Dreis",
         id: 79,
@@ -1866,7 +1866,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
-        slots: ["Talent", "Cannon", "Missile", "Crew", "Crew", "Gunner", "Astromech", "Modification"]
+        slots: ["Talent", "Cannon", "Missile", "Gunner", "Astromech", "Modification"]
       }, {
         name: "Ibtisam",
         id: 80,
@@ -1876,7 +1876,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 9,
-        slots: ["Talent", "Torpedo", "Crew", "Crew", "Gunner", "Astromech", "Modification"]
+        slots: ["Talent", "Torpedo", "Gunner", "Astromech", "Modification"]
       }, {
         name: "IG-88A",
         id: 81,
@@ -3460,7 +3460,7 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 3,
         loadout: 7,
-        slots: ["Talent", "Talent", "Missile", "Tech", "Modification", "Modification"]
+        slots: ["Talent", "Talent", "Tech", "Modification", "Modification"]
       }, {
         name: '"Longshot"',
         id: 234,
@@ -6310,7 +6310,7 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 10,
         keyword: ["Mandalorian"],
-        slots: ["Talent", "Talent", "Torpedo", "Modification"]
+        slots: ["Talent", "Talent", "Torpedo", "Modification", "Modification"]
       }, {
         name: "Clan Wren Volunteer",
         id: 502,
