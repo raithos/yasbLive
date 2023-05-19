@@ -1309,7 +1309,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 18,
-        slots: ["Talent", "Turret", "Torpedo", "Astromech", "Modification", "Device"]
+        slots: ["Talent", "Turret", "Gunner", "Astromech", "Device", "Modification"]
       }, {
         name: "Horton Salm",
         id: 26,
@@ -3608,7 +3608,7 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 3,
         loadout: 7,
-        slots: ["Talent", "Cannon", "Missile", "Modification"]
+        slots: ["Talent", "Missile", "Modification"]
       }, {
         name: "Mining Guild Surveyor",
         id: 248,
@@ -5796,7 +5796,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 7,
-        slots: ["Talent", "Torpedo", "Modification", "Configuration"]
+        slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Vult Skerris",
         id: 454,
