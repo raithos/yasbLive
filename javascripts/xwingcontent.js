@@ -2757,7 +2757,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "Alpha-Class Star Wing",
         skill: 4,
-        points: 6,
+        points: 5,
         loadout: 16,
         slots: ["Talent", "Sensor", "Torpedo", "Modification", "Configuration"]
       }, {
@@ -5965,7 +5965,7 @@ exportObj.basicCardData = function() {
         charge: 1,
         recurring: -1,
         points: 4,
-        loadout: 7,
+        loadout: 9,
         slots: ["Talent", "Modification", "Configuration"]
       }, {
         name: "Darth Vader (TIE Defender)",
