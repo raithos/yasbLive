@@ -7647,7 +7647,7 @@ exportObj.basicCardData = function() {
         ship: "Fang Fighter",
         skill: 3,
         points: 4,
-        loadout: 7,
+        loadout: 11,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Missile", "Modification", "Modification"]
       }, {
