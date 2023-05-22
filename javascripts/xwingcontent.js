@@ -6371,7 +6371,7 @@ exportObj.basicCardData = function() {
         recurring: 1,
         unique: true,
         keyword: ["Mandalorian"],
-        slots: ["Talent", "Crew", "Gunner", "Missile", "Device", "Illicit", "Modification", "Configuration"]
+        slots: ["Talent", "Crew", "Gunner", "Device", "Illicit", "Modification", "Configuration"]
       }, {
         name: "Death Watch Warrior",
         id: 508,
@@ -6547,7 +6547,7 @@ exportObj.basicCardData = function() {
         loadout: 10,
         unique: true,
         keyword: ["Bounty Hunter", "Mandalorian"],
-        slots: ["Talent", "Crew", "Cannon", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
+        slots: ["Talent", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "Guild Bounty Hunter",
         id: 523,
