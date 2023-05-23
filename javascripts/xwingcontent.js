@@ -3189,7 +3189,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/sa Bomber",
         skill: 5,
-        points: 4,
+        points: 3,
         loadout: 10,
         slots: ["Talent", "Talent", "Missile", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
@@ -7894,7 +7894,7 @@ exportObj.basicCardData = function() {
         ship_override: {
           shields: 3
         },
-        upgrades: []
+        upgrades: ["Hate", "Ion Missiles", "Afterburners"]
       }, {
         name: "Maarek Stele (SSP)",
         canonical_name: 'Maarek Stele'.canonicalize(),
@@ -7904,7 +7904,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE Advanced x1",
         skill: 5,
-        points: 6,
+        points: 5,
         upgrades: ["Elusive", "Outmaneuver", "Afterburners"]
       }, {
         name: "Captain Jonus (SSP)",
@@ -7916,7 +7916,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/sa Bomber",
         skill: 4,
         points: 4,
-        upgrades: []
+        upgrades: ["Feedback Ping", "Plasma Torpedoes", "Proton Bombs"]
       }, {
         name: "Tomax Bren (SSP)",
         canonical_name: 'Tomax Bren'.canonicalize(),
@@ -7927,7 +7927,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/sa Bomber",
         skill: 5,
         points: 5,
-        upgrades: []
+        upgrades: ["Elusive", "Barrage Rockets", "Proximity Mines"]
       }, {
         name: "Iden Versio (SSP)",
         canonical_name: 'Iden Versio'.canonicalize(),
@@ -7938,7 +7938,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/ln Fighter",
         skill: 4,
         points: 4,
-        upgrades: []
+        charge: 1,
+        upgrades: ["Disciplined", "Elusive"]
       }, {
         name: '"Night Beast" (SSP)',
         canonical_name: '"Night Beast"'.canonicalize(),
@@ -7949,7 +7950,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/ln Fighter",
         skill: 2,
         points: 3,
-        upgrades: []
+        upgrades: ["Disciplined", "Predator"]
       }, {
         name: "Valen Rudor (SSP)",
         canonical_name: 'Valen Rudor'.canonicalize(),
@@ -7960,7 +7961,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/ln Fighter",
         skill: 3,
         points: 3,
-        upgrades: []
+        upgrades: ["Disciplined", "Precision Ion Engines"]
       }, {
         name: '"Dutch" Vander (SSP)',
         canonical_name: '"Dutch" Vander'.canonicalize(),
@@ -7982,7 +7983,7 @@ exportObj.basicCardData = function() {
         ship: "BTL-A4 Y-wing",
         skill: 4,
         points: 4,
-        upgrades: []
+        upgrades: ["Ion Cannon Turret", "Proximity Mines"]
       }, {
         name: "Arvel Crynyd (SSP)",
         canonical_name: 'Arvel Crynyd'.canonicalize(),
@@ -7993,18 +7994,18 @@ exportObj.basicCardData = function() {
         ship: "RZ-1 A-wing",
         skill: 3,
         points: 4,
-        upgrades: []
+        upgrades: ["Predator", "Afterburners"]
       }, {
-        name: "Jake Farrel (SSP)",
-        canonical_name: 'Jake Farrel'.canonicalize(),
-        xws: "jakefarrel-SWZ106",
+        name: "Jake Farrell (SSP)",
+        canonical_name: 'Jake Farrell'.canonicalize(),
+        xws: "jakefarrell-SWZ106",
         unique: true,
         id: 640,
         faction: "Rebel Alliance",
         ship: "RZ-1 A-wing",
         skill: 4,
         points: 5,
-        upgrades: []
+        upgrades: ["Elusive", "Outmaneuver", "Ion Missiles"]
       }, {
         name: "Jek Porkins (SSP)",
         canonical_name: 'Jek Porkins'.canonicalize(),
@@ -8015,7 +8016,7 @@ exportObj.basicCardData = function() {
         ship: "T-65 X-wing",
         skill: 4,
         points: 5,
-        upgrades: []
+        upgrades: ["Predator", "Proton Torpedoes", "R5-D8"]
       }, {
         name: "Luke Skywalker (SSP)",
         canonical_name: 'Luke Skywalker'.canonicalize(),
@@ -8027,18 +8028,18 @@ exportObj.basicCardData = function() {
         skill: 5,
         force: 2,
         points: 6,
-        upgrades: []
+        upgrades: ["Instinctive Aim", "Proton Torpeodes", "R2-D2"]
       }, {
-        name: "Wedge Antilles (SSP)",
-        canonical_name: 'Wedge Antilles'.canonicalize(),
-        xws: "wedgeantilles-SWZ106",
+        name: "Shara Bey (SSP)",
+        canonical_name: 'Shara Bey'.canonicalize(),
+        xws: "sharabey-SWZ106",
         unique: true,
         id: 643,
         faction: "Rebel Alliance",
-        ship: "T-65 X-wing",
-        skill: 6,
-        points: 5,
-        upgrades: []
+        ship: "RZ-1 A-wing",
+        skill: 4,
+        points: 4,
+        upgrades: ["Hopeful", "Concussion Missiles"]
       }
     ],
     upgradesById: [
