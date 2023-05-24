@@ -8028,7 +8028,7 @@ exportObj.basicCardData = function() {
         skill: 5,
         force: 2,
         points: 6,
-        upgrades: ["Instinctive Aim", "Proton Torpeodes", "R2-D2"]
+        upgrades: ["Instinctive Aim", "Proton Torpedoes", "R2-D2"]
       }, {
         name: "Shara Bey (SSP)",
         canonical_name: 'Shara Bey'.canonicalize(),
