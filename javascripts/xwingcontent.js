@@ -3179,7 +3179,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/sa Bomber",
         skill: 4,
-        points: 5,
+        points: 3,
         loadout: 12,
         slots: ["Talent", "Torpedo", "Missile", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
@@ -7799,7 +7799,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 11,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Force", "Talent", "Astromech", "Modification"]
+        slots: ["Force", "Force", "Talent", "Cannon", "Astromech", "Modification"]
       }, {
         name: '"Slammer"',
         id: 623,
@@ -13444,6 +13444,9 @@ exportObj.standardShipInclusions = [
     faction: 'Galactic Empire'
   }, {
     name: 'TIE/ln Fighter',
+    faction: 'Galactic Empire'
+  }, {
+    name: 'TIE/sa Bomber',
     faction: 'Galactic Empire'
   }, {
     name: 'TIE/in Interceptor',
