@@ -7882,7 +7882,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Darth Vader (SSP)",
         canonical_name: 'Darth Vader'.canonicalize(),
-        xws: "darthvader-SWZ105",
+        xws: "darthvader-swz105",
         unique: true,
         id: 630,
         faction: "Galactic Empire",
@@ -7898,7 +7898,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Maarek Stele (SSP)",
         canonical_name: 'Maarek Stele'.canonicalize(),
-        xws: "maarekstele-SWZ105",
+        xws: "maarekstele-swz105",
         unique: true,
         id: 631,
         faction: "Galactic Empire",
@@ -7909,7 +7909,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Captain Jonus (SSP)",
         canonical_name: 'Captain Jonus'.canonicalize(),
-        xws: "captainjonus-SWZ105",
+        xws: "captainjonus-swz105",
         unique: true,
         id: 632,
         faction: "Galactic Empire",
@@ -7920,7 +7920,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Tomax Bren (SSP)",
         canonical_name: 'Tomax Bren'.canonicalize(),
-        xws: "tomaxbren-SWZ105",
+        xws: "tomaxbren-swz105",
         unique: true,
         id: 633,
         faction: "Galactic Empire",
@@ -7931,7 +7931,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Iden Versio (SSP)",
         canonical_name: 'Iden Versio'.canonicalize(),
-        xws: "idenversio-SWZ105",
+        xws: "idenversio-swz105",
         unique: true,
         id: 634,
         faction: "Galactic Empire",
@@ -7943,7 +7943,7 @@ exportObj.basicCardData = function() {
       }, {
         name: '"Night Beast" (SSP)',
         canonical_name: '"Night Beast"'.canonicalize(),
-        xws: "nightbeast-SWZ105",
+        xws: "nightbeast-swz105",
         unique: true,
         id: 635,
         faction: "Galactic Empire",
@@ -7954,7 +7954,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Valen Rudor (SSP)",
         canonical_name: 'Valen Rudor'.canonicalize(),
-        xws: "valenrudor-SWZ105",
+        xws: "valenrudor-swz105",
         unique: true,
         id: 636,
         faction: "Galactic Empire",
@@ -7965,7 +7965,7 @@ exportObj.basicCardData = function() {
       }, {
         name: '"Dutch" Vander (SSP)',
         canonical_name: '"Dutch" Vander'.canonicalize(),
-        xws: "dutchvander-SWZ106",
+        xws: "dutchvander-swz106",
         unique: true,
         id: 637,
         faction: "Rebel Alliance",
@@ -7976,7 +7976,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Horton Salm (SSP)",
         canonical_name: 'Horton Salm'.canonicalize(),
-        xws: "hortonsalm-SWZ106",
+        xws: "hortonsalm-swz106",
         unique: true,
         id: 638,
         faction: "Rebel Alliance",
@@ -7987,7 +7987,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Arvel Crynyd (SSP)",
         canonical_name: 'Arvel Crynyd'.canonicalize(),
-        xws: "arvelcrynyd-SWZ106",
+        xws: "arvelcrynyd-swz106",
         unique: true,
         id: 639,
         faction: "Rebel Alliance",
@@ -7998,7 +7998,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Jake Farrell (SSP)",
         canonical_name: 'Jake Farrell'.canonicalize(),
-        xws: "jakefarrell-SWZ106",
+        xws: "jakefarrell-swz106",
         unique: true,
         id: 640,
         faction: "Rebel Alliance",
@@ -8009,7 +8009,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Jek Porkins (SSP)",
         canonical_name: 'Jek Porkins'.canonicalize(),
-        xws: "jekporkins-SWZ106",
+        xws: "jekporkins-swz106",
         unique: true,
         id: 641,
         faction: "Rebel Alliance",
@@ -8020,7 +8020,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Luke Skywalker (SSP)",
         canonical_name: 'Luke Skywalker'.canonicalize(),
-        xws: "lukeskywalker-SWZ106",
+        xws: "lukeskywalker-swz106",
         unique: true,
         id: 642,
         faction: "Rebel Alliance",
@@ -8032,7 +8032,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Shara Bey (SSP)",
         canonical_name: 'Shara Bey'.canonicalize(),
-        xws: "sharabey-SWZ106",
+        xws: "sharabey-swz106",
         unique: true,
         id: 643,
         faction: "Rebel Alliance",
