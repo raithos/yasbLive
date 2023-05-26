@@ -4296,7 +4296,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 7,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Force", "Astromech", "Modification", "Configuration"]
+        slots: ["Force", "Force", "Astromech", "Modification"]
       }, {
         name: '"Kickback"',
         id: 315,
