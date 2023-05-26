@@ -3846,22 +3846,22 @@ exportObj.SquadBuilder = (function() {
     })(this));
     this.obstacles_select.mouseup((function(_this) {
       return function(e) {
-        var intersect, intersection, o, obst_changes, previous_obstacles, x, _i, _len;
-        previous_obstacles = _this.current_squad.additional_data.obstacles;
+        var intersect, intersection, o, obst_changes, previous_obstacles, x, _i, _len, _ref;
+        previous_obstacles = (_ref = _this.current_squad.additional_data.obstacles) != null ? _ref : [];
         obst_changes = (function() {
-          var _i, _len, _ref, _results;
-          _ref = this.obstacles_select.val();
+          var _i, _len, _ref1, _results;
+          _ref1 = this.obstacles_select.val();
           _results = [];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            o = _ref[_i];
+          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+            o = _ref1[_i];
             _results.push(o);
           }
           return _results;
         }).call(_this);
         intersect = function(a, b) {
-          var value, _i, _len, _ref, _results;
+          var value, _i, _len, _ref1, _results;
           if (a.length > b.length) {
-            _ref = [b, a], a = _ref[0], b = _ref[1];
+            _ref1 = [b, a], a = _ref1[0], b = _ref1[1];
           }
           _results = [];
           for (_i = 0, _len = a.length; _i < _len; _i++) {

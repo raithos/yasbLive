@@ -3181,7 +3181,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 12,
-        slots: ["Talent", "Torpedo", "Missile", "Missile", "Gunner", "Device", "Device", "Modification"]
+        slots: ["Talent", "Torpedo", "Missile", "Missile", "Gunner", "Device", "Modification"]
       }, {
         name: "Tomax Bren",
         id: 205,
