@@ -157,6 +157,9 @@ exportObj.translations.English = {
     varPointCostsConditionBase: function(translator, values) {
       return "base size is small, medium, large or huge";
     },
+    varPointCostsConditionFaction: function(translator, values) {
+      return "faction is " + values;
+    },
     "Missing Item List:": "To field this squad you need the following additional items:",
     pilotFlyingShip: function(translator, pilot, ship) {
       return "Pilot " + pilot + " flying " + ship;

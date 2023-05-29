@@ -8461,7 +8461,8 @@ exportObj.basicCardData = function() {
         name: "Maul",
         id: 48,
         slot: "Crew",
-        points: 12,
+        variablepoints: "Faction",
+        points: [10, 12],
         unique: true,
         keyword: ["Dark Side"],
         faction: ["Scum and Villainy", "Rebel Alliance"],
@@ -11402,6 +11403,7 @@ exportObj.basicCardData = function() {
         slot: "Configuration",
         standardized: true,
         chassis: "Vectored Cannons",
+        ship: ["RZ-1 A-wing", "RZ-2 A-wing"],
         restrictions: [["Keyword", "Vectored Thrusters"]],
         modifier_func: function(stats) {
           stats.attackt = stats.attack;
@@ -11459,6 +11461,7 @@ exportObj.basicCardData = function() {
         slot: "Configuration",
         standardized: true,
         chassis: "Sensitive Controls",
+        ship: ["TIE/in Interceptor", "TIE/vn Silencer"],
         restrictions: [["Keyword", "Autothrusters"]]
       }, {
         name: "Cutthroat",
