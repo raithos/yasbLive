@@ -921,9 +921,6 @@ class exportObj.SquadBuilderBackend
             @unsaved_modal.data('callback')()
             @unsaved_modal.modal 'hide'
 
-        builder.reset_collection.show()
-        builder.reset_collection.click (e) =>
-            @reset_collection_modal.modal 'show'
         @reset_collection_modal = $ document.createElement('DIV')
         @reset_collection_modal.addClass 'modal fade d-print-none'
         @reset_collection_modal.tabindex = "-1"
