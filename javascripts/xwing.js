@@ -2258,7 +2258,7 @@ exportObj.CardBrowser = (function() {
             for (_v = 0, _len13 = pilots.length; _v < _len13; _v++) {
               pilot = pilots[_v];
               if (pilot.ship === card.data.name) {
-                if (pilot.loadout >= this.minimum_point_costs.value && pilot.loadout <= this.maximum_loadout_costs.value) {
+                if (pilot.loadout >= this.minimum_loadout_costs.value && pilot.loadout <= this.maximum_loadout_costs.value) {
                   matching_loadout = true;
                   break;
                 }

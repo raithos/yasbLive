@@ -6721,7 +6721,7 @@ exportObj.manifestByExpansion = {
       type: 'pilot',
       count: 1
     }, {
-      name: 'Black Squadron Ace',
+      name: 'Black Squadron Ace (T-70)',
       type: 'pilot',
       count: 2
     }, {
