@@ -967,8 +967,6 @@ class exportObj.SquadBuilderBackend
                         $(window).trigger 'xwing-collection:reset', collection
             , 1000
 
-
-
     getSettings: (cb=$.noop) ->
         $.get("#{@server}/settings").done (data, textStatus, jqXHR) =>
             cb data.settings
