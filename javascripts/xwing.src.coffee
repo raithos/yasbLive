@@ -966,7 +966,9 @@ class exportObj.SquadBuilderBackend
                     if res
                         $(window).trigger 'xwing-collection:reset', collection
             , 1000
-        
+
+
+
     getSettings: (cb=$.noop) ->
         $.get("#{@server}/settings").done (data, textStatus, jqXHR) =>
             cb data.settings
@@ -2566,8 +2568,6 @@ class exportObj.SquadBuilder
                             <li><a class="dropdown-item randomize-options translated" defaultText="Randomizer Options"></a></li>
                             <li><a class="dropdown-item misc-settings translated" defaultText="Misc Settings"></a></li>
                         </ul>
-                        
-
                     </div>
                 </div>
             </div>
