@@ -455,12 +455,6 @@ class exportObj.SquadBuilderBackend
         @unsaved_modal.data 'callback', action
         @unsaved_modal.modal 'show'
 
-    warnCollectionReset: (builder, action) ->
-        @reset_collection_modal.data 'builder', builder
-        @reset_collection_modal.data 'callback', action
-        @reset_collection_modal.modal 'show'
-
-
     setupUI: () ->
         @auth_status.addClass 'disabled'
         @auth_status.click (e) =>
@@ -927,7 +921,9 @@ class exportObj.SquadBuilderBackend
             @unsaved_modal.data('callback')()
             @unsaved_modal.modal 'hide'
 
-
+        builder.reset_collection.show()
+        builder.reset_collection.click (e) =>
+            @reset_collection_modal.modal 'show'
         @reset_collection_modal = $ document.createElement('DIV')
         @reset_collection_modal.addClass 'modal fade d-print-none'
         @reset_collection_modal.tabindex = "-1"
@@ -2599,6 +2595,7 @@ class exportObj.SquadBuilder
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item randomize-options translated" defaultText="Randomizer Options"></a></li>
                             <li><a class="dropdown-item misc-settings translated" defaultText="Misc Settings"></a></li>
+                            <li><a class="dropdown-item reset-collection translated" defaultText="Reset Collection"></a></li>
                         </ul>
                         
 
@@ -2982,6 +2979,8 @@ class exportObj.SquadBuilder
         @randomize_button = $ @status_container.find('div.button-container button.randomize')
         @customize_randomizer = $ @status_container.find('div.button-container a.randomize-options')
         @misc_settings = $ @status_container.find('div.button-container a.misc-settings')
+        @reset_collection = $ @status_container.find('div.button-container a.reset-collection')
+        @reset_collection.hide()
         @backend_status = $ @status_container.find('.backend-status')
         @backend_status.hide()
 
