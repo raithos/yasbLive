@@ -9795,7 +9795,7 @@ exportObj.Collection = (function() {
     this.modal_status = $(this.modal.find('.collection-status'));
     this.reset_button = $(this.modal.find('.reset-collection'));
     this.reset_check = $(this.modal.find('.reset-check'));
-    this.reset_check.hide();
+    this.reset_check.fadeOut(10);
     this.reset_button.click(function(e) {
       return this.reset_check.fadeIn(100);
     });
