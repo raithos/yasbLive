@@ -9939,8 +9939,8 @@ exportObj.Collection = (function() {
       return function(e) {
         $(exportObj).trigger('xwing-collection:reset', _this);
         $(_this.modal.find('#reset-check').fadeOut());
-        $('.expansion-count').value(0);
-        return $('.singleton-count').value(0);
+        $(_this.modal.find('.expansion-count').value(0));
+        return $(_this.modal.find('.singleton-count').value(0));
       };
     })(this)));
   };
