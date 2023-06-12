@@ -9796,20 +9796,21 @@ exportObj.Collection = (function() {
     this.reset_button = $(this.modal.find('.reset-collection'));
     this.modal.find('#reset-check').hide();
     this.reset_button.click(function(e) {
-      return $(this.modal.find('#reset-check').fadeIn());
+      return $.find('#reset-check').fadeIn();
     });
     this.cancel_reset_collection = $(this.modal.find('button.cancel-reset'));
     this.cancel_reset_collection.click((function(_this) {
       return function(e) {
-        return $(_this.modal.find('#reset-check').fadeOut());
+        return $.find('#reset-check').fadeOut();
       };
     })(this));
     this.reset_collection = $(this.modal.find('button.confirm-reset'));
     this.reset_collection.click((function(_this) {
       return function(e) {
         $(exportObj).trigger('xwing-collection:reset', _this);
-        $(_this.modal.find('#reset-check').fadeOut());
-        return _this.reset();
+        $.find('#reset-check').fadeOut();
+        $('.expansion-count').value(0);
+        return $('.singleton-count').value(0);
       };
     })(this));
     if (this.checks.collectioncheck != null) {
