@@ -12290,7 +12290,8 @@ exportObj.basicCardData = function() {
         points: 3,
         slot: "Illicit",
         max_per_squad: 3,
-        restrictions: [["Keyword", "Bounty Hunter"]],
+        faction: "Scum and Villainy",
+        restrictions: [["Base", "Standard"]],
         applies_condition: 'Marked for Elimination'.canonicalize()
       }, {
         name: "Notorious",
@@ -12332,7 +12333,8 @@ exportObj.basicCardData = function() {
         points: 4,
         slot: "Crew",
         unique: true,
-        faction: "Scum and Villainy"
+        faction: "Scum and Villainy",
+        restrictions: [["Base", "Medium", "Large"]]
       }, {
         name: "Peli Motto",
         id: 460,
