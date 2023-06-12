@@ -9793,26 +9793,7 @@ exportObj.Collection = (function() {
     $('body').append(this.modal);
     this.modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h4>Your Collection</h4>\n            <button type=\"button\" class=\"close d-print-none\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <ul class=\"nav nav-pills mb-2\" id=\"collectionTabs\" role=\"tablist\">\n                <li class=\"nav-item active\" id=\"collection-expansions-tab\" role=\"presentation\"><a data-target=\"#collection-expansions\" class=\"nav-link\" data-toggle=\"tab\" role=\"tab\" aria-controls=\"collection-expansions\" aria-selected=\"true\">Expansions</a><li>\n                <li class=\"nav-item\" id=\"collection-ships-tab\" role=\"presentation\"><a href=\"#collection-ships\" class=\"nav-link\" data-toggle=\"tab\" role=\"tab\" aria-controls=\"collection-ships\" aria-selected=\"false\">Ships</a><li>\n                <li class=\"nav-item\" id=\"collection-pilots-tab\" role=\"presentation\"><a href=\"#collection-pilots\" class=\"nav-link\" data-toggle=\"tab\" role=\"tab\" aria-controls=\"collection-pilots\" aria-selected=\"false\">Pilots</a><li>\n                <li class=\"nav-item\" id=\"collection-upgrades-tab\" role=\"presentation\"><a href=\"#collection-upgrades\" class=\"nav-link\" data-toggle=\"tab\" role=\"tab\" aria-controls=\"collection-upgrades\" aria-selected=\"false\">Upgrades</a><li>\n                <li class=\"nav-item\" id=\"collection-components-tab\" role=\"presentation\"><a href=\"#collection-components\" class=\"nav-link\" data-toggle=\"tab\" role=\"tab\" aria-controls=\"collection-components\" aria-selected=\"false\">Inventory</a><li>\n            </ul>\n            <div class=\"tab-content\" id=\"collectionTabContent\">\n                <div id=\"collection-expansions\" role=\"tabpanel\" aria-labelledby=\"collection-expansions-tab\" class=\"tab-pane fade show active container-fluid collection-content\"></div>\n                <div id=\"collection-ships\" role=\"tabpanel\" aria-labelledby=\"collection-ships-tab\" class=\"tab-pane fade container-fluid collection-ship-content\"></div>\n                <div id=\"collection-pilots\" role=\"tabpanel\" aria-labelledby=\"collection-pilots-tab\" class=\"tab-pane fade container-fluid collection-pilot-content\"></div>\n                <div id=\"collection-upgrades\" role=\"tabpanel\" aria-labelledby=\"collection-upgrades-tab\" class=\"tab-pane fade container-fluid collection-upgrade-content\"></div>\n                <div id=\"collection-components\" role=\"tabpanel\" aria-labelledby=\"collection-components-tab\" class=\"tab-pane fade container-fluid collection-inventory-content\"></div>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <span class=\"collection-status\"></span>\n            &nbsp;\n            <label class=\"checkbox-check-collection\">\n                Check Collection Requirements <input type=\"checkbox\" class=\"check-collection\"/>\n            </label>\n            &nbsp;\n            <button class=\"btn btn-danger reset-collection\" aria-hidden=\"true\">Reset</button>\n            <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">Close</button>\n        </div>\n        <div id=\"reset-check\" class=\"modal-footer d-print-none\">\n            <button class=\"btn btn-modal cancel-reset translated\" aria-hidden=\"true\" defaultText=\"Go Back\"></button>\n            <button class=\"btn btn-danger confirm-reset translated\" aria-hidden=\"true\" defaultText=\"Reset Collection\"></button>\n        </div>\n    </div>\n</div>"));
     this.modal_status = $(this.modal.find('.collection-status'));
-    this.reset_button = $(this.modal.find('.reset-collection'));
     this.modal.find('#reset-check').hide();
-    this.reset_button.click(function(e) {
-      return $.find('#reset-check').fadeIn();
-    });
-    this.cancel_reset_collection = $(this.modal.find('button.cancel-reset'));
-    this.cancel_reset_collection.click((function(_this) {
-      return function(e) {
-        return $.find('#reset-check').fadeOut();
-      };
-    })(this));
-    this.reset_collection = $(this.modal.find('button.confirm-reset'));
-    this.reset_collection.click((function(_this) {
-      return function(e) {
-        $(exportObj).trigger('xwing-collection:reset', _this);
-        $.find('#reset-check').fadeOut();
-        $('.expansion-count').value(0);
-        return $('.singleton-count').value(0);
-      };
-    })(this));
     if (this.checks.collectioncheck != null) {
       if (this.checks.collectioncheck !== "false") {
         this.modal.find('.check-collection').prop('checked', true);
@@ -9927,7 +9908,7 @@ exportObj.Collection = (function() {
         return $(exportObj).trigger('xwing-collection:changed', _this);
       };
     })(this)));
-    return $(this.modal.find('.check-collection').change((function(_this) {
+    $(this.modal.find('.check-collection').change((function(_this) {
       return function(e) {
         var result;
         if (_this.modal.find('.check-collection').prop('checked') === false) {
@@ -9942,6 +9923,24 @@ exportObj.Collection = (function() {
           return _this.modal_status.fadeOut(1000);
         });
         return $(exportObj).trigger('xwing-collection:changed', _this);
+      };
+    })(this)));
+    $(this.modal.find('.reset-collection').click((function(_this) {
+      return function(e) {
+        return $(_this.modal.find('#reset-check').fadeIn());
+      };
+    })(this)));
+    $(this.modal.find('button.cancel-reset').click((function(_this) {
+      return function(e) {
+        return $(_this.modal.find('#reset-check').fadeOut());
+      };
+    })(this)));
+    return $(this.modal.find('button.confirm-reset').click((function(_this) {
+      return function(e) {
+        $(exportObj).trigger('xwing-collection:reset', _this);
+        $(_this.modal.find('#reset-check').fadeOut());
+        $('.expansion-count').value(0);
+        return $('.singleton-count').value(0);
       };
     })(this)));
   };
