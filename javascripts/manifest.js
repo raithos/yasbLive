@@ -9943,13 +9943,13 @@ exportObj.Collection = (function() {
         expansion = $('.expansion-count');
         for (_i = 0, _len = expansion.length; _i < _len; _i++) {
           count = expansion[_i];
-          count.value(0);
+          count.val(0);
         }
         singleton = $('.singleton-count');
         _results = [];
         for (_j = 0, _len1 = singleton.length; _j < _len1; _j++) {
           count = singleton[_j];
-          _results.push(count.value(0));
+          _results.push(count.val(0));
         }
         return _results;
       };
