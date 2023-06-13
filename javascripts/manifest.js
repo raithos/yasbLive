@@ -9937,10 +9937,21 @@ exportObj.Collection = (function() {
     })(this)));
     return $(this.modal.find('button.confirm-reset').click((function(_this) {
       return function(e) {
+        var count, expansion, singleton, _i, _j, _len, _len1, _results;
         $(exportObj).trigger('xwing-collection:reset', _this);
         $(_this.modal.find('#reset-check').fadeOut());
-        $(_this.modal.find('.expansion-count').value(0));
-        return $(_this.modal.find('.singleton-count').value(0));
+        expansion = $(_this.modal.find('.expansion-count'));
+        for (_i = 0, _len = expansion.length; _i < _len; _i++) {
+          count = expansion[_i];
+          count.value(0);
+        }
+        singleton = $(_this.modal.find('.singleton-count'));
+        _results = [];
+        for (_j = 0, _len1 = singleton.length; _j < _len1; _j++) {
+          count = singleton[_j];
+          _results.push(count.value(0));
+        }
+        return _results;
       };
     })(this)));
   };
