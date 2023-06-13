@@ -9927,7 +9927,7 @@ exportObj.Collection = (function() {
     })(this)));
     $(this.modal.find('.reset-collection').click((function(_this) {
       return function(e) {
-        return $(_this.modal.find('#reset-check').fadeIn());
+        return $(_this.modal.find('#reset-check').fadeIn(100));
       };
     })(this)));
     $(this.modal.find('button.cancel-reset').click((function(_this) {
@@ -9939,7 +9939,8 @@ exportObj.Collection = (function() {
       return function(e) {
         $(exportObj).trigger('xwing-collection:reset', _this);
         $(_this.modal.find('#reset-check').fadeOut());
-        return $(_this.modal.find('.expansion-count').val(0));
+        $(_this.modal.find('.expansion-count').val(0));
+        return $(_this.modal.find('.singleton-count').val(0));
       };
     })(this)));
   };
