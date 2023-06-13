@@ -9876,7 +9876,7 @@ exportObj.Collection = (function() {
       };
     })(this)).on('xwing-collection:saved', (function(_this) {
       return function(e, collection) {
-        _this.modal_status.text('Collection saved');
+        _this.modal_status.text('Saved!');
         return _this.modal_status.fadeIn(100, function() {
           return _this.modal_status.fadeOut(1000);
         });
@@ -9940,7 +9940,9 @@ exportObj.Collection = (function() {
         $(exportObj).trigger('xwing-collection:reset', _this);
         $(_this.modal.find('#reset-check').fadeOut());
         $(_this.modal.find('.expansion-count').val(0));
-        return $(_this.modal.find('.singleton-count').val(0));
+        $(_this.modal.find('.expansion-count').css('background-color', _this.countToBackgroundColor(target.val())));
+        $(_this.modal.find('.singleton-count').val(0));
+        return $(_this.modal.find('.singleton-count').css('background-color', _this.countToBackgroundColor(target.val())));
       };
     })(this)));
   };
