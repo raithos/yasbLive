@@ -3359,7 +3359,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 10,
-        slots: ["Talent", "Cannon"]
+        slots: ["Talent", "Cannon", "Modification"]
       }, {
         name: "Gideon Hask",
         id: 223,
@@ -12197,6 +12197,7 @@ exportObj.basicCardData = function() {
         slot: "Title",
         unique: true,
         charge: 2,
+        faction: ["Galactic Republic", "Separatist Alliance"],
         ship: "Gauntlet Fighter",
         restrictions: [["Slot", "Modification"]],
         validation_func: function(ship, upgrade_obj) {
@@ -12216,6 +12217,7 @@ exportObj.basicCardData = function() {
         slot: "Title",
         unique: true,
         charge: 2,
+        faction: ["Rebel Alliance", "Scum and Villainy"],
         recurring: 1,
         ship: "Gauntlet Fighter",
         restrictions: [["Slot", "Modification"]],
@@ -12290,8 +12292,7 @@ exportObj.basicCardData = function() {
         points: 3,
         slot: "Illicit",
         max_per_squad: 3,
-        faction: "Scum and Villainy",
-        restrictions: [["Base", "Standard"]],
+        restrictions: [["Keyword", "Bounty Hunter"]],
         applies_condition: 'Marked for Elimination'.canonicalize()
       }, {
         name: "Notorious",
