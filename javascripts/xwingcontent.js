@@ -1319,7 +1319,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 7,
-        slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Device", "Modification"]
+        slots: ["Turret", "Torpedo", "Missile", "Astromech", "Device", "Modification"]
       }, {
         name: '"Dutch" Vander',
         id: 27,
