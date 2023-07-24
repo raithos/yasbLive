@@ -6220,7 +6220,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 9,
         keyword: ["Mandalorian"],
-        slots: ["Torpedo", "Modification"]
+        slots: ["Torpedo", "Modification", "Modification"]
       }, {
         name: "Fenn Rau (Rebel Fang)",
         id: 501,
