@@ -21478,6 +21478,22 @@ exportObj.cardLoaders.日本語 = function() {
       display_name: "Haor Chall Prototype (SoC)",
       text: "君の %BULLSEYEARC% 内の敵宇宙船が、シナリオ・フィーチャーあるいは他の友軍宇宙船を防御者として宣言した後、君は %CALCULATE% あるいは %LOCK% アクションを実行しても良い。"
     },
+    '"Deathfire" (TBE)': {
+      display_name: "“Deathfire” (TBE)",
+      text: "君が速度 3-5 のマニューバを完全に実行した後、もし君がこのラウンド、デバイスを投下あるいは射出していないなら、君は %CHARGE% を2つ消費して、 [3 %STRAIGHT%] テンプレートを使用して爆弾を投下あるいは射出しても良い。"
+    },
+    "Major Rhymer (TBE)": {
+      display_name: "Major Rhymer (TBE)",
+      text: "君が %TORPEDO% 攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、 %FOCUS% の結果1つを %CRIT% の結果に変更する。"
+    },
+    "Captain Jonus (TBE)": {
+      display_name: "Captain Jonus (TBE)",
+      text: "君がデバイスを投下あるいは射出した後、回避トークンを得る。"
+    },
+    "Tomax Bren (TBE)": {
+      display_name: "Tomax Bren (TBE)",
+      text: "君が %BARRELROLL% アクションを実行した後、君は %CHARGE% を2つ消費しても良い。もし君がそうするなら、フォーカス・トークンを得る。"
+    },
     "Corran Horn (X-Wing)": {
       display_name: "Corran Horn",
       text: "君が攻撃の防御者を宣言した後、もし君が防御者へのロックを持っているなら、友軍宇宙船は君へのロックを防御者へ転送しても良い。"
@@ -22521,7 +22537,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Selfless": {
       display_name: "Selfless",
-      text: "レンジ0-1の他の友軍宇宙船が防御する際、結果の相殺ステップの前に、もし君がその攻撃アーク内にいるなら、君は%CRIT%ダメージを1つ受け、%CRIT%の結果1つをキャンセルしても良い。"
+      text: "レンジ 0-1 の他の友軍宇宙船が防御する際、結果の相殺ステップの前に、もし君がその攻撃アーク内にいるなら、君は %CRIT% ダメージを1つ受け、 %CRIT% の結果1つをキャンセルしても良い。"
+    },
+    "Selfless (BoY)": {
+      display_name: "Selfless",
+      text: "レンジ 0-1 の他の友軍宇宙船が防御する際、結果の相殺ステップの前に、もし君がその攻撃アーク内にいるなら、君は %CRIT% ダメージを1つ受け、 %CRIT% の結果1つをキャンセルしても良い。"
     },
     "Sense": {
       display_name: "Sense",
@@ -23282,6 +23302,22 @@ exportObj.cardLoaders.日本語 = function() {
     "Wolfpack (SoC)": {
       display_name: "Wolfpack",
       text: "君が攻撃を実行する際、君は友軍の <b>Plo Koon</b> 宇宙船あるいは <b>Born for This</b> 能力を持った宇宙船が防御者に対して持っているロックを消費して、好きな数の攻撃ダイスを振り直しても良い。"
+    },
+    "Swift Approach (TBE)": {
+      display_name: "Swift Approach",
+      text: "システム・フェイズの間、君がデバイスを投下するか射出した後、君はたとえストレス状態でも、白の %BARRELROLL% あるいは %BOOST% アクションを実行しても良い。"
+    },
+    "Automated Loaders (TBE)": {
+      display_name: "Automated Loaders",
+      text: "君が主武装攻撃を実行した後、君は %CHARGE% を1つ消費し、 %RELOAD% アクションを実行しても良い。"
+    },
+    "Top Cover (TBE)": {
+      display_name: "Top Cover",
+      text: "レンジ 0-1 の友軍宇宙船が防御した後、もし君がこのラウンド、デバイスを投下あるいは射出していないなら、君は [3 %BANKLEFT%], [3 %STRAIGHT%], あるいは [3 %BANKRIGHT%] テンプレートを使用して、デバイスを射出しても良い。 %LINEBREAK% 君は友軍のデバイスの効果を無視する。"
+    },
+    "True Grit (TBE)": {
+      display_name: "True Grit",
+      text: "アクティベーション・フェイズの終了時、もし君がストレイン状態ではないなら、君はストレイン・トークンを1つ得て、ロックではない赤かオレンジのトークンを1つ取り除いても良い。"
     },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
