@@ -216,12 +216,12 @@ exportObj.basicCardData = function() {
       "YT-2400 Light Freighter": {
         name: "YT-2400 Light Freighter",
         factions: ["Rebel Alliance"],
-        attackdt: 4,
+        attackdt: 3,
         agility: 2,
         hull: 6,
         shields: 4,
         keyword: ["Freighter"],
-        chassis: "Sensor Blindspot",
+        chassis: "Sensor Blackout",
         actions: ["Focus", "Lock", "R-Barrel Roll", "Rotate Arc"],
         base: "Large",
         maneuvers: [[0, 0, 0, 0, 0, 0], [2, 1, 1, 1, 2, 0], [2, 2, 1, 2, 2, 0], [2, 2, 2, 2, 2, 0], [0, 0, 2, 0, 0, 3]]
@@ -1441,7 +1441,11 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 10,
         loadout: 22,
-        slots: ["Talent", "Missile", "Crew", "Illicit", "Illicit", "Modification", "Title"]
+        slots: ["Talent", "Missile", "Crew", "Illicit", "Illicit", "Modification", "Title"],
+        chassis: "Sensor Blindspot",
+        ship_override: {
+          attackdt: 4
+        }
       }, {
         name: '"Leebo"',
         id: 40,
@@ -1452,7 +1456,11 @@ exportObj.basicCardData = function() {
         points: 8,
         loadout: 16,
         keyword: ["Droid"],
-        slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Title"]
+        slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Title"],
+        chassis: "Sensor Blindspot",
+        ship_override: {
+          attackdt: 4
+        }
       }, {
         name: "Wild Space Fringer",
         id: 41,
@@ -1461,7 +1469,11 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 8,
         loadout: 7,
-        slots: ["Missile", "Illicit"]
+        slots: ["Missile", "Illicit"],
+        chassis: "Sensor Blindspot",
+        ship_override: {
+          attackdt: 4
+        }
       }, {
         name: "Han Solo",
         id: 42,
@@ -7950,25 +7962,42 @@ exportObj.basicCardData = function() {
         points: 20,
         upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider (YLF)"]
       }, {
-        name: '"Leebo" (Scum)',
-        xwsaddon: "swz103-sl-rebelalliance",
+        name: '"Leebo" (YLF)',
+        xwsaddon: "swz103",
         unique: true,
         id: 651,
         faction: "Rebel Alliance",
         ship: "YT-2400 Light Freighter",
         skill: 3,
         points: 20,
-        upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider (YLF)"]
+        keyword: ["Droid"],
+        slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Title"]
+      }, {
+        name: '"Leebo" (YLF-SL)',
+        xwsaddon: "swz103-sl-rebelalliance",
+        unique: true,
+        id: 652,
+        faction: "Rebel Alliance",
+        ship: "YT-2400 Light Freighter",
+        skill: 3,
+        points: 20,
+        upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider (YLF)"],
+        ship_override: {
+          actions: ["Calculate", "Lock", "R-> Rotate Arc", "R-Barrel Roll", "Rotate Arc"]
+        }
       }, {
         name: '"Leebo" (Scum)',
         xwsaddon: "swz103-sl-scumandvillainy",
         unique: true,
-        id: 652,
+        id: 653,
         faction: "Scum and Villany",
         ship: "YT-2400 Light Freighter",
         skill: 3,
         points: 20,
-        upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider (YLF)"]
+        upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider (YLF)"],
+        ship_override: {
+          actions: ["Calculate", "Lock", "R-> Rotate Arc", "R-Barrel Roll", "Rotate Arc"]
+        }
       }
     ],
     upgradesById: [
@@ -12558,7 +12587,11 @@ exportObj.basicCardData = function() {
         name: "Seeker Missiles (YLF)",
         id: 500,
         standard: true,
-        slot: "Missile"
+        slot: "Missile",
+        attack: 3,
+        range: "2-3",
+        rangebonus: true,
+        charge: 4
       }, {
         name: '"Leebo" (YLF)',
         id: 501,
@@ -12888,6 +12921,9 @@ exportObj.basicCardData = function() {
       }, {
         name: "Solo",
         id: 48
+      }, {
+        name: "Sensor Blackout",
+        id: 49
       }
     ],
     damageById: [
