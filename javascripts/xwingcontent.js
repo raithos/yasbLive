@@ -4838,8 +4838,8 @@ exportObj.basicCardData = function() {
         ship: "CR90 Corellian Corvette",
         skill: 8,
         engagement: 0,
-        points: 0,
-        loadout: 99,
+        points: 15,
+        loadout: 40,
         slots: ["Command", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Team", "Cargo"]
       }, {
         name: "Alderaanian Guard",
@@ -4848,8 +4848,8 @@ exportObj.basicCardData = function() {
         ship: "CR90 Corellian Corvette",
         skill: 8,
         engagement: 0,
-        points: 0,
-        loadout: 99,
+        points: 15,
+        loadout: 40,
         slots: ["Command", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Team", "Cargo", "Title"]
       }, {
         name: "Outer Rim Patrol",
@@ -4858,8 +4858,8 @@ exportObj.basicCardData = function() {
         ship: "Raider-class Corvette",
         skill: 8,
         engagement: 0,
-        points: 0,
-        loadout: 99,
+        points: 16,
+        loadout: 50,
         slots: ["Command", "Torpedo", "Missile", "Hardpoint", "Hardpoint", "Crew", "Crew", "Team", "Team", "Cargo", "Title"]
       }, {
         name: "First Order Collaborators",
@@ -4868,8 +4868,8 @@ exportObj.basicCardData = function() {
         ship: "Raider-class Corvette",
         skill: 8,
         engagement: 0,
-        points: 0,
-        loadout: 99,
+        points: 16,
+        loadout: 50,
         slots: ["Command", "Torpedo", "Missile", "Hardpoint", "Hardpoint", "Crew", "Crew", "Team", "Team", "Cargo"]
       }, {
         name: "Echo Base Evacuees",
@@ -4878,8 +4878,8 @@ exportObj.basicCardData = function() {
         ship: "GR-75 Medium Transport",
         skill: 7,
         engagement: 1,
-        points: 0,
-        loadout: 99,
+        points: 10,
+        loadout: 25,
         slots: ["Command", "Hardpoint", "Turret", "Crew", "Crew", "Team", "Cargo", "Cargo", "Title"]
       }, {
         name: "New Republic Volunteers",
@@ -4888,8 +4888,8 @@ exportObj.basicCardData = function() {
         ship: "GR-75 Medium Transport",
         skill: 7,
         engagement: 1,
-        points: 0,
-        loadout: 99,
+        points: 10,
+        loadout: 25,
         slots: ["Command", "Hardpoint", "Turret", "Crew", "Crew", "Team", "Cargo", "Cargo"]
       }, {
         name: "Outer Rim Garrison",
@@ -4898,8 +4898,8 @@ exportObj.basicCardData = function() {
         ship: "Gozanti-class Cruiser",
         skill: 7,
         engagement: 1,
-        points: 0,
-        loadout: 99,
+        points: 11,
+        loadout: 40,
         slots: ["Command", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Cargo", "Title"]
       }, {
         name: "First Order Sympathizers",
@@ -4908,8 +4908,8 @@ exportObj.basicCardData = function() {
         ship: "Gozanti-class Cruiser",
         skill: 7,
         engagement: 1,
-        points: 0,
-        loadout: 99,
+        points: 11,
+        loadout: 40,
         slots: ["Command", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Cargo"]
       }, {
         name: "Separatist Privateers",
@@ -4918,8 +4918,8 @@ exportObj.basicCardData = function() {
         ship: "C-ROC Cruiser",
         skill: 7,
         engagement: 1,
-        points: 0,
-        loadout: 99,
+        points: 10,
+        loadout: 30,
         slots: ["Command", "Hardpoint", "Crew", "Crew", "Tactical Relay", "Team", "Cargo", "Device", "Configuration"]
       }, {
         name: "Syndicate Smugglers",
@@ -4928,8 +4928,8 @@ exportObj.basicCardData = function() {
         ship: "C-ROC Cruiser",
         skill: 7,
         engagement: 1,
-        points: 0,
-        loadout: 99,
+        points: 10,
+        loadout: 30,
         slots: ["Command", "Hardpoint", "Crew", "Crew", "Team", "Cargo", "Device", "Illicit", "Title", "Configuration"]
       }, {
         name: "Jarek Yeager",
@@ -5982,7 +5982,8 @@ exportObj.basicCardData = function() {
         ship: "Trident-class Assault Ship",
         skill: 8,
         engagement: 0,
-        points: 85,
+        points: 12,
+        loadout: 45,
         slots: ["Command", "Torpedo", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Title"]
       }, {
         name: "Lawless Pirates",
@@ -5991,7 +5992,8 @@ exportObj.basicCardData = function() {
         ship: "Trident-class Assault Ship",
         skill: 8,
         engagement: 0,
-        points: 85,
+        points: 12,
+        loadout: 45,
         slots: ["Command", "Torpedo", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Title"]
       }, {
         name: "Zorii Bliss",

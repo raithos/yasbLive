@@ -2970,7 +2970,11 @@ exportObj.SquadBuilder = (function() {
     this.collection = null;
     this.current_obstacles = [];
     this.setupUI();
-    this.game_type_selector.val(((_ref7 = exportObj.builders[0]) != null ? _ref7 : this).game_type_selector.val());
+    if (this.faction === "All") {
+      this.game_type_selector.val("epic").trigger('change');
+    } else {
+      this.game_type_selector.val(((_ref7 = exportObj.builders[0]) != null ? _ref7 : this).game_type_selector.val());
+    }
     this.setupEventHandlers();
     window.setInterval(this.updatePermaLink, 250);
     this.isUpdatingPoints = false;
@@ -3053,7 +3057,7 @@ exportObj.SquadBuilder = (function() {
     DEFAULT_RANDOMIZER_SHIP_LIMIT = 0;
     this.status_container = $(document.createElement('DIV'));
     this.status_container.addClass('container-fluid');
-    this.status_container.append($.trim("<div class=\"row squad-name-and-points-row\">\n    <div class=\"col-md-3 squad-name-container\">\n        <div class=\"display-name\">\n            <span class=\"squad-name\"></span>\n            <i class=\"far fa-edit\"></i>\n        </div>\n        <div class=\"input-append\">\n            <input type=\"text\" maxlength=\"64\" placeholder=\"" + (this.uitranslation("Name your squad...")) + "\" />\n            <button class=\"btn save\"><i class=\"fa fa-pen-square\"></i></button>\n        </div>\n        <br />\n        <select class=\"game-type-selector\">\n            <option value=\"standard\" class=\"translated\" defaultText=\"Standard\" selected=\"selected\">" + (this.uitranslation("Standard")) + "</option>\n            <option value=\"extended\" class=\"translated\" defaultText=\"Extended\"></option>\n            <option value=\"epic\" class=\"translated\" defaultText=\"Epic\"></option>\n            <option value=\"quickbuild\" class=\"translated\" defaultText=\"Quickbuild\"></option>\n        </select>\n    </div>\n    <div class=\"col-md-4 points-display-container\">\n        Points: <span class=\"total-points\">0</span> / <input type=\"number\" class=\"desired-points\" value=\"20\">\n        <span class=\"points-remaining-container\">(<span class=\"points-remaining\"></span>&nbsp;left) <span class=\"points-destroyed red\"></span></span>\n        <span class=\"content-warning unreleased-content-used d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Unreleased content warning\"></span></span>\n        <span class=\"content-warning loading-failed-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Broken squad link warning\"></span></span>\n        <span class=\"content-warning old-version-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"This squad was created for an older version of X-Wing.\"></span></span>\n        <span class=\"content-warning collection-invalid d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Collection warning\"></span></span>\n        <span class=\"content-warning ship-number-invalid-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Ship number warning\"></span></span>\n        <span class=\"content-warning multi-faction-warning-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Multi-Faction warning\"></span></span>\n    </div>\n    <div class=\"col-md-5 float-right button-container\">\n        <div class=\"btn-group float-right\">\n\n            <button class=\"btn btn-info view-as-text\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print/Export\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-print\"></i></span></button>\n            <a class=\"btn btn-primary d-none collection\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-folder-open\"></i> <span class=\"translated\" defaultText=\"Your Collection\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-folder-open\"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class=\"btn btn-danger randomize\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-random\"></i> <span class=\"translated\" defaultText=\"Randomize!\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-random\"></i></span></button>\n            <button class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\">\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu\">\n                <li><a class=\"dropdown-item randomize-options translated\" defaultText=\"Randomizer Options\"></a></li>\n                <li><a class=\"dropdown-item misc-settings translated\" defaultText=\"Misc Settings\"></a></li>\n            </ul>\n        </div>\n    </div>\n</div>\n\n<div class=\"row squad-save-buttons\">\n    <div class=\"col-md-12\">\n        <button class=\"show-authenticated btn btn-primary save-list\"><i class=\"far fa-save\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save\"></span></button>\n        <button class=\"show-authenticated btn btn-primary save-list-as\"><i class=\"far fa-file\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save As...\"></span></button>\n        <button class=\"show-authenticated btn btn-primary delete-list disabled\"><i class=\"fa fa-trash\"></i>&nbsp;<span class=\"translated\" defaultText=\"Delete\"></span></button>\n        <button class=\"show-authenticated btn btn-info backend-list-my-squads show-authenticated\"><i class=\"fa fa-download\"></i>&nbsp;<span class = \"translated\" defaultText=\"Load Squad\"></span></button>\n        <button class=\"btn btn-info import-squad\"><i class=\"fa fa-file-import\"></i>&nbsp;<span class=\"translated\" defaultText=\"Import\"></span></button>\n        <button class=\"btn btn-info show-points-destroyed\"><i class=\"fas fa-bullseye\"></i>&nbsp;<span class=\"show-points-destroyed-span translated\" defaultText=\"" + (this.uitranslation("Show Points Destroyed")) + "\"></span></button>                    \n        <button class=\"btn btn-danger clear-squad\"><i class=\"fa fa-plus-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"New Squad\"></span></button>\n        <span class=\"show-authenticated backend-status\"></span>\n    </div>\n</div>"));
+    this.status_container.append($.trim("<div class=\"row squad-name-and-points-row\">\n    <div class=\"col-md-3 squad-name-container\">\n        <div class=\"display-name\">\n            <span class=\"squad-name\"></span>\n            <i class=\"far fa-edit\"></i>\n        </div>\n        <div class=\"input-append\">\n            <input type=\"text\" maxlength=\"64\" placeholder=\"" + (this.uitranslation("Name your squad...")) + "\" />\n            <button class=\"btn save\"><i class=\"fa fa-pen-square\"></i></button>\n        </div>\n        <br />\n        <select class=\"game-type-selector\">\n            <option value=\"standard\" class=\"translated\" defaultText=\"Standard\" selected=\"selected\">" + (this.uitranslation("Standard")) + "</option>\n            <option value=\"extended\" class=\"translated\" defaultText=\"Extended\"></option>\n            <option value=\"epic\" class=\"translated\" defaultText=\"Epic\"></option>\n            <option value=\"quickbuild\" class=\"translated\" defaultText=\"Quickbuild\"></option>\n        </select>\n    </div>\n    <div class=\"col-md-4 points-display-container\">\n        Points: <span class=\"total-points\">0</span> / <input type=\"number\" class=\"desired-points\" value=\"20\">\n        <span class=\"points-remaining-container\">(<span class=\"points-remaining\"></span>&nbsp;left) <span class=\"points-destroyed red\"></span></span>\n        <span class=\"content-warning unreleased-content-used d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Unreleased content warning\"></span></span>\n        <span class=\"content-warning loading-failed-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Broken squad link warning\"></span></span>\n        <span class=\"content-warning old-version-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"This squad was created for an older version of X-Wing.\"></span></span>\n        <span class=\"content-warning collection-invalid d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Collection warning\"></span></span>\n        <span class=\"content-warning ship-number-invalid-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Ship number warning\"></span></span>\n        <span class=\"content-warning multi-faction-warning-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Multi-Faction warning\"></span></span>\n        <span class=\"content-warning epic-not-legal-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Epic Unofficial\"></span></span>\n    </div>\n    <div class=\"col-md-5 float-right button-container\">\n        <div class=\"btn-group float-right\">\n\n            <button class=\"btn btn-info view-as-text\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print/Export\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-print\"></i></span></button>\n            <a class=\"btn btn-primary d-none collection\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-folder-open\"></i> <span class=\"translated\" defaultText=\"Your Collection\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-folder-open\"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class=\"btn btn-danger randomize\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-random\"></i> <span class=\"translated\" defaultText=\"Randomize!\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-random\"></i></span></button>\n            <button class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\">\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu\">\n                <li><a class=\"dropdown-item randomize-options translated\" defaultText=\"Randomizer Options\"></a></li>\n                <li><a class=\"dropdown-item misc-settings translated\" defaultText=\"Misc Settings\"></a></li>\n            </ul>\n        </div>\n    </div>\n</div>\n\n<div class=\"row squad-save-buttons\">\n    <div class=\"col-md-12\">\n        <button class=\"show-authenticated btn btn-primary save-list\"><i class=\"far fa-save\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save\"></span></button>\n        <button class=\"show-authenticated btn btn-primary save-list-as\"><i class=\"far fa-file\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save As...\"></span></button>\n        <button class=\"show-authenticated btn btn-primary delete-list disabled\"><i class=\"fa fa-trash\"></i>&nbsp;<span class=\"translated\" defaultText=\"Delete\"></span></button>\n        <button class=\"show-authenticated btn btn-info backend-list-my-squads show-authenticated\"><i class=\"fa fa-download\"></i>&nbsp;<span class = \"translated\" defaultText=\"Load Squad\"></span></button>\n        <button class=\"btn btn-info import-squad\"><i class=\"fa fa-file-import\"></i>&nbsp;<span class=\"translated\" defaultText=\"Import\"></span></button>\n        <button class=\"btn btn-info show-points-destroyed\"><i class=\"fas fa-bullseye\"></i>&nbsp;<span class=\"show-points-destroyed-span translated\" defaultText=\"" + (this.uitranslation("Show Points Destroyed")) + "\"></span></button>                    \n        <button class=\"btn btn-danger clear-squad\"><i class=\"fa fa-plus-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"New Squad\"></span></button>\n        <span class=\"show-authenticated backend-status\"></span>\n    </div>\n</div>"));
     this.container.append(this.status_container);
     this.xws_import_modal = $(document.createElement('DIV'));
     this.xws_import_modal.addClass('modal fade import-modal d-print-none');
@@ -3354,6 +3358,7 @@ exportObj.SquadBuilder = (function() {
     this.old_version_container = $(this.points_container.find('.old-version-container'));
     this.ship_number_invalid_container = $(this.points_container.find('.ship-number-invalid-container'));
     this.multi_faction_warning_container = $(this.points_container.find('.multi-faction-warning-container'));
+    this.epic_not_legal_container = $(this.points_container.find('.epic-not-legal-container'));
     this.collection_invalid_container = $(this.points_container.find('.collection-invalid'));
     this.view_list_button = $(this.status_container.find('div.button-container button.view-as-text'));
     this.randomize_button = $(this.status_container.find('div.button-container button.randomize'));
@@ -3594,7 +3599,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3226
+              lineno: 3231
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4122,13 +4127,15 @@ exportObj.SquadBuilder = (function() {
     this.isStandard = false;
     this.isEpic = false;
     this.isQuickbuild = false;
+    this.epic_not_legal_container.toggleClass('d-none', true);
     switch (gametype) {
       case 'extended':
         this.desired_points_input.val(20);
         break;
       case 'epic':
         this.isEpic = true;
-        this.desired_points_input.val(50);
+        this.desired_points_input.val(40);
+        this.epic_not_legal_container.toggleClass('d-none', false);
         break;
       case 'quickbuild':
         this.isQuickbuild = true;
@@ -4587,7 +4594,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4161
+              lineno: 4168
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4597,7 +4604,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4162
+                lineno: 4169
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -6982,7 +6989,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5893
+                  lineno: 5900
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -7210,7 +7217,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 6015
+                          lineno: 6022
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -7260,7 +7267,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 6048
+                                  lineno: 6055
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7429,7 +7436,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 6149
+                      lineno: 6156
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7524,7 +7531,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 6194
+                lineno: 6201
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7617,7 +7624,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6238
+              lineno: 6245
             }));
           }
         }
@@ -7705,7 +7712,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6293
+                lineno: 6300
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8991,7 +8998,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7235
+                lineno: 7242
               })
             ]);
             __iced_deferrals._fulfill();
@@ -9150,7 +9157,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7329
+                  lineno: 7336
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -9177,7 +9184,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7336
+                      lineno: 7343
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9308,7 +9315,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7401
+            lineno: 7408
           }));
         }
         __iced_deferrals._fulfill();
