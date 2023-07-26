@@ -8500,7 +8500,7 @@ Ship = (function() {
     unchanged = true;
     max_checks = 32;
     if (this.builder.isEpic) {
-      if (!(__indexOf.call(this.pilot.slots, "Command") >= 0)) {
+      if ((this.pilot.slots != null) && !(__indexOf.call(this.pilot.slots, "Command") >= 0)) {
         addCommand = true;
         _ref = this.upgrades;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {

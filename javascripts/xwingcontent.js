@@ -4838,7 +4838,7 @@ exportObj.basicCardData = function() {
         ship: "CR90 Corellian Corvette",
         skill: 8,
         engagement: 0,
-        points: 15,
+        points: 14,
         loadout: 40,
         slots: ["Command", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Team", "Cargo"]
       }, {
@@ -4848,7 +4848,7 @@ exportObj.basicCardData = function() {
         ship: "CR90 Corellian Corvette",
         skill: 8,
         engagement: 0,
-        points: 15,
+        points: 14,
         loadout: 40,
         slots: ["Command", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Team", "Cargo", "Title"]
       }, {
@@ -4858,7 +4858,7 @@ exportObj.basicCardData = function() {
         ship: "Raider-class Corvette",
         skill: 8,
         engagement: 0,
-        points: 16,
+        points: 15,
         loadout: 50,
         slots: ["Command", "Torpedo", "Missile", "Hardpoint", "Hardpoint", "Crew", "Crew", "Team", "Team", "Cargo", "Title"]
       }, {
@@ -4868,7 +4868,7 @@ exportObj.basicCardData = function() {
         ship: "Raider-class Corvette",
         skill: 8,
         engagement: 0,
-        points: 16,
+        points: 15,
         loadout: 50,
         slots: ["Command", "Torpedo", "Missile", "Hardpoint", "Hardpoint", "Crew", "Crew", "Team", "Team", "Cargo"]
       }, {
