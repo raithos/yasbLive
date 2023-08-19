@@ -8281,6 +8281,8 @@ exportObj.translations['Français'] = {
     "Sensor": "Senseur",
     "Torpedo": "Torpille",
     "Turret": "Tourelle",
+    "HardpointShip": "Emplacement d'arme",
+    "VersatileShip": "Châssis Polyvalent",
     "Hardpoint": "Point d’accroche",
     "Illicit": "Illégal",
     "Configuration": "Configuration",
@@ -8377,6 +8379,8 @@ exportObj.translations['Français'] = {
     "Battle of Yavin Battle Pack": "Paquet de Scénarios Bataille de Yavin",
     "Siege of Coruscant Battle Pack": "Paquet de Scénarios Siège de Coruscant",
     "Hotshots and Aces II Reinforcements Pack": "Paquet de Renforts Pilotes Hors Pair 2",
+    "Galactic Empire Squadron Starter Pack": "Boite de Base D'Escadron Empire",
+    "Rebel Alliance Squadron Starter Pack": "Boite de Base D'Escadron Alliance Rebelle",
     "Loose Ships": "Vaisseaux en vrac"
   },
   ui: {
@@ -9155,7 +9159,7 @@ exportObj.cardLoaders['Français'] = function() {
       text: "Après avoir effectué une attaque, vous pouvez dépenser 2 %FORCE% pour effectuer une attaque principale bonus contre une cible différente. Si votre attaque était ratée, vous pouvez effectuer cette attaque principale bonus contre la même cible à la place."
     },
     "Darth Vader": {
-      display_name: "Darth Vader",
+      display_name: "Dark Vador",
       text: "Après avoir effectué une action, vous pouvez dépenser 1 %FORCE% pour effectuer une action."
     },
     "Dash Rendar": {
@@ -11168,6 +11172,62 @@ exportObj.cardLoaders['Français'] = function() {
     },
     "Agent Tierny": {
       text: "<strong>Mise En Place :</strong> après avoir placé les forces, vous <b>devez</b> assigner l'état <b>•Confiance Brisée</b> à un vaisseau ennemi."
+    },
+    "Darth Vader (SSP)": {
+      display_name: "Darth Vader (Standard)",
+      text: "Après avoir effectué une action, vous pouvez dépenser 1 %FORCE% pour effectuer une action."
+    },
+    "Maarek Stele (SSP)": {
+      display_name: "Maarek Stele (Standard)",
+      text: "Tant que vous effectuez une attaque, si une carte de dégât devrait être attribuée face visible au défenseur, piochez 3 cartes de dégât à la place, choisissez-en 1 et défaussez les autres."
+    },
+    "Captain Jonus (SSP)": {
+      display_name: "Capitaine Jonus (Standard)",
+      text: "Tant qu’un vaisseau allié à portée 0–1 effectue une attaque %TORPEDO% ou %MISSILE%, il peut relancer jusqu’à 2 dés d’attaque."
+    },
+    "Tomax Bren (SSP)": {
+      display_name: "Tomax Bren (Standard)",
+      text: "Après avoir effectué une action %RELOAD%, vous pouvez récupérer 1 %CHARGE% sur 1 de vos cartes d’amélioration %TALENT% équipée."
+    },
+    '"Night Beast" (SSP)': {
+      display_name: "“Night Beast” (Standard)",
+      text: "Après avoir entièrement exécuté une manœuvre bleue, vous pouvez effectuer une action %FOCUS%."
+    },
+    "Valen Rudor (SSP)": {
+      display_name: "Valen Rudor (Standard)",
+      text: "Après qu’un vaisseau allié à portée 0–1 a défendu (après la résolution des dégâts, s’il y en a), vous pouvez effectuer une action."
+    },
+    "Iden Versio (SSP)": {
+      display_name: "Iden Versio (Standard)",
+      text: "Avant qu’un chasseur TIE/ln allié à portée 0–1 ne subisse 1 ou plusieurs dégâts, vous pouvez dépenser 1 %CHARGE%. Dans ce cas, prévenez ce(s) dégât(s)."
+    },
+    "Luke Skywalker (SSP)": {
+      display_name: "Luke Skywalker (Standard)",
+      text: "Après que vous avez été déclaré comme défenseur (avant que les dés ne soient lancés), vous pouvez récupérer 1 %FORCE%."
+    },
+    "Jek Porkins (SSP)": {
+      display_name: "Jek Porkins (Standard)",
+      text: "Après avoir gagné un marqueur de stress, vous pouvez lancer 1 dé d’attaque pour le retirer. Sur un résultat %HIT%, subissez 1 dégât %HIT%."
+    },
+    '"Dutch" Vander (SSP)': {
+      display_name: "“Dutch” Vander (Standard)",
+      text: "Après avoir effectué l’action %LOCK%, vous pouvez choisir 1 vaisseau allié à portée 1–3. Il peut verrouiller l’objet que vous avez verrouillé, en ignorant les restrictions de portée."
+    },
+    "Horton Salm (SSP)": {
+      display_name: "Horton Salm (Standard)",
+      text: "Tant que vous effectuez une attaque, vous pouvez relancer 1 dé d’attaque pour chaque autre vaisseau allié à portée 0–1 du défenseur."
+    },
+    "Arvel Crynyd (SSP)": {
+      display_name: "Arvel Crynyd (Standard)",
+      text: "Si vous deviez échouer à une action %BOOST% qui vous amènerait à chevaucher un autre vaisseau, résolvez-la comme si vous exécutiez partiellement une manœuvre à la place.%LINEBREAK%Tant que vous effectuez une attaque à portée d’attaque 0, considérez-la comme une attaque à portée d’attaque 1."
+    },
+    "Jake Farrell (SSP)": {
+      display_name: "Jake Farrell (Standard)",
+      text: "Après avoir effectué une action %BARRELROLL% ou %BOOST%, vous pouvez choisir un vaisseau allié à portée 0–1. Ce vaisseau peut effectuer une action %FOCUS%."
+    },
+    "Shara Bey (SSP)": {
+      display_name: "Shara Bey (Standard)",
+      text: "Tant que vous défendez ou effectuez une attaque principale, vous pouvez dépenser 1 verrouillage que vous avez sur le vaisseau ennemi pour ajouter 1 résultat %FOCUS% aux résultats de vos dés. "
     }
   };
   upgrade_translations = {
@@ -12067,7 +12127,7 @@ exportObj.cardLoaders['Français'] = function() {
       text: "Tant qu’un autre vaisseau allié effectue une attaque principale, si le défenseur est dans votre arc de tir, vous pouvez dépenser 1 %CHARGE%. Dans ce cas, l’attaquant lance 1 dé supplémentaire, pour un maximum de 4. Pendant la phase de système, vous pouvez gagner 1 marqueur de désarmement pour récupérer 1 %CHARGE%."
     },
     "Seventh Sister": {
-      display_name: "La Septième Sœur%LINEBREAK%",
+      display_name: "La Septième Sœur",
       text: "Si un vaisseau ennemi à portée 0-1 est censé gagner un marqueur de stress, vous pouvez dépenser 1 %FORCE% pour qu’il gagne 1 marqueur de brouillage ou de rayon tracteur à la place."
     },
     "Shield Upgrade": {
@@ -24395,7 +24455,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.Português = function() {
-  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, damage_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'Português';
   exportObj.renameShip("Modified YT-1300 Light Freighter", "Cargueiro Leve YT-1300 Modificado");
   exportObj.renameShip("StarViper-class Attack Platform", "Plataforma de Ataque Classe Starviper");
@@ -24864,6 +24924,22 @@ exportObj.cardLoaders.Português = function() {
     "Dash Rendar": {
       display_name: "Dash Rendar",
       text: "Quando você se move, você ignora obstáculos."
+    },
+    "Dash Rendar (YLF)": {
+      display_name: "Dash Rendar (YLF)",
+      text: "Durante a Fase de Engajamento, você ignora os efeitos dos obstáculos que você estiver sobrepondo."
+    },
+    "Dash Rendar (YLF-SL)": {
+      display_name: "Dash Rendar (YLF-SL)",
+      text: "Depois que você receber uma ficha vermelha como resultado de se mover através ou sobrepor um obstáculo, você pode transferir esta ficha vermelha para uma nave amiga em alcance 0-1."
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo” (YLF)",
+      text: "Depois que você se defender ou realizar um ataque, se você gastou uma ficha de cálculo, receba 1 ficha de cálculo."
+    },
+    '"Leebo" (YLF-SL)': {
+      display_name: "“Leebo” (YLF-SL)",
+      text: "No começo da Fase de Engajamento, você pode gastar uma ficha de cálculo para adquirir uma mira em uma nave inimiga em alcance 2-3."
     },
     "Gray Squadron Bomber": {
       display_name: "Bombardeiro do Esquadrão Cinza",
@@ -25615,6 +25691,22 @@ exportObj.cardLoaders.Português = function() {
     "Captain Jonus": {
       display_name: "Capitão Jonus",
       text: "Quando uma nave amiga em alcance 0-1 realizar um ataque %TORPEDO% ou %MISSILE%, o atacante pode rerrolar até 2 dados de ataque."
+    },
+    '"Deathfire" (TBE)': {
+      display_name: "“Deathfire” (TBE)",
+      text: "Depois que você realizar completamente uma manobra 3-5, se você não tiver soltado ou lançado um dispositivo nessa rodada, você pode gastar 2 %CHARGE% para soltar ou lançar uma bomba usando o gabarito [3 %STRAIGHT%]."
+    },
+    "Major Rhymer (TBE)": {
+      display_name: "Major Rhymer (TBE)",
+      text: "Quando você realizar um ataque %TORPEDO%, se o defensor estiver em seu %BULLSEYEARC%, mude 1 resultado %FOCUS% para um resultado %CRIT%."
+    },
+    "Captain Jonus (TBE)": {
+      display_name: "Capitão Jonus (TBE)",
+      text: "Depois que você soltar ou lançar um dispositivo, receba uma ficha de desvio."
+    },
+    "Tomax Bren (TBE)": {
+      display_name: "Tomax Bren (TBE)",
+      text: "Depois que você realizar uma ação %BARRELROLL%, você pode gastar 2 %CHARGE%. Se você fizer isso, receba uma ficha de foco."
     },
     "Delta Squadron Pilot": {
       display_name: "Piloto do Esq. Delta",
@@ -28933,6 +29025,120 @@ exportObj.cardLoaders.Português = function() {
     "Modified for Organics": {
       display_name: "Modificado para Orgânicos",
       text: "Esta nave não é afetada pela restrição <strong>Padronizada</strong>. Reduza a dificuldade de suas manobras curvas suave [%BANKLEFT% ou %BANKRIGHT%] de velocidade 2 e 3. Aumente a dificuldade de suas curvas [%TURNLEFT% ou %TURNRIGHT%] de velocidade 3."
+    },
+    "Darth Vader (SSP)": {
+      display_name: "Darth Vader (SSP)",
+      text: "Depois que você realizar uma ação, você pode gastar 1 %FORCE% para realizar uma ação."
+    },
+    "Maarek Stele (SSP)": {
+      display_name: "Maarek Stele (SSP)",
+      text: "Quando você realizar um ataque, se o defensor for receber uma carta de dano virada para cima, ao invés disso compre 3 cartas de dano, escolha 1 e descarte o resto. "
+    },
+    "Captain Jonus (SSP)": {
+      display_name: "Capitão Jonus (SSP)",
+      text: "Quando uma nave amiga em alcance 0-1 realiza um ataque %TORPEDO% ou %MISSILE%, essa nave pode rerolar até 2 dados de ataque. "
+    },
+    "Tomax Bren (SSP)": {
+      display_name: "Tomax Bren (SSP)",
+      text: "Depois que você realizar uma ação %RELOAD%, você pode recuperar 1 ficha %CHARGE% em 1 de suas cartas de melhoria %TALENT% equipadas. "
+    },
+    '"Night Beast" (SSP)': {
+      display_name: "“Night Beast” (SSP)",
+      text: "Depois que você realizar completamente uma manobra azul, você pode realizar uma ação %FOCUS%."
+    },
+    "Valen Rudor (SSP)": {
+      display_name: "Valen Rudor (SSP)",
+      text: "Depois que uma nave amiga em alcance 0-1 defender (depois que o dano for resolvido, se houver), você pode realizar uma ação."
+    },
+    "Iden Versio (SSP)": {
+      display_name: "Iden Versio (SSP)",
+      text: "Antes de um caça TIE/ln amigo em alcance 0-1 sofrer 1 ou mais danos, você pode gastar 1 %CHARGE%. Se o fizer, evite esse dano."
+    },
+    "Luke Skywalker (SSP)": {
+      display_name: "Luke Skywalker (SSP)",
+      text: "Depois que você se tornar o defensor (antes dos dados serem rolados), você pode recuperar 1 %FORCE%."
+    },
+    "Jek Porkins (SSP)": {
+      display_name: "Jek Porkins (SSP)",
+      text: "Depois que você receber uma ficha de estresse, você pode rolar 1 dado de ataque para removê-la. Em um resultado %HIT%, sofra 1 dano %HIT%."
+    },
+    '"Dutch" Vander (SSP)': {
+      display_name: "“Dutch” Vander (SSP)",
+      text: "Depois que você realizar uma ação %LOCK%, você pode escolher 1 nave amiga em alcance 1-3. Essa nave pode adquirir uma mira no objeto que você mirou, ignorando restrições de alcance."
+    },
+    "Horton Salm (SSP)": {
+      display_name: "Horton Salm (SSP)",
+      text: "Quando você realizar um ataque, você pode rerolar 1 dado de ataque para cada outra nave amiga em alcance 0-1 do defensor."
+    },
+    "Arvel Crynyd (SSP)": {
+      display_name: "Arvel Crynyd (SSP)",
+      text: "Se você falharia uma ação %BOOST% por sobrepor outra nave, ao invés disso, resolva-a como se estivesse executando parcialmente uma manobra.%LINEBREAK% Quando Você realizar um ataque em alcance 0, trate-o como um ataque em alcance 1."
+    },
+    "Jake Farrell (SSP)": {
+      display_name: "Jake Farrell (SSP)",
+      text: "Depois que você realizar uma ação %BARRELROLL% ou %BOOST%, você pode escolher uma nave amiga em alcance 0-1. Essa nave pode realizar uma ação %FOCUS%."
+    },
+    "Shara Bey (SSP)": {
+      display_name: "Shara Bey (SSP)",
+      text: "Quando você defender ou realizar um ataque primário, você pode gastar 1 mira que você possua na nave inimiga e adicionar 1 resultado %FOCUS% ao resultado dos seus dados. "
+    }
+  };
+  damage_translations = {
+    "Panicked Pilot": {
+      display_name: "Piloto em Pânico",
+      text: "Receba 2 fichas de estresse. Então, repare esta carta."
+    },
+    "Blinded Pilot": {
+      display_name: "Piloto Cegado",
+      text: "Quando você realizar um ataque, você pode modificar seus dados apenas gastando %FORCE% para seu efeito padrão.%LINEBREAK%<strong>Ação:</strong> Repare esta carta. "
+    },
+    "Wounded Pilot": {
+      display_name: "Piloto Ferido",
+      text: "Após você realizar uma ação, role 1 dado de ataque. Em um resultado %HIT% ou %CRIT%, receba 1 ficha de estresse.%LINEBREAK%<strong>Ação:</strong> Repare esta carta. "
+    },
+    "Stunned Pilot": {
+      display_name: "Piloto Atordoado",
+      text: "Após executar uma manobra, se você se moveu através ou sobrepôs um obstáculo, sofra 1 dano %HIT%. "
+    },
+    "Console Fire": {
+      display_name: "Incêndio no Console",
+      text: "Antes de você engajar, role 1 dado de ataque. Em um resultado %HIT%, sofra 1 dano %HIT%. %LINEBREAK%<strong>Ação:</strong> Repare esta carta. "
+    },
+    "Damaged Engine": {
+      display_name: "Motor Danificado",
+      text: "Aumente a dificuldade das suas manobras de curva acentuada (%TURNLEFT% and %TURNRIGHT%)"
+    },
+    "Weapons Failure": {
+      display_name: "Falha nas Armas",
+      text: "Quando você realizar um ataque, role 1 dado de ataque a menos. %LINEBREAK%<strong>Ação:</strong> Repare esta carta. "
+    },
+    "Hull Breach": {
+      display_name: "Ruptura do Casco",
+      text: "Antes de você sofrer 1 ou mais danos %HIT%, em vez disso, sofra a mesma quantidade de dano %CRIT%.%LINEBREAK%<strong>Ação:</strong> Repare esta carta.  "
+    },
+    "Structural Damage": {
+      display_name: "Dano Estrutural",
+      text: "Quando você defender, role 1 dado de defesa a menos."
+    },
+    "Damaged Sensor Array": {
+      display_name: "Matriz de Sensores Danificada",
+      text: "Você não pode realizar ações, exceto a ação %FOCUS% e as ações das cartas de dano.%LINEBREAK%<strong>Ação:</strong> Repare esta carta.  "
+    },
+    "Loose Stabilizer": {
+      display_name: "Estabilizador Solto",
+      text: "Após executar uma manobra não-reta (%STRAIGHT%) você sofre 1 dano %HIT% e repara esta carta. %LINEBREAK%<strong>Ação:</strong> Repare esta carta.  "
+    },
+    "Disabled Power Regulator": {
+      display_name: "Regulador de Força Desativado",
+      text: "Antes de você engajar, receba 1 ficha de íon. Após você executar uma manobra iônica, repare esta carta."
+    },
+    "Fuel Leak": {
+      display_name: "Vazamento de Combustível",
+      text: "Após você sofrer 1 dano %CRIT%, sofra 1 dano %HIT% e repare esta carta.%LINEBREAK%<strong>Ação:</strong> Repare esta carta.  "
+    },
+    "Direct Hit!": {
+      display_name: "Acerto em Cheio!",
+      text: "Sofra 1 dano %HIT%. Então, repare esta carta. "
     }
   };
   return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);

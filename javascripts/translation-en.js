@@ -2266,7 +2266,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Hol Okand (BoY)": {
       display_name: "Hol Okand (BoY)",
-      text: "During the System Phasse, if there are no enemy ships at range 1-2, you may recover 1 %CHARGE% on any upgrade."
+      text: "During the System Phase, if there are no enemy ships at range 1-2, you may recover 1 %CHARGE% on any upgrade."
     },
     '"Pops" Krail (BoY)': {
       display_name: "“Pops” Krail (BoY)",
