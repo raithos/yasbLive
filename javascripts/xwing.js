@@ -8576,7 +8576,7 @@ Ship = (function() {
     _ref = this.upgrades;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       upgrade = _ref[_i];
-      if (((upgrade != null ? upgrade.data : void 0) != null) && !exportObj.isReleased(upgrade.data && (upgrade.standard == null))) {
+      if (((upgrade != null ? upgrade.data : void 0) != null) && !exportObj.isReleased(upgrade.data)) {
         return true;
       }
     }
