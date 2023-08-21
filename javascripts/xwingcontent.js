@@ -13698,7 +13698,7 @@ String.prototype.serialtoxws = function() {
       yasb: {
         builder: 'YASB - X-Wing 2.5',
         builder_url: "https://yasb.app",
-        link: "https://yasb.app/index.html" + this
+        link: "https://yasb.app/" + this
       }
     },
     version: '11/25/2022'
@@ -13746,7 +13746,7 @@ String.prototype.serialtoxws = function() {
       upgrade_data = _ref3[_j];
       if (upgrade_data.skip == null) {
         name_parse = upgrade_data.name.split("(");
-        if (pilot_data.canonical_name == null) {
+        if (upgrade_data.canonical_name == null) {
           upgrade_data.canonical_name = name_parse[0].canonicalize();
         }
         upgrade_data.xws = upgrade_data.xws != null ? upgrade_data.xws : (upgrade_data.xwsaddon != null ? upgrade_data.canonical_name + "-" + upgrade_data.xwsaddon : upgrade_data.canonical_name + (name_parse[1] != null ? "-" + upgrade_data.slot.canonicalize() : ""));
