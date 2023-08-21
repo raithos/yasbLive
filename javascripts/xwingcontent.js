@@ -13735,6 +13735,7 @@ String.prototype.serialtoxws = function() {
         if (pilot_data.canonical_name == null) {
           pilot_data.canonical_name = pilot_data.name.canonicalize();
         }
+        pilot_data.xws = pilot_data.xws != null ? pilot_data.xws : (pilot_data.xwsaddon != null ? pilot_data.canonical_name + "-" + pilot_data.xwsaddon : pilot_data.canonical_name + (name_parse[1] != null ? "-" + pilot_data.ship.canonicalize() : ""));
         card_pilots[pilot_data.id] = pilot_data;
       }
     }
@@ -13746,6 +13747,7 @@ String.prototype.serialtoxws = function() {
         if (upgrade_data.canonical_name == null) {
           upgrade_data.canonical_name = upgrade_data.name.canonicalize();
         }
+        upgrade_data.xws = upgrade_data.xws != null ? upgrade_data.xws : (upgrade_data.xwsaddon != null ? upgrade_data.canonical_name + "-" + upgrade_data.xwsaddon : upgrade_data.canonical_name + (name_parse[1] != null ? "-" + upgrade_data.slot.canonicalize() : ""));
         cards_upgrades[upgrade_data.id] = upgrade_data;
       }
     }
