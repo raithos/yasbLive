@@ -13687,7 +13687,7 @@ String.prototype.ParseParameter = function(name) {
 };
 
 String.prototype.serialtoxws = function() {
-  var card_data, card_pilots, cards_upgrades, desired_points, g, game_type_abbrev, gamemode, i, matches, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, slot, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _k, _l, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+  var card_data, card_pilots, cards_upgrades, desired_points, g, game_type_abbrev, gamemode, i, matches, name_parse, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, slot, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _k, _l, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
   xws = {
     description: "",
     faction: this.ParseParameter('f').canonicalize(),
@@ -13732,8 +13732,9 @@ String.prototype.serialtoxws = function() {
     for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
       pilot_data = _ref2[_i];
       if (pilot_data.skip == null) {
+        name_parse = pilot_data.name.split("(");
         if (pilot_data.canonical_name == null) {
-          pilot_data.canonical_name = pilot_data.name.canonicalize();
+          pilot_data.canonical_name = name_parse[0].canonicalize();
         }
         pilot_data.xws = pilot_data.xws != null ? pilot_data.xws : (pilot_data.xwsaddon != null ? pilot_data.canonical_name + "-" + pilot_data.xwsaddon : pilot_data.canonical_name + (name_parse[1] != null ? "-" + pilot_data.ship.canonicalize() : ""));
         card_pilots[pilot_data.id] = pilot_data;
@@ -13744,8 +13745,9 @@ String.prototype.serialtoxws = function() {
     for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
       upgrade_data = _ref3[_j];
       if (upgrade_data.skip == null) {
-        if (upgrade_data.canonical_name == null) {
-          upgrade_data.canonical_name = upgrade_data.name.canonicalize();
+        name_parse = pilot_data.name.split("(");
+        if (pilot_data.canonical_name == null) {
+          upgrade_data.canonical_name = name_parse[0].canonicalize();
         }
         upgrade_data.xws = upgrade_data.xws != null ? upgrade_data.xws : (upgrade_data.xwsaddon != null ? upgrade_data.canonical_name + "-" + upgrade_data.xwsaddon : upgrade_data.canonical_name + (name_parse[1] != null ? "-" + upgrade_data.slot.canonicalize() : ""));
         cards_upgrades[upgrade_data.id] = upgrade_data;
