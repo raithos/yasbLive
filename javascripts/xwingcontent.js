@@ -13745,7 +13745,7 @@ String.prototype.serialtoxws = function() {
     for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
       upgrade_data = _ref3[_j];
       if (upgrade_data.skip == null) {
-        name_parse = pilot_data.name.split("(");
+        name_parse = upgrade_data.name.split("(");
         if (pilot_data.canonical_name == null) {
           upgrade_data.canonical_name = name_parse[0].canonicalize();
         }
