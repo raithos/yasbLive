@@ -215,7 +215,7 @@ exportObj.basicCardData = function() {
       },
       "YT-2400 Light Freighter": {
         name: "YT-2400 Light Freighter",
-        factions: ["Rebel Alliance"],
+        factions: ["Rebel Alliance", "Scum and Villainy"],
         attackdt: 3,
         agility: 2,
         hull: 6,
@@ -6046,7 +6046,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 7,
-        slots: ["Talent", "Tech", "Turret", "Missile", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+        slots: ["Tech", "Turret", "Missile", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "Aftab Ackbar",
         id: 482,
