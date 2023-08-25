@@ -4281,7 +4281,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 7,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Force", "Astromech", "Modification"]
+        slots: ["Force", "Force", "Astromech", "Modification", "Configuration"]
       }, {
         name: '"Kickback"',
         id: 315,
@@ -7894,7 +7894,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/sa Bomber",
         skill: 3,
-        points: 20,
+        points: 3,
         charge: 2,
         recurring: 1,
         upgrades: ["Swift Approach (TBE)", "Conner Nets", "Proton Bombs"]
@@ -7906,7 +7906,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/sa Bomber",
         skill: 4,
-        points: 20,
+        points: 4,
         upgrades: ["Adv. Proton Torpedoes", "Automated Loaders (TBE)", "Afterburners"]
       }, {
         name: "Captain Jonus (TBE)",
@@ -7916,7 +7916,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/sa Bomber",
         skill: 4,
-        points: 20,
+        points: 5,
         upgrades: ["Top Cover (TBE)", "Barrage Rockets", "Proton Bombs"],
         ship_override: {
           actions: ["Focus", "Lock", "Barrel Roll", "R-> Lock", "Reload"]
@@ -7929,7 +7929,7 @@ exportObj.basicCardData = function() {
         faction: "Galactic Empire",
         ship: "TIE/sa Bomber",
         skill: 5,
-        points: 20,
+        points: 3,
         charge: 2,
         recurring: 1,
         upgrades: ["True Grit (TBE)", "Plasma Torpedoes", "Ion Bombs"]
@@ -7941,8 +7941,9 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "YT-2400 Light Freighter",
         skill: 5,
-        points: 20,
-        slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Title"]
+        points: 7,
+        loadout: 20,
+        slots: ["Talent", "Missile", "Crew", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "Dash Rendar (YLF-SL)",
         xwsaddon: "swz103-sl-rebelalliance",
@@ -7951,17 +7952,17 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "YT-2400 Light Freighter",
         skill: 5,
-        points: 20,
+        points: 7,
         upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider (YLF)"]
       }, {
         name: "Dash Rendar (Scum)",
         xwsaddon: "swz103-sl-scumandvillainy",
         unique: true,
         id: 650,
-        faction: "Scum and Villany",
+        faction: "Scum and Villainy",
         ship: "YT-2400 Light Freighter",
         skill: 5,
-        points: 20,
+        points: 7,
         upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider (YLF)"]
       }, {
         name: '"Leebo" (YLF)',
@@ -7971,7 +7972,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "YT-2400 Light Freighter",
         skill: 3,
-        points: 20,
+        points: 6,
+        loadout: 16,
         keyword: ["Droid"],
         slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Title"]
       }, {
@@ -7982,7 +7984,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "YT-2400 Light Freighter",
         skill: 3,
-        points: 20,
+        points: 6,
         upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider (YLF)"],
         ship_override: {
           actions: ["Calculate", "Lock", "R-> Rotate Arc", "R-Barrel Roll", "Rotate Arc"]
@@ -7992,10 +7994,10 @@ exportObj.basicCardData = function() {
         xwsaddon: "swz103-sl-scumandvillainy",
         unique: true,
         id: 653,
-        faction: "Scum and Villany",
+        faction: "Scum and Villainy",
         ship: "YT-2400 Light Freighter",
         skill: 3,
-        points: 20,
+        points: 7,
         upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider (YLF)"],
         ship_override: {
           actions: ["Calculate", "Lock", "R-> Rotate Arc", "R-Barrel Roll", "Rotate Arc"]
@@ -12602,8 +12604,11 @@ exportObj.basicCardData = function() {
       }, {
         name: "Outrider (YLF)",
         id: 502,
-        standard: true,
-        slot: "Title"
+        slot: "Title",
+        points: 0,
+        unique: true,
+        faction: "Rebel Alliance",
+        ship: "YT-2400 Light Freighter"
       }
     ],
     conditionsById: [
@@ -13415,6 +13420,9 @@ exportObj.standardShipInclusions = [
     name: 'Gauntlet Fighter',
     faction: 'Rebel Alliance'
   }, {
+    name: 'YT-2400 Light Freighter',
+    faction: 'Rebel Alliance'
+  }, {
     name: 'TIE Advanced x1',
     faction: 'Galactic Empire'
   }, {
@@ -13488,6 +13496,9 @@ exportObj.standardShipInclusions = [
     faction: 'Scum and Villainy'
   }, {
     name: 'Gauntlet Fighter',
+    faction: 'Scum and Villainy'
+  }, {
+    name: 'YT-2400 Light Freighter',
     faction: 'Scum and Villainy'
   }, {
     name: 'Fireball',
@@ -13597,7 +13608,7 @@ exportObj.standardShipInclusions = [
   }
 ];
 
-exportObj.standardPilotExclusions = ['Hera Syndulla (VCX-100)', 'Ved Foslo', 'Han Solo (Resistance)', 'Vi Moradi', 'Saesee Tiin', 'Saesee Tiin (Delta-7b)', 'Phlac-Arphocc Prototype'];
+exportObj.standardPilotExclusions = ['Hera Syndulla (VCX-100)', '"Leebo"', 'Dash Rendar', 'Wild Space Fringer', 'Ved Foslo', 'Han Solo (Resistance)', 'Vi Moradi', 'Saesee Tiin', 'Saesee Tiin (Delta-7b)', 'Phlac-Arphocc Prototype'];
 
 exportObj.standardUpgradeExclusions = ['Cassian Andor', 'Sabine Wren', 'Admiral Sloane', 'Boba Fett', 'Tobias Beckett', 'Slave I', 'Kaydel Connix', 'Supreme Leader Snoke', 'Commander Pyre', 'R2-A6', 'Tal Merrik', 'Advanced Sensors', 'Autoblasters', 'Delta-7B', 'Hull Upgrade', 'Inertial Dampeners', 'Informant', 'Interloper Turn', 'Intimidation', 'Precognitive Reflexes', 'R2 Astromech', 'R5 Astromech', 'Seasoned Navigator', 'Sense', 'Supernatural Reflexes', 'Static Discharge Vanes', 'Stealth Device', 'Composure', 'Trajectory Simulator'];
 
@@ -13701,7 +13712,7 @@ String.prototype.serialtoxws = function() {
         link: "https://yasb.app/" + this
       }
     },
-    version: '11/25/2022'
+    version: '09/08/2023'
   };
   serialized = this.ParseParameter('d');
   re = __indexOf.call(serialized, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;

@@ -3648,7 +3648,7 @@ class exportObj.SquadBuilder
 
             # Version number
             @printable_container.find('.fancy-under-header').append $.trim """
-                <div class="version">Points Version: 06/09/2023</div>
+                <div class="version">Points Version: 09/08/2023</div>
             """
                     
             # Notes, if present
@@ -4308,13 +4308,15 @@ class exportObj.SquadBuilder
 
     standard_restriction_check: (pilot) ->
         if pilot.upgrades?
-            for upgrade in pilot.upgrades
-                upgrade_data = exportObj.upgrades[upgrade]
-                if upgrade_data.unique == true
-                    for ship in @ships
-                        for shipupgrade in ship.upgrades
-                            if shipupgrade?.data?.canonical_name == upgrade_data.canonical_name
-                                return false
+            #exception for leebo
+            if not (pilot.name == '"Leebo" (Scum)' or pilot.name == "Dash Rendar (Scum)")
+                for upgrade in pilot.upgrades
+                    upgrade_data = exportObj.upgrades[upgrade]
+                    if upgrade_data.unique == true
+                        for ship in @ships
+                            for shipupgrade in ship.upgrades
+                                if shipupgrade?.data?.canonical_name == upgrade_data.canonical_name
+                                    return false
         return true
 
     dfl_filter_func = ->
@@ -5693,7 +5695,7 @@ class exportObj.SquadBuilder
                     builder: 'YASB - X-Wing 2.5'
                     builder_url: window.location.href.split('?')[0]
                     link: @getPermaLink()
-            version: '06/09/2023'
+            version: '09/08/2023'
             # there is no point to have this version identifier, if we never actually increase it, right?
 
         for ship in @ships
