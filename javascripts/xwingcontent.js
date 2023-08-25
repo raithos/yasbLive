@@ -7953,7 +7953,7 @@ exportObj.basicCardData = function() {
         ship: "YT-2400 Light Freighter",
         skill: 5,
         points: 7,
-        upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider (YLF)"]
+        upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider"]
       }, {
         name: "Dash Rendar (Scum)",
         xwsaddon: "swz103-sl-scumandvillainy",
@@ -7963,7 +7963,7 @@ exportObj.basicCardData = function() {
         ship: "YT-2400 Light Freighter",
         skill: 5,
         points: 7,
-        upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider (YLF)"]
+        upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider"]
       }, {
         name: '"Leebo" (YLF)',
         xwsaddon: "swz103",
@@ -7985,7 +7985,7 @@ exportObj.basicCardData = function() {
         ship: "YT-2400 Light Freighter",
         skill: 3,
         points: 6,
-        upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider (YLF)"],
+        upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider"],
         ship_override: {
           actions: ["Calculate", "Lock", "R-> Rotate Arc", "R-Barrel Roll", "Rotate Arc"]
         }
@@ -7998,7 +7998,7 @@ exportObj.basicCardData = function() {
         ship: "YT-2400 Light Freighter",
         skill: 3,
         points: 7,
-        upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider (YLF)"],
+        upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider"],
         ship_override: {
           actions: ["Calculate", "Lock", "R-> Rotate Arc", "R-Barrel Roll", "Rotate Arc"]
         }
@@ -12601,14 +12601,6 @@ exportObj.basicCardData = function() {
         id: 501,
         standard: true,
         slot: "Crew"
-      }, {
-        name: "Outrider (YLF)",
-        id: 502,
-        slot: "Title",
-        points: 0,
-        unique: true,
-        faction: "Rebel Alliance",
-        ship: "YT-2400 Light Freighter"
       }
     ],
     conditionsById: [
