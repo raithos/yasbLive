@@ -11342,6 +11342,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Vectored Cannons (RZ-1)",
         id: 371,
+        xws: "vectoredcannonsrz1",
         points: 0,
         slot: "Configuration",
         standardized: true,

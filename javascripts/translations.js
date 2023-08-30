@@ -21554,6 +21554,30 @@ exportObj.cardLoaders.日本語 = function() {
       display_name: "Tomax Bren (TBE)",
       text: "君が %BARRELROLL% アクションを実行した後、君は %CHARGE% を2つ消費しても良い。もし君がそうするなら、フォーカス・トークンを得る。"
     },
+    "Dash Rendar (YLF)": {
+      display_name: "Dash Rendar (YLF)",
+      text: "エンゲージメント・フェイズの間、君は君が重なった障害物の効果を無視する。"
+    },
+    "Dash Rendar (YLF-SL)": {
+      display_name: "Dash Rendar (YLF-SL)",
+      text: "君が障害物を通過するか重なった結果、赤のトークンを得た後、君はその赤のトークンをレンジ 0-1 の友軍宇宙船に転送しても良い。"
+    },
+    "Dash Rendar (Scum)": {
+      display_name: "Dash Rendar",
+      text: "君が障害物を通過するか重なった結果、赤のトークンを得た後、君はその赤のトークンをレンジ 0-1 の友軍宇宙船に転送しても良い。"
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo” (YLF)",
+      text: "君が防御するか攻撃を実行した後、もし君がカリキュレート・トークンを消費したなら、カリキュレート・トークンを1つ得る。"
+    },
+    '"Leebo" (YLF-SL)': {
+      display_name: "“Leebo” (YLF-SL)",
+      text: "エンゲージメント・フェイズの終了時、君はカリキュレート・トークンを消費し、レンジ 2-3 の敵宇宙船へのロックを得ても良い。"
+    },
+    '"Leebo" (Scum)': {
+      display_name: "“Leebo”",
+      text: "エンゲージメント・フェイズの終了時、君はカリキュレート・トークンを消費し、レンジ 2-3 の敵宇宙船へのロックを得ても良い。"
+    },
     "Corran Horn (X-Wing)": {
       display_name: "Corran Horn",
       text: "君が攻撃の防御者を宣言した後、もし君が防御者へのロックを持っているなら、友軍宇宙船は君へのロックを防御者へ転送しても良い。"
@@ -21858,7 +21882,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Outrider": {
       display_name: "Outrider",
-      text: "君が障害物によって妨害された攻撃を実行する際、防御者は防御ダイスを1つ少なく振る。%LINEBREAK%君がマニューバを完全に実行した後、もし君が障害物を通過するか、障害物に重なったとき、君は赤あるいはオレンジのトークンを1つ取り除いても良い。"
+      text: "君がレンジ3で主武装攻撃を実行する際、攻撃ダイスを1つ追加で振る。 %LINEBREAK% 君が障害物で妨害された攻撃を実行する際、君は防御者の %EVADE% の結果のうち1つを %FOCUS% の結果に変更しても良い。"
     },
     "Phantom": {
       display_name: "Phantom",
@@ -23379,6 +23403,22 @@ exportObj.cardLoaders.日本語 = function() {
       display_name: "True Grit",
       text: "アクティベーション・フェイズの終了時、もし君がストレイン状態ではないなら、君はストレイン・トークンを1つ得て、ロックではない赤かオレンジのトークンを1つ取り除いても良い。"
     },
+    "Mercenary (YLF)": {
+      display_name: "Mercenary",
+      text: "レンジ 0-2 の他の友軍宇宙船が破壊された後、それがプレイ・エリアから取り除かれる前に、それの緑のトークンのうち1つを君自身に転送する。"
+    },
+    "Seeker Missiles (YLF)": {
+      display_name: "Seeker Missiles",
+      text: "<strong>攻撃 (%LOCK%):</strong> %CHARGE% を1つ消費。 攻撃ダイスの修正ステップの間、君は2つまで追加の %CHARGE% を消費しても良い。この方法で消費した %CHARGE% につき、 %FOCUS% の結果1つを %HIT% の結果に変更する。"
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo”",
+      text: "君がダメージ・カードを修理した後、君は君のアクション・バーのアクションを実行しても良い。"
+    },
+    "Efficient Processing (YLF)": {
+      display_name: "Efficient Processing",
+      text: "君が %CALCULATE% アクションを実行した後、カリキュレート・トークンを1つ得る。"
+    },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
       text: "友軍のレンジ0-3の大型あるいは巨大船がマニューバを実行する際、それは%HIT%ダメージを1つ受け、代わりに向きと難易度が同じで速度が1高いか低いマニューバを代わりに実行しても良い。"
@@ -23823,6 +23863,10 @@ exportObj.cardLoaders.日本語 = function() {
     "Sensor Blindspot": {
       display_name: "Sensor Blindspot",
       text: "君が攻撃レンジ 0-1 主武装攻撃を実行する際、レンジ 0-1 ボーナスを適用せず、攻撃ダイスを1つ少なく振る。"
+    },
+    "Sensor Blackout": {
+      display_name: "Sensor Blackout",
+      text: "君がレンジ 0-1 の主武装攻撃を実行する際、君は攻撃ダイスを1つ少なく振る。 %LINEBREAK% 君がレンジ1で防御する際、君が防御ダイスを1つ少なく振る。"
     },
     "Microthrusters": {
       display_name: "Microthrusters",
