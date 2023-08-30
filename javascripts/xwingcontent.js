@@ -6456,7 +6456,7 @@ exportObj.basicCardData = function() {
         loadout: 12,
         keyword: ["Light Side", "Spectre"],
         unique: true,
-        slots: ["Force", "Talent", "Crew", "Gunner", "Missile", "Device", "Illicit", "Modification", "Modification", "Title", "Configuration"]
+        slots: ["Force", "Talent", "Crew", "Gunner", "Device", "Illicit", "Modification", "Modification", "Title", "Configuration"]
       }, {
         name: "Q9-0",
         id: 521,
