@@ -7074,7 +7074,7 @@ Ship = (function() {
       _ref4 = other.upgrades;
       for (_j = 0, _len1 = _ref4.length; _j < _len1; _j++) {
         upgrade = _ref4[_j];
-        if (((upgrade != null ? upgrade.data : void 0) != null) && (upgrade.data.standardized == null) && !upgrade.data.unique && ((upgrade.data.max_per_squad == null) || this.builder.countUpgrades(upgrade.data.canonical_name) < upgrade.data.max_per_squad)) {
+        if (((upgrade != null ? upgrade.data : void 0) != null) && (upgrade.data.standardized == null) && (upgrade.data.standard == null) && !upgrade.data.unique && ((upgrade.data.max_per_squad == null) || this.builder.countUpgrades(upgrade.data.canonical_name) < upgrade.data.max_per_squad)) {
           if (other_upgrades[_name = upgrade.slot] == null) {
             other_upgrades[_name] = [];
           }
