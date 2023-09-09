@@ -6467,7 +6467,7 @@ exportObj.basicCardData = function() {
         loadout: 16,
         unique: true,
         keyword: ["Droid"],
-        slots: ["Crew", "Cannon", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
+        slots: ["Crew", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "The Mandalorian",
         id: 522,
