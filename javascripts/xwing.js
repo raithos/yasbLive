@@ -7179,7 +7179,6 @@ Ship = (function() {
     if (this.builder.show_points_destroyed === true) {
       this.points_destroyed_button.fadeIn('fast');
     }
-    this.row.addClass("ship-" + (ship_type.toLowerCase().replace(/[^a-z0-9]/gi, '')));
     return this.builder.container.trigger('xwing:shipUpdated');
   };
 
