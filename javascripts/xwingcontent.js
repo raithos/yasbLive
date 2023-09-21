@@ -6239,7 +6239,7 @@ exportObj.basicCardData = function() {
         name: "Fenn Rau (Rebel Fang)",
         id: 501,
         faction: "Rebel Alliance",
-        xwsaddon: "rebel-fang",
+        xwsaddon: "fangfighter",
         unique: true,
         ship: "Fang Fighter",
         skill: 6,
