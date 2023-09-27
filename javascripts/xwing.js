@@ -3664,7 +3664,7 @@ exportObj.SquadBuilder = (function() {
       multiple: true,
       maximumSelectionSize: 3,
       placeholder: "Select an Obstacle",
-      minimumResultsForSearch: -1,
+      minimumResultsForSearch: $.isMobile() ? Infinity : 0,
       formatResult: obstacleFormat,
       formatSelection: obstacleFormat
     });

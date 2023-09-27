@@ -3303,7 +3303,7 @@ class exportObj.SquadBuilder
             multiple: true
             maximumSelectionSize: 3
             placeholder: "Select an Obstacle"
-            minimumResultsForSearch: -1
+            minimumResultsForSearch: if $.isMobile() then Infinity else 0
             formatResult: obstacleFormat
             formatSelection: obstacleFormat
         # Backend
