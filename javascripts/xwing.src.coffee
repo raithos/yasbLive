@@ -3153,12 +3153,9 @@ class exportObj.SquadBuilder
                 <div class="obstacle-select-container col-md-12">
                 </div>
                 <div>
-                    <div class="obstacle-image-container" style="display:none;">
-                        <img class="obstacle-image" src="images/core2asteroid0.png" />
-                    </div>
                     <div class="obstacle-sources-container">
                         <span class="info-header obstacle-sources translated" defaultText="Sources:" style="padding-left: 8px;"></span> <br>
-                        <span class="info-data obstacle-sources" style="padding-left: 8px;"></span>
+                        <div class="info-data obstacle-sources" style="padding-left: 8px;padding-right:10px;"></div>
                     </div>
                 </div>
             </div>
@@ -3171,14 +3168,13 @@ class exportObj.SquadBuilder
         """
         @obstacles_reset = @choose_obstacles_modal.find('.reset-obstacles')
         @obstacles_select = @choose_obstacles_modal.find('.obstacle-select-container')
-        @obstacles_select_image = @choose_obstacles_modal.find('.obstacle-image-container')
         @obstacles_select_sources = @choose_obstacles_modal.find('.info-data.obstacle-sources')
 
         obstacleFormat = (state) ->
             image_name = 'images/' + state.id + '.png'
             return "<img class='obstacle' src='#{image_name}' style='height: 100px;' /></br>" + state.text
 
-        obstacle_data = [
+        @obstacle_data = [
             {
                 id: "coreasteroid0"
                 text: "Core Asteroid 1"
@@ -3229,27 +3225,27 @@ class exportObj.SquadBuilder
             }
             {
                 id: "core2asteroid0"
-                text: "Force Awakens Asteroid 1"
+                text: "FA Asteroid 1"
             }
             {
                 id: "core2asteroid1"
-                text: "Force Awakens Asteroid 2"
+                text: "FA Asteroid 2"
             }
             {
                 id: "core2asteroid2"
-                text: "Force Awakens Asteroid 3"
+                text: "FA Asteroid 3"
             }
             {
                 id: "core2asteroid3"
-                text: "Force Awakens Asteroid 4"
+                text: "FA Asteroid 4"
             }
             {
                 id: "core2asteroid4"
-                text: "Force Awakens Asteroid 5"
+                text: "FA Asteroid 5"
             }
             {
                 id: "core2asteroid5"
-                text: "Force Awakens Asteroid 6"
+                text: "FA Asteroid 6"
             }
             {
                 id: "gascloud1"
@@ -3277,32 +3273,32 @@ class exportObj.SquadBuilder
             }
             {
                 id: "pomasteroid1"
-                text: "Pride of Mandalore Rock 1"
+                text: "PoM Rock 1"
             }
             {
                 id: "pomasteroid2"
-                text: "Pride of Mandalore Rock 2"
+                text: "PoM Rock 2"
             }
             {
                 id: "pomasteroid3"
-                text: "Pride of Mandalore Rock 3"
+                text: "PoM Rock 3"
             }
             {
                 id: "pomdebris1"
-                text: "Pride of Mandalore Debris 1"
+                text: "PoM Debris 1"
             }
             {
                 id: "pomdebris2"
-                text: "Pride of Mandalore Debris 2"
+                text: "PoM Debris 2"
             }
             {
                 id: "pomdebris3"
-                text: "Pride of Mandalore Debris 3"
+                text: "PoM Debris 3"
             }
         ]
 
         @obstacles_select.select2
-            data: obstacle_data
+            data: @obstacle_data
             width: '90%'
             multiple: true
             maximumSelectionSize: 3
@@ -4052,12 +4048,15 @@ class exportObj.SquadBuilder
         @choose_obstacles_modal.modal 'show'
 
     showObstaclesSelectInfo: ->
-        @obstacles_select_sources.text = ''
-        if @obstacles_select.val() != []
-            for obstacle in @obstacles_select.val()
-                sources = exportObj.obstacles[obstacle]?.sources
-                if sources?
-                    @obstacles_select_sources.text += obstacle + ': ' + (if (sources.length > 1) or (not (exportObj.translate('sources', 'Loose Ships') in sources)) then (if sources.length > 0 then sources.join(', ') else exportObj.translate('ui', 'unreleased')) else @uitranslation("Only available from 1st edition")) + '<br>'
+        obstacle_array = @obstacles_select.val().split(",")
+        if obstacle_array != []
+            newtext = ""
+            for obstacle in obstacle_array
+                sources = exportObj.obstacles[obstacle]?.sources ? []
+                newtext += "<u>#{obstacle}</u>: #{(if (sources.length > 1) or (not (exportObj.translate('sources', 'Loose Ships') in sources)) then (if sources.length > 0 then sources.join(', ') else exportObj.translate('ui', 'unreleased')) else @uitranslation("Only available from 1st edition"))}</br>"
+            @obstacles_select_sources.html $.trim newtext
+        else
+            @obstacles_select_sources.html ''
 
     updateObstacleSelect: (obstacles) ->
         @current_obstacles = obstacles ? []

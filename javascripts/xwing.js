@@ -3051,7 +3051,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.setupUI = function() {
-    var DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, obstacleFormat, obstacle_data, opt, _i, _len, _ref;
+    var DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, obstacleFormat, opt, _i, _len, _ref;
     DEFAULT_RANDOMIZER_POINTS = 20;
     DEFAULT_RANDOMIZER_TIMEOUT_SEC = 4;
     DEFAULT_RANDOMIZER_SHIP_LIMIT = 0;
@@ -3556,17 +3556,16 @@ exportObj.SquadBuilder = (function() {
     this.choose_obstacles_modal.tabindex = "-1";
     this.choose_obstacles_modal.role = "dialog";
     this.container.append(this.choose_obstacles_modal);
-    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description translated' defaultText=\"Choose obstacles dialog\"></label>\n        </div>\n        <div class=\"modal-body row\">\n            <div class=\"obstacle-select-container col-md-12\">\n            </div>\n            <div>\n                <div class=\"obstacle-image-container\" style=\"display:none;\">\n                    <img class=\"obstacle-image\" src=\"images/core2asteroid0.png\" />\n                </div>\n                <div class=\"obstacle-sources-container\">\n                    <span class=\"info-header obstacle-sources translated\" defaultText=\"Sources:\" style=\"padding-left: 8px;\"></span> <br>\n                    <span class=\"info-data obstacle-sources\" style=\"padding-left: 8px;\"></span>\n                </div>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn btn-danger reset-obstacles translated\" defaultText=\"Reset Obstacles\"></button>\n            <button class=\"btn btn-danger close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
+    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description translated' defaultText=\"Choose obstacles dialog\"></label>\n        </div>\n        <div class=\"modal-body row\">\n            <div class=\"obstacle-select-container col-md-12\">\n            </div>\n            <div>\n                <div class=\"obstacle-sources-container\">\n                    <span class=\"info-header obstacle-sources translated\" defaultText=\"Sources:\" style=\"padding-left: 8px;\"></span> <br>\n                    <div class=\"info-data obstacle-sources\" style=\"padding-left: 8px;padding-right:10px;\"></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn btn-danger reset-obstacles translated\" defaultText=\"Reset Obstacles\"></button>\n            <button class=\"btn btn-danger close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
     this.obstacles_reset = this.choose_obstacles_modal.find('.reset-obstacles');
     this.obstacles_select = this.choose_obstacles_modal.find('.obstacle-select-container');
-    this.obstacles_select_image = this.choose_obstacles_modal.find('.obstacle-image-container');
     this.obstacles_select_sources = this.choose_obstacles_modal.find('.info-data.obstacle-sources');
     obstacleFormat = function(state) {
       var image_name;
       image_name = 'images/' + state.id + '.png';
       return ("<img class='obstacle' src='" + image_name + "' style='height: 100px;' /></br>") + state.text;
     };
-    obstacle_data = [
+    this.obstacle_data = [
       {
         id: "coreasteroid0",
         text: "Core Asteroid 1"
@@ -3605,22 +3604,22 @@ exportObj.SquadBuilder = (function() {
         text: "VT49 Debris 3"
       }, {
         id: "core2asteroid0",
-        text: "Force Awakens Asteroid 1"
+        text: "FA Asteroid 1"
       }, {
         id: "core2asteroid1",
-        text: "Force Awakens Asteroid 2"
+        text: "FA Asteroid 2"
       }, {
         id: "core2asteroid2",
-        text: "Force Awakens Asteroid 3"
+        text: "FA Asteroid 3"
       }, {
         id: "core2asteroid3",
-        text: "Force Awakens Asteroid 4"
+        text: "FA Asteroid 4"
       }, {
         id: "core2asteroid4",
-        text: "Force Awakens Asteroid 5"
+        text: "FA Asteroid 5"
       }, {
         id: "core2asteroid5",
-        text: "Force Awakens Asteroid 6"
+        text: "FA Asteroid 6"
       }, {
         id: "gascloud1",
         text: "Gas Cloud 1"
@@ -3641,26 +3640,26 @@ exportObj.SquadBuilder = (function() {
         text: "Gas Cloud 6"
       }, {
         id: "pomasteroid1",
-        text: "Pride of Mandalore Rock 1"
+        text: "PoM Rock 1"
       }, {
         id: "pomasteroid2",
-        text: "Pride of Mandalore Rock 2"
+        text: "PoM Rock 2"
       }, {
         id: "pomasteroid3",
-        text: "Pride of Mandalore Rock 3"
+        text: "PoM Rock 3"
       }, {
         id: "pomdebris1",
-        text: "Pride of Mandalore Debris 1"
+        text: "PoM Debris 1"
       }, {
         id: "pomdebris2",
-        text: "Pride of Mandalore Debris 2"
+        text: "PoM Debris 2"
       }, {
         id: "pomdebris3",
-        text: "Pride of Mandalore Debris 3"
+        text: "PoM Debris 3"
       }
     ];
     this.obstacles_select.select2({
-      data: obstacle_data,
+      data: this.obstacle_data,
       width: '90%',
       multiple: true,
       maximumSelectionSize: 3,
@@ -3707,7 +3706,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3335
+              lineno: 3331
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4411,21 +4410,18 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.showObstaclesSelectInfo = function() {
-    var obstacle, sources, _i, _len, _ref, _ref1, _ref2, _results;
-    this.obstacles_select_sources.text = '';
-    if (this.obstacles_select.val() !== []) {
-      _ref = this.obstacles_select.val();
-      _results = [];
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        obstacle = _ref[_i];
-        sources = (_ref1 = exportObj.obstacles[obstacle]) != null ? _ref1.sources : void 0;
-        if (sources != null) {
-          _results.push(this.obstacles_select_sources.text += obstacle + ': ' + ((sources.length > 1) || (!(_ref2 = exportObj.translate('sources', 'Loose Ships'), __indexOf.call(sources, _ref2) >= 0)) ? (sources.length > 0 ? sources.join(', ') : exportObj.translate('ui', 'unreleased')) : this.uitranslation("Only available from 1st edition")) + '<br>');
-        } else {
-          _results.push(void 0);
-        }
+    var newtext, obstacle, obstacle_array, sources, _i, _len, _ref, _ref1, _ref2;
+    obstacle_array = this.obstacles_select.val().split(",");
+    if (obstacle_array !== []) {
+      newtext = "";
+      for (_i = 0, _len = obstacle_array.length; _i < _len; _i++) {
+        obstacle = obstacle_array[_i];
+        sources = (_ref = (_ref1 = exportObj.obstacles[obstacle]) != null ? _ref1.sources : void 0) != null ? _ref : [];
+        newtext += "<u>" + obstacle + "</u>: " + ((sources.length > 1) || (!(_ref2 = exportObj.translate('sources', 'Loose Ships'), __indexOf.call(sources, _ref2) >= 0)) ? (sources.length > 0 ? sources.join(', ') : exportObj.translate('ui', 'unreleased')) : this.uitranslation("Only available from 1st edition")) + "</br>";
       }
-      return _results;
+      return this.obstacles_select_sources.html($.trim(newtext));
+    } else {
+      return this.obstacles_select_sources.html('');
     }
   };
 
@@ -4659,7 +4655,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4247
+              lineno: 4246
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4669,7 +4665,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4248
+                lineno: 4247
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -7056,7 +7052,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5980
+                  lineno: 5979
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -7283,7 +7279,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 6102
+                          lineno: 6101
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -7333,7 +7329,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 6135
+                                  lineno: 6134
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7502,7 +7498,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 6236
+                      lineno: 6235
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7597,7 +7593,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 6281
+                lineno: 6280
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7690,7 +7686,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6325
+              lineno: 6324
             }));
           }
         }
@@ -7778,7 +7774,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6380
+                lineno: 6379
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -9064,7 +9060,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7322
+                lineno: 7321
               })
             ]);
             __iced_deferrals._fulfill();
@@ -9223,7 +9219,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7416
+                  lineno: 7415
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -9250,7 +9246,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7423
+                      lineno: 7422
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9381,7 +9377,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7488
+            lineno: 7487
           }));
         }
         __iced_deferrals._fulfill();
