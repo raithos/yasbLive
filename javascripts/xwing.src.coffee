@@ -3303,10 +3303,24 @@ class exportObj.SquadBuilder
             multiple: true
             maximumSelectionSize: 3
             placeholder: "Select an Obstacle"
-            minimumResultsForSearch: if $.isMobile() then Infinity else 0
+            minimumResultsForSearch: if $.isMobile() then -1 else 0
             formatResult: obstacleFormat
             formatSelection: obstacleFormat
         # Backend
+
+        OpenSelect2 = ->
+            $select2 = $(this).data('select2')
+            setTimeout (->
+                if !$select2.opened()
+                    $select2.open()
+                return
+            ), 0
+            return
+
+        $('.select2').select2({}).one('select2-focus', OpenSelect2).on 'select2-blur', (e) ->
+            $(this).one 'select2-focus', OpenSelect2
+            return
+
 
         @backend_list_squads_button = $ @container.find('button.backend-list-my-squads')
         @backend_list_squads_button.click (e) =>
@@ -3672,7 +3686,7 @@ class exportObj.SquadBuilder
             $('.select2-container .select2-focusser').remove()
             $('.select2-search input').prop('focus', false).removeClass 'select2-focused'
             return
-            
+
         @view_list_button.click (e) =>
             e.preventDefault()
             @showTextListModal()
