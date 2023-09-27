@@ -3308,6 +3308,7 @@ class exportObj.SquadBuilder
             formatSelection: obstacleFormat
         # Backend
 
+        @obstacles_select.select2.minimumResultsForSearch = -1 if $.isMobile()
         @backend_list_squads_button = $ @container.find('button.backend-list-my-squads')
         @backend_list_squads_button.click (e) =>
             e.preventDefault()
