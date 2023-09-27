@@ -3668,9 +3668,11 @@ class exportObj.SquadBuilder
             @container.trigger 'xwing-backend:squadDirtinessChanged'
             @container.trigger 'xwing:pointsUpdated'
 
-        @obstacles_select.on (e) =>
-            $('.select2-search input').prop('focus',false)
-
+        @obstacles_select.on 'select2-focus', (e) ->
+            $('.select2-container .select2-focusser').remove()
+            $('.select2-search input').prop('focus', false).removeClass 'select2-focused'
+            return
+            
         @view_list_button.click (e) =>
             e.preventDefault()
             @showTextListModal()
