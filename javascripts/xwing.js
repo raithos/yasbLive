@@ -3051,7 +3051,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.setupUI = function() {
-    var DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, opt, _i, _len, _ref;
+    var DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, obstacleFormat, obstacle_data, opt, _i, _len, _ref;
     DEFAULT_RANDOMIZER_POINTS = 20;
     DEFAULT_RANDOMIZER_TIMEOUT_SEC = 4;
     DEFAULT_RANDOMIZER_SHIP_LIMIT = 0;
@@ -3556,11 +3556,119 @@ exportObj.SquadBuilder = (function() {
     this.choose_obstacles_modal.tabindex = "-1";
     this.choose_obstacles_modal.role = "dialog";
     this.container.append(this.choose_obstacles_modal);
-    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description translated' defaultText=\"Choose obstacles dialog\"></label>\n        </div>\n        <div class=\"modal-body row\">\n            <div class=\"obstacle-select-container col-md-5\" style=\"float:left\">\n                <select multiple class='obstacle-select' size=\"18\">\n                    <option class=\"coreasteroid0-select obstacle-option translated\" value=\"coreasteroid0\" defaultText=\"Core Asteroid 0\"></option>\n                    <option class=\"coreasteroid1-select obstacle-option translated\" value=\"coreasteroid1\" defaultText=\"Core Asteroid 1\"></option>\n                    <option class=\"coreasteroid2-select obstacle-option translated\" value=\"coreasteroid2\" defaultText=\"Core Asteroid 2\"></option>\n                    <option class=\"coreasteroid3-select obstacle-option translated\" value=\"coreasteroid3\" defaultText=\"Core Asteroid 3\"></option>\n                    <option class=\"coreasteroid4-select obstacle-option translated\" value=\"coreasteroid4\" defaultText=\"Core Asteroid 4\"></option>\n                    <option class=\"coreasteroid5-select obstacle-option translated\" value=\"coreasteroid5\" defaultText=\"Core Asteroid 5\"></option>\n                    <option class=\"yt2400debris0-select obstacle-option translated\" value=\"yt2400debris0\" defaultText=\"YT2400 Debris 0\"></option>\n                    <option class=\"yt2400debris1-select obstacle-option translated\" value=\"yt2400debris1\" defaultText=\"YT2400 Debris 1\"></option>\n                    <option class=\"yt2400debris2-select obstacle-option translated\" value=\"yt2400debris2\" defaultText=\"YT2400 Debris 2\"></option>\n                    <option class=\"vt49decimatordebris0-select obstacle-option translated\" value=\"vt49decimatordebris0\" defaultText=\"VT49 Debris 0\"></option>\n                    <option class=\"vt49decimatordebris1-select obstacle-option translated\" value=\"vt49decimatordebris1\" defaultText=\"VT49 Debris 1\"></option>\n                    <option class=\"vt49decimatordebris2-select obstacle-option translated\" value=\"vt49decimatordebris2\" defaultText=\"VT49 Debris 2\"></option>\n                    <option class=\"core2asteroid0-select obstacle-option translated\" value=\"core2asteroid0\" defaultText=\"Force Awakens Asteroid 0\"></option>\n                    <option class=\"core2asteroid1-select obstacle-option translated\" value=\"core2asteroid1\" defaultText=\"Force Awakens Asteroid 1\"></option>\n                    <option class=\"core2asteroid2-select obstacle-option translated\" value=\"core2asteroid2\" defaultText=\"Force Awakens Asteroid 2\"></option>\n                    <option class=\"core2asteroid3-select obstacle-option translated\" value=\"core2asteroid3\" defaultText=\"Force Awakens Asteroid 3\"></option>\n                    <option class=\"core2asteroid4-select obstacle-option translated\" value=\"core2asteroid4\" defaultText=\"Force Awakens Asteroid 4\"></option>\n                    <option class=\"core2asteroid5-select obstacle-option translated\" value=\"core2asteroid5\" defaultText=\"Force Awakens Asteroid 5\"></option>\n                    <option class=\"gascloud1-select obstacle-option translated\" value=\"gascloud1\" defaultText=\"Gas Cloud 1\"></option>\n                    <option class=\"gascloud2-select obstacle-option translated\" value=\"gascloud2\" defaultText=\"Gas Cloud 2\"></option>\n                    <option class=\"gascloud3-select obstacle-option translated\" value=\"gascloud3\" defaultText=\"Gas Cloud 3\"></option>\n                    <option class=\"gascloud4-select obstacle-option translated\" value=\"gascloud4\" defaultText=\"Gas Cloud 4\"></option>\n                    <option class=\"gascloud5-select obstacle-option translated\" value=\"gascloud5\" defaultText=\"Gas Cloud 5\"></option>\n                    <option class=\"gascloud6-select obstacle-option translated\" value=\"gascloud6\" defaultText=\"Gas Cloud 6\"></option>\n                    <option class=\"pomasteroid1-select obstacle-option translated\" value=\"pomasteroid1\" defaultText=\"Pride of Mandalore Rock 1\"></option>\n                    <option class=\"pomasteroid2-select obstacle-option translated\" value=\"pomasteroid2\" defaultText=\"Pride of Mandalore Rock 2\"></option>\n                    <option class=\"pomasteroid3-select obstacle-option translated\" value=\"pomasteroid3\" defaultText=\"Pride of Mandalore Rock 3\"></option>\n                    <option class=\"pomdebris1-select obstacle-option translated\" value=\"pomdebris1\" defaultText=\"Pride of Mandalore Debris 1\"></option>\n                    <option class=\"pomdebris2-select obstacle-option translated\" value=\"pomdebris2\" defaultText=\"Pride of Mandalore Debris 2\"></option>\n                    <option class=\"pomdebris3-select obstacle-option translated\" value=\"pomdebris3\" defaultText=\"Pride of Mandalore Debris 3\"></option>\n                </select>\n            </div>\n            <div class=\"col-md-6\">\n                <div class=\"obstacle-image-container\" style=\"display:none;\">\n                    <img class=\"obstacle-image\" src=\"images/core2asteroid0.png\" />\n                </div>\n                <div class=\"obstacle-sources-container\">\n                    <span class=\"info-header obstacle-sources translated\" defaultText=\"Sources:\" style=\"padding-left: 8px;\"></span> <br>\n                    <span class=\"info-data obstacle-sources\" style=\"padding-left: 8px;\"></span>\n                </div>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn btn-danger reset-obstacles translated\" defaultText=\"Reset Obstacles\"></button>\n            <button class=\"btn btn-danger close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
+    this.choose_obstacles_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <label class='choose-obstacles-description translated' defaultText=\"Choose obstacles dialog\"></label>\n        </div>\n        <div class=\"modal-body row\">\n            <div class=\"obstacle-select-container col-md-12\">\n            </div>\n            <div>\n                <div class=\"obstacle-image-container\" style=\"display:none;\">\n                    <img class=\"obstacle-image\" src=\"images/core2asteroid0.png\" />\n                </div>\n                <div class=\"obstacle-sources-container\">\n                    <span class=\"info-header obstacle-sources translated\" defaultText=\"Sources:\" style=\"padding-left: 8px;\"></span> <br>\n                    <span class=\"info-data obstacle-sources\" style=\"padding-left: 8px;\"></span>\n                </div>\n            </div>\n        </div>\n        <div class=\"modal-footer d-print-none\">\n            <button class=\"btn btn-danger reset-obstacles translated\" defaultText=\"Reset Obstacles\"></button>\n            <button class=\"btn btn-danger close-print-dialog translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
     this.obstacles_reset = this.choose_obstacles_modal.find('.reset-obstacles');
-    this.obstacles_select = this.choose_obstacles_modal.find('.obstacle-select');
+    this.obstacles_select = this.choose_obstacles_modal.find('.obstacle-select-container');
     this.obstacles_select_image = this.choose_obstacles_modal.find('.obstacle-image-container');
     this.obstacles_select_sources = this.choose_obstacles_modal.find('.info-data.obstacle-sources');
+    obstacleFormat = function(state) {
+      var image_name;
+      image_name = 'images/' + state.id + '.png';
+      return ("<img class='obstacle' src='" + image_name + "' style='height: 100px;' /></br>") + state.text;
+    };
+    obstacle_data = [
+      {
+        id: "coreasteroid0",
+        text: "Core Asteroid 1"
+      }, {
+        id: "coreasteroid1",
+        text: "Core Asteroid 2"
+      }, {
+        id: "coreasteroid2",
+        text: "Core Asteroid 3"
+      }, {
+        id: "coreasteroid3",
+        text: "Core Asteroid 4"
+      }, {
+        id: "coreasteroid4",
+        text: "Core Asteroid 5"
+      }, {
+        id: "coreasteroid5",
+        text: "Core Asteroid 6"
+      }, {
+        id: "yt2400debris0",
+        text: "YT2400 Debris 1"
+      }, {
+        id: "yt2400debris1",
+        text: "YT2400 Debris 2"
+      }, {
+        id: "yt2400debris2",
+        text: "YT2400 Debris 3"
+      }, {
+        id: "vt49decimatordebris0",
+        text: "VT49 Debris 1"
+      }, {
+        id: "vt49decimatordebris1",
+        text: "VT49 Debris 2"
+      }, {
+        id: "vt49decimatordebris2",
+        text: "VT49 Debris 3"
+      }, {
+        id: "core2asteroid0",
+        text: "Force Awakens Asteroid 1"
+      }, {
+        id: "core2asteroid1",
+        text: "Force Awakens Asteroid 2"
+      }, {
+        id: "core2asteroid2",
+        text: "Force Awakens Asteroid 3"
+      }, {
+        id: "core2asteroid3",
+        text: "Force Awakens Asteroid 4"
+      }, {
+        id: "core2asteroid4",
+        text: "Force Awakens Asteroid 5"
+      }, {
+        id: "core2asteroid5",
+        text: "Force Awakens Asteroid 6"
+      }, {
+        id: "gascloud1",
+        text: "Gas Cloud 1"
+      }, {
+        id: "gascloud2",
+        text: "Gas Cloud 2"
+      }, {
+        id: "gascloud3",
+        text: "Gas Cloud 3"
+      }, {
+        id: "gascloud4",
+        text: "Gas Cloud 4"
+      }, {
+        id: "gascloud5",
+        text: "Gas Cloud 5"
+      }, {
+        id: "gascloud6",
+        text: "Gas Cloud 6"
+      }, {
+        id: "pomasteroid1",
+        text: "Pride of Mandalore Rock 1"
+      }, {
+        id: "pomasteroid2",
+        text: "Pride of Mandalore Rock 2"
+      }, {
+        id: "pomasteroid3",
+        text: "Pride of Mandalore Rock 3"
+      }, {
+        id: "pomdebris1",
+        text: "Pride of Mandalore Debris 1"
+      }, {
+        id: "pomdebris2",
+        text: "Pride of Mandalore Debris 2"
+      }, {
+        id: "pomdebris3",
+        text: "Pride of Mandalore Debris 3"
+      }
+    ];
+    this.obstacles_select.select2({
+      data: obstacle_data,
+      width: '90%',
+      multiple: true,
+      maximumSelectionSize: 3,
+      placeholder: "Select an Obstacle",
+      minimumResultsForSearch: $.isMobile() ? -1 : 0,
+      formatResult: obstacleFormat,
+      formatSelection: obstacleFormat
+    });
     this.backend_list_squads_button = $(this.container.find('button.backend-list-my-squads'));
     this.backend_list_squads_button.click((function(_this) {
       return function(e) {
@@ -3599,7 +3707,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3231
+              lineno: 3335
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -3826,7 +3934,7 @@ exportObj.SquadBuilder = (function() {
       return function(e) {
         if (_this.current_obstacles !== []) {
           _this.current_obstacles = [];
-          _this.obstacles_select.val("");
+          _this.obstacles_select.select2('data', null);
           _this.current_squad.additional_data.obstacles = _this.current_obstacles;
           _this.current_squad.dirty = true;
           _this.container.trigger('xwing-backend:squadDirtinessChanged');
@@ -3834,60 +3942,14 @@ exportObj.SquadBuilder = (function() {
         }
       };
     })(this));
-    this.obstacles_select.mouseup((function(_this) {
+    this.obstacles_select.change((function(_this) {
       return function(e) {
-        var intersect, intersection, o, obst_changes, previous_obstacles, x, _i, _len, _ref;
-        previous_obstacles = (_ref = _this.current_squad.additional_data.obstacles) != null ? _ref : [];
-        obst_changes = (function() {
-          var _i, _len, _ref1, _results;
-          _ref1 = this.obstacles_select.val();
-          _results = [];
-          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-            o = _ref1[_i];
-            _results.push(o);
-          }
-          return _results;
-        }).call(_this);
-        intersect = function(a, b) {
-          var value, _i, _len, _ref1, _results;
-          if (a.length > b.length) {
-            _ref1 = [b, a], a = _ref1[0], b = _ref1[1];
-          }
-          _results = [];
-          for (_i = 0, _len = a.length; _i < _len; _i++) {
-            value = a[_i];
-            if (__indexOf.call(b, value) >= 0) {
-              _results.push(value);
-            }
-          }
-          return _results;
-        };
-        intersection = intersect(previous_obstacles, obst_changes);
-        for (_i = 0, _len = obst_changes.length; _i < _len; _i++) {
-          x = obst_changes[_i];
-          if (intersection.indexOf(x) > -1) {
-            previous_obstacles.splice(previous_obstacles.indexOf(x), 1);
-          } else {
-            if (previous_obstacles.length < 3) {
-              previous_obstacles.push(x);
-            }
-          }
-        }
-        _this.updateObstacleSelect(previous_obstacles);
-        _this.current_squad.additional_data.obstacles = previous_obstacles;
+        _this.current_obstacles = _this.obstacles_select.val();
+        _this.current_squad.additional_data.obstacles = _this.current_obstacles;
         _this.current_squad.dirty = true;
+        _this.showObstaclesSelectInfo();
         _this.container.trigger('xwing-backend:squadDirtinessChanged');
         return _this.container.trigger('xwing:pointsUpdated');
-      };
-    })(this));
-    $('option.obstacle-option').on('mousemove', (function(_this) {
-      return function(e) {
-        return _this.showChooseObstaclesSelectInformation(e.target.getAttribute("value"));
-      };
-    })(this));
-    $('option.obstacle-option').on('touchmove', (function(_this) {
-      return function(e) {
-        return _this.showChooseObstaclesSelectInformation(e.target.getAttribute("value"));
       };
     })(this));
     this.view_list_button.click((function(_this) {
@@ -4344,30 +4406,33 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.showChooseObstaclesModal = function() {
-    this.obstacles_select.val(this.current_squad.additional_data.obstacles);
+    this.obstacles_select.select2('val', this.current_squad.additional_data.obstacles);
     return this.choose_obstacles_modal.modal('show');
   };
 
-  SquadBuilder.prototype.showChooseObstaclesSelectInformation = function(obstacle) {
-    this.showChooseObstaclesSelectImage(obstacle);
-    return this.showChooseObstaclesSelectSources(obstacle);
-  };
-
-  SquadBuilder.prototype.showChooseObstaclesSelectSources = function(obstacle) {
-    var sources, _ref, _ref1, _ref2;
-    sources = (_ref = (_ref1 = exportObj.obstacles[obstacle]) != null ? _ref1.sources : void 0) != null ? _ref : [];
-    return this.obstacles_select_sources.text((sources.length > 1) || (!(_ref2 = exportObj.translate('sources', 'Loose Ships'), __indexOf.call(sources, _ref2) >= 0)) ? (sources.length > 0 ? sources.join(', ') : exportObj.translate('ui', 'unreleased')) : this.uitranslation("Only available from 1st edition"));
-  };
-
-  SquadBuilder.prototype.showChooseObstaclesSelectImage = function(obstacle) {
-    this.image_name = 'images/' + obstacle + '.png';
-    this.obstacles_select_image.find('.obstacle-image').attr('src', this.image_name);
-    return this.obstacles_select_image.show();
+  SquadBuilder.prototype.showObstaclesSelectInfo = function() {
+    var obstacle, sources, _i, _len, _ref, _ref1, _ref2, _results;
+    this.obstacles_select_sources.text = '';
+    if (this.obstacles_select.val() !== []) {
+      _ref = this.obstacles_select.val();
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        obstacle = _ref[_i];
+        sources = (_ref1 = exportObj.obstacles[obstacle]) != null ? _ref1.sources : void 0;
+        if (sources != null) {
+          _results.push(this.obstacles_select_sources.text += obstacle + ': ' + ((sources.length > 1) || (!(_ref2 = exportObj.translate('sources', 'Loose Ships'), __indexOf.call(sources, _ref2) >= 0)) ? (sources.length > 0 ? sources.join(', ') : exportObj.translate('ui', 'unreleased')) : this.uitranslation("Only available from 1st edition")) + '<br>');
+        } else {
+          _results.push(void 0);
+        }
+      }
+      return _results;
+    }
   };
 
   SquadBuilder.prototype.updateObstacleSelect = function(obstacles) {
     this.current_obstacles = obstacles != null ? obstacles : [];
-    return this.obstacles_select.val(obstacles);
+    this.obstacles_select.select2('val', obstacles);
+    return this.showObstaclesSelectInfo();
   };
 
   SquadBuilder.prototype.serialize = function() {
@@ -4594,7 +4659,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4168
+              lineno: 4247
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4604,7 +4669,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4169
+                lineno: 4248
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -6991,7 +7056,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5901
+                  lineno: 5980
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -7218,7 +7283,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 6023
+                          lineno: 6102
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -7268,7 +7333,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 6056
+                                  lineno: 6135
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7437,7 +7502,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 6157
+                      lineno: 6236
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7532,7 +7597,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 6202
+                lineno: 6281
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7625,7 +7690,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6246
+              lineno: 6325
             }));
           }
         }
@@ -7713,7 +7778,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6301
+                lineno: 6380
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -8999,7 +9064,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7243
+                lineno: 7322
               })
             ]);
             __iced_deferrals._fulfill();
@@ -9158,7 +9223,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7337
+                  lineno: 7416
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -9185,7 +9250,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7344
+                      lineno: 7423
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9316,7 +9381,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7409
+            lineno: 7488
           }));
         }
         __iced_deferrals._fulfill();
