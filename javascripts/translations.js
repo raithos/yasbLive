@@ -24977,12 +24977,20 @@ exportObj.cardLoaders.Português = function() {
       display_name: "Dash Rendar (YLF-SL)",
       text: "Depois que você receber uma ficha vermelha como resultado de se mover através ou sobrepor um obstáculo, você pode transferir esta ficha vermelha para uma nave amiga em alcance 0-1."
     },
+    "Dash Rendar (Scum)": {
+      display_name: "Dash Rendar",
+      text: "Depois que você receber uma ficha vermelha como resultado de se mover através ou sobrepor um obstáculo, você pode transferir esta ficha vermelha para uma nave amiga em alcance 0-1."
+    },
     '"Leebo" (YLF)': {
       display_name: "“Leebo” (YLF)",
       text: "Depois que você se defender ou realizar um ataque, se você gastou uma ficha de cálculo, receba 1 ficha de cálculo."
     },
     '"Leebo" (YLF-SL)': {
       display_name: "“Leebo” (YLF-SL)",
+      text: "No começo da Fase de Engajamento, você pode gastar uma ficha de cálculo para adquirir uma mira em uma nave inimiga em alcance 2-3."
+    },
+    '"Leebo" (Scum)': {
+      display_name: "“Leebo”",
       text: "No começo da Fase de Engajamento, você pode gastar uma ficha de cálculo para adquirir uma mira em uma nave inimiga em alcance 2-3."
     },
     "Gray Squadron Bomber": {
@@ -27009,7 +27017,7 @@ exportObj.cardLoaders.Português = function() {
     },
     "Jango Fett": {
       display_name: "Jango Fett",
-      text: "Quando você defender ou realizar um ataque, se a dificuldade da sua manobra revelada for menor que a da nave inimiga, você pode mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."
+      text: "Quando você defender ou realizar um ataque primário, se a dificuldade da sua manobra revelada for menor que a da nave inimiga, você pode mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."
     },
     "Aurra Sing": {
       display_name: "Aurra Sing",
@@ -28162,7 +28170,7 @@ exportObj.cardLoaders.Português = function() {
     },
     "Outrider": {
       display_name: "Outrider",
-      text: "Quando você realizar um ataque que está obstruído por um obstáculo, o defensor rola 1 dado de defesa a menos.%LINEBREAK%Depois que você executar completamente uma manobra, se você se moveu através ou sobrepôs um obstáculo, você pode remover 1 de suas fichas vermelhas ou laranjas.%LINEBREAK% <i>Errata (desde RR 1.0.2): alterado \"ataque obstruído\" para \"um ataque que está obstruído por um obstáculo\"</i>"
+      text: "Quando você realizar um ataque primário em alcance 3, role 1 dado de ataque adicional.%LINEBREAK%Quando você realizar um ataque obstruído, você pode mudar um dos resultados %EVADE% do defensor para um resultado %FOCUS%.%LINEBREAK% Errata (desde a errata 1.8): novo texto\"</i>"
     },
     "Phantom": {
       display_name: "Phantom",
