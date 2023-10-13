@@ -3484,9 +3484,10 @@ exportObj.SquadBuilder = (function() {
     this.misc_settings_modal.tabindex = "-1";
     this.misc_settings_modal.role = "dialog";
     $('body').append(this.misc_settings_modal);
-    this.misc_settings_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"Miscellaneous Settings\"></h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <label class = \"toggle-initiative-prefix-names misc-settings-label\">\n                <input type=\"checkbox\" class=\"initiative-prefix-names-checkbox misc-settings-checkbox\" /> <span class=\"translated\" defaultText=\"Use INI prefix\"></span> \n            </label><br />\n        </div>\n        <div class=\"modal-footer\">\n            <span class=\"misc-settings-infoline\"></span>\n            &nbsp;\n            <button class=\"btn translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
+    this.misc_settings_modal.append($.trim("<div class=\"modal-dialog modal-dialog-centered modal-dialog-scrollable\" role=\"document\">\n    <div class=\"modal-content\">\n        <div class=\"modal-header\">\n            <h3 class=\"translated\" defaultText=\"Miscellaneous Settings\"></h3>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n            <label class = \"toggle-initiative-prefix-names misc-settings-label\">\n                <input type=\"checkbox\" class=\"initiative-prefix-names-checkbox misc-settings-checkbox\" /> <span class=\"translated\" defaultText=\"Use INI prefix\"></span> \n            </label><br />\n            <label class = \"enable-ban-list misc-settings-label\">\n                <input type=\"checkbox\" class=\"enable-ban-list-checkbox misc-settings-checkbox\" /> <span class=\"translated\" defaultText=\"Enable Ban List (Not Standard)\"></span> \n            </label><br />\n        </div>\n        <div class=\"modal-footer\">\n            <span class=\"misc-settings-infoline\"></span>\n            &nbsp;\n            <button class=\"btn translated\" data-dismiss=\"modal\" aria-hidden=\"true\" defaultText=\"Close\"></button>\n        </div>\n    </div>\n</div>"));
     this.misc_settings_infoline = $(this.misc_settings_modal.find('.misc-settings-infoline'));
     this.misc_settings_initiative_prefix = $(this.misc_settings_modal.find('.initiative-prefix-names-checkbox'));
+    this.misc_settings_ban_list = $(this.misc_settings_modal.find('.enable-ban-list-checkbox'));
     if (this.backend != null) {
       this.backend.getSettings((function(_this) {
         return function(st) {
@@ -3495,7 +3496,11 @@ exportObj.SquadBuilder = (function() {
           }
           exportObj.settings.initiative_prefix = st.showInitiativeInFrontOfPilotName != null;
           if (st.showInitiativeInFrontOfPilotName != null) {
-            return _this.misc_settings_initiative_prefix.prop('checked', true);
+            _this.misc_settings_initiative_prefix.prop('checked', true);
+          }
+          exportObj.settings.ban_list = st.enableBanList != null;
+          if (st.enableBanList != null) {
+            return _this.misc_settings_ban_list.prop('checked', true);
           }
         };
       })(this));
@@ -3511,7 +3516,11 @@ exportObj.SquadBuilder = (function() {
             }
             exportObj.settings.initiative_prefix = st.showInitiativeInFrontOfPilotName != null;
             if (st.showInitiativeInFrontOfPilotName != null) {
-              return _this.misc_settings_initiative_prefix.prop('checked', true);
+              _this.misc_settings_initiative_prefix.prop('checked', true);
+            }
+            exportObj.settings.ban_list = st.enableBanList != null;
+            if (st.enableBanList != null) {
+              return _this.misc_settings_ban_list.prop('checked', true);
             }
           });
         };
@@ -3533,6 +3542,31 @@ exportObj.SquadBuilder = (function() {
             });
           } else {
             return _this.backend.deleteSetting('showInitiativeInFrontOfPilotName', function(dd) {
+              _this.misc_settings_infoline.text(_this.uitranslation("Changes Saved"));
+              return _this.misc_settings_infoline.fadeIn(100, function() {
+                return _this.misc_settings_infoline.fadeOut(3000);
+              });
+            });
+          }
+        }
+      };
+    })(this));
+    this.misc_settings_ban_list.click((function(_this) {
+      return function(e) {
+        if (exportObj.settings == null) {
+          exportObj.settings = [];
+        }
+        exportObj.settings.ban_list = _this.misc_settings_ban_list.prop('checked');
+        if (_this.backend != null) {
+          if (_this.misc_settings_ban_list.prop('checked')) {
+            return _this.backend.set('enableBanList', '1', function(ds) {
+              _this.misc_settings_infoline.text(_this.uitranslation("Changes Saved"));
+              return _this.misc_settings_infoline.fadeIn(100, function() {
+                return _this.misc_settings_infoline.fadeOut(3000);
+              });
+            });
+          } else {
+            return _this.backend.deleteSetting('enableBanList', function(dd) {
               _this.misc_settings_infoline.text(_this.uitranslation("Changes Saved"));
               return _this.misc_settings_infoline.fadeIn(100, function() {
                 return _this.misc_settings_infoline.fadeOut(3000);
@@ -3709,7 +3743,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3332
+              lineno: 3359
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4658,7 +4692,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4247
+              lineno: 4274
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4668,7 +4702,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4248
+                lineno: 4275
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -4720,6 +4754,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.isItemAvailable = function(item_data, shipCheck) {
+    var _ref, _ref1;
     if (shipCheck == null) {
       shipCheck = false;
     }
@@ -4728,8 +4763,18 @@ exportObj.SquadBuilder = (function() {
     } else if (this.isStandard) {
       return exportObj.standardCheck(item_data, this.faction, shipCheck);
     } else if (!this.isEpic) {
+      if (((_ref = exportObj.settings) != null ? _ref.ban_list : void 0) != null) {
+        if (!exportObj.standardCheck(item_data, this.faction, shipCheck, true)) {
+          return false;
+        }
+      }
       return exportObj.epicExclusions(item_data);
     } else {
+      if (((_ref1 = exportObj.settings) != null ? _ref1.ban_list : void 0) != null) {
+        if (!exportObj.standardCheck(item_data, this.faction, shipCheck, true)) {
+          return false;
+        }
+      }
       return true;
     }
   };
@@ -7066,7 +7111,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 5987
+                  lineno: 6018
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -7193,38 +7238,22 @@ Ship = (function() {
   };
 
   Ship.prototype.setShipType = function(ship_type) {
-    var cls, pilot, quickbuild_id, result, _i, _len, _ref, _ref1;
+    var cls, quickbuild_id, result, _i, _len, _ref, _ref1;
     this.pilot_selector.data('select2').container.show();
     if (ship_type !== ((_ref = this.pilot) != null ? _ref.ship : void 0)) {
       if (!this.builder.isQuickbuild) {
-        pilot = ((function() {
-          var _i, _len, _ref1, _results;
+        this.setPilot(((function() {
+          var _i, _len, _ref1, _ref2, _results;
           _ref1 = this.builder.getAvailablePilotsForShipIncluding(ship_type);
           _results = [];
           for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
             result = _ref1[_i];
-            if (!exportObj.pilotsById[result.id].unique) {
+            if (((exportObj.pilotsById[result.id].restriction_func == null) || exportObj.pilotsById[result.id].restriction_func(this)) && !(_ref2 = exportObj.pilotsById[result.id], __indexOf.call(this.builder.uniques_in_use.Pilot, _ref2) >= 0)) {
               _results.push(exportObj.pilotsById[result.id]);
             }
           }
           return _results;
-        }).call(this))[0];
-        if (pilot) {
-          this.setPilot(pilot);
-        } else {
-          this.setPilot(((function() {
-            var _i, _len, _ref1, _ref2, _results;
-            _ref1 = this.builder.getAvailablePilotsForShipIncluding(ship_type);
-            _results = [];
-            for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-              result = _ref1[_i];
-              if (((exportObj.pilotsById[result.id].restriction_func == null) || exportObj.pilotsById[result.id].restriction_func(this)) && !(_ref2 = exportObj.pilotsById[result.id], __indexOf.call(this.builder.uniques_in_use.Pilot, _ref2) >= 0)) {
-                _results.push(exportObj.pilotsById[result.id]);
-              }
-            }
-            return _results;
-          }).call(this))[0]);
-        }
+        }).call(this))[0]);
       } else {
         quickbuild_id = ((function() {
           var _i, _len, _ref1, _results;
@@ -7293,7 +7322,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 6109
+                          lineno: 6135
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -7343,7 +7372,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 6142
+                                  lineno: 6168
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7512,7 +7541,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 6243
+                      lineno: 6269
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7607,7 +7636,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 6288
+                lineno: 6314
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7700,7 +7729,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6332
+              lineno: 6358
             }));
           }
         }
@@ -7788,7 +7817,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6387
+                lineno: 6413
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -9074,7 +9103,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7329
+                lineno: 7355
               })
             ]);
             __iced_deferrals._fulfill();
@@ -9233,7 +9262,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7423
+                  lineno: 7449
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -9260,7 +9289,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7430
+                      lineno: 7456
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9391,7 +9420,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7495
+            lineno: 7521
           }));
         }
         __iced_deferrals._fulfill();

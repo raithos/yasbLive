@@ -13620,7 +13620,7 @@ exportObj.epicExclusions = function(data) {
   }
 };
 
-exportObj.standardCheck = function(data, faction, shipCheck) {
+exportObj.standardCheck = function(data, faction, shipCheck, onlyBanList) {
   var ship, _i, _len, _ref, _ref1, _ref2, _ref3;
   if (faction == null) {
     faction = '';
@@ -13628,18 +13628,25 @@ exportObj.standardCheck = function(data, faction, shipCheck) {
   if (shipCheck == null) {
     shipCheck = false;
   }
+  if (onlyBanList == null) {
+    onlyBanList = false;
+  }
   if (shipCheck) {
     if ((_ref = data.name, __indexOf.call(exportObj.standardPilotExclusions, _ref) >= 0)) {
       return false;
     }
-    _ref1 = exportObj.standardShipInclusions;
-    for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-      ship = _ref1[_i];
-      if (ship.faction === faction && (data.name === ship.name || data.ship === ship.name || (Array.isArray(data.ship) && (_ref2 = ship.name, __indexOf.call(data.ship, _ref2) >= 0)))) {
-        return true;
+    if (onlyBanList === false) {
+      _ref1 = exportObj.standardShipInclusions;
+      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+        ship = _ref1[_i];
+        if (ship.faction === faction && (data.name === ship.name || data.ship === ship.name || (Array.isArray(data.ship) && (_ref2 = ship.name, __indexOf.call(data.ship, _ref2) >= 0)))) {
+          return true;
+        }
       }
+      return false;
+    } else {
+      return true;
     }
-    return false;
   } else {
     return _ref3 = data.name, __indexOf.call(exportObj.standardUpgradeExclusions, _ref3) < 0;
   }
