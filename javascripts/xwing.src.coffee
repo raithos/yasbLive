@@ -3308,20 +3308,7 @@ class exportObj.SquadBuilder
             formatSelection: obstacleFormat
         # Backend
 
-        OpenSelect2 = ->
-            $select2 = $(this).data('select2')
-            setTimeout (->
-                if !$select2.opened()
-                    $select2.open()
-                return
-            ), 0
-            return
-
-        $('.select2').select2({}).one('select2-focus', OpenSelect2).on 'select2-blur', (e) ->
-            $(this).one 'select2-focus', OpenSelect2
-            return
-
-
+        @obstacles_select.select2.minimumResultsForSearch = -1 if $.isMobile()
         @backend_list_squads_button = $ @container.find('button.backend-list-my-squads')
         @backend_list_squads_button.click (e) =>
             e.preventDefault()
@@ -3681,11 +3668,6 @@ class exportObj.SquadBuilder
             @showObstaclesSelectInfo()
             @container.trigger 'xwing-backend:squadDirtinessChanged'
             @container.trigger 'xwing:pointsUpdated'
-
-        @obstacles_select.on 'select2-focus', (e) ->
-            $('.select2-container .select2-focusser').remove()
-            $('.select2-search input').prop('focus', false).removeClass 'select2-focused'
-            return
 
         @view_list_button.click (e) =>
             e.preventDefault()
@@ -4676,6 +4658,13 @@ class exportObj.SquadBuilder
         actionlist = action_icons.join ''
         return actionlist.replace(seperation,'')
 
+    listStandardUpgrades: (upgrades) ->
+        upgrade_names = ''
+        for upgrade in upgrades
+            formattedname = upgrade.split " ("
+            upgrade_names += ', ' + formattedname[0]
+        return upgrade_names.substr 2
+        
     showTooltip: (type, data, additional_opts, container = @info_container, force_update = false) ->
         if data != @tooltip_currently_displaying or force_update
             switch type
@@ -5025,7 +5014,7 @@ class exportObj.SquadBuilder
                         container.find('tr.info-upgrades').hide()
                     else
                         container.find('tr.info-upgrades').show()
-                        container.find('tr.info-upgrades td.info-data').html(if data.slots? then (exportObj.translate('sloticon', slot) for slot in data.slots).join(' ') or 'None' else "Standardized")
+                        container.find('tr.info-upgrades td.info-data').html(if data.slots? then (exportObj.translate('sloticon', slot) for slot in data.slots).join(' ') else (if data.upgrades? then @listStandardUpgrades(data.upgrades) else 'None'))
                     container.find('p.info-maneuvers').show()
                     container.find('p.info-maneuvers').html(@getManeuverTableHTML(effective_stats?.maneuvers ? ship.maneuvers, ship.maneuvers))
                 when 'Quickbuild'
