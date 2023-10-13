@@ -2080,6 +2080,7 @@ class exportObj.RulesBrowser
 
         $(window).on 'xwing:afterLanguageLoad', (e, language, cb=$.noop) =>
             @language = language
+            exportObj.loadRules(language)
             @prepareRulesData()
             @renderRulesList()
         @rule_search_rules_text.oninput = => @renderRulesList()
@@ -2200,6 +2201,25 @@ catch all
 exportObj.loadCards = (language) ->
     exportObj.cardLoaders[language]()
 
+exportObj.loadRules = (language) ->
+    # console.log("Loading rules:")
+    # console.log(language)
+    if language of exportObj.ruleLoaders
+        # console.log("Rules exist")
+        if exportObj.rulesLang != language
+            # console.log("Not already active, currently was")
+            # console.log(exportObj.rulesLang)
+            exportObj.ruleLoaders[language]()
+            exportObj.rulesLang = language
+        return true
+    else
+        # console.log("Load default instead")
+        if exportObj.rulesLang != DFL_LANGUAGE
+            # console.log("Not already active")
+            exportObj.ruleLoaders[DFL_LANGUAGE]()
+            exportObj.rulesLang = DFL_LANGUAGE
+        return false
+
 exportObj.translate = (category, what, args...) -> 
     exportObj.translateToLang(exportObj.currentLanguage, category, what, args...)
 
@@ -2263,6 +2283,7 @@ exportObj.setupTranslationSupport = ->
 
     # do we need to load dfl as well? Not sure...
     exportObj.loadCards DFL_LANGUAGE
+    exportObj.loadRules exportObj.currentLanguage
     if DFL_LANGUAGE != exportObj.currentLanguage
         exportObj.loadCards exportObj.currentLanguage 
     $(exportObj).trigger 'xwing:languageChanged', [exportObj.currentLanguage, 'reload']
@@ -2338,7 +2359,7 @@ $.randomInt = (n) ->
 $.isElementInView = (element, fullyInView) ->
     pageTop = $(window).scrollTop()
     pageBottom = pageTop + $(window).height()
-    elementTop = $(element).offset().top
+    elementTop = $(element)?.offset()?.top
     elementBottom = elementTop + $(element).height()
 
     if fullyInView
