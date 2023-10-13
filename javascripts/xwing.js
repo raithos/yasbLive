@@ -4781,14 +4781,14 @@ exportObj.SquadBuilder = (function() {
     } else if (this.isStandard) {
       return exportObj.standardCheck(item_data, this.faction, shipCheck);
     } else if (!this.isEpic) {
-      if (((_ref = exportObj.settings) != null ? _ref.ban_list : void 0) != null) {
+      if ((((_ref = exportObj.settings) != null ? _ref.ban_list : void 0) != null) && exportObj.settings.ban_list) {
         if (!exportObj.standardCheck(item_data, this.faction, shipCheck, true)) {
           return false;
         }
       }
       return exportObj.epicExclusions(item_data);
     } else {
-      if (((_ref1 = exportObj.settings) != null ? _ref1.ban_list : void 0) != null) {
+      if ((((_ref1 = exportObj.settings) != null ? _ref1.ban_list : void 0) != null) && exportObj.settings.ban_list) {
         if (!exportObj.standardCheck(item_data, this.faction, shipCheck, true)) {
           return false;
         }
