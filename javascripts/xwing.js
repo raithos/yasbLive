@@ -3998,7 +3998,7 @@ exportObj.SquadBuilder = (function() {
     })(this));
     this.obstacles_select.change((function(_this) {
       return function(e) {
-        _this.current_obstacles = _this.obstacles_select.val();
+        _this.current_obstacles = _this.obstacles_select.val().split(',');
         _this.current_squad.additional_data.obstacles = _this.current_obstacles;
         _this.current_squad.dirty = true;
         _this.showObstaclesSelectInfo();

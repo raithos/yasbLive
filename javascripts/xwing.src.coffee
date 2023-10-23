@@ -3710,7 +3710,7 @@ class exportObj.SquadBuilder
                 @container.trigger 'xwing:pointsUpdated'        
 
         @obstacles_select.change (e) =>
-            @current_obstacles = @obstacles_select.val()
+            @current_obstacles = @obstacles_select.val().split(',')
             @current_squad.additional_data.obstacles = @current_obstacles
             @current_squad.dirty = true
             @showObstaclesSelectInfo()
