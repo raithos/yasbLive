@@ -6026,7 +6026,7 @@ exportObj.SquadBuilder = (function() {
         case 'Addon':
           container.find('.info-type').text(exportObj.translate("slot", additional_opts.addon_type));
           if (data.standard != null) {
-            matching_pilots = getPilotsMatchingUpgrade(data.name);
+            matching_pilots = this.getPilotsMatchingUpgrade(data.name);
             container.find('.info-sources.info-data').text(((function() {
               var _k, _len2, _results;
               _results = [];

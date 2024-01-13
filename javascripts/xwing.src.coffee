@@ -5216,7 +5216,7 @@ class exportObj.SquadBuilder
                 when 'Addon'
                     container.find('.info-type').text exportObj.translate("slot", additional_opts.addon_type)
                     if data.standard?
-                        matching_pilots = getPilotsMatchingUpgrade(data.name)
+                        matching_pilots = @getPilotsMatchingUpgrade(data.name)
                         container.find('.info-sources.info-data').text (pilot.display_name for pilot in matching_pilots).sort().join(', ')
                     else
                         container.find('.info-sources.info-data').text (exportObj.translate('sources', source) for source in data.sources).sort().join(', ')
