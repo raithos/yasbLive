@@ -73,6 +73,7 @@ exportObj.translations.Deutsch = {
     "Upgrade": "Aufwertungskarte"
   },
   sources: {
+    "Loose Ships": "Schiffsmodelle der 1. Edition",
     "Second Edition Core Set": "Grundspiel zweite Edition",
     "First Edition Core Set": "Grundspiel erste Edition",
     "First Edition Force Awakens Core Set": "Das Erwachen der Macht Grundspiel erste Edition",
@@ -155,7 +156,10 @@ exportObj.translations.Deutsch = {
     "Rogue-class Starfighter Expansion pack": "Sternenjäger der Renegat-Klasse Erweiterungspack",
     "Razor Crest Expansion Pack": "Razor Crest Erweiterung",
     "Pride of Mandalore Reinforcements Pack": "Stolz von Mandalore Verstärkungspack",
-    "Battle of Yavin Battle Pack": "Die Schlacht von Yavin Szenariopack"
+    "Battle of Yavin Battle Pack": "Die Schlacht von Yavin Szenariopack",
+    "Galactic Empire Squadron Starter Pack": "Galaktisches Imperium Staffel-Starterpack",
+    "TIE/sa TIE Bomber Expansion Pack": "TIE/sa-Bomber Erweiterungspack",
+    "Rebel Alliance Squadron Starter Pack": "Rebellenallianz Staffel-Starterpack"
   },
   ui: {
     "shipSelectorPlaceholder": "Wähle ein Schiff",
@@ -235,7 +239,7 @@ exportObj.translations.Deutsch = {
     "Squads reloaded": "Alle Staffeln dieser Fraktion wurden aktualisiert.",
     "login in progress": "OAuth Anmeldung in Bearbeitung. Bitte schließe die Anmeldung bei dem von dir gewählten Anbieter im soeben geöffneten Fenster ab.",
     "OAuth explanation": "<p>\n    <a href=\"http://de.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> (Open Authorization) ist ein Schnittstelle, die es dir ermöglicht dich bei verschiedenen Webseiten (z.B. hier bei YASB) anzumelden, ohne einen neuen Account anlegen zu müssen oder uns irgendwelche persönlichen Daten übermitteln zu müssen. Alles was du brauchst ist ein vorhandener Account bei einem der unten stehenden Anbieter, dem du sagst, dass du YASB nutzen möchtest. \nis an authorization system which lets you prove your identity at a web site without having to create a new account.  Instead, you tell some provider with whom you already have an account (e.g. Google or Facebook) to prove to this web site that you say who you are.  That way, the next time you visit, this site remembers that you're that user from Google.\n</p>\n<p>\n    Dieser Anbieter übermittelt dann eine eindeutige ID an YASB, unter der wir deine Staffeln und Sammlung speichern können, damit du beim nächsten Besuch auf sie zugreifen kannst. Wir können leider nicht verhindern, dass (je nach Anbieter) eventuell weitere Informationen außer dieser ID übertragen werden, den restlichen Kram werfen wir einfach sofort weg. \n</p>\n<p>\n    Mehr Informationen zum OAuth Verfahren findest du z.B. auf <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">unter diesem Link (englisch)</a>.\n</p>\n<p>\n    Wenn du lieber gar keinen Account nutzen möchtest, kannst du eine Staffeln übrigens auch einfach speichern, indem du ein Lesezeichen setzt - und diese sogar über den Link teilen. Achtung: Du musst das Lesezeichen jedes mal erneuern, wenn du deine Staffel bearbeitest. \n</p>",
-    "Intro Card YASB": "<h2>YASB 2 für X-Wing (Version 2.5) </h2>\n<p>YASB (engl. Yet Another Squad Builder, dt. Noch ein Staffel-Bauer) hilft dir, einfach und unkompliziert deine Staffeln für das X-Wing Miniaturenspiel von <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a> zu erstellen.</p>\n<h5>Impressum</h5>\n<p>Eine Weiterentwicklung des hervorragenden <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a> für die erste Edition.</p>\n<p>YASB wird von Stephen Kim und Patrick Mischke gepflegt.</p>\n<p>Besonderes Dankeschön an:<br>\nServer (-kosten) und Federführung seit der zweiten Edition: Stephen Kim. <br>\n2.5 Datenupdate: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 Datenupdate: Evan Cameron, Jonathan Hon, Devon Monkhouse und Mark Stewart.<br>\nÜbersetzungen: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nLogo: Thomas Kohler<br>\nQuick Build Funktionalität: Patrick Mischke</p>\n\n<p>Diese Seite ist inoffiziell und nicht lizensiert von oder sonst irgendwie mit Atomic Mass Games, Lucasfilm Ltd. oder Disney verbunden.</p>\n\n<p>Diese Seite steht dir dauerhaft kostenfrei zur Verfügung. YASB ist ein Open-Source Projekt, wenn du etwas beitragen möchtest, ist Hilfe immer willkommen. Aufgrund wiederholter Fragen hier ein Paypal-Link von Stephen Kim.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Über Paypal unterstützen</button></p>",
+    "Intro Card YASB": "<h2>YASB für X-Wing 2.5 </h2>\n<p>YASB (engl. Yet Another Squad Builder, dt. Noch ein Staffel-Bauer) hilft dir, einfach und unkompliziert deine Staffeln für das X-Wing Miniaturenspiel von <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a> zu erstellen.</p>\n<h5>Impressum</h5>\n<p>Eine Weiterentwicklung des hervorragenden <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a> für die erste Edition.</p>\n<p>YASB wird von Stephen Kim und Patrick Mischke gepflegt.</p>\n<p>Besonderes Dankeschön an:<br>\nServer (-kosten) und Federführung seit der zweiten Edition: Stephen Kim. <br>\n2.5 Datenupdate: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 Datenupdate: Evan Cameron, Jonathan Hon, Devon Monkhouse und Mark Stewart.<br>\nÜbersetzungen: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nLogo: Thomas Kohler<br>\nQuick Build Funktionalität: Patrick Mischke</p>\n\n<p>Diese Seite ist inoffiziell und nicht lizensiert von oder sonst irgendwie mit Atomic Mass Games, Lucasfilm Ltd. oder Disney verbunden.</p>\n\n<p>Diese Seite steht dir dauerhaft kostenfrei zur Verfügung. YASB ist ein Open-Source Projekt, wenn du etwas beitragen möchtest, ist Hilfe immer willkommen. Aufgrund wiederholter Fragen hier ein Paypal-Link von Stephen Kim.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Über Paypal unterstützen</button></p>",
     "Continue to OAuth provider": "Dies wird ein neues Fenster beim gewählten Anbieter öffnen. Es kann sein, dass du Pop-Ups erlauben musst.",
     "iOS requires cross-site control": "Unter iOS musst du eventuell erst \"cross-site control\" aktivieren, damit OAuth nutzen kannst.",
     "select OAuth provider": "Wähle einen der untentstehenden OAuth Anbieter um dich einzuloggen und Staffeln speichern zu können.",
@@ -304,7 +308,7 @@ exportObj.translations.Deutsch = {
     "Factions:": "Fraktionen",
     "Textsearch:": "Volltextsuche",
     "Squad Notes:": "Staffelnotizen",
-    "Tag:": "Kategorien:",
+    "Tag:": "Stichwörter:",
     "Choose obstacles dialog": "Wähle bis zu drei Hindernisse.",
     "Mark obstacles": "Wähle bis zu drei Hindernisse",
     "Choose Obstacles": "Hindernisse wählen",
@@ -443,7 +447,14 @@ exportObj.translations.Deutsch = {
     "All factions": "Alle Fraktionen",
     "Has multiple of the chosen slots": "Hat mehrere der gewählten Slots",
     "keywords": "Schlüsselwörter",
-    "Checking auth status...": "Prüfe Anmeldestatus..."
+    "Checking auth status...": "Prüfe Anmeldestatus...",
+    "Copy URL": "Link kopieren",
+    "Reset Obstacles": "Alle löschen",
+    "Enable Ban List (Not Standard)": "Bannliste außerhalb von Standard",
+    "Epic Unofficial": "Von AMG wurden keine Punkte für Epische Karten veröffentlicht. Die Werte hier sind unabhängig und willkürlich gewählt, teilweise unausgewogen und werden nicht aktualisiert. ",
+    damageHeader: function(translator, type) {
+      return "Schadenskarte (" + (translator('types', type)) + ")";
+    }
   },
   singular: {
     'pilots': 'Pilot',
@@ -2118,7 +2129,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Wolffe" (SoC)': {
       display_name: "Wolffe (SoC)",
-      text: "Solange du einen %FORNTARC% -Primärangriff durchführst, darfst du 1 %CHARGE% ausgeben, um 1 Angriffswürfel neu zu werfen. Solange du einen %REARARC%-Primärangriff durchführst, darfst du 1 %CHARGE% wiederherstellen, um 1 zusätzlichen Angriffswürfel zu werfen."
+      text: "Solange du einen %FRONTARC% -Primärangriff durchführst, darfst du 1 %CHARGE% ausgeben, um 1 Angriffswürfel neu zu werfen. Solange du einen %REARARC%-Primärangriff durchführst, darfst du 1 %CHARGE% wiederherstellen, um 1 zusätzlichen Angriffswürfel zu werfen."
     },
     '"Jag" (SoC)': {
       display_name: "Jag (SoC)",

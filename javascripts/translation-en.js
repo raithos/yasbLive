@@ -112,7 +112,7 @@ exportObj.translations.English = {
       return "" + (translator('slot', slot)) + " Upgrade";
     },
     damageHeader: function(translator, type) {
-      return "Damage Card (" + (translator('type', type)) + ")";
+      return "Damage Card (" + (translator('types', type)) + ")";
     },
     "unreleased": "unreleased",
     "epic": "epic",
@@ -135,8 +135,8 @@ exportObj.translations.English = {
     "Choose obstacles dialog": "Choose up to three obstacles, to include in the permalink for use in external programs",
     "Mark obstacles": "Mark the three obstacles you are using.",
     "Scan QR-Code": "Scan to open this list in the builder",
-    "View in YASB": "View in YASB 2",
-    "YASB advertisment": "YASB 2 is a simple, fast, and easy to use squad builder for X-Wing Miniatures by Atomic Mass Games.",
+    "View in YASB": "View in YASB",
+    "YASB advertisment": "YASB is a simple, fast, and easy to use squad builder for X-Wing Miniatures by Atomic Mass Games.",
     collectionContentShips: function(translator, number) {
       return "You have " + number + " ship " + (number === 1 ? 'model' : 'models') + " in your collection.";
     },
