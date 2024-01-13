@@ -4350,25 +4350,6 @@ class exportObj.SquadBuilder
             ships.sort exportObj.sortHelper
         return ships
 
-    getPilotsMatchingUpgrade: (term='',sorted = true) ->
-        pilots = []
-        for pilot_name, pilot_data of exportObj.pilots
-            if pilot_data.upgrades?
-                for upgrade in pilot_data.upgrades
-                    if @matcher(upgrade, term)
-                        pilots.push
-                            id: pilot_data.name
-                            name: pilot_data.name
-                            display_name: pilot_data.display_name
-                            chassis: pilot_data.chassis
-                            canonical_name: pilot_data.canonical_name
-                            xws: pilot_data.name.canonicalize()
-                            icon: if pilot_data.icon then pilot_data.icon else pilot_data.name.canonicalize()
-        if sorted
-            pilots.sort exportObj.sortHelper
-        return pilots
-
-
     getAvailableShipsMatchingAndCheapEnough: (points, term='', sorted=false, collection_only = false) ->
         # returns a list of ships that have at least one pilot cheaper than the given points value
         possible_ships = @getAvailableShipsMatching(term, sorted, collection_only)
@@ -4732,7 +4713,25 @@ class exportObj.SquadBuilder
             formattedname = upgrade.split " ("
             upgrade_names += ', ' + formattedname[0]
         return upgrade_names.substr 2
-        
+
+    getPilotsMatchingUpgrade: (term='',sorted = true) ->
+        pilots = []
+        for pilot_name, pilot_data of exportObj.pilots
+            if pilot_data.upgrades?
+                for upgrade in pilot_data.upgrades
+                    if @matcher(upgrade, term)
+                        pilots.push
+                            id: pilot_data.name
+                            name: pilot_data.name
+                            display_name: pilot_data.display_name
+                            chassis: pilot_data.chassis
+                            canonical_name: pilot_data.canonical_name
+                            xws: pilot_data.name.canonicalize()
+                            icon: if pilot_data.icon then pilot_data.icon else pilot_data.name.canonicalize()
+        if sorted
+            pilots.sort exportObj.sortHelper
+        return pilots
+
     showTooltip: (type, data, additional_opts, container = @info_container, force_update = false) ->
         if data != @tooltip_currently_displaying or force_update
             switch type
