@@ -4350,6 +4350,25 @@ class exportObj.SquadBuilder
             ships.sort exportObj.sortHelper
         return ships
 
+    getPilotsMatchingUpgrade: (term='',sorted = true) ->
+        pilots = []
+        for pilot_name, pilot_data of exportObj.pilots
+            if pilot_data.upgrades?
+                for upgrade in pilot_data.upgrades
+                    if @matcher(upgrade, term)
+                        pilots.push
+                            id: pilot_data.name
+                            name: pilot_data.name
+                            display_name: pilot_data.display_name
+                            chassis: pilot_data.chassis
+                            canonical_name: pilot_data.canonical_name
+                            xws: pilot_data.name.canonicalize()
+                            icon: if pilot_data.icon then pilot_data.icon else pilot_data.name.canonicalize()
+        if sorted
+            pilots.sort exportObj.sortHelper
+        return pilots
+
+
     getAvailableShipsMatchingAndCheapEnough: (points, term='', sorted=false, collection_only = false) ->
         # returns a list of ships that have at least one pilot cheaper than the given points value
         possible_ships = @getAvailableShipsMatching(term, sorted, collection_only)
@@ -5197,11 +5216,12 @@ class exportObj.SquadBuilder
                     container.find('p.info-maneuvers').html(@getManeuverTableHTML(ship.maneuvers, ship.maneuvers))
                 when 'Addon'
                     container.find('.info-type').text exportObj.translate("slot", additional_opts.addon_type)
-                    container.find('.info-sources.info-data').text (exportObj.translate('sources', source) for source in data.sources).sort().join(', ')
                     if data.standard?
-                        container.find('.info-sources').hide()
+                        matching_pilots = getPilotsMatchingUpgrade(data.name)
+                        container.find('.info-sources.info-data').text (pilot.display_name for pilot in matching_pilots).sort().join(', ')
                     else
-                        container.find('.info-sources').show()
+                        container.find('.info-sources.info-data').text (exportObj.translate('sources', source) for source in data.sources).sort().join(', ')
+                    container.find('.info-sources').show()
                     
                     #logic to determine how many dots to use for uniqueness
                     if data.unique?
@@ -5223,7 +5243,7 @@ class exportObj.SquadBuilder
                         container.find('.info-collection').show()
                     else
                         container.find('.info-collection').hide()
-                    container.find('.info-name').html """#{uniquedots}#{if data.display_name then data.display_name else data.name}#{if (exportObj.isReleased(data) or data.standard?) then  "" else " (#{@uitranslation('unreleased')})"}"""
+                    container.find('.info-name').html """#{uniquedots}#{if data.display_name then data.display_name else data.name}#{if (exportObj.isReleased(data) or data.standard?) then  "" else " (#{@uitranslation('unreleased')})"}#{if data.standard? then " (S)"}"""
                     if data.variablepoints?
                         point_info = "<i>" + @uitranslation("varPointCostsPoints", data.points)
                         switch data.variablepoints
