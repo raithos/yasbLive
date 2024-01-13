@@ -5223,7 +5223,7 @@ class exportObj.SquadBuilder
                         container.find('.info-collection').show()
                     else
                         container.find('.info-collection').hide()
-                    container.find('.info-name').html """#{uniquedots}#{if data.display_name then data.display_name else data.name}#{if exportObj.isReleased(data) then  "" else " (#{@uitranslation('unreleased')})"}"""
+                    container.find('.info-name').html """#{uniquedots}#{if data.display_name then data.display_name else data.name}#{if (exportObj.isReleased(data) or data.standard?) then  "" else " (#{@uitranslation('unreleased')})"}"""
                     if data.variablepoints?
                         point_info = "<i>" + @uitranslation("varPointCostsPoints", data.points)
                         switch data.variablepoints

@@ -6024,7 +6024,7 @@ exportObj.SquadBuilder = (function() {
           } else {
             container.find('.info-collection').hide();
           }
-          container.find('.info-name').html("" + uniquedots + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) ? "" : " (" + (this.uitranslation('unreleased')) + ")"));
+          container.find('.info-name').html("" + uniquedots + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) || (data.standard != null) ? "" : " (" + (this.uitranslation('unreleased')) + ")"));
           if (data.variablepoints != null) {
             point_info = "<i>" + this.uitranslation("varPointCostsPoints", data.points);
             switch (data.variablepoints) {
