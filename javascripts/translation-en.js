@@ -2425,7 +2425,7 @@ exportObj.cardLoaders.English = function() {
       text: "After you gain a red token as a result of moving through or overlapping an obstacle, you may transfer that red token to a friendly ship at range 0-1."
     },
     "Dash Rendar (Scum)": {
-      display_name: "Dash Rendar",
+      display_name: "Dash Rendar (SL)",
       text: "After you gain a red token as a result of moving through or overlapping an obstacle, you may transfer that red token to a friendly ship at range 0-1."
     },
     '"Leebo" (YLF)': {
@@ -2437,7 +2437,7 @@ exportObj.cardLoaders.English = function() {
       text: "At the end of the Engagement Phase, you may spend a calculate token to acquire a lock on an enemy ship at range 2-3."
     },
     '"Leebo" (Scum)': {
-      display_name: "“Leebo”",
+      display_name: "“Leebo” (SL)",
       text: "At the end of the Engagement Phase, you may spend a calculate token to acquire a lock on an enemy ship at range 2-3."
     },
     "Corran Horn (X-Wing)": {
