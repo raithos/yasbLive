@@ -5216,7 +5216,7 @@ class exportObj.SquadBuilder
                 when 'Addon'
                     container.find('.info-type').text exportObj.translate("slot", additional_opts.addon_type)
                     if data.standard?
-                        matching_pilots = @getPilotsMatchingUpgrade(data.name)
+                        matching_pilots = @getPilotsMatchingUpgrade(data.name, false)
                         container.find('.info-sources.info-data').text (pilot.display_name for pilot in matching_pilots).sort().join(', ')
                     else
                         container.find('.info-sources.info-data').text (exportObj.translate('sources', source) for source in data.sources).sort().join(', ')
@@ -5242,7 +5242,7 @@ class exportObj.SquadBuilder
                         container.find('.info-collection').show()
                     else
                         container.find('.info-collection').hide()
-                    container.find('.info-name').html """#{uniquedots}#{if data.display_name then data.display_name else data.name}#{if (exportObj.isReleased(data) or data.standard?) then  "" else " (#{@uitranslation('unreleased')})"}#{if data.standard? then " (S)"}"""
+                    container.find('.info-name').html """#{uniquedots}#{if data.display_name then data.display_name else data.name}#{if (exportObj.isReleased(data) or data.standard?) then  "" else " (#{@uitranslation('unreleased')})"}#{if data.standard? then " (S)" else ""}"""
                     if data.variablepoints?
                         point_info = "<i>" + @uitranslation("varPointCostsPoints", data.points)
                         switch data.variablepoints
