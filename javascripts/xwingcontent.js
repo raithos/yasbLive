@@ -3181,7 +3181,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/sa Bomber",
         skill: 5,
         points: 3,
-        loadout: 10,
+        loadout: 7,
         slots: ["Talent", "Talent", "Missile", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: '"Deathfire"',
