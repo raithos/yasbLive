@@ -14099,7 +14099,7 @@ String.prototype.serialtoxws = function() {
         link: "https://yasb.app/" + this
       }
     },
-    version: '09/08/2023'
+    version: '02/23/2024'
   };
   serialized = this.ParseParameter('d');
   re = __indexOf.call(serialized, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
