@@ -73,6 +73,7 @@ exportObj.translations.Deutsch = {
     "Upgrade": "Aufwertungskarte"
   },
   sources: {
+    "Loose Ships": "Schiffsmodelle der 1. Edition",
     "Second Edition Core Set": "Grundspiel zweite Edition",
     "First Edition Core Set": "Grundspiel erste Edition",
     "First Edition Force Awakens Core Set": "Das Erwachen der Macht Grundspiel erste Edition",
@@ -155,7 +156,10 @@ exportObj.translations.Deutsch = {
     "Rogue-class Starfighter Expansion pack": "Sternenjäger der Renegat-Klasse Erweiterungspack",
     "Razor Crest Expansion Pack": "Razor Crest Erweiterung",
     "Pride of Mandalore Reinforcements Pack": "Stolz von Mandalore Verstärkungspack",
-    "Battle of Yavin Battle Pack": "Die Schlacht von Yavin Szenariopack"
+    "Battle of Yavin Battle Pack": "Die Schlacht von Yavin Szenariopack",
+    "Galactic Empire Squadron Starter Pack": "Galaktisches Imperium Staffel-Starterpack",
+    "TIE/sa TIE Bomber Expansion Pack": "TIE/sa-Bomber Erweiterungspack",
+    "Rebel Alliance Squadron Starter Pack": "Rebellenallianz Staffel-Starterpack"
   },
   ui: {
     "shipSelectorPlaceholder": "Wähle ein Schiff",
@@ -173,7 +177,7 @@ exportObj.translations.Deutsch = {
     "Epic": "Episch",
     "Quickbuild": "Schnellbau",
     "Hyperspace": "Hyperraum",
-    "Extended": "Extended",
+    "Extended": "Erweitert",
     "limited": "limitiert",
     "Unnamed Squadron": "Unbenannte Staffel",
     "Unsaved Squadron": "Nicht gespeicherte Staffel",
@@ -235,7 +239,7 @@ exportObj.translations.Deutsch = {
     "Squads reloaded": "Alle Staffeln dieser Fraktion wurden aktualisiert.",
     "login in progress": "OAuth Anmeldung in Bearbeitung. Bitte schließe die Anmeldung bei dem von dir gewählten Anbieter im soeben geöffneten Fenster ab.",
     "OAuth explanation": "<p>\n    <a href=\"http://de.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> (Open Authorization) ist ein Schnittstelle, die es dir ermöglicht dich bei verschiedenen Webseiten (z.B. hier bei YASB) anzumelden, ohne einen neuen Account anlegen zu müssen oder uns irgendwelche persönlichen Daten übermitteln zu müssen. Alles was du brauchst ist ein vorhandener Account bei einem der unten stehenden Anbieter, dem du sagst, dass du YASB nutzen möchtest. \nis an authorization system which lets you prove your identity at a web site without having to create a new account.  Instead, you tell some provider with whom you already have an account (e.g. Google or Facebook) to prove to this web site that you say who you are.  That way, the next time you visit, this site remembers that you're that user from Google.\n</p>\n<p>\n    Dieser Anbieter übermittelt dann eine eindeutige ID an YASB, unter der wir deine Staffeln und Sammlung speichern können, damit du beim nächsten Besuch auf sie zugreifen kannst. Wir können leider nicht verhindern, dass (je nach Anbieter) eventuell weitere Informationen außer dieser ID übertragen werden, den restlichen Kram werfen wir einfach sofort weg. \n</p>\n<p>\n    Mehr Informationen zum OAuth Verfahren findest du z.B. auf <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">unter diesem Link (englisch)</a>.\n</p>\n<p>\n    Wenn du lieber gar keinen Account nutzen möchtest, kannst du eine Staffeln übrigens auch einfach speichern, indem du ein Lesezeichen setzt - und diese sogar über den Link teilen. Achtung: Du musst das Lesezeichen jedes mal erneuern, wenn du deine Staffel bearbeitest. \n</p>",
-    "Intro Card YASB": "<h2>YASB 2 für X-Wing (Version 2.5) </h2>\n<p>YASB (engl. Yet Another Squad Builder, dt. Noch ein Staffel-Bauer) hilft dir, einfach und unkompliziert deine Staffeln für das X-Wing Miniaturenspiel von <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a> zu erstellen.</p>\n<h5>Impressum</h5>\n<p>Eine Weiterentwicklung des hervorragenden <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a> für die erste Edition.</p>\n<p>YASB wird von Stephen Kim und Patrick Mischke gepflegt.</p>\n<p>Besonderes Dankeschön an:<br>\nServer (-kosten) und Federführung seit der zweiten Edition: Stephen Kim. <br>\n2.5 Datenupdate: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 Datenupdate: Evan Cameron, Jonathan Hon, Devon Monkhouse und Mark Stewart.<br>\nÜbersetzungen: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nLogo: Thomas Kohler<br>\nQuick Build Funktionalität: Patrick Mischke</p>\n\n<p>Diese Seite ist inoffiziell und nicht lizensiert von oder sonst irgendwie mit Atomic Mass Games, Lucasfilm Ltd. oder Disney verbunden.</p>\n\n<p>Diese Seite steht dir dauerhaft kostenfrei zur Verfügung. YASB ist ein Open-Source Projekt, wenn du etwas beitragen möchtest, ist Hilfe immer willkommen. Aufgrund wiederholter Fragen hier ein Paypal-Link von Stephen Kim.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Über Paypal unterstützen</button></p>",
+    "Intro Card YASB": "<h2>YASB für X-Wing 2.5 </h2>\n<p>YASB (engl. Yet Another Squad Builder, dt. Noch ein Staffel-Bauer) hilft dir, einfach und unkompliziert deine Staffeln für das X-Wing Miniaturenspiel von <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a> zu erstellen.</p>\n<h5>Impressum</h5>\n<p>Eine Weiterentwicklung des hervorragenden <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a> für die erste Edition.</p>\n<p>YASB wird von Stephen Kim und Patrick Mischke gepflegt.</p>\n<p>Besonderes Dankeschön an:<br>\nServer (-kosten) und Federführung seit der zweiten Edition: Stephen Kim. <br>\n2.5 Datenupdate: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 Datenupdate: Evan Cameron, Jonathan Hon, Devon Monkhouse und Mark Stewart.<br>\nÜbersetzungen: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>\nLogo: Thomas Kohler<br>\nQuick Build Funktionalität: Patrick Mischke</p>\n\n<p>Diese Seite ist inoffiziell und nicht lizensiert von oder sonst irgendwie mit Atomic Mass Games, Lucasfilm Ltd. oder Disney verbunden.</p>\n\n<p>Diese Seite steht dir dauerhaft kostenfrei zur Verfügung. YASB ist ein Open-Source Projekt, wenn du etwas beitragen möchtest, ist Hilfe immer willkommen. Aufgrund wiederholter Fragen hier ein Paypal-Link von Stephen Kim.</p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Über Paypal unterstützen</button></p>",
     "Continue to OAuth provider": "Dies wird ein neues Fenster beim gewählten Anbieter öffnen. Es kann sein, dass du Pop-Ups erlauben musst.",
     "iOS requires cross-site control": "Unter iOS musst du eventuell erst \"cross-site control\" aktivieren, damit OAuth nutzen kannst.",
     "select OAuth provider": "Wähle einen der untentstehenden OAuth Anbieter um dich einzuloggen und Staffeln speichern zu können.",
@@ -300,11 +304,11 @@ exportObj.translations.Deutsch = {
     "Owned copies:": "Expemlare in deiner Sammlung:",
     "Point costs:": "Kommandopunktekosten",
     "Point cost:": "Kommandopunktekosten",
-    "Loadout cost:": "Ausrüstungspunktekosten",
+    "Loadout cost:": "Ausstattungspunktekosten",
     "Factions:": "Fraktionen",
     "Textsearch:": "Volltextsuche",
     "Squad Notes:": "Staffelnotizen",
-    "Tag:": "Kategorien:",
+    "Tag:": "Stichwörter:",
     "Choose obstacles dialog": "Wähle bis zu drei Hindernisse.",
     "Mark obstacles": "Wähle bis zu drei Hindernisse",
     "Choose Obstacles": "Hindernisse wählen",
@@ -428,7 +432,7 @@ exportObj.translations.Deutsch = {
     "Undamaged": "Unbeschädigt",
     "Standard": "Standard",
     "Faction": "Fraktion",
-    "Loadout": "Ausrüstung",
+    "Loadout": "Ausstattung",
     "Standard legal": "In Standard erlaubt",
     "Keywords:": "Schlüsselwörter:",
     "Show Points Destroyed": "Zerstörte Punkte anzeigen",
@@ -443,7 +447,14 @@ exportObj.translations.Deutsch = {
     "All factions": "Alle Fraktionen",
     "Has multiple of the chosen slots": "Hat mehrere der gewählten Slots",
     "keywords": "Schlüsselwörter",
-    "Checking auth status...": "Prüfe Anmeldestatus..."
+    "Checking auth status...": "Prüfe Anmeldestatus...",
+    "Copy URL": "Link kopieren",
+    "Reset Obstacles": "Alle löschen",
+    "Enable Ban List (Not Standard)": "Bannliste außerhalb von Standard",
+    "Epic Unofficial": "Von AMG wurden keine Punkte für Epische Karten veröffentlicht. Die Werte hier sind unabhängig und willkürlich gewählt, teilweise unausgewogen und werden nicht aktualisiert. ",
+    damageHeader: function(translator, type) {
+      return "Schadenskarte (" + (translator('types', type)) + ")";
+    }
   },
   singular: {
     'pilots': 'Pilot',
@@ -1830,7 +1841,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Vagabond"': {
       display_name: '„Vagabond“',
-      text: "Nachdem du dich unter Verwendung deiner Schiffsfähigkeit <strong>Adaptive Querruder</strong> bewegt has, falls du nicht gestresst bist, darfst du 1 Gerät abwerfen. %LINEBREAK%<i>Errata: An neue Schiffsfähigkeit angepasst. </i>"
+      text: "Nachdem du dich unter Verwendung deiner Schiffsfähigkeit <strong>Adaptive Querruder</strong> bewegt hast, falls du nicht gestresst bist, darfst du 1 Gerät abwerfen. %LINEBREAK%<i>Errata: An neue Schiffsfähigkeit angepasst. </i>"
     },
     "Valen Rudor": {
       display_name: "Valen Rudor",
@@ -2118,7 +2129,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Wolffe" (SoC)': {
       display_name: "Wolffe (SoC)",
-      text: "Solange du einen %FORNTARC% -Primärangriff durchführst, darfst du 1 %CHARGE% ausgeben, um 1 Angriffswürfel neu zu werfen. Solange du einen %REARARC%-Primärangriff durchführst, darfst du 1 %CHARGE% wiederherstellen, um 1 zusätzlichen Angriffswürfel zu werfen."
+      text: "Solange du einen %FRONTARC% -Primärangriff durchführst, darfst du 1 %CHARGE% ausgeben, um 1 Angriffswürfel neu zu werfen. Solange du einen %REARARC%-Primärangriff durchführst, darfst du 1 %CHARGE% wiederherstellen, um 1 zusätzlichen Angriffswürfel zu werfen."
     },
     '"Jag" (SoC)': {
       display_name: "Jag (SoC)",
@@ -2134,7 +2145,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Corus Kapellim": {
       display_name: "Corus Kapellim",
-      text: "Bevor du kämpfst, darfst du 1 Schiff in deinem Feuerwinkel in REichweite 0-1 wählen. Falls du das tust, transferiere 1 grünen Marker von jenem Schiff auf dich selbst."
+      text: "Bevor du kämpfst, darfst du 1 Schiff in deinem Feuerwinkel in Reichweite 0-1 wählen. Falls du das tust, transferiere 1 grünen Marker von jenem Schiff auf dich selbst."
     },
     "C'ai Threnalli (Y-Wing)": {
       display_name: "C&apos;ai Threnalli ",
@@ -2146,7 +2157,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Shasa Zaro": {
       display_name: "Shasa Zaro",
-      text: "Nachdem du verteidigt hast, darfst du ein befreundetes Schiff in deinem %REARARC% in Reichweite 0-2 sowie 1 deiner grünen Marker wählen. Falls du das tust, erhält jenes Schiff ein passenden Marker"
+      text: "Nachdem du verteidigt hast, darfst du ein befreundetes Schiff in deinem %FULLREARARC% in Reichweite 0-2 sowie 1 deiner grünen Marker wählen. Falls du das tust, erhält jenes Schiff ein passenden Marker"
     },
     "Teza Nasz": {
       display_name: "Teza Nasz",
@@ -2278,23 +2289,23 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Obi-Wan Kenobi (Eta-2)": {
       display_name: "Obi-Wan Kenobi ",
-      text: "Nachdem du oder ein befreundetes <strong>ANAKIN SKYWALKER</strong>-Schiff in Reichweite 0-3 ein Manöver ausgeführt hat, falls in Reichweite 0-1 jenes Schiffes mehr feindliche Schiffe als anderes befreundete Schiffe sind, darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält jenes Schiff 1 Fokusmarker."
+      text: "Nachdem du oder ein befreundetes <strong>Anakin Skywalker</strong>-Schiff in Reichweite 0-3 ein Manöver ausgeführt hat, falls in Reichweite 0-1 jenes Schiffes mehr feindliche Schiffe als anderes befreundete Schiffe sind, darfst du 1 %FORCE% ausgeben. Falls du das tust, erhält jenes Schiff 1 Fokusmarker."
     },
     "Anakin Skywalker (Eta-2)": {
       display_name: "Anakin Skywalker ",
-      text: "Nachdem du oder ein befreundetes <strong>OBi-WAN-KENOBI</strong>-Schiff in Reichweite 0-3 ein Manöver ausgeführt hat, falls in Reichweite 0-1 jenes Schiffes mehr feindliche Schiffe als anderes befreundete Schiffe sind, darfst du 1 %FORCE% ausgeben. Falls du das tust, entfernt jenes Schiff 1 roten Marker deiner Wahl."
+      text: "Nachdem du oder ein befreundetes <strong>Obi-Wan Kenobi</strong>-Schiff in Reichweite 0-3 ein Manöver ausgeführt hat, falls in Reichweite 0-1 jenes Schiffes mehr feindliche Schiffe als anderes befreundete Schiffe sind, darfst du 1 %FORCE% ausgeben. Falls du das tust, entfernt jenes Schiff 1 roten Marker deiner Wahl."
     },
     "Anakin Skywalker (SoC)": {
       display_name: "Anakin Skywalker (SoC)",
-      text: "Nachdem du oder ein befreundetes <strong>OBI-WAN KENOBI</strong>-Schiff in Reichweite 0-3 ein Manöver vollständig ausgeführt hast, falls in Reichweite 0-1 jenes Schiffes mehr feindliche Schiff als andere befreundete Schiffe sind, darfst du 1 %FORCE% ausgeben. Falls du das tust, darf jenes Schiff eine %BARRELROLL%-Aktion durchführen."
+      text: "Nachdem du oder ein befreundetes <strong>Obi-Wan Kenobi</strong>-Schiff in Reichweite 0-3 ein Manöver vollständig ausgeführt hast, falls in Reichweite 0-1 jenes Schiffes mehr feindliche Schiff als andere befreundete Schiffe sind, darfst du 1 %FORCE% ausgeben. Falls du das tust, darf jenes Schiff eine %BARRELROLL%-Aktion durchführen."
     },
     "Obi-Wan Kenobi (SoC)": {
       display_name: "Obi-Wan Kenobi (SoC)",
-      text: "Nachdem du oder ein befreundetes <strong>ANAKIN SKYWALKER</strong>-Schiff in Reichweite 0-3 ein Manöver vollständig ausgeführt hast, falls in Reichweite 0-1 jenes Schiffes mehr feindliche Schiff als andere befreundete Schiffe sind, darfst du 1 %FORCE% ausgeben. Falls du das tust, darf jenes Schiff eine %BOOST%-Aktion durchführen."
+      text: "Nachdem du oder ein befreundetes <strong>Anakin Skywalker</strong>-Schiff in Reichweite 0-3 ein Manöver vollständig ausgeführt hast, falls in Reichweite 0-1 jenes Schiffes mehr feindliche Schiff als andere befreundete Schiffe sind, darfst du 1 %FORCE% ausgeben. Falls du das tust, darf jenes Schiff eine %BOOST%-Aktion durchführen."
     },
     "Shaak Ti (SoC)": {
       display_name: "Shaak Ti (SoC)",
-      text: "Zu Beginn der Endphase darfst du eine violette %COORDINATE% -Aktion durchführen, auch solange du gestresst bist.%LINEBREAK%Nachdem du eine %COORDINATE% -Aktion durchgeführt hast, falls die gewählte Schiffsfähigkeit <strong>DAFÜR GEBOREN</strong> hat, darfst du 1 zusätzliches Schiff koordinieren."
+      text: "Zu Beginn der Endphase darfst du eine violette %COORDINATE% -Aktion durchführen, auch solange du gestresst bist.%LINEBREAK%Nachdem du eine %COORDINATE% -Aktion durchgeführt hast, falls die gewählte Schiffsfähigkeit <strong>Dafür Geboren</strong> hat, darfst du 1 zusätzliches Schiff koordinieren."
     },
     "Kit Fisto": {
       display_name: "Kit Fisto",
@@ -2306,7 +2317,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Bodica Venj": {
       display_name: "Bodica Venj",
-      text: "Nachdem ein anderes befreundetes Schiff verteidigt hat, falls du nicht erschöpft bist, darfst du einen Bonus-Primärangriff gegen denAngreifer durchführen. Falls du das tust, erhältst du, nachdem du jenen Angriff durchgeführt hast, 1 Erschöpfungsmarker."
+      text: "Nachdem ein anderes befreundetes Schiff verteidigt hat, falls du nicht erschöpft bist, darfst du einen Bonus-Primärangriff gegen den Angreifer durchführen. Falls du das tust, erhältst du, nachdem du jenen Angriff durchgeführt hast, 1 Erschöpfungsmarker."
     },
     "Dirk Ullodin": {
       display_name: "Dirk Ullodin",
@@ -2542,7 +2553,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "MagnaGuard Protector": {
       display_name: "Beschützer der Magnawächter",
-      text: "<b>Aufbau</b> Nachdem die Steitkräfte platziert worden sind, ordne 1 befreundeten Schiff ausser <b> BEschützer der Mangawächter</b> den Zustand <strong>BESCHÜTZT</strong> zu."
+      text: "<b>Aufbau</b> Nachdem die Steitkräfte platziert worden sind, ordne 1 befreundeten Schiff außer <strong>Beschützer der Mangawächter</strong> den Zustand <strong>Beschützt</strong> zu."
     },
     "Durge": {
       display_name: "Durge",
@@ -2578,7 +2589,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Poe Dameron (YT-1300)": {
       display_name: "Poe Dameron ",
-      text: "Bevor du ein Manöver ausführst, darfst du 1 %CHARGE% ausgeben. Falls du das tust, ignorierst du während jenes Manövers Hindernisse.%LINE%BREAK% Nachdem du ein Manöver vollständig ausgeführt hast, drafst du 2 %CHARGE% ausgeben, um eine weiße %BOOST%-Aktion oder eine rote %BARRELROLL%-Aktion durchzuführen. Falls du eine rote %BARRELROLL%-Aktion durchgeführt hast, legst du dann 1 Schadenskarte offen, falls möglich."
+      text: "Bevor du ein Manöver ausführst, darfst du 1 %CHARGE% ausgeben. Falls du das tust, ignorierst du während jenes Manövers Hindernisse.%LINEBREAK% Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 2 %CHARGE% ausgeben, um eine weiße %BOOST%-Aktion oder eine rote %BARRELROLL%-Aktion durchzuführen. Falls du eine rote %BARRELROLL%-Aktion durchgeführt hast, legst du dann 1 Schadenskarte offen, falls möglich."
     },
     "Lando Calrissian (Resistance)": {
       display_name: "Lando Calrissian ",
@@ -2590,7 +2601,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "The Mandalorian": {
       display_name: "Der Mandalorianer",
-      text: "Solange du verteidigst oder ein Angriff durchführst, falls du im %FORNTARC% in Reichweite 1-2 von 2 oder mehr feindlichen Schiffen bist, darfst du 1 deiner Leerseiten-Ergebnisse in ein %FOCUS% -Ergebnis ändern."
+      text: "Solange du verteidigst oder ein Angriff durchführst, falls du im %FRONTARC% in Reichweite 1-2 von 2 oder mehr feindlichen Schiffen bist, darfst du 1 deiner Leerseiten-Ergebnisse in ein %FOCUS% -Ergebnis ändern."
     },
     "Q9-0": {
       display_name: "Q9-0",
@@ -2650,7 +2661,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Venisa Doza": {
       display_name: "Venisa Doza",
-      text: "Solange du einen %TORPEDO% oder %MISSILE% -Angriff durchführst, darfst du die %FRONTARC% -Vorraussetzung für jenen Angriff behandeln, als wäre sie %REARARC%. Falls du das tust, behandler die Reichweitenvorraussetzung, als wäre sie 1-2."
+      text: "Solange du einen %TORPEDO% oder %MISSILE%-Angriff durchführst, darfst du die %FRONTARC% -Vorraussetzung für jenen Angriff behandeln, als wäre sie %REARARC%. Falls du das tust, behandler die Reichweitenvorraussetzung, als wäre sie 1-2."
     },
     "Zay Versio": {
       display_name: "Zay Versio",
@@ -2658,7 +2669,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Fifth Brother": {
       display_name: "fünfter Bruder",
-      text: 'Solange du einen Angriff durchführst, nach dem Schritt "Ergebnisse neutralisieren". falls der Angriff getroffen hat, darfst du 2 %FORCE% ausgeben, um 1 %CRIT%-Ergebnis hinzuzufügen.'
+      text: 'Solange du einen Angriff durchführst, nach dem Schritt „Ergebnisse neutralisieren“. falls der Angriff getroffen hat, darfst du 2 %FORCE% ausgeben, um 1 %CRIT%-Ergebnis hinzuzufügen.'
     },
     "Darth Vader (BoY)": {
       display_name: "Darth Vader",
@@ -2682,7 +2693,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Holo"': {
       display_name: "„Holo“",
-      text: "Zu Beginn der Kampfphase <stong>musst </strong> du 1 deiner MArker auf ein anderes befreundetes Schiff in Reichweite 0-2 transferieren."
+      text: "Zu Beginn der Kampfphase <stong>musst</strong> du 1 deiner Marker auf ein anderes befreundetes Schiff in Reichweite 0-2 transferieren."
     },
     "Darth Vader (TIE Defender)": {
       display_name: "Darth Vader ",
@@ -2770,15 +2781,15 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Backstabber" (BoY)': {
       display_name: "„Backstabber“",
-      text: 'Solange du einen Primärangriff durchführst, falls ein befreundeter <strong>DARTH VADER</strong>oder <strong> "MAULER" MITHEL</strong> in Reichweite 0-1 in deinem %LEFTARC% oder %RIGHTARC% ist, wirfst du 1 zusätzlichen Angriffswürfel.'
+      text: 'Solange du einen Primärangriff durchführst, falls ein befreundeter <strong>Darth Vader</strong> oder <strong>„Mauler“ Mithel</strong> in Reichweite 0-1 in deinem %LEFTARC% oder %RIGHTARC% ist, wirfst du 1 zusätzlichen Angriffswürfel.'
     },
     '"Mauler" Mithel (BoY)': {
       display_name: "„Mauler“ Mithel",
-      text: 'Solange du einen Primärangriff durchführst, falls ein befreundeter <strong>DARTH VADER</strong>oder <strong> "Backstabber"</strong> in Reichweite 0-1 in deinem %LEFTARC% oder %RIGHTARC% ist, wirfst du 1 zusätzlichen Angriffswürfel.'
+      text: 'Solange du einen Primärangriff durchführst, falls ein befreundeter <strong>Darth Vader</strong> oder <strong>„Backstabber“</strong> in Reichweite 0-1 in deinem %LEFTARC% oder %RIGHTARC% ist, wirfst du 1 zusätzlichen Angriffswürfel.'
     },
     "Magna Tolvan": {
       display_name: "Magna Tolvan",
-      text: "Solange du 2 oder weniger Stressmarker hast, kannst du weiße Aktionen durchführen, auch solange du gestresst bist.%LINE%BREAK% Nachdem du eine Stressmarker erhalten hast, darfst du eine weiße Aktion durchführen, falls möglich."
+      text: "Solange du 2 oder weniger Stressmarker hast, kannst du weiße Aktionen durchführen, auch solange du gestresst bist.%LINEBREAK% Nachdem du eine Stressmarker erhalten hast, darfst du eine weiße Aktion durchführen, falls möglich."
     },
     "Yrica Quell": {
       display_name: "Yrica Quell",
@@ -2834,7 +2845,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Captain Phasma": {
       display_name: "Captain Phasma",
-      text: 'Solange du verteidigst, nach dem SChritt "Ergebnisse neutralisieren",<strong>musst</strong>ein anderes befreundetes Schiff in Reichweite 0-1 %LINEBREAK%1 %HIT%/%CRIT%-Schaden erleiden, um 1 passendes Ergebnis zu negieren.'
+      text: 'Solange du verteidigst, nach dem Schritt "Ergebnisse neutralisieren", <strong>muss</strong> ein anderes befreundetes Schiff in Reichweite 0-1 1 %HIT%/%CRIT%-Schaden erleiden, um 1 passendes Ergebnis zu negieren.'
     },
     "Lieutenant LeHuse": {
       display_name: "Lieutenant LeHuse",
@@ -2878,11 +2889,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     '"Axe" (SoC)': {
       display_name: "„Axe“ (SoC)",
-      text: "Nachdem du einen Angriff durchgeführt hast, darfst du ein anderes befreundetes Schiff mit der Schiffsfähigkeit <strong>DAFÜR GEBOREN</strong> in Reichweite0-2 in deinem %LEFTARC% oder %RIGHTARC% wählen. Das gewählte Schiff erfasst den Verteidiger als Ziel."
+      text: "Nachdem du einen Angriff durchgeführt hast, darfst du ein anderes befreundetes Schiff mit der Schiffsfähigkeit <strong>Dafür Geboren</strong> in Reichweite0-2 in deinem %LEFTARC% oder %RIGHTARC% wählen. Das gewählte Schiff erfasst den Verteidiger als Ziel."
     },
     '"Slammer"': {
       display_name: "„Slammer“",
-      text: "NAchdem du ein Manöver vollständig ausgeführt hast, darfst du 2 %CHARGE% ausgeben, um eine %SLAM%-Aktion durchzuführen, auch solange du gestresst bist."
+      text: "Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 2 %CHARGE% ausgeben, um eine %SLAM%-Aktion durchzuführen, auch solange du gestresst bist."
     },
     "Morna Kee": {
       display_name: "Morna Kee",
@@ -2890,7 +2901,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "DFS-081 (SoC)": {
       display_name: "DFS-081",
-      text: "Solange du verteidigst, darfst du 1 %CHARGE% und 1 Berechnungsmarker ausgeben, um 1 %CRIT% -Ergebnis zu negieren."
+      text: "Solange du verteidigst, darfst du 1 %CHARGE% und 1 Berechnungsmarker ausgeben, um 1 %CRIT%-Ergebnis zu negieren."
     },
     "DFS-311 (SoC)": {
       display_name: "DFS-311",
@@ -2902,15 +2913,15 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Agent Terex": {
       display_name: "Agent Terex",
-      text: "<b>Aufbau:</b> Nachdem die Streitkräfte platziert worden sind, wähle eine beliebige Anzahl deiner ausgerüsteten %ILLICIT% -Aufwertungen und rüste befreundete TIE/eo oder TIE/se-Jäger mit ihnen aus. Jedem Schiff kann so nur 1 %ILLICIT% zugeordnet werden. %LINEBREAK%<b>Spielende:</b> Lege alle %ILLICIT%-Aufwertungen zurück zu ihren ursprünglichen Schiffen."
+      text: "<b>Aufbau:</b> Nachdem die Streitkräfte platziert worden sind, wähle eine beliebige Anzahl deiner ausgerüsteten %ILLICIT%-Aufwertungen und rüste befreundete TIE/eo oder TIE/se-Jäger mit ihnen aus. Jedem Schiff kann so nur 1 %ILLICIT% zugeordnet werden. %LINEBREAK%<b>Spielende:</b> Lege alle %ILLICIT%-Aufwertungen zurück zu ihren ursprünglichen Schiffen."
     },
     "Gideon Hask (Xi Shuttle)": {
       display_name: "Gideon Hask ",
-      text: "Solange du oder ein befreundetes kleines Schiff in Reichweite 0-2 einen Primärangriff gegen einen beschädigten Verteidiger durchgeführt, falls der Angreifer 1 oder weniger Angriffswürfel geworfen hat, darf er 1 Anstrengungsmarker erhalten, um 1 zusätzlichen Angriffswürfel zu werfen."
+      text: "Solange du oder ein befreundetes kleines Schiff in Reichweite 0-2 einen Primärangriff gegen einen beschädigten Verteidiger durchgeführt, falls der Angreifer 2 oder weniger Angriffswürfel geworfen hat, darf er 1 Anstrengungsmarker erhalten, um 1 zusätzlichen Angriffswürfel zu werfen."
     },
     "Agent Tierny": {
       display_name: "Agent Tierny",
-      text: "<b>Aufbau:</b> Nachdem die Streitkräfte plaziert worden sind, <strong>musst</strong> du einem feindlichen Schiff den Zustand %LINEBREAK% <strong>•VERTRUENSBRUCH</strong> zuordnen."
+      text: "<b>Aufbau:</b> Nachdem die Streitkräfte plaziert worden sind, <strong>musst</strong> du einem feindlichen Schiff den Zustand <strong>•Vertrauensbruch</strong> zuordnen."
     },
     "Doctor Aphra": {
       display_name: "Doktor Aphra",
@@ -2918,7 +2929,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Bossk (Z-95 Headhunter)": {
       display_name: "Bossk ",
-      text: 'Solange du einen Primärangriff durchführst, nach dem Schritt "Ergebnisse neutralisieren", darfst du 1 %CRIT%-Ergebnis ausgeben, um 2 %HIT%-Ergebniss hinzuzufügen.'
+      text: 'Solange du einen Primärangriff durchführst, nach dem Schritt „Ergebnisse neutralisieren“, darfst du 1 %CRIT%-Ergebnis ausgeben, um 2 %HIT%-Ergebnisse hinzuzufügen.'
     },
     "7th Sky Corps Pilot": {
       display_name: "Pilot des 7. Luftkorps",
@@ -2992,7 +3003,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Outrider": {
       display_name: "Outrider",
-      text: "Solange du einen Angriff durchführst, der durch ein Hindernis versperrt wird, wirft der Verteidiger 1 Verteidigungswürfel weniger.%LINEBREAK%Nachdem du ein Manöver vollständig ausgeführt hast, falls du dich durch ein Hindernis hindurchbewegt oder dich mit ihm überschnitten hast, darfst du 1 deiner roten oder orangefarbenen Marker entfernen.%LINEBREAK%<i>Umformulierung zur Klarstellung</i>"
+      text: "Solange du einen Primärangriff auf Reichweite 3 durchführst, wirf 1 zusätzlichen Angriffswürfel.%LINEBREAK%Wenn du einen Angriff durchführst, der durch ein Hindernis versperrt wird, darfst du 1 der %EVADE%-Ergebnisse des Verteidigers in ein %FOCUS%-Ergebnis ändern. %LINEBREAK%<i>Inoffizielle Übersetzung der neuen englischen Fähigkeit (Rules Reference 1.4.6)</i>"
     },
     "Phantom": {
       display_name: "Phantom",
@@ -3164,7 +3175,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Agent of the Empire": {
       display_name: "Agent des Imperiums",
-      text: "Du bist ein<b>Schwarmführer</b>. Deine Flügelmänner müssen 2-5 TIE/ln-Jäger sein.%LINEBREAK%Solange du verteidigst, dürfen bis zu 2 deiner Flügelmänner im Angriffswinkel je 1&nbsp;%HIT% - oder %CRIT%-Schaden erleiden, um ein passendes Ergebnis zu negieren."
+      text: "Du bist ein <strong>Schwarmführer</strong>. Deine Flügelmänner müssen 2-5 TIE/ln-Jäger sein.%LINEBREAK%Solange du verteidigst, dürfen bis zu 2 deiner Flügelmänner im Angriffswinkel je 1&nbsp;%HIT% - oder %CRIT%-Schaden erleiden, um ein passendes Ergebnis zu negieren."
     },
     "Agile Gunner": {
       display_name: "Wendiger Schütze",
@@ -3212,7 +3223,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "B6 Blade Wing Prototype": {
       display_name: "Blatt-Flügler-Prototyp B6",
-      text: "Füge den &nbsp;%GUNNER%-Slot hinzu."
+      text: "Füge den %GUNNER%-Slot hinzu."
     },
     "BB Astromech": {
       display_name: "BB-Astromechdroide",
@@ -3316,7 +3327,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Carlist Rieekan": {
       display_name: "Carlist Rieekan",
-      text: "RieekanNachdem ein befreundetes Schiff in Reichweite 0-2 zerstört worden ist, darfst du ein befreundetes Schiff in Reichweite 0-2 wählen. Falls du das tust, darf es eine rote%EVADE%&nbsp;-Aktion durchführen."
+      text: "Nachdem ein befreundetes Schiff in Reichweite 0-2 zerstört worden ist, darfst du ein befreundetes Schiff in Reichweite 0-2 wählen. Falls du das tust, darf es eine rote %EVADE%-Aktion durchführen."
     },
     "Cassian Andor": {
       display_name: "Cassian Andor",
@@ -3580,7 +3591,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "First Order Elite": {
       display_name: "Elite der Ersten Ordnung",
-      text: "Du bist ein<b>Schwarmführer</b>. Deine Flügelmänner müssen 2 oder 3 TIE/eo-Jäger oder TIE/se-Jäger sein.%LINEBREAK%Solange du verteidigst, dürfen bis zu 2 deiner Flügelmänner im Angriffswinkel je 1&nbsp;%HIT% - oder %CRIT% -Schaden erleiden, um ein passendes Ergebnis zu negieren."
+      text: "Du bist ein <strong>Schwarmführer</strong>. Deine Flügelmänner müssen 2 oder 3 TIE/eo-Jäger oder TIE/se-Jäger sein.%LINEBREAK%Solange du verteidigst, dürfen bis zu 2 deiner Flügelmänner im Angriffswinkel je 1&nbsp;%HIT% - oder %CRIT% -Schaden erleiden, um ein passendes Ergebnis zu negieren."
     },
     "Foresight": {
       display_name: "Vorausahnung",
@@ -3606,7 +3617,7 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "General Grievous",
       text: "Solange du verteidigst, falls nach dem Schritt „Ergebnisse neutralisieren“ 2 oder mehr %HIT%/%CRIT%-Ergebnisse vorhanden sind, darfst du 1 %CHARGE% ausgeben, um 1 %HIT%- oder %CRIT% -Ergebnis zu negieren. %LINEBREAK%Nachdem ein befreundetes Schiff zerstört worden ist, stelle 1 %CHARGE% wieder her."
     },
-    "General Grievous": {
+    "General Grievous (Command)": {
       display_name: "General Grievous",
       text: "Während der Kampfphase, bei Initiative 4, darfst du 1 %ENERGY% ausgeben, um einen Bonus-<hardpoint>-Angriff durchzuführen.%LINEBREAK%Du kannst Angriffe gegen befreundete Schiffe durchführen.%LINEBREAK%Nachdem du einen Angriff durchgeführt hast, falls der Verteidiger zerstört worden ist, darf jedes befreundete Schiff in Reichweite 0-2 von ihm eine %CALCULATE%-Aktion durchführen."
     },
@@ -3744,7 +3755,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Intercept Booster": {
       display_name: "Abfang-Booster",
-      text: "<strong>Attached:</strong> Equip this side faceup. (Added Actions available on this side only) During the System Phase, gain 1 disarm token unless you flip this card. At the end of the End Phase, if you have no active %CHARGE%, flip this card. %LINEBREAK%<strong>Ausgeklinkt:</strong> (Die Aktionen stehen nicht zur Verfügung))<i class = flavor_text>Ohne auf die Zerbrechlichkeit eines organischen Piloten Rücksicht nehmen zu müssen, können Tri-Droidenjäger enorme Beschleunigungen aushalten und punktgenaue Manöver fliegen. Sie sind mit Booster-Raketen ausgestattet und werden aus den Abschussrohren von Großkampfschiffen der Separatisten abgefeuert, um so feindliche Schiffe jenseits der Reichweite eines normal gestarteten Sternenjägers abzufangen.</i>"
+      text: "<strong>Attached:</strong> Equip this side faceup. (Added Actions available on this side only) During the System Phase, gain 1 disarm token unless you flip this card. At the end of the End Phase, if you have no active %CHARGE%, flip this card. %LINEBREAK%<strong>Ausgeklinkt:</strong> (Die Aktionen stehen nicht zur Verfügung))%LINEBREAK%<i class = flavor_text>Ohne auf die Zerbrechlichkeit eines organischen Piloten Rücksicht nehmen zu müssen, können Tri-Droidenjäger enorme Beschleunigungen aushalten und punktgenaue Manöver fliegen. Sie sind mit Booster-Raketen ausgestattet und werden aus den Abschussrohren von Großkampfschiffen der Separatisten abgefeuert, um so feindliche Schiffe jenseits der Reichweite eines normal gestarteten Sternenjägers abzufangen.</i>"
     },
     "Interloper Turn": {
       display_name: "Knoten-Wende",
@@ -4272,7 +4283,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Shield Upgrade": {
       display_name: "Verbesserte Schilde",
-      text: "<i class = flavor_text>Deflektor­schilde sind der wichtigste Verteidigungsmechanismus der meisten Raumschiffe, abgesehen von extrem leichten Jägern. Eine Verbesserung der Schildkapazität ist eine kostspielige, aber durchaus "
+      text: "<i class = flavor_text>Deflektor­schilde sind der wichtigste Verteidigungsmechanismus der meisten Raumschiffe, abgesehen von extrem leichten Jägern. Eine Verbesserung der Schildkapazität ist eine kostspielige, aber durchaus lohnenswerte Investition. </i>"
     },
     "Skilled Bombardier": {
       display_name: "Versierte Bombenschützin",
@@ -4456,7 +4467,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Veteran Wing Leader": {
       display_name: "Erfahrener Schwarmführer",
-      text: "Du bist ein<b>Schwarmführer</b>. Deine Flügelmänner müssen 2-5 andere Schiffe deiner Schiffsart sein.%LINEBREAK%Solange du verteidigst, dürfen bis zu 2 deiner Flügelmänner im Angriffswinkel je 1&nbsp;%HIT%- oder %CRIT%-Schaden erleiden, um ein passendes Ergebnis zu negieren."
+      text: "Du bist ein <strong>Schwarmführer</strong>. Deine Flügelmänner müssen 2-5 andere Schiffe deiner Schiffsart sein.%LINEBREAK%Solange du verteidigst, dürfen bis zu 2 deiner Flügelmänner im Angriffswinkel je 1&nbsp;%HIT%- oder %CRIT%-Schaden erleiden, um ein passendes Ergebnis zu negieren."
     },
     "Weapons Systems Officer": {
       display_name: "Waffensystemoffizierin",
@@ -4512,7 +4523,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Dreadnought Hunter": {
       display_name: "Dreadnought-Jäger",
-      text: "JägerSolange du einen Angriff gegen ein riesiges Schiff durchführst, falls der Angriff dem Verteidiger eine offene Schadenskarte zuteilt und der Verteidiger in deinem %BULLSEYEARC%, ist, darfst du den Effekt <b>Präzisionsschuss</b>  anwenden, selbst wenn du nicht in dem angegebenen Winkel bist."
+      text: "Solange du einen Angriff gegen ein riesiges Schiff durchführst, falls der Angriff dem Verteidiger eine offene Schadenskarte zuteilt und der Verteidiger in deinem %BULLSEYEARC%, ist, darfst du den Effekt <strong>Präzisionsschuss</strong>  anwenden, selbst wenn du nicht in dem angegebenen Winkel bist."
     },
     "Skystrike Academy Class": {
       display_name: "Schüler der Skystrike-Akademie",
@@ -4552,7 +4563,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Overtuned Modulators": {
       display_name: "übersteuerte Modulatoren",
-      text: "Während der Systemphase, falls du nicht gestresst bist, darfst du 1 %CHARGE% ausgeben, um 3 Berechnungsmarker zu erhalten.%LINEBREAK%Während der Endphase, falls deine %CHARGE% inaktiv ist, erhältst du für jeden grünen MArker , den du entfernst, 1 Anstrengungsmarker."
+      text: "Während der Systemphase, falls du nicht gestresst bist, darfst du 1 %CHARGE% ausgeben, um 3 Berechnungsmarker zu erhalten.%LINEBREAK%Während der Endphase, falls deine %CHARGE% inaktiv ist, erhältst du für jeden grünen Marker , den du entfernst, 1 Anstrengungsmarker."
     },
     "Sensor Scramblers": {
       display_name: "Sensor Scrambler",
@@ -4564,11 +4575,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Compassion": {
       display_name: "Mitgefühl",
-      text: "Bevor einem anderen befreundeten Schiff in Reichweite 0-2 eine offene <b> Pilot</b> oder <b>Crew</b> -Schadenskarte zugeteilt werden würde, darfst du 1 %FORCE% ausgeben. Falls du das tust, wird jene Schadenskarte stattdessen abgelegt und dir wird 1 verdeckte Schadenskarte zugeteilt. Falls du dann zwei oder mehr Schadenskarten hast, stelle 2 %FORCE% wieder her."
+      text: "Bevor einem anderen befreundeten Schiff in Reichweite 0-2 eine offene <strong>Pilot</strong> oder <strong>Crew</strong>-Schadenskarte zugeteilt werden würde, darfst du 1 %FORCE% ausgeben. Falls du das tust, wird jene Schadenskarte stattdessen abgelegt und dir wird 1 verdeckte Schadenskarte zugeteilt. Falls du dann zwei oder mehr Schadenskarten hast, stelle 2 %FORCE% wieder her."
     },
     "Malice": {
       display_name: "Niedertracht",
-      text: "Solange du einen Angriff durchführst, darfst du eine %FORCE% ausgeben, um 1 %FOCUS%- oder %HIT% Ergebnis in ein %CRIT% -Ergebnis zu ändern. Falls du das tust, stellst du 2 %FORCE% wieder her, nachdem du jenen Angriff durchgeführt hast, falls dem Verteidiger 1 oder mehrere offene <b>Pilot</b> oder <b>CREW</b> -Schadenskarten zugeteilt worden sind."
+      text: "Solange du einen Angriff durchführst, darfst du eine %FORCE% ausgeben, um 1 %FOCUS%- oder %HIT% Ergebnis in ein %CRIT% -Ergebnis zu ändern. Falls du das tust, stellst du 2 %FORCE% wieder her, nachdem du jenen Angriff durchgeführt hast, falls dem Verteidiger 1 oder mehrere offene <strong>Pilot</strong> oder <strong>Crew</strong> -Schadenskarten zugeteilt worden sind."
     },
     "Shattering Shot": {
       display_name: "zerschmetternder Schuss",
@@ -4576,7 +4587,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "DT-798": {
       display_name: "DT-798",
-      text: "Zu Beginn der Kampfphase darfst du ein befreundetes SChiff in deinem Feuerwinkel wählen. Falls du das tust,erhält jenes SChiff 1 Anstrengungsmarker. %LINEBREAK% Solange du einenAngriff durchführst, darfst du für jedes Schiff im Angriffswinkel mit 1 oder mehreren roten oder orangen Nicht-Zielerfassungsmarkern bis zu 1 Würfel neu werfen."
+      text: "Zu Beginn der Kampfphase darfst du ein befreundetes Schiff in deinem Feuerwinkel wählen. Falls du das tust,erhält jenes Schiff 1 Anstrengungsmarker. %LINEBREAK% Solange du einen Angriff durchführst, darfst du für jedes Schiff im Angriffswinkel mit 1 oder mehreren roten oder orangen Nicht-Zielerfassungsmarkern bis zu 1 Würfel neu werfen."
     },
     "Feedback Ping": {
       display_name: "Rückmeldungsping",
@@ -4584,11 +4595,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Electro-Chaff Missiles": {
       display_name: "Elektrodüppel-Raketen",
-      text: "Während der Systemphase darfst du 1 %CHARGE% von dieser Karte ausgeben, um unter Verwendung [3%BANKLEFT]- ,[3%BANKRIGHT%] oder [4%STRAIGHT] -Schalbone 1 Elektrodüppel-Wolke zu starten. DAnn platziere 1 Zeitzünder auf ihr.%LINEBREAK% Die %CHARGE% dieser KArte kann nicht wiederhergestellt werden."
+      text: "Während der Systemphase darfst du 1 %CHARGE% von dieser Karte ausgeben, um unter Verwendung [3%BANKLEFT]- ,[3%BANKRIGHT%] oder [4%STRAIGHT] -Schalbone 1 Elektrodüppel-Wolke zu starten. DAnn platziere 1 Zeitzünder auf ihr.%LINEBREAK% Die %CHARGE% dieser Karte kann nicht wiederhergestellt werden."
     },
     "Babu Frik": {
       display_name: "Babu Frik",
-      text: "Bevor du einem roten oder orangen Nicht-Zielerfassungsmarker erhalten würdest, darfst du 1 %Charges% ausgeben, um ihn stattdessen auf diese Karte zu platzieren. %LINEBREAK%Während der Systemphase ,falls auf dieser Karte 1 oder mehrere MArker sind,<b>musst</b> du 1 %CHARGE% ausgeben.Falls du das nicht kannst,entferne jene MArker und erhalte passende Marker."
+      text: "Bevor du einem roten oder orangen Nicht-Zielerfassungsmarker erhalten würdest, darfst du 1 %CHARGE% ausgeben, um ihn stattdessen auf diese Karte zu platzieren. %LINEBREAK%Während der Systemphase, falls auf dieser Karte 1 oder mehrere Marker sind, <b>musst</b> du 1 %CHARGE% ausgeben. Falls du das nicht kannst, entferne jene Marker und erhalte passende Marker."
     },
     "Ahsoka Tano (Crew)": {
       display_name: "Ahsoka Tano",
@@ -4616,11 +4627,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Gar Saxon (Gunner)": {
       display_name: "Gar Saxon",
-      text: "Solange du die %LOCK% -Aktion durchführst, kannst du nur ein Objekt in deinem %FRONTARC% oder %REARARC% wählen.%LINEBREAK% Solange du einen Primärangriff durchführst, falls der Verteidiger in deinem %FRONTARC% oder %REARARC% ist, darfst du 1 orangen oder roten MArker vom Verteidiger entfernen, um 1 zusätzlichen Würfel zu werfen, bis zu einem Maximum von 4."
+      text: "Solange du die %LOCK% -Aktion durchführst, kannst du nur ein Objekt in deinem %FRONTARC% oder %REARARC% wählen.%LINEBREAK% Solange du einen Primärangriff durchführst, falls der Verteidiger in deinem %FRONTARC% oder %REARARC% ist, darfst du 1 orangen oder roten Marker vom Verteidiger entfernen, um 1 zusätzlichen Würfel zu werfen, bis zu einem Maximum von 4."
     },
     "Korkie Kryze": {
       display_name: "Korkie Kryze",
-      text: "Nachdem ein befreundetes Schiff in deinem %FULLFRONTARC% in Reichweite 1-2 zum Verteidiger geworden ist, darfst du 1 grünen Marker auf jenes Schiff transferieren. %LINEBREAK% Solange ein befreundetes Schiff in deinem %FULLRONTARC% in Reichweite 1-2 verteidigt, falls du den Angriff versperrst,wirft der Verteidiger 1 zusätzlichen Verteidigungswürfel."
+      text: "Nachdem ein befreundetes Schiff in deinem %FULLFRONTARC% in Reichweite 1-2 zum Verteidiger geworden ist, darfst du 1 grünen Marker auf jenes Schiff transferieren. %LINEBREAK% Solange ein befreundetes Schiff in deinem %FULLFRONTARC% in Reichweite 1-2 verteidigt, falls du den Angriff versperrst,wirft der Verteidiger 1 zusätzlichen Verteidigungswürfel."
     },
     "Obi-Wan Kenobi": {
       display_name: "Obi-Wan Kenobi",
@@ -4644,11 +4655,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Tal Merrik": {
       display_name: "Tal Merrik",
-      text: "<strong>Aufbau:</strong> Bevor die Streitkräfte platziert werden,wähle 1 feindliches Schiff und ordner ihm den Zustand %LINEBREAK% <b>FALSCHER FREUND<7b> zu.%LINEBREAK%<strong>Aktion:</strong> Falss der Zustzand %LINEBREAK%<b>FALSCHER FREUND</b> keinen feindlichen SChiff zugeordnet ist,ordne ihn einem feindlichen Schiff in deinem %FRONTARC% in Reichweite 0-2 zu."
+      text: "<strong>Aufbau:</strong> Bevor die Streitkräfte platziert werden,wähle 1 feindliches Schiff und ordner ihm den Zustand %LINEBREAK% <strong>Falscher Freund</strong> zu.%LINEBREAK%<strong>Aktion:</strong> Falls der Zustzand %LINEBREAK%<strong>Falscher Freund</strong> keinem feindlichen Schiff zugeordnet ist, ordne ihn einem feindlichen Schiff in deinem %FRONTARC% in Reichweite 0-2 zu."
     },
     "Tiber Saxon": {
       display_name: "Tiber Saxon",
-      text: "Nachdem du einen Angriff in Angriffsreichweite 1-2 durchgeführt hast, der getroffen hat, fall der Verteidiger keine offene Schadenskarten hat., darfst du 1 oder mehrere %CHARGE% ausgeben. Für jede %CHARGE%, die du ausgibst, erhält der Verteidiger 1 Anstrengungsmarker."
+      text: "Nachdem du einen Angriff in Angriffsreichweite 1-2 durchgeführt hast, der getroffen hat, falls der Verteidiger keine offene Schadenskarten hat, darfst du 1 oder mehrere %CHARGE% ausgeben. Für jede %CHARGE%, die du ausgibst, erhält der Verteidiger 1 Anstrengungsmarker."
     },
     "Tristan Wren": {
       display_name: "Tristan Wren",
@@ -4660,7 +4671,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Sabine Wren (Command)": {
       display_name: "Sabine Wren ",
-      text: "<strong>Aufbau:</strong>BEvor die Streitkräfte platziert werden, ordne dir selbst den Zustand <b>DAS DUNKELSCHWERT</b>zu.%LINEBREAK% Solange du eine %COORDINATE% -Aktion durchführst, darfst du 1 zusätzliches befreundetes Schiff koordinieren."
+      text: "<strong>Aufbau:</strong>Bevor die Streitkräfte platziert werden, ordne dir selbst den Zustand <strong>Das Dunkelschwert</strong>zu.%LINEBREAK% Solange du eine %COORDINATE% -Aktion durchführst, darfst du 1 zusätzliches befreundetes Schiff koordinieren."
     },
     "Prime Minister Almec": {
       display_name: "Premierminister Almec",
@@ -4668,11 +4679,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Swivel Wing": {
       display_name: "bewegliche Flügel",
-      text: "<strong>OBEN</strong> Solange du verteidigst ,wirfst du 1 Verteidigungswürfel weniger.%LINEBREAK% Nachdem du ein nicht-stationäres MAnöver vollständig ausgeführt hast,darfst du diese Karte umdrehen. %LINEBREAK% <strong>UNTEN</strong> NAchdem du ein [0 %STOP%] -Manöver ausgeführt hast, darfst du dein Schiff um 90° oder 180° drehen. Falls du das tust, <b>musst</b> du diese Karte drehen."
+      text: "<strong>Oben</strong> Solange du verteidigst ,wirfst du 1 Verteidigungswürfel weniger.%LINEBREAK% Nachdem du ein nicht-stationäres MAnöver vollständig ausgeführt hast,darfst du diese Karte umdrehen. %LINEBREAK% <strong>Unten</strong> Nachdem du ein [0 %STOP%] -Manöver ausgeführt hast, darfst du dein Schiff um 90° oder 180° drehen. Falls du das tust, <b>musst</b> du diese Karte drehen."
     },
     "Razor Crest": {
       display_name: "Razor Crest",
-      text: "<strong>Aufbau:</strong> Platziere 1 nicht-limitierte %ILLICIT% -Aufwertung verdeckt unter dieser KArte.%LINEBREAK% Während der Systemphase darfst du jene %ILLICIT% -Aufwertung aufdecken und sie ausrüsten,als wäre sie beim Aufbau ausgerüstet worden (ohne ihre Punktekosten zu bezahlen)"
+      text: "<strong>Aufbau:</strong> Platziere 1 nicht-limitierte %ILLICIT% -Aufwertung verdeckt unter dieser Karte.%LINEBREAK% Während der Systemphase darfst du jene %ILLICIT% -Aufwertung aufdecken und sie ausrüsten,als wäre sie beim Aufbau ausgerüstet worden (ohne ihre Punktekosten zu bezahlen)"
     },
     "The Mandalorian": {
       display_name: "Der Mandalorianer",
@@ -4680,11 +4691,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "The Child": {
       display_name: "Das Kind",
-      text: "<strong>Aufbau:</strong> Nachdem die Streitkräfte platziert worden sind,wähle einen Gegner,der 2 seiner Schiffe den Zustand <b>GNADENLOSE VERFOLGUNG</b> zuordnet.%LINEBREAK% Deine %FORCE% verlieren das Symbol für wiederkehrende Ladungen.Nachdem du verteidigt hast, falls du während jenes Angriffs SChaden erlitten hast, stelle 1 %FORCE% wieder her."
+      text: "<strong>Aufbau:</strong> Nachdem die Streitkräfte platziert worden sind,wähle einen Gegner,der 2 seiner Schiffe den Zustand <strong>Gnadenlose Verfolgung</strong> zuordnet.%LINEBREAK% Deine %FORCE% verlieren das Symbol für wiederkehrende Ladungen.Nachdem du verteidigt hast, falls du während jenes Angriffs Schaden erlitten hast, stelle 1 %FORCE% wieder her."
     },
     "IG-11": {
       display_name: "IG 11",
-      text: "<strong>Aufbau:</strong> Rüste diese Seite offen aus. %LINEBREAK%Bevor dir einen offene Schadenskarte zugeteilt werden würde,<b>musst</b> du stattdessen 1 Zeitzünder auf diese KArte platzieren und 1 Berechnungsmarker erhalten.Falls dann 2 Zeitzünder auf dieser Karte liegen,drehe Sie um. %LINEBREAK% (Rückseite)IG-11 (Anti-Festnahme-Protokoll)%LINEBREAK%Entferne während der Endphase 1 Zeitzünder von dieser Karte.Falls dann keine Zeitzünder auf ihr liegen, wirst du zerstört und jedes andere SChiff in Reichweite 0-1 %LINEBREAK% erleidet 1 %CRIT% -Schaden. %LINEBREAK% <strong>Aktion:</strong> Platziere 1 Zeitzünder auf dieser Karte."
+      text: "<strong>Aufbau:</strong> Rüste diese Seite offen aus. %LINEBREAK%Bevor dir einen offene Schadenskarte zugeteilt werden würde,<b>musst</b> du stattdessen 1 Zeitzünder auf diese Karte platzieren und 1 Berechnungsmarker erhalten.Falls dann 2 Zeitzünder auf dieser Karte liegen,drehe Sie um. %LINEBREAK% <strong>(Rückseite)IG-11 (Anti-Festnahme-Protokoll)</strong>%LINEBREAK%Entferne während der Endphase 1 Zeitzünder von dieser Karte. Falls dann keine Zeitzünder auf ihr liegen, wirst du zerstört und jedes andere Schiff in Reichweite 0-1 %LINEBREAK% erleidet 1 %CRIT% -Schaden. %LINEBREAK% <strong>Aktion:</strong> Platziere 1 Zeitzünder auf dieser Karte."
     },
     "Greef Karga": {
       display_name: "Greef Karga",
@@ -4692,7 +4703,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Kuiil": {
       display_name: "Kuiil",
-      text: "<strong>Aktion:</strong> Wirf ein 1 Angriffswürfel für jede Schadenskarte,di du hast.Repariere für jedes %HIT -Ergebis 1 offene <b>Schiff</b> -Schadenskarte.Repariere dann für jedes %CRIT% -Ergebnis 1 verdeckte Schadenskarte.Entferne für jedes Leerseiten-Ergebnis 1 orangen MArker.%LINEBREAK%Dann erhältst du für jedes %FOCUS% -Ergebnis 1 Fokusmarker."
+      text: "<strong>Aktion:</strong> Wirf ein 1 Angriffswürfel für jede Schadenskarte, die du hast.Repariere für jedes %HIT% -Ergebis 1 offene <b>Schiff</b> -Schadenskarte. Repariere dann für jedes %CRIT% -Ergebnis 1 verdeckte Schadenskarte.Entferne für jedes Leerseiten-Ergebnis 1 orangen Marker.%LINEBREAK%Dann erhältst du für jedes %FOCUS% -Ergebnis 1 Fokusmarker."
     },
     "Peli Motto": {
       display_name: "Peli Motto",
@@ -4720,11 +4731,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "R2-D2 (BoY)": {
       display_name: "R2-D2 (BoY)",
-      text: "Nachdem du dein Rad aufgedeckt hast, darfst du 1 %CHARGE% ausgeben und 1 Entwaffnet -Marker erhalten, um 1 Schild wiederherzustellen."
+      text: "Nachdem du dein Rad aufgedeckt hast, darfst du 1 %CHARGE% ausgeben und 1 Entwaffnet-Marker erhalten, um 1 Schild wiederherzustellen."
     },
     "R2-F2 (BoY)": {
       display_name: "R2-F2 (BoY)",
-      text: "Nachdem du dein Rad aufgedeckt hast,darfst du 1 %CHARGE% ausgeben und 1 Entwaffnet-Marker erhalten, um 1 Schild wiederherzustellen."
+      text: "Nachdem du dein Rad aufgedeckt hast, darfst du 1 %CHARGE% ausgeben und 1 Entwaffnet-Marker erhalten, um 1 Schild wiederherzustellen."
     },
     "Precise Astromech (BoY)": {
       display_name: "Präziser Astromech (BoY)",
@@ -4736,7 +4747,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Commander Malarus": {
       display_name: "Commander Malarus",
-      text: "<strong>Aufbau:</strong>Rüste diese Seite offen aus.%LINEBREAK%Solange ein befreundetes,nicht-limitiertes Schiff in Reichweite 0-1 einen Primärangriff durchgeführt,darf jenes Schiff 1 Leerseiten-Ergebnis neu werfen.Falls es das tut under Angriff verfehlt,<b>musst</b> du diese Karte umdrehen.%LINEBREAK%<strong>Vollendet (Rückseite):</strong>Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, <b>musst</b> du alle %FOCUS%-Ergebnisse in %HIT%-Ergebnisse ändern und 1 Stressmarker erhalten. Dann, falls du 2 oder mehr Stressmarker hast, erleidest du 1&nbsp;%HIT%-Schaden."
+      text: "<strong>Aufbau:</strong>Rüste diese Seite offen aus.%LINEBREAK%Solange ein befreundetes,nicht-limitiertes Schiff in Reichweite 0-1 einen Primärangriff durchgeführt, darf jenes Schiff 1 Leerseiten-Ergebnis neu werfen.Falls es das tut under Angriff verfehlt, <b>musst</b> du diese Karte umdrehen.%LINEBREAK%<strong>Vollendet (Rückseite): </strong>Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, <b>musst</b> du alle %FOCUS%-Ergebnisse in %HIT%-Ergebnisse ändern und 1 Stressmarker erhalten. Dann, falls du 2 oder mehr Stressmarker hast, erleidest du 1&nbsp;%HIT%-Schaden."
     },
     "R5-D8 (BoY)": {
       display_name: "R5-D8 (BoY)",
@@ -4752,7 +4763,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "General Grievous (Command)": {
       display_name: "General Grievous",
-      text: "Während der Kampfphase, bei Initiative 4, darfst du 1 %ENERGY% ausgeben, um einen Bonus %HARDPOINT% Angriff durchzuführen.%LINEBREAK%%LINEBREAK%Du kannst Angriffe gegen befreundete Schiffe durchführen.%LINEBREAK%%LINEBREAK%NAchdem du einen Angriffdurchgeführt hast, falls der Verteidiger zerstört worden ist, darf jedes befreundete Schiff in Reichweiter 0-2 von ihm eine %CALCULATE%-Aktion durchführen."
+      text: "Während der Kampfphase, bei Initiative 4, darfst du 1 %ENERGY% ausgeben, um einen Bonus %HARDPOINT% Angriff durchzuführen.%LINEBREAK%%LINEBREAK%Du kannst Angriffe gegen befreundete Schiffe durchführen.%LINEBREAK%%LINEBREAK%Nachdem du einen Angriffdurchgeführt hast, falls der Verteidiger zerstört worden ist, darf jedes befreundete Schiff in Reichweiter 0-2 von ihm eine %CALCULATE%-Aktion durchführen."
     },
     "Burnout Thrusters": {
       display_name: "extreme Schubdüsen",
@@ -4764,7 +4775,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Combat Boarding Tube": {
       display_name: "Gefechts-Ausstiegsluke",
-      text: "Falls du während der Systemphase ein %CREW% - Remote abwerfen würdest und ein feindliches mittleres ,großes oder riesiges Schiff in Reichweite 0-1 in deinem %REARARC% ist, darfst du jenes Gerät stattdessen so in deinem %REARARC% in Reichweite 0-1 auf der Spielfläche platzieren, dass es in Reichweite 10 jenes Schiffes ist. Dann erhält jenes feindliche Schiff 1 ERschöpfungs-,Anstrengungs- oder Stressmarker deiner Wahl."
+      text: "Falls du während der Systemphase ein %CREW% - Remote abwerfen würdest und ein feindliches mittleres ,großes oder riesiges Schiff in Reichweite 0-1 in deinem %REARARC% ist, darfst du jenes Gerät stattdessen so in deinem %REARARC% in Reichweite 0-1 auf der Spielfläche platzieren, dass es in Reichweite 0 jenes Schiffes ist. Dann erhält jenes feindliche Schiff 1 Erschöpfungs-,Anstrengungs- oder Stressmarker deiner Wahl."
     },
     "Proton Cannons": {
       display_name: "Protonengeschütz",
@@ -4772,7 +4783,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Homing Torpedoes": {
       display_name: "Lenktorpedos",
-      text: '<strong>Angriff [%LOCK%]: </strong>Gib 1 %CHARGE% aus.Nachdem du deinen Verteidiger deklariert hast, darf der Verteidiger entscheiden, %LINEBREAK% 1 %CRIT% Schaden zu erleiden. FAlls er das tut,überspringst du die Schritte "Angriffswürfel" und "Verteidigungswürfel" und der Angriff wird behandelt , als hätte er getroffen.'
+      text: '<strong>Angriff [%LOCK%]: </strong>Gib 1 %CHARGE% aus. Nachdem du deinen Verteidiger deklariert hast, darf der Verteidiger entscheiden, 1 %CRIT% Schaden zu erleiden. Falls er das tut, überspringst du die Schritte „Angriffswürfel“ und „Verteidigungswürfel“ und der Angriff wird behandelt, als hätte er getroffen.'
     },
     "Tracking Fob": {
       display_name: "Peilsender",
@@ -4784,7 +4795,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Enduring": {
       display_name: "Ausdauernd",
-      text: "Solange du verteidigst, falls du nicht im %BULLSEYEARC% des Angreifers bist, werden %CRIT% -Ergebnisse vor %HIT-Ergebnisse negiert.%LINEBREAK%Nachdem du %CRIT% -Schaden erlitten hast, darfst du eine %CALCULATE% oder %FOCUS% -Aktion aus deiner Aktionsleiste durchführen, auch solange du gestresst bist, wobei du jene Aktion behandelst, als wäre sie rot."
+      text: "Solange du verteidigst, falls du nicht im %BULLSEYEARC% des Angreifers bist, werden %CRIT% -Ergebnisse vor %HIT%-Ergebnisse negiert.%LINEBREAK%Nachdem du %CRIT%-Schaden erlitten hast, darfst du eine %CALCULATE% oder %FOCUS%-Aktion aus deiner Aktionsleiste durchführen, auch solange du gestresst bist, wobei du jene Aktion behandelst, als wäre sie rot."
     },
     "Beskar Reinforced Plating": {
       display_name: "Verstärkte Beskar-Panzerung",
@@ -4832,7 +4843,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Proud Tradition": {
       display_name: "Stolze Tradition",
-      text: "<strong>Aufbau:</strong> Rüste diese Seite offen aus.%LINEBREAK%Solange du 2 oder weniger Stressmarker hast, darfst du %FOCUS% -Aktionen durchführen, auch solange du gestresst bist.%LINEBREAK%NAchdem du einen Angriff durchgeführt hast, falls du gestresst bist, darf der Verteidiger 1 Fokusmarker ausgeben oder 1 %CRIT% -Schaden erleiden, um diese Karte umzudrehen.%LINEBREAK%Falsche Tradition (Rückseite):%LINEBREAK%Behandle deine %FOCUS%-Aktionen, als wären sie rot."
+      text: "<strong>Aufbau:</strong> Rüste diese Seite offen aus.%LINEBREAK%Solange du 2 oder weniger Stressmarker hast, darfst du %FOCUS% -Aktionen durchführen, auch solange du gestresst bist.%LINEBREAK%Nachdem du einen Angriff durchgeführt hast, falls du gestresst bist, darf der Verteidiger 1 Fokusmarker ausgeben oder 1 %CRIT% -Schaden erleiden, um diese Karte umzudrehen.%LINEBREAK%Falsche Tradition (Rückseite):%LINEBREAK%Behandle deine %FOCUS%-Aktionen, als wären sie rot."
     },
     "Selfless (BoY)": {
       display_name: "Selbstlos",
@@ -4840,7 +4851,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "B6 Blade Wing Prototype (Epic)": {
       display_name: "Blatt-Flügler-Prototyp B6",
-      text: "Füge den %Gunner%-Slot hinzu.%LINEBREAK%<b>Angriff [%LOCK%]:</b> ERhalte 1 Ionenmarker, um diesen Angriff durchzuführen. Falls dieser Angriff trifft, erleidet der Verteidiger 1 zusätzlichen %HIT% / %CRIT% -Schaden für jedes passende nicht-negierte Ergebnis nach dem ersten."
+      text: "Füge den %GUNNER%-Slot hinzu.%LINEBREAK%<b>Angriff [%LOCK%]:</b> Erhalte 1 Ionenmarker, um diesen Angriff durchzuführen. Falls dieser Angriff trifft, erleidet der Verteidiger 1 zusätzlichen %HIT% / %CRIT% -Schaden für jedes passende nicht-negierte Ergebnis nach dem ersten."
     },
     "Hotshot Tail Blaster": {
       display_name: "Erstklassiker Heckblaster",
@@ -4872,7 +4883,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Contingency Protocol (SoC)": {
       display_name: "Notfallprotokoll (SoC)",
-      text: "Nachdem diese Schiff zerstört worden ist, darf ein anderes befreundetes Schiff in Reichweite 0-3 mit der Aufwertung <strong>NOTFALLPROTOKOLL</strong> eine Aktion durchführen, auch solange es gestresst ist."
+      text: "Nachdem diese Schiff zerstört worden ist, darf ein anderes befreundetes Schiff in Reichweite 0-3 mit der Aufwertung <strong>Notfallprotokoll</strong> eine Aktion durchführen, auch solange es gestresst ist."
     },
     "Evasion Sequence 7 (SoC)": {
       display_name: "Ausweichmanöver 7 (SoC)",
@@ -4888,7 +4899,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Wolfpack (SoC)": {
       display_name: "Wolfsrudel (SoC)",
-      text: "Solange du einen Angriff durchführst, darfst du die Zielerfassung eines befreundeten <strong>PLO-KOON</strong>-Schiffes oder eines Schiffes mit der Schiffsfähigkeit <strong>DAFÜR GEBOREN</strong> auf dem Verteidiger ausgeben, um beliebig viele Angriffswürfel neu zu werfen."
+      text: "Solange du einen Angriff durchführst, darfst du die Zielerfassung eines befreundeten <strong>Plo-Koon</strong>-Schiffes oder eines Schiffes mit der Schiffsfähigkeit <strong>Dafür Geboren</strong> auf dem Verteidiger ausgeben, um beliebig viele Angriffswürfel neu zu werfen."
     },
     "R5-K6 (BoY)": {
       display_name: "R5-K6 (BoY)",
@@ -5014,7 +5025,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Merciless Pursuit": {
       display_name: "Gnadenlose Verfolgung",
-      text: "Nachdem du einen Angriff durchgeführt hast, falls der Verteidiger <strong>DAS KIND </strong> ausgerüstet hat, darfst du den Verteidiger als Ziel erfassen."
+      text: "Nachdem du einen Angriff durchgeführt hast, falls der Verteidiger <strong>Das Kind</strong> ausgerüstet hat, darfst du den Verteidiger als Ziel erfassen."
     },
     "Marked for Elimination": {
       display_name: "Als Beute markiert",
@@ -5026,7 +5037,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Trials of the Darksaber": {
       display_name: "Das Dunkelschwert",
-      text: "Solange du einen Angriff in Angriffsreichweite 0-2 durchführst, darfst du 1 %CRIT%-Ergebnis ausgeben. Falls du das tust, falls der Spieler des verteidigenden Schiffes mehr verdiente %?% als du hat, verliert er 1 verdiente %?% . Platziere jene %?% auf diese Karte.%LINEBREAK% Nachdem du verteidigt hast, falls du von einem feindlichen Schiff in Angriffsreichweite 0-2 zerstört worden bist, ordne dem Angreifer den Zustand <strong>DAS DUNKELSCHWERT</strong> zu (Alle %?% bleiben auf dieser Karte.%LINEBREAK%Am Spielende verdient dieses Schiff alle %?% auf dieser KArte."
+      text: "Solange du einen Angriff in Angriffsreichweite 0-2 durchführst, darfst du 1 %CRIT%-Ergebnis ausgeben. Falls du das tust, falls der Spieler des verteidigenden Schiffes mehr verdiente %?% als du hat, verliert er 1 verdiente %?% . Platziere jene %?% auf diese Karte.%LINEBREAK% Nachdem du verteidigt hast, falls du von einem feindlichen Schiff in Angriffsreichweite 0-2 zerstört worden bist, ordne dem Angreifer den Zustand <strong>DAS DUNKELSCHWERT</strong> zu (Alle %?% bleiben auf dieser Karte.%LINEBREAK%Am Spielende verdient dieses Schiff alle %?% auf dieser Karte."
     },
     "Guarded": {
       display_name: "Beschützt",
@@ -5034,11 +5045,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Sickening Maneuver": {
       display_name: "Schwindelerregendes Manöver",
-      text: "Du kannst rote Manöver ausführen, aus solange du gestresst bist.%LINEBREAK%Nachdem du ein Drehmanöver [%TURNLEFT% oder %TURNRIGHT%] oder ein Wendemanöver [%BANKLEFT% oder BANKRIGHT%] aufgedeckt hast, <strong>musst</strong> du 1 Anstrengunsmarker erhalten und jenes MAnöver als Slip ausführen.%LINEBREAK% NAchdem du ein Geradenmanöver [%STRAIGHT%] aufgedeckt hast, musst du jenes Manöver als rote Koiogran.Wende [%KTURN%] ausführen.%LINEBREAK%Nachdem du ein Manöver ausgeführt hast, entfernst du diesen Zustand."
+      text: "Du kannst rote Manöver ausführen, aus solange du gestresst bist.%LINEBREAK%Nachdem du ein Drehmanöver [%TURNLEFT% oder %TURNRIGHT%] oder ein Wendemanöver [%BANKLEFT% oder BANKRIGHT%] aufgedeckt hast, <strong>musst</strong> du 1 Anstrengunsmarker erhalten und jenes MAnöver als Slip ausführen.%LINEBREAK% Nachdem du ein Geradenmanöver [%STRAIGHT%] aufgedeckt hast, musst du jenes Manöver als rote Koiogran.Wende [%KTURN%] ausführen.%LINEBREAK%Nachdem du ein Manöver ausgeführt hast, entfernst du diesen Zustand."
     },
     "Primed For Speed": {
       display_name: "Bleifuss",
-      text: "Füge deiner Aktionsleiste eine weisse %SLAM% -Aktionhinzu.%LINEBREAK% NAchdem du eine %SLAM% -Aktion durchgeführt hast, <strong>musst</strong> du 1 %HIT%-Schaden erleiden, um 1 Entwaffnet-Marker zu entfernen."
+      text: "Füge deiner Aktionsleiste eine weisse %SLAM% -Aktionhinzu.%LINEBREAK% Nachdem du eine %SLAM% -Aktion durchgeführt hast, <strong>musst</strong> du 1 %HIT%-Schaden erleiden, um 1 Entwaffnet-Marker zu entfernen."
     },
     "Broken Trust": {
       display_name: "Vertrauensbruch",
@@ -5188,7 +5199,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Pursuit Craft": {
       display_name: "Jagdschiff",
-      text: "Nachdem du absetzt worden bist, darfst du ein Schiff als Ziel erfassen, das von der befreundeten <strong>REISSZAHN</strong> als Ziel erfasst ist."
+      text: "Nachdem du absetzt worden bist, darfst du ein Schiff als Ziel erfassen, das von der befreundeten <strong>Reißzahn</strong> als Ziel erfasst ist."
     },
     "Explosion with Wings": {
       display_name: "Explosion mit Flügeln",
@@ -5224,11 +5235,11 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Versatile Frame": {
       display_name: "Vielseitige Konstruktion",
-      text: "Du kannst 1 %TORPEDO% oder %MISSILES%-Aufweertung ausrüsten. Solange dein aufgedecktes Manöver blau ist, füge deiner Aktionsleiste einen weißen %BOOST% hinzu."
+      text: "Du kannst 1 %TORPEDO% oder %MISSILE%-Aufwertung ausrüsten. Solange dein aufgedecktes Manöver blau ist, füge deiner Aktionsleiste einen weißen %BOOST% hinzu."
     },
     "Born for This": {
       display_name: "Dafür geboren",
-      text: "Solange ein anderes befreundetes SChiff inReichweite 0-2 verteidigt, falls du nicht angestrengt bist, darf jenes Schiff deine Fokus- und Ausweichmarker ausgeben, als hätte es sie selbst. Falls es das tut, erhältst du 1 Anstrengungsmarker."
+      text: "Solange ein anderes befreundetes Schiff inReichweite 0-2 verteidigt, falls du nicht angestrengt bist, darf jenes Schiff deine Fokus- und Ausweichmarker ausgeben, als hätte es sie selbst. Falls es das tut, erhältst du 1 Anstrengungsmarker."
     },
     "Modified for Organics": {
       display_name: "auf organische Piloten angepasst",
@@ -5400,10 +5411,13 @@ exportObj.translations['Español'] = {
     "Razor Crest Expansion Pack": "Pack de Expansión de la Razor Crest",
     "Battle of Yavin Battle Pack": "Pack de Escenarios de Batalla de Yavin",
     "Siege of Coruscant Battle Pack": "Pack de Escenarios de Asedio de Coruscant",
-    "Hotshots and Aces II Reinforcements Pack": "Paquet de Refuerzos Hotshots and Aces 2",
+    "Hotshots and Aces II Reinforcements Pack": "Paquete de Refuerzos Hotshots y Ases II",
+    "Galactic Empire Squadron Starter Pack": "Paquete de inicio de escuadrón del Imperio Galáctico",
+    "Rebel Alliance Squadron Starter Pack": "Paquete de inicio de escuadrón de la Alianza Rebelde",
     "Loose Ships": "Naves sueltas"
   },
   ui: {
+    "Points": "Puntos",
     "shipSelectorPlaceholder": "Elige una nave",
     "pilotSelectorPlaceholder": "Elige un piloto",
     upgradePlaceholder: function(translator, slot) {
@@ -5506,6 +5520,7 @@ exportObj.translations['Español'] = {
     "Randomize!": "¡Aleatorio!",
     "Copy": "Copiar",
     "Print": "Imprimir",
+    "Random Squad": "Escuadrón aleatorio",
     "Random Squad Builder Options": "Opciones de la creación de escuadrones aleatoria",
     "Miscellaneous Settings": "Otros parámetros",
     "Card Search": "Buscardor de Cartas",
@@ -5873,9 +5888,17 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Ahsoka Tano",
       text: "Después de que ejecutes completamente una maniobra, puedes elegir una nave aliada que tengas a alcance 0-1 y gastar 1 %FORCE%. Esa nave puede realizar una acción, incluso aunque esté bajo tensión."
     },
+    "Ahsoka Tano (A-Wing)": {
+      display_name: "Ahsoka Tano",
+      text: "Después de ejecutar completamente una maniobra, puedes elegir una nave aliada a alcance 1-2 y gastar 2 %FORCE%. Esa nave puede realizar una acción, incluso si está bajo tensión."
+    },
     "Airen Cracken": {
       display_name: "Airen Cracken",
       text: "Después de que efectúes un ataque, puedes elegir 1 nave aliada que tengas a alcance 1. Esa nave puede realizar una acción, considerándola de color rojo."
+    },
+    "Alexsandr Kallus": {
+      display_name: "Alexsandr Kallus",
+      text: "Mientras te defiendes, si el atacante ha modificado cualquier dado de ataque, puedes lanzar 1 dado de defensa adicional."
     },
     "Alpha Squadron Pilot": {
       display_name: "Piloto del Escuadrón Alfa",
@@ -5890,7 +5913,12 @@ exportObj.cardLoaders['Español'] = function() {
       text: "Después de que ejecutes completamente una maniobra, si tienes alguna nave enemiga en tu %FRONTARC% a alcance 0-1 o en tu %BULLSEYEARC%, puedes gastar 1 %FORCE% para retirar 1 ficha de Tensión."
     },
     "Anakin Skywalker (N-1 Starfighter)": {
+      display_name: "Anakin Skywalker",
       text: "Antes de que reveles tu maniobra, puedes gastar 1 %FORCE% para llevar a cabo un tonel volado (esto no es una acción)."
+    },
+    "Anakin Skywalker (Y-Wing)": {
+      display_name: "Anakin Skywalker",
+      text: "Después de ejecutar completamente una maniobra, si hay una nave enemiga en tu %FRONTARC% a alcance 0-1 o en tu %BULLSEYEARC%, puedes gastar 1 %FORCE% para retirar 1 ficha de tensión."
     },
     "Arvel Crynyd": {
       display_name: "Arvel Crynyd",
@@ -5903,6 +5931,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Autopilot Drone": {
       display_name: "Dron autopilotado",
       text: "<i class = flavor_text>A veces, las advertencias del fabricante están hechas para ser ignoradas.</i>%LINEBREAK%<strong>Células de energía manipuladas:</strong>  Durante la fase de Sistemas, si no estás acoplado, pierdes 1 %CHARGE%. Al final de la fase de Activación, si tienes 0 %CHARGE%, eres destruido. Antes de ser retirado de la zona de juego, toda nave que tengas a alcance 0-1 sufre 1 de daño %CRIT%."
+    },
+    "BB-8": {
+      display_name: "BB-8",
+      text: "Durante la fase de sistema, puedes realizar una acción de %BARRELROLL% roja o una acción de %BOOST% roja."
     },
     "Bandit Squadron Pilot": {
       display_name: "Piloto del Escuadrón Bandido",
@@ -5931,6 +5963,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Benthic Two Tubes": {
       display_name: "Benthic Dos Tubos",
       text: "Después de que realices una acción %FOCUS%, puedes transferir 1 de tus fichas de Concentración a una nave aliada que tengas a alcance 1-2."
+    },
+    "Berwer Kret": {
+      display_name: "Berwer Kret",
+      text: "Después de que hayas realizado un ataque que impacta, cada nave aliada con %CALCULATE% en su barra de acciones y un blanco fijado en el defensor puede realizar una acción %CALCULATE% roja."
     },
     "Biggs Darklighter": {
       display_name: "Biggs Darklighter",
@@ -6016,6 +6052,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Cazarrecompensas",
       text: "<i class = flavor_text>La patrullera clase Firespray es infame por su asociación con los mortíferos cazarrecompensas Jango y Boba Fett, quienes equiparon una de estas naves con todo tipo de armas letales.</i>"
     },
+    "Bravo Flight Officer": {
+      display_name: "Oficial de Vuelo Bravo",
+      text: "<i class = flavor_text>Los pilotos voluntarios de las Fuerzas Reales de Seguridad de Naboo están decididos a proteger a su pueblo y los ideales de su mundo natal, y confían en su Reina para enviarlos al combate solo cuando todas las demás opciones han fallado.</i>"
+    },
     "Braylen Stramm": {
       display_name: "Braylen Stramm",
       text: "Mientras te defiendes o efectúas un ataque, si estás bajo tensión, puedes volver a tirar hasta 2 de tus dados."
@@ -6026,7 +6066,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Captain Feroph": {
       display_name: "Capitán Feroph",
-      text: "<smallbody>Mientras te defiendes, si el atacante no tiene ninguna ficha verde, puedes cambiar 1 de tus resultados %FOCUS% o de cara vacía por un resultado %EVADE%.</smallbody>%LINEBREAK%<sasmall><strong>Alerones adaptativos:</strong> Antes de revelar tu selector, si no estás bajo tensión, <b>debes</b> ejecutar una maniobra [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%] o [1&nbsp;%BANKRIGHT%] blanca.</sasmall>"
+      text: "<smallbody>Mientras te defiendes, si el atacante no tiene ninguna ficha verde, puedes cambiar 1 de tus resultados %FOCUS% o de cara vacía por un resultado %EVADE%.</smallbody>%LINEBREAK%<sasmall><strong>Alerones adaptativos:</strong> Antes de revelar tu selector, si no estás bajo tensión, <b>debes</b> ejecutar una maniobra [1%BANKLEFT%], [1%STRAIGHT%] o [1%BANKRIGHT%] blanca.</sasmall>"
     },
     "Captain Jonus": {
       display_name: "Capitán Jonus",
@@ -6047,6 +6087,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Captain Oicunn": {
       display_name: "Capitán Oicunn",
       text: "Eres capaz de efectuar ataques principales a alcance 0."
+    },
+    "Captain Phasma": {
+      display_name: "Capitaine Phasma",
+      text: "Mientras te defiendes, después de la etapa de “Neutralizar los resultados”, otra nave aliada a alcance 0-1 <b>debe</b> sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
     },
     "Captain Rex": {
       display_name: "Capitán Rex",
@@ -6084,6 +6128,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Fanático de los Ángeles Cavernarios",
       text: "<i class = flavor_text>A diferencia de la mayoría de las células rebeldes, los partisanos de Saw Gerrera estaban dispuestos a utilizar métodos extremos para frustrar los planes del Imperio Galáctico, y así lo hicieron en brutales batallas que asolaron desde Geonosis a Jedha.</i>"
     },
+    "Chertek": {
+      display_name: "Chertek",
+      text: "Mientras realizas un ataque principal, si el defensor está tracteado, puedes volver a lanzar hasta 2 dados de ataque."
+    },
     "Chewbacca": {
       display_name: "Chewbacca",
       text: "Antes de que te vaya a ser infligida una carta de Daño boca arriba, puedes gastar 1 %CHARGE% para que esa carta de Daño te sea infligida boca abajo en vez de boca arriba."
@@ -6103,6 +6151,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Colonel Vessery": {
       display_name: "Coronel Vessery",
       text: "Mientras efectúas un ataque contra una nave fijada como blanco, después de que tires los dados de ataque, puedes obtener un Blanco fijado sobre el defensor.%LINEBREAK%Aceleración máxima: Después de que ejecutes completamente una maniobra de velocidad 3-5, puedes realizar una acción %EVADE%.%LINEBREAK%"
+    },
+    "Colossus Station Mechanic": {
+      display_name: "Mecánico de la Estación Colossus",
+      text: "<i class = flavor_text>Algunos pilotos ambiciosos y talentosos comienzan su carrera como miembros de apoyo en tierra, trabajando incansablemente para permitir que naves reparadas vuelen en los cielos de mundos distantes como Castilon.</i>"
     },
     "Commander Malarus": {
       display_name: "Comandante Malarus",
@@ -6128,6 +6180,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Condesa Ryad",
       text: "Mientras vas a ejecutar una maniobra %STRAIGHT%, puedes incrementar la dificultad de la maniobra. Si lo haces, ejecútala como si fuera una maniobra %KTURN%.%LINEBREAK%Aceleración máxima: Después de que ejecutes completamente una maniobra de velocidad 3-5, puedes realizar una acción %EVADE%."
     },
+    "Cova Nell": {
+      display_name: "Cova Nell",
+      text: "Mientras te defiendes o realizas un ataque principal, si tu maniobra revelada es roja, tira 1 dado adicional."
+    },
     "Crymorah Goon": {
       display_name: "Matón del Crymorah",
       text: "<i class = flavor_text>A pesar de su limitada maniobrabilidad, su pesado blindaje, potentes escudos y torreta artillada hacen del Ala-Y una excelente nave de patrulla.</i>"
@@ -6142,7 +6198,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "DBS-404": {
       display_name: "DBS-404",
-      text: "Mientras efectúas un ataque a alcance de ataque 1, <strong>debes</strong> tirar 1 dado adicional. Después de que el ataque impacte, sufres 1 de daño %CRIT%.  %LINEBREAK%<i>Errata (ya que las reglas hacen referencia a 1.4): se modificó la restricción de alcance de esta habilidad.\"</i>"
+      text: "Mientras efectúas un ataque a alcance de ataque 1, <strong>debes</strong> tirar 1 dado adicional. Después de que el ataque impacte, sufres 1 de daño %CRIT%.  %LINEBREAK%<i>Errata (ya que las reglas hacen referencia a 1.4): se modificó la restricción de alcance de esta habilidad."
     },
     "DFS-081": {
       display_name: "DFS-081",
@@ -6192,6 +6248,14 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Dengar",
       text: "Después de que te defiendas, si el atacante está situado en tu %FRONTARC%, puedes gastar 1 %CHARGE% para efectuar un ataque adicional contra el atacante."
     },
+    "Derek Klivian": {
+      display_name: "Derek Klivian",
+      text: "\"Después de fijar un blanco o gastar un blanco fijado, puedes retirar 1 ficha roja."
+    },
+    "Dineé Ellberger": {
+      display_name: "Dineé Ellberger",
+      text: "Mientras te defiendes o realizas un ataque, si la velocidad de tu maniobra revelada es la misma que la de la nave enemiga, los dados de esa nave enemiga no pueden ser modificados."
+    },
     "Drea Renthal": {
       display_name: "Drea Renthal",
       text: "Mientras una nave aliada que no sea limitada efectúa un ataque, si el defensor está situado en tu arco de fuego, el atacante puede volver a tirar 1 dado de ataque."
@@ -6210,7 +6274,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Emon Azzameen": {
       display_name: "Emon Azzameen",
-      text: "Si vas a soltar un dispositivo utilizando una plantilla [1&nbsp;%STRAIGHT%], en vez de eso puedes utilizar la plantilla  [3&nbsp;%TURNLEFT%], [3&nbsp;%STRAIGHT%] o [3&nbsp;%TURNRIGHT%]."
+      text: "Si vas a soltar un dispositivo utilizando una plantilla [1%STRAIGHT%], en vez de eso puedes utilizar la plantilla  [3%TURNLEFT%], [3%STRAIGHT%] o [3%TURNRIGHT%]."
     },
     "Epsilon Squadron Cadet": {
       display_name: "Cadete del Escuadrón Épsilon",
@@ -6248,9 +6312,21 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Fenn Rau",
       text: "Mientras te defiendes o efectúas un ataque, si el alcance de ataque es 1, puedes tirar 1 dado adicional.%LINEBREAK%Envite de Concordia: Mientras te defiendes, si el alcance de ataque es 1 y estás en el %FRONTARC% del atacante, cambia 1 resultado por un resultado %EVADE%."
     },
+    "Fifth Brother": {
+      display_name: "Quinto hermano",
+      text: "Mientras realizas un ataque, después de la etapa de “Neutralizar los resultados”, si el ataque impacta, puedes gastar 2 %FORCE% para añadir 1 resultado %CRIT%."
+    },
     "Finch Dallow": {
       display_name: "Finch Dallow",
       text: "Antes de que vayas a soltar una bomba, en vez de eso puedes colocarla en la zona de juego de manera que esté en contacto contigo."
+    },
+    "Finn": {
+      display_name: "Finn",
+      text: "Mientras te defiendes o realizas un ataque, puedes añadir 1 resultado en blanco, o puedes obtener 1 ficha de tensión para añadir 1 resultado de concentración en su lugar."
+    },
+    "First Order Provocateur": {
+      display_name: "Provocador de la Primera Orden",
+      text: "<i class = flavor_text>Las ideas del Mayor Vonreg guiaron la mejora de modelos ya probados en el diseño de esta nave única en su tipo, precisa y letal, por Sistema Sienar-Jaemus Fleet.</i>"
     },
     "First Order Test Pilot": {
       display_name: "Piloto de pruebas de la Primera Orden",
@@ -6263,6 +6339,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Freighter Captain": {
       display_name: "Capitán de carguero",
       text: "<i class = flavor_text>Muchos pilotos espaciales se ganan la vida viajando por el Borde Exterior, donde la distinción entre contrabandista y comerciante honrado suele ser difusa. En las fronteras de la civilización, a los compradores raras veces les interesa la procedencia de la mercancía, al menos mientras ésta les sea ofrecida a un buen precio.</i>"
+    },
+    "G4R-GOR V/M": {
+      display_name: "G4R-G0R V/M",
+      text: "Después de que te hayas defendido, cada otra nave a alcance 0 sufre 1 daño %CRIT%."
     },
     "Gamma Squadron Ace": {
       display_name: "As del Escuadrón Gamma",
@@ -6296,6 +6376,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Gideon Hask",
       text: "Mientras efectúas un ataque contra un defensor dañado, tira 1 dado de ataque adicional."
     },
+    "Gina Moonsong": {
+      display_name: "Gina Moonsong",
+      text: "Al comienzo de la fase de enfrentamiento, <b>debes</b> transferir 1 de tus marcadores de tensión a otra nave aliada a alcance 0-2."
+    },
     "Gold Squadron Trooper": {
       display_name: "Soldado del Escuadrón Oro",
       text: "<i class = flavor_text>El caza estelar V-19 Torrente fue diseñado para ser una nave ligera que sirviera de escolta para los ágiles interceptores Delta-7 pilotados por caballeros jedi, y posee un perfil de vuelo único para desempeñar este cometido.</i>"
@@ -6303,6 +6387,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Gold Squadron Veteran": {
       display_name: "Veterano del Escuadrón Oro",
       text: "<i class = flavor_text>Bajo el mando de Jon “Dutch” Vander, el Escuadrón Oro desempeñó un papel esencial en las batallas de Scarif y Yavin.</i>"
+    },
+    "Gorgol": {
+      display_name: "Gorgol",
+      text: "Durante la fase de sistema, puedes ganar 1 ficha de desarme y elegir una nave aliada a alcance 1-2. En ese caso, esa nave recibe 1 ficha de rayo tracteur y luego repara 1 de sus cartas de daño boca arriba <strong>Nave</strong>."
     },
     "Grand Inquisitor": {
       display_name: "Gran Inquisidor",
@@ -6356,6 +6444,14 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Hera Syndulla (VCX-100)",
       text: "Después de que reveles una maniobra de color rojo o azul, puedes establecer en tu selector otra maniobra con esa misma dificultad.%LINEBREAK%Cañón de cola: Mientras tienes una nave acoplada, posees un armamento principal %REARARC% con un valor de Ataque igual al del armamento principal %FRONTARC% de tu nave acoplada."
     },
+    "Hera Syndulla (B-Wing)": {
+      display_name: "Hera Syndulla (Ala-B)",
+      text: "Mientras otra nave aliada a alcance 1-2 se defiende o realiza un ataque, puedes transferir 1 de tus fichas de concentración, evasión o blanco fijado a esa nave. (Hazlo durante la etapa de \"Modificar dados\") %LINEBREAK% <i>Errata (1.3.2): Se agregó un detalle sobre el momento específico durante un ataque en el cual esta capacidad puede utilizarse.</i>"
+    },
+    "Hera Syndulla (A-Wing)": {
+      display_name: "Hera Syndulla (Ala-A)",
+      text: "Mientras otra nave aliada a alcance 1-2 se defiende o realiza un ataque, puedes transferir 1 de tus fichas de concentración, evasión o blanco fijado a esa nave. (Hazlo durante la etapa de \"Modificar dados\") %LINEBREAK% <i>Errata (1.3.2): Se agregó un detalle sobre el momento específico durante un ataque en el cual esta capacidad puede utilizarse.</i>"
+    },
     "Hired Gun": {
       display_name: "Piloto de fortuna",
       text: "<i class = flavor_text>La mera mención de créditos imperiales basta para poner a tu servicio a un gran número de individuos no excesivamente dignos de confianza.</i>"
@@ -6386,7 +6482,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Iden Versio": {
       display_name: "Iden Versio",
-      text: "Antes de que un caza TIE/ln aliado que tengas a alcance 0 -1 vaya a sufrir 1 o más de daño, puedes gastar 1&nbsp;%CHARGE%. Si lo haces, impides ese daño."
+      text: "Antes de que un caza TIE/ln aliado que tengas a alcance 0 -1 vaya a sufrir 1 o más de daño, puedes gastar 1%CHARGE%. Si lo haces, impides ese daño."
     },
     "Imdaar Test Pilot": {
       display_name: "Piloto de pruebas de Imdaar",
@@ -6411,6 +6507,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Jan Ors": {
       display_name: "Jan Ors",
       text: "Mientras una nave aliada situada en tu arco de fuego efectúa un ataque principal, si no estás bajo tensión, puedes recibir 1 ficha de Tensión. Si lo haces, esa nave aliada puede tirar 1 dado de ataque adicional."
+    },
+    "Jarek Yeager": {
+      display_name: "Jarek Yeager",
+      text: "Mientras tengas 2 fichas de tensión o menos, si estás dañado, puedes realizar maniobras básicas rojas, incluso si estás bajo tensión; si estás dañado críticamente, puedes realizar maniobras avanzadas rojas, incluso si estás bajo tensión."
     },
     "Jaycris Tubbs": {
       display_name: "Jaycris Tubbs",
@@ -6440,6 +6540,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Joy Rekkoff",
       text: "Mientras efectúas un ataque, puedes gastar 1 %CHARGE% de una mejora %TORPEDO% que tengas equipada. Si lo haces, el defensor tira 1 dado de defensa menos.%LINEBREAK%Envite de Concordia: Mientras te defiendes, si el alcance de ataque es 1 y estás en el %FRONTARC% del atacante, cambia 1 resultado por un resultado %EVADE%."
     },
+    "K-2SO": {
+      display_name: "K-2SO",
+      text: "Después de ganar una ficha de tensión, gana 1 ficha de cálculo."
+    },
     "Kaa'to Leeachos": {
       display_name: "Kaa'to Leeachos",
       text: "Al comienzo de la fase de Enfrentamiento, puedes elegir 1 nave aliada que tengas a alcance 0-2. Si lo haces, transfiere 1 ficha de Concentración o Evasión de esa nave a la tuya."
@@ -6467,6 +6571,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Kavil": {
       display_name: "Kavil",
       text: "Mientras efectúas un ataque que no sea %FRONTARC%, tira 1 dado de ataque adicional."
+    },
+    "Kazuda Xiono": {
+      display_name: "Kazuda Xiono",
+      text: "Mientras te defiendes o realizas un ataque principal, si la iniciativa de la nave enemiga es mayor que la cantidad de cartas de daño que tienes, puedes lanzar 1 dado adicional."
     },
     "Ketsu Onyo": {
       display_name: "Ketsu Onyo",
@@ -6528,6 +6636,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Leevan Tenza",
       text: "Después de que realices una acción %BARRELROLL% o %BOOST%, puedes realizar una acción %EVADE% roja."
     },
+    "Leia Organa": {
+      display_name: "Leia Organa",
+      text: "Después de que una nave aliada haya ejecutado completamente una maniobra roja, si está a alcance 0-3, puedes gastar 1 %FORCE%. En ese caso, esa nave recibe 1 ficha de concentración o recupera 1 %FORCE%."
+    },
     "Lieutenant Bastian": {
       display_name: "Teniente Bastian",
       text: "Después de que se le inflija una carta de Daño a una nave que tienes a alcance 1-2, puedes obtener un Blanco fijado sobre esa nave."
@@ -6538,7 +6650,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Lieutenant Dormitz": {
       display_name: "Teniente Dormitz",
-      text: "<strong>Preparación</strong>: Después de que seas colocado en la zona de juego, se pueden colocar otras naves aliadas en cualquier lugar de la zona de juego que esté situado a alcance 0-2 de ti. %LINEBREAK% <i>Errata (desde la referencia de reglas 1.3.0): Se reemplazó \"otro barco amigo\" por \"pequeños barcos amigos\"</i>"
+      text: "<strong>Preparación:</strong> Después de que seas colocado en la zona de juego, se pueden colocar otras naves aliadas en cualquier lugar de la zona de juego que esté situado a alcance 0-2 de ti. %LINEBREAK% <i>Errata (desde la referencia de reglas 1.3.0): Se reemplazó \"otro barco amigo\" por \"pequeños barcos amigos\"</i>"
     },
     "Lieutenant Karsabi": {
       display_name: "Teniente Karsabi",
@@ -6547,6 +6659,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Lieutenant Kestal": {
       display_name: "Teniente Kestal",
       text: "Mientras efectúas un ataque, después de que el defensor tire los dados de defensa, puedes gastar 1 ficha de Concentración para anular todos los resultados de cara vacía/%FOCUS% del defensor."
+    },
+    "Lieutenant LeHuse": {
+      display_name: "Lieutenant LeHuse",
+      text: "Mientras realizas un ataque, puedes gastar el blanco fijado de otra nave aliada en el defensor para volver a lanzar cualquier cantidad de tus resultados."
     },
     "Lieutenant Rivas": {
       display_name: "Teniente Rivas",
@@ -6559,6 +6675,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Lieutenant Tavson": {
       display_name: "Teniente Tavson",
       text: "Después de que sufras daño, puedes gastar 1 %CHARGE% para realizar una acción."
+    },
+    "Logistics Division Pilot": {
+      display_name: "Piloto de la División de Logística",
+      text: "<i class = flavor_text>En ausencia de apoyo de la Nueva República, los miembros de la Resistencia a menudo tienen una doble función como pilotos de transporte y mecánicos, poniendo sus habilidades y conocimientos técnicos al servicio de la lucha contra la Primera Orden.</i>"
     },
     "Lok Revenant": {
       display_name: "Aparecido de Lok",
@@ -6574,7 +6694,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Luke Skywalker": {
       display_name: "Luke Skywalker",
-      text: "Después de que te conviertas en el defensor (antes de las tiradas de dados), puedes recuperar 1&nbsp;%FORCE%."
+      text: "Después de que te conviertas en el defensor (antes de las tiradas de dados), puedes recuperar 1%FORCE%."
     },
     "Luminara Unduli": {
       display_name: "Luminara Unduli",
@@ -6614,7 +6734,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Major Vermeil": {
       display_name: "Major Vermeil",
-      text: "<smallbody>Mientras efectúas un ataque, si el defensor no tiene ninguna ficha verde, puedes cambiar 1 de tus resultados %FOCUS% o de cara vacía por un resultado %HIT%.</smallbody>%LINEBREAK%<sasmall><strong>Alerones adaptativos:</strong> Antes de revelar tu selector, si no estás bajo tensión, <b>debes</b> ejecutar una maniobra [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%] o [1&nbsp;%BANKRIGHT%] blanca.</sasmall>"
+      text: "<smallbody>Mientras efectúas un ataque, si el defensor no tiene ninguna ficha verde, puedes cambiar 1 de tus resultados %FOCUS% o de cara vacía por un resultado %HIT%.</smallbody>%LINEBREAK%<sasmall><strong>Alerones adaptativos:</strong> Antes de revelar tu selector, si no estás bajo tensión, <b>debes</b> ejecutar una maniobra [1%BANKLEFT%], [1%STRAIGHT%] o [1%BANKRIGHT%] blanca.</sasmall>"
+    },
+    "Major Vonreg": {
+      display_name: "Major Vonreg",
+      text: "Durante la fase de sistema, puedes elegir 1 nave enemiga en tu %BULLSEYEARC%. Esa nave enemiga recibe 1 ficha de agotamiento o tensión (tú eliges)."
     },
     "Major Vynder": {
       display_name: "Mayor Vynder",
@@ -6637,15 +6761,31 @@ exportObj.cardLoaders['Español'] = function() {
       text: "Mientras efectúas un ataque principal, puedes optar por gastar 1 escudo para tirar 1 dado de ataque adicional o, si no estás protegido por escudos, puedes tirar 1 dado de ataque menos para recuperar 1 escudo."
     },
     "Moralo Eval": {
-      display_name: "Moralo eval",
+      display_name: "Moralo Eval",
       text: "Si vas a huir del campo de batalla, puedes gastar 1 %CHARGE%. Si lo haces, colócate en reserva en vez de huir. Al comienzo de la siguiente fase de Planificación, colócate en la zona de juego dentro de alcance 1 del borde de la zona de juego por el que has huido."
+    },
+    "Morna Kee": {
+      display_name: "Morna Kee",
+      text: "Durante la fase de desenlace, puedes gastar 1 %CHARGE% para devolver 1 de tus marcadores de refuerzo a tu otro arco completo en lugar de retirarlo."
+    },
+    "Netrem Pollard": {
+      display_name: "Netrem Pollard",
+      text: "Después de realizar una maniobra de tonel, puedes elegir una nave aliada que no esté bajo tensión a alcance 0-1. Esa nave recibe 1 ficha de tensión, y luego puedes girar 180°."
     },
     "Nien Nunb": {
       display_name: "Nien Nunb",
       text: "Después de que recibas una ficha de Tensión, si tienes alguna nave enemiga a alcance 0-1 situada en tu  %FRONTARC%, puedes retirar esa ficha de Tensión."
     },
+    "Nodin Chavdri": {
+      display_name: "Nodin Chavdri",
+      text: "Después de coordinar o ser coordinado, si tienes 2 fichas de tensión o menos, puedes realizar 1 acción de tu barra de acciones como una acción roja, incluso si estás bajo tensión."
+    },
+    "Nom Lumb": {
+      display_name: "Nom Lumb",
+      text: "Después de convertirte en el defensor, si el atacante no está en tu %SINGLETURRETARC%, <b>debes</b> girar tu indicador %SINGLETURRETARC% hacia un arco estándar en el que se encuentre el atacante."
+    },
     "Norra Wexley (Y-Wing)": {
-      display_name: "Norra Wexley (Y-Wing)",
+      display_name: "Norra Wexley (Ala-Y)",
       text: "Mientras te defiendes, si tienes alguna nave enemiga a alcance 0-1, añade 1 resultado %EVADE% a tus resultados de dados."
     },
     "Norra Wexley": {
@@ -6712,6 +6852,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Padmé Amidala",
       text: "Mientras una nave enemiga en tu %FRONTARC% se defiende o efectúa un ataque, esa nave sólo puede modificar 1 resultado %EVADE% (los otros resultados siguen pudiendo ser modificados)."
     },
+    "Paige Tico": {
+      display_name: "Paige Tico",
+      text: "Después de soltar un dispositivo, puedes gastar 1 %CHARGE% para soltar un dispositivo adicional."
+    },
     "Palob Godalhi": {
       display_name: "Palob Godalhi",
       text: "Al comienzo de la fase de Enfrentamiento, puedes elegir 1 nave enemiga que tengas en tu arco de fuego a alcance 0-2. Si lo haces, transfiere 1 ficha de Concentración o Evasión de esa nave a la tuya."
@@ -6727,6 +6871,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Patrol Leader": {
       display_name: "Jefe de Patrulla",
       text: "<i class = flavor_text>Recibir el mando de un VT-49 Diezmador se considera un importante ascenso para los oficiales regulares de la Armada Imperial.</i>"
+    },
+    "Petranaki Arena Ace": {
+      display_name: "As de la Arena Petranaki",
+      text: "<i class = flavor_text>La Arena de Petranaki es una gigantesca estructura en Geonosis que fue el escenario principal de la primera batalla de las Guerras Clon.</i>"
     },
     "Petty Officer Thanisson": {
       display_name: "Suboficial Thanisson",
@@ -6760,6 +6908,14 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Quinn Jast",
       text: "Al comienzo de la fase de Enfrentamiento, puedes recibir 1 ficha de Desarme para recuperar 1 %CHARGE% sobre 1 de tus mejoras equipadas.%LINEBREAK%Emplazamiento para armas: Puedes equiparte con una mejora %CANNON%, %TORPEDO% o %MISSILE%."
     },
+    "R1-J5": {
+      display_name: "R1-J5",
+      text: "Antes de revelar 1 de tus cartas de daño, puedes mirar tus cartas de daño boca abajo, elegir 1 y revelarla en su lugar."
+    },
+    "R2-D2": {
+      display_name: "R2-D2",
+      text: "Al comienzo de la fase de enfrentamiento, si hay una nave enemiga en tu %REARARC%, gana 1 ficha de cálculo."
+    },
     "Rear Admiral Chiraneau": {
       display_name: "Contralmirante Chiraneau",
       text: "Mientras efectúas un ataque, si estás reforzado y el defensor está en el %FULLFRONTARC% o %FULLREARARC% que coincide con el de tu ficha de Refuerzo, puedes cambiar 1 de tus resultados %FOCUS% por un resultado %CRIT%."
@@ -6767,6 +6923,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Rebel Scout": {
       display_name: "Explorador rebelde",
       text: "<i class = flavor_text>Diseñadas por la Corporación de Ingeniería Corelliana para que se parecieran a un pájaro en vuelo, las naves de la serie HWK son unos magníficos transportes. La velocidad y robustez del HWK-290 hacen que suela ser empleado por agentes rebeldes como base móvil de operaciones.</i>"
+    },
+    "Red Squadron Bomber": {
+      display_name: "Bombardero del Escuadrón Rojo",
+      text: "<i class = flavor_text>Durante la batalla de Geonosis, el Escuadrón Rojo proporcionó una cobertura esencial para los cañoneros TO/BA desplegados para asegurar la superficie.</i>"
     },
     "Red Squadron Expert": {
       display_name: "Experto del Escuadrón Rojo",
@@ -6792,6 +6952,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Piloto del Escuadrón Rho",
       text: "<i class = flavor_text>Los pilotos de élite del Escuadrón Rho infunden terror a la Rebelión debido a la devastadora eficacia con la que utilizan el Ala Estelar clase Alfa tanto en su configuración de asalto Xg-1 como en la de arsenal Os-1.</i>"
     },
+    "Ric Olié": {
+      display_name: "Ric Olié",
+      text: "Mientras te defiendes o realizas un ataque principal, si la velocidad de tu maniobra revelada es mayor que la de la nave enemiga, lanza 1 dado adicional."
+    },
     "Roark Garnet": {
       display_name: "Roark Garnet",
       text: "Al comienzo de la fase de Enfrentamiento, puedes elegir 1 nave que esté situada en tu arco de fuego. Si lo haces, en esta fase esa nave interviene con Iniciativa 7 en vez de su valor de Iniciativa normal."
@@ -6800,7 +6964,12 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Escolta del Escuadrón Pícaro",
       text: "<i class = flavor_text>Los pilotos de élite del Escuadrón Pícaro se cuentan entre los mejores de la Alianza Rebelde.</i>%LINEBREAK%Sensores experimentales: Eres capaz de obtener Blancos fijados más allá de alcance 3. No puedes obtener Blancos fijados a alcance 1."
     },
+    "Ronith Blario": {
+      display_name: "Ronith Blario",
+      text: "Mientras te defiendes o realizas un ataque, si la nave enemiga está en el %SINGLETURRETARC% de otra nave aliada, puedes gastar 1 ficha de concentración de esa nave aliada para cambiar 1 de tus resultados %FOCUS% en un resultado %EVADE% o %HIT%."
+    },
     "Rose Tico": {
+      display_name: "Rose Tico",
       text: "Mientras te defiendes o efectúas un ataque, puedes volver a tirar hasta 1 de tus dados por cada otra nave aliada situada en el arco de ataque."
     },
     "Saber Squadron Ace": {
@@ -6812,12 +6981,16 @@ exportObj.cardLoaders['Español'] = function() {
       text: "Antes de que te actives, puedes realizar una maniobra %BARRELROLL% o %BOOST%.%LINEBREAK%Armas preparadas: Mientras estás acoplado, después de que tu nave nodriza efectúe un ataque principal %FRONTARC% o %TURRET%, puede efectuar un ataque principal %REARARC% adicional."
     },
     "Sabine Wren (TIE Fighter)": {
-      display_name: "Sabine Wren (TIE Fighter)",
+      display_name: "Sabine Wren (Caza TIE)",
       text: "Antes de que te actives, puedes realizar una acción %BARRELROLL% o %BOOST%."
     },
     "Sabine Wren (Scum)": {
-      display_name: "Sabine Wren (Scum)",
+      display_name: "Sabine Wren (Escoria)",
       text: "Mientras te defiendes, si el atacante está situado en tu %SINGLETURRETARC% a alcance 0-2, puedes añadir 1 resultado %FOCUS% a tus resultados de dados."
+    },
+    "Sabine Wren (A-Wing)": {
+      display_name: "Sabine Wren (Ala-A)",
+      text: "Mientras te defiendes o realizas un ataque, si el alcance del ataque es 1 y estás en el %FRONTARC% de la nave enemiga, puedes cambiar 1 de tus resultados por un resultado %EVADE% o %HIT%."
     },
     "Saesee Tiin": {
       display_name: "Saesee Tiin",
@@ -6837,7 +7010,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Scarif Base Pilot": {
       display_name: "Piloto de la base de Scarif",
-      text: "<i class = flavor_text>El Segador TIE fue diseñado para transportar tropas de élite hasta los lugares más cruentos del campo de batalla, tal como hizo con los temidos soldados de la muerte del director Krennic durante la famosa batalla de Scarif.</i>%LINEBREAK%<sasmall><strong>Alerones adaptativos:</strong> Antes de revelar tu selector, si no estás bajo tensión, <b>debes</b> ejecutar una maniobra [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%] o [1&nbsp;%BANKRIGHT%] blanca.</sasmall>"
+      text: "<i class = flavor_text>El Segador TIE fue diseñado para transportar tropas de élite hasta los lugares más cruentos del campo de batalla, tal como hizo con los temidos soldados de la muerte del director Krennic durante la famosa batalla de Scarif.</i>%LINEBREAK%<sasmall><strong>Alerones adaptativos:</strong> Antes de revelar tu selector, si no estás bajo tensión, <b>debes</b> ejecutar una maniobra [1%BANKLEFT%], [1%STRAIGHT%] o [1%BANKRIGHT%] blanca.</sasmall>"
     },
     "Scimitar Squadron Pilot": {
       display_name: "Piloto del Escuadrón Cimitarra",
@@ -6863,6 +7036,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Seyn Marana",
       text: "Mientras efectúas un ataque, puedes gastar 1 resultado %CRIT%. Si lo haces, inflige 1 carta de Daño boca abajo al defensor, y luego anula tus resultados restantes."
     },
+    "Shadow Squadron Veteran": {
+      display_name: "Veterano del Escuadrón Sombra",
+      text: "<i class = flavor_text>El Escuadrón Shadow, activo desde los primeros días de las Guerras Clon, ha logrado victorias prestigiosas en Kadavo y contra la nave insignia de Grievous, el Malevolencia.</i>"
+    },
     "Shadowport Hunter": {
       display_name: "Cazador de puerto clandestino",
       text: "<i class = flavor_text>Los sindicatos criminales complementan las letales habilidades de sus agentes más leales proporcionándoles la mejor tecnología disponible, como la rápida y formidable nave de persecución clase Lancero.</i>"
@@ -6870,6 +7047,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Shara Bey": {
       display_name: "Shara Bey",
       text: "Mientras te defiendes o efectúas un ataque principal, puedes gastar 1 Blanco fijado que tengas sobre la nave enemiga para añadir 1 resultado %FOCUS% a tus resultados de dados."
+    },
+    "Shara Bey (A-Wing)": {
+      display_name: "Shara Bey",
+      text: "Mientras te defiendes o realizas un ataque principal, puedes gastar 1 blanco fijado que tengas en la nave enemiga para agregar 1 resultado %FOCUS% a los resultados de tus dados."
     },
     "Sienar Specialist": {
       display_name: "Especialista de Sienar",
@@ -6907,6 +7088,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Veterano del Escuadrón Siete",
       text: "<i class = flavor_text>La Escuadrilla Clon Siete forma parte de la Flota del Círculo Abierto bajo el mando de generales jedi legendarios como Plo Koon y Obi-Wan Kenobi, y sirvió con distinción en las batallas de Coruscant y Cato Neimoidia.</i>"
     },
+    "Stalgasin Hive Guard": {
+      display_name: "Guardia de la Colmena Stalgasin",
+      text: "<i class = flavor_text>Diseñados para la fisiología específica de los pilotos geonosianos, los cazas clase Nantex son capaces de maniobras que destruirían la mayoría de las naves y pilotos.</i>"
+    },
     "Starkiller Base Pilot": {
       display_name: "Piloto de la base Starkiller",
       text: "<i class = flavor_text>La lanzadera de mando clase Ípsilon sirve como base de operaciones para muchos agentes y oficiales superiores de la Primera Orden. Su potente equipo de sensores y de comunicaciones les permite orquestar la difusión del terror por toda la galaxia.</i>"
@@ -6914,6 +7099,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Storm Squadron Ace": {
       display_name: "As del Escuadrón Tormenta",
       text: "<i class = flavor_text>El caza TIE avanzado supuso una mejora del popular TIE/ln gracias a la incorporación de escudos, armamento más potente, paneles solares curvados y un hiperimpulsor.</i>%LINEBREAK%Computadora de selección de blancos avanzada: Mientras efectúas un ataque principal contra un defensor que tienes fijado como blanco, tira 1 dado de ataque adicional y cambia 1 resultado %HIT% por un resultado %CRIT%."
+    },
+    "Sun Fac": {
+      display_name: "Sun Fac",
+      text: "Mientras realizas un ataque principal, si el defensor está en tiro de sable, lanza 1 dado de ataque adicional."
     },
     "Sunny Bounder": {
       display_name: "Sunny Bounder",
@@ -6927,9 +7116,9 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Piloto del Escuadrón Tala",
       text: "<i class = flavor_text>La serie AF4 es la última en una larga serie de diseños de Cazacabezas. Barata y relativamente duradera, es muy apreciada por organizaciones independientes como la Alianza Rebelde.</i>"
     },
-    "Tansarii Point Veteran": {
-      display_name: "Veterano de Punto Tansarii",
-      text: "<i class = flavor_text>La derrota de Talonbane Cobra, el as del Sol negro, a manos de los contrabandistas Car'das cambió el curso de la batalla de la estación Punto Tansarii. A los supervivientes de ese enfrentamiento se les respeta en todo el sector.</i>%LINEBREAK%Emplazamiento para armas: Puedes equiparte con una mejora %CANNON%, %TORPEDO% o %MISSILE%."
+    "Tallissan Lintra": {
+      display_name: "Tallissan Lintra",
+      text: "Mientras una nave enemiga en tu %BULLSEYEARC% realiza un ataque, puedes gastar 1 %CHARGE%. Si lo haces, el defensor lanza 1 dado adicional."
     },
     "Talonbane Cobra": {
       display_name: "Talonbane Cobra",
@@ -7003,6 +7192,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Vennie",
       text: "Mientras te defiendes, si el atacante está situado en el %SINGLETURRETARC% de alguna nave aliada, puedes añadir 1 resultado %FOCUS% a tu tirada."
     },
+    "Vi Moradi": {
+      display_name: "Vi Moradi",
+      text: "<strong>Preparación:</strong> después de desplegar las fuerzas, asigna el estado <strong>Información Comprometida</strong> a 1 nave enemiga."
+    },
     "Viktor Hel": {
       display_name: "Viktor Hel",
       text: "Después de que te defiendas, si no has tirado exactamente 2 dados de defensa, el atacante recibe 1 ficha de Tensión."
@@ -7018,6 +7211,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Wedge Antilles": {
       display_name: "Wedge Antilles",
       text: "Mientras efectúas un ataque, el defensor tira 1 dado de defensa menos."
+    },
+    "Wedge Antilles (A-Wing)": {
+      display_name: "Wedge Antilles",
+      text: "Mientras realizas un ataque principal, si el defensor está en tu %FRONTARC%, lanza 1 dado de defensa menos."
     },
     "Wild Space Fringer": {
       display_name: "Fronterizo del Espacio Salvaje",
@@ -7047,6 +7244,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Superviviente del Escuadrón Zeta",
       text: "<i class = flavor_text>Humillados por su fracaso, los pilotos restantes de la base Starkiller están ansiosos por demostrar su valía mientras persiguen a la Resistencia.</i>"
     },
+    "Zizi Tlo": {
+      display_name: "Zizi Tlo",
+      text: "Después de defenderte o realizar un ataque, puedes gastar 1 %CHARGE% para ganar 1 ficha de concentración o evasión."
+    },
     "Zuckuss": {
       display_name: "Zuckuss",
       text: "Mientras efectúas un ataque principal, puedes tirar 1 dado de ataque adicional. Si lo haces, el defensor tira 1 dado de defensa adicional."
@@ -7066,6 +7267,10 @@ exportObj.cardLoaders['Español'] = function() {
     '"Blackout"': {
       display_name: "“Apagón”",
       text: "Mientras efectúas un ataque, si dicho ataque está obstruido por un obstáculo, el defensor tira 2 dados de defensa menos."
+    },
+    '"Broadside"': {
+      display_name: "Costado",
+      text: "Mientras realizas un ataque %SINGLETURRETARC%, si tu indicador %SINGLETURRETARC% está en tu %LEFTARC% o %RIGHTARC%, puedes cambiar 1 resultado en blanco por un resultado %FOCUS%."
     },
     '"Chopper"': {
       display_name: "“Chopper”",
@@ -7099,6 +7304,18 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "“Eco”",
       text: "Mientras desactivas el camuflaje, debes utilizar la plantilla [2 %BANKLEFT%] o [2 %BANKRIGHT%] en vez de la plantilla [2 %STRAIGHT%].%LINEBREAK%Matriz de estigio: Después de que desactives el camuflaje, puedes realizar una acción %EVADE%. Al comienzo de la fase Final, puedes gastar 1 ficha de Evasión para recibir 1 ficha de Camuflaje."
     },
+    '"Ember"': {
+      display_name: "“Ascua”",
+      text: "Mientras realizas un ataque, si una nave dañada aliada del defensor está a alcance 0-1 de este, el defensor no puede gastar fichas de concentración o cálculo."
+    },
+    '"Goji"': {
+      display_name: "“Goji”",
+      text: "Cuando una nave aliada a alcance 0–3 se defiende, puede lanzar 1 dado de defensa adicional por cada bomba aliada a alcance 0–1 de ella. %LINEBREAK% <i>Errata (1.1.0): se eliminó la mención '...o mina...'</i>"
+    },
+    '"Holo"': {
+      display_name: "“Holo”",
+      text: "Al comienzo de la fase de combate, <b>debes</b> transferir 1 de tus fichas a otra nave aliada a alcance 0-2."
+    },
     '"Howlrunner"': {
       display_name: "“Aullador Veloz”",
       text: "Mientras una nave aliada que tienes a alcance 0-1 efectúa un ataque principal, esa nave puede volver a tirar 1 dado de ataque."
@@ -7118,6 +7335,10 @@ exportObj.cardLoaders['Español'] = function() {
     '"Longshot"': {
       display_name: "“Tiro Aventurado”",
       text: "Mientras efectúas un ataque principal a alcance de ataque 3, tira 1 dado de ataque adicional."
+    },
+    '"Matchstick"': {
+      display_name: "Fósforo",
+      text: "Mientras realizas un ataque principal o un ataque %SINGLETURRETARC%, puedes volver a lanzar 1 dado de ataque por cada ficha roja que tengas."
     },
     '"Mauler" Mithel': {
       display_name: "“Mutilador” Mithel",
@@ -7147,6 +7368,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "“Odd Ball”",
       text: "Después de que ejecutes completamente una maniobra roja o realices una acción roja, si hay una nave enemiga en tu %BULLSEYEARC%, puedes obtener un Blanco fijado sobre esa nave."
     },
+    '"Odd Ball" (Y-Wing)': {
+      display_name: "“Oddball”",
+      text: "Después de realizar completamente una maniobra roja o realizar una acción roja, si hay una nave enemiga en tu %BULLSEYEARC%, puedes fijar blanco a esa nave."
+    },
     '"Pure Sabacc"': {
       display_name: "“Sabacc Puro”",
       text: "Mientras efectúas un ataque, si tienes 1 o menos cartas de Daño, puedes tirar 1 dado de ataque adicional.%LINEBREAK%Alerones adaptativos: Antes de que reveles tu selector, si no estás bajo tensión, debes ejecutar una maniobra [1 %BANKLEFT%], [1 %STRAIGHT%] o [1 %BANKRIGHT%] de color blanco."
@@ -7162,6 +7387,10 @@ exportObj.cardLoaders['Español'] = function() {
     '"Redline"': {
       display_name: "“Velocidad Terminal”",
       text: "Puedes mantener hasta 2 Blancos fijados.%LINEBREAK%Después de que realices una acción, puedes obtener un Blanco fijado."
+    },
+    '"Rush"': {
+      display_name: "“Correr”",
+      text: "Cuando estás dañado, considera tu iniciativa como 6."
     },
     '"Scorch"': {
       display_name: "“Quemadura”",
@@ -7187,9 +7416,13 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "“Tucker”",
       text: "Después de que una nave aliada que tengas a alcance 1-2 efectúe un ataque contra una nave enemiga situada en tu %FRONTARC%, puedes realizar una acción %FOCUS% roja."
     },
+    '"Vagabond"': {
+      display_name: "“Vagabond”",
+      text: "Después de realizar completamente una maniobra utilizando tus <strong>Alerones Adaptables</strong>, si no estás bajo tensión, puedes soltar 1 dispositivo."
+    },
     '"Vizier"': {
       display_name: "“Visir”",
-      text: "<smallbody>Después de que ejecutes completamente una maniobra de velocidad 1 utilizando la capacidad <strong>Alerones adaptativos</strong> de tu nave, puedes realizar una acción %COORDINATE%. Si lo haces, omite tu paso de “Realizar una acción”.</smallbody>%LINEBREAK%<sasmall><strong>Alerones adaptativos:</strong> Antes de revelar tu selector, si no estás bajo tensión, <b>debes</b> ejecutar una maniobra [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%] o [1&nbsp;%BANKRIGHT%] blanca.</sasmall>"
+      text: "<smallbody>Después de que ejecutes completamente una maniobra de velocidad 1 utilizando la capacidad <strong>Alerones adaptativos</strong> de tu nave, puedes realizar una acción %COORDINATE%. Si lo haces, omite tu paso de “Realizar una acción”.</smallbody>%LINEBREAK%<sasmall><strong>Alerones adaptativos:</strong> Antes de revelar tu selector, si no estás bajo tensión, <b>debes</b> ejecutar una maniobra [1%BANKLEFT%], [1%STRAIGHT%] o [1%BANKRIGHT%] blanca.</sasmall>"
     },
     '"Wampa"': {
       display_name: "“Wampa”",
@@ -7214,6 +7447,1009 @@ exportObj.cardLoaders['Español'] = function() {
     '"Zeb" Orrelios (TIE Fighter)': {
       display_name: "“Zeb” Orrelios (TIE Fighter)",
       text: "Mientras te defiendes, los resultados %CRIT% se neutralizan antes que los resultados %HIT%."
+    },
+    "Baktoid Prototype": {
+      display_name: "Prototipo baktoide",
+      text: "Mientras realizas un ataque especial, si una nave aliada con la capacidad de nave <strong>Calculos en Red</strong> tiene un objetivo trabado en el defensor, puedes ignorar los requisitos %FOCUS%, %CALCULATE% o %LOCK% de este ataque."
+    },
+    "Haor Chall Prototype": {
+      display_name: "Prototipo Haor Chall",
+      text: "Después de que una nave enemiga en tu %BULLSEYEARC% a alcance 0-2 haya designado a otra nave aliada como el defensor, puedes realizar una acción %CALCULATE% o %LOCK%."
+    },
+    "Naboo Handmaiden": {
+      display_name: "Dama de Naboo",
+      text: "<strong>Preparación:</strong> después de colocar las fuerzas, asigna el estado <strong>Dupé</strong> a 1 nave aliada que no sea <strong>Dama de Naboo</strong>."
+    },
+    "Bombardment Drone": {
+      display_name: "Dron de Bombardeo",
+      text: "Si se supone que debes soltar una bomba, puedes lanzarla en su lugar utilizando la misma plantilla."
+    },
+    "Precise Hunter": {
+      display_name: "Cazador Preciso",
+      text: "Mientras realizas un ataque, si el defensor está en tu %BULLSEYEARC%, puedes volver a lanzar 1 resultado en blanco."
+    },
+    "Darth Vader (TIE Defender)": {
+      display_name: "Darth Vader (TIE Defender)",
+      text: "No puedes gastar %FORCE% excepto cuando atacas. %LINEBREAK% Mientras realizas un ataque, puedes gastar 1 %FORCE% para cambiar 1 resultado en blanco por un resultado %HIT%."
+    },
+    "Vult Skerris": {
+      display_name: "Vult Skerris",
+      text: "<strong>Acción:</strong> Gana 1 ficha de tensión para recuperar 1 %CHARGE%. %LINEBREAK% Antes de comprometerte, puedes gastar 1 %CHARGE% para realizar una acción."
+    },
+    "Vult Skerris (TIE Interceptor)": {
+      display_name: "Vult Skerris (Interceptor TIE)",
+      text: "<strong>Acción:</strong> Gana 1 ficha de tensión para recuperar 1 %CHARGE%. %LINEBREAK% Antes de comprometerte, puedes gastar 1 %CHARGE% para realizar una acción."
+    },
+    "Captain Dobbs": {
+      display_name: "Capitán Dobbs",
+      text: "Mientras otra nave aliada a alcance 0-1 se defiende, antes de la etapa “Neutralizar los resultados”, si estás en el arco de ataque y no estás ionizado, puedes ganar 1 ficha iónica para anular 1 resultado %HIT%."
+    },
+    "Ciena Ree": {
+      display_name: "Ciena Ree",
+      text: "Después de que realices un ataque, si el defensor ha sido destruido, gana 1 ficha de tensión. %LINEBREAK% Después de que una nave aliada a alcance 0-3 haya sido destruida, retira 1 ficha de tensión."
+    },
+    "Commandant Goran": {
+      display_name: "Comandante Goran",
+      text: "Al comienzo de la Fase de Combate, elige una nave aliada a alcance 0-3 con una iniciativa menor que la tuya. La nave elegida gana 1 ficha de evasión y retira 1 ficha roja que no sea de tensión. %LINEBREAK% <i>Errata (1.4): capacidad modificada</i>"
+    },
+    "Gideon Hask (TIE Interceptor)": {
+      display_name: "Gideon Hask (Interceptor TIE)",
+      text: "Mientras realizas un ataque contra un defensor dañado, lanza 1 dado de ataque adicional."
+    },
+    "Lieutenant Lorrir": {
+      display_name: "Teniente Lorrir",
+      text: "Mientras realizas un tonel volado, <b>debes</b> utilizar la plantilla (%BANKLEFT% o %BANKRIGHT%) en lugar de la plantilla (%STRAIGHT%)."
+    },
+    "Nash Windrider": {
+      display_name: "Nash Windrider",
+      text: "Durante la fase de combate, después de que una nave aliada pequeña a alcance 0-3 sea destruida y no se haya comprometido en esta fase, puedes gastar 1 %CHARGE%. En ese caso, se compromete en la iniciativa actual."
+    },
+    "Republic Judiciary": {
+      display_name: "Judicatura de la República",
+      text: "<i class=\"flavor_text\">La República Galáctica utiliza naves de guerra ligeras como la corbeta CR90 para responder rápidamente a las incursiones separatistas en toda la galaxia.</i>"
+    },
+    "Alderaanian Guard": {
+      display_name: "Guardia Alderaaniana",
+      text: "<i class=\"flavor_text\">Puesta en servicio antes de las Guerras Clon, la corbeta CR90 es preferida por la Casa Real de Alderaan por su versatilidad.</i>"
+    },
+    "Outer Rim Patrol": {
+      display_name: "Patrulla del Borde Exterior",
+      text: "<i class=\"flavor_text\">La corbeta clase Raider es una de las naves de guerra más pequeñas del Imperio, a menudo utilizada para misiones de reconocimiento, ataques quirúrgicos o eliminación de cazas enemigos gracias a su potente artillería.</i>"
+    },
+    "First Order Collaborators": {
+      display_name: "Colaboradores de la Primera Orden",
+      text: "<i class=\"flavor_text\">Los partidarios de la Primera Orden a menudo utilizan antiguas naves imperiales, como la corbeta clase Raider. Aunque ha sobrevivido al régimen que lo vio nacer, esta nave todavía siembra el terror en toda la galaxia.</i>"
+    },
+    "Echo Base Evacuees": {
+      display_name: "Evacuados de la Base Eco",
+      text: "<i class=\"flavor_text\">El transporte mediano GR-75 se adapta perfectamente a batallas como la evacuación de Hoth, en la que varias de estas naves fueron fundamentales para la huida de las fuerzas rebeldes.</i>"
+    },
+    "New Republic Volunteers": {
+      display_name: "Voluntarios de la Nueva República",
+      text: "<i class=\"flavor_text\">En servicio desde la Guerra Civil Galáctica, el transporte mediano GR-75 todavía es utilizado por miembros de la Nueva República para misiones de suministro y asistencia.</i>"
+    },
+    "Outer Rim Garrison": {
+      display_name: "Guarnición del Borde Exterior",
+      text: "<i class=\"flavor_text\">Capaz de transportar 4 cazas TIE y operar de manera independiente durante largos períodos, el crucero clase Gozanti se ve con regularidad en los cielos de los mundos oprimidos del Borde Exterior.</i>"
+    },
+    "First Order Sympathizers": {
+      display_name: "Simpatizantes de la Primera Orden",
+      text: "<i class=\"flavor_text\">El ascenso meteórico al poder de la Primera Orden se basa en la innovación feroz. Sin embargo, los simpatizantes a menudo reciclan conceptos imperiales, como este antiguo crucero clase Gozanti, para operaciones de vigilancia o patrulla.</i>"
+    },
+    "Separatist Privateers": {
+      display_name: "Corsarios Separatistas",
+      text: "<i class=\"flavor_text\">La Alianza Separatista utiliza todos los contactos dudosos a su disposición en su lucha contra la República Galáctica, incluidos corsarios y carteles criminales.</i>"
+    },
+    "Syndicate Smugglers": {
+      display_name: "Contrabandistas del Sindicato",
+      text: "<i class=\"flavor_text\">Naves como el crucero C-ROC facilitan operaciones criminales en todo el Borde Exterior, transportando grandes cantidades de mercancías ilegales o exhibiendo su poder para obligar a pequeñas colonias a cooperar.</i>"
+    },
+    "Bossk (Z-95 Headhunter)": {
+      display_name: "Bossk (Cazacabezas Z-95)",
+      text: "Mientras realizas un ataque principal, después de la etapa de “Neutralizar los resultados”, puedes gastar 1 resultado %CRIT% para agregar 2 resultados %HIT%."
+    },
+    "First Order Courier": {
+      display_name: "Mensajero de la Primera Orden",
+      text: "<i class=\"flavor_text\">La Primera Orden se esconde en bases secretas en sectores discretos de la galaxia, extendiendo lentamente su influencia perniciosa.</i>"
+    },
+    "Agent Terex": {
+      display_name: "Agente Terex",
+      text: "<strong>Preparación:</strong> después de colocar las fuerzas, elige cualquier cantidad de tus mejoras %ILLICIT% equipadas y equípalas en cazas TIE/fo o TIE/sf aliados. Cada nave solo puede recibir 1 mejora %ILLICIT% de esta manera. %LINEBREAK% <strong>Fin de Partida</strong>: devuelve todas las mejoras %ILLICIT% a sus naves de origen."
+    },
+    "Gideon Hask (Xi Shuttle)": {
+      display_name: "Gideon Hask",
+      text: "Mientras tú o una nave aliada pequeña a alcance 0–2 realizan un ataque principal contra un defensor dañado y el atacante ha lanzado 2 dados de ataque o menos, puede ganar 1 ficha de tensión para lanzar 1 dado de ataque adicional."
+    },
+    "Commander Malarus (Xi Shuttle)": {
+      display_name: "Comandante Malarus",
+      text: "Cuando una nave aliada a alcance 0–2 realiza un ataque principal y obtiene al menos 1 resultado en blanco, <b>debe</b> ganar 1 ficha de tensión para volver a lanzar 1 resultado en blanco, si es posible (hazlo antes de la etapa de \"Modificar dados de defensa\"). %LINEBREAK% <i>Errata (1.3.2): Se agregó una precisión en el momento para evitar que el jugador eluda el aspecto negativo de esta capacidad de la nave.</i>"
+    },
+    "Baktoid Drone": {
+      display_name: "Dron baktoide",
+      text: "<i class=\"flavor_text\">Desarrollada tardíamente para la Confederación de Sistemas Independientes, la cañonera droide utiliza repulsores especiales para atacar con agilidad a sus objetivos y lanzar con precisión droides de combate.</i>"
+    },
+    "TransGalMeg Control Link": {
+      display_name: "Enlace de Control TransGalMeg",
+      text: "<strong>Anillo de Acoplamiento Hiperspacial</strong>: 1 Aethersprite Delta-7, Actis Eta-2 o V-wing de clase Nimbus puede acoplarse contigo. %LINEBREAK% Mientras tengas una nave acoplada, ganas la iniciativa de esa nave y su selector de maniobras se asigna a ti. Mientras ejecutas una maniobra, reduce su velocidad a 1. Antes de ejecutar una maniobra avanzada, ejecuta en su lugar una maniobra de detención [%STOP%] blanca y luego puedes pivotar 90° o 180°. %LINEBREAK% Si no tienes ninguna nave acoplada, no se te asigna selector de maniobras y no te activas ni te comprometes."
+    },
+    "Separatist Predator": {
+      display_name: "Depredador Separatista",
+      text: "<strong>Preparación:</strong> después de colocar las fuerzas, asigna el estado <b>Depredador asustadizo</b> a 1 nave enemiga."
+    },
+    "Geonosian Prototype": {
+      display_name: "Prototipo geonosiano",
+      text: "Mientras realizas un ataque %MISSILE% o %CANNON%, puedes quitar 1 ficha de rayo tractor del defensor para volver a lanzar hasta 2 dados de ataque."
+    },
+    "DGS-047": {
+      display_name: "DGS-047",
+      text: "Después de que hayas realizado un ataque, si el defensor está en tu %FRONTARC%, puedes fijarlo. Luego, si el defensor está en tu %BULLSEYEARC%, recibe 1 ficha de tensión."
+    },
+    "DGS-286": {
+      display_name: "DGS-286",
+      text: "Antes de comprometerte, puedes elegir otra nave aliada a alcance 0–1. Esa nave te transfiere 1 ficha de cálculo."
+    },
+    "Onderon Oppressor": {
+      display_name: "Opresor de Onderon",
+      text: "Después de realizar un tonel o un deslizamiento, si estás bajo tensión, gana 1 ficha de cálculo."
+    },
+    "212th Battalion Pilot": {
+      display_name: "Piloto del 212.º Batallón",
+      text: "<i class=\"flavor_text\">Capaz de participar tanto en combates espaciales como en batallas atmosféricas, el transporte TABA/i lleva a las tropas de la República a los campos de batalla de los planetas asediados por los Separatistas.</i>"
+    },
+    '"Hound"': {
+      display_name: "“Sabueso”",
+      text: "Después de que una nave aliada pequeña en tu %SINGLETURRETARC% gane una ficha de tensión o agotamiento, si no tienes ninguna ficha de ese tipo, puedes transferir esa ficha a ti mismo."
+    },
+    '"Warthog"': {
+      display_name: "“Jabalí”",
+      text: "Después de que tú o una nave aliada no limitada a alcance 0–2 sea destruida durante la fase de compromiso, esa nave no se retira hasta el final de esa fase."
+    },
+    '"Hawk"': {
+      display_name: "“Halcón”",
+      text: "Al comienzo de la fase de desenlace, cada nave aliada a alcance 0–1 cuya maniobra revelada tenga velocidad 3–5 puede ganar 1 ficha de tensión para realizar una acción %BARRELROLL% o %BOOST%."
+    },
+    "Carida Academy Cadet": {
+      display_name: "Cadete de la Academia Carida",
+      text: "<i class=\"flavor_text\">En la academia militar de Carida, los cadetes de la Marina Imperial son entrenados para ser implacables y leales, priorizando la victoria sobre la supervivencia de sus propios camaradas.</i>"
+    },
+    "Onyx Squadron Sentry": {
+      display_name: "Centinela del Escuadrón Ónice",
+      text: "<i class=\"flavor_text\">El TIE/rb pesado, a veces apodado \"la bestia\", está diseñado para la versatilidad operativa. Su casco reforzado y su capacidad para acomodar un copiloto droide MGK-300 lo convierten en una excelente nave de patrulla.</i>"
+    },
+    "Lyttan Dree": {
+      display_name: "Lyttan Dree",
+      text: "Mientras una nave aliada a alcance 0–2 realiza un ataque, si estás en el %LEFTARC% o %RIGHTARC% del defensor, el atacante puede volver a lanzar 1 dado de ataque."
+    },
+    '"Rampage"': {
+      display_name: "“Alboroto”",
+      text: "Después de ejecutar una maniobra de velocidad 3–4, puedes elegir una nave situada en tu %SINGLETURRETARC% a alcance 0–1. En ese caso, esa nave gana 1 ficha de tensión o 2 fichas de tensión si estás dañado."
+    },
+    "Fearsome Predator": {
+      display_name: "Depredator Temible",
+      text: "<strong>Configuración</strong>: después de colocar las fuerzas, asigna el estado <b>Presa temible</b> a 1 nave enemiga."
+    },
+    "DIS-347": {
+      display_name: "DIS-347",
+      text: "Al comienzo de la fase de compromiso, puedes fijar un objeto a alcance 1–3 que tenga un fijado aliado."
+    },
+    "DIS-T81": {
+      display_name: "DIS-T81",
+      text: "Mientras te defiendes o realizas un ataque, puedes gastar 1 ficha de cálculo de una nave aliada en el arco de tiro de la nave enemiga para cambiar 1 resultado %FOCUS% en un resultado %EVADE% o %HIT%."
+    },
+    "Phlac-Arphocc Prototype": {
+      display_name: "Prototipo Phlac-Arphocc",
+      text: "Durante la fase de sistema, puedes gastar tu bloqueo en una nave para ver su selector de maniobras."
+    },
+    "Colicoid Interceptor": {
+      display_name: "Interceptor colicoide",
+      text: "<i class=\"flavor_text\">Diseñado por el nido de creación colicoide y ensamblado por Phlac-Arphocc Automata Industries, el procesador heurístico de los Tri-Caza Droides permite a estas temibles naves analizar y adaptarse en tiempo real a las tácticas del oponente.</i>"
+    },
+    "Separatist Interceptor": {
+      display_name: "Interceptor Separatista",
+      text: "<i class=\"flavor_text\">Desplegados tardíamente durante las Guerras Clon, estos cazas agresivos, y los enjambres de droides Buzz que transportan, son una seria amenaza incluso para los pilotos Jedi veteranos.</i>"
+    },
+    "Separatist Racketeer": {
+      display_name: "Chantajista Separatista",
+      text: "<i class=\"flavor_text\">Impulsados por los numerosos estancamientos causados por los Sitios en la Región Exterior, grupos de mercenarios están aprovechando la oportunidad de obtener ganancias gracias a la guerra en curso en toda la galaxia.</i>"
+    },
+    "Boba Fett (Separatist)": {
+      display_name: "Boba Fett",
+      text: "Mientras te defiendes, si no hay otra nave aliada a alcance 0–2, puedes cambiar 1 de tus resultados en blanco por un resultado %FOCUS%."
+    },
+    "Zam Wesell": {
+      display_name: "Zam Wesell",
+      text: "<strong>Configuración</strong>: Pierde 2 %CHARGE%. %LINEBREAK% Durante la fase de sistema, puedes asignarte, boca abajo, 1 de tus estados secretos: <strong>%LINEBREAK% Deberías Agradecerme %LINEBREAK% Deberías Hacer Negocios.</strong>"
+    },
+    "Jango Fett": {
+      display_name: "Jango Fett",
+      text: "Mientras te defiendes o realizas un ataque principal, si la dificultad de tu maniobra revelada es menor que la del enemigo, puedes cambiar 1 de los resultados %FOCUS% del enemigo en blanco."
+    },
+    "Loyalist Volunteer": {
+      display_name: "Voluntario lealista",
+      text: "<i class=\"flavor_text\">El caza estelar Alfa-3 clase Nimbus ensamblado por Kuat Systems Engineering es una elección tanto para pilotos clon como no clon. Las técnicas avanzadas utilizadas para producir sus motores iónicos de precisión a gran escala serán más tarde fundamentales en el desarrollo de las series TIE por Sienar Fleet Systems.</i>"
+    },
+    "Shadow Squadron Escort": {
+      display_name: "Escolta del Escuadrón Sombra",
+      text: "<i class=\"flavor_text\">Durante los últimos meses de las Guerras Clon, las formaciones de clones de élite llevaron a cabo misiones cruciales para el futuro de la República, como proteger la lanzadera personal del Canciller Supremo Palpatine.</i>"
+    },
+    "Wilhuff Tarkin": {
+      display_name: "Wilhuff Tarkin",
+      text: "Durante la fase de sistema, puedes elegir un objeto que hayas fijado, situado a alcance 1–3. Otra nave aliada a alcance 1–3 puede fijar ese objeto."
+    },
+    '"Klick"': {
+      display_name: "“Klick”",
+      text: "Mientras una nave que has fijado, situada a alcance 1–3, se defiende o realiza un ataque, puedes gastar 1 %CHARGE% para evitar la aplicación de bonificaciones de alcance."
+    },
+    '"Contrail"': {
+      display_name: "“Estela”",
+      text: "Mientras te defiendes o realizas un ataque, si la dirección de tu maniobra revelada es la misma que la del enemigo, puedes cambiar 1 de los resultados %FOCUS% del enemigo en blanco."
+    },
+    '"Odd Ball" (V-wing)': {
+      display_name: "“Odd Ball”",
+      text: "Después de haber ejecutado completamente una maniobra roja o realizado una acción roja, si hay una nave enemiga en tu %BULLSEYEARC%, puedes fijar esa nave."
+    },
+    "Jedi General": {
+      display_name: "General Jedi",
+      text: "<i class=\"flavor_text\">Mientras la Guerra de las Guerras Clon azota las filas de la Orden Jedi, aquellos que quedan asumen mayores responsabilidades en el Gran Ejército de la República.</i>"
+    },
+    "Yoda": {
+      display_name: "Yoda",
+      text: "Después de que otra nave aliada a alcance 0–3 gaste al menos 1 %FORCE%, puedes gastar 1 %FORCE%. En ese caso, esa otra nave aliada recupera 1 %FORCE%."
+    },
+    "Shaak Ti": {
+      display_name: "Shaak Ti",
+      text: "Al comienzo de la fase de desenlace, puedes gastar cualquier cantidad de %FORCE% para elegir la misma cantidad de naves aliadas a alcance 0–2. Cada nave elegida no retira 1 ficha de concentración o evasión durante esa fase de desenlace."
+    },
+    "Aayla Secura": {
+      display_name: "Aayla Secura",
+      text: "Mientras una nave enemiga en tu %FRONTARC% a alcance 0–1 realiza un ataque, el defensor puede cambiar 1 resultado en blanco por un resultado %FOCUS%."
+    },
+    "Obi-Wan Kenobi (Eta-2)": {
+      display_name: "Obi-Wan Kenobi",
+      text: "Después de que tú, o una nave aliada <b>Anakin Skywalker</b> a alcance 0–3, hayan ejecutado una maniobra, si hay más naves enemigas que otras naves aliadas a alcance 0–1 de la nave que ejecutó la maniobra, puedes gastar 1 %FORCE%. En ese caso, la nave que ejecutó la maniobra obtiene 1 ficha de concentración."
+    },
+    "Anakin Skywalker (Eta-2)": {
+      display_name: "Anakin Skywalker",
+      text: "Después de que tú, o una nave <b>Obi-Wan Kenobi</b> aliada a alcance 0–3, hayan ejecutado una maniobra, si hay más naves enemigas que otras naves aliadas a alcance 0–1 de la nave que ejecutó la maniobra, puedes gastar 1 %FORCE%. En ese caso, la nave que ejecutó la maniobra retira 1 ficha roja de tu elección."
+    },
+    "Poe Dameron (HoH)": {
+      display_name: "Poe Dameron",
+      text: "Después de que una nave aliada a alcance 0–2 haya realizado una acción durante su activación, puedes gastar 2 %CHARGE%. En ese caso, esa nave aliada puede realizar una acción blanca, considerándola como roja."
+    },
+    "Temmin Wexley (HoH)": {
+      display_name: "Temmin Wexley",
+      text: "Al comienzo de la fase de combate, cada nave aliada Ala-X T-70 a alcance 0–3 puede recibir 1 ficha de tensión para voltear su mejora %CONFIGURATION% equipada. Si lo hace, gana 1 ficha de cálculo."
+    },
+    "Merl Cobben": {
+      display_name: "Merl Cobben",
+      text: "Mientras una nave aliada a alcance 0–2 realiza un ataque principal, si estás en el %BULLSEYEARC% del defensor, este tira 1 dado de defensa menos."
+    },
+    "Suralinda Javos": {
+      display_name: "Suralinda Javos",
+      text: "Después de haber ejecutado parcialmente una maniobra, puedes recibir 1 ficha de tensión para pivotar 90° o 180°."
+    },
+    "Wrobie Tyce": {
+      display_name: "Wrobie Tyce",
+      text: "Después de que hayas defendido a alcance 1, si el atacante ha modificado sus dados, este recibe una ficha de agotamiento."
+    },
+    "Seftin Vanik": {
+      display_name: "Seftin Vanik",
+      text: "Después de realizar una acción %BOOST%, puedes transferir 1 ficha de evasión a una nave aliada a alcance 1."
+    },
+    "Nimi Chireen": {
+      display_name: "Nimi Chireen",
+      text: "Mientras realizas un ataque, si la iniciativa del defensor es mayor que la tuya, puedes cambiar 1 resultado en blanco por un resultado %FOCUS%."
+    },
+    "C'ai Threnalli": {
+      display_name: "C'ai Threnalli",
+      text: "Después de haber ejecutado completamente una maniobra, si te has desplazado a través de una nave aliada, puedes realizar una acción %EVADE%."
+    },
+    "Kanan Jarrus (HWK-290)": {
+      display_name: "Kanan Jarrus",
+      text: "Mientras tú o una nave en tu %SINGLETURRETARC% te defiendes, puedes gastar 1 %FORCE%. En ese caso, el atacante tira 1 dado de ataque menos."
+    },
+    "Leema Kai": {
+      display_name: "Leema Kai",
+      text: "Antes de entrar en combate, si no estás en ningún %FRONTARC% de naves enemigas, puedes fijar una nave enemiga en tu %FULLFRONTARC%."
+    },
+    "Arliz Hadrassian": {
+      display_name: "Arliz Hadrassian",
+      text: "Mientras realizas un ataque %FRONTARC%, si estás dañado, puedes cambiar 1 de tus resultados %FOCUS% por un resultado %CRIT%. %LINEBREAK% Mientras te defiendes, si estás dañado, <b>debes</b> cambiar 1 de tus resultados %FOCUS% por un resultado en blanco (hazlo antes de la etapa de \"Modificar los dados de defensa\"). %LINEBREAK% <i>Errata (RR: 1.3.2): Añadida precisión de timing para evitar que el jugador eluda el aspecto negativo de esta capacidad de nave.</i>"
+    },
+    "Padric": {
+      display_name: "Padric",
+      text: "Después de que una nave que hayas fijado explote, cada nave enemiga a alcance 0–1 de esa nave recibe 1 ficha de tensión."
+    },
+    "Jinata Security Officer": {
+      display_name: "Oficial de Seguridad Jinata",
+      text: "<i class=\"flavor_text\">Con base en el antiguo bastión Imperial de Vardos, la Seguridad Jinata continúa sus esfuerzos de reconstrucción en el planeta devastado, colaborando con el programa de rearme de la Primera Orden.</i>"
+    },
+    "Amaxine Warrior": {
+      display_name: "Guerrero Amaxine",
+      text: "<i class=\"flavor_text\">Décadas después de la Batalla de Endor, antiguos Imperiales siguen operando dentro de la Nueva República. Muchos se han unido a organizaciones paramilitares como los Guerreros Amaxines, que se apropian de tradiciones y culturas marciales para difundir la ideología odiosa de la Primera Orden entre los individuos más influenciables.</i>"
+    },
+    "Gamut Key": {
+      display_name: "Gamut Key",
+      text: "Al comienzo de la fase de desenlace, puedes gastar 2 %CHARGE% para seleccionarte a ti mismo o a una nave en tu %SINGLETURRETARC% que tenga al menos 1 ficha circular. Durante la fase de desenlace, las fichas circulares no se quitan de la nave seleccionada."
+    },
+    "Tápusk": {
+      display_name: "Tápusk",
+      text: "Durante la fase de desenlace, antes de que una nave enemiga en tu %SINGLETURRETARC% recupere 1 %CHARGE% o %FORCE% recurrente, puedes gastar 2 %CHARGE%. En ese caso, esa nave no recupera esa %CHARGE% o %FORCE%."
+    },
+    "Colicoid Destroyer": {
+      display_name: "Destroyer Colicoïde",
+      text: "<i class = flavor_text>Diseñado por el Nido de Creación Colicoïde y equipado con poderosos tentáculos y una perforadora gigante capaz de penetrar cualquier casco, incluyendo los de las naves y los refugios más sólidos, la Clase Tridente es una prueba aterradora de la amenaza que representa la Alianza Separatista.</i>"
+    },
+    "Lawless Pirates": {
+      display_name: "Piratas sin Ley",
+      text: "<i class = flavor_text>La Alianza Separatista ha desarrollado buenas relaciones con algunos mercenarios y grupos criminales, y a medida que la guerra avanza, sus tecnologías a veces caen en manos poco recomendables.</i>"
+    },
+    "Zorii Bliss": {
+      display_name: "Zorii Bliss",
+      text: "Después de que una nave a alcance 1 realice una acción durante su paso de \"Realizar una Acción\", si esa acción está en tu barra de acciones, puedes gastar 1 %CHARGE% para realizar esa acción, considerándola como roja."
+    },
+    "Teza Nasz": {
+      display_name: "Teza Nasz",
+      text: "Mientras una nave aliada a alcance 0-2 efectúa un ataque, si el defensor tiene una nave que es aliada al atacante en cada uno de sus arcos laterales [%LEFTARC% y %RIGHTARC%], el atacante puede volver a tirar 1 dado de ataque."
+    },
+    "Wilsa Teshlo": {
+      display_name: "Wilsa Teshlo",
+      text: "Después de que hayas realizado un ataque, si el defensor ha recibido una carta de daño boca arriba, recibe 1 ficha de tensión a menos que elija 1 %CHARGE% no recurrente en 1 de sus mejoras equipadas y la pierda."
+    },
+    "Shasa Zaro": {
+      display_name: "Shasa Zaro",
+      text: "Después de defenderte, puedes elegir una nave aliada en tu %FULLREARARC% a alcance 0-2 y 1 de tus fichas verdes. En ese caso, esa nave recibe una ficha correspondiente."
+    },
+    "Lega Fossang": {
+      display_name: "Lega Fossang",
+      text: "Mientras efectúas un ataque principal o %TURRET%, puedes volver a tirar 1 dado de ataque por cada nave de apoyo aliada o nave calculadora aliada en el arco de ataque."
+    },
+    "Aftab Ackbar": {
+      display_name: "Aftab Ackbar",
+      text: "Después de que hayas realizado una maniobra básica roja o efectuado una acción roja, si tienes exactamente 1 ficha de tensión, puedes recibir 1 ficha de tensión para quitar esa ficha de tensión."
+    },
+    "Corus Kapellim": {
+      display_name: "Corus Kapellim",
+      text: "Antes de entrar en combate, puedes elegir 1 nave en tu arco de tiro a alcance 0-1. En ese caso, transfiere 1 ficha verde de esa nave a ti mismo."
+    },
+    "C'ai Threnalli (Y-Wing)": {
+      display_name: "C'ai Threnalli",
+      text: "Después de haber ejecutado completamente una maniobra, si te has desplazado a través de una nave aliada, puedes realizar una acción %EVADE%."
+    },
+    "New Republic Patrol": {
+      display_name: "Patrulla de la Nueva República",
+      text: "<i class = flavor_text>Diseñado para ser personalizable, el Ala-Y BTA-NR2 es utilizado por muchas organizaciones militares en toda la galaxia para una amplia variedad de tareas, ya sea como vehículo de mantenimiento del orden o como bombardero en tiempos de guerra.</i>"
+    },
+    "Kijimi Spice Runner": {
+      display_name: "Traficante de Especias de Kijimi",
+      text: "<i class = flavor_text>Liderados por Zorii Bliss, los Traficantes de Especias de Kijimi han abandonado sus prácticas de mercenariado para unirse a la lucha contra la Última Orden en la batalla de Exegol.</i>"
+    },
+    "Kylo Ren (TIE Whisper)": {
+      display_name: "Kylo Ren",
+      text: "Antes de que se asigne una carta de daño boca abajo a una nave enemiga en tu %BULLSEYEARC%, puedes gastar 1 %FORCE%. En ese caso, esa carta se asigna boca arriba en su lugar."
+    },
+    '"Wrath"': {
+      display_name: "“Ira”",
+      text: "Después de realizar un ataque %BULLSEYEARC%, si tienes al menos 1 ficha roja u naranja que no sea de bloqueo, puedes realizar un ataque adicional contra un objetivo diferente."
+    },
+    '"Nightfall"': {
+      display_name: "“Ocaso”",
+      text: "Después de haber ejecutado completamente una maniobra o efectuado una acción %BOOST%, cada nave que hayas cruzado recibe 2 fichas de obstrucción."
+    },
+    '"Whirlwind"': {
+      display_name: "“Torbellino”",
+      text: "Antes de entrar en combate, puedes retirar cualquier cantidad de fichas de obstrucción, y luego puedes recibir 1 ficha de concentración por cada nave enemiga que te tenga en su %FRONTARC%."
+    },
+    "709th Legion Ace": {
+      display_name: "As de la 709ª Legión",
+      text: "<i class = flavor_text>Comandada por el Supremo Líder Kylo Ren, la 709ª Legión combate sin piedad ni remordimientos para aplastar a la Resistencia y poner a la galaxia bajo el dominio de la Primera Orden.</i>"
+    },
+    "Red Fury Zealot": {
+      display_name: "Fanático de la Furia Roja",
+      text: "<i class = flavor_text>También conocida como \"Furia Roja\", la 709ª Legión tiene la tarea, dada por el Supremo Líder Kylo Ren, de erradicar a los disidentes en el puesto avanzado de Black Spire.</i>"
+    },
+    '"Breach"': {
+      display_name: "“Brecha”",
+      text: "Después de haber ejecutado completamente una maniobra o efectuado una acción %BOOST%, si te has desplazado a través de una nave enemiga, puedes fijarla."
+    },
+    '"Scorch" (TIE/Se Bomber)': {
+      display_name: "“Scorch”",
+      text: "Mientras una nave aliada a alcance 0-1 efectúa un ataque principal, puede gastar 1 resultado %HIT%. En ese caso, después de defender, el defensor recibe 1 ficha de tensión."
+    },
+    '"Dread"': {
+      display_name: "“Temor”",
+      text: "Después de que hayas recargado, cada nave en tu %BULLSEYEARC% recibe 1 ficha de agotamiento."
+    },
+    '"Grudge"': {
+      display_name: "“Rencor”",
+      text: "Mientras una bomba o mina aliada a alcance 0-2 explota, cada vez que se lancen dados de ataque para resolver su efecto, puedes volver a tirar hasta 1 de esos dados."
+    },
+    "First Order Cadet": {
+      display_name: "Cadete de la Primera Orden",
+      text: "<i class = flavor_text>Los ejercicios en condiciones reales de la Primera Orden están diseñados para eliminar a los débiles, enfatizando el dicho de que solo los fuertes sobreviven.</i>"
+    },
+    "Sienar-Jaemus Test Pilot": {
+      display_name: "Piloto de Prueba Sienar-Jaemus",
+      text: "<i class = flavor_text>Equipado con cuatro cañones láser y sistemas avanzados, el bombardero TIE/se es una nave sorprendentemente maniobrable, transportando un arsenal aterrador capaz de aniquilar a cualquiera que se atreva a desafiar a la Primera Orden.</i>"
+    },
+    "Bodica Venj": {
+      display_name: "Bodica Venj",
+      text: "Después de que otra nave aliada haya defendido, si no estás agotado, puedes realizar un ataque principal adicional contra el atacante. En ese caso, después de realizar ese ataque, obtienes 1 ficha de agotamiento."
+    },
+    "Dirk Ullodin": {
+      display_name: "Dirk Ullodin",
+      text: "Después de haber ejecutado completamente una maniobra roja o realizado una acción roja, puedes fijar un objetivo enemigo en tu %FRONTARC% a alcance 1."
+    },
+    "Fenn Rau (Rebel Fang)": {
+      display_name: "Fenn Rau",
+      text: "Antes de que una nave aliada a alcance 1-2 se active, si hay una nave enemiga en su %FRONTARC% a alcance 1, esa nave aliada puede quitar 1 ficha roja que no sea de bloqueo."
+    },
+    "Clan Wren Volunteer": {
+      display_name: "Voluntario del Clan Wren",
+      text: "Mientras realizas un ataque a alcance 1, si la velocidad de tu maniobra revelada coincide con la de una nave aliada a alcance 1, puedes volver a tirar 1 dado de ataque."
+    },
+    "Moff Gideon": {
+      display_name: "Moff Gideon",
+      text: "Mientras una nave enemiga a alcance 1-3 se defiende, antes de lanzar los dados de ataque, puedes gastar 1 %CHARGE% y elegir una nave aliada a alcance 0-1 del defensor. En ese caso, los dados de defensa no pueden ser modificados durante este ataque y la nave aliada elegida recibe 1 ficha de agotamiento."
+    },
+    "ISB Jingoist": {
+      display_name: "Partidario del ISB",
+      text: "Antes de entrar en combate, puedes elegir una nave enemiga en tu %FRONTARC% a alcance 0-1. En ese caso, esa nave recibe 1 ficha de agotamiento o de estrés (tu elección) a menos que opte por quitar 1 ficha verde."
+    },
+    "Mandalorian Royal Guard": {
+      display_name: "Guardia Real Mandaloriana",
+      text: "Mientras una nave aliada no pequeña se defiende, si estás en el arco de ataque, puedes obtener 1 ficha de agotamiento y 1 ficha de estrés. En ese caso, el defensor puede cambiar 1 resultado en un resultado %EVADE%."
+    },
+    "Bo-Katan Kryze": {
+      display_name: "Bo-Katan Kryze",
+      text: "Antes de que una nave aliada a alcance 0-2 se active, puedes gastar 1 %CHARGE%. En ese caso, esa nave puede obtener 1 ficha de estrés para quitar 1 ficha roja que no sea de estrés o naranja."
+    },
+    "Pre Vizsla": {
+      display_name: "Pre Vizsla",
+      text: "Mientras realizas un ataque, si la iniciativa del defensor es igual o mayor que la tuya, puedes gastar 2 %CHARGE% para lanzar 1 dado adicional."
+    },
+    "Death Watch Warrior": {
+      display_name: "Guerrero de la Guardia de la Muerte",
+      text: "<i class = flavor_text>A pesar del apoyo incierto de los Separatistas, la Death Watch busca restaurar el pasado guerrero y las tradiciones de Mandalore. Extremadamente maniobrable y equipada con una bahía de lanzamiento, la nave Gauntlet es una plataforma excelente para desplegar a estos orgullosos comandos en combate.</i>"
+    },
+    "Bo-Katan Kryze (Republic)": {
+      display_name: "Bo-Katan Kryze",
+      text: "Después de haber ejecutado completamente una maniobra, puedes obtener 1 ficha de agotamiento para elegir un objeto en tu %FRONTARC% a alcance 1-2. En ese caso, otra nave aliada puede realizar una acción %LOCK% para fijar ese objeto."
+    },
+    "Nite Owl Liberator": {
+      display_name: "Libertador de los Búhos Nocturnos",
+      text: "<i class = flavor_text>Siguiendo a Bo-Katan Kryze, antiguos miembros de la Death Watch han rechazado el gobierno de Maul sobre Mandalore y han formado una alianza rebelde con la República. Los cazas Gauntlet mantenidos por los Nite Owl son esenciales para librar la lucha que liberará su mundo.</i>"
+    },
+    "Maul": {
+      display_name: "Maul",
+      text: "Mientras realizas una acción %COORDINATE%, si eliges una nave con una iniciativa menor que la tuya, puedes gastar 1 %FORCE%. En ese caso, considera que esta acción es blanca y puedes coordinar a 1 nave aliada adicional con una iniciativa menor que la tuya; cada nave aliada que coordines de esta manera recibe 1 ficha de estrés."
+    },
+    "Shadow Collective Operator": {
+      display_name: "Operador del Colectivo de Sombras",
+      text: "<i class = flavor_text>Los antiguos soldados de la Death Watch que han jurado lealtad al Señor Maul continúan operando en cazas Gauntlet, usándolos a veces como bombarderos en ataques planificados por Maul.</i>"
+    },
+    "Rook Kast": {
+      display_name: "Rook Kast",
+      text: "Antes de entrar en combate, puedes obtener 1 ficha de agotamiento. Mientras realizas un ataque principal, si estás agotado, puedes cambiar 1 de tus resultados en blanco o %FOCUS% por un resultado %HIT"
+    },
+    "Captain Hark": {
+      display_name: "Capitán Hark",
+      text: "Después de revelar una maniobra [0 %STOP%], si estás equipado con un <b>Ala Pivotante (Abajo)</b>, <b>debes</b> ejecutar una maniobra de derrape [1 %BANKLEFT%] o [1 %BANKRIGHT%] de igual dificultad en su lugar. Después de realizar esta maniobra, <b>debes</b> girar la carta de <b>Ala Pivotante (Abajo)</b> de nuevo."
+    },
+    "Imperial Super Commando": {
+      display_name: "Super Comando Imperial",
+      text: "<i class = flavor_text>Bajo el mando del Virrey Gar Saxon, los guerreros despiadados que antes servían al Señor Maul se han convertido en matones del nuevo orden. La nave Gauntlet Mandaloriana continúa utilizándose como nave de asalto para estos Super Comandos Imperiales.</i>"
+    },
+    "Gar Saxon": {
+      display_name: "Gar Saxon",
+      text: "Mientras una unidad aliada a alcance 0-2 realiza un ataque principal, si el atacante está en el %REARARC% del defensor, puedes gastar 1 %CHARGE%. En ese caso, el atacante lanza 1 dado adicional."
+    },
+    "Mandalorian Resistance Pilot": {
+      display_name: "Piloto de la Resistencia Mandaloriana",
+      text: "<i class = flavor_text>Algunos guerreros Mandalorianos, como los del Clan Kryze, nunca se rindieron y continúan luchando contra el orden colaboracionista del Clan Saxon y sus amos Imperiales. La nave Gauntlet combina potencia de fuego y velocidad, lo que la convierte en la nave ideal para llevar a cabo incursiones.</i>"
+    },
+    '"Chopper" (Gauntlet Fighter)': {
+      display_name: '"Chopper"',
+      text: "Al comienzo de la fase de enfrentamiento, cada nave enemiga a alcance 0 recibe 2 fichas de bloqueo."
+    },
+    "Ezra Bridger (Gauntlet Fighter)": {
+      display_name: "Ezra Bridger",
+      text: "Mientras te defiendes o realizas un ataque, si estás bajo estrés, puedes gastar 1 %FORCE% para cambiar hasta 2 de tus resultados %FOCUS% en resultados %EVADE% o %HIT%."
+    },
+    "Q9-0": {
+      display_name: "Q9-0",
+      text: "Después de realizar completamente una maniobra avanzada, puedes realizar una acción %CALCULATE% o %BARRELROLL%, incluso si estás bajo estrés. En ese caso, obtén 1 ficha de bloqueo."
+    },
+    "The Mandalorian": {
+      display_name: "El Mandaloriano",
+      text: "Mientras te defiendes o realizas un ataque, si estás en el %FRONTARC% a alcance 1-2 de al menos 2 naves enemigas, puedes cambiar 1 de tus resultados en blanco por un resultado %FOCUS%."
+    },
+    "Guild Bounty Hunter": {
+      display_name: "Cazador de Recompensas del Gremio",
+      text: "Mientras realizas un ataque a alcance 1-2, puedes gastar 1 %CHARGE% no recurrente de una de tus mejoras %ILLICIT% equipadas para cambiar 1 resultado %FOCUS% en un resultado %CRIT%."
+    },
+    "Outer Rim Enforcer": {
+      display_name: "Ejecutor de la Región Exterior",
+      text: "<i class = flavor_text>Diseñada como una nave militar, la Nave de Asalto ST-70 es resistente y versátil. Para aquellos que recorren la Región Exterior, la nave puede servir como transporte, nave de combate y hábitat, todo al mismo tiempo.</i>"
+    },
+    "Cad Bane": {
+      text: "Después de realizar un ataque que impactó, puedes gastar 2 %CHARGE% para transferir 1 de tus marcadores naranjas o rojos (que no sean de bloqueo) al defensor."
+    },
+    "Viktor Hel (Rogue)": {
+      display_name: "Viktor Hel",
+      text: "Después de defender, si no lanzaste exactamente 2 dados de defensa, el atacante recibe 1 ficha de tensión."
+    },
+    "Nom Lumb (Rogue)": {
+      display_name: "Nom Lumb",
+      text: "Al comienzo de la fase de enfrentamiento, puedes elegir 1 nave enemiga en tu %FRONTARC%. En ese caso, considera que tu Iniciativa es igual a la de esa nave hasta el final del turno."
+    },
+    "Outer Rim Hunter": {
+      display_name: "Cazador de la Región Exterior",
+      text: "<i class=flavor_text>Cad Bane demostró cuán eficaz es el Caza Clase Rogue, y otros cazadores de recompensas rápidamente adoptaron esta nave, especialmente aquellos que operan en la caótica Región Exterior.</i>"
+    },
+    "Cad Bane (Separatist)": {
+      display_name: "Cad Bane",
+      text: "Durante la fase de enfrentamiento, después de que otra nave a alcance 0–3 sea destruida, puedes gastar 1 %CHARGE% para realizar una acción, incluso si estás bajo estrés."
+    },
+    "IG-101": {
+      display_name: "IG-101",
+      text: "Al comienzo de la fase de sistema, puedes reparar 1 carta de daño boca arriba."
+    },
+    "IG-102": {
+      display_name: "IG-102",
+      text: "Mientras te defiendes, si la iniciativa del atacante es mayor o igual a la tuya, puedes cambiar 1 resultado en blanco por un resultado %FOCUS%."
+    },
+    "IG-111": {
+      display_name: "IG-111",
+      text: "Después de realizar un ataque que haya fallado, puedes elegir 1 nave enemiga en tu %BULLSEYEARC% y ganar 1 ficha de agotamiento. En ese caso, la nave elegida sufre 1 daño %HIT%."
+    },
+    "MagnaGuard Protector": {
+      display_name: "Protector MagnaGuardia",
+      text: "<strong>Preparación:</strong> después de colocar las fuerzas, asigna el estado <b>Bajo Protección</b> a 1 nave aliada que no sea <b>Protector MagnaGuardia</b>."
+    },
+    "MagnaGuard Executioner": {
+      display_name: "Verdugo MagnaGuardia",
+      text: "<i class = flavor_text>Además de proteger a los líderes Separatistas, a veces los droides MagnaGuardia son desplegados en los ágiles Cazas Clase Rogue para eliminar a sus enemigos.</i>"
+    },
+    '"Knack"': {
+      display_name: "“Knack”",
+      text: "Después de que hayas sido destruido, puedes elegir una nave aliada sin restricciones a alcance 0-2 y asignarle una de tus mejoras %TALENT% equipadas. %LINEBREAK% <strong>Fin de Partida:</strong> devuelve todas las mejoras %TALENT% a sus naves originales."
+    },
+    '"Slider"': {
+      display_name: "“Slider”",
+      text: "Cuando reveles una maniobra [2 %BANKLEFT%] o [2 %BANKRIGHT%], puedes gastar 2 %CHARGE% para ejecutarla como una maniobra de derrape."
+    },
+    '"Hawk" (Z-95)': {
+      display_name: "“Hawk”",
+      text: "Al comienzo de la fase de desenlace, cada nave aliada a alcance 0–1 cuya maniobra revelada tenga velocidad 3–5 puede ganar 1 ficha de agotamiento para realizar una acción %BARRELROLL% o %BOOST%."
+    },
+    '"Warthog" (Z-95)': {
+      display_name: "“Jabalí”",
+      text: "Después de que tú o una nave aliada sin restricciones a alcance 0–2 haya sido destruida durante la fase de enfrentamiento, esta nave no se retira hasta el final de esa fase."
+    },
+    '"Boost"': {
+      display_name: "“Empuje”",
+      text: "Al comienzo de la fase de enfrentamiento, si hay una nave aliada a alcance 0-1 con una maniobra revelada de color azul, puedes realizar una acción %BOOST%."
+    },
+    '"Drift"': {
+      display_name: "“Deriva”",
+      text: "Mientras una nave aliada a alcance 0-1 realiza un ataque, si tienes exactamente 1 ficha roja no de bloqueo o exactamente 1 ficha naranja, esa nave aliada puede volver a lanzar 1 dado de ataque."
+    },
+    '"Stub"': {
+      display_name: "“Stub”",
+      text: "Mientras te defiendes, si la velocidad de tu maniobra revelada es par, lanza 1 dado de defensa adicional. %LINEBREAK% Mientras realizas un ataque principal, si la velocidad de tu maniobra revelada es impar, lanza 1 dado de ataque adicional."
+    },
+    '"Killer"': {
+      display_name: "“Asesino”",
+      text: "Mientras realizas un ataque, si el defensor tiene 2 puntos de casco o menos, puedes lanzar 1 dado de ataque adicional. En ese caso, gana 1 ficha de agotamiento después de lanzar los dados de ataque."
+    },
+    "Reaper Squadron Scout": {
+      display_name: "Explorador del Escuadrón Segador",
+      text: "<i class = flavor_text>A pesar de la reputación poco favorable del Clon Z-95, el Escuadrón Segador se ha convertido en legendario gracias a las habilidades de sus pilotos para manejar hábilmente esta nave en una variedad de enfrentamientos, como el choque sobre Castilon.</i>"
+    },
+    "7th Sky Corps Pilot": {
+      display_name: "Piloto del Séptimo Cuerpo Celestial",
+      text: "<i class = flavor_text>El Caza Z-95 ha ganado el respeto de los pilotos gracias a su versatilidad y resistencia. La versión de los soldados clon de la República está diseñada para adaptarse a las habilidades únicas de sus pilotos.</i>"
+    },
+    "Garven Dreis (BoY)": {
+      display_name: "Garven Dreis",
+      text: "Después de gastar una ficha de concentración, puedes elegir 1 nave aliada a alcance 1–3. Esa nave gana 1 ficha de concentración."
+    },
+    "Luke Skywalker (BoY)": {
+      display_name: "Luke Skywalker",
+      text: "Después de ser declarado como defensor durante un ataque, puedes recuperar 1 %FORCE%."
+    },
+    "Jek Porkins (BoY)": {
+      display_name: "Jek Porkins",
+      text: "Después de ganar una ficha de estrés, puedes lanzar 1 dado de ataque para quitarla. Si obtienes un resultado %HIT%, sufres 1 daño %HIT%."
+    },
+    "Biggs Darklighter (BoY)": {
+      display_name: "Biggs Darklighter",
+      text: "Durante la fase de sistema, puedes elegir 1 nave aliada a alcance 1. En ese caso, considera tu iniciativa igual a la de la nave elegida hasta el final de la fase de activación."
+    },
+    "Wedge Antilles (BoY)": {
+      display_name: "Wedge Antilles",
+      text: "Mientras realizas un ataque principal, si hay otra nave aliada en el arco de tiro del defensor, el defensor lanza 1 dado de defensa menos."
+    },
+    "Han Solo (BoY)": {
+      display_name: "Han Solo",
+      text: "Después de realizar un ataque que haya impactado, puedes gastar 1 %CHARGE% para realizar una acción %COORDINATE%."
+    },
+    '"Dutch" Vander (BoY)': {
+      display_name: "“Dutch” Vander",
+      text: "Después de gastar un objetivo fijado durante un ataque, elige 1 nave aliada a alcance 1-3. La nave elegida puede fijar al defensor."
+    },
+    "Dex Tiree (BoY)": {
+      display_name: "Dex Tiree",
+      text: "Mientras te defiendes, si hay al menos 1 otra nave aliada a alcance 0–1, puedes lanzar 1 dado de defensa adicional."
+    },
+    '"Pops" Krail (BoY)': {
+      display_name: "“Pops” Krail",
+      text: "Mientras realizas un ataque %SINGLETURRETARC%, puedes volver a lanzar hasta 2 dados de ataque."
+    },
+    "Hol Okand (BoY)": {
+      display_name: "Hol Okand",
+      text: "Durante la fase de sistema, si no hay ninguna nave enemiga a alcance 1-2, puedes recuperar 1 %CHARGE% en cualquier mejora."
+    },
+    "Darth Vader (BoY)": {
+      display_name: "Darth Vader (BoY)",
+      text: "Mientras realizas un ataque, puedes gastar 1 %FORCE% para cambiar 1 resultado en blanco por un resultado %HIT%."
+    },
+    '"Backstabber" (BoY)': {
+      display_name: "“Apuñalador”",
+      text: "Mientras realizas un ataque principal, si un aliado <b>Darth Vader</b> o <b>\"Mauler\" Mithel</b> está en tu arco %LEFTARC% o %RIGHTARC% a alcance 0-1, lanza 1 dado de ataque adicional."
+    },
+    '"Mauler" Mithel (BoY)': {
+      display_name: "“Mauler” Mithel",
+      text: "Mientras realizas un ataque principal, si un aliado <b>Darth Vader</b> o <b>\"Backstabber\"</b> está en tu arco %LEFTARC% o %RIGHTARC% a alcance 0-1, lanza 1 dado de ataque adicional."
+    },
+    '"Dark Curse" (BoY)': {
+      display_name: "“Maldición Oscura”",
+      text: "Mientras te defiendes, los dados del atacante no pueden ser modificados."
+    },
+    '"Wampa" (BoY)': {
+      display_name: "“Wampa”",
+      text: "Mientras realizas un ataque, puedes gastar 1 %CHARGE% para lanzar 1 dado de ataque adicional. %LINEBREAK% Después de defenderte, pierdes 1 %CHARGE%."
+    },
+    "Iden Versio (BoY)": {
+      display_name: "Iden Versio",
+      text: "Antes de que una nave caza TIE aliada a alcance 0–1 sufra daño, puedes gastar 2 %CHARGE%. En ese caso, previene 1 daño."
+    },
+    "Sigma 4 (BoY)": {
+      display_name: "Sigma 4",
+      text: "Después de realizar una acción %BARRELROLL%, puedes gastar 1 %CHARGE% para realizar una acción %BOOST%."
+    },
+    "Sigma 5 (BoY)": {
+      display_name: "Sigma 5",
+      text: "Después de realizar un ataque que haya impactado, puedes gastar 1 %CHARGE% para realizar una acción %EVADE%."
+    },
+    "Sigma 6 (BoY)": {
+      display_name: "Sigma 6",
+      text: "Después de haber ejecutado completamente una maniobra a velocidad 3–5, puedes gastar 1 %CHARGE% para realizar una acción %SLAM%."
+    },
+    "Sigma 7 (BoY)": {
+      display_name: "Sigma 7",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para fijar un objetivo enemigo a alcance 0–1."
+    },
+    "Anakin Skywalker (SoC)": {
+      display_name: "Anakin Skywalker",
+      text: "Después de que tú o una nave caza TIE aliada a alcance 0–3 haya ejecutado completamente una maniobra, si hay más naves enemigas que otras naves aliadas a alcance 0–1 de la nave que ejecutó la maniobra, puedes gastar 1 %FORCE%. En ese caso, la nave que ejecutó la maniobra puede realizar una acción %BARRELROLL%."
+    },
+    "Obi-Wan Kenobi (SoC)": {
+      display_name: "Obi-Wan Kenobi",
+      text: "Después de que tú o una nave caza TIE aliada a alcance 0–3 haya ejecutado completamente una maniobra, si hay más naves enemigas que otras naves aliadas a alcance 0–1 de la nave que ejecutó la maniobra, puedes gastar 1 %FORCE%. En ese caso, la nave que ejecutó la maniobra puede realizar una acción %BOOST%."
+    },
+    "Shaak Ti (SoC)": {
+      display_name: "Shaak Ti",
+      text: "Al comienzo de la fase de desenlace, puedes realizar una acción %COORDINATE% violeta, incluso si estás bajo estrés. %LINEBREAK% Después de que realices una acción %COORDINATE%, si la nave elegida tiene la capacidad <b>Nacido para Esto</b>, puedes coordinar una nave adicional."
+    },
+    '"Odd Ball" (SoC)': {
+      display_name: "“Odd Ball”",
+      text: "Después de ejecutar completamente una maniobra roja o realizar una acción roja, puedes elegir una nave aliada a alcance 0–3 y una nave enemiga a alcance 0–1. La nave aliada elegida fija como objetivo a la nave enemiga."
+    },
+    '"Wolffe" (SoC)': {
+      display_name: "“Wolffe”",
+      text: "Mientras realizas un ataque principal %FRONTARC%, puedes gastar 1 %CHARGE% para volver a lanzar 1 dado de ataque. %LINEBREAK% Mientras realizas un ataque principal %REARARC%, puedes recuperar 1 %CHARGE% para lanzar 1 dado de ataque adicional."
+    },
+    '"Jag" (SoC)': {
+      display_name: "“Jag”",
+      text: "Después de que una nave aliada a alcance 0–2 en tu %LEFTARC% o %RIGHTARC% haya realizado un ataque, si no estás bajo tensión, puedes fijar como objetivo al defensor."
+    },
+    '"Contrail" (SoC)': {
+      display_name: "“Contrail”",
+      text: "Mientras te defiendes o realizas un ataque, si la dirección de tu maniobra revelada es la misma que la del caza enemigo, puedes cambiar 1 de los resultados %FOCUS% del caza enemigo por un resultado en blanco."
+    },
+    '"Klick" (SoC)': {
+      display_name: "“Klick”",
+      text: "Mientras una nave que has fijado a alcance 1–3 se defiende o realiza un ataque, puedes gastar 1 %CHARGE% para evitar la aplicación de bonificaciones de alcance."
+    },
+    '"Kickback" (SoC)': {
+      display_name: "“Kickback”",
+      text: "Después de realizar una acción %BARRELROLL%, puedes realizar una acción %LOCK% roja. En ese caso, antes de que realices la acción %LOCK%, puedes ganar 1 ficha de tensión para que se considere blanca."
+    },
+    '"Axe" (SoC)': {
+      display_name: "“Axe”",
+      text: "Después de realizar un ataque, puedes elegir otra nave aliada con la capacidad <b>Nacido para Esto</b> a alcance 0–2 y en tu %LEFTARC% o %RIGHTARC%. La nave elegida fija como objetivo al defensor."
+    },
+    "Count Dooku (SoC)": {
+      display_name: "Conde Dooku (SoC)",
+      text: "Durante un ataque, antes de que una nave a alcance 0–2 lance los dados de ataque o defensa, si todas tus %FORCE% están activas, puedes gastar 1 %FORCE% y nombrar un resultado. Si la tirada no contiene el resultado nombrado, la nave debe cambiar 1 dado por ese resultado."
+    },
+    "DBS-32C (SoC)": {
+      display_name: "DBS-32C (SoC)",
+      text: "Después de realizar una acción %CALCULATE%, puedes gastar 1 %CHARGE% para realizar una acción %JAM%."
+    },
+    "DBS-404 (SoC)": {
+      display_name: "DBS-404 (SoC)",
+      text: "Mientras realizas un ataque a alcance 1, <b>debes</b> lanzar 1 dado adicional. Después de que el ataque impacte, sufres 1 daño %CRIT%."
+    },
+    "Baktoid Prototype (SoC)": {
+      display_name: "Prototipo Baktoid (SoC)",
+      text: "Mientras realizas un ataque especial, si una nave aliada con la capacidad de nave <b>Cálculos en Red</b> tiene un objetivo fijado en el defensor, puedes ignorar los requisitos %FOCUS%, %CALCULATE% o %LOCK% de ese ataque."
+    },
+    "DIS-347 (SoC)": {
+      display_name: "DIS-347 (SoC)",
+      text: "Al comienzo de la fase de enfrentamiento, puedes fijar un objeto a alcance 1–3 que tenga un objetivo fijado aliado."
+    },
+    "DIS-T81 (SoC)": {
+      display_name: "DIS-T81 (SoC)",
+      text: "Mientras te defiendes o realizas un ataque, puedes volver a lanzar cualquier cantidad de tus dados. Luego, si te defiendes, obtienes 1 ficha de tensión por cada dado lanzado nuevamente. Si has atacado, obtienes 1 ficha de agotamiento por cada dado que hayas lanzado nuevamente en su lugar."
+    },
+    "Phlac-Arphocc Prototype (SoC)": {
+      display_name: "Prototipo Phlac-Arphocc (SoC)",
+      text: "Al comienzo de la fase de enfrentamiento, si hay una nave enemiga en tu %BULLSEYEARC%, obtienes una ficha de cálculo."
+    },
+    "DFS-081 (SoC)": {
+      display_name: "DFS-081 (SoC)",
+      text: "Mientras te defiendes, puedes gastar 1 %CHARGE% y 1 ficha de cálculo para cancelar un resultado %HIT%."
+    },
+    "DFS-311 (SoC)": {
+      display_name: "DFS-311 (SoC)",
+      text: "Al comienzo de la fase de enfrentamiento, puedes transferir 1 de tus fichas de cálculo a otra nave aliada a alcance 0–3."
+    },
+    "Haor Chall Prototype (SoC)": {
+      display_name: "Prototipo Haor Chall (SoC)",
+      text: "Después de que una nave enemiga en tu %BULLSEYEARC% haya declarado un objetivo escenario o cualquier otra nave aliada como defensor, puedes realizar una acción %CALCULATE% o %LOCK%."
+    },
+    "Corran Horn (X-Wing)": {
+      display_name: "Corran Horn",
+      text: "Después de que hayas declarado el defensor de un ataque, si tienes un objetivo fijado en el defensor, una nave aliada que tenga un objetivo fijado en ti puede transferir su objetivo al defensor."
+    },
+    "Wes Janson": {
+      display_name: "Wes Janson",
+      text: "Después de realizar un ataque, puedes gastar 1 %CHARGE% para asignar 1 ficha de interferencia al defensor. %LINEBREAK% Después de defenderte, puedes gastar 1 %CHARGE% para asignar 1 ficha de interferencia al atacante."
+    },
+    "Tycho Celchu": {
+      display_name: "Tycho Celchu",
+      text: "Mientras tengas 2 fichas de tensión o menos, puedes realizar acciones, incluso si estás bajo tensión."
+    },
+    "Keo Venzee": {
+      display_name: "Keo Venzee",
+      text: "Si no tienes ninguna %FORCE% activa, después de revelar una maniobra de ala de giro (%BANKLEFT% o %BANKRIGHT%) o una maniobra de giro (%TURNLEFT% o %TURNRIGHT%), puedes aumentar la dificultad de la maniobra. En ese caso, ejecutas la maniobra como un deslizamiento y recuperas 1 %FORCE%."
+    },
+    '"Pops" Krail': {
+      display_name: "“Pops” Krail",
+      text: "Después de realizar completamente una maniobra blanca, puedes elegir una nave aliada a alcance 0-1. En ese caso, puede realizar una acción %FOCUS%."
+    },
+    "Flight Leader Ubbel": {
+      display_name: "Líder de Vuelo Ubbel",
+      text: "Después de que una nave aliada a alcance 0-2 se defienda y reciba una carta de daño, puedes realizar un ataque adicional contra el atacante."
+    },
+    "Juno Eclipse": {
+      display_name: "Juno Eclipse",
+      text: "Después de realizar una acción, puedes realizar una acción %BOOST% roja."
+    },
+    "Second Sister": {
+      display_name: "Segunda Hermana",
+      text: "Mientras realizas un ataque, después de la etapa \"Neutralizar resultados\", si el ataque impacta, puedes gastar 2 %FORCE%. En ese caso, cambia todos tus resultados %HIT% por resultados %CRIT%."
+    },
+    "Magna Tolvan": {
+      display_name: "Magna Tolvan",
+      text: "Mientras tengas 2 fichas de tensión o menos, puedes realizar acciones blancas, incluso si estás bajo tensión. %LINEBREAK% Después de ganar una ficha de tensión, puedes realizar una acción blanca, si es posible."
+    },
+    "Yrica Quell": {
+      display_name: "Yrica Quell",
+      text: "Después de realizar completamente una maniobra, puedes fijar un objetivo en una nave enemiga que esté en tu %BULLSEYEARC%."
+    },
+    "Poe Dameron (YT-1300)": {
+      display_name: "Poe Dameron",
+      text: "Antes de ejecutar una maniobra, puedes gastar 1 %CHARGE%. En ese caso, ignora los obstáculos durante esa maniobra. %LINEBREAK% Después de ejecutar completamente una maniobra, puedes gastar 2 %CHARGE% para realizar una acción %BOOST% blanca o una acción %BARRELROLL% roja. Luego, si realizaste una acción %BARRELROLL% roja, revela 1 carta de daño, si es posible."
+    },
+    "Lando Calrissian (Resistance)": {
+      display_name: "Lando Calrissian",
+      text: "Después de realizar completamente una maniobra roja o realizar una acción roja, puedes gastar cualquier cantidad de %CHARGE% para elegir una cantidad igual de naves aliadas a alcance 0-2. Las naves elegidas pueden realizar una acción, incluso si están bajo tensión."
+    },
+    "Venisa Doza": {
+      display_name: "Venisa Doza",
+      text: "Mientras realizas un ataque %TORPEDO% o %MISSILE%, puedes considerar el requisito previo %FRONTARC% como %REARARC% para ese ataque. En ese caso, considera el rango como 1-2."
+    },
+    "Zay Versio": {
+      display_name: "Zay Versio",
+      text: "Mientras te defiendes, si el atacante está dañado, puedes volver a lanzar 1 dado de defensa."
+    },
+    "Taka Jamoreesa": {
+      display_name: "Taka Jamoreesa",
+      text: "Después de realizar una acción de burla, <b>debes</b> asignar 1 ficha de burla a otra nave a alcance 0-1 de la nave burlada, si es posible."
+    },
+    "Hondo Ohnaka": {
+      display_name: "Hondo Ohnaka",
+      text: "<strong>Acción:</strong> Elige 2 naves no inmensas a alcance 0-3 de ti que no sean aliadas entre sí. Cada nave elegida puede realizar una acción que esté en tu barra de acciones, incluso si está bajo tensión, en el orden que elijas. Luego, gana 1 ficha de cálculo."
+    },
+    "Tor Phun": {
+      display_name: "Tor Phun",
+      text: "Después de que hayas realizado un ataque y el defensor haya sido destruido, puedes realizar una acción, incluso si estás bajo tensión. Luego, puedes ganar 2 fichas de tensión para realizar un ataque adicional."
+    },
+    "Durge": {
+      display_name: "Durge",
+      text: "Mientras te defiendes, después de la etapa \"Neutralizar Resultados\", si hay más resultados %HIT%/%CRIT% que tus %SHIELD% activas, puedes cambiar 1 resultado %HIT% por un resultado %CRIT% y anular 1 resultado %HIT%."
+    },
+    "Doctor Aphra": {
+      display_name: "Doctora Aphra",
+      text: "Antes de que te involucres, puedes gastar 1 ficha verde y 1 %CHARGE%. En ese caso, puedes elegir otra nave a alcance 0-1 que no esté bajo tensión. La nave elegida obtiene 1 ficha de tensión."
+    },
+    "Lapin": {
+      display_name: "Lapin",
+      text: "Mientras te defiendes o realizas un ataque, los dados del vehículo enemigo no pueden ser modificados si está bajo tensión."
+    },
+    "Volan Das": {
+      display_name: "Volan Das",
+      text: "Después de completar completamente una maniobra roja, puedes elegir una nave enemiga a alcance 1. La nave elegida recibe 1 ficha de tensión y puedes quitar 1 ficha de tensión."
+    },
+    "Aurra Sing": {
+      display_name: "Aurra Sing",
+      text: "Antes de que te involucres, puedes gastar 1 %FORCE% para elegir 2 naves enemigas a alcance 0-1. Transfiere cualquier cantidad de fichas naranjas y rojas entre estas 2 naves."
+    },
+    "Durge (Separatist)": {
+      display_name: "Durge",
+      text: "Cuando deberías ser destruido, puedes gastar 1 %CHARGE% para revelar todas tus cartas de daño boca abajo. En ese caso, descarta cada carta \"Golpe Crítico\" y cada carta de daño con la característica \"Piloto\", y luego repara todas tus cartas de daño boca arriba."
+    },
+    "The Iron Assembler": {
+      display_name: "El Ensamblador de Hierro",
+      text: "Después de que una nave aliada a alcance 0-1 haya completado su etapa \"Ejecutar maniobra\", puedes gastar 1 %CHARGE%. En ese caso, esa nave aliada puede reparar 1 daño si está a alcance 0 de un asteroide o nube de escombros."
+    },
+    "Kelrodo-Ai Holdout": {
+      display_name: "Resistencia de Kelrodo-Ai",
+      text: "Después de ser destruido, puedes transferir todos tus bloqueos y fichas verdes a otro <b>•••Resistencia de Kelrodo-Ai</b> aliado a alcance 0-3."
+    },
+    "Adi Gallia": {
+      display_name: "Adi Gallia",
+      text: "Mientras te defiendes a alcance de ataque 1, puedes gastar 1 %FORCE%. En ese caso, el atacante no puede aplicar el bono de alcance. %LINEBREAK% Mientras realizas un ataque contra un defensor a alcance de ataque 3, puedes gastar 1 %FORCE%. En ese caso, el defensor no puede aplicar el bono de alcance."
+    },
+    "Adi Gallia (Delta-7B)": {
+      display_name: "Adi Gallia",
+      text: "Mientras te defiendes a alcance de ataque 1, puedes gastar 1 %FORCE%. En ese caso, el atacante no puede aplicar el bono de alcance. %LINEBREAK% Mientras realizas un ataque contra un defensor a alcance de ataque 3, puedes gastar 1 %FORCE%. En ese caso, el defensor no puede aplicar el bono de alcance."
+    },
+    '"Sicko"': {
+      display_name: "“Sicko”",
+      text: "Después de realizar una maniobra básica, puedes asignarte el estado <b>•Maniobra Enfermiza</b>."
+    },
+    "Kit Fisto": {
+      display_name: "Kit Fisto",
+      text: "Mientras otra nave aliada se defiende, si el atacante está en su %BULLSEYEARC%, puedes gastar 1 %FORCE% para cambiar 1 de los resultados en blanco del defensor por un resultado %FOCUS%."
+    },
+    '"Slammer"': {
+      display_name: "“Slammer”",
+      text: "Después de completar completamente una maniobra, puedes gastar 2 %CHARGE% para realizar una acción %SLAM%, incluso si estás bajo tensión."
+    },
+    "Gavyn Sykes": {
+      display_name: "Gavyn Sykes",
+      text: "Mientras te defiendes o realizas un ataque, si la velocidad de tu maniobra revelada es mayor que la del vehículo enemigo, puedes volver a lanzar tus resultados en blanco."
+    },
+    "Lieutenant Galek": {
+      display_name: "Teniente Galek",
+      text: "Después de que otra nave aliada a alcance 0-2 sea destruida, puedes realizar una acción %COORDINATE% incluso si estás bajo tensión. %LINEBREAK% Mientras coordinas, la nave que elegiste solo puede realizar una acción si esa acción también está en tu barra de acciones."
+    },
+    "Jul Jerjerrod": {
+      display_name: "Jul Jerjerrod",
+      text: "Después de realizar una acción %BOOST%, puedes gastar 1 %CHARGE% para quitar 1 ficha roja no de bloqueo o naranja."
+    },
+    "DT-798": {
+      display_name: "DT-798",
+      text: "Mientras realizas un ataque principal, si no estás bajo tensión, puedes ganar 1 ficha de tensión para lanzar 1 dado adicional."
+    },
+    "Lin Gaava": {
+      display_name: "Lin Gaava",
+      text: "<strong>Preparación:</strong> después de colocar las fuerzas, asigna el estado <b>•••Borracho de Velocidad</b> a ti mismo y a un máximo de 2 otros Chasseurs TIE/fo o TIE/sf aliados que no estén equipados con mejoras %MODIFICATION%."
+    },
+    "Agent Tierny": {
+      display_name: "Agente Tierny",
+      text: "<strong>Preparación:</strong> después de colocar las fuerzas, <b>debes</b> asignar el estado <b>•Confianza Rota</b> a una nave enemiga."
+    },
+    "Darth Vader (SSP)": {
+      display_name: "Darth Vader (Estándar)",
+      text: "Después de realizar una acción, puedes gastar 1 %FORCE% para realizar una acción."
+    },
+    "Maarek Stele (SSP)": {
+      display_name: "Maarek Stele (Estándar)",
+      text: "Mientras realizas un ataque, si una carta de daño debe ser asignada boca arriba al defensor, en su lugar roba 3 cartas de daño, elige 1 y descarta las demás."
+    },
+    "Captain Jonus (SSP)": {
+      display_name: "Capitán Jonus (Estándar)",
+      text: "Mientras una nave aliada a alcance 0–1 realiza un ataque %TORPEDO% o %MISSILE%, puede volver a lanzar hasta 2 dados de ataque."
+    },
+    "Tomax Bren (SSP)": {
+      display_name: "Tomax Bren (Estándar)",
+      text: "Después de realizar una acción %RELOAD%, puedes recuperar 1 %CHARGE% de una de tus cartas de mejora %TALENT% equipadas."
+    },
+    '"Night Beast" (SSP)': {
+      display_name: "“Bestia Nocturna” (Estándar)",
+      text: "Después de completar completamente una maniobra azul, puedes realizar una acción %FOCUS%."
+    },
+    "Valen Rudor (SSP)": {
+      display_name: "Valen Rudor (Estándar)",
+      text: "Después de que una nave aliada a alcance 0–1 se defienda (después de la resolución de daños, si los hay), puedes realizar una acción."
+    },
+    "Iden Versio (SSP)": {
+      display_name: "Iden Versio (Estándar)",
+      text: "Antes de que un caza TIE/ln aliado a alcance 0–1 sufra 1 o más daños, puedes gastar 1 %CHARGE%. En ese caso, previene ese(s) daño(s)."
+    },
+    "Luke Skywalker (SSP)": {
+      display_name: "Luke Skywalker (Estándar)",
+      text: "Después de que hayas sido declarado como defensor (antes de que se lancen los dados), puedes recuperar 1 %FORCE%."
+    },
+    "Jek Porkins (SSP)": {
+      display_name: "Jek Porkins (Estándar)",
+      text: "Después de ganar una ficha de tensión, puedes lanzar 1 dado de ataque para eliminarla. En un resultado %HIT%, sufres 1 daño %HIT%."
+    },
+    '"Dutch" Vander (SSP)': {
+      display_name: "“Dutch” Vander (Estándar)",
+      text: "Después de realizar la acción %LOCK%, puedes elegir una nave aliada a alcance 1–3. Esa nave puede bloquear el objetivo que bloqueaste, ignorando las restricciones de alcance."
+    },
+    "Horton Salm (SSP)": {
+      display_name: "Horton Salm (Estándar)",
+      text: "Mientras realizas un ataque, puedes volver a lanzar 1 dado de ataque por cada otra nave aliada a alcance 0–1 del defensor."
+    },
+    "Arvel Crynyd (SSP)": {
+      display_name: "Arvel Crynyd (Estándar)",
+      text: "Si debes fallar una acción %BOOST% que te llevaría a superponerte a otra nave, resuélvela como si estuvieras ejecutando parcialmente una maniobra en su lugar. %LINEBREAK% Mientras realizas un ataque a alcance de ataque 0, considéralo como un ataque a alcance de ataque 1."
+    },
+    "Jake Farrell (SSP)": {
+      display_name: "Jake Farrell (Estándar)",
+      text: "Después de realizar una acción %BARRELROLL% o %BOOST%, puedes elegir una nave aliada a alcance 0–1. Esa nave puede realizar una acción %FOCUS%."
+    },
+    "Shara Bey (SSP)": {
+      display_name: "Shara Bey (Estándar)",
+      text: "Mientras te defiendes o realizas un ataque principal, puedes gastar 1 bloqueo que tengas en la nave enemiga para agregar 1 resultado %FOCUS% a los resultados de tus dados."
+    },
+    '"Deathfire" (TBE)': {
+      display_name: "“Deathfire” (TBE)",
+      text: "Después de completar completamente una maniobra de velocidad 3-5, si no has soltado o lanzado una bomba en esta ronda, puedes gastar 2 %CHARGE% para soltar o lanzar una bomba utilizando la plantilla [3 %STRAIGHT%]."
+    },
+    "Major Rhymer (TBE)": {
+      display_name: "Major Rhymer (TBE)",
+      text: "Mientras realizas un ataque %TORPEDO%, si el defensor está en tu %BULLSEYEARC%, cambia un resultado %FOCUS% por un resultado %CRIT%."
+    },
+    "Captain Jonus (TBE)": {
+      display_name: "Capitán Jonus (TBE)",
+      text: "Después de soltar o lanzar un dispositivo, obtén un marcador de evasión."
+    },
+    "Tomax Bren (TBE)": {
+      display_name: "Tomax Bren (TBE)",
+      text: "Después de realizar una acción %BARRELROLL%, puedes gastar 2 %CHARGE%. Si lo haces, obtén un marcador de concentración."
+    },
+    "Dash Rendar (YLF)": {
+      display_name: "Dash Rendar (YLF)",
+      text: "Durante la fase de combate, ignora los efectos de los obstáculos que estés superponiendo."
+    },
+    "Dash Rendar (YLF-SL)": {
+      display_name: "Dash Rendar (YLF-SL)",
+      text: "Después de obtener un marcador rojo debido a la superposición de un obstáculo o el desplazamiento a través de un obstáculo, puedes transferir ese marcador rojo a una nave aliada a alcance 0–1."
+    },
+    "Dash Rendar (Scum)": {
+      display_name: "Dash Rendar",
+      text: "Después de obtener un marcador rojo debido a la superposición de un obstáculo o el desplazamiento a través de un obstáculo, puedes transferir ese marcador rojo a una nave aliada a alcance 0–1."
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo” (YLF)",
+      text: "Después de defender o realizar un ataque, si has gastado un marcador de cálculo, obtén 1 marcador de cálculo."
+    },
+    '"Leebo" (YLF-SL)': {
+      display_name: "“Leebo” (YLF-SL)",
+      text: "Al final de la fase de combate, puedes gastar un marcador de cálculo para bloquear una nave enemiga a alcance 2–3."
+    },
+    '"Leebo" (Scum)': {
+      display_name: "“Leebo”",
+      text: "Al final de la fase de combate, puedes gastar un marcador de cálculo para bloquear una nave enemiga a alcance 2–3."
     }
   };
   upgrade_translations = {
@@ -7297,17 +8533,17 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Esclavo I",
       text: "<i>Sólo Escoria</i>%LINEBREAK%Después de que reveles una maniobra de giro (%TURNLEFT% o %TURNRIGHT%) o de inclinación (%BANKLEFT% o %BANKRIGHT%), puedes establecer en tu selector la maniobra con la misma velocidad que la actual y la dirección opuesta.%LINEBREAK%Añádete un espacio %TORPEDO%."
     },
-    "Virago": {
-      display_name: "Virago",
-      text: "Durante la fase Final, puedes gastar 1&nbsp;%CHARGE% para realizar 1 acción %BOOST% roja.%LINEBREAK%Añádete el espacio %MODIFICATION%."
-    },
     "Soulless One": {
       display_name: "Soulless One",
       text: "While you defend, if the attacker is outside your firing arc, you may reroll 1 defense die."
     },
+    "Virago": {
+      display_name: "Virago",
+      text: "Durante la fase Final, puedes gastar 1%CHARGE% para realizar 1 acción %BOOST% roja.%LINEBREAK%Añádete el espacio %MODIFICATION%."
+    },
     "Ablative Plating": {
       display_name: "Blindaje ablativo",
-      text: "<i>Sólo nave grande o nave mediana</i>%LINEBREAK%Antes de que vayas a sufrir daño causado por un obstáculo o por la detonación de una bomba aliada, puedes gastar 1&nbsp;%CHARGE%. Si lo haces, evitas sufrir 1 de ese daño."
+      text: "<i>Sólo nave grande o nave mediana</i>%LINEBREAK%Antes de que vayas a sufrir daño causado por un obstáculo o por la detonación de una bomba aliada, puedes gastar 1%CHARGE%. Si lo haces, evitas sufrir 1 de ese daño."
     },
     "Admiral Sloane": {
       display_name: "Admiral Sloane",
@@ -7315,7 +8551,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Adv. Proton Torpedoes": {
       display_name: "Torpedos de protones avanzados",
-      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1&nbsp;%CHARGE%. Cambia 1 resultado %HIT% por un resultado %CRIT%."
+      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1%CHARGE%. Cambia 1 resultado %HIT% por un resultado %CRIT%."
     },
     "Advanced Optics": {
       display_name: "Sensores ópticos avanzados",
@@ -7331,7 +8567,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Afterburners": {
       display_name: "Postquemadores",
-      text: "<i>Sólo nave pequeña</i>%LINEBREAK%Después de que ejecutes completamente una maniobra de velocidad 3-5, puedes gastar 1&nbsp;%CHARGE% para realizar una acción %BOOST%, incluso mientras estás bajo tensión."
+      text: "<i>Sólo nave pequeña</i>%LINEBREAK%Después de que ejecutes completamente una maniobra de velocidad 3-5, puedes gastar 1%CHARGE% para realizar una acción %BOOST%, incluso mientras estás bajo tensión."
     },
     "Agent Kallus": {
       display_name: "Agent Kallus",
@@ -7341,9 +8577,21 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Artillero ágil",
       text: "Durante la fase Final, puedes reorientar tu indicador %SINGLETURRETARC%."
     },
+    "Ahsoka Tano": {
+      display_name: "Ahsoka Tano",
+      text: "Después de ejecutar una maniobra, puedes gastar 1 %FORCE% y elegir una nave aliada en tu arco de fuego a alcance 1-3. En ese caso, esa nave puede realizar una acción %FOCUS% roja, incluso si está bajo tensión."
+    },
+    "Amilyn Holdo": {
+      display_name: "Amilyn Holdo",
+      text: "Antes de entrar en combate, puedes elegir otra nave aliada a alcance 1-2. Puedes transferir a esa nave 1 ficha de un tipo que no posea. Esa nave puede transferirte 1 ficha de un tipo que no poseas."
+    },
+    "Angled Deflectors": {
+      display_name: "Deflectores Orientables",
+      text: "<i class=flavor_text>Los cazas suelen contar con un control manual para orientar los escudos, lo que aumenta la protección en la parte delantera o trasera. Sin embargo, hacerlo así expone la nave si la vigilancia del piloto disminuye.</i>"
+    },
     "Autoblasters": {
       display_name: "Cañones bláster automáticos",
-      text: "<strong>Ataque:</strong>Si el defensor está en tu %BULLSEYEARC%, tiras 1 dado adicional. Durante el paso de \"Neutralizar resultados\", si no estás en el %FRONTARC% del defensor, los resultados %EVADE% no anulan los resultados %CRIT%."
+      text: "<strong>Ataque:</strong>Si el defensor está en tu %BULLSEYEARC%, tiras 1 dado adicional. Durante el paso de “Neutralizar los resultados”, si no estás en el %FRONTARC% del defensor, los resultados %EVADE% no anulan los resultados %CRIT%."
     },
     "BB Astromech": {
       display_name: "Astromecánico BB",
@@ -7383,7 +8631,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Bomblet Generator": {
       display_name: "Generador de minibombas",
-      text: "<strong>Bomba</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1&nbsp;%CHARGE% para soltar una Minibomba utilizando la plantilla [1&nbsp;%STRAIGHT%].%LINEBREAK%Al comienzo de la fase de Activación, puedes gastar 1 escudo para recuperar 2&nbsp; %CHARGE%."
+      text: "<strong>Bomba</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1%CHARGE% para soltar una Minibomba utilizando la plantilla [1%STRAIGHT%].%LINEBREAK%Al comienzo de la fase de Activación, puedes gastar 1 escudo para recuperar 2&nbsp; %CHARGE%."
     },
     "Bossk": {
       display_name: "Bossk",
@@ -7401,6 +8649,14 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "C-3PO",
       text: "Mientras realizas una coordinación, puedes elegir naves aliadas que tengas más allá de alcance 2 si dichas naves tienen %CALCULATE% en su barra de acciones.%LINEBREAK%Después de que realices la acción %CALCULATE% o %COORDINATE%, recibes 1 ficha de Cálculos."
     },
+    "C-3PO (Republic)": {
+      display_name: "C-3PO",
+      text: "Mientras te defiendes, si tienes un cálculo, puedes volver a lanzar 1 dado de defensa.%LINEBREAK%Después de realizar una acción %CALCULATE%, gana 1 ficha de cálculo."
+    },
+    "C1-10P": {
+      display_name: "C1-10P",
+      text: "<strong>C1-10P:</strong><strong>Configuración:</strong> Debe estar equipado con esta cara visible.%LINEBREAK%Después de ejecutar completamente una maniobra, puedes gastar 1 %CHARGE% para realizar una acción %EVADE% roja, incluso si estás bajo tensión.%LINEBREAK>En la fase final, si esta carta no tiene fichas activas, dala la vuelta.%LINEBREAK%<strong>C1-10P (Errático)</strong>%LINEBREAK>Después de ejecutar completamente una maniobra, <b>debes</b> elegir una nave a alcance 0-1. Esa nave recibe 1 ficha de obstrucción.%LINEBREAK><i>Errata (1.4): agregado \"completamente\"</i>"
+    },
     "Cad Bane": {
       display_name: "Cad Bane",
       text: "<i>Sólo Escoria</i>%LINEBREAK%Después de que sueltes o lances un dispositivo, puedes realizar una acción %BOOST% roja."
@@ -7417,13 +8673,13 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Cassian Andor",
       text: "<i>Sólo Rebelde</i>%LINEBREAK%Durante la fase de Sistemas, puedes elegir 1 nave enemiga que tengas a alcance 1-2 y decir en voz alta una dirección y velocidad, y luego mirar el selector de esa nave. Si tanto la dirección como la velocidad de la nave elegida coinciden con las que tú has dicho, puedes cambiar la maniobra que tienes establecida en tu selector.%LINEBREAK%"
     },
-    "Chewbacca (Scum)": {
-      display_name: "Chewbacca (Scum)",
-      text: "<i>Sólo Escoria</i>%LINEBREAK%Al comienzo de la fase Final, puedes gastar 1 ficha de Concentración para reparar 1 de tus cartas de Daño boca arriba."
+    "Chancellor Palpatine": {
+      display_name: "Canciller Palpatine",
+      text: "<strong>Canciller Palpatine:</strong>%LINEBREAK><strong>Configuración:</strong> Debe estar equipado con esta cara visible.%LINEBREAK>Después de defenderte, si el atacante está a alcance 0-2, puedes gastar 1 %FORCE%. En ese caso, el atacante recibe 1 ficha de tensión.%LINEBREAK>Durante la fase final, puedes darle la vuelta a esta carta.%LINEBREAK><strong>Darth Sidious:</strong>%LINEBREAK>Después de realizar una acción %COORDINATE% violeta, la nave que coordinaste recibe 1 ficha de tensión. Luego, recibe 1 ficha de concentración o recupera 1 %FORCE%."
     },
     "Chewbacca": {
       display_name: "Chewbacca",
-      text: "<i>Sólo Rebelde</i>%LINEBREAK%Al comienzo de la fase de Enfrentamiento, puedes gastar 2&nbsp;%CHARGE% para reparar 1 carta de Daño boca arriba."
+      text: "Al comienzo de la fase de Enfrentamiento, puedes gastar 2 %CHARGE% para reparar 1 carta de Daño boca arriba."
     },
     "Chewbacca (Scum)": {
       display_name: "Chewbacca",
@@ -7431,7 +8687,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Chewbacca (Resistance)": {
       display_name: "Chewbacca",
-      text: "<strong>Setup:</strong> Lose 1 %CHARGE%.%LINEBREAK%After a friendly ship at range 0-3 is dealt 1 damage card, recover 1 %CHARGE%.%LINEBREAK%While you perform an attack, you may spend 2 %CHARGE% to change 1 %FOCUS% result to a %CRIT% result."
+      text: "<strong>Preparación:</strong> Pierdes 1 %CHARGE%.%LINEBREAK>Después de que se le haya asignado una carta de daño a una nave aliada a alcance 0-3, recupera 1 %CHARGE%.%LINEBREAK>Mientras realizas un ataque, puedes gastar 2 %CHARGE% para cambiar 1 resultado %FOCUS% en un resultado %CRIT%."
     },
     "Ciena Ree": {
       display_name: "Ciena Ree",
@@ -7443,19 +8699,27 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Cloaking Device": {
       display_name: "Dispositivo de camuflaje",
-      text: "<i>Sólo nave pequeña o nave mediana</i>%LINEBREAK%<strong>Acción:</strong> Gasta 1&nbsp;%CHARGE% para realizar una acción %CLOAK%.%LINEBREAK%Al comienzo de la fase de Planificación, tira 1 dado de ataque, Si sacas un resultado %FOCUS%, desactiva el camuflaje o descarta tu ficha de Camuflaje.%LINEBREAK%"
+      text: "<i>Sólo nave pequeña o nave mediana</i>%LINEBREAK%<strong>Acción:</strong> Gasta 1%CHARGE% para realizar una acción %CLOAK%.%LINEBREAK%Al comienzo de la fase de Planificación, tira 1 dado de ataque, Si sacas un resultado %FOCUS%, desactiva el camuflaje o descarta tu ficha de Camuflaje.%LINEBREAK%"
     },
     "Clone Commander Cody": {
       display_name: "Comandante clon Cody",
       text: "Después de que efectúes un ataque que falle, si 1 o más resultados %HIT%/%CRIT% fueron neutralizados, el defensor recibe 1 ficha de Sobresfuerzo."
     },
+    "Cluster Mines": {
+      display_name: "Mines Groupées",
+      text: "<strong>Mina</strong>%LINEBREAK%Durante la fase de Sistema, puedes gastar 1 %CHARGE% para soltar un conjunto de minas agrupadas utilizando la plantilla [1 %STRAIGHT%].%LINEBREAK%La %CHARGE% de esta carta no puede ser recuperada."
+    },
     "Cluster Missiles": {
       display_name: "Misiles de racimo",
-      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1&nbsp;%CHARGE%. Después de este ataque, puedes efectuar este ataque como un ataque adicional contra un objetivo diferente que esté situado a alcance 0-1 del defensor, ignorando el requisito %LOCK%."
+      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1%CHARGE%. Después de este ataque, puedes efectuar este ataque como un ataque adicional contra un objetivo diferente que esté situado a alcance 0-1 del defensor, ignorando el requisito %LOCK%."
+    },
+    "Coaxium Hyperfuel": {
+      display_name: "Hypercombustible de Coaxio",
+      text: "Puedes realizar la acción de <SLAM>, incluso si estás bajo tensión. En ese caso, sufre 1 daño %CRIT% a menos que reveles una de tus cartas de daño.%LINEBREAK%Después de haber ejecutado parcialmente una maniobra, puedes exponer una de tus cartas de daño o sufrir 1 daño %CRIT% para realizar una acción de <SLAM>."
     },
     "Collision Detector": {
       display_name: "Detector de colisiones",
-      text: "Mientras realizas un impulso o un tonel volado, eres capaz de moverte pasando a través de obstáculos y solaparte con ellos.%LINEBREAK%Después de que pases a través de un obstáculo o te solapes con uno, puedes gastar 1&nbsp;%CHARGE% para ignorar sus efectos hasta el final de la ronda."
+      text: "Mientras realizas un impulso o un tonel volado, eres capaz de moverte pasando a través de obstáculos y solaparte con ellos.%LINEBREAK%Después de que pases a través de un obstáculo o te solapes con uno, puedes gastar 1%CHARGE% para ignorar sus efectos hasta el final de la ronda."
     },
     "Composure": {
       display_name: "Sangre fría",
@@ -7463,11 +8727,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Concussion Missiles": {
       display_name: "Misiles de impacto",
-      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1&nbsp;%CHARGE%. Después de que este ataque impacte, toda nave que esté situada a alcance 0-1 del defensor expone 1 de sus cartas de Daño."
+      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1%CHARGE%. Después de que este ataque impacte, toda nave que esté situada a alcance 0-1 del defensor expone 1 de sus cartas de Daño."
     },
     "Conner Nets": {
       display_name: "Redes Conner",
-      text: "<strong>Mina</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1&nbsp;%CHARGE% para soltar una Red Conner utilizando la plantilla [1&nbsp;%STRAIGHT%].%LINEBREAK%Las %CHARGE% de esta carta no pueden recuperarse."
+      text: "<strong>Mina</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1%CHARGE% para soltar una Red Conner utilizando la plantilla [1%STRAIGHT%].%LINEBREAK%Las %CHARGE% de esta carta no pueden recuperarse."
     },
     "Contraband Cybernetics": {
       display_name: "Ciberimplantes ilícitos",
@@ -7479,7 +8743,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Crack Shot": {
       display_name: "Tiro certero",
-      text: "Mientras efectúas un ataque principal, si el defensor está en tu %BULLSEYEARC%, antes del paso de “Neutralizar los resultados”, puedes gastar 1&nbsp;%CHARGE% para anular 1 resultado %EVADE%."
+      text: "Mientras efectúas un ataque principal, si el defensor está en tu %BULLSEYEARC%, antes del paso de “Neutralizar los resultados”, puedes gastar 1%CHARGE% para anular 1 resultado %EVADE%."
     },
     "DRK-1 Probe Droids": {
       display_name: "DRK-1 Probe Droids",
@@ -7487,11 +8751,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Daredevil": {
       display_name: "Temerario",
-      text: "<i>Necesita %BOOST%</i>%LINEBREAK%<i>Sólo nave pequeña</i>%LINEBREAK%Mientras realizas una acción %BOOST% blanca, puedes considerarla como si fuera roja para usar la plantilla [1&nbsp;%TURNLEFT%] o [1&nbsp;%TURNRIGHT%] en vez de una de las plantillas normales para esta acción."
+      text: "<i>Necesita %BOOST%</i>%LINEBREAK%<i>Sólo nave pequeña</i>%LINEBREAK%Mientras realizas una acción %BOOST% blanca, puedes considerarla como si fuera roja para usar la plantilla [1%TURNLEFT%] o [1%TURNRIGHT%] en vez de una de las plantillas normales para esta acción."
     },
     "Darth Vader": {
       display_name: "Darth Vader",
-      text: "<i>Sólo Imperio</i>%LINEBREAK%Al comienzo de la fase de Enfrentamiento, puedes elegir 1 nave que tengas en tu arco de fuego y a alcance 0-2 y gastar 1&nbsp;%FORCE%. Si lo haces, esa nave sufre 1 de daño %HIT% a menos que elija retirar 1 ficha verde."
+      text: "<i>Sólo Imperio</i>%LINEBREAK%Al comienzo de la fase de Enfrentamiento, puedes elegir 1 nave que tengas en tu arco de fuego y a alcance 0-2 y gastar 1%FORCE%. Si lo haces, esa nave sufre 1 de daño %HIT% a menos que elija retirar 1 ficha verde."
     },
     "Deadman's Switch": {
       display_name: "Dispositivo de represalia",
@@ -7519,7 +8783,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Dengar": {
       display_name: "Dengar",
-      text: "<i>Sólo Escoria</i>%LINEBREAK%Después de que te defiendas, si el atacante está en tu arco de fuego, puedes gastar 1&nbsp;%CHARGE%. Si lo haces, tira 1 dado de ataque a menos que el defensor elija retirar 1 ficha verde. Si sacas un resultado %HIT% o %CRIT%, el atacante sufre 1 de daño %HIT%."
+      text: "<i>Sólo Escoria</i>%LINEBREAK%Después de que te defiendas, si el atacante está en tu arco de fuego, puedes gastar 1%CHARGE%. Si lo haces, tira 1 dado de ataque a menos que el defensor elija retirar 1 ficha verde. Si sacas un resultado %HIT% o %CRIT%, el atacante sufre 1 de daño %HIT%."
+    },
+    "Deuterium Power Cells": {
+      display_name: "Células de energía de deuterio",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% y ganar 1 marcador de desarme para recuperar 1 %SHIELD%.%LINEBREAK%Antes de que ganes un marcador que no sea un marcador de bloqueo, si no estás bajo tensión, puedes gastar 1 %CHARGE% para ganar 1 marcador de tensión en su lugar."
     },
     "Diamond-Boron Missiles": {
       display_name: "Misiles de diamante-boro",
@@ -7529,13 +8797,13 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Director Krennic",
       text: "<i>Añade %LOCK%</i>%LINEBREAK%<i>Sólo Imperio</i>%LINEBREAK%<strong>Preparación:</strong> Antes de desplegar las fuerzas, asigna el Estado <strong>Prototipo optimizado</strong> a otra nave aliada."
     },
-    "Discord Missiles": {
-      display_name: "Misiles desguazadores",
-      text: "Al comienzo de la fase de Enfrentamiento, puedes gastar 1 ficha de Cálculos y 1 %CHARGE% para lanzar 1 enjambre de droides zumbadores utilizando la plantilla [3 %BANKLEFT%], [3 %STRAIGHT%], o [3 %BANKRIGHT%].%LINEBREAK% Las %CHARGE% de esta carta no pueden recuperarse."
-    },
     "Dorsal Turret": {
       display_name: "Torreta dorsal",
       text: "<i>Añade %ROTATEARC%</i>%LINEBREAK%<strong>Ataque</strong>"
+    },
+    "Electro-Proton Bomb": {
+      display_name: "Bomba de electroprotones",
+      text: "<strong>Bomba</strong>%LINEBREAK%Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar una Bomba Electro-Protónica utilizando la plantilla [1 %STRAIGHT%]. Luego, coloca 1 marcador de cebo en este dispositivo.%LINEBREAK%La %CHARGE% de esta carta no se puede recuperar."
     },
     "Electronic Baffle": {
       display_name: "Regulador electrónico",
@@ -7547,7 +8815,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Emperor Palpatine": {
       display_name: "Emperador Palpatine",
-      text: "<i>Sólo Imperio</i>%LINEBREAK%Mientras otra nave aliada se defiende o efectúa un ataque, puedes gastar 1&nbsp;%FORCE% para modificar 1 de sus dados como si esa nave hubiera gastado 1&nbsp;%FORCE%."
+      text: "<i>Sólo Imperio</i>%LINEBREAK%Mientras otra nave aliada se defiende o efectúa un ataque, puedes gastar 1%FORCE% para modificar 1 de sus dados como si esa nave hubiera gastado 1%FORCE%."
     },
     "Energy-Shell Charges": {
       display_name: "Cargas de energía concentrada",
@@ -7587,7 +8855,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Fifth Brother": {
       display_name: "Quinto Hermano",
-      text: "<i>Sólo Imperio</i>%LINEBREAK%Mientras efectúas un ataque, puedes gastar 1&nbsp;%FORCE% para cambiar 1 de tus resultados %FOCUS% por un resultado %CRIT%."
+      text: "<i>Sólo Imperio</i>%LINEBREAK%Mientras efectúas un ataque, puedes gastar 1%FORCE% para cambiar 1 de tus resultados %FOCUS% por un resultado %CRIT%."
     },
     "Finn": {
       display_name: "Finn",
@@ -7597,16 +8865,21 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Sistema de control de disparo",
       text: "Mientras efectúas un ataque, si tienes al defensor fijado como blanco, puedes volver a tirar 1 dado de ataque. Si lo haces, no puedes gastar tu Blanco fijado durante este ataque."
     },
+    "Foresight": {
+      display_name: "Intuición premonitoria",
+      text: "Después de que una nave enemiga haya realizado una maniobra, puedes gastar 1 %FORCE% para llevar a cabo este ataque contra ella como un ataque adicional.%LINEBREAK%<strong>Ataque:</strong> Puedes cambiar 1 resultado %FOCUS% a un resultado %HIT%; tus dados no pueden ser modificados de otra manera."
+    },
     "Freelance Slicer": {
       display_name: "Pirata informático independiente",
       text: "Mientras te defiendes, antes de que se tiren los dados de ataque, puedes gastar un Blanco fijado que tengas sobre el atacante para tirar 1 dado de ataque. Si lo haces, el atacante recibe 1 ficha de Interferencia. Luego, si has sacado un resultado %HIT% o %CRIT%, recibes 1 ficha de Interferencia."
     },
     "GA-97": {
+      display_name: "GA-97",
       text: "<strong>Preparación:</strong> Antes de desplegar las fuerzas, puedes gastar 3-5 %CHARGE%.  Si lo haces, elige otra nave aliada y asígnale el Estado <strong>Es la Resistencia</strong>."
     },
     'GNK "Gonk" Droid': {
       display_name: "Droide GNK “Gonk”",
-      text: "<strong>Preparación:</strong> Pierdes 1 %CHARGE%.%LINEBREAK%<strong>Acción:</strong> Recupera 1&nbsp;%CHARGE%.%LINEBREAK%<strong>Acción:</strong> Gasta 1&nbsp;%CHARGE% para recuperar 1 escudo."
+      text: "<strong>Preparación:</strong> Pierdes 1 %CHARGE%.%LINEBREAK%<strong>Acción:</strong> Recupera 1%CHARGE%.%LINEBREAK%<strong>Acción:</strong> Gasta 1%CHARGE% para recuperar 1 escudo."
     },
     "General Grievous": {
       display_name: "General Grievous",
@@ -7618,19 +8891,23 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Grand Inquisitor": {
       display_name: "Gran Inquisidor",
-      text: "<i>Sólo Imperio</i>%LINEBREAK%Después de que una nave enemiga que tienes a alcance 0-2 revele su selector, puedes gastar 1&nbsp;%FORCE% para realizar 1 acción blanca que figure en tu barra de acciones, considerando esa acción como si fuera roja."
+      text: "<i>Sólo Imperio</i>%LINEBREAK%Después de que una nave enemiga que tienes a alcance 0-2 revele su selector, puedes gastar 1%FORCE% para realizar 1 acción blanca que figure en tu barra de acciones, considerando esa acción como si fuera roja."
     },
     "Grand Moff Tarkin": {
       display_name: "Gran Moff Tarkin",
-      text: "<i>Necesita %LOCK% o <r>%LOCK%</r></i>%LINEBREAK%<i>Sólo Imperio</i>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 2&nbsp;%CHARGE%. Si lo haces, toda nave aliada puede obtener un Blanco fijado sobre una nave que tengas fijada como blanco."
+      text: "<i>Necesita %LOCK% o <r>%LOCK%</r></i>%LINEBREAK%<i>Sólo Imperio</i>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 2%CHARGE%. Si lo haces, toda nave aliada puede obtener un Blanco fijado sobre una nave que tengas fijada como blanco."
     },
     "Grappling Struts": {
       display_name: "Puntales de agarre",
       text: "Cerrada:%LINEBREAK%<strong>Preparación:</strong> Equipa esta carta con este lado boca arriba.%LINEBREAK%Mientras ejecutas una maniobra, si te solapas con un asteroide o con desechos espaciales y hay 1 o menos otras naves aliadas a alcance 0 de ese obstáculo, puedes darle la vuelta a esta carta. Si lo haces, no sufres los efectos de solapar el asteroide o desechos espaciales.%LINEBREAK% Abierta:%LINEBREAK%Ignoras los obstáculos que tienes a alcance 0. No puedes ejecutar la acción  %BARRELROLL%. Después de que reveles tu selector, si la maniobra revelada es distinta a [2%STRAIGHT%] y estás a alcance 0 de un asteroide o desechos espaciales, omite tu paso de \"Ejecutar maniobra\" y retira 1 ficha de Tensión. Si la maniobra revelada es hacia la izquierda o hacia la derecha, gira tu nave 90º hacia esa dirección. Después de que ejecutes una maniobra, dale la vuelta a esta carta.%LINEBREAK%<i>Errata (ya que las reglas hacen referencia a 1.4): texto actualizado para que funcione según lo previsto</i>"
     },
+    "Gravitic Deflection": {
+      display_name: "Desvío gravítico",
+      text: "Mientras te defiendes, puedes volver a lanzar 1 dado de defensa por cada nave remolcada en el arco de ataque."
+    },
     "Greedo": {
       display_name: "Greedo",
-      text: "<i>Sólo Escoria</i>%LINEBREAK%Mientras efectúas un ataque, puedes gastar 1&nbsp;%CHARGE% para cambiar 1 resultado %HIT% por un resultado %CRIT%.%LINEBREAK%Mientras te defiendes, si tu %CHARGE% está activa, el atacante puede cambiar 1 resultado %HIT% por un resultado %CRIT%."
+      text: "<i>Sólo Escoria</i>%LINEBREAK%Mientras efectúas un ataque, puedes gastar 1%CHARGE% para cambiar 1 resultado %HIT% por un resultado %CRIT%.%LINEBREAK%Mientras te defiendes, si tu %CHARGE% está activa, el atacante puede cambiar 1 resultado %HIT% por un resultado %CRIT%."
     },
     "Han Solo": {
       display_name: "Han Solo",
@@ -7666,7 +8943,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Homing Missiles": {
       display_name: "Misiles rastreadores",
-      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1&nbsp;%CHARGE%. Después de que declares quién es el defensor, éste puede elegir sufrir 1 de daño %HIT%. Si lo hace, omites los pasos de “Dados de ataque” y “Dados de defensa” y el ataque se considera que ha impactado."
+      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1%CHARGE%. Después de que declares quién es el defensor, éste puede elegir sufrir 1 de daño %HIT%. Si lo hace, omites los pasos de “Dados de ataque” y “Dados de defensa” y el ataque se considera que ha impactado."
     },
     "Hotshot Gunner": {
       display_name: "Artillero habilidoso",
@@ -7683,10 +8960,6 @@ exportObj.cardLoaders['Español'] = function() {
     "IG-88D": {
       display_name: "IG-88D",
       text: "<i>Añade %CALCULATE%</i>%LINEBREAK%<i>Sólo Escoria</i>%LINEBREAK%Posees la capacidad especial de piloto de cada otra nave aliada que tenga la mejora <strong>IG-2000</strong>.%LINEBREAK%Después de que realices una acción %CALCULATE%, recibes 1 ficha de Cálculos."
-    },
-    "Ion Bombs": {
-      display_name: "Ion Bombs",
-      text: "<strong>Bomba</strong>%LINEBREAK% Durante la fase de Sistemas, puedes gastar 1 %CHARGE% para soltar una Bomba de iones utilizando la plantilla [1 %STRAIGHT%]."
     },
     "ISB Slicer": {
       display_name: "Técnico en guerra electrónica de la OSI",
@@ -7716,6 +8989,10 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Intimidación",
       text: "Mientras una nave enemiga que tienes a alcance 0 se defiende, esa nave tira 1 dado de defensa menos."
     },
+    "Ion Bombs": {
+      display_name: "Bombas de iones",
+      text: "<strong>Bomba</strong>%LINEBREAK% Durante la fase de Sistemas, puedes gastar 1 %CHARGE% para soltar una Bomba de iones utilizando la plantilla [1 %STRAIGHT%]."
+    },
     "Ion Cannon": {
       display_name: "Cañón de iones",
       text: "<strong>Ataque:</strong> Si este ataque impacta, gasta 1 resultado %HIT% o %CRIT% para provocar que el defensor sufra 1 de daño %HIT%. Todos los resultados %HIT%/%CRIT% restantes infligen fichas de Iones en vez de daño."
@@ -7726,11 +9003,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Ion Missiles": {
       display_name: "Misiles de iones",
-      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1&nbsp;%CHARGE%. Si este ataque impacta, gasta 1 resultado %HIT% o %CRIT% para provocar que el defensor sufra 1 de daño %HIT%. Todos los resultados %HIT%/%CRIT% restantes infligen fichas de Iones en vez de daño."
+      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1%CHARGE%. Si este ataque impacta, gasta 1 resultado %HIT% o %CRIT% para provocar que el defensor sufra 1 de daño %HIT%. Todos los resultados %HIT%/%CRIT% restantes infligen fichas de Iones en vez de daño."
     },
     "Ion Torpedoes": {
       display_name: "Torpedos de iones",
-      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1&nbsp;%CHARGE%. Si este ataque impacta, gasta 1 resultado %HIT% o %CRIT% para provocar que el defensor sufra 1 de daño %HIT%. Todos los resultados %HIT%/%CRIT% restantes infligen fichas de Iones en vez de daño."
+      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1%CHARGE%. Si este ataque impacta, gasta 1 resultado %HIT% o %CRIT% para provocar que el defensor sufra 1 de daño %HIT%. Todos los resultados %HIT%/%CRIT% restantes infligen fichas de Iones en vez de daño."
     },
     "Jabba the Hutt": {
       display_name: "Jabba el hutt",
@@ -7748,20 +9025,33 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Jyn Erso",
       text: "<i>Sólo Rebelde</i>%LINEBREAK%Si una nave aliada que tienes a alcance 0-3 va a recibir una ficha de Concentración, en vez de eso puede recibir 1 ficha de Evasión."
     },
+    "K-2SO": {
+      display_name: "K-2SO",
+      text: "Durante la fase de sistema, puedes elegir una nave aliada a alcance 0-3. Esa nave recibe 1 ficha de cálculo y 1 ficha de tensión."
+    },
     "K2-B4": {
       display_name: "K2-B4",
       text: "Mientras una nave aliada que tienes a alcance 0-3 se defiende, esa nave puede gastar 1 ficha de Cálculos. Si lo hace, añade 1 resultado %EVADE% a menos que el atacante elija recibir 1 ficha de Sobresfuerzo."
     },
-    "Kaydel Connix": {
-      text: "Después de que reveles tu selector, puedes establecer en él una maniobra básica que tenga un valor de velocidad inmediatamente superior al de la actual. Mientras ejecutas esa maniobra, incrementa su dificultad."
-    },
     "Kanan Jarrus": {
       display_name: "Kanan Jarrus",
-      text: "<i>Sólo Rebelde</i>%LINEBREAK%Después de que una nave aliada que tengas a alcance 0-2 ejecute completamente una maniobra blanca, puedes gastar 1&nbsp;%FORCE% para retirar 1 ficha de Tensión de esa nave."
+      text: "<i>Sólo Rebelde</i>%LINEBREAK%Después de que una nave aliada que tengas a alcance 0-2 ejecute completamente una maniobra blanca, puedes gastar 1%FORCE% para retirar 1 ficha de Tensión de esa nave."
+    },
+    "Kaydel Connix": {
+      display_name: "Kaydel Connix",
+      text: "Después de que reveles tu selector, puedes establecer en él una maniobra básica que tenga un valor de velocidad inmediatamente superior al de la actual. Mientras ejecutas esa maniobra, incrementa su dificultad."
+    },
+    "Kaz's Fireball": {
+      display_name: "Fireball de Kaz",
+      text: "<strong>Preparación:</strong> cuando resuelvas <strong>Explosion en Vol</strong>, puedes buscar y elegir una carta de daño del mazo con la característica <strong>Vaisseau</strong>; en su lugar, esa carta se te asigna. Luego, baraja el mazo de daño. %LINEBREAK%Puedes realizar acciones de cartas de daño, incluso si estás ionizado."
     },
     "Ketsu Onyo": {
       display_name: "Ketsu Onyo",
       text: "<i>Sólo Escoria</i>%LINEBREAK%Al comienzo de la fase Final, puedes elegir 1 nave enemiga que tengas en tu arco de fuego a alcance 0-2. Si lo haces, esa nave no retira sus fichas de Campo de tracción."
+    },
+    "Korr Sella": {
+      display_name: "Korr Sella",
+      text: "Después de haber realizado completamente una maniobra azul, retira todos tus marcadores de tensión."
     },
     "Kraken": {
       display_name: "Kraken",
@@ -7795,17 +9085,25 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Halcón Milenario de Lando",
       text: "<i>Sólo Escoria</i>%LINEBREAK%1 Nave de escape puede acoplarse contigo.%LINEBREAK%Mientras tienes 1 Nave de escape acoplado, puedes gastar sus escudos como si estuvieran en tu carta de Nave.%LINEBREAK%Mientras efectúas un ataque principal contra una nave bajo tensión, tira 1 dado de ataque adicional."
     },
+    "Larma D'Acy": {
+      display_name: "Larma D’Acy",
+      text: "Mientras tengas 2 fichas de tensión o menos, puedes realizar acciones de %REINFORCE%, %COORDINATE% y %JAM%, incluso si estás bajo tensión. %LINEBREAK%Cuando realices una acción blanca de %REINFORCE%, %COORDINATE% o %JAM% mientras estás bajo tensión, considera esa acción como roja."
+    },
     "Latts Razzi": {
       display_name: "Latts Razzi",
       text: "<i>Sólo Escoria</i>%LINEBREAK%Mientras te defiendes, si el atacante está bajo tensión, puedes retirar 1 ficha de Tensión del atacante para cambiar 1 de tus resultados de cara vacía/%FOCUS% por un resultado %EVADE%."
     },
     "Leia Organa": {
       display_name: "Leia Organa",
-      text: "<i>Sólo Rebelde</i>%LINEBREAK%Al comienzo de la fase de Activación, puedes gastar 3&nbsp;%CHARGE%. Durante esta fase, toda nave aliada reduce la dificultad de sus maniobras rojas."
+      text: "<i>Sólo Rebelde</i>%LINEBREAK%Al comienzo de la fase de Activación, puedes gastar 3%CHARGE%. Durante esta fase, toda nave aliada reduce la dificultad de sus maniobras rojas."
+    },
+    "Leia Organa (Resistance)": {
+      display_name: "Leia Organa (Resistencia)",
+      text: "Después de que una nave aliada revele una maniobra no [0 %STOP%], puedes gastar 1 %FORCE%. Si lo haces, esa nave aliada reduce la dificultad de su maniobra. %LINEBREAK%<i>Errata (1.4): Esta capacidad ya no se aplica a las maniobras de velocidad 0.</i>"
     },
     "Lone Wolf": {
       display_name: "Lobo solitario",
-      text: "Mientras te defiendes o efectúas un ataque, si no tienes ninguna otra nave aliada a alcance 0-2, puedes gastar 1&nbsp;%CHARGE% para volver a tirar 1 de tus dados."
+      text: "Mientras te defiendes o efectúas un ataque, si no tienes ninguna otra nave aliada a alcance 0-2, puedes gastar 1%CHARGE% para volver a tirar 1 de tus dados."
     },
     "Luke Skywalker": {
       display_name: "Luke Skywalker",
@@ -7814,6 +9112,10 @@ exportObj.cardLoaders['Español'] = function() {
     "M9-G8": {
       display_name: "M9-G8",
       text: "Mientras una nave que tienes fijada como blanco efectúa un ataque, puedes elegir 1 dado de ataque. Si lo haces, el atacante vuelve a tirar ese dado."
+    },
+    "Mag-Pulse Warheads": {
+      display_name: "Ojivas de pulso magnético",
+      text: "<strong>Ataque (%LOCK%) :</strong> Gasta 1 %CHARGE%. Si este ataque impacta, el defensor sufre 1 daño %CRIT% y recibe 1 ficha de agotamiento y 1 ficha de interferencia. Luego, cancela todos los resultados %HIT%/%CRIT%."
     },
     "Magva Yarro": {
       display_name: "Magva Yarro",
@@ -7833,11 +9135,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Moff Jerjerrod": {
       display_name: "Moff Jerjerrod",
-      text: "<i>Necesita %COORDINATE% o <r>%COORDINATE%</r></i>%LINEBREAK%<i>Sólo Imperio</i>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 2&nbsp;%CHARGE%. Si lo haces, elige la plantilla [1&nbsp;%BANKLEFT%], [1&nbsp;%STRAIGHT%] o [1&nbsp;%BANKRIGHT%]. Toda nave aliada puede realizar una acción %BOOST% roja utilizando esa plantilla."
+      text: "<i>Necesita %COORDINATE% o <r>%COORDINATE%</r></i>%LINEBREAK%<i>Sólo Imperio</i>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 2%CHARGE%. Si lo haces, elige la plantilla [1%BANKLEFT%], [1%STRAIGHT%] o [1%BANKRIGHT%]. Toda nave aliada puede realizar una acción %BOOST% roja utilizando esa plantilla."
     },
     "Munitions Failsafe": {
       display_name: "Munición a prueba de fallos",
-      text: "Mientras efectúas un ataque %TORPEDO% o %MISSILE%, después de tirar los dados de ataque, puedes anular todos los resultados de los dados para recuperar 1&nbsp;%CHARGE% que hayas gastado como coste para el ataque."
+      text: "Mientras efectúas un ataque %TORPEDO% o %MISSILE%, después de tirar los dados de ataque, puedes anular todos los resultados de los dados para recuperar 1%CHARGE% que hayas gastado como coste para el ataque."
     },
     "Nien Nunb": {
       display_name: "Nien Nunb",
@@ -7855,9 +9157,17 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Superioridad táctica",
       text: "Mientras efectúas un ataque %FRONTARC%, si no estás situado en el arco de fuego del defensor, éste tira 1 dado de defensa menos."
     },
+    "PZ-4CO": {
+      display_name: "PZ-4CO",
+      text: "Al final de la fase de activación, puedes elegir una nave aliada a alcance 1-2. Si lo haces, transfiere 1 ficha de cálculo a esa nave. Si tu maniobra revelada es azul, puedes transferir 1 ficha de concentración en su lugar."
+    },
     "Paige Tico": {
       display_name: "Paige Tico",
       text: "Después de que efectúes un ataque principal, puedes soltar 1 bomba o reorientar tu indicador %SINGLETURRETARC%.%LINEBREAK%Después de que seas destruido, puedes soltar 1 bomba."
+    },
+    "Passive Sensors": {
+      display_name: "Sensores pasivos",
+      text: "<strong>Acción:</strong> gasta 1 %CHARGE%. Solo puedes realizar esta acción durante tu paso de \"Realizar una acción\".%LINEBREAK>Mientras tu %CHARGE% esté inactiva, no puedes ser coordinado.%LINEBREAK>Antes de comprometerte, si tu %CHARGE% está inactiva, puedes realizar una acción %CALCULATE% o %LOCK%."
     },
     "Pattern Analyzer": {
       display_name: "Analizador de patrones",
@@ -7871,13 +9181,17 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Suboficial Thanisson",
       text: "Durante la fase de Activación o de Enfrentamiento, después de que una nave enemiga que tengas a alcance 0-1 y esté situada en tu %FRONTARC% reciba una ficha roja o naranja, si no estás bajo tensión, puedes recibir 1 ficha de Tensión. Si lo haces, esa nave recibe 1 ficha adicional del mismo tipo que acaba de recibir."
     },
-    "Plasma Torpedoes": {
-      display_name: "Torpedos de plasma",
-      text: "<strong>Ataque (%LOCK%):</strong> Gasta  1 %CHARGE%. Durante el paso de \"Neutralizar resultados\", los resultados %CRIT% anulados antes que los resultados %HIT%. Después de que este ataque impacte, el defensor pierde 1 escudo."
-    },
     "Pivot Wing": {
       display_name: "Ala pivotante",
-      text: "<strong>Cara A (Abierta):</strong> Antes de que te actives, puedes darle la vuelta a esta carta.%LINEBREAK%<strong>Cara B (Cerrada):</strong> Mientras te defiendes, tira 1 dado de defensa menos.%LINEBREAK%Después de que ejecutes una maniobra [0&nbsp;%STOP%], puedes cambiar la orientación de tu nave en 90º o 180º.%LINEBREAK%Antes de que te actives, puedes darle la vuelta a esta carta."
+      text: "<strong>Cara A (Abierta):</strong> Antes de que te actives, puedes darle la vuelta a esta carta.%LINEBREAK%<strong>Cara B (Cerrada):</strong> Mientras te defiendes, tira 1 dado de defensa menos.%LINEBREAK%Después de que ejecutes una maniobra [0%STOP%], puedes cambiar la orientación de tu nave en 90º o 180º.%LINEBREAK%Antes de que te actives, puedes darle la vuelta a esta carta."
+    },
+    "Plasma Torpedoes": {
+      display_name: "Torpedos de plasma",
+      text: "<strong>Ataque (%LOCK%):</strong> Gasta  1 %CHARGE%. Durante el paso de “Neutralizar los resultados”, los resultados %CRIT% anulados antes que los resultados %HIT%. Después de que este ataque impacte, el defensor pierde 1 escudo."
+    },
+    "Precognitive Reflexes": {
+      display_name: "Reflejos precognitivos",
+      text: "Después de revelar tu selector, puedes gastar 1 %FORCE% para realizar una acción de %BARRELROLL% o %BOOST%. Luego, si has realizado una acción que no está en tu barra de acciones, obtén 1 marcador de estrés.%LINEBREAK%Si actúas de esta manera, no puedes realizar ninguna otra acción durante tu activación."
     },
     "Predator": {
       display_name: "Depredador",
@@ -7893,27 +9207,39 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Proton Bombs": {
       display_name: "Bombas de protones",
-      text: "<strong>Bomba</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1&nbsp;%CHARGE% para soltar una Bomba de protones utilizando la plantilla [1&nbsp;%STRAIGHT%]."
+      text: "<strong>Bomba</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1%CHARGE% para soltar una Bomba de protones utilizando la plantilla [1%STRAIGHT%]."
     },
     "Proton Rockets": {
       display_name: "Cohetes de protones",
-      text: "<strong>Ataque (%FOCUS%):</strong> Gasta 1&nbsp;%CHARGE%."
+      text: "<strong>Ataque (%FOCUS%):</strong> Gasta 1%CHARGE%."
     },
     "Proton Torpedoes": {
       display_name: "Torpedos de protones",
       text: "<strong>Ataque (%LOCK%):</strong> Gasta 1 %CHARGE%. Cambia 1 resultado %HIT% por un resultado %CRIT%."
     },
+    "Proud Tradition": {
+      display_name: "Tradición honrosa",
+      text: "<strong>Tradición honrosa</strong>%LINEBREAK%<strong>Colocación:</strong> para ser equipada con esta cara visible.%LINEBREAK%Mientras tengas 2 marcadores de estrés o menos, puedes realizar acciones de %FOCUS%, incluso si estás estresado.%LINEBREAK%Después de que hayas realizado un ataque, si estás estresado, el defensor puede gastar 1 marcador de concentración o sufrir 1 daño %CRIT% para voltear esta carta.%LINEBREAK%<strong>Tradición Orgullosa</strong>%LINEBREAK%Considera tus acciones de %FOCUS% como acciones rojas."
+    },
     "Proximity Mines": {
       display_name: "Minas de proximidad",
-      text: "<strong>Mina</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1&nbsp;%CHARGE% para soltar una Mina de proximidad utilizando la plantilla [1&nbsp;%STRAIGHT%].%LINEBREAK%Las %CHARGE% de esta carta no pueden recuperarse."
+      text: "<strong>Mina</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1%CHARGE% para soltar una Mina de proximidad utilizando la plantilla [1%STRAIGHT%].%LINEBREAK%Las %CHARGE% de esta carta no pueden recuperarse."
     },
     "Qi'ra": {
       display_name: "Qi'ra",
       text: "<i>Sólo Escoria</i>%LINEBREAK%Mientras te mueves y efectúas ataques, ignoras los obstáculos que tienes fijados como blanco."
     },
+    "R1-J5": {
+      display_name: "R1-J5",
+      text: "Mientras tengas 2 marcadores de estrés o menos, puedes realizar acciones de las cartas de daño, incluso si estás stressé.%LINEBREAK%Después de reparar una carta de daño con la característica <strong>Nave</strong>, puedes gastar 1 %CHARGE% para reparar esta carta de nuevo."
+    },
     "R2 Astromech": {
       display_name: "Droide astromecánico R2",
-      text: "Después de que reveles tu selector de maniobras, puedes gastar 1&nbsp;%CHARGE% y recibir 1 ficha de Desarme para recuperar 1 escudo."
+      text: "Después de que reveles tu selector de maniobras, puedes gastar 1%CHARGE% y recibir 1 ficha de Desarme para recuperar 1 escudo."
+    },
+    "R2-A6": {
+      display_name: "R2-A6",
+      text: "Después de revelar tu selector, puedes ajustar tu selector a una maniobra de la misma dirección pero con una velocidad superior o inferior en 1."
     },
     "R2-C4": {
       text: "Mientras efectúas un ataque, puedes gastar 1 ficha de Evasión para cambiar 1 resultado %FOCUS% por un resultado %HIT%."
@@ -7996,7 +9322,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Saturation Salvo": {
       display_name: "Andanada de saturación",
-      text: "<i>Necesita %RELOAD% o <r>%RELOAD%</r></i>%LINEBREAK%Mientras efectúas un ataque %TORPEDO% o %MISSILE%, puedes gastar 1&nbsp;%CHARGE% de esa mejora. Si lo haces, elige dos dados de defensa. El defensor debe volver a tirar esos dados."
+      text: "<i>Necesita %RELOAD% o <r>%RELOAD%</r></i>%LINEBREAK%Mientras efectúas un ataque %TORPEDO% o %MISSILE%, puedes gastar 1%CHARGE% de esa mejora. Si lo haces, elige dos dados de defensa. El defensor debe volver a tirar esos dados."
     },
     "Saw Gerrera": {
       display_name: "Saw Gerrera",
@@ -8008,7 +9334,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Seismic Charges": {
       display_name: "Cargas sísmicas",
-      text: "<strong>Bomba</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1&nbsp;%CHARGE% para soltar una Carga sísmica con la plantilla [1&nbsp;%STRAIGHT%]."
+      text: "<strong>Bomba</strong>%LINEBREAK%Durante la fase de Sistemas, puedes gastar 1%CHARGE% para soltar una Carga sísmica con la plantilla [1%STRAIGHT%]."
     },
     "Selfless": {
       display_name: "Autosacrificio",
@@ -8020,7 +9346,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Sense": {
       display_name: "Sentir",
-      text: "Durante la fase de Sistemas, puedes elegir 1 nave que tengas a alcance 0-1 y mirar su selector de maniobras. Si gastas 1&nbsp;%FORCE%, en vez de eso puedes elegir una nave que tengas a alcance 0-3."
+      text: "Durante la fase de Sistemas, puedes elegir 1 nave que tengas a alcance 0-1 y mirar su selector de maniobras. Si gastas 1%FORCE%, en vez de eso puedes elegir una nave que tengas a alcance 0-3."
     },
     "Servomotor S-Foils": {
       display_name: "Alas móviles",
@@ -8032,7 +9358,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Seventh Sister": {
       display_name: "Séptima Hermana",
-      text: "<i>Sólo Imperio</i>%LINEBREAK%Si una nave enemiga que tienes a alcance 0-1 va a recibir una ficha de Tensión, puedes gastar 1&nbsp;%FORCE% para que en vez de eso la nave reciba 1 ficha de Interferencia o de Campo de tracción."
+      text: "<i>Sólo Imperio</i>%LINEBREAK%Si una nave enemiga que tienes a alcance 0-1 va a recibir una ficha de Tensión, puedes gastar 1%FORCE% para que en vez de eso la nave reciba 1 ficha de Interferencia o de Campo de tracción."
     },
     "Shield Upgrade": {
       display_name: "Escudos mejorados",
@@ -8041,6 +9367,10 @@ exportObj.cardLoaders['Español'] = function() {
     "Skilled Bombardier": {
       display_name: "Oficial de bombardeo experimentado",
       text: "Si vas a soltar o lanzar un dispositivo, puedes utilizar una plantilla con esa misma dirección y una velocidad superior o inferior en 1 punto."
+    },
+    "Snap Shot": {
+      display_name: "Tiro reactivo",
+      text: "Después de que una nave enemiga haya realizado una maniobra, puedes realizar este ataque contra ella como un ataque adicional.%LINEBREAK%<strong>Ataque:</strong> tus dados no pueden ser modificados."
     },
     "Spare Parts Canisters": {
       display_name: "Contenedores de recambios",
@@ -8054,17 +9384,21 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Jefe de escuadrón",
       text: "<i>Añade <r>%COORDINATE%</r></i>%LINEBREAK%Mientras realizas una coordinación, la nave que eliges sólo es capaz de realizar una acción si dicha acción figura también en tu barra de acciones."
     },
+    "Stabilized S-Foils": {
+      display_name: "Alas-S Estabilizadas",
+      text: "<strong>Alas-S Estabilizadas (Plegadas)</strong>%LINEBREAK%<i>Añade %BARRELROLL% <i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i> <r>%EVADE%</r>, <r>%RELOAD%</r></i>%LINEBREAK>Antes de activarte, si no estás críticamente dañado, puedes voltear esta carta.%LINEBREAK%<strong>Alas-S Estabilizadas (Desplegadas)</strong>%LINEBREAK%<i>Añade %BARRELROLL% <i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i> <r>%LOCK%</r></i>%LINEBREAK>Después de realizar un ataque, puedes gastar tu bloqueo en el defensor para realizar un ataque adicional %CANNON% contra esa nave usando una mejora %CANNON% con la que no hayas atacado en esta ronda.%LINEBREAK>Antes de activarte, si no estás críticamente dañado, puedes voltear esta carta."
+    },
     "Static Discharge Vanes": {
       display_name: "Aparejos de descarga electrostática",
       text: "Si vas a recibir una ficha de Iones o de Interferencia, puedes elegir una nave que tengas a alcance 0-1. Si lo haces, recibes 1 ficha de Tensión y transfieres 1 ficha de Iones o de Interferencia a esa nave."
     },
     "Stealth Device": {
       display_name: "Dispositivo de sigilo",
-      text: "Esta carta tiene un coste de puntos variable.%LINEBREAK%Mientras te defiendes, si tu %CHARGE% está activa, tira 1 dado de defensa adicional.%LINEBREAK%Después de que sufras daño, pierdes 1&nbsp;%CHARGE%."
+      text: "Esta carta tiene un coste de puntos variable.%LINEBREAK%Mientras te defiendes, si tu %CHARGE% está activa, tira 1 dado de defensa adicional.%LINEBREAK%Después de que sufras daño, pierdes 1%CHARGE%."
     },
     "Supernatural Reflexes": {
       display_name: "Reflejos sobrenaturales",
-      text: "<i>Sólo nave pequeña</i>%LINEBREAK%Antes de que te actives, puedes gastar 1&nbsp;%FORCE% para realizar una acción %BARRELROLL% o %BOOST%. Luego, si la acción que has realizado no figura en tu barra de acciones, sufres 1 de daño %HIT%."
+      text: "<i>Sólo nave pequeña</i>%LINEBREAK%Antes de que te actives, puedes gastar 1%FORCE% para realizar una acción %BARRELROLL% o %BOOST%. Luego, si la acción que has realizado no figura en tu barra de acciones, sufres 1 de daño %HIT%."
     },
     "Supreme Leader Snoke": {
       display_name: "Líder Supremo Snoke",
@@ -8148,7 +9482,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     '"Chopper" (Astromech)': {
       display_name: "“Chopper” (Astromech)",
-      text: "<i>Sólo Rebelde</i>%LINEBREAK%<strong>Acción:</strong> Gasta 1&nbsp;%CHARGE% no recurrente de otra carta de Mejora que tengas equipada para recuperar 1 escudo.%LINEBREAK%<strong>Acción:</strong> Gasta 2 escudos para recuperar 1&nbsp;%CHARGE% no recurrente sobre una mejora que tengas equipada."
+      text: "<i>Sólo Rebelde</i>%LINEBREAK%<strong>Acción:</strong> Gasta 1%CHARGE% no recurrente de otra carta de Mejora que tengas equipada para recuperar 1 escudo.%LINEBREAK%<strong>Acción:</strong> Gasta 2 escudos para recuperar 1%CHARGE% no recurrente sobre una mejora que tengas equipada."
     },
     '"Genius"': {
       display_name: "“Genio”",
@@ -8157,61 +9491,1286 @@ exportObj.cardLoaders['Español'] = function() {
     '"Zeb" Orrelios': {
       display_name: "“Zeb” Orrelios",
       text: "<i>Sólo Rebelde</i>%LINEBREAK%Eres capaz de efectuar ataques principales a alcance 0. Las naves enemigas que tengas a alcance 0 son capaces de efectuar ataques principales contra ti."
+    },
+    "Discord Missiles": {
+      display_name: "Misiles desguazadores",
+      text: "Al comienzo de la fase de enfrentamiento, puedes gastar 1 marcador de cálculo y 1 %CHARGE% para lanzar una enjambre de droides zumbadores utilizando la plantilla [3 %BANKLEFT%], [3 %STRAIGHT%] o [3 %BANKRIGHT%].%LINEBREAK%La %CHARGE% de esta carta no se puede recuperar."
+    },
+    "B6 Blade Wing Prototype (Epic)": {
+      display_name: "Prototipo B6 Ala Bisel (Épico)",
+      text: "Ataque (%LOCK%): Gana 1 marcador iónico para realizar este ataque. Si el ataque impacta, el defensor sufre 1 daño %HIT%/%CRIT% adicional por cada resultado sin cancelar más allá del primero."
+    },
+    "Phoenix Squadron": {
+      display_name: "Escuadrón Fénix",
+      text: "<strong>Cara de Despliegue:</strong>%LINEBREAK>Despliegue: Equipar con esta cara visible. %LINEBREAK> Eres el <b>líder</b>. Tus alas deben consistir en 2-5 naves de entre las siguientes: %LINEBREAK> - 0-1 Transporte de Ataque %LINEBREAK> - 0-1 Transporte clase Sheathipede %LINEBREAK> - 0-5 A-wings RZ-1 %LINEBREAK> Después de ser colocado, voltea esta carta. %LINEBREAK> <strong>Cara de Juego:</strong>%LINEBREAK> Al comienzo de la fase de preparación, 1 de tus alas que esté aparejado contigo puede unirse a tu patrulla sin recibir un marcador de estrés. %LINEBREAK> Mientras tú, o tu ala Transporte de Ataque o Transporte clase Sheathipede, te defiendes, hasta 2 de tus alas A-wing RZ-1 en el arco de ataque pueden cada uno sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
+    },
+    "Deadeye Shot": {
+      display_name: "Disparo certero",
+      text: "Mientras realizas un ataque principal, si el defensor está en tu %BULLSEYEARC%, puedes gastar 1 resultado %HIT% o cambiar 1 resultado %CRIT% por un resultado %HIT%. En este caso, el defensor expone 1 de sus cartas de daño."
+    },
+    "Hopeful": {
+      display_name: "Optimista",
+      text: "Después de que otra nave aliada a alcance 0-3 sea destruida, si esa nave era única o tenía la mejora <strong>Optimista</strong>, puedes realizar una acción %FOCUS% o %BOOST%."
+    },
+    "Marg Sabl Closure": {
+      display_name: "Envoltura Marg Sabl",
+      text: "Después de haber ejecutado completamente una maniobra, si te has movido a través de un obstáculo, estructura o nave inmensa, o si estabas desplegado, puedes elegir una nave enemiga en tu %FRONTARC% a alcance 1-2. Esa nave gana 1 marcador de estrés."
+    },
+    "Starbird Slash": {
+      display_name: "Acometida de ave estelar",
+      text: "Después de haber ejecutado completamente una maniobra, puedes elegir una nave enemiga que hayas cruzado. Esa nave gana 1 marcador de estrés. Luego, si estás en su arco de fuego, ganas 1 marcador de estrés."
+    },
+    "Tierfon Belly Run": {
+      display_name: "Pasada rasante de Tierfon",
+      text: "Puedes realizar ataques especiales incluso si estás a alcance 0 de asteroides. %LINEBREAK> Mientras te defiendes, si estás a alcance 0 de un obstáculo, los dados de ataque no pueden ser relanzados."
+    },
+    "Extreme Maneuvers": {
+      display_name: "Maniobras extremas",
+      text: "Mientras realizas una acción %BOOST%, puedes gastar 1 %FORCE% para usar la plantilla de giro (%TURNLEFT% o %TURNRIGHT%) en su lugar."
+    },
+    "Patience": {
+      display_name: "Paciencia",
+      text: "Al comienzo de la fase de enfrentamiento, si hay una nave enemiga en tu %FRONTARC%, puedes ganar 1 marcador de agotamiento para recuperar 1 %FORCE%."
+    },
+    "Synced Laser Cannons": {
+      display_name: "Cañones láser sincronizados",
+      text: "<strong>Ataque:</strong> Si eres calculador, el defensor no aplica el bono de alcance."
+    },
+    "XX-23 S-Thread Tracers": {
+      display_name: "Hiperrastreadores XX-23",
+      text: "<strong>Ataque [%FOCUS%, %CALCULATE%, o %LOCK%]:</strong> Gasta 1 %CHARGE%. Si este ataque impacta, cada nave aliada a alcance 1-3 del defensor puede fijar blanco al defensor. Luego, anula todos los resultados de los dados."
+    },
+    "Sabine Wren (Gunner)": {
+      display_name: "Sabine Wren (Artillero)",
+      text: "Después de realizar un ataque especial, puedes elegir un número de naves aliadas, a alcance 0-3 del defensor, igual o menor al número de cartas de daño asignadas al defensor durante ese ataque. Cada nave elegida puede eliminar 1 marcador de estrés o de control."
+    },
+    "Suppressive Gunner": {
+      display_name: "Artillero habilidoso",
+      text: "Mientras realizas un ataque, puedes gastar 1 resultado %FOCUS%. En ese caso, el defensor gana 1 marcador de agotamiento, a menos que elija sufrir 1 daño %HIT%."
+    },
+    "Weapons Systems Officer": {
+      display_name: "Oficial de sistemas de armamento",
+      text: "Después de realizar un ataque especial que tenga el requisito %LOCK%, puedes fijar blanco al defensor."
+    },
+    "Vectored Cannons (RZ-1)": {
+      display_name: "Cañones vectoriales (RZ-1)",
+      text: "Gana un indicador %SINGLETURRETARC%. Considera el requisito de arco de tus ataques principales como %SINGLETURRETARC%. %LINEBREAK> Reemplaza tu capacidad de nave <strong>Propulsores Vectoriales</strong> con la siguiente: %LINEBREAK> <strong>Cañones Vectoriales:</strong> Durante la fase de sistema, puedes realizar una acción %BOOST% roja o %ROTATEARC% roja. Solo puedes girar tu indicador %SINGLETURRETARC% hacia tu %FRONTARC% o %REARARC%."
+    },
+    "Shadow Wing": {
+      display_name: "Escuadrón Alas de las Sombras",
+      text: "<strong>Cara de Despliegue:</strong>%LINEBREAK>Despliegue: Equípala con esta cara visible. %LINEBREAK> Eres el <b>líder</b>. Tus alas deben consistir en 2-5 otras naves del mismo tipo que la tuya. %LINEBREAK> Después de ser colocada, voltea esta carta. %LINEBREAK> <strong>Cara de Juego:</strong>%LINEBREAK> Tus alas pueden realizar acciones %BARRELROLL% o %BOOST%. Si lo hacen, se separan voluntariamente de la patrulla. %LINEBREAK> Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
+    },
+    "Skystrike Academy Class": {
+      display_name: "Clase  de la Academia Skystrike",
+      text: "<strong>Cara de Despliegue:</strong>%LINEBREAK>Despliegue: Equípala con esta cara visible. %LINEBREAK> Eres el <b>líder</b>. Tus alas deben consistir en 2-5 cazas TIE/ln con una iniciativa menor que la tuya. %LINEBREAK> Después de ser colocada, voltea esta carta. %LINEBREAK> <strong>Cara de Juego:</strong>%LINEBREAK> Después de realizar un tonel o una aceleración, cada una de tus alas está obligada a separarse de la patrulla. %LINEBREAK> Mientras te defiendes, hasta 5 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
+    },
+    "Disciplined": {
+      display_name: "Disciplinado",
+      text: "Después de que otra nave aliada a alcance 0–3 sea destruida, si esa nave era única o tenía la mejora <strong>Disciplinado</strong>, puedes realizar una acción %LOCK% o %BARRELROLL%."
+    },
+    "Interloper Turn": {
+      display_name: "Giro de intruso",
+      text: "Antes de realizar una maniobra de giro (%TURNLEFT% o %TURNRIGHT%) a velocidad 1–2 o una Torniquete (%KTURN%) a velocidad 1–2, si estás a alcance 0–1 de un asteroide, estructura o nave inmensa, puedes ganar 1 marcador de rayo tractor."
+    },
+    "Precision Ion Engines": {
+      display_name: "Motores iónicos de precisión",
+      text: "Antes de realizar una maniobra Torniquete [%KTURN%] a velocidad 1–3, puedes gastar 1 %CHARGE% para realizar esa maniobra como un Lazo de Segnor [%SLOOPLEFT% o %SLOOPRIGHT%] en su lugar."
+    },
+    "Sensitive Controls": {
+      display_name: "Controles de alta precisión",
+      text: "Reemplaza tu capacidad de nave <strong>Propulsores Automáticos</strong> con la siguiente: %LINEBREAK> <strong>Controles Sensibles</strong>: Durante la fase de sistema, puedes realizar una acción %BARRELROLL% roja o %BOOST% roja."
+    },
+    "TIE Defender Elite": {
+      display_name: "Defensor TIE de Élite",
+      text: "Reduce la dificultad de tus maniobras de giro (%TURNLEFT% o %TURNRIGHT%). Aumenta la dificultad de tus maniobras Torniquete (%KTURN%). Reemplaza tu capacidad de nave <strong>Aceleración Total</strong> con la siguiente: %LINEBREAK> <strong>Comando de Disparo Avanzado:</strong> Después de realizar un ataque %CANNON% o %MISSILE%, si tienes un objetivo fijado en el defensor, puedes realizar un ataque principal adicional contra el defensor."
+    },
+    "L3-37's Programming (BoY)": {
+      display_name: "Programación de L3-37 (BoY)",
+      text: "Si no estás protegido, reduce la dificultad de tus maniobras de ala (%BANKLEFT% y %BANKRIGHT%)."
+    },
+    "Agent of the Empire": {
+      display_name: "Agente del Imperio",
+      text: "Eres el <strong>líder</strong>. Tus alas deben consistir en 2, 3, 4 o 5 cazas TIE/ln. %LINEBREAK> Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT% o %CRIT% para cancelar un resultado correspondiente."
+    },
+    "First Order Elite": {
+      display_name: "Élite de la Primera Orden",
+      text: "Eres el <strong>líder</strong>. Tus alas deben consistir en 2 o 3 cazas TIE/fo o TIE/sf. %LINEBREAK> Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT% o %CRIT% para cancelar un resultado correspondiente."
+    },
+    "Veteran Wing Leader": {
+      display_name: "Jefe de ala veterano",
+      text: "Eres el <strong>líder</strong>. Tus alas deben consistir en 2, 3, 4 o 5 otras naves del mismo tipo que la tuya. %LINEBREAK> Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT% o %CRIT% para cancelar un resultado correspondiente."
+    },
+    "Dreadnought Hunter": {
+      display_name: "Cazador de acorazados",
+      text: "Mientras realizas un ataque contra una nave inmensa, si el ataque asigna una carta de daño boca arriba al defensor y este está en tu %BULLSEYEARC%, puedes aplicar el efecto de <strong>Tiro Preciso</strong> incluso si no estás en el arco especificado."
+    },
+    "Admiral Ozzel": {
+      display_name: "Almirante Ozzel",
+      text: "Mientras una nave aliada grande o inmensa a alcance 0–3 ejecuta una maniobra, puede sufrir 1 daño %HIT% para ejecutar una maniobra de la misma dirección y dificultad a una velocidad mayor o menor en su lugar."
+    },
+    "Azmorigan": {
+      display_name: "Azmorigan",
+      text: "Durante la fase de desenlace, puedes elegir hasta 2 naves aliadas a alcance 0–1. En ese caso, cada una de esas naves no quita 1 marcador de cálculo o evasión."
+    },
+    "Captain Needa": {
+      display_name: "Capitán Needa",
+      text: "Después de que una nave aliada a alcance 0–4 revele su selector de maniobras, puedes gastar 1 %CHARGE%. En ese caso, cambia su selector de maniobras a una maniobra de la misma dirección y dificultad."
+    },
+    "Carlist Rieekan": {
+      display_name: "Carlist Rieekan",
+      text: "Después de que una nave aliada a alcance 0–2 sea destruida, puedes elegir una nave aliada a alcance 0–2. En ese caso, puede realizar una acción %EVADE% roja."
+    },
+    "Jan Dodonna": {
+      display_name: "Jan Dodonna",
+      text: "Las naves aliadas a alcance 0–3 pueden gastar tus marcadores de concentración y evasión."
+    },
+    "Raymus Antilles": {
+      display_name: "Raymus Antilles",
+      text: "Después de que hayas sido destruido, cada nave aliada a alcance 0–1 gana 1 ficha de concentración. %LINEBREAK% Después de que hayas sido destruido, no eres retirado del área de juego hasta el final de la fase de desenlace."
+    },
+    "Stalwart Captain": {
+      display_name: "Capitán Valeroso",
+      text: "Después de que hayas sido destruido, no eres retirado del área de juego hasta el final de la fase de desenlace."
+    },
+    "Strategic Commander": {
+      display_name: "Comandante Estratégico",
+      text: "Después de que una nave aliada a alcance 0–4 revele su selector de maniobras, puedes gastar 1 %CHARGE%. En ese caso, cambia su selector de maniobras a otra de la misma velocidad y dificultad."
+    },
+    "Ion Cannon Battery": {
+      display_name: "Batería iónica",
+      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible.%LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. Si este ataque impacta, el defensor sufre 1 daño %CRIT%, y todos los resultados %HIT%/%CRIT% infligen marcadores iónicos en lugar de daño. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
+    },
+    "Targeting Battery": {
+      display_name: "Batería defensiva",
+      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible.%LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. Después de realizar este ataque, puedes fijar blanco al defensor. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
+    },
+    "Ordnance Tubes": {
+      display_name: "Tubos de municiones",
+      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible. %LINEBREAK>Puedes realizar ataques %TORPEDO% y %MISSILE% solo como ataques adicionales. Debes considerar el requisito %FRONTARC% de tus mejoras %TORPEDO% y %MISSILE% equipadas como %FULLFRONTARC%. %LINEBREAK>Ataque Adicional: Realiza un ataque %TORPEDO%. %LINEBREAK>Ataque Adicional: Realiza un ataque %MISSILE%. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Debes considerar el requisito %FRONTARC% de tus mejoras %TORPEDO% y %MISSILE% equipadas como %BULLSEYEARC%. %LINEBREAK>Acción: Gasta 2 %ENERGY% para voltear esta carta."
+    },
+    "Point-Defense Battery": {
+      display_name: "Batería de rastreo de blancos",
+      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible. %LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
+    },
+    "Turbolaser Battery": {
+      display_name: "Batería de turboláser",
+      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible.%LINEBREAK>Ataque Adicional [%LOCK%]: Gasta 3 %ENERGY%. Si este ataque impacta, agrega 3 resultados %HIT%. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
+    },
+    "Toryn Farr": {
+      display_name: "Toryn Farr",
+      text: "Después de coordinar a una nave aliada, esa nave puede fijar blanco a una nave que ya tienes fijada, ignorando las restricciones de alcance."
+    },
+    "Bombardment Specialists": {
+      display_name: "Especialistas en bombardeo",
+      text: "Mientras efectúas un ataque, puedes gastar 1 ficha de cálculo para incrementar o reducir en 1 el requisito de alcance, con un límite de 0–5."
+    },
+    "Comms Team": {
+      display_name: "Personal de comunicaciones",
+      text: "Después de efectuar una acción %COORDINATE%, puedes gastar hasta 2 %ENERGY% para coordinar a una cantidad igual de naves adicionales a alcance 0–1 de la nave que coordinaste."
+    },
+    "Damage Control Team": {
+      display_name: "Personal de control de daños",
+      text: "Antes de comprometerte, puedes gastar 1 o más %ENERGY% para voltear tantas de tus cartas de mejora <strong>Fuera de línea</strong>. %LINEBREAK><strong>Acción:</strong> Gasta 1 o más %ENERGY% para reparar tantas de tus cartas de daño de <strong>Vaisseau</strong> boca arriba."
+    },
+    "Gunnery Specialists": {
+      display_name: "Especialistas en artillería",
+      text: "Mientras efectúas un ataque principal o %HARDPOINT%, puedes gastar 1 o más %ENERGY% para volver a tirar una cantidad igual de dados de ataque."
+    },
+    "IG-RM Droids": {
+      display_name: "Droides IG-RM",
+      text: "Mientras efectúas un ataque, si tienes una ficha de cálculo, puedes cambiar 1 resultado %HIT% por un resultado %CRIT%."
+    },
+    "Ordnance Team": {
+      display_name: "Equipo de municiones",
+      text: "Mientras efectúas una acción %RELOAD%, puedes gastar hasta 3 %ENERGY% para recargar una cantidad igual de fichas de %CHARGE% de tus mejoras %MISSILE%/%TORPEDO% equipadas. %LINEBREAK>Después de efectuar una acción %RELOAD%, puedes gastar 1 %ENERGY% para retirar 1 ficha de desarme."
+    },
+    "Sensor Experts": {
+      display_name: "Expertos en sensores",
+      text: "Puedes mantener hasta 3 fijaciones en objetos diferentes. %LINEBREAK>Después de efectuar una acción %LOCK%, puedes gastar hasta 2 %ENERGY% para fijar blanco a una cantidad igual de objetos adicionales a alcance 0–1 del objeto que fijaste, ignorando las restricciones de alcance."
+    },
+    "Adaptive Shields": {
+      display_name: "Escudos adaptativos",
+      text: "Mientras otra nave aliada a alcance 0–1 se defiende y es de un tamaño menor que el tuyo, puedes gastar 1 %SHIELD% o 2 %ENERGY% para cancelar 1 resultado %HIT% o %CRIT%."
+    },
+    "Boosted Scanners": {
+      display_name: "Escáneres amplificados",
+      text: "Mientras fijas, coordinas o interfieres, puedes gastar hasta %ENERGY% para aumentar el alcance en el que puedes seleccionar un objeto en 1 por %ENERGY% gastada de esta manera, hasta un máximo de 5."
+    },
+    "Tibanna Reserves": {
+      display_name: "Reservas de gas Tibanna",
+      text: "<strong>Acción:</strong> Gasta 1 %CHARGE% para recuperar 2 %ENERGY%."
+    },
+    "Optimized Power Core": {
+      display_name: "Núcleo de energía optimizado",
+      text: "Después de ejecutar una maniobra azul, recupera 1 %ENERGY%."
+    },
+    "Quick-Release Locks": {
+      display_name: "Enganches de apertura rápida",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para colocar 1 dispositivo de carga en tu %REARARC% a alcance 0. El marcador de dispositivo de carga no puede superponerse a ninguna nave de esta manera. %LINEBREAK>Los %CHARGE% de esta carta no se pueden recuperar."
+    },
+    "Saboteur's Map": {
+      display_name: "Mapa de saboteador",
+      text: "Al final de la Preparación, puedes gastar hasta 1 %CHARGE% de cada una de tus mejoras <strong>Mina</strong> equipadas para colocar el dispositivo correspondiente en el campo de juego más allá de alcance 2 de cualquier nave enemiga u otro dispositivo."
+    },
+    "Scanner Baffler": {
+      display_name: "Confusor de Escáneres",
+      text: "Al final de la Preparación, puedes elegir hasta 6 otras naves estándar aliadas en tu zona de despliegue a alcance 0–1. En ese caso, coloca esas naves en cualquier lugar a alcance 0–1."
+    },
+    "Dodonna's Pride": {
+      display_name: "Orgullo de Dodonna",
+      text: " "
+    },
+    "Jaina's Light": {
+      display_name: "Luz de Jaina",
+      text: "Mientras una nave aliada a alcance 0–2 se defiende y el ataque está obstruido por un obstáculo, puedes gastar 1 %ENERGY%. En ese caso, el defensor lanza 1 dado de defensa adicional."
+    },
+    "Liberator": {
+      display_name: "Libertador",
+      text: "Puedes arrimar hasta 2 naves pequeñas. %LINEBREAK>Después de que una nave se ha desplegado desde ti, puede realizar una acción %FOCUS% o %BARRELROLL%."
+    },
+    "Tantive IV": {
+      display_name: "Tantive IV",
+      text: "Mientras te defiendes, si el atacante está en tu %REARARC%, puedes lanzar 1 dado de defensa adicional."
+    },
+    "Bright Hope": {
+      display_name: "Esperanza Brillante",
+      text: "Solo puedes reforzar tu %FULLFRONTARC%. %LINEBREAK>Mientras te defiendes, si estás reforzado y el atacante está en tu %FULLFRONTARC%, puedes lanzar 1 dado de defensa adicional."
+    },
+    "Luminous": {
+      display_name: "Luminoso",
+      text: "<strong>Preparación:</strong> Comienzas en reserva. %LINEBREAK>Al final de la Preparación, colócate en el campo de juego a alcance 0–2 de una nave aliada."
+    },
+    "Quantum Storm": {
+      display_name: "Tormenta Cuántica",
+      text: "Después de realizar completamente una maniobra blanca, recupera 1 %ENERGY%."
+    },
+    "Assailer": {
+      display_name: "Asaltante",
+      text: "Mientras te defiendes, si el alcance de ataque es 1, puedes lanzar 1 dado de defensa adicional."
+    },
+    "Corvus": {
+      display_name: "Corvus",
+      text: "Puedes arrimar hasta 2 naves pequeñas. %LINEBREAK>Después de realizar una acción %CALCULATE%, gana 1 ficha de cálculo."
+    },
+    "Impetuous": {
+      display_name: "Impetuoso",
+      text: "Después de que hayas efectuado un ataque y el defensor ha sido destruido, puedes realizar una acción %FOCUS% o %LOCK%."
+    },
+    "Instigator": {
+      display_name: "Instigador",
+      text: "Mientras efectúas un ataque, si el defensor tiene una ficha naranja o roja, puedes volver a lanzar hasta 2 dados de ataque."
+    },
+    "Blood Crow": {
+      display_name: "Cuervo Sangriento",
+      text: "Mientras efectúas un ataque a alcance 1–2, puedes agregar 1 resultado %FOCUS%."
+    },
+    "Requiem": {
+      display_name: "Réquiem",
+      text: "Después de que una nave se ha desplegado desde ti, puede fijar blanco a una nave que ya has fijado, ignorando las restricciones de alcance."
+    },
+    "Suppressor": {
+      display_name: "Represor",
+      text: "Después de coordinar a una nave aliada, puedes gastar 1 %ENERGY% para interferir a una nave enemiga a alcance 0–2 de esa nave, ignorando las restricciones de alcance."
+    },
+    "Vector": {
+      display_name: "Vector",
+      text: "Después de que una nave se ha desplegado desde ti, puede realizar una acción %EVADE% o %BOOST%."
+    },
+    "Broken Horn": {
+      display_name: "Cuerno Roto",
+      text: "Si estás dañado, reduce la dificultad de tus maniobras de velocidad 3–5."
+    },
+    "Merchant One": {
+      display_name: "Mercader Uno",
+      text: "<strong>Ataque Adicional:</strong> Realiza un ataque %TURRET%."
+    },
+    "Insatiable Worrt": {
+      display_name: "Worrt Insaciable",
+      text: "Durante la fase de desenlace, puedes recuperar 1 %SHIELD% o %ENERGY% adicional."
+    },
+    "Corsair Refit": {
+      display_name: "Reequipado para la piratería",
+      text: "<strong>Ataque Adicional:</strong> Gasta 1 %ENERGY% para realizar un ataque %CANNON%, %TURRET% o %MISSILE%."
+    },
+    "Thunderstrike": {
+      display_name: "Trueno",
+      text: "Mientras realizas un ataque adicional, si no has atacado al defensor en esta ronda, puedes volver a lanzar 1 dado de ataque."
+    },
+    "Commander Pyre": {
+      display_name: "Comandante Pyre",
+      text: "<strong>Preparación:</strong> después de colocar las fuerzas, elige una nave enemiga. Recibe 2 fichas de tensión. %LINEBREAK>Mientras te defiendes, si el atacante está bajo tensión, puedes volver a lanzar 1 dado de defensa."
+    },
+    "Clone Captain Rex": {
+      display_name: "Capitán clon Rex",
+      text: "Mientras realizas un ataque, puedes gastar 1 resultado %FOCUS%. En ese caso, cada nave aliada que tenga al defensor en su %BULLSEYEARC% puede recibir 1 ficha de tensión para realizar una acción %FOCUS%."
+    },
+    "Yoda": {
+      display_name: "Yoda",
+      text: "Después de que otra nave aliada a alcance 0–2 haya realizado completamente una maniobra violeta o una acción violeta, puedes gastar 1 %FORCE%. En ese caso, esa otra nave aliada recupera 1 %FORCE%."
+    },
+    "Repulsorlift Stabilizers": {
+      display_name: "Repulsores de estabilización",
+      text: "<strong>Inactivo:</strong> %LINEBREAK>Preparación: Equípate con esta cara visible. %LINEBREAK>Reduce la dificultad de tus maniobras en línea recta (%STRAIGHT%). %LINEBREAK>Después de ejecutar completamente una maniobra, puedes girar esta carta. %LINEBREAK><strong>Activo:</strong> %LINEBREAK>Después de revelar una maniobra de giro en el ala (%BANKLEFT% o %BANKRIGHT%) o de giro (%TURNLEFT% o %TURNRIGHT%), <b>debes</b> realizar esa maniobra como un derrape y luego gira esta carta. %LINEBREAK>Después de ejecutar completamente una maniobra que no sea un derrape, puedes girar esta carta."
+    },
+    "Agent Terex": {
+      display_name: "Agente Terex",
+      text: "<strong>Preparación:</strong> Equípate con esta cara visible. Coloca 3 fichas de cálculo en esta carta. %LINEBREAK>Al comienzo de la fase de enganche, puedes elegir una nave aliada a alcance 0–3 y retirar 1 ficha de cálculo de esta carta para que esa nave aliada reciba una ficha correspondiente. Luego, si no quedan fichas de cálculo en esta carta, gírala. %LINEBREAK><strong>Cyborg:</strong> %LINEBREAK>Durante la fase de sistema, lanza 1 dado de ataque. En un resultado %HIT% o %CRIT%, obtén 1 ficha de cálculo. De lo contrario, obtén 1 ficha de interferencia. %LINEBREAK><strong>Acción:</strong> Transfiere 1 ficha de cálculo o interferencia a una nave a alcance 0–3."
+    },
+    "Plo Koon": {
+      display_name: "Plo Koon",
+      text: "Al comienzo de la fase de desenlace, si estás reforzado, puedes elegir una nave aliada a alcance 0 o que se encuentra en tu %LEFTARC% o %RIGHTARC% a alcance 1. Esa nave quita 1 ficha de agotamiento o de tensión o repara 1 carta de daño boca arriba."
+    },
+    "Multi-Missile Pods": {
+      display_name: "Cápsulas de misiles múltiples",
+      text: "Ataque (%CALCULATE% o %LOCK%): Gasta 1 %CHARGE%. Si el defensor está en tu %FRONTARC%, puedes gastar 1 %CHARGE% para lanzar 1 dado de ataque adicional. Si el defensor está en tu %BULLSEYEARC%, puedes gastar hasta 2 %CHARGE% para lanzar la misma cantidad de dados adicionales."
+    },
+    "Kit Fisto": {
+      display_name: "Kit Fisto",
+      text: "Al comienzo de la fase de enganche, puedes elegir una nave aliada a alcance 0–1 y gastar 1 %FORCE%. En ese caso, esa nave puede realizar una acción %EVADE% roja."
+    },
+    "Aayla Secura": {
+      display_name: "Aayla Secura",
+      text: "Mientras una nave enemiga en tu %BULLSEYEARC% realiza un ataque, si el defensor es un aliado y está a alcance 0–2, ese defensor puede cambiar 1 resultado en blanco por un resultado %FOCUS%."
+    },
+    "Maneuver-Assist MGK-300": {
+      display_name: "MGK-300 de ayuda vuelo",
+      text: "Reduce la dificultad de tus maniobras de velocidad 3 en línea recta (%STRAIGHT%) y de giro en el ala (%BANKLEFT% o %BANKRIGHT%)."
+    },
+    "Ion Limiter Override": {
+      display_name: "Anulación del limitador iónico",
+      text: "Después de ejecutar completamente una maniobra roja, puedes realizar una acción %BARRELROLL%, incluso si estás bajo tensión. En ese caso, lanza un dado de ataque; en un resultado %HIT%, obtén 1 ficha de tensión, y en un resultado %CRIT%, obtén 1 ficha iónica."
+    },
+    "Hondo Ohnaka": {
+      display_name: "Hondo Ohnaka",
+      text: "<strong>Acción:</strong> Elige 2 naves a alcance 1–3 de ti que sean aliadas entre sí. Coordina una de las naves elegidas y entorpece la otra, ignorando las restricciones de alcance."
+    },
+    "Boba Fett (Separatist)": {
+      display_name: "Boba Fett",
+      text: "Mientras realizas un ataque, si no hay otra nave en el arco de ataque, puedes cambiar 1 de tus resultados %FOCUS% por un resultado %HIT%."
+    },
+    "Jango Fett": {
+      display_name: "Jango Fett",
+      text: "Mientras te defiendes o realizas un ataque, puedes gastar tu bloqueo en la nave enemiga para cambiar 1 de sus resultados %FOCUS% en un resultado en blanco."
+    },
+    "Zam Wesell": {
+      display_name: "Zam Wesell",
+      text: "<strong>Preparación:</strong> Pierde 2 %CHARGE%. %LINEBREAK>Durante la fase de sistema, puedes asignarte, boca abajo, 1 de tus estados secretos: %LINEBREAK><strong>Deberías Agradecerme</strong> %LINEBREAK><strong>Deberías Hacer Negocios</strong>"
+    },
+    'Alpha-3B "Besh"': {
+      display_name: "Alpha-3B 'Besh'",
+      text: "Mientras realizas un ataque principal, puedes gastar tu bloqueo en el defensor para cambiar 1 de tus resultados en blanco o %FOCUS% en un resultado %HIT%."
+    },
+    "Thermal Detonators": {
+      display_name: "Detonadores termales",
+      text: "<strong>Bomba</strong> %LINEBREAK>Durante la fase de sistema, puedes gastar hasta 2 %CHARGE% para soltar tantos Detonadores Térmicos utilizando la plantilla [1 %STRAIGHT%] o [2 %STRAIGHT%]. Cada uno debe ser colocado utilizando una plantilla diferente. %LINEBREAK>Cuando recargues esta carta, recupera 1 %CHARGE% adicional."
+    },
+    "R2-D2 (Republic)": {
+      display_name: "R2-D2",
+      text: "Después de tu activación, puedes gastar 1 %CHARGE% y recibir 1 ficha de agotamiento para reparar 1 carta de daño, recuperar 1 escudo o quitar 1 dispositivo a alcance 0–1."
+    },
+    "Overdrive Thruster": {
+      display_name: "Propulsores sobrealimentados",
+      text: "Mientras realizas una acción roja %BOOST%, %BARRELROLL% o %SLAM%, <b>debes</b> usar una plantilla de velocidad 1 superior, si es posible."
+    },
+    '"Fives"': {
+      display_name: "Cincos",
+      text: "Después de realizar un ataque fallido, si la iniciativa del defensor es igual o mayor que tu iniciativa, coloca 1 ficha de evasión o concentración en esta carta. %LINEBREAK>Antes de entrar en juego, puedes quitar 1 ficha de esta carta para recibir 1 ficha correspondiente."
+    },
+    "Commander Malarus": {
+      display_name: "Comandante Malarus",
+      text: "<strong>Preparación:</strong> Equípate con esta cara visible. %LINEBREAK>Mientras una nave aliada sin limitaciones a alcance 0–1 realiza un ataque principal, puede volver a lanzar 1 resultado en blanco. En ese caso, y si el ataque no impacta, <b>debes</b> dar la vuelta a esta carta. %LINEBREAK><strong>Sublimado:</strong> Mientras realizas un ataque, si el defensor está en tu %BULLSEYEARC%, <b>debes</b> convertir todos tus resultados %FOCUS% en resultados %HIT% y ganar 1 ficha de estrés. Luego, si tienes al menos 2 fichas de estrés, sufres 1 daño %HIT%."
+    },
+    "Automated Target Priority": {
+      display_name: "Priorización de blancos automatizadaa",
+      text: "Mientras realizas un ataque, <b>debes</b> elegir un defensor a la distancia de ataque válida más corta. %LINEBREAK>Después de realizar un ataque que falla, coloca 1 ficha de cálculo en esta carta. %LINEBREAK>Antes de entrar en juego, puedes quitar 1 ficha de cálculo de esta carta para obtener la ficha correspondiente."
+    },
+    "Sensor Buoy Suite": {
+      display_name: "Conjunto de boyas de sensores",
+      text: "<strong>Preparación:</strong> Antes de colocar las fuerzas, coloca 2 dispositivos distantes de Boya de Detección más allá de alcance 2 de cualquier borde. %LINEBREAK>Antes de entrar en juego, puedes bloquear una nave a alcance 0–1 de cualquier boya de detección aliada, ignorando las restricciones de alcance."
+    },
+    "Ghost Company": {
+      display_name: "Compañía Fantasma",
+      text: "Después de realizar un ataque principal, si estás concentrado, puedes realizar un ataque %SINGLETURRETARC%, como ataque adicional, contra una nave que no has atacado en esta ronda."
+    },
+    "Wolfpack": {
+      display_name: "Wolfpack",
+      text: "Después de que una nave aliada a alcance 0–3 se defiende, si el atacante está en tu arco de tiro, el defensor puede recibir 1 ficha de tensión para bloquear al atacante."
+    },
+    "Kalani": {
+      display_name: "Kalani",
+      text: "Después de que una nave enemiga ha ejecutado una maniobra, si está en el %BULLSEYEARC% de una nave aliada a alcance 0–3, puedes gastar 1 %CHARGE%. En ese caso, esa nave aliada bloquea a esa nave enemiga y luego gana 1 ficha de estrés."
+    },
+    "Concussion Bombs": {
+      display_name: "Bombas de impacto",
+      text: "Durante la fase de sistema, si alguna %CHARGE% de esta carta está inactiva, <b>debes</b> gastar 1 %CHARGE% para soltar una bomba de concusión, si es posible, utilizando la plantilla [1 %STRAIGHT%]. De lo contrario, puedes gastar 1 %CHARGE% para soltar una bomba de concusión. %LINEBREAK> <i>Errata (Guía de Referencia 1.3.0): Agrega 'utilizando la plantilla [1 %STRAIGHT%]' al final de la primera frase.</i>"
+    },
+    "Target-Assist MGK-300": {
+      display_name: "MGK-300 de cálculo de tiro",
+      text: "Antes de entrar en juego, si no tienes ninguna ficha verde y no estás bajo estrés, gana 1 ficha de cálculo por cada nave enemiga a alcance 2-3 en tu arco de tiro, hasta un máximo de 2."
+    },
+    "Backwards Tailslide": {
+      display_name: "Caída de cola hacia atrás",
+      text: "Mientras realizas un impulso o un tonel volado, si la cara 'Replegada' de tu mejora %CONFIGURATION% equipada está visible, puedes moverte a través y superponerte a obstáculos. %LINEBREAK>Después de acelerar o realizar un tonel a través de un obstáculo y si no estás a alcance 0 de él, gana 1 ficha de evasión."
+    },
+    "R2-D2 (Resistance)": {
+      display_name: "R2-D2",
+      text: "Durante la fase de desenlace, puedes gastar 1 %CHARGE% y 1 %SHIELD% para quitar 1 ficha roja. %LINEBREAK>Durante la fase de desenlace, si no tienes ningún %SHIELD% activo, puedes gastar 2 %CHARGE% para recuperar 1 %SHIELD% y ganar 1 ficha de agotamiento."
+    },
+    "R6-D8": {
+      display_name: "R6-D8",
+      text: "Mientras realizas un ataque, puedes volver a lanzar un número de dados de ataque igual o inferior al número de naves aliadas a alcance 0–3 que tienen al defensor en su %BULLSEYEARC%."
+    },
+    "Underslung Blaster Cannon": {
+      display_name: "Cañón blaster inferior",
+      text: "Después de que una nave enemiga haya realizado una maniobra, puedes realizar este ataque contra ella como un ataque adicional. %LINEBREAK><strong>Ataque (%LOCK%):</strong> Tus dados solo pueden modificarse gastando un bloqueo para el efecto predeterminado."
+    },
+    "Jedi Commander": {
+      display_name: "Comandante Jedi",
+      text: "<strong>Cara de Despliegue:</strong> %LINEBREAK>Despliegue: Equípate con esta cara visible. %LINEBREAK>Eres el <b>líder</b>. Tus alas deben ser cazas Torrent V-19 de 2–5 o V-wings de clase Nimbus de 2–5. %LINEBREAK>Después de ser colocado, voltea esta carta. %LINEBREAK><strong>Cara de Juego:</strong> %LINEBREAK>Mientras tus alas realizan maniobras violetas, las consideran rojas en su lugar. %LINEBREAK>Cuando te defiendes, hasta 2 de tus alas en el arco de ataque pueden recibir 1 daño %HIT%/%CRIT% cada una para cancelar 1 resultado correspondiente."
+    },
+    "Syliure-31 Hyperdrive": {
+      display_name: "Hiperimpulsor Siluro-31",
+      text: "<strong>Despliegue:</strong> Puedes ser colocado en cualquier lugar de la zona de juego más allá de alcance 1 de cualquier obstáculo, más allá de alcance 3 de cualquier nave enemiga y más allá del borde del Jugador adversario."
+    },
+    'Alpha-3E "Esk"': {
+      display_name: "Alpha-3E 'Esk'",
+      text: "Mientras realizas un ataque principal, antes de lanzar los dados de ataque, puedes gastar 2 %CHARGE%. En ese caso, tus resultados %CRIT% infligen fichas iónicas en lugar de daño."
+    },
+    "R7-A7": {
+      display_name: "R7-A7",
+      text: "Mientras realizas un ataque, puedes gastar 1 %CHARGE% para cambiar 1 resultado %HIT% en un resultado %CRIT%."
+    },
+    "Q7 Astromech": {
+      display_name: "Astromecánico Q7",
+      text: "Mientras realizas un tonel o aceleras, puedes moverte a través y superponerte a obstáculos."
+    },
+    "Intercept Booster": {
+      display_name: "Impulsor de Interceptación",
+      text: "<strong>Enganchado:</strong> %LINEBREAK>Despliegue: Equípate con esta cara visible. %LINEBREAK>Durante la fase de sistema, gana 1 ficha de desarme a menos que des la vuelta a esta carta. %LINEBREAK>Al final de la fase de desenlace, si no tienes ninguna %CHARGE% activa, voltea esta carta. %LINEBREAK><strong>Desenganchado: </strong> Sin acciones agregadas."
+    },
+    "Independent Calculations": {
+      display_name: "Cálculos independientes",
+      text: "Reemplaza tu capacidad de nave <strong>Cálculos en Red</strong> con la siguiente: %LINEBREAK><strong>Cálculos Independientes:</strong> Mientras realizas una acción blanca %CALCULATE%, puedes considerarla como roja para ganar 1 ficha de cálculo adicional. Las otras naves no pueden gastar tus fichas de cálculo utilizando la capacidad de nave <strong>Cálculos en Red</strong>."
+    },
+    "False Transponder Codes": {
+      display_name: "Códigos de transpondedor falsos",
+      text: "Después de fijar un objeto o de que un objeto te fijase, si tienes 1 %CHARGE% activa, pierde 1 %CHARGE% y burla a ese objeto, ignorando las restricciones de alcance."
+    },
+    "Slave I (Separatist)": {
+      display_name: "Esclavo I",
+      text: "Mientras realizas un ataque %FRONTARC%, si estás en el %FULLREARARC% del defensor, puedes cambiar 1 resultado %HIT% en un resultado %CRIT%."
+    },
+    "B6 Blade Wing Prototype": {
+      display_name: "Prototipo de Ala Cuchilla B6",
+      text: ""
+    },
+    "Cutthroat": {
+      display_name: "Feroz rivalidad",
+      text: "Después de que otra nave aliada a alcance 0–3 sea destruida, si esa nave era limitada o tenía la mejora <strong>Égorgeur</strong>, puedes quitar 1 de tus fichas naranjas o rojas, o recuperar 1 %CHARGE% no recurrente en tu carta de nave o en una de tus cartas de mejora equipadas."
+    },
+    "In It For The Money": {
+      display_name: "Lo hago por el dinero",
+      text: "<strong>Por el Dinero:</strong> %LINEBREAK>Despliegue: Equípate con esta cara visible. %LINEBREAK>Puedes ser integrado en escuadrones de la República, la Alianza Rebelde y la Resistencia. %LINEBREAK>Después de que una nave amiga limitada de tu escuadrón sea destruida, gana 1 ficha de concentración y voltea esta carta. %LINEBREAK><strong>Por Tu Rebelión:</strong> %LINEBREAK>Las naves no Scum de tu escuadrón se consideran aliadas en lugar de amigas."
+    },
+    "Bounty": {
+      display_name: "Recompensa",
+      text: "<strong>Contratado:</strong> %LINEBREAK>Despliegue: Equípate con esta cara visible. %LINEBREAK>Puedes ser integrado en escuadrones Separatistas, Imperiales y del Primer Orden. %LINEBREAK>Después de que hayas realizado un ataque, si el defensor era una nave limitada y fue destruido, puedes recuperar 1 %CHARGE% en tu carta de nave y en cada una de tus cartas de mejora. Luego, voltea esta carta. %LINEBREAK><strong>Pagado:</strong> <i>Vacío</i>"
+    },
+    "Gamut Key": {
+      display_name: "Gamut Key",
+      text: "Al comienzo de la fase de desenlace, puedes gastar 2 %CHARGE% para elegir una nave a alcance 0–1 con al menos 1 ficha circular. Durante la fase de desenlace, las fichas circulares no se retiran de la nave elegida."
+    },
+    "Protectorate Gleb": {
+      display_name: "Protectora Gleb",
+      text: "Después de coordinar una nave aliada, puedes transferir 1 ficha naranja o roja a la nave que coordinaste. %LINEBREAK><i>Errata (1.3.2): Agrega '...una nave aliada...'</i>"
+    },
+    "R4-B11": {
+      display_name: "R4-B11",
+      text: "Mientras realizas un ataque, puedes quitar 1 ficha naranja o roja del defensor para volver a lanzar cualquier cantidad de dados de defensa."
+    },
+    "Asajj Ventress (Command)": {
+      display_name: "Asajj Ventress",
+      text: "Durante la fase de sistema, puedes gastar 1 %FORCE%. En ese caso, cada nave enemiga en tu %FRONTARC% a alcance 0-1 gana 1 ficha de tensión a menos que elija ganar 1 ficha de bloqueo. %LINEBREAK><i>Errata (1.3.2): Agrega el símbolo a la derecha del modificador de la Fuerza.</i>"
+    },
+    "General Grievous (Command)": {
+      display_name: "General Grievous",
+      text: "Mientras te defiendes, después del paso 'Neutralizar resultados', si hay al menos 2 resultados %HIT%/%CRIT%, puedes gastar 1 %CHARGE% para cancelar 1 resultado %HIT% o %CRIT%. %LINEBREAK>Después de que una nave aliada sea destruida, recupera 1 %CHARGE%."
+    },
+    "Hondo Ohnaka (Command)": {
+      display_name: "Hondo Ohnaka",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% y elegir una nave aliada a alcance 0-1. Mueve 1 ficha de Victoria u Objetivo de la carta de esa nave a la tuya o de tu carta de nave a la suya."
+    },
+    "Mar Tuuk": {
+      display_name: "Mar Tuuk",
+      text: "<strong>Despliegue:</strong> después de colocar las fuerzas, elige un patrullero aliado de naves con %CALCULATE% en su barra de acciones y coloca este patrullero en reserva. %LINEBREAK>En la fase de desenlace, puedes colocar este patrullero en tu zona de despliegue o más allá de alcance 2 de cualquier nave enemiga. Luego puedes elegir una nave enemiga a alcance 0-1 de ti: cada nave de este patrullero traba ese enemigo."
+    },
+    "Riff Tamson": {
+      display_name: "Riff Tamson",
+      text: "Durante la fase de Enfrentamiento, en la iniciativa 5, puedes gastar 1 %ENERGY% para realizar un ataque %HARDPOINT% adicional. %LINEBREAK>Después de que hayas realizado un ataque, si el defensor ha recibido al menos 1 carta de daño boca arriba, gana 2 fichas de tensión."
+    },
+    "Zealous Captain": {
+      display_name: "Capitán Zeloso",
+      text: "Durante la fase de Enfrentamiento, en la iniciativa 4, puedes gastar 1 %ENERGY% para realizar un ataque %HARDPOINT% adicional."
+    },
+    "Tractor Tentacles": {
+      display_name: "Tentáculos tractores",
+      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK><strong>Ataque Bonus</strong> %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. %LINEBREAK><strong>Fuera de línea:</strong> %LINEBREAK><strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
+    },
+    "Drill Beak": {
+      display_name: "Pico de Perforación",
+      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK>Puedes realizar este ataque a alcance 0. %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. Si el alcance de ataque es 0, cambia todos los resultados %HIT% a resultados %CRIT%. %LINEBREAK><strong>Fuera de línea:</strong> %LINEBREAK><strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
+    },
+    "Enhanced Propulsion": {
+      display_name: "Propulsión mejorada",
+      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK>Al comienzo de la fase de desenlace, puedes gastar 2 %ENERGY% para realizar una maniobra blanca [2 %STRAIGHT%], [1 %BANKLEFT%] o [1 %BANKRIGHT%]. %LINEBREAK><strong>Fuera de línea:</strong> %LINEBREAK><strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
+    },
+    "Proton Cannon Battery": {
+      display_name: "Batería de cañones de protones",
+      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK><strong>Ataque Bonus:</strong> cambia 1 resultado %HIT% a resultado %CRIT%. %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. Cambia 1 resultado %HIT% a resultado %CRIT%. %LINEBREAK><strong>Fuera de línea:</strong> %LINEBREAK><strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
+    },
+    "Droid Crew": {
+      display_name: "Tripulación droide",
+      text: "Mientras realizas una acción %FOCUS% blanca, considérala como roja en su lugar. %LINEBREAK>Al comienzo de la fase de desenlace, repara todas tus cartas de daño <b>Tripulación</b> boca arriba."
+    },
+    "Tractor Technicians": {
+      display_name: "Técnicos de tractores",
+      text: "Durante la fase de desenlace, ninguna otra nave a alcance 0-1 puede quitar sus fichas de rayo tractor. %LINEBREAK>Antes de que una nave enemiga tractada a alcance 0-1 revele su selector de maniobra, puedes gastar 1 %ENERGY%. En ese caso, mientras esa nave ejecute su maniobra en esa activación, disminuye su velocidad en 1, con un mínimo de 1."
+    },
+    "Corsair Crew": {
+      display_name: "Tripulación corsaria",
+      text: "Mientras realizas un ataque contra una nave estándar, puedes gastar 1 resultado %HIT%. En ese caso, el defensor gana 1 ficha de agotamiento."
+    },
+    "Grappler": {
+      display_name: "Atrapador",
+      text: "Mientras realizas un ataque %Pico de Perforación% a alcance de ataque 1, si el defensor está tractado, consíderalo a alcance 0 en su lugar."
+    },
+    "Nautolan's Revenge": {
+      display_name: "Venganza Nautolana",
+      text: "Antes de comprometerte, puedes gastar hasta 2 fichas de cálculo. En ese caso, recupera la misma cantidad de %ENERGY%."
+    },
+    "Neimoidian Grasp": {
+      display_name: "Agarre Neimoidiano",
+      text: "Después de realizar un ataque, puedes realizar una acción %EVADE% roja. %LINEBREAK>Mientras te defiendes, si tienes fichas de evasión, puedes lanzar 1 dado de defensa adicional."
+    },
+    "Trident": {
+      display_name: "Tridente",
+      text: "Después de superponer una nave o de que una nave te supere, si no está tractada, puedes gastar 1 %ENERGY%. En ese caso, obtiene 3 fichas de rayo tractor."
+    },
+    "Tracking Torpedoes": {
+      display_name: "Torpedos de Rastreo",
+      text: "Durante la fase de sistema, puedes gastar hasta 3 %CHARGE% para lanzar la misma cantidad de torpedos de rastreo utilizando las plantillas [3%BANKLEFT%], [4%STRAIGHT%] o [3%BANKRIGHT%]. Cada dispositivo debe usar una plantilla diferente. Luego, cada dispositivo puede fijar un objeto que hayas fijado, ignorando las restricciones de alcance. %LINEBREAK>No puedes recuperar las %CHARGE% de esta carta. %LINEBREAK><i>Errata (1.3.2): Añade la no recuperación de las cargas.</i>"
+    },
+    "L4E-R5": {
+      display_name: "L4E-R5",
+      text: "Al comienzo de la fase de compromiso, puedes transferir 1 ficha de cálculo a una nave aliada en tu arco de tiro."
+    },
+    "Wartime Loadout": {
+      display_name: "Carga bélica",
+      text: "Reemplaza tu capacidad de nave por la siguiente: %LINEBREAK><strong>Disparo de Cañón Masivo:</strong> Mientras realizas un ataque %TORPEDO% o %MISIL%, si el defensor está en tu %BULLSEYEARC%, tus resultados %CRIT% no pueden ser anulados por resultados %EVADE%."
+    },
+    "Watchful Astromech": {
+      display_name: "Droide astromecánico alerta",
+      text: "Después de realizar una acción %RELOAD% o %ROTATEARC%, si estás en el arco de tiro de una nave enemiga, puedes realizar una acción %CALCULATE% roja."
+    },
+    "Overtuned Modulators": {
+      display_name: "Moduladores sobrecalibrados",
+      text: "Durante la fase de sistema, si no estás bajo estrés, puedes gastar 1 %CHARGE% para obtener 3 fichas de cálculo. %LINEBREAK>En la fase de desenlace, si tu %CHARGE% está inactiva, por cada ficha verde que retires, obtén 1 ficha de tensión."
+    },
+    "DT-798": {
+      display_name: "DT-798",
+      text: "Al comienzo de la fase de compromiso, puedes elegir una nave aliada en tu arco de tiro. En ese caso, obtiene 1 ficha de tensión. %LINEBREAK>Mientras realizas un ataque, puedes volver a lanzar hasta 1 dado por cada nave en el arco de ataque con al menos 1 ficha roja u naranja que no sea un blanco."
+    },
+    "Enhanced Jamming Suite": {
+      display_name: "Emisor de Interferencias mejorado",
+      text: "Mientras realizas bloqueo, puedes elegirte a ti mismo o a otra nave aliada. %LINEBREAK>Mientras te defiendes, si el atacante no tiene fichas verdes o hay una nave bloqueada en el arco de ataque, puedes lanzar 1 dado de defensa adicional."
+    },
+    "First Order Ordnance Tech": {
+      display_name: "Técnico en explosivos de la Primera Orden",
+      text: " "
+    },
+    "Sensor Scramblers": {
+      display_name: "Inhibidores de sensores",
+      text: "<strong>Preparación:</strong> Obtén 1 ficha de ocultación. %LINEBREAK%Mientras estás oculto, las otras naves no pueden fijarte con sus blancos. %LINEBREAK>Durante la fase de desenlace, si estás oculto y hay una nave enemiga a alcance 0-3, <b>debes</b> dejar de estar oculto. En ese caso, si el intento de dejar de estar oculto falla, pierdes 1 ficha de ocultación."
+    },
+    "Babu Frik": {
+      display_name: "Babu Frik",
+      text: "Antes de que ganes una ficha roja u naranja que no sea un blanco, puedes gastar 1 %CHARGE% para ponerla en esta carta en su lugar. %LINEBREAK>Durante la fase de sistema, si hay al menos 1 ficha en esta carta, <b>debes</b> gastar 1 %CHARGE%. Si no puedes, elimina las fichas de esta carta y gana las fichas correspondientes."
+    },
+    "Compassion": {
+      display_name: "Compasión",
+      text: "Antes de que una carta de daño <b>Piloto</b> o <b>Equipamiento</b> se le asigne con la cara visible a otra nave aliada a alcance 0-2, puedes gastar 1 %FORCE%. En ese caso, esa carta de daño se descarta en su lugar y te asignan 1 carta de daño con la cara oculta. Luego, si tienes al menos 2 cartas de daño, recuperas 2 %FORCE%."
+    },
+    "Malice": {
+      display_name: "Malicia",
+      text: "Mientras realizas un ataque, puedes gastar 1 %FORCE% para cambiar 1 resultado %FOCUS% o %HIT% en 1 resultado %CRIT%. En ese caso, después de realizar ese ataque, si al menos 1 carta de daño <b>Piloto</b> o <b>Equipamiento</b> se le asignó con la cara visible al defensor, recuperas 2 %FORCE%."
+    },
+    "Shattering Shot": {
+      display_name: "Disparo demoledor",
+      text: "Mientras realizas un ataque, si el ataque está obstaculizado por un obstáculo o si el defensor está a alcance 0 de un obstáculo, puedes gastar 1 %FORCE% para agregar 1 resultado %FOCUS%."
+    },
+    "Electro-Chaff Missiles": {
+      display_name: "Misiles de electropartículas",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% de esta carta para lanzar 1 nube de Electropartículas utilizando la plantilla [3 %BANKLEFT%], [3 %BANKRIGHT%] o [4 %STRAIGHT%]. Luego, coloca 1 ficha de cebo en ella."
+    },
+    "Feedback Ping": {
+      display_name: "Pulso de retorno",
+      text: "Después de que una nave enemiga haya ejecutado una maniobra y esté a alcance 0-1 de un dispositivo aliado, puedes fijar a esa nave enemiga, ignorando las restricciones de alcance."
+    },
+    "Sabine Wren (Command)": {
+      display_name: "Sabine Wren",
+      text: "<strong>Preparación:</strong> Antes de desplegar las fuerzas, asóciate el estado <b>Pruebas del Sable Oscuro</b>. %LINEBREAK>Mientras realizas una acción %COORDINATE%, puedes coordinar una nave aliada adicional."
+    },
+    "Clan Training": {
+      display_name: "Entrenamiento de Clan",
+      text: "Antes de comprometerte, si no estás concentrado y hay una nave enemiga en tu %FRONTARC% a alcance 1, puedes gastar 1 %CHARGE% para realizar una acción roja. %LINEBREAK>Después de que hayas realizado un ataque. Si el defensor es destruido, recuperas 1 %CHARGE%."
+    },
+    "Ahsoka Tano (Crew)": {
+      display_name: "Ahsoka Tano",
+      text: "Después de haber ejecutado completamente una maniobra, puedes gastar 1 %FORCE% para elegir una nave aliada en tu %FULLREARARC% a alcance 1-2. En ese caso, la nave seleccionada puede realizar una acción %FOCUS% roja, incluso si está bajo tensión."
+    },
+    "Bo-Katan Kryze (Republic/Separatist)": {
+      display_name: "Bo-Katan Kryze",
+      text: "Mientras estás realizando un ataque y estás a alcance 0-1 del defensor, puedes volver a tirar 1 dado de ataque."
+    },
+    "Bo-Katan Kryze (Rebel/Scum)": {
+      display_name: "Bo-Katan Kryze",
+      text: "Después de que hayas realizado un ataque y el defensor haya sido destruido, cada nave aliada a alcance 0-2 puede retirar 1 ficha roja o naranja."
+    },
+    "Captain Hark": {
+      display_name: "Capitán Hark",
+      text: "Después de haber ejecutado completamente una maniobra roja, si no estás en tensión, puedes gastar 1 %CHARGE% para ganar 1 ficha de concentración."
+    },
+    "Fenn Rau": {
+      display_name: "Fenn Rau",
+      text: "Antes de que una nave aliada a alcance 0-2 se comprometa, si su maniobra revelada tiene una velocidad igual o mayor que 1 y hay una nave enemiga en tu %FRONTARC% a alcance 1, esa nave aliada puede retirar 1 ficha roja que no sea de bloqueo."
+    },
+    "Gar Saxon": {
+      display_name: "Gar Saxon",
+      text: "Mientras una unidad aliada a alcance 1-3 con una iniciativa igual o inferior a 4 realiza un ataque contra un defensor que hayas bloqueado, el atacante puede cambiar 1 resultado %FOCUS% por un resultado %HIT%."
+    },
+    "Korkie Kryze": {
+      display_name: "Korkie Kryze",
+      text: "Después de que una nave aliada en tu %FULLFRONTARC% a alcance 1-2 se convierta en el defensor, puedes transferirle 1 ficha verde."
+    },
+    "Obi-Wan Kenobi": {
+      display_name: "Obi-Wan Kenobi",
+      text: "Después de que una nave aliada a alcance 0-2 haya gastado una ficha de concentración o evasión, puedes gastar 1 %FORCE%. En ese caso, esa nave aliada gana 1 ficha de concentración."
+    },
+    "Pre Vizsla": {
+      display_name: "Pre Vizsla",
+      text: "Mientras estás realizando una acción de %COORDINATE%, puedes elegir una unidad alejada %CREW% en lugar de otra nave aliada. En lugar de realizar una acción, esa unidad alejada se reposiciona hacia adelante utilizando una plantilla [1 %TURNLEFT%], [1 %TURNRIGHT%] o [2 %STRAIGHT%]."
+    },
+    "Prime Minister Almec": {
+      display_name: "Primer Ministro Almec",
+      text: "<strong>Preparación:</strong> Equípate con esta cara visible. %LINEBREAK%Después de que una nave aliada a alcance 0-2 haya revelado una maniobra blanca, si no tiene una ficha verde, puede ganar 1 ficha de tensión para ganar 1 ficha de cálculo. %LINEBREAK%Durante la fase de conclusión, si tienes al menos 2 fichas de tensión, voltea esta carta. %LINEBREAK><strong>Almec, Marioneta de Maul: </strong>Después de que una nave aliada a alcance 0-2 haya ejecutado completamente una maniobra roja, puede realizar una acción de %CALCULATE% o %FOCUS% de su barra de acciones, incluso si está bajo tensión."
+    },
+    "Rook Kast": {
+      display_name: "Rook Kast",
+      text: "Después de realizar una acción roja, puedes ganar 1 ficha de estrés. %LINEBREAK%Mientras realizas un ataque, si estás bajo estrés, puedes cambiar 1 de tus resultados en blanco o %FOCUS% por un resultado %HIT%."
+    },
+    "Satine Kryze": {
+      display_name: "Satine Kryze",
+      text: "Al comienzo de la fase de combate, puedes gastar 2 %CHARGE%. En ese caso, cada nave aliada puede elegir ganar 1 ficha de agotamiento y 1 ficha de concentración o ganar 1 ficha de desarme y 1 ficha de evasión."
+    },
+    "Savage Opress": {
+      display_name: "Savage Opress",
+      text: "Después de que una nave aliada en tu %FRONTARC% a alcance 1-2 haya ganado una ficha de estrés o de estrés, puedes gastar 1 %FORCE%. En ese caso, esa nave aliada gana 1 ficha de concentración."
+    },
+    "Tal Merrik": {
+      display_name: "Tal Merrik",
+      text: "<strong>Preparación:</strong> Antes de desplegar las fuerzas, elige 1 nave enemiga y asígnale el estado de <b>Falso Hermano</b>. %LINEBREAK><strong>Acción:</strong> Si el estado de <b>Falso Hermano</b> no está asignado a una nave enemiga, asígnalo a una nave enemiga en tu %FRONTARC% a alcance 0-2."
+    },
+    "Tristan Wren": {
+      display_name: "Tristan Wren",
+      text: "Mientras una unidad aliada a alcance 0-3 realiza un ataque %RANGEBONUS%, puedes gastar 1 %CHARGE%. En ese caso, el atacante puede cambiar 1 resultado %HIT% por un resultado %CRIT%."
+    },
+    "Ursa Wren": {
+      display_name: "Ursa Wren",
+      text: "Puedes mantener hasta 2 bloqueos. Cada bloqueo debe estar en un objetivo diferente. %LINEBREAK%Después de que una nave aliada a alcance 0-3 sea bloqueada por una nave enemiga, puedes realizar una acción %LOCK%. %LINEBREAK> <i>Errata (1.5): Texto actualizado para reflejar el efecto originalmente previsto.</i>"
+    },
+    "Maul (Mandalore)": {
+      display_name: "Maul",
+      text: " "
+    },
+    "Gar Saxon (Gunner)": {
+      display_name: "Gar Saxon",
+      text: "Mientras realizas la acción %LOCK%, solo puedes elegir un objetivo en tu %FRONTARC% o tu %REARARC%. Mientras realizas un ataque principal, si el defensor está en tu %FRONTARC% o tu %REARARC%, puedes retirar 1 ficha roja o naranja del defensor para lanzar 1 dado adicional, hasta un máximo de 4."
+    },
+    "Tiber Saxon": {
+      display_name: "Tiber Saxon",
+      text: "Después de realizar un ataque a alcance 1-2 que impacte, si el defensor no tiene una carta de daño cara visible, puedes gastar 1 o más %CHARGE%. Por cada %CHARGE% gastado, el defensor recibe 1 ficha de estrés."
+    },
+    "Ursa Wren (Gunner)": {
+      display_name: "Ursa Wren",
+      text: "Después de bloquear una unidad enemiga más allá de alcance 2 y si no hay ninguna unidad aliada a alcance 0-1 de la unidad bloqueada, gana 1 ficha de cálculo."
+    },
+    "Blazer Bomb": {
+      display_name: "Bomba incendiaria",
+      text: "<strong>Bomba</strong> %LINEBREAK%Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar una Bomba Incendiaria utilizando la plantilla [1 %STRAIGHT%]."
+    },
+    "Beskar Reinforced Plating": {
+      display_name: "Blindaje reforzado de beskar",
+      text: "Mientras te defiendes y el atacante está en tu %FRONTARC%, antes de que se te asigne una carta de daño cara visible, puedes gastar 1 %CHARGE% para recibir esta carta boca abajo en su lugar o gastar 2 %CHARGE% para descartarla."
+    },
+    "Mandalorian Optics": {
+      display_name: "Sensores ópticos mandalorianos",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para hacer un bloqueo en un objetivo en tu %FRONTARC%. Mientras realizas un ataque principal y tienes un bloqueo en el defensor, ignora los obstáculos más allá de alcance 0 que obstaculicen este ataque."
+    },
+    "Gauntlet": {
+      display_name: "Guantelete",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para reparar 1 carta de daño <b>Vaisseau</b> boca arriba."
+    },
+    "Nightbrother": {
+      display_name: "Hermano de la Noche",
+      text: "Después de revelar una maniobra no azul, si estás bajo estrés, puedes gastar 2 %CHARGE% para ganar 1 ficha de concentración o evasión."
+    },
+    "Swivel Wing": {
+      display_name: "Ala basculante",
+      text: "<strong>Ala Giratoria (Abajo):</strong> %LINEBREAK%Después de ejecutar una maniobra [0 %STOP%], puedes girar tu nave 90° o 180°. En este caso, <b>debes</b> darle la vuelta a esta carta. %LINEBREAK%<strong>Ala Giratoria (Arriba):</strong> %LINEBREAK>Mientras te defiendes, lanza 1 dado de defensa menos. %LINEBREAK>Después de ejecutar completamente una maniobra no estacionaria [0 %STOP%], puedes darle la vuelta a esta carta."
+    },
+    "Clan Wren Commandos": {
+      display_name: "Comandos del Clan Wren",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar una Unidad Distante Equipo Comandos utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar esta unidad distante utilizando sus guías delanteras o traseras."
+    },
+    "Razor Crest": {
+      display_name: "Razor Crest",
+      text: "<strong>Preparación:</strong> Coloca 1 mejora %ILLICIT% sin restricciones boca abajo bajo esta carta. %LINEBREAK> Durante la fase de sistema, puedes revelar esa mejora %ILLICIT% y equiparla como si hubiera sido equipada en la Preparación (sin pagar su costo en puntos)."
+    },
+    "The Mandalorian": {
+      display_name: "El Mandaloriano",
+      text: "Durante la fase de conclusión, si no has defendido en esta ronda, recupera 1 %FORCE% no recurrente, si es posible."
+    },
+    "The Child": {
+      display_name: "El Niño",
+      text: "<strong>Preparación:</strong> Después de colocar las fuerzas, elige a un oponente: él asigna el estado de <b>Persecución Implacable</b> a 2 de sus naves. %LINEBREAK>Tu %FORCE% pierde el icono recurrente. Después de defender, si has recibido al menos 1 daño durante ese ataque, recupera 1 %FORCE%."
+    },
+    "Tracking Fob": {
+      display_name: "Rastreador de presas",
+      text: "<strong>Preparación:</strong> Antes de colocar las fuerzas, elige a un oponente: él asigna el estado de <b>Destinado a Morir</b> a 1 de sus naves. Debe asignarlo a una nave limitada, si es posible. %LINEBREAK>Ignoras las restricciones de alcance cuando bloqueas la nave que tiene el estado de <b>Destinado a Morir</b>."
+    },
+    "Notorious": {
+      display_name: "Célebre",
+      text: "Después de que te hayas defendido y si el atacante está en tu arco de tiro, puedes gastar 1 %CHARGE%. En ese caso, el atacante recibe 1 ficha de estrés. %LINEBREAK>Mientras realizas un ataque y si el defensor está bajo estrés, puedes volver a tirar 1 resultado en blanco."
+    },
+    "Enduring": {
+      display_name: "Perseverante",
+      text: "Mientras te defiendes y no estás en el %BULLSEYEARC% del atacante, los resultados %CRIT% se anulan antes que los resultados %HIT%. Después de sufrir 1 o más daños %CRIT%, puedes realizar una acción %CALCULATE% o %FOCUS% de tu barra de acciones, incluso si estás bajo estrés, considerando esta acción como roja."
+    },
+    "IG-11": {
+      display_name: "IG-11",
+      text: "<strong>Preparación:</strong> Debes equipar esto con esta cara visible. %LINEBREAK> Antes de que te asignen una carta de daño cara visible, <b>debes</b> colocar 1 ficha de cebado en esta mejora y ganas 1 ficha de cálculo en su lugar. Luego, si hay 2 fichas de cebado en esta mejora, dale la vuelta. %LINEBREAK> <strong>IG-11 (Protocolo Anti-Captura)</strong> %LINEBREAK> Durante la fase de desenlace, retira 1 ficha de cebado de esta carta. Luego, si esta carta ya no tiene fichas de cebado, eres destruido y cada otra nave a alcance 0-1 sufre 1 daño %CRIT%. %LINEBREAK> <strong>Acción:</strong> Coloca 1 ficha de cebado en esta carta."
+    },
+    "Greef Karga": {
+      display_name: "Greef Karga",
+      text: "Puedes coordinar naves amigas como si fueran naves aliadas. %LINEBREAK> Después de coordinar una nave, esa nave puede bloquear un objetivo que hayas bloqueado."
+    },
+    "Kuiil": {
+      display_name: "Kuiil",
+      text: "<strong>Acción:</strong> Lanza 1 dado de ataque por cada carta de daño que tengas. Por cada resultado %HIT%, repara 1 carta de daño <b>Vaisseau</b> cara visible, y por cada resultado %CRIT%, repara 1 carta de daño cara oculta. Por cada resultado en blanco, elimina 1 ficha naranja, y por cada resultado %FOCUS%, gana 1 ficha de concentración."
+    },
+    "Peli Motto": {
+      display_name: "Peli Motto",
+      text: "Durante la fase de sistema, puedes realizar una acción de una de tus cartas de daño incluso si estás bajo estrés. %LINEBREAK> Después de reparar una carta de daño <b>Vaisseau</b> cara visible, puedes lanzar 1 dado de ataque. Con un resultado %HIT%, repara otra carta de daño <b>Vaisseau</b> cara visible. Con un resultado %CRIT%, expone 1 carta de daño."
+    },
+    "Migs Mayfeld": {
+      display_name: "Migs Mayfeld",
+      text: "Después de realizar un ataque %FRONTARC%, puedes realizar un ataque %REARARC% o %SINGLETURRETARC% como ataque adicional contra un objetivo diferente que tenga al menos 1 ficha roja o naranja."
+    },
+    "Burnout Thrusters": {
+      display_name: "Propulsores de aceleración",
+      text: "Después de realizar una acción %SLAM%, pierdes 1 %CHARGE%. Luego puedes ganar 1 ficha de agotamiento para eliminar 1 ficha de desarme. %LINEBREAK> Si tu %CHARGE% está inactiva, no puedes realizar una acción %SLAM%."
+    },
+    "Hotshot Tail Blaster": {
+      display_name: "Bláster de cola fulminante",
+      text: "Este ataque puede realizarse a alcance 0. %LINEBREAK> <strong>Ataque:</strong> Gasta 1 %CHARGE%."
+    },
+    "Combat Boarding Tube": {
+      display_name: "Conducto de abordaje de combate",
+      text: "Durante la fase de sistema, si se supone que debes soltar un dispositivo distante %CREW% y hay una nave enemiga de tamaño medio, grande o enorme a alcance 0-1 en tu %REARARC%, puedes colocar ese dispositivo en el campo de juego en tu %REARARC% a alcance 0-1, de manera que esté a alcance 0 de la nave enemiga en su lugar. Luego, esa nave enemiga recibe 1 ficha de agotamiento, tensión o estrés (tú eliges)."
+    },
+    "Drop-Seat Bay": {
+      display_name: "Compartimento de tropas aéreass",
+      text: "Si se supone que debes soltar un dispositivo distante %CREW% utilizando una plantilla [ %STRAIGHT% ], puedes usar una plantilla de giro del mismo tamaño [ %BANKLEFT% o %BANKRIGHT% ] en su lugar y puedes alinear el centro de la plantilla con las marcas de los lados izquierdo o derecho de tu nave en lugar de tus guías traseras."
+    },
+    "Mandalorian Super Commandos": {
+      display_name: "Supercomandos Mandalorianos",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK> Las %CHARGE% de esta carta no pueden ser recuperadas."
+    },
+    "Imperial Super Commandos": {
+      display_name: "Supercomandos Imperiales",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK> Las %CHARGE% de esta carta no pueden ser recuperadas."
+    },
+    "Nite Owl Commandos": {
+      display_name: "Comandos de Nite Owl",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK> Las %CHARGE% de esta carta no pueden ser recuperadas."
+    },
+    "Death Watch Commandos": {
+      display_name: "Comandos de la Guardia de la muerte",
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK> Las %CHARGE% de esta carta no pueden ser recuperadas."
+    },
+    "Proton Cannons": {
+      display_name: "Cañones de Protones",
+      text: "<strong>Ataque:</strong> Gasta 2 %CHARGE%. Cambia 1 resultado %FOCUS% o %HIT% por un resultado %CRIT%."
+    },
+    "Homing Torpedoes": {
+      display_name: "Torpedos rastreadores",
+      text: "<strong>Ataque (%LOCK%):</strong> Gasta 1 %CHARGE%. Después de que declares al defensor, puede elegir recibir 1 daño %CRIT%. En ese caso, salta las etapas de \"Dados de ataque\" y \"Dados de defensa\" y considera que el ataque ha impactado."
+    },
+    "Xanadu Blood": {
+      display_name: "Sangre de Xanadu",
+      text: " "
+    },
+    "Fanatic (BoY)": {
+      display_name: "Fanático",
+      text: "Mientras realizas un ataque principal, si estás dañado, puedes cambiar 1 resultado %FOCUS% por un resultado %HIT%."
+    },
+    "Chewbacca (BoY)": {
+      display_name: "Chewbacca",
+      text: "Después de realizar una acción %EVADE%, puedes ganar 1 ficha de concentración."
+    },
+    "Attack Speed (BoY)": {
+      display_name: "Velocidad de Ataque",
+      text: "Después de ejecutar completamente una maniobra [3%STRAIGHT%] o [4%STRAIGHT%], puedes realizar una aceleración utilizando la plantilla [1%STRAIGHT%]."
+    },
+    "Unstable Sublight Engines (BoY)": {
+      display_name: "Motores Sublumínicos Inestables",
+      text: "Después de ser destruido, <b>debes</b> ejecutar una maniobra [1%STRAIGHT%], y luego todas las otras naves a alcance 0-1 sufren 1 daño %HIT%."
+    },
+    "R2-D2 (BoY)": {
+      display_name: "R2-D2",
+      text: "Después de revelar tu selector de maniobras, puedes gastar 1 %CHARGE% y ganar 1 ficha de desarme para recuperar 1 escudo."
+    },
+    "Dorsal Turret (BoY)": {
+      display_name: "Torreta dorsal",
+      text: "<strong>Ataque</strong>"
+    },
+    "R2-F2 (BoY)": {
+      display_name: "R2-F2",
+      text: "Después de revelar tu selector de maniobras, puedes gastar 1 %CHARGE% y ganar 1 ficha de desarme para recuperar 1 escudo."
+    },
+    "Precise Astromech (BoY)": {
+      display_name: "Astromecánico Preciso",
+      text: "Después de realizar una acción, puedes gastar 1 %CHARGE% para realizar una acción %LOCK% roja."
+    },
+    "R2-A3 (BoY)": {
+      display_name: "R2-A3",
+      text: "Después de revelar tu selector de maniobras, puedes gastar 1 %CHARGE% y ganar 1 ficha de desarme para recuperar 1 escudo."
+    },
+    "Vengeful (BoY)": {
+      display_name: "Vengativo",
+      text: "Después de que una nave aliada a alcance 0–3 sea destruida, si esa nave era única, puedes eliminar 1 de tus fichas rojas o recuperar 1 carga recurrente de tu carta de nave."
+    },
+    "R5-D8 (BoY)": {
+      display_name: "R5-D8",
+      text: "<strong>Acción:</strong> Gasta 1 %CHARGE% para reparar 1 carta de daño cara oculta. %LINEBREAK%<strong>Acción:</strong> Repara 1 carta de daño <b>Vaisseau</b> cara visible."
+    },
+    "R5-K6 (BoY)": {
+      display_name: "R5-K6",
+      text: "<strong>Acción:</strong> Gasta 1 %CHARGE% para reparar 1 carta de daño cara oculta. %LINEBREAK%<strong>Acción:</strong> Repara 1 carta de daño <b>Vaisseau</b> cara visible."
+    },
+    "Sensor Jammer (BoY)": {
+      display_name: "Bloqueador de sensores",
+      text: "Mientras te defiendes, si hay un bloqueo aliado en el atacante, puedes cambiar 1 resultado %HIT% del atacante por un resultado %FOCUS%."
+    },
+    "Ancillary Ion Weapons (SoC)": {
+      display_name: "Armas iónicas auxiliares",
+      text: "Mientras realizas un ataque principal %FRONTARC%, antes de lanzar los dados de ataque, puedes gastar 2 %CHARGE%. En ese caso, tus resultados %CRIT% infligen marcadores iónicos en lugar de daño."
+    },
+    "Roiling Anger (SoC)": {
+      display_name: "Ira Incontenible",
+      text: "Al comienzo de la fase de enfrentamiento, si estás en el %FRONTARC% de una nave enemiga, puedes ganar 1 ficha de contrainte para recuperar 1 %FORCE%."
+    },
+    "Contingency Protocol (SoC)": {
+      display_name: "Protocolo de Contingencia",
+      text: "Después de que esta nave sea destruida, otra nave aliada a alcance 0–3 con una <b>Protocolo de Contingencia</b> puede realizar una acción, incluso si está bajo estrés."
+    },
+    "Strut-Lock Override (SoC)": {
+      display_name: "Anulación de Anclaje de Patas",
+      text: "Al comienzo de tu activación, puedes gastar 1 %CHARGE%. En ese caso, ignora los obstáculos al moverte a través de ellos en esta ronda."
+    },
+    "R4-P17 (SoC)": {
+      display_name: "R4-P17",
+      text: "Cuando se supone que debes recibir una carta de daño, si no estás defendiendo, puedes gastar una %CHARGE% y ganar 1 ficha de contrainte para descartarla en su lugar."
+    },
+    "Targeting Astromech (BoY)": {
+      display_name: "Astromecánico de Objetivo",
+      text: "Después de realizar una acción %LOCK%, puedes realizar una acción %ROTATEARC% roja."
+    },
+    "Wolfpack (SoC)": {
+      display_name: "Manada de Lobos",
+      text: "Mientras realizas un ataque, puedes gastar un bloqueo que tenga una nave aliada <b>Plo Koon</b> o con la capacidad <b>Nacido para Esto</b> en el defensor para volver a lanzar cualquier número de dados de ataque."
+    },
+    "Evasion Sequence 7 (SoC)": {
+      display_name: "Secuencia de Evasión 7",
+      text: "Mientras realizas una acción %EVADE% roja, si hay un obstáculo o una característica de escenario a alcance 1, considera esta acción como blanca en su lugar."
     }
   };
   condition_translations = {
     'Suppressive Fire': {
       display_name: "Fuego de supresión",
-      text: 'Mientras efectúas un ataque contra una nave que no sea la del <strong>Capitán Rex</strong>, tira 1 dado de ataque menos. %LINEBREAK% Después de que el <strong>Capitán Rex</strong> se defienda, retira esta carta.  %LINEBREAK% Al final de la fase de Enfrentamiento, si el <strong>Capitán Rex</strong> no ha efectuado ningún ataque en esta fase, retira esta carta. %LINEBREAK% Después de que el <strong>Capitán Rex</strong> sea destruido, retira esta carta.'
+      text: "Mientras efectúas un ataque contra una nave que no sea la del <strong>Capitán Rex</strong>, tira 1 dado de ataque menos. %LINEBREAK% Después de que el <strong>Capitán Rex</strong> se defienda, retira esta carta.  %LINEBREAK% Al final de la fase de Enfrentamiento, si el <strong>Capitán Rex</strong> no ha efectuado ningún ataque en esta fase, retira esta carta. %LINEBREAK% Después de que el <strong>Capitán Rex</strong> sea destruido, retira esta carta."
     },
     'Hunted': {
       display_name: "Cazado",
-      text: 'Después de que seas destruido, debes elegir otra nave aliada y asignarle este Estado, si es posible.'
+      text: "Después de que seas destruido, debes elegir otra nave aliada y asignarle este Estado, si es posible."
     },
     'Listening Device': {
       display_name: "Dispositivo de escucha",
-      text: 'Durante la fase de Sistemas, si hay alguna nave enemiga con la mejora <strong>Confidente</strong> situada a alcance 0-2 de ti, dale la vuelta a tu selector para dejarlo boca arriba.'
+      text: "Durante la fase de Sistemas, si hay alguna nave enemiga con la mejora <strong>Confidente</strong> situada a alcance 0-2 de ti, dale la vuelta a tu selector para dejarlo boca arriba."
     },
     'Rattled': {
       display_name: "Estremecido",
-      text: 'Después de que detona una bomba o mina en el rango 0-1, sufre 1% CRIT%. Luego, retire esta carta. %LINEBREAK% Acción: si no hay bombas ni minas en el rango 0-1, retira esta carta.'
+      text: "Después de que detona una bomba o mina en el rango 0-1, sufre 1% CRIT%. Luego, retire esta carta. %LINEBREAK% Acción: si no hay bombas ni minas en el rango 0-1, retira esta carta."
     },
     'Optimized Prototype': {
       display_name: "Prototipo optimizado",
-      text: 'Cuando estés efectuando un ataque de armamento principal %FRONTARC% contra una nave que esté fijada como blanco por una nave aliada equipada con la mejora <strong>Director Krennic</strong> puedes gastar 1 resultado %HIT%, %CRIT% o %FOCUS%. Si lo haces, elige entre: el defensor pierde 1 ficha de Escudos, o el defensor le da la vuelta a 1 de sus cartas de Daño que tenga boca abajo.'
+      text: "Cuando estés efectuando un ataque de armamento principal %FRONTARC% contra una nave que esté fijada como blanco por una nave aliada equipada con la mejora <strong>Director Krennic</strong> puedes gastar 1 resultado %HIT%, %CRIT% o %FOCUS%. Si lo haces, elige entre: el defensor pierde 1 ficha de Escudos, o el defensor le da la vuelta a 1 de sus cartas de Daño que tenga boca abajo."
     },
     'I\'ll Show You the Dark Side': {
       display_name: "Yo te mostraré el Lado Oscuro",
-      text: 'Cuando se asigna esta carta, si no hay ninguna carta de daño boca arriba, el jugador que la asignó busca en el mazo de daños 1 carta de daño de piloto y la coloca boca arriba sobre esta carta. Luego baraja el mazo de daños. Cuando vas a sufrir 1 %CRIT% de daño, en su lugar recibes la carta de daño boca arriba en esta carta. Luego, retire esta carta.'
+      text: "Cuando se asigna esta carta, si no hay ninguna carta de daño boca arriba, el jugador que la asignó busca en el mazo de daños 1 carta de daño de piloto y la coloca boca arriba sobre esta carta. Luego baraja el mazo de daños. Cuando vas a sufrir 1 %CRIT% de daño, en su lugar recibes la carta de daño boca arriba en esta carta. Luego, retire esta carta."
     },
     'Proton Bomb': {
       display_name: "Bomba de protones",
-      text: '(Ficha de Bomba) - Al final de la fase de Activación, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, toda nave que tenga a alcance 0-1 sufre 1 de daño %CRIT%.'
+      text: "(Ficha de Bomba) - Al final de la fase de Activación, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, toda nave que tenga a alcance 0-1 sufre 1 de daño %CRIT%."
     },
     'Seismic Charge': {
       display_name: "Carga sísmica",
-      text: '(Ficha de Bomba) - Al final de la fase de Activación, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, elige 1 obstáculo que tenga a alcance 0-1. Toda nave que esté situada a alcance 0-1 del obstáculo sufre 1 de daño %HIT%. Luego retira ese obstáculo.'
+      text: "(Ficha de Bomba) - Al final de la fase de Activación, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, elige 1 obstáculo que tenga a alcance 0-1. Toda nave que esté situada a alcance 0-1 del obstáculo sufre 1 de daño %HIT%. Luego retira ese obstáculo."
     },
     'Bomblet': {
       display_name: "Minibomba",
-      text: '(Ficha de Bomba) - Al final de la fase de Activación, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, toda nave que tenga a alcance 0-1 tira 2 dados de ataque. Cada nave sufre 1 de daño %HIT% por cada resultado %HIT%/%CRIT%.'
+      text: "(Ficha de Bomba) - Al final de la fase de Activación, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, toda nave que tenga a alcance 0-1 tira 2 dados de ataque. Cada nave sufre 1 de daño %HIT% por cada resultado %HIT%/%CRIT%."
     },
     'Loose Cargo': {
       display_name: "Cargamento expulsado",
-      text: '(Ficha de Cargamento expulsado) - Las fichas de Cargamento expulsado son desechos espaciales.'
+      text: "(Ficha de Cargamento expulsado) - Las fichas de Cargamento expulsado son desechos espaciales."
+    },
+    'Spare Parts': {
+      display_name: "Piezas de repuesto",
+      text: "<strong>Tipo :</strong> Obstáculo, Colocado"
     },
     'Conner Net': {
       display_name: "Red Conner",
-      text: '(Ficha de Red Conner) - Después de que una nave se solape con este dispositivo o pase a través de él, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, la nave que provocó su detonación sufre 1 de daño %HIT% y recibe 3 fichas de Iones.'
+      text: "(Ficha de Red Conner) - Después de que una nave se solape con este dispositivo o pase a través de él, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, la nave que provocó su detonación sufre 1 de daño %HIT% y recibe 3 fichas de Iones."
     },
     'Proximity Mine': {
       display_name: "Mina de proximidad",
-      text: '(Ficha de Mina) - Después de que una nave se solape con este dispositivo o pase a través de él, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, la nave que provocó su detonación tira 2 dados de ataque. Esa nave sufre a continuación 1 de daño %HIT% además de 1 de daño %HIT%/%CRIT% por cada resultado equivalente obtenido en la tirada.'
+      text: "(Ficha de Mina) - Después de que una nave se solape con este dispositivo o pase a través de él, este dispositivo se detona.%LINEBREAK%Cuando este dispositivo se detona, la nave que provocó su detonación tira 2 dados de ataque. Esa nave sufre a continuación 1 de daño %HIT% además de 1 de daño %HIT%/%CRIT% por cada resultado equivalente obtenido en la tirada."
+    },
+    'DRK-1 Probe Droid': {
+      display_name: "Droides sonda DRK-1",
+      text: "Iniciativa: 0 <br>%AGILITY%: 3 <br>%HULL%: 1 %LINEBREAK% <strong>Tipo:</strong> Nave, Distante %LINEBREAK%<strong>Fase del sistema:</strong> El jugador que controle el droide de sondas DRK-1 puede elegir una plantilla [2 %BANKLEFT%], [2 %STRAIGHT%] o [2 %BANKRIGHT%] y ajustarla junto a cualquier serie de surcos del DRK-1. Luego, el jugador vuelve a colocar el DRK-1 en el otro extremo de la plantilla. Puede colocarse superponiendo un objeto. Si se superpone con una nave, utiliza el marcador de posición para representar la posición de la nave y luego coloca la nave en la nave a distancia. %LINEBREAK%<strong>Fase de activación, compromiso y resolución:</strong> Sin efecto. %LINEBREAK%<strong>Otras reglas:</strong> Mientras una nave esté apuntando a un objeto o confundiendo a una nave enemiga, puede medir el alcance desde un droide de sondas DRK-1 aliado. %LINEBREAK%Después de que una nave enemiga haya realizado una maniobra y esté superponiendo un droide de sondas DRK-1, el controlador de la nave lanza 1 dado de ataque. Con un resultado de %FOCUS%, el droide de sondas DRK-1 sufre 1 daño %HIT%."
+    },
+    'Buzz Droid Swarm': {
+      display_name: "Enjambre de Droide Zumbador",
+      text: "Iniciativa: 0 <br>%AGILITY%: 1 <br>%HULL%: 1 %LINEBREAK% <strong>Tipo:</strong> Nave, Distante %LINEBREAK% <strong>Fase del sistema, activación y resolución:</strong> Sin efecto. %LINEBREAK%<strong>Fase de compromiso:</strong> Cuando te involucres, cada nave enemiga a alcance 0 del Enjambre de Droide Zumbador sufre 1 %CRIT%. %LINEBREAK%<strong>Otras reglas:</strong> Después de que una nave enemiga haya superpuesto o se haya movido a través de un enjambre de droide zumbador, el jugador que controla el enjambre lo coloca ajustando su pestaña entre las ranuras delanteras o traseras de esa nave (la nave está a alcance 0 del enjambre). El enjambre no puede ajustarse entre un par de ranuras si eso lo hace superponerse con un objeto. Si no puede ajustarse entre las ranuras de una nave, su controlador debe ajustarlo entre el otro par de ranuras de la nave. Si no puede ajustarse entre ese otro par de ranuras, el enjambre y la nave que lo ha superpuesto o ha pasado a través de él sufren cada uno 1 daño %HIT%. %LINEBREAK%<i>Errata (1.4): Agilidad aumentada a 3.</i>"
+    },
+    'It\'s the Resistance': {
+      display_name: "Es la Resistencia",
+      text: "<strong>Configuración:</strong> Comienzas en reserva. %LINEBREAK%Cuando despliegues, colócate completamente a alcance 1 de cualquier borde del área de juego y más allá de alcance 3 de cualquier nave enemiga. %LINEBREAK>Al comienzo de la ronda, si todas las cargas del <b>GA-97</b> aliado están activas, <b>debes</b> desplegarte. Luego, retira esta carta. %LINEBREAK>Después de que el aliado <b>GA-97</b> sea destruido, <b>debes</b> desplegarte. Luego, gana 1 ficha de desarme y retira esta carta."
+    },
+    'Electro-Proton Bomb': {
+      display_name: "Bomba Electro-Protónica",
+      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK>Al final de la Fase de Activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave y nave distante a alcance 0–2 lanza 4 dados de ataque. Cada nave pierde 1 escudo por cada resultado en blanco, gana 1 ficha iónica por cada resultado %FOCUS%/%HIT% y gana 1 ficha de desarme por cada resultado %CRIT%. Cada nave distante pierde 1 escudo por cada resultado en blanco y sufre 1 daño por cada %FOCUS%/%HIT%."
+    },
+    'Decoyed': {
+      display_name: "Engañado",
+      text: "Mientras te defiendes, cada nave aliada <b>Sirviente de Naboo</b> en el arco de ataque puede gastar 1 ficha de evasión para cambiar uno de tus resultados en un resultado %EVADE%. %LINEBREAK>Si eres un Caza Real Naboo N-1, cada nave aliada <b>Sirviente de Naboo</b> en el arco de ataque puede gastar 1 ficha de evasión para añadir un resultado %EVADE% en su lugar."
+    },
+    'Compromising Intel': {
+      display_name: "Información Comprometida",
+      text: "Durante la fase del sistema, si el enemigo <b>Vi Moradi</b> está a alcance 0-3, voltea tu dial hacia arriba. %LINEBREAK>Mientras te defiendes o realizas un ataque contra el enemigo <b>Vi Moradi</b>, no puedes gastar fichas de concentración."
+    },
+    'Cluster Mine': {
+      display_name: "Minas de racimo",
+      text: "<strong>Tipo:</strong> Nave, Mina %LINEBREAK>Una serie de minas en racimo consta de 3 minas en racimo individuales. %LINEBREAK>Cuando se coloca una serie de minas en racimo, la Mina Central se coloca normalmente, luego las dos Minas adicionales se colocan en las muescas en los lados. %LINEBREAK>Después de que una nave haya superpuesto o se haya movido a través de cualquier mina en racimo individual, esta explota. Las otras minas en racimo de la serie que no hayan sido superpuestas o atravesadas por una nave no explotan. %LINEBREAK>Cuando cada una de estas naves explota, la nave lanza 2 dados de ataque. Luego, la nave sufre 1 daño %HIT%/%CRIT% por cada resultado correspondiente obtenido."
+    },
+    'Ion Bomb': {
+      display_name: "Bombas de iones",
+      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK>Al final de la Fase de Activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave a alcance 0–1 gana 3 fichas iónicas y cada nave distante a alcance 0–1 sufre 1 daño %HIT%."
+    },
+    'Concussion Bomb': {
+      display_name: "Bombas de impacto",
+      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK>Al final de la Fase de Activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave y nave distante a alcance 0–1 recibe 1 carta de daño boca abajo. Luego, cada nave a alcance 0–1 <b>debe</b> exponer 1 carta de daño a menos que elija ganar 1 ficha de tensión."
+    },
+    'Thermal Detonator': {
+      display_name: "Detonadores termales",
+      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK>Al final de la Fase de Activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave y nave distante a alcance 0–1 lanza 1 dado de ataque. Cada nave recibe 1 ficha de tensión por cada resultado %FOCUS% y cada nave y nave distante sufre 1 daño %HIT%/%CRIT% por cada resultado correspondiente obtenido."
+    },
+    'Sensor Buoy': {
+      display_name: "Boyas de sensores",
+      text: "Iniciativa: 0 <br>%AGILITY%: 3 <br>%HULL%: 2 %LINEBREAK%<strong>Tipo:</strong> Nave, Distante %LINEBREAK>Las boyas de detección son naves distantes que vienen en pares y se colocan con la carta de mejora <b>Boyas de Detección</b>. Aparte de cumplir con las reglas normales de las naves distantes e interactuar con esta carta, estas boyas no tienen reglas adicionales."
+    },
+    'Electro-Chaff Cloud': {
+      display_name: "Nube de Confusión Electrónica",
+      text: "<strong>Tipo:</strong> Nave (neutra), Obstáculo %LINEBREAK>Durante la fase de resolución, retira cada nube de confusión electrónica que no tenga una ficha de activación, luego retira una ficha de activación de cada nube de confusión electrónica. Una nube de confusión electrónica nunca puede tener más de una ficha de activación en ella."
+    },
+    'Tracking Torpedoes': {
+      display_name: "Torpedos de Seguimiento",
+      text: "Iniciativa: 0 <br>%AGILITY%: 3 <br>%HULL%: 3 %LINEBREAK%<strong>Tipo:</strong> Nave, Distante %LINEBREAK><strong>Fase de sistema:</strong> a iniciativa de la nave distante, su controlador la coloca hacia adelante, usando una plantilla [3 %BANKLEFT%], [3 %BANKRIGHT%], o [4 %STRAIGHT%]. %LINEBREAK> <strong>Fase de activación:</strong> Sin efecto. %LINEBREAK> <strong>Fase de compromiso:</strong> a iniciativa de la nave distante, si un objeto sobre el cual tiene un blanco está en su %FRONTARC% a alcance 0–1, esta nave distante explota. %LINEBREAK><strong>Fase de resolución:</strong> durante esta fase, si esta nave distante no tiene un blanco en un objeto, debe apuntar a un objeto en su %FRONTARC% a alcance 1–3, si es posible. %LINEBREAK> <strong>Otras reglas:</strong> después de que esta nave distante haya sido destruida, lanza 1 dado de ataque. Con un resultado %HIT% o %CRIT%, explota. %LINEBREAK>Cuando esta nave distante explota, cada nave, nave distante y estructura a alcance 0 o en su %FRONTARC% a alcance 1 lanza 4 dados de ataque y sufre 1 daño correspondiente por cada resultado %HIT% o %CRIT% obtenido."
+    },
+    'Fearful Prey': {
+      display_name: "Presa Temerosa",
+      text: "Después de defender contra un enemigo <b>Depredador Temeroso</b>, si no has gastado al menos 1 ficha verde durante el ataque, gana 1 ficha de tensión."
+    },
+    'You Should Thank Me': {
+      display_name: "Deberías Agradecerme",
+      text: "Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK>Después de defender, <b>Zam Wesell</b> recupera 1 %CHARGE%. Luego puedes apuntar al atacante. %LINEBREAK>Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta y gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, puedes realizar un ataque adicional. %LINEBREAK>Al comienzo de la fase de sistema, retira este estado."
+    },
+    'You\'d Better Mean Business': {
+      display_name: "Deberías Tomarlo en Serio",
+      text: "Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK>Después de defender, puedes gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, realiza un ataque adicional contra el atacante. %LINEBREAK>Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta. En ese caso, <b>Zam Wesell</b> recupera 2 %CHARGE%. %LINEBREAK>Al comienzo de la fase de sistema, retira este estado."
+    },
+    'Merciless Pursuit': {
+      display_name: "Persecución implacable",
+      text: "Después de realizar un ataque, si el defensor está equipado con <b>El Niño</b>, puedes apuntar al defensor."
+    },
+    'Marked for Elimination': {
+      display_name: "Marcado para Eliminación",
+      text: "Mientras defiendes, si el atacante está equipado con un <b>Sensor de Posicionamiento</b> y te tiene apuntado, no puedes gastar fichas verdes."
+    },
+    'False Friend': {
+      display_name: "Falso Amigo",
+      text: "Durante la fase de sistema, si una nave enemiga con la mejora <b>Tal Merrik</b> está a alcance 0-2 o si una nave distante enemiga está a alcance 0-2, voltea tu dial a la posición visible. %LINEBREAK> <strong>Acción:</strong> gana 1 ficha de agotamiento y 1 ficha de tensión para descartar este estado."
+    },
+    'Trials of the Darksaber': {
+      display_name: "Pruebas del Sable Oscuro",
+      text: "Mientras realizas un ataque a alcance 0-2, puedes gastar 1 resultado %CRIT%. En ese caso, si el jugador de la nave defensora tiene más de %POINT% marcado que tú, pierde 1 %POINT% marcado. Coloca este %POINT% en esta carta. %LINEBREAK>Después de defender, si eres destruido por una nave enemiga a alcance 0-2, asigna el estado <b>Pruebas del Sable Oscuro</b> al atacante (todos los %POINT% restan en esta carta). %LINEBREAK>Al final del juego, esta nave suma todos los %POINT% en esta carta."
+    },
+    'Blazer Bomb': {
+      display_name: "Bomba incendiaria",
+      text: "<strong>Tipos:</strong> Nave, Bomba %LINEBREAK>Al final de la fase de activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave y nave distante a alcance 0-1 lanza 1 dado de ataque. Cada nave o nave distante sufre 1 daño %HIT% por cada resultado %HIT%/%CRIT% obtenido. %LINEBREAK>Después de que esta bomba explote, coloca una Llama calzando sus guías contra la lengüeta de la nave distante. %LINEBREAK>Una Llama es un obstáculo. Después de colocar este obstáculo, coloca una ficha de activación en él. %LINEBREAK> Durante la fase de resolución, retira cada Llama sin ficha de activación, luego retira una ficha de activación de cada Llama."
+    },
+    'Clan Wren Commandos': {
+      display_name: "Comandos del Clan Wren",
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+    },
+    'Death Watch Commandos': {
+      display_name: "Comandos de la Guardia de la Muerte",
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+    },
+    'Nite Owl Commandos': {
+      display_name: "Comandos de los Búhos Nocturnos",
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+    },
+    'Imperial Super Commandos': {
+      display_name: "Supercomandos Imperiales",
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+    },
+    'Mandalorian Super Commandos': {
+      display_name: "Supercomandos Mandalorianos",
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+    },
+    'Guarded': {
+      display_name: "Sin protección",
+      text: "Mientras defiendes, si no estás en el %BULLSEYEARC% del atacante, lanza 1 dado de defensa adicional por cada aliado <b>Guardia Magna Protectora</b> calculador o esquivador en su arco de ataque."
+    },
+    'Sickening Maneuver': {
+      display_name: "Maniobra Nauseabunda",
+      text: "Puedes realizar maniobras rojas, incluso si estás bajo tensión. %LINEBREAK%Después de revelar una maniobra de giro en ala [%BANKLEFT% o %BANKRIGHT%] o una maniobra de giro [%TURNLEFT% o %TURNRIGHT%], <b>debes</b> recibir 1 ficha de tensión y realizar esa maniobra como una deslizante. %LINEBREAK%Después de revelar una maniobra recta [%STRAIGHT%], <b>debes</b> realizar esa maniobra como una Koiogran [%KTURN%] roja. %LINEBREAK%Después de ejecutar una maniobra, retira este estado."
+    },
+    'Primed For Speed': {
+      display_name: "Listo para la Velocidad",
+      text: "Agrega una acción %SLAM% blanca a tu barra de acciones. %LINEBREAK%Después de realizar una acción %SLAM%, <b>debes</b> sufrir 1 daño %HIT% para retirar 1 ficha de desarme."
+    },
+    'Broken Trust': {
+      display_name: "Confianza Rota",
+      text: "Considera a las naves aliadas como amigas. %LINEBREAK%Las naves no enemigas te consideran amistoso. %LINEBREAK%Mientras realizas un ataque, antes de declarar al defensor, cada nave amistosa en su arco de ataque y que no esté bajo tensión, recibe 1 ficha de tensión. %LINEBREAK%Después de que hayas defendido o realizado un ataque, si al menos 1 carta de daño boca arriba ha sido asignada al defensor o si ha sido destruido, retira este estado."
     }
   };
   chassis_translations = {
     "Versatile Frame": {
-      text: "You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."
+      display_name: "Chasis Versátil",
+      text: "Puedes equipar 1 mejora %TORPEDO% o %MISSILE%. Mientras tu maniobra revelada es azul, agrega %BOOST% blanco a tu barra de acciones."
+    },
+    "Advanced Targeting Computer": {
+      display_name: "Ordenador de Apuntado Avanzado",
+      text: "Mientras realizas un ataque principal contra un defensor al que hayas fijado blanco, lanza 1 dado de ataque adicional y cambia 1 resultado %HIT% por un resultado %CRIT%."
+    },
+    "Autothrusters": {
+      display_name: "Autopropulsores",
+      text: "Después de realizar una acción, puedes realizar una acción %BARRELROLL% roja o %BOOST% roja."
+    },
+    "Nimble Bomber": {
+      display_name: "Bombardero Ágil",
+      text: "Si debes utilizar una plantilla %STRAIGHT% para soltar un dispositivo, puedes usar una plantilla %BANKLEFT% o %BANKRIGHT% de la misma velocidad en su lugar."
+    },
+    "Full Throttle": {
+      display_name: "A Fondo",
+      text: "Después de ejecutar completamente una maniobra de velocidad 3–5, puedes realizar una acción %EVADE%."
+    },
+    "Experimental Scanners": {
+      display_name: "Escáneres Experimentales",
+      text: "Puedes fijar blanco a un objetivo más allá de alcance 3. No puedes fijar blanco a un objetivo a alcance 1."
+    },
+    "Stygium Array": {
+      display_name: "Red Stygium",
+      text: "Después de des-camuflarte, puedes realizar una acción %EVADE%. Al inicio de la fase de desenlace, puedes gastar 1 ficha de evasión para ganar 1 ficha de camuflaje."
+    },
+    "Sensor Blindspot": {
+      display_name: "Punto Ciego del Sensor",
+      text: "Mientras realizas un ataque principal a alcance 0–1, no apliques el bono de alcance 0–1 y lanza 1 dado de ataque menos."
+    },
+    "Microthrusters": {
+      display_name: "Micropropulsores",
+      text: "Mientras realizas un tonel, <b>debes</b> usar la plantilla %BANKLEFT% o %BANKRIGHT% en lugar de la plantilla %STRAIGHT%."
+    },
+    "Weapon Hardpoint": {
+      display_name: "Emplazamiento para armas",
+      text: "Puedes equiparte con 1 mejora %CANNON%, %TORPEDO%, o %MISSILE%."
+    },
+    "Advanced Droid Brain": {
+      display_name: "Cerebro de Droide Avanzado",
+      text: "Después de realizar una acción %CALCULATE%, gana 1 ficha de cálculo."
+    },
+    "Tail Gun": {
+      display_name: "Cañón de Popa",
+      text: "Mientras tengas una nave acoplada, tienes un arma principal %REARARC% con un valor de ataque igual al del arma principal %FRONTARC% de la nave acoplada."
+    },
+    "Locked and Loaded": {
+      display_name: "Cargado y Listo",
+      text: "Mientras estás acoplado, después de que tu nave portadora realice un ataque principal %FRONTARC% o %TURRET%, puede realizar un ataque principal %REARARC% adicional."
+    },
+    "Concordia Faceoff": {
+      display_name: "Enfrentamiento Concordia",
+      text: "Mientras te defiendes, si el alcance de ataque es 1 y estás en el %FRONTARC% del atacante, cambia 1 resultado en un resultado %EVADE%."
+    },
+    "Spacetug Tractor Array": {
+      display_name: "Conjunto de Tractor de Remolque Espacial",
+      text: " <strong>Acción:</strong> Elige una nave en tu %FRONTARC% a alcance 1. Gana 1 ficha de rayo tractor, o 2 fichas de rayo tractor si está en tu %BULLSEYEARC% a alcance 1."
+    },
+    "Hope": {
+      display_name: "Esperanza",
+      text: "Después de que otra nave aliada a alcance 0-3 sea destruida, puedes realizar una acción %FOCUS% o %BOOST%."
+    },
+    "Solo": {
+      display_name: "En Solitario",
+      text: "Mientras te defiendes o realizas un ataque, si no hay otras naves aliadas a alcance 0-1, puedes gastar 1 %CHARGE% para volver a tirar 1 de tus dados."
+    },
+    "Sensitive Controls": {
+      display_name: "Controles Sensibles",
+      text: "Durante la fase de sistema, puedes realizar una acción %BARRELROLL% roja o %BOOST% roja."
+    },
+    "Vectored Cannons": {
+      display_name: "Cañones Vectoriales",
+      text: "Durante la fase de sistema, puedes realizar una acción %BOOST% roja o %ROTATEARC% roja. Puedes girar tu indicador %SINGLETURRETARC% solo hacia tu %FRONTARC% o %REARARC%."
+    },
+    "Advanced Fire Control": {
+      display_name: "Control de Fuego Avanzado",
+      text: "Después de realizar un ataque %CANNON% o %MISSILE%, si tienes un objetivo bloqueado en el defensor, puedes realizar un ataque principal adicional contra el defensor."
+    },
+    "Networked Calculations": {
+      display_name: "Cálculos en Red",
+      text: "Mientras te defiendes o realizas un ataque, puedes gastar 1 ficha de cálculo de una nave aliada a alcance 0–1 para cambiar 1 resultado %FOCUS% en un resultado %EVADE% o %HIT%."
+    },
+    "Independent Calculations": {
+      display_name: "Cálculos Independientes",
+      text: "Mientras realizas una acción de %CALCULATE% blanca, puedes considerarla como roja para ganar 1 ficha de cálculo adicional. Las demás naves no pueden gastar tus fichas de cálculo utilizando la capacidad de nave <strong>Cálculos en Red</strong>."
+    },
+    "Adaptive Ailerons": {
+      display_name: "Alerones Adaptables",
+      text: "Antes de revelar tu selector de maniobras, si no estás estresado, <b>debes</b> acelerar. %LINEBREAK% <i>Errata (1.4.2): capacidad de la nave modificada</i>"
+    },
+    "Pursuit Craft": {
+      display_name: "Nave de Persecución",
+      text: "Después de ser desplegado, puedes fijar como blanco una nave que la nave aliada <strong>Hound's Tooth</strong> haya fijado como blanco."
+    },
+    "Dead to Rights": {
+      display_name: "Muerte Segura",
+      text: "Mientras realizas un ataque, si el defensor está en tu %BULLSEYEARC%, los dados de defensa no pueden ser modificados usando fichas verdes."
+    },
+    "Comms Shuttle": {
+      display_name: "Nave de Comunicación",
+      text: "Mientras estás acoplado, tu nave portadora gana %COORDINATE%. Antes de que tu nave portadora se active, puede realizar una acción %COORDINATE%."
+    },
+    "Controlled Ailerons": {
+      display_name: "Alerones Controlados",
+      text: "Antes de revelar tu selector de maniobras, si no estás estresado, puedes acelerar. %LINEBREAK% <i>Errata (1.4.2): capacidad de la nave modificada</i>"
+    },
+    "Co-Pilot": {
+      display_name: "Copiloto",
+      text: "Mientras estás acoplado, tu nave portadora se beneficia de tu habilidad de piloto además de la suya."
+    },
+    "Rigged Energy Cells": {
+      display_name: "Celdas de Energía Trucadas",
+      text: "Durante la fase de sistema, si no estás acoplado, pierde 1 %CHARGE%. Al final de la fase de activación, eres destruido si tienes 0 %CHARGE%. Antes de retirar tu peón, cada nave a alcance 0–1 sufre 1 daño %CRIT%."
+    },
+    "Refined Gyrostabilizers": {
+      display_name: "Giroestabilizadores Perfeccionados",
+      text: "Puedes girar tu indicador %SINGLETURRETARC% solo hacia tu %FRONTARC% o %REARARC%. Después de realizar una acción, puedes realizar una acción %BOOST% roja o %ROTATEARC% roja."
+    },
+    "Heavy Weapon Turret": {
+      display_name: "Torreta de Arma Pesada",
+      text: "Puedes girar tu indicador %SINGLETURRETARC% solo hacia tu %FRONTARC% o %REARARC%. Debes considerar el requisito previo %FRONTARC% de tus mejoras de %MISSILE% equipadas como %SINGLETURRETARC%."
+    },
+    "Linked Battery": {
+      display_name: "Batería Enlazada",
+      text: "Mientras realizas un ataque %CANNON%, lanza 1 dado adicional."
+    },
+    "Notched Stabilizers": {
+      display_name: "Estabilizadores Dentados",
+      text: "Mientras te mueves, ignora los asteroides."
+    },
+    "Fine-Tuned Controls": {
+      display_name: "Controles Afinados",
+      text: "Después de ejecutar completamente una maniobra, puedes gastar 1 %FORCE% para realizar una acción %BOOST% o %BARRELROLL%."
+    },
+    "Pinpoint Tractor Array": {
+      display_name: "Dispositivo Tractor Preciso",
+      text: "No puedes girar tu %SINGLETURRETARC% hacia tu %REARARC%. Después de ejecutar completamente una maniobra, puedes ganar 1 ficha de rayo tractor para realizar una acción %ROTATEARC%. %LINEBREAK%<i>Errata (1.4): añadido \"completamente\"</i>"
+    },
+    "Plated Hull": {
+      display_name: "Casco Blindado",
+      text: "Mientras te defiendes, si no estás dañado críticamente, cambia 1 resultado %CRIT% por un resultado %HIT%."
+    },
+    "Explosion with Wings": {
+      display_name: "Explosión con Alas",
+      text: "<strong>Preparación</strong>: Se te asigna 1 carta de daño boca abajo. Después de realizar una acción %SLAM%, puedes exponer 1 carta de daño para quitar 1 ficha de desarme."
+    },
+    "Fine-Tuned Thrusters": {
+      display_name: "Propulsores Ajustados",
+      text: "Después de ejecutar completamente una maniobra, si no estás agotado ni bajo tensión, puedes ganar 1 ficha de agotamiento o tensión para realizar una acción %LOCK% o %BARRELROLL%."
+    },
+    "Networked Aim": {
+      display_name: "Puntería en Red",
+      text: "No puedes gastar tus bloqueos para volver a lanzar dados de ataque. Mientras realizas un ataque, puedes volver a lanzar un número de dados de ataque igual o menor al número de bloqueos aliados en el defensor."
+    },
+    "Fire Convergence": {
+      display_name: "Convergencia de Fuego",
+      text: "Mientras una nave aliada realiza un ataque que no sea %SINGLETURRETARC%, si el defensor está en tu %SINGLETURRETARC%, puedes gastar 1 %CHARGE%. En ese caso, el atacante puede volver a lanzar hasta 2 dados de ataque."
+    },
+    "Rotating Cannons": {
+      display_name: "Cañones Giratorios",
+      text: "Puedes girar tu indicador %SINGLETURRETARC% solo hacia tu %FRONTARC% o %REARARC%. Debes considerar el requisito previo %FRONTARC% de tus mejoras %CANNON% equipadas como %SINGLETURRETARC%."
+    },
+    "Twin Ion Engines": {
+      display_name: "Motores Iónicos Gemelos",
+      text: "Ignora la restricción de nave \"TIE\" en las cartas de mejora."
+    },
+    "Intuitive Controls": {
+      display_name: "Controles Intuitivos",
+      text: "Durante la fase de sistema, puedes realizar una acción %BARRELROLL% violeta o %BOOST% violeta."
+    },
+    "Intuitive Interface": {
+      display_name: "Interfaz Intuitiva",
+      text: "Después de realizar una acción añadida a tu barra de acción por una mejora de %TALENT%, %ILLICIT%, o %MODIFICATION%, puedes realizar una acción %CALCULATE%."
+    },
+    "Devastating Barrage": {
+      display_name: "Bombardeo Devastador",
+      text: "Mientras realizas un ataque %TORPEDO% o %MISSILE%, si el defensor está en tu %BULLSEYEARC%, tus resultados %CRIT% no pueden ser anulados por resultados %EVADE%."
+    },
+    "Pursuit Thrusters": {
+      display_name: "Propulsores de Persecución",
+      text: "Durante la Fase de Sistema, puedes realizar una acción %BOOST%."
+    },
+    "Versatile Frame": {
+      display_name: "Chasis Versátil",
+      text: "Puedes equiparte con 1 mejora %TORPEDO% o %MISSILE%. Mientras tu maniobra revelada es azul, añade la acción blanca %BOOST% a tu barra de acciones."
+    },
+    "Born for This": {
+      display_name: "Nacido para Esto",
+      text: "Mientras otra nave aliada a alcance 0–2 defiende, si no estás bajo tensión, puede gastar tus fichas de concentración y evasión como si fueran suyas. En ese caso, ganas 1 ficha de tensión."
     }
   };
   return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
@@ -8281,6 +10840,8 @@ exportObj.translations['Français'] = {
     "Sensor": "Senseur",
     "Torpedo": "Torpille",
     "Turret": "Tourelle",
+    "HardpointShip": "Emplacement d'arme",
+    "VersatileShip": "Châssis Polyvalent",
     "Hardpoint": "Point d’accroche",
     "Illicit": "Illégal",
     "Configuration": "Configuration",
@@ -8377,6 +10938,8 @@ exportObj.translations['Français'] = {
     "Battle of Yavin Battle Pack": "Paquet de Scénarios Bataille de Yavin",
     "Siege of Coruscant Battle Pack": "Paquet de Scénarios Siège de Coruscant",
     "Hotshots and Aces II Reinforcements Pack": "Paquet de Renforts Pilotes Hors Pair 2",
+    "Galactic Empire Squadron Starter Pack": "Boite de Base D'Escadron Empire",
+    "Rebel Alliance Squadron Starter Pack": "Boite de Base D'Escadron Alliance Rebelle",
     "Loose Ships": "Vaisseaux en vrac"
   },
   ui: {
@@ -9155,7 +11718,7 @@ exportObj.cardLoaders['Français'] = function() {
       text: "Après avoir effectué une attaque, vous pouvez dépenser 2 %FORCE% pour effectuer une attaque principale bonus contre une cible différente. Si votre attaque était ratée, vous pouvez effectuer cette attaque principale bonus contre la même cible à la place."
     },
     "Darth Vader": {
-      display_name: "Darth Vader",
+      display_name: "Dark Vador",
       text: "Après avoir effectué une action, vous pouvez dépenser 1 %FORCE% pour effectuer une action."
     },
     "Dash Rendar": {
@@ -9288,7 +11851,7 @@ exportObj.cardLoaders['Français'] = function() {
     },
     "General Grievous": {
       display_name: "Général Grievous",
-      text: "Tant que vous effectuez une attaque principale, si vous n’est pas dans l’arc de tir du défenseur, vous pouvez relancer jusqu’à 2 dés d’attaque."
+      text: "Tant que vous effectuez une attaque principale, si vous n’êtes pas dans l’arc de tir du défenseur, vous pouvez relancer jusqu’à 2 dés d’attaque."
     },
     "Genesis Red": {
       display_name: "Genesis Red",
@@ -11168,6 +13731,102 @@ exportObj.cardLoaders['Français'] = function() {
     },
     "Agent Tierny": {
       text: "<strong>Mise En Place :</strong> après avoir placé les forces, vous <b>devez</b> assigner l'état <b>•Confiance Brisée</b> à un vaisseau ennemi."
+    },
+    "Darth Vader (SSP)": {
+      display_name: "Darth Vader (Standard)",
+      text: "Après avoir effectué une action, vous pouvez dépenser 1 %FORCE% pour effectuer une action."
+    },
+    "Maarek Stele (SSP)": {
+      display_name: "Maarek Stele (Standard)",
+      text: "Tant que vous effectuez une attaque, si une carte de dégât devrait être attribuée face visible au défenseur, piochez 3 cartes de dégât à la place, choisissez-en 1 et défaussez les autres."
+    },
+    "Captain Jonus (SSP)": {
+      display_name: "Capitaine Jonus (Standard)",
+      text: "Tant qu’un vaisseau allié à portée 0–1 effectue une attaque %TORPEDO% ou %MISSILE%, il peut relancer jusqu’à 2 dés d’attaque."
+    },
+    "Tomax Bren (SSP)": {
+      display_name: "Tomax Bren (Standard)",
+      text: "Après avoir effectué une action %RELOAD%, vous pouvez récupérer 1 %CHARGE% sur 1 de vos cartes d’amélioration %TALENT% équipée."
+    },
+    '"Night Beast" (SSP)': {
+      display_name: "“Night Beast” (Standard)",
+      text: "Après avoir entièrement exécuté une manœuvre bleue, vous pouvez effectuer une action %FOCUS%."
+    },
+    "Valen Rudor (SSP)": {
+      display_name: "Valen Rudor (Standard)",
+      text: "Après qu’un vaisseau allié à portée 0–1 a défendu (après la résolution des dégâts, s’il y en a), vous pouvez effectuer une action."
+    },
+    "Iden Versio (SSP)": {
+      display_name: "Iden Versio (Standard)",
+      text: "Avant qu’un chasseur TIE/ln allié à portée 0–1 ne subisse 1 ou plusieurs dégâts, vous pouvez dépenser 1 %CHARGE%. Dans ce cas, prévenez ce(s) dégât(s)."
+    },
+    "Luke Skywalker (SSP)": {
+      display_name: "Luke Skywalker (Standard)",
+      text: "Après que vous avez été déclaré comme défenseur (avant que les dés ne soient lancés), vous pouvez récupérer 1 %FORCE%."
+    },
+    "Jek Porkins (SSP)": {
+      display_name: "Jek Porkins (Standard)",
+      text: "Après avoir gagné un marqueur de stress, vous pouvez lancer 1 dé d’attaque pour le retirer. Sur un résultat %HIT%, subissez 1 dégât %HIT%."
+    },
+    '"Dutch" Vander (SSP)': {
+      display_name: "“Dutch” Vander (Standard)",
+      text: "Après avoir effectué l’action %LOCK%, vous pouvez choisir 1 vaisseau allié à portée 1–3. Il peut verrouiller l’objet que vous avez verrouillé, en ignorant les restrictions de portée."
+    },
+    "Horton Salm (SSP)": {
+      display_name: "Horton Salm (Standard)",
+      text: "Tant que vous effectuez une attaque, vous pouvez relancer 1 dé d’attaque pour chaque autre vaisseau allié à portée 0–1 du défenseur."
+    },
+    "Arvel Crynyd (SSP)": {
+      display_name: "Arvel Crynyd (Standard)",
+      text: "Si vous deviez échouer à une action %BOOST% qui vous amènerait à chevaucher un autre vaisseau, résolvez-la comme si vous exécutiez partiellement une manœuvre à la place.%LINEBREAK%Tant que vous effectuez une attaque à portée d’attaque 0, considérez-la comme une attaque à portée d’attaque 1."
+    },
+    "Jake Farrell (SSP)": {
+      display_name: "Jake Farrell (Standard)",
+      text: "Après avoir effectué une action %BARRELROLL% ou %BOOST%, vous pouvez choisir un vaisseau allié à portée 0–1. Ce vaisseau peut effectuer une action %FOCUS%."
+    },
+    "Shara Bey (SSP)": {
+      display_name: "Shara Bey (Standard)",
+      text: "Tant que vous défendez ou effectuez une attaque principale, vous pouvez dépenser 1 verrouillage que vous avez sur le vaisseau ennemi pour ajouter 1 résultat %FOCUS% aux résultats de vos dés. "
+    },
+    '"Deathfire" (TBE)': {
+      display_name: "“Deathfire” (TBE)",
+      text: "Après avoir entièrement exécuté une manœuvre à vitesse 3-5, si vous n'avez pas largué ou lancé d'engin à ce round, vous pouvez dépenser 2 %CHARGE% pour larguer ou lancer une bombe en utilisant le gabarit [3 %STRAIGHT%]."
+    },
+    "Major Rhymer (TBE)": {
+      display_name: "Major Rhymer (TBE)",
+      text: "Tant que vous effectuez une attaque %TORPEDO%, si le défenseur est dans votre %BULLSEYEARC%, changez un résultat %FOCUS% en résultat %CRIT%."
+    },
+    "Captain Jonus (TBE)": {
+      display_name: "Capitaine Jonus (TBE)",
+      text: "Après avoir largué ou lancé un engin, gagnez un marqueur d'évasion."
+    },
+    "Tomax Bren (TBE)": {
+      display_name: "Tomax Bren (TBE)",
+      text: "Après avoir effectué une action %BARRELROLL%, vous pouvez dépenser 2 %CHARGE%. Dans ce cas, gagnez un marqueur de concentration."
+    },
+    "Dash Rendar (YLF)": {
+      display_name: "Dash Rendar (YLF)",
+      text: "Pendant la phase d’engagement, ignorez les effets des obstacles que vous chevauchez."
+    },
+    "Dash Rendar (YLF-SL)": {
+      display_name: "Dash Rendar (YLF-SL)",
+      text: "Après avoir gagné un marqueur rouge suite au chevauchement d’un obstacle ou d’un déplacement à travers un obstacle, vous pouvez transférer ce marqueur rouge à un vaisseau allié à portée 0–1."
+    },
+    "Dash Rendar (Scum)": {
+      display_name: "Dash Rendar",
+      text: "Après avoir gagné un marqueur rouge suite au chevauchement d’un obstacle ou d’un déplacement à travers un obstacle, vous pouvez transférer ce marqueur rouge à un vaisseau allié à portée 0–1."
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo” (YLF)",
+      text: "Après avoir défendu ou effectué une attaque, si vous avez dépensé un marqueur de calcul, gagnez 1 marqueur de calcul."
+    },
+    '"Leebo" (YLF-SL)': {
+      display_name: "“Leebo” (YLF-SL)",
+      text: "A la fin de la phase d’engagement, vous pouvez dépenser un marqueur de calcul pour verrouiller un vaisseau ennemi à portée 2–3."
+    },
+    '"Leebo" (Scum)': {
+      display_name: "“Leebo”",
+      text: "A la fin de la phase d’engagement, vous pouvez dépenser un marqueur de calcul pour verrouiller un vaisseau ennemi à portée 2–3."
     }
   };
   upgrade_translations = {
@@ -11224,7 +13883,7 @@ exportObj.cardLoaders['Français'] = function() {
     },
     "Outrider": {
       display_name: "Outrider",
-      text: "Tant que vous effectuez une attaque qui est gênée par un obstacle, le défenseur lance 1 dé de défense en moins.%LINEBREAK%Après avoir entièrement exécuté une manœuvre, si vous avez traversé ou chevauché un obstacle, vous pouvez retirer 1 de vos marqueurs rouges ou orange. %LINEBREAK% <i>Errata (1.0.2): Ajout de la précision « par un obstacle »</i>"
+      text: "Tant que vous effectuez une attaque principale à portée 3, lancez 1 dé d’attaque supplémentaire.%LINEBREAK%Tant que vous effectuez une attaque qui est gênée par un obstacle, vous pouvez changer 1 résultat %EVADE% du défenseur en un résultat %FOCUS%. %LINEBREAK% <i>Errata (since errata 1.8): nouveau texte</i>"
     },
     "Phantom": {
       display_name: "Phantom",
@@ -12067,7 +14726,7 @@ exportObj.cardLoaders['Français'] = function() {
       text: "Tant qu’un autre vaisseau allié effectue une attaque principale, si le défenseur est dans votre arc de tir, vous pouvez dépenser 1 %CHARGE%. Dans ce cas, l’attaquant lance 1 dé supplémentaire, pour un maximum de 4. Pendant la phase de système, vous pouvez gagner 1 marqueur de désarmement pour récupérer 1 %CHARGE%."
     },
     "Seventh Sister": {
-      display_name: "La Septième Sœur%LINEBREAK%",
+      display_name: "La Septième Sœur",
       text: "Si un vaisseau ennemi à portée 0-1 est censé gagner un marqueur de stress, vous pouvez dépenser 1 %FORCE% pour qu’il gagne 1 marqueur de brouillage ou de rayon tracteur à la place."
     },
     "Shield Upgrade": {
@@ -12204,7 +14863,7 @@ exportObj.cardLoaders['Français'] = function() {
     },
     "Discord Missiles": {
       display_name: "Missiles Discorde",
-      text: "Au début de la phase d’engagement, vous pouvez dépenser 1 marqueur de calcul et 1 %CHARGE% pour lancer 1 nuée de droïdes buzz en utilisant le gabarit [3 %BANKLEFT%], [3 %STRAIGHT%] ou [3 %BANKRIGHT%.%LINEBREAK%La %CHARGE% de cette carte ne peut pas être récupérée."
+      text: "Au début de la phase d’engagement, vous pouvez dépenser 1 marqueur de calcul et 1 %CHARGE% pour lancer 1 nuée de droïdes buzz en utilisant le gabarit [3 %BANKLEFT%], [3 %STRAIGHT%] ou [3 %BANKRIGHT%].%LINEBREAK%La %CHARGE% de cette carte ne peut pas être récupérée."
     },
     "B6 Blade Wing Prototype (Epic)": {
       display_name: "Prototype Blade Wing B6 (Epique)",
@@ -15068,7 +17727,7 @@ exportObj.cardLoaders.Magyar = function() {
     '"Contrail"': {
       text: "Amikor védekezel vagy végrehajtasz egy támadást, ha a felfedett manővered iránya megegyezik az ellenséges hajóéval, az ellenséges hajó 1 %FOCUS% eredményét üres eredményre változtathatod.<br><strong>Twin Ion Engines:</strong> Hagyd figyelmen kívül a 'TIE' megkötést a fejlesztés kártyákon."
     },
-    '"Odd Ball" (V-Wing)': {
+    '"Odd Ball" (V-wing)': {
       display_name: "“Odd Ball”",
       text: "Miután teljesen végrehajtottál egy piros manővert vagy végrehajtottál egy piros akciót, ha van egy ellenséges hajó a %BULLSEYEARC% ívedben, feltehetsz rá egy bemérőt.<br><strong>Twin Ion Engines:</strong> Hagyd figyelmen kívül a 'TIE' megkötést a fejlesztés kártyákon."
     },
@@ -19260,7 +21919,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.日本語 = function() {
-  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, damage_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = '日本語';
   exportObj.renameShip("Modified YT-1300 Light Freighter", "Modified YT-1300 Light Freighter");
   exportObj.renameShip("StarViper-class Attack Platform", "StarViper-class Attack Platform");
@@ -19374,7 +22033,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Arvel Crynyd": {
       display_name: "Arvel Crynyd",
-      text: "もし君が他の宇宙船に重なることにより%BOOST%アクションが失敗しようとする時、代わりにマニューバを部分的に実行するようにして解決する。 %LINEBREAK% 君が攻撃レンジ0で攻撃を実行する際、それを攻撃レンジ1の攻撃として扱う。"
+      text: "もし君が他の宇宙船に重なることにより %BOOST% アクションが失敗しようとする時、代わりにマニューバを部分的に実行するようにして解決する。 %LINEBREAK% 君が攻撃レンジ0で攻撃を実行する際、それを攻撃レンジ1の攻撃として扱う。"
     },
     "Asajj Ventress": {
       display_name: "Asajj Ventress",
@@ -19506,7 +22165,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Captain Jonus": {
       display_name: "Captain Jonus",
-      text: "レンジ0-1の友軍宇宙船が%TORPEDO%あるいは%MISSILE%による攻撃を実行する際、その宇宙船は2つまで攻撃ダイスを振り直しても良い。"
+      text: "レンジ 0-1 の友軍宇宙船が %TORPEDO% あるいは %MISSILE% による攻撃を実行する際、その宇宙船は2つまで攻撃ダイスを振り直しても良い。"
     },
     "Captain Jostero": {
       display_name: "Captain Jostero",
@@ -19650,7 +22309,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Darth Vader": {
       display_name: "Darth Vader",
-      text: "君がアクションを実行した後、君は%FORCE%を1つ消費して、アクションを実行しても良い。"
+      text: "君がアクションを実行した後、君は %FORCE% を1つ消費して、アクションを実行しても良い。"
     },
     "Dash Rendar": {
       display_name: "Dash Rendar",
@@ -19838,7 +22497,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Horton Salm": {
       display_name: "Horton Salm",
-      text: "君が攻撃を実行する際、君は防御者のレンジ0-1にいる他の友軍宇宙船につき攻撃ダイスを1つ振り直しても良い。"
+      text: "君が攻撃を実行する際、君は防御者のレンジ 0-1 にいる他の友軍宇宙船につき攻撃ダイスを1つ振り直しても良い。"
     },
     "IG-88A": {
       display_name: "IG-88A",
@@ -19862,7 +22521,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Iden Versio": {
       display_name: "Iden Versio",
-      text: "レンジ0-1の友軍のTIE/ln Fighterが1つ以上のダメージを受けようとする前に、君は%CHARGE%を1つ消費しても良い。もしそうするなら、そのダメージをなくす。"
+      text: "レンジ 0-1 の友軍の TIE/ln Fighter が1つ以上のダメージを受けようとする前に、君は %CHARGE% を1つ消費しても良い。もしそうするなら、そのダメージをなくす。"
     },
     "Imdaar Test Pilot": {
       display_name: "Imdaar Test Pilot",
@@ -19878,7 +22537,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Jake Farrell": {
       display_name: "Jake Farrell",
-      text: "君が%BARRELROLL%あるいは%BOOST%アクションを実行した後、君はレンジ0-1の友軍宇宙船を選んでも良い。その宇宙船は%FOCUS%アクションを実行しても良い。"
+      text: "君が %BARRELROLL% あるいは %BOOST% アクションを実行した後、君はレンジ0-1の友軍宇宙船を選んでも良い。その宇宙船は %FOCUS% アクションを実行しても良い。"
     },
     "Jakku Gunrunner": {
       display_name: "Jakku Gunrunner",
@@ -19902,7 +22561,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Jek Porkins": {
       display_name: "Jek Porkins",
-      text: "君がストレス・トークンを受け取った後、君は攻撃ダイスを1つ振り、それを取り除いても良い。%HIT%の結果なら、%HIT%ダメージを1つ受ける。"
+      text: "君がストレス・トークンを受け取った後、君は攻撃ダイスを1つ振り、それを取り除いても良い。 %HIT% の結果なら、 %HIT% ダメージを1つ受ける。"
     },
     "Jessika Pava": {
       display_name: "Jessika Pava",
@@ -20050,7 +22709,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Luke Skywalker": {
       display_name: "Luke Skywalker",
-      text: "君が防御者になった後(ダイスを振る前に)、君は%FORCE%を1つ回復しても良い。"
+      text: "君が防御者になった後(ダイスを振る前に)、君は %FORCE% を1つ回復しても良い。"
     },
     "Luminara Unduli": {
       display_name: "Luminara Unduli",
@@ -20344,7 +23003,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Shara Bey": {
       display_name: "Shara Bey",
-      text: "君が防御するか主武装による攻撃を実行する際、君はその敵へのロックを1つ消費して、君のダイスの結果に%FOCUS%を1つ追加しても良い。"
+      text: "君が防御するか主武装による攻撃を実行する際、君はその敵へのロックを1つ消費して、君のダイスの結果に %FOCUS% を1つ追加しても良い。"
     },
     "Sienar Specialist": {
       display_name: "Sienar Specialist",
@@ -20440,7 +23099,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Tomax Bren": {
       display_name: "Tomax Bren",
-      text: "君が%RELOAD%アクションを実行した後、君は装備した%TALENT%アップグレード・カードのうちの1つの上にある%CHARGE%トークンを1つ回復しても良い。"
+      text: "君が %RELOAD% アクションを実行した後、君は装備した %TALENT% アップグレード・カードのうちの1つの上にある %CHARGE% トークンを1つ回復しても良い。"
     },
     "Torani Kulda": {
       display_name: "Torani Kulda",
@@ -20468,7 +23127,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Valen Rudor": {
       display_name: "Valen Rudor",
-      text: "レンジ0-1の友軍宇宙船の防御の後(もしあればダメージを適用した後)、君はアクションを実行しても良い。"
+      text: "レンジ 0-1 の友軍宇宙船の防御の後(もしあればダメージを適用した後)、君はアクションを実行しても良い。"
     },
     "Ved Foslo": {
       display_name: "Ved Foslo",
@@ -20568,7 +23227,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Dutch" Vander': {
       display_name: "“Dutch” Vander",
-      text: "君が%LOCK%アクションを実行した後、君はレンジ1-3の友軍宇宙船を選んでも良い。その宇宙船は君がロックしたオブジェクトへのロックを、距離の制限を無視して得る。"
+      text: "君が %LOCK% アクションを実行した後、君はレンジ1-3の友軍宇宙船を選んでも良い。その宇宙船は君がロックしたオブジェクトへのロックを、距離の制限を無視して得る。"
     },
     '"Echo"': {
       display_name: "“Echo”",
@@ -20608,7 +23267,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     '"Night Beast"': {
       display_name: "“Night Beast”",
-      text: "君が青のマニューバを完全に実行した後、君は%FOCUS%アクションを実行しても良い。"
+      text: "君が青のマニューバを完全に実行した後、君は %FOCUS% アクションを実行しても良い。"
     },
     '"Null"': {
       display_name: "“Null”",
@@ -21046,7 +23705,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Shara Bey (A-Wing)": {
       display_name: "Shara Bey",
-      text: "君が防御するか主武装攻撃を実行する際、君は君が持っているその敵宇宙船のロックを消費し、%FOCUS%の結果を1つ君のダイスの結果に追加しても良い。 "
+      text: "君が防御するか主武装攻撃を実行する際、君は君が持っているその敵宇宙船のロックを消費し、 %FOCUS% の結果を1つ君のダイスの結果に追加しても良い。 "
     },
     "Darth Vader (TIE Defender)": {
       display_name: "Darth Vader",
@@ -21478,6 +24137,46 @@ exportObj.cardLoaders.日本語 = function() {
       display_name: "Haor Chall Prototype (SoC)",
       text: "君の %BULLSEYEARC% 内の敵宇宙船が、シナリオ・フィーチャーあるいは他の友軍宇宙船を防御者として宣言した後、君は %CALCULATE% あるいは %LOCK% アクションを実行しても良い。"
     },
+    '"Deathfire" (TBE)': {
+      display_name: "“Deathfire” (TBE)",
+      text: "君が速度 3-5 のマニューバを完全に実行した後、もし君がこのラウンド、デバイスを投下あるいは射出していないなら、君は %CHARGE% を2つ消費して、 [3 %STRAIGHT%] テンプレートを使用して爆弾を投下あるいは射出しても良い。"
+    },
+    "Major Rhymer (TBE)": {
+      display_name: "Major Rhymer (TBE)",
+      text: "君が %TORPEDO% 攻撃を実行する際、もし防御者が君の %BULLSEYEARC% 内にいるなら、 %FOCUS% の結果1つを %CRIT% の結果に変更する。"
+    },
+    "Captain Jonus (TBE)": {
+      display_name: "Captain Jonus (TBE)",
+      text: "君がデバイスを投下あるいは射出した後、回避トークンを得る。"
+    },
+    "Tomax Bren (TBE)": {
+      display_name: "Tomax Bren (TBE)",
+      text: "君が %BARRELROLL% アクションを実行した後、君は %CHARGE% を2つ消費しても良い。もし君がそうするなら、フォーカス・トークンを得る。"
+    },
+    "Dash Rendar (YLF)": {
+      display_name: "Dash Rendar (YLF)",
+      text: "エンゲージメント・フェイズの間、君は君が重なった障害物の効果を無視する。"
+    },
+    "Dash Rendar (YLF-SL)": {
+      display_name: "Dash Rendar (YLF-SL)",
+      text: "君が障害物を通過するか重なった結果、赤のトークンを得た後、君はその赤のトークンをレンジ 0-1 の友軍宇宙船に転送しても良い。"
+    },
+    "Dash Rendar (Scum)": {
+      display_name: "Dash Rendar",
+      text: "君が障害物を通過するか重なった結果、赤のトークンを得た後、君はその赤のトークンをレンジ 0-1 の友軍宇宙船に転送しても良い。"
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo” (YLF)",
+      text: "君が防御するか攻撃を実行した後、もし君がカリキュレート・トークンを消費したなら、カリキュレート・トークンを1つ得る。"
+    },
+    '"Leebo" (YLF-SL)': {
+      display_name: "“Leebo” (YLF-SL)",
+      text: "エンゲージメント・フェイズの終了時、君はカリキュレート・トークンを消費し、レンジ 2-3 の敵宇宙船へのロックを得ても良い。"
+    },
+    '"Leebo" (Scum)': {
+      display_name: "“Leebo”",
+      text: "エンゲージメント・フェイズの終了時、君はカリキュレート・トークンを消費し、レンジ 2-3 の敵宇宙船へのロックを得ても良い。"
+    },
     "Corran Horn (X-Wing)": {
       display_name: "Corran Horn",
       text: "君が攻撃の防御者を宣言した後、もし君が防御者へのロックを持っているなら、友軍宇宙船は君へのロックを防御者へ転送しても良い。"
@@ -21622,6 +24321,62 @@ exportObj.cardLoaders.日本語 = function() {
       display_name: "Gavyn Sykes",
       text: "君が防御するか攻撃を実行する際、もし君が公開したマニューバの速度が敵宇宙船のものより大きいなら、君は空白の結果を振り直しても良い。"
     },
+    "Darth Vader (SSP)": {
+      display_name: "Darth Vader (SSP)",
+      text: "君がアクションを実行した後、君は %FORCE% を1つ消費して、アクションを実行しても良い。"
+    },
+    "Maarek Stele (SSP)": {
+      display_name: "Maarek Stele (SSP)",
+      text: "君が攻撃を実行する際、もし防御者が表向きのダメージ・カードを受け取ろうとするなら、代わりに3枚ダメージ・カードを引き、1つ選び、残りを捨て札にする。"
+    },
+    "Captain Jonus (SSP)": {
+      display_name: "Captain Jonus (SSP)",
+      text: "レンジ 0-1 の友軍宇宙船が %TORPEDO% あるいは %MISSILE% による攻撃を実行する際、その宇宙船は2つまで攻撃ダイスを振り直しても良い。"
+    },
+    "Tomax Bren (SSP)": {
+      display_name: "Tomax Bren (SSP)",
+      text: "君が %RELOAD% アクションを実行した後、君は装備した %TALENT% アップグレード・カードのうちの1つの上にある %CHARGE% トークンを1つ回復しても良い。"
+    },
+    '"Night Beast" (SSP)': {
+      display_name: "“Night Beast” (SSP)",
+      text: "君が青のマニューバを完全に実行した後、君は %FOCUS% アクションを実行しても良い。"
+    },
+    "Valen Rudor (SSP)": {
+      display_name: "Valen Rudor (SSP)",
+      text: "レンジ 0-1 の友軍宇宙船の防御の後(もしあればダメージを適用した後)、君はアクションを実行しても良い。"
+    },
+    "Iden Versio (SSP)": {
+      display_name: "Iden Versio (SSP)",
+      text: "レンジ0-1の友軍のTIE/ln Fighterが1つ以上のダメージを受けようとする前に、君は%CHARGE%を1つ消費しても良い。もしそうするなら、そのダメージをなくす。"
+    },
+    "Luke Skywalker (SSP)": {
+      display_name: "Luke Skywalker (SSP)",
+      text: "君が防御者になった後(ダイスを振る前に)、君は %FORCE% を1つ回復しても良い。"
+    },
+    "Jek Porkins (SSP)": {
+      display_name: "Jek Porkins (SSP)",
+      text: "君がストレス・トークンを受け取った後、君は攻撃ダイスを1つ振り、それを取り除いても良い。 %HIT% の結果なら、 %HIT% ダメージを1つ受ける。"
+    },
+    '"Dutch" Vander (SSP)': {
+      display_name: "“Dutch” Vander (SSP)",
+      text: "君が %LOCK% アクションを実行した後、君はレンジ1-3の友軍宇宙船を選んでも良い。その宇宙船は君がロックしたオブジェクトへのロックを、距離の制限を無視して得る。"
+    },
+    "Horton Salm (SSP)": {
+      display_name: "Horton Salm (SSP)",
+      text: "君が攻撃を実行する際、君は防御者のレンジ 0-1 にいる他の友軍宇宙船につき攻撃ダイスを1つ振り直しても良い。"
+    },
+    "Arvel Crynyd (SSP)": {
+      display_name: "Arvel Crynyd (SSP)",
+      text: "もし君が他の宇宙船に重なることにより %BOOST% アクションが失敗しようとする時、代わりにマニューバを部分的に実行するようにして解決する。 %LINEBREAK% 君が攻撃レンジ0で攻撃を実行する際、それを攻撃レンジ1の攻撃として扱う。"
+    },
+    "Jake Farrell (SSP)": {
+      display_name: "Jake Farrell (SSP)",
+      text: "君が %BARRELROLL% あるいは %BOOST% アクションを実行した後、君はレンジ0-1の友軍宇宙船を選んでも良い。その宇宙船は %FOCUS% アクションを実行しても良い。"
+    },
+    "Shara Bey (SSP)": {
+      display_name: "Shara Bey (SSP)",
+      text: "君が防御するか主武装攻撃を実行する際、君は君が持っているその敵宇宙船のロックを消費し、 %FOCUS% の結果を1つ君のダイスの結果に追加しても良い。 "
+    },
     "Republic Judiciary": {
       display_name: "Republic Judiciary",
       text: "<i class = flavor_text>The Galactic Republic uses small, swift warships such as the CR90 corvette to respond rapidly to Separatist incursions across the galaxy.</i> %LINEBREAK% <strong>Broadside Batteries:</strong> 君はレンジ1-4でロックを得ることと主武装による攻撃ができる。"
@@ -21726,7 +24481,7 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Outrider": {
       display_name: "Outrider",
-      text: "君が障害物によって妨害された攻撃を実行する際、防御者は防御ダイスを1つ少なく振る。%LINEBREAK%君がマニューバを完全に実行した後、もし君が障害物を通過するか、障害物に重なったとき、君は赤あるいはオレンジのトークンを1つ取り除いても良い。"
+      text: "君がレンジ3で主武装攻撃を実行する際、攻撃ダイスを1つ追加で振る。 %LINEBREAK% 君が障害物で妨害された攻撃を実行する際、君は防御者の %EVADE% の結果のうち1つを %FOCUS% の結果に変更しても良い。"
     },
     "Phantom": {
       display_name: "Phantom",
@@ -22465,7 +25220,11 @@ exportObj.cardLoaders.日本語 = function() {
     },
     "Selfless": {
       display_name: "Selfless",
-      text: "レンジ0-1の他の友軍宇宙船が防御する際、結果の相殺ステップの前に、もし君がその攻撃アーク内にいるなら、君は%CRIT%ダメージを1つ受け、%CRIT%の結果1つをキャンセルしても良い。"
+      text: "レンジ 0-1 の他の友軍宇宙船が防御する際、結果の相殺ステップの前に、もし君がその攻撃アーク内にいるなら、君は %CRIT% ダメージを1つ受け、 %CRIT% の結果1つをキャンセルしても良い。"
+    },
+    "Selfless (BoY)": {
+      display_name: "Selfless",
+      text: "レンジ 0-1 の他の友軍宇宙船が防御する際、結果の相殺ステップの前に、もし君がその攻撃アーク内にいるなら、君は %CRIT% ダメージを1つ受け、 %CRIT% の結果1つをキャンセルしても良い。"
     },
     "Sense": {
       display_name: "Sense",
@@ -22949,7 +25708,7 @@ exportObj.cardLoaders.日本語 = function() {
       text: "君がジャムする際、君は君自身あるいは君以外の友軍宇宙船をジャムできる。%LINEBREAK%君が防御する際、もし攻撃者が緑のトークンを持っていないかあるいはその攻撃アーク内にジャム状態の宇宙船がいるなら、君は防御ダイスを1つ多く振っても良い。"
     },
     "Compassion": {
-      text: "レンジ0-2の他に友軍宇宙船が表向きの<b>パイロット</b>あるいは<b>クルー</b>のダメージ・カードを受け取ろうとする時、君は %FORCE% を1つ消費しても良い。もしそうするなら、そのダメージ・カードは代わりに捨て札にされ、そして君は裏向きのダメージ・カードを1枚受け取る。その後、もし君がダメージ・カードを2枚以上持っているなら、 %FORCE% を2つ回復する。"
+      text: "レンジ0-2の他の友軍宇宙船が表向きの<b>パイロット</b>あるいは<b>クルー</b>のダメージ・カードを受け取ろうとする時、君は %FORCE% を1つ消費しても良い。もしそうするなら、そのダメージ・カードは代わりに捨て札にされ、そして君は裏向きのダメージ・カードを1枚受け取る。その後、もし君がダメージ・カードを2枚以上持っているなら、 %FORCE% を2つ回復する。"
     },
     "Malice": {
       text: "君が攻撃を実行する際、君は%FORCE%を1つ消費し、%FOCUS%あるいは%HIT%の結果1つを%CRIT%に変更しても良い。もしそうするなら、君がその攻撃を実行した後、もし防御者が1枚以上の<b>パイロット</b>あるいは<b>クルー</b>ダメージ・カードを受け取ったなら、%FORCE%を2つ回復する。"
@@ -23226,6 +25985,38 @@ exportObj.cardLoaders.日本語 = function() {
     "Wolfpack (SoC)": {
       display_name: "Wolfpack",
       text: "君が攻撃を実行する際、君は友軍の <b>Plo Koon</b> 宇宙船あるいは <b>Born for This</b> 能力を持った宇宙船が防御者に対して持っているロックを消費して、好きな数の攻撃ダイスを振り直しても良い。"
+    },
+    "Swift Approach (TBE)": {
+      display_name: "Swift Approach",
+      text: "システム・フェイズの間、君がデバイスを投下するか射出した後、君はたとえストレス状態でも、白の %BARRELROLL% あるいは %BOOST% アクションを実行しても良い。"
+    },
+    "Automated Loaders (TBE)": {
+      display_name: "Automated Loaders",
+      text: "君が主武装攻撃を実行した後、君は %CHARGE% を1つ消費し、 %RELOAD% アクションを実行しても良い。"
+    },
+    "Top Cover (TBE)": {
+      display_name: "Top Cover",
+      text: "レンジ 0-1 の友軍宇宙船が防御した後、もし君がこのラウンド、デバイスを投下あるいは射出していないなら、君は [3 %BANKLEFT%], [3 %STRAIGHT%], あるいは [3 %BANKRIGHT%] テンプレートを使用して、デバイスを射出しても良い。 %LINEBREAK% 君は友軍のデバイスの効果を無視する。"
+    },
+    "True Grit (TBE)": {
+      display_name: "True Grit",
+      text: "アクティベーション・フェイズの終了時、もし君がストレイン状態ではないなら、君はストレイン・トークンを1つ得て、ロックではない赤かオレンジのトークンを1つ取り除いても良い。"
+    },
+    "Mercenary (YLF)": {
+      display_name: "Mercenary",
+      text: "レンジ 0-2 の他の友軍宇宙船が破壊された後、それがプレイ・エリアから取り除かれる前に、それの緑のトークンのうち1つを君自身に転送する。"
+    },
+    "Seeker Missiles (YLF)": {
+      display_name: "Seeker Missiles",
+      text: "<strong>攻撃 (%LOCK%):</strong> %CHARGE% を1つ消費。 攻撃ダイスの修正ステップの間、君は2つまで追加の %CHARGE% を消費しても良い。この方法で消費した %CHARGE% につき、 %FOCUS% の結果1つを %HIT% の結果に変更する。"
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo”",
+      text: "君がダメージ・カードを修理した後、君は君のアクション・バーのアクションを実行しても良い。"
+    },
+    "Efficient Processing (YLF)": {
+      display_name: "Efficient Processing",
+      text: "君が %CALCULATE% アクションを実行した後、カリキュレート・トークンを1つ得る。"
     },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
@@ -23672,6 +26463,10 @@ exportObj.cardLoaders.日本語 = function() {
       display_name: "Sensor Blindspot",
       text: "君が攻撃レンジ 0-1 主武装攻撃を実行する際、レンジ 0-1 ボーナスを適用せず、攻撃ダイスを1つ少なく振る。"
     },
+    "Sensor Blackout": {
+      display_name: "Sensor Blackout",
+      text: "君がレンジ 0-1 の主武装攻撃を実行する際、君は攻撃ダイスを1つ少なく振る。 %LINEBREAK% 君がレンジ1で防御する際、君が防御ダイスを1つ少なく振る。"
+    },
     "Microthrusters": {
       display_name: "Microthrusters",
       text: "君がバレル・ロールを実行する際、君は %STRAIGHT% テンプレートの代わりに %BANKLEFT% あるいは %BANKRIGHT% テンプレートを<b>使用しなければならない。</b>"
@@ -23835,6 +26630,50 @@ exportObj.cardLoaders.日本語 = function() {
     "Modified for Organics": {
       display_name: "Modified for Organics",
       text: "この宇宙船は <strong>Standardized</strong> 制約を受けない。君の速度2および3のバンク [%BANKLEFT% あるいは %BANKRIGHT%] マニューバの難易度を下げる。君の速度3ターン [%TURNLEFT% あるいは %TURNRIGHT%] マニューバの難易度を上げる。"
+    }
+  };
+  damage_translations = {
+    "Panicked Pilot": {
+      text: "ストレス・トークンを2つ得る。その後、このカードを修理する。"
+    },
+    "Blinded Pilot": {
+      text: "君が攻撃を実行する際、君は君のダイスを、%FORCE% の消費による通常の効果によってのみ修正できる。 %LINEBREAK% <strong>アクション:</strong> このカードを修理する。"
+    },
+    "Wounded Pilot": {
+      text: "君がアクションを実行した後、攻撃ダイスを1つ振る。 %HIT% あるいは %CRIT% の結果なら、ストレス・トークンを1つ得る。 %LINEBREAK% <strong>アクション:</strong> このカードを修理する。"
+    },
+    "Stunned Pilot": {
+      text: "君がマニューバを実行した後、もし君が障害物を通過するか、重なったなら、 %HIT% ダメージを1つ受ける。"
+    },
+    "Console Fire": {
+      text: "君がエンゲージする前に、攻撃ダイスを1つ振る。 %HIT% の結果なら、 %HIT% ダメージを1つ受ける。 %LINEBREAK% <strong>アクション:</strong> このカードを修理する。"
+    },
+    "Damaged Engine": {
+      text: "君のターン・マニューバ(%TURNLEFT% および %TURNRIGHT%)の難易度を上げる。"
+    },
+    "Weapons Failure": {
+      text: "君が攻撃を実行する際、攻撃ダイスを1つ少なく振る。 %LINEBREAK% <strong>アクション:</strong> このカードを修理する。"
+    },
+    "Hull Breach": {
+      text: "君が1つ以上の %HIT% ダメージを受けようとする前に、代わりに同じ数の %CRIT% ダメージを受ける。 %LINEBREAK% <strong>アクション:</strong> このカードを修理する。"
+    },
+    "Structural Damage": {
+      text: "君が防御する際、防御ダイスを1つ少なく振る。"
+    },
+    "Damaged Sensor Array": {
+      text: "君は %FOCUS% アクションおよびダメージ・カードのアクションを除き、アクションを実行できない。 %LINEBREAK%<strong>アクション:</strong> このカードを修理する。"
+    },
+    "Loose Stabilizer": {
+      text: "君は直進ではないマニューバ (%STRAIGHT%) を実行した後、 %HIT% ダメージを受け、このカードを修理する。 %LINEBREAK%<strong>アクション:</strong> このカードを修理する。"
+    },
+    "Disabled Power Regulator": {
+      text: "君がエンゲージする前に、イオン・トークンを1つ得る。君がイオン・マニューバを実行した後、このカードを修理する。"
+    },
+    "Fuel Leak": {
+      text: "%CRIT% ダメージを1つ受けた後、 %HIT% ダメージを受けこのカードを修理する。 %LINEBREAK%<strong>アクション:</strong> このカードを修理する。"
+    },
+    "Direct Hit!": {
+      text: "%HIT% ダメージを1つ受ける。その後、このカードを修理する。"
     }
   };
   return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
@@ -24259,7 +27098,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.Português = function() {
-  var chassis_translations, condition_translations, pilot_translations, upgrade_translations;
+  var chassis_translations, condition_translations, damage_translations, pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'Português';
   exportObj.renameShip("Modified YT-1300 Light Freighter", "Cargueiro Leve YT-1300 Modificado");
   exportObj.renameShip("StarViper-class Attack Platform", "Plataforma de Ataque Classe Starviper");
@@ -24728,6 +27567,30 @@ exportObj.cardLoaders.Português = function() {
     "Dash Rendar": {
       display_name: "Dash Rendar",
       text: "Quando você se move, você ignora obstáculos."
+    },
+    "Dash Rendar (YLF)": {
+      display_name: "Dash Rendar (YLF)",
+      text: "Durante a Fase de Engajamento, você ignora os efeitos dos obstáculos que você estiver sobrepondo."
+    },
+    "Dash Rendar (YLF-SL)": {
+      display_name: "Dash Rendar (YLF-SL)",
+      text: "Depois que você receber uma ficha vermelha como resultado de se mover através ou sobrepor um obstáculo, você pode transferir esta ficha vermelha para uma nave amiga em alcance 0-1."
+    },
+    "Dash Rendar (Scum)": {
+      display_name: "Dash Rendar",
+      text: "Depois que você receber uma ficha vermelha como resultado de se mover através ou sobrepor um obstáculo, você pode transferir esta ficha vermelha para uma nave amiga em alcance 0-1."
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo” (YLF)",
+      text: "Depois que você se defender ou realizar um ataque, se você gastou uma ficha de cálculo, receba 1 ficha de cálculo."
+    },
+    '"Leebo" (YLF-SL)': {
+      display_name: "“Leebo” (YLF-SL)",
+      text: "No começo da Fase de Engajamento, você pode gastar uma ficha de cálculo para adquirir uma mira em uma nave inimiga em alcance 2-3."
+    },
+    '"Leebo" (Scum)': {
+      display_name: "“Leebo”",
+      text: "No começo da Fase de Engajamento, você pode gastar uma ficha de cálculo para adquirir uma mira em uma nave inimiga em alcance 2-3."
     },
     "Gray Squadron Bomber": {
       display_name: "Bombardeiro do Esquadrão Cinza",
@@ -25479,6 +28342,22 @@ exportObj.cardLoaders.Português = function() {
     "Captain Jonus": {
       display_name: "Capitão Jonus",
       text: "Quando uma nave amiga em alcance 0-1 realizar um ataque %TORPEDO% ou %MISSILE%, o atacante pode rerrolar até 2 dados de ataque."
+    },
+    '"Deathfire" (TBE)': {
+      display_name: "“Deathfire” (TBE)",
+      text: "Depois que você realizar completamente uma manobra 3-5, se você não tiver soltado ou lançado um dispositivo nessa rodada, você pode gastar 2 %CHARGE% para soltar ou lançar uma bomba usando o gabarito [3 %STRAIGHT%]."
+    },
+    "Major Rhymer (TBE)": {
+      display_name: "Major Rhymer (TBE)",
+      text: "Quando você realizar um ataque %TORPEDO%, se o defensor estiver em seu %BULLSEYEARC%, mude 1 resultado %FOCUS% para um resultado %CRIT%."
+    },
+    "Captain Jonus (TBE)": {
+      display_name: "Capitão Jonus (TBE)",
+      text: "Depois que você soltar ou lançar um dispositivo, receba uma ficha de desvio."
+    },
+    "Tomax Bren (TBE)": {
+      display_name: "Tomax Bren (TBE)",
+      text: "Depois que você realizar uma ação %BARRELROLL%, você pode gastar 2 %CHARGE%. Se você fizer isso, receba uma ficha de foco."
     },
     "Delta Squadron Pilot": {
       display_name: "Piloto do Esq. Delta",
@@ -26677,7 +29556,7 @@ exportObj.cardLoaders.Português = function() {
     },
     "Volan Das": {
       display_name: "Volan Das",
-      text: "Depois que você executar completamente uma manobra, você pode escolher uma nave inimiga em alcance 1. A nave escolhida recebe 1 ficha de desgaste e você você remover 1 ficha de estresse."
+      text: "Depois que você executar completamente uma manobra vermelha, você pode escolher uma nave inimiga em alcance 1. A nave escolhida recebe 1 ficha de desgaste e você você remover 1 ficha de estresse."
     },
     "Dark Courier": {
       display_name: "Dark Courier",
@@ -26737,7 +29616,7 @@ exportObj.cardLoaders.Português = function() {
     },
     "Jango Fett": {
       display_name: "Jango Fett",
-      text: "Quando você defender ou realizar um ataque, se a dificuldade da sua manobra revelada for menor que a da nave inimiga, você pode mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."
+      text: "Quando você defender ou realizar um ataque primário, se a dificuldade da sua manobra revelada for menor que a da nave inimiga, você pode mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."
     },
     "Aurra Sing": {
       display_name: "Aurra Sing",
@@ -26782,6 +29661,62 @@ exportObj.cardLoaders.Português = function() {
     "Pre Vizsla": {
       display_name: "Pre Vizsla",
       text: "Quando você estiver atacando, se a iniciativa do defensor for igual ou maior que a sua, você pode gastar 2 %CHARGE% para rolar 1 dado adicional."
+    },
+    "Darth Vader (SSP)": {
+      display_name: "Darth Vader (SSP)",
+      text: "Depois que você realizar uma ação, você pode gastar 1 %FORCE% para realizar uma ação."
+    },
+    "Maarek Stele (SSP)": {
+      display_name: "Maarek Stele (SSP)",
+      text: "Quando você realizar um ataque, se o defensor for receber uma carta de dano virada para cima, ao invés disso compre 3 cartas de dano, escolha 1 e descarte o resto. "
+    },
+    "Captain Jonus (SSP)": {
+      display_name: "Capitão Jonus (SSP)",
+      text: "Quando uma nave amiga em alcance 0-1 realiza um ataque %TORPEDO% ou %MISSILE%, essa nave pode rerolar até 2 dados de ataque. "
+    },
+    "Tomax Bren (SSP)": {
+      display_name: "Tomax Bren (SSP)",
+      text: "Depois que você realizar uma ação %RELOAD%, você pode recuperar 1 ficha %CHARGE% em 1 de suas cartas de melhoria %TALENT% equipadas. "
+    },
+    '"Night Beast" (SSP)': {
+      display_name: "“Night Beast” (SSP)",
+      text: "Depois que você realizar completamente uma manobra azul, você pode realizar uma ação %FOCUS%."
+    },
+    "Valen Rudor (SSP)": {
+      display_name: "Valen Rudor (SSP)",
+      text: "Depois que uma nave amiga em alcance 0-1 defender (depois que o dano for resolvido, se houver), você pode realizar uma ação."
+    },
+    "Iden Versio (SSP)": {
+      display_name: "Iden Versio (SSP)",
+      text: "Antes de um caça TIE/ln amigo em alcance 0-1 sofrer 1 ou mais danos, você pode gastar 1 %CHARGE%. Se o fizer, evite esse dano."
+    },
+    "Luke Skywalker (SSP)": {
+      display_name: "Luke Skywalker (SSP)",
+      text: "Depois que você se tornar o defensor (antes dos dados serem rolados), você pode recuperar 1 %FORCE%."
+    },
+    "Jek Porkins (SSP)": {
+      display_name: "Jek Porkins (SSP)",
+      text: "Depois que você receber uma ficha de estresse, você pode rolar 1 dado de ataque para removê-la. Em um resultado %HIT%, sofra 1 dano %HIT%."
+    },
+    '"Dutch" Vander (SSP)': {
+      display_name: "“Dutch” Vander (SSP)",
+      text: "Depois que você realizar uma ação %LOCK%, você pode escolher 1 nave amiga em alcance 1-3. Essa nave pode adquirir uma mira no objeto que você mirou, ignorando restrições de alcance."
+    },
+    "Horton Salm (SSP)": {
+      display_name: "Horton Salm (SSP)",
+      text: "Quando você realizar um ataque, você pode rerolar 1 dado de ataque para cada outra nave amiga em alcance 0-1 do defensor."
+    },
+    "Arvel Crynyd (SSP)": {
+      display_name: "Arvel Crynyd (SSP)",
+      text: "Se você falharia uma ação %BOOST% por sobrepor outra nave, ao invés disso, resolva-a como se estivesse executando parcialmente uma manobra.%LINEBREAK% Quando Você realizar um ataque em alcance 0, trate-o como um ataque em alcance 1."
+    },
+    "Jake Farrell (SSP)": {
+      display_name: "Jake Farrell (SSP)",
+      text: "Depois que você realizar uma ação %BARRELROLL% ou %BOOST%, você pode escolher uma nave amiga em alcance 0-1. Essa nave pode realizar uma ação %FOCUS%."
+    },
+    "Shara Bey (SSP)": {
+      display_name: "Shara Bey (SSP)",
+      text: "Quando você defender ou realizar um ataque primário, você pode gastar 1 mira que você possua na nave inimiga e adicionar 1 resultado %FOCUS% ao resultado dos seus dados. "
     }
   };
   upgrade_translations = {
@@ -27834,7 +30769,7 @@ exportObj.cardLoaders.Português = function() {
     },
     "Outrider": {
       display_name: "Outrider",
-      text: "Quando você realizar um ataque que está obstruído por um obstáculo, o defensor rola 1 dado de defesa a menos.%LINEBREAK%Depois que você executar completamente uma manobra, se você se moveu através ou sobrepôs um obstáculo, você pode remover 1 de suas fichas vermelhas ou laranjas.%LINEBREAK% <i>Errata (desde RR 1.0.2): alterado \"ataque obstruído\" para \"um ataque que está obstruído por um obstáculo\"</i>"
+      text: "Quando você realizar um ataque primário em alcance 3, role 1 dado de ataque adicional.%LINEBREAK%Quando você realizar um ataque obstruído, você pode mudar um dos resultados %EVADE% do defensor para um resultado %FOCUS%.%LINEBREAK% Errata (desde a errata 1.8): novo texto\"</i>"
     },
     "Phantom": {
       display_name: "Phantom",
@@ -28408,7 +31343,7 @@ exportObj.cardLoaders.Português = function() {
     },
     "Contingency Protocol (SoC)": {
       display_name: "Protocolo de Contingência",
-      text: "Depois que esta nave for destruída outra nave amiga em alcance 0-3 com <b>Protocolo de Contingência</b> pode realizar uma ação, mes se estiver estressada."
+      text: "Depois que esta nave for destruída outra nave amiga em alcance 0-3 com <b>Protocolo de Contingência</b> pode realizar uma ação, mesmo se estiver estressada."
     },
     "Evasion Sequence 7 (SoC)": {
       display_name: "Sequência de Evasão 7",
@@ -28634,6 +31569,10 @@ exportObj.cardLoaders.Português = function() {
       display_name: "Ponto Cego nos Sensores",
       text: "Quando você realizar um ataque primário em alcance de ataque 0-1, não aplique o bônus de alcance 0-1 e role 1 dado de ataque a menos."
     },
+    "Sensor Blackout": {
+      display_name: "Apagão nos Sensores",
+      text: "Quando você realizar um ataque primário em alcance 0-1, role 1 dado de ataque a menos. %LINEBREAK% Quando você defender em alcance 1, role 1 dado de defesa a menos."
+    },
     "Microthrusters": {
       display_name: "Micropropulsores",
       text: "Quando você realizar uma pirueta, você <b>deve</b> usar o gabarito %BANKLEFT% ou %BANKRIGHT% ao invés do gabarito %STRAIGHT%."
@@ -28799,7 +31738,738 @@ exportObj.cardLoaders.Português = function() {
       text: "Esta nave não é afetada pela restrição <strong>Padronizada</strong>. Reduza a dificuldade de suas manobras curvas suave [%BANKLEFT% ou %BANKRIGHT%] de velocidade 2 e 3. Aumente a dificuldade de suas curvas [%TURNLEFT% ou %TURNRIGHT%] de velocidade 3."
     }
   };
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations);
+  damage_translations = {
+    "Panicked Pilot": {
+      display_name: "Piloto em Pânico",
+      text: "Receba 2 fichas de estresse. Então, repare esta carta."
+    },
+    "Blinded Pilot": {
+      display_name: "Piloto Cegado",
+      text: "Quando você realizar um ataque, você pode modificar seus dados apenas gastando %FORCE% para seu efeito padrão.%LINEBREAK%<strong>Ação:</strong> Repare esta carta. "
+    },
+    "Wounded Pilot": {
+      display_name: "Piloto Ferido",
+      text: "Após você realizar uma ação, role 1 dado de ataque. Em um resultado %HIT% ou %CRIT%, receba 1 ficha de estresse.%LINEBREAK%<strong>Ação:</strong> Repare esta carta. "
+    },
+    "Stunned Pilot": {
+      display_name: "Piloto Atordoado",
+      text: "Após executar uma manobra, se você se moveu através ou sobrepôs um obstáculo, sofra 1 dano %HIT%. "
+    },
+    "Console Fire": {
+      display_name: "Incêndio no Console",
+      text: "Antes de você engajar, role 1 dado de ataque. Em um resultado %HIT%, sofra 1 dano %HIT%. %LINEBREAK%<strong>Ação:</strong> Repare esta carta. "
+    },
+    "Damaged Engine": {
+      display_name: "Motor Danificado",
+      text: "Aumente a dificuldade das suas manobras de curva acentuada (%TURNLEFT% and %TURNRIGHT%)"
+    },
+    "Weapons Failure": {
+      display_name: "Falha nas Armas",
+      text: "Quando você realizar um ataque, role 1 dado de ataque a menos. %LINEBREAK%<strong>Ação:</strong> Repare esta carta. "
+    },
+    "Hull Breach": {
+      display_name: "Ruptura do Casco",
+      text: "Antes de você sofrer 1 ou mais danos %HIT%, em vez disso, sofra a mesma quantidade de dano %CRIT%.%LINEBREAK%<strong>Ação:</strong> Repare esta carta.  "
+    },
+    "Structural Damage": {
+      display_name: "Dano Estrutural",
+      text: "Quando você defender, role 1 dado de defesa a menos."
+    },
+    "Damaged Sensor Array": {
+      display_name: "Matriz de Sensores Danificada",
+      text: "Você não pode realizar ações, exceto a ação %FOCUS% e as ações das cartas de dano.%LINEBREAK%<strong>Ação:</strong> Repare esta carta.  "
+    },
+    "Loose Stabilizer": {
+      display_name: "Estabilizador Solto",
+      text: "Após executar uma manobra não-reta (%STRAIGHT%) você sofre 1 dano %HIT% e repara esta carta. %LINEBREAK%<strong>Ação:</strong> Repare esta carta.  "
+    },
+    "Disabled Power Regulator": {
+      display_name: "Regulador de Força Desativado",
+      text: "Antes de você engajar, receba 1 ficha de íon. Após você executar uma manobra iônica, repare esta carta."
+    },
+    "Fuel Leak": {
+      display_name: "Vazamento de Combustível",
+      text: "Após você sofrer 1 dano %CRIT%, sofra 1 dano %HIT% e repare esta carta.%LINEBREAK%<strong>Ação:</strong> Repare esta carta.  "
+    },
+    "Direct Hit!": {
+      display_name: "Acerto em Cheio!",
+      text: "Sofra 1 dano %HIT%. Então, repare esta carta. "
+    }
+  };
+  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations, chassis_translations, damage_translations);
+};
+
+exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
+
+if (exportObj.ruleLoaders == null) {
+  exportObj.ruleLoaders = {};
+}
+
+exportObj.ruleLoaders.Deutsch = function() {
+  return exportObj.rulesEntries = function() {
+    return {
+      version: {
+        number: "1.4.5",
+        date: "06/09/23"
+      },
+      glossary: {
+        "ABSETZEN": {
+          name: "Absetzen",
+          text: "Siehe Andocken."
+        },
+        "ABWERFEN": {
+          name: "Abwerfen",
+          text: "Siehe Gerät."
+        },
+        "AKTIONEN": {
+          name: "Aktionen",
+          text: "Schiffe können Aktionen durchführen. Diese beschreiben thematisch die Handlungen des Piloten, der beispielsweise defensiv fliegt oder seine Position leicht verändert. Wenn ein Schiff zum Durchführen einer Aktion angewiesen wird, kann es eine <strong>Standardaktion</strong> (angegeben in der Aktionsleiste seiner Schiffskarte) oder eine Fähigkeit mit dem Stichwort „<strong>Aktion:</strong>“ auf einer seiner Zustandskarten-, Schadenskarten, Schiffskarten- oder Aufwertungskarten durchführen. <br>• Solange ein Schiff gestresst ist, kann es keine Aktionen durchführen. <br>• Manche Aufwertungskarten haben eine Aktionsleiste, in der 1 oder mehrere Aktionen stehen. Diese werden zur Aktionsleiste der Schiffskarte hinzugefügt und gehören somit zu den Standardaktionen, die das Schiff durchführen kann. <br>• Manche Schiffs- und Aufwertungskarten haben eine gekoppelte Aktionsleiste. Diese ermöglicht das Durchführen einer gekoppelte Aktion. <br>• Manche Aktionen können scheitern. <br>• Aktionen haben drei Schwierigkeiten: weiß, rot oder violett. Weiß ist die niedrigste Schwierigkeit gefolgt von rot und dann violett. <br>◊ Als Kosten für den Versuch, eine rote Aktion durchzuführen, erhält ein Schiff 1 Stressmarker. <br>◊ Als Kosten für den Versuch, eine violette Aktion durchzuführen, muss ein Schiff 1 %FORCE% ausgeben. <br>◊ Wird ein Schiff zum Durchführen einer Aktion angewiesen, ist diese Aktion immer weiß, sofern nichts anderes angegeben ist. <br>◊ Falls zwei oder mehr Effekte die Standardfarbe einer Aktion verändern würden („Behandle die Aktion als wäre sie rot“), wird die Aktion so behandelt, als hätte sie die Farbe mit den meisten Beschränkungen. <br>• Es gibt keine Obergrenze für die Anzahl an Aktionen, die ein Schiff pro Runde durchführen kann. Allerdings kann ein Schiff innerhalb einer Runde nicht mehrmals dieselbe Aktion durchführen oder eine Aktion durchführen die diese Runde bereits gescheitert ist. <br>◊ Hat ein Schiff mehrere gleichnamige Schadenskarten, zählt die Fähigkeit jeder Schadenskarte als andere Aktion. <br>◊ Manche Karten haben mehrere Absätze mit dem Stichwort „<strong>Aktion:</strong>“. Jeder dieser Absätze stellt eine andere Aktion dar. <br>◊ Spieleffekte wie „erhalte 1 Fokusmarker“, „gib Schub“ oder „Ziel erfassen“ sind keine Aktionen, was bedeutet, dass ein Schiff sie beliebig oft pro Runde abhandeln kann. Spieleffekte wie „führe eine %FOCUS%-Aktion durch“, „führe eine %BOOST%-Aktion durch“ oder „führe eine %LOCK%-Aktion durch“ sind hingegen Aktionen, d. h. jedes Schiff kann jede dieser Aktionen nur ein Mal pro Runde durchführen. <br>• Während des Schrittes „Aktion durchführen“ der Aktivierung eines Schiffes darf das Schiff eine Aktion durchführen. <br>• Wenn ein Schiff den Schritt „Aktion durchführen“ abhandelt oder wenn ihm eine Aktion gewährt wird, kann es auch entscheiden, keine Aktion durchzuführen."
+        },
+        "AKTIVIERUNG": {
+          name: "Aktivierung",
+          text: "Siehe Aktivierungsphase."
+        },
+        "AKTIVIERUNGSPHASE": {
+          name: "Aktivierungsphase",
+          text: "Die Aktivierungsphase ist die dritte Phase einer Runde. Während dieser Phase wird jedes Schiff einzeln <strong>aktiviert</strong>. Es beginnt das Schiff mit der niedrigsten Initiative, dann geht es weiter in aufsteigender Reihenfolge. Jedes Schiff wird aktiviert, indem es folgende Schritte der Reihe nach abhandelt: <br>1. <strong>Rad aufdecken:</strong> Das zugeordnete Rad des Schiffes wird <strong>aufgedeckt</strong>, d. h. auf die offene Seite gedreht und neben der Schiffskarte platziert. <br>2. <strong>Manöver ausführen:</strong> Das Schiff führt das Manöver aus, das auf seinem aufgedeckten Rad eingestellt ist. <br>3. <strong>Aktion durchführen:</strong> Das Schiff darf 1 Aktionen durchführen. <br>Nachdem alle Schiffe aktiviert worden sind, geht es weiter mit der Kampfphase. <br>• Hat ein Spieler mehrere Schiffe mit gleichem Initiativwert, aktiviert er sie in beliebiger Reihenfolge, wobei er die Aktivierung eines Schiffes vollständig abschließen muss, bevor er die Aktivierung eines anderen Schiffes mit gleicher Initiative beginnen kann. <br>• Haben mehrere Spieler Schiffe mit gleichem Initiativwert, bestimmt die Spielerreihenfolge, in welcher Reihenfolge sie aktiviert werden. Zuerst aktiviert der Startspieler alle seine Schiffe mit diesem Initiativwert in beliebiger Reihenfolge, dann aktiviert der zweite Spieler alle seine Schiffe mit diesem Initiativwert in beliebiger Reihenfolge. <br>• Überspringt ein Schiff beim Aktivieren den Schritt „Rad aufdecken“, kann es keine Fähigkeiten abhandeln, die nach dem Aufdecken seines Rades ausgelöst werden. <br>• Ein gestresstes Schiff kann keine roten Manöver ausführen und keine Aktionen durchführen. <br>• Versucht ein gestresstes Schiff ein rotes Manöver auszuführen, führt es stattdessen ein <strong>Stressmanöver</strong> aus. Das Stressmanöver ist ein weißes [%STRAIGHT% 2]-Manöver. Flugrichtung, Schwierigkeit und Geschwindigkeit dieses Manövers können nicht verändert werden, es sei denn, eine Fähigkeit bezieht sich ausdrücklich auf das Stressmanöver. <br>• Versucht ein Schiff ohne aktive %FORCE% ein violettes Manöver auszuführen, führt es stattdessen ein Stressmanöver aus."
+        },
+        "ANDOCKEN": {
+          name: "Andocken",
+          text: "Manche Fähigkeiten erlauben, dass ein Schiff von einem anderen befreundeten Schiff geschleppt wird oder in dessen Hangar mitfliegt. Wenn eine Kartenfähigkeit ein Schiff zum <strong>andocken</strong> an einem Trägerschiff auffordert, wird das angedockte Schiff in der Reserve platziert. Ein angedocktes Schiff kann während der Systemphase von seinem Trägerschiff <strong>abgesetzt</strong> werden, indem es folgende Schritte durchführt: <br>1. Auf dem Rad des angedockten Schiffes wird ein Manöver gewählt, das nicht stationär und nicht rückwärts ist. <br>2. Unter Verwendung der zugehörigen Schablone führt das angedockte Schiff das Manöver aus, wobei es die vorderen oder hinteren Stopper des Trägerschiffes verwendet, als wären sie seine Ausgangsposition. <br>3. Das Schiff darf 1 Aktion durchführen. <br>• Falls das Schiff beim Absetzen sein Manöver teilweise ausführen würde und nicht platziert werden kann, ohne sich mit einem anderen Schiff zu überschneiden, scheitert das Absetzen und das Schiff bleibt in der Reserve. <br>• Ein Schiff, das während der Systemphase absetzt, wird nicht in der Aktivierungsphase aktiviert. <br>Während der Systemphase kann ein Schiff, das in Reichweite 0 seines Trägerschiffes ist, an diesem andocken und in der Reserve platziert werden. Ein Schiff kann nicht während derselben Systemphase andocken und abgesetzt werden. Ein Schiff, das während der Systemphase andockt, handelt nicht sein zugeordnetes Rad ab oder wird in der Aktivierungsphase aktiviert. <br>• Nachdem ein Schiff, das andocken kann, ein Manöver teilweise ausgeführt hat und ein befreundetes Trägerschiff überschneidet, darf es in der Reserve platziert werden. Falls es das tut, werden die Effekte der Überschneidung nicht abgehandelt. <br>Wird ein Trägerschiff zerstört, können alle angedockten Schiffe eine <strong>Notabsetzung</strong> durchführen, bevor der Träger von der Spielfläche entfernt wird. Die Notabsetzung wird ähnlich wie eine normale Absetzung durchgeführt (siehe oben), außer dass das Schiff zuerst 1 %CRIT%-Schaden erleidet und nach dem Ausführen des Manövers nicht die Gelegenheit zum Durchführen einer Aktion hat. <br>• Falls das angedockte Schiff sein Manöver für die Notabsetzung teilweise ausführen würde und nicht platziert werden kann, ohne sich mit einem anderen Schiff zu überschneiden, scheitert das Absetzen und das Schiff wird zerstört. <br>• Ein Schiff, das während der Kampfphase per Notabsetzung abgesetzt wurde, kann immer noch bei seiner Initiative kämpfen, es sei denn, seine Initiative war in dieser Runde bereits an der Reihe; in diesem Fall kann es in dieser Phase nicht mehr kämpfen. <br>Außerdem gilt: <br>• Ein Beispiel für das Absetzen findet sich im Anhang. <br>• Andockfähige Schiffe können das Spiel angedockt beginnen. Vor dem Schritt „Streitkräfte platzieren“ des Spielaufbaus muss man deklarieren, welche Schiffe an welchen Trägerschiffen angedockt sind. <br>• Während der Systemphase wird die Initiative des andockenden oder abgesetzten Schiffes verwendet und nicht die Initiative des Trägerschiffes."
+        },
+        "ANGREIFEN": {
+          name: "Angreifen",
+          text: "Schiffe können Angriffe durchführen. Thematisch bedeutet das, dass sie ihre Blasterkanonen, Raketen und anderen Waffen auf den Feind richten und abfeuern. Wenn ein Schiff einen Angriff durchführt, wird es zum Angreifer und befolgt anschließend die unten stehenden Schritte: <br>1. <strong>Ziel deklarieren:</strong> Während dieses Schrittes ermittelt und benennt der angreifende Spieler den Verteidiger des Angriffs. <br>a. <strong>Reichweite abmessen:</strong> Der angreifende Spieler misst die Reichweite vom Angreifer zu beliebig vielen feindlichen Schiffen und bestimmt, welche feindlichen Schiffe in welchem Winkel des Angreifers sind. <br>b. <strong>Waffe wählen:</strong> Der angreifende Spieler wählt 1 der Primär- oder Spezialwaffen des Angreifers. <br>c. <strong>Verteidiger deklarieren:</strong> Der angreifende Spieler wählt ein feindliches Schiff und macht es zum Verteidiger. Der Verteidiger muss die Bedingungen der gewählten Waffe erfüllen. <br>d. <strong>Kosten bezahlen:</strong> Der Angreifer muss sämtliche Kosten für das  Durchführen des Angriffs bezahlen. <br>• Während des Schrittes „Ziel deklarieren“ ist der Winkel der gewählten Waffe der Angriffswinkel. Die Angriffsreichweite ist die kürzeste Distanz zwischen Angreifer und Verteidiger <strong>im</strong> Angriffswinkel (die Reichweite, gemessen vom nächsten Punkt des Angreifers zum nächsten Punkt des Verteidigers, die sich im Angriffswinkel befindet). <br>• Primärwaffen setzen eine Angriffsreichweite von 0–3 voraus. Standardmäßig haben Primärwaffen keine Kosten. <br>• Spezialwaffen haben andere Bedingungen, die bei der Quelle des jeweiligen Angriffs angegeben sind. <br>• Falls es für die gewählte Waffe kein zulässiges Ziel gibt oder der Angreifer die erforderlichen Kosten für den Angriff nicht bezahlen kann, wählt der angreifende Spieler entweder eine andere Waffe oder er beschließt, nicht anzugreifen. <br>2. <strong>Angriffswürfel:</strong> Während dieses Schrittes wirft der angreifende Spieler seine Angriffswürfel. Diese können von beiden Spielern modifiziert werden. <br>a. <strong>Angriffswürfel werfen:</strong> Der angreifende Spieler bestimmt die Anzahl der zu werfenden Angriffswürfel auf Grundlage des Angriffswertes. Auf diesen werden sämtliche Effekte, welche die Anzahl der Angriffswürfel erhöhen oder verringern (beispielsweise der Reichweitenbonus und andere Effekte) angewandt. Falls die Minimal- oder Maximalanzahl von Würfeln begrenzt worden ist, wird im Anschluss diese Grenze angewandt. Es gilt grundsätzlich ein Minimum von 0 und ein Maximum von 6. Dann wirft er die entsprechende Anzahl an Würfeln. <br>• Solange ein Primärangriff in Angriffsreichweite 0 durchgeführt wird, können keine Angriffswürfel hinzugefügt werden. <br>b. <strong>Angriffswürfel modifizieren:</strong> Die Spieler handeln alle Fähigkeiten ab, mit denen Angriffswürfel modifiziert werden. Der verteidigende Spieler handelt seine Fähigkeiten zuerst ab, dann handelt der angreifende Spieler seine Fähigkeiten ab. <br>• Solange ein Primärangriff in Angriffsreichweite 0 durchgeführt wird, können die Würfel des Angreifers nicht modifiziert werden, außer durch den Verteidiger. <br>• Üblicherweise modifiziert der Angreifer die Angriffswürfel durch Ausgeben von Fokusmarkern oder einer Zielerfassung, die er auf dem Verteidiger hat. <br>• Jeder Angriffswürfel kann höchstens ein Mal pro Angriff neu geworfen werden. <br>3. <strong>Verteidigungswürfel:</strong> Während dieses Schrittes wirft der verteidigende Spieler Verteidigungswürfel in Höhe des Wendigkeitswertes des Schiffes. Diese können von beiden Spielern modifiziert werden. <br>a. <strong>Verteidigungswürfel werfen:</strong> Der verteidigende Spieler bestimmt die Anzahl der zu werfenden Verteidigungswürfel auf Grundlage des Wendigkeitswertes des Verteidigers. Auf diesen werden sämtliche Effekte, welche die Anzahl der Verteidigungswürfel erhöhen oder verringern (beispielsweise der Reichweitenbonus, die Versperrung des Angriffs durch ein Hindernis und andere Effekte) angewandt. Falls die Minimal- oder Maximalanzahl von Würfeln begrenzt worden ist, wird im Anschluss diese Grenze angewandt. Es gilt grundsätzlich ein Minimum von 0 und einMaximum von 6. Dann wirft er die entsprechende Anzahl an Würfeln. <br>b. <strong>Verteidigungswürfel modifizieren:</strong> Die Spieler handeln alle Fähigkeiten ab, mit denen Verteidigungswürfel modifiziert werden. Der angreifende Spieler handelt seine Fähigkeiten zuerst ab, dann handelt der verteidigende Spieler seine Fähigkeiten ab. <br>• Solange du in Reichweite 0 verteidigst, können feindliche Schiffe die Anzahl der Verteidigungswürfel, die du wirfst, nicht reduzieren, deine Ergebnisse nicht negieren und nicht modifizieren. <br>• Üblicherweise modifiziert der Verteidiger die Verteidigungswürfel, indem er Fokus- oder Ausweichmarker ausgibt. <br>• Jeder Verteidigungswürfel kann höchstens ein Mal pro Angriff neu geworfen werden. <br>4. <strong>Ergebnisse neutralisieren:</strong> Während dieses Schrittes <strong>neutralisieren</strong> sich die Angriffs- und Verteidigungswürfel paarweise. Dies geschieht in folgender Reihenfolge: <br>a. Paare von %EVADE%- und %HIT%-Ergebnissen werden negiert. <br>b. Paare von %EVADE%- und %CRIT%-Ergebnissen werden negiert. <br> Der Angriff trifft, falls mindestens 1 %HIT%- oder %CRIT%-Ergebnis nicht negiert wurde; andernfalls verfehlt er. <br>5. <strong>Schaden zuteilen:</strong> Falls der Angriff trifft, erleidet der Verteidiger für alle nicht-negierten %HIT%- und %CRIT%-Ergebnisse Schaden, und zwar in dieser Reihenfolge: <br>a. Der Verteidiger erleidet 1 %HIT%-Schaden für jedes nicht-negierte %HIT%-Ergebnis. Dann werden alle %HIT%-Ergebnisse negiert. <br>b. Der Verteidiger erleidet 1 %CRIT%-Schaden für jedes nicht-negierte %CRIT%-Ergebnis. Dann werden alle %CRIT%-Ergebnisse negiert. <br>6. <strong>Nachwirkungen:</strong> Fähigkeiten, die nach einem Angriff ausgelöst werden, werden in folgender Reihenfolge abgehandelt. <br>a. Alle Fähigkeiten des verteidigenden Spielers, die ausgelöst werden, nachdem ein Schiff verteidigt hat oder zerstört worden ist, mit Ausnahme von Fähigkeiten, die einen Bonusangriff gewähren. <br>b. Alle Fähigkeiten des angreifenden Spielers, die ausgelöst werden, nachdem ein Schiff einen Angriff durchgeführt hat oder zerstört worden ist, mit Ausnahme von Fähigkeiten, die einen Bonusangriff gewähren. <br>c. Alle Fähigkeiten des verteidigenden Spielers, die ausgelöst werden, nachdem ein Schiff verteidigt hat oder zerstört worden ist und die einen Bonusangriff gewähren. <br>d. Alle Fähigkeiten des angreifenden Spielers, die ausgelöst werden, nachdem ein Schiff einen Angriff durchgeführt hat oder zerstört worden ist und die einen Bonusangriff gewähren. <br>• Jedes Schiff darf 1 Standardangriff durchführen, sobald es in der Kampfphase kämpft. <br>• Falls ein Schiff bei einem Initiativschritt während der Kampfphase zerstört wird, entfernt man es erst, nachdem alle Schiffe mit derselben Initiative wie der Angreifer gekämpft haben. <br>• Während eines Angriffes kann ein Schiff nicht freiwillig entscheiden, weniger Würfel zu werfen, als es werfen soll. <br>• Reichen die verfügbaren Würfel nicht aus, wirft man alle vorhandenen und notiert die erzielten Ergebnisse. Dann wirft man sie erneut, bis man die erforderliche Anzahl an Würfeln (die eigentlich gleichzeitig geworfen werden sollten) erreicht hat. Was das Modifizieren von Würfeln betrifft, zählt dies nicht als Neuwerfen"
+        },
+        "ANGRIFFSREICHWEITE": {
+          name: "Angriffsreichweite",
+          text: "Während eines Angriffs wird die kürzeste Distanz zwischen Angreifer und Verteidiger (die Reichweite, gemessen vom nächsten Punkt des Angreifers zum nächsten Punkt des Verteidigers) im Angriffswinkel als <strong>Angriffsreichweite</strong> bezeichnet. <br>• Beim Abmessen der Reichweite für Fähigkeiten, die nicht explizit von der Angriffsreichweite sprechen, wird die Reichweite vom nächsten Punkt des Angreifers zum nächsten Punkt des Verteidigers (unabhängig vom Angriffswinkel) gemessen. <br>• Solange ein Schiff in Reichweite 0 angegriffen wird, ist die Angriffsreichweite immer 0."
+        },
+        "ANGRIFFSWINKEL": {
+          name: "Angriffswinkel",
+          text: "Während eines Angriffs wird der Winkel der verwendeten Waffe des Angreifers als <strong>Angriffswinkel</strong> bezeichnet. Während des Schrittes „Verteidiger deklarieren“ muss das feindliche Schiff im Angriffswinkel sein."
+        },
+        "ANSTRENGUNG": {
+          name: "Anstrengung",
+          text: "Solange ein Schiff mindestens 1 Anstrengungsmarker (%STRAIN%) hat, ist es <strong>angestrengt</strong>. Solange ein angestrengtes Schiff verteidigt, wirft es 1 Verteidigungswürfel weniger. Der Anstrengungsmarker ist ein roter Marker. <br>• Nachdem ein angestrengtes Schiff den Effekt, 1 Verteidigungswürfel weniger zu werfen, auf diese Weise angewandt hat, entfernt es 1 Anstrengungsmarker. <br>• Nachdem ein angestrengtes Schiff ein blaues Manöver durchgeführt hat, entfernt es 1 Anstrengungsmarker."
+        },
+        "AUFBAU": {
+          name: "Aufbau",
+          text: "\"Vor dem Spiel werden folgende Schritte abgehandelt: <br>1. <strong>Streitkräfte sammeln:</strong> Jeder Spieler platziert seine Schiffs- und Aufwertungskarten vor sich auf dem Tisch. Für jedes Schiff, das über einen Schildwert, eine Ladungskapazität oder ein Machtvermögen verfügt, werden die jeweiligen %SHIELD%, %CHARGE% oder %FORCE% oberhalb der Schiffs- und/oder Aufwertungskarten platziert. Jeder Spieler ordnet jedem seiner Schiffe ID-Marker zu. <br>2. <strong>Spielreihenfolge festlegen:</strong> Die Spielreihenfolge wird folgendermaßen zufällig festgelegt: <br>a. Jeder Spieler wirft 3 Angriffswürfel. Der Spieler mit den meisten %CRIT%-Ergebnissen ist Startspieler. <br>b. Herrscht Gleichstand, ist der Spieler mit den meisten %FOCUS%-Ergebnissen Startspieler. <br>c. Herrscht immer noch Gleichstand, ist der Spieler mit den meisten %HIT%-Ergebnissen Startspieler. <br>d. Herrscht immer noch Gleichstand, würfeln die Spieler erneut und beginnen wieder bei Punkt a), bis der Gleichstand aufgelöst ist. <br>• Diese Würfe können nicht durch Spieleffekte beeinflusst werden. <br>3. <strong>Spielfläche abstecken:</strong> Auf einem flachen Untergrund wird eine 3‘ x 3‘ (91 cm x 91 cm) große Spielfläche abgesteckt. Alternativ kann eine Spielmatte wie die Starfield Playmat von Fantasy Flight Games verwendet werden. Anschließend wählen die Spieler gegenüberliegende Ränder der Spielfläche als ihre Spielflächenränder aus. <br>4. <strong>Hindernisse platzieren:</strong> In Spielerreihenfolge wählen die Spieler abwechselnd je 1 Hindernis und platzieren es auf der Spielfläche, bis alle 6 Hindernisse platziert worden sind. Hindernisse müssen jenseits von Reichweite 1 zueinander und jenseits von Reichweite 2 zu jedem Spielflächenrand platziert werden. <br>5. <strong>Streitkräfte platzieren:</strong> In aufsteigender Initiativreihenfolge (beginnend mit der niedrigsten Initiative) platzieren die Spieler ihre Schiffe auf der Spielfläche. Bei Gleichstand entscheidet die Spielerreihenfolge. Jeder Spieler muss seine Schiffe innerhalb von Reichweite 1 zu seinem Spielflächenrand platzieren. Wenn ein Schiff mit einem Geschützturm-Winkelanzeiger platziert wird, dreht der Spieler den Winkel, um einen Standardwinkel auszuwählen. Jedes Schiff mit einer Geschützturm-Winkelanzeiger kann seine Anzeige drehen, wenn das Schiff platziert wird. <br>6. <strong>Sonstiges Material vorbereiten:</strong> Der Schadensstapel wird gemischt und verdeckt außerhalb der Spielfläche platziert. Besitzen die Spieler mehr als einen Schadensstapel, verwendet jeder seinen eigenen. Neben der Spielfläche wird ein Vorrat aus Maßstab, Schablonen, Würfeln und Markern gebildet. <br>Außerdem gilt: <br>• Hat eine Karte das Stichwort „<strong>Aufbau:</strong>“, wird die Fähigkeit, die diesem Stichwort folgt, während des geeigneten Aufbau-Schrittes abgehandelt."
+        },
+        "AUFDECKEN": {
+          name: "Aufdecken",
+          text: "Siehe Aktivierungsphase"
+        },
+        "AUFWERTUNGSKARTEN": {
+          name: "Aufwertungskarten",
+          text: "Beim Zusammenstellen einer Staffel kann man Ausstattungspunkte ausgeben, um Aufwertungskarten zu kaufen und Schiffe damit auszurüsten. Jedes Schiff hat einen Ausstattungswert und eine Aufwertungsleiste, die angeben, wie viele Aufwertungen welcher Art ein Schiff ausrüsten kann. Manche Aufwertungen haben 1 oder mehrere der folgenden Einträge in ihrem Beschränkungsfeld: <br>• <strong>Rebellen/Imperium/Abschaum/...:</strong> Diese Aufwertungskarte kann nur von einem Schiff der jeweiligen Fraktion ausgerüstet werden. <br>• <strong>Kleines/mittleres/großes/riesiges Schiff:</strong> Diese Aufwertung kann nur von einem Schiff der jeweiligen Größe ausgerüstet werden. <br>• <strong>Schiffstyp:</strong> Ist an dieser Stelle ein Schiffstyp angegeben, kann die Aufwertung nur von einem Schiff dieses Typs ausgerüstet werden. <br>• <strong>Aktion:</strong> Steht an dieser Stelle ein Aktionssymbol, kann die Aufwertung nur von einem Schiff ausgerüstet werden, das diese Aktion in seiner Aktionsleiste hat. Eine Aktion in der gekoppelten Aktionsleiste zählt hierbei nicht. <br>• Ein Schiff kann nicht mehr als 1 Kopie derselben Karte ausrüsten. <br>• Alle Karten einer Staffel unterliegen den Regeln für limitierte und Solitär-Karten. <br>• Einige Effekte können während des Spielaufbaus oder danach Aufwertungskarten zwischen zwei Schiffen „austauschen“ oder „ausrüsten“. <br>◊ Ein Effekt kann eine Aufwertung zu einem Schiff bewegen, das kein passendes Aufwertungssymbol in seiner Aufwertungsleiste hat. <br>◊ Ein Effekt kann eine Aufwertung nicht zu einem Schiff bewegen, das die im Beschränkungsfeld der Aufwertungskarte genannten Voraussetzungen nicht erfüllt, es sei denn, der Effekt erlaubt ausdrücklich, Beschränkungen zu ignorieren."
+        },
+        "AUFWERTUNGSSYMBOLE": {
+          name: "Aufwertungssymbole",
+          text: "Jedes Aufwertungssymbol hat einen Namen. Es folgt eine Übersicht:<br>• %TALENT% Talent<br>• %ASTROMECH% Astromech<br>• %TORPEDO% Torpedo<br>• %MISSILE% Rakete<br>• %CANNON% Kanone<br>• %TURRET% Geschütz <br>• %DEVICE% Nutzlast<br>• %CREW% Mannschaft<br>• %CONFIGURATION% Konfiguration <br>• %SENSOR% Sensor <br>• %TITLE% Titel<br>• %MODIFICATION% Modifikation <br>• %ILLICIT% Schmuggelware <br>• %TECH% Technik<br>• %GUNNER% Bordschütze<br>• %FORCEPOWER% Macht-Fähigkeit <br>• %TACTICALRELAY% Taktische Leitung <br>• (Wir haben dieses Icon nicht...) Hyperantrieb"
+        },
+        "AUS DEM SPIEL ENTFERNT": {
+          name: "Aus dem Spiel entfernt",
+          text: "Nachdem ein Schiff zerstört worden oder geflohen ist, wird es <strong>aus dem Spiel entfernt</strong>. Wenn das passiert, kommen alle seine Marker in den Vorrat zurück, seine Schiffskarte wird auf die Rückseite gedreht und das Schiff wird auf seiner Schiffskarte platziert. <br>• Falls am Ende einer Runde alle Schiffe eines Spielers aus dem Spiel entfernt worden sind, endet die Partie und der andere Spieler gewinnt. <br>• Schiffe, die in der Reserve platziert werden, sind nicht aus dem Spiel entfernt."
+        },
+        "AUSWEICHEN": {
+          name: "Ausweichen",
+          text: "Piloten können ausweichen, um defensiv zu fliegen. Sobald ein Schiff eine %EVADE%-Aktion durchführt, erhält es 1 Ausweichmarker. Solange ein Schiff mindestens 1 Ausweichmarker hat, spricht man davon, dass das Schiff <strong>ausweicht</strong>. Ausweichmarker sind kreisförmige, grüne Marker. Solange ein ausweichendes Schiff verteidigt, kann es während des Schrittes „Verteidigungswürfel modifizieren“ einen oder mehrere Ausweichmarker ausgeben, um ebenso viele seiner Leerseiten oder %FOCUS%-Ergebnisse in %EVADE%-Ergebnisse zu ändern. <br>• Wenn eine Fähigkeit besagt, dass ein Schiff einen Ausweichmarker erhält, ist dies etwas anderes als das Durchführen einer %EVADE%-Aktion. Ein Schiff, das einen Ausweichmarker erhält, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %EVADE%-Aktion durchführen."
+        },
+        "BEFREUNDET": {
+          name: "Befreundet",
+          text: "Alle Schiffe/Geräte, die vom selben Spieler kontrolliert werden, sind miteinander <strong>befreundet</strong>, es sei denn, eine Karte, ein Spielmodus, ein Szenario oder ein anderer Effekt besagt etwas anderes. Alle Würfel, die man selbst wirft, sind mit diesen Schiffen befreundet. Befreundet ist etwas anderes als feindlich und verbündet. <br>• Schiffe können keine Angriffe gegen befreundete Schiffe durchführen, es sei denn, etwas anderes ist ausdrücklich angegeben. <br>• Ein Schiff ist befreundet mit sich selbst und kann alle seine Fähigkeiten, die „befreundete Schiffe“ betreffen, auch auf sich selbst anwenden, es sei denn, die Fähigkeiten beziehen sich ausdrücklich auf „andere“ befreundete Schiffe."
+        },
+        "BERECHNEN": {
+          name: "Berechnen",
+          text: "Piloten können berechnen, wobei sie modernste Computertechnologie einsetzen, um ihre Leistungen im Kampf zu steigern. Sobald ein Schiff eine %CALCULATE%-Aktion durchführt, erhält es 1 Berechnungsmarker. Solange ein Schiff mindestens 1 Berechnungsmarker hat, ist es <strong>berechnend</strong>. Berechnungsmarker sind kreisförmige grüne Marker. Für ein berechnendes Schiff gelten folgende Regeln: <br>• Solange ein berechnendes Schiff einen Angriff durchführt, darf es während des Schrittes „Angriffswürfel modifizieren“ 1 oder mehrere Berechnungsmarker ausgeben, um ebenso viele seiner %FOCUS%-Ergebnisse in %HIT%-Ergebnisse zu ändern. <br>• Solange ein berechnendes Schiff verteidigt, darf es während des Schrittes „Verteidigungswürfel modifizieren“ 1 oder mehrere Berechnungsmarker ausgeben, um ebenso viele seiner %FOCUS%-Ergebnisse in %EVADE%-Ergebnisse zu ändern. <br>Außerdem gilt:<br>• Ein Schiff kann keine Berechnungsmarker ausgeben, um %FOCUS%-Ergebnisse in %EVADE%- oder %HIT%-Ergebnisse zu ändern, falls es keine 󲁀-Ergebnisse hat. <br>• Wenn eine Fähigkeit besagt, dass ein Schiff einen Berechnungsmarker erhält, ist dies etwas anderes als das Durchführen einer %CALCULATE%-Aktion. Ein Schiff, das einen Berechnungsmarker erhält, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %CALCULATE%-Aktion durchführen."
+        },
+        "BEWEGEN": {
+          name: "Bewegen",
+          text: "Ein Schiff <strong>bewegt</strong> sich, wenn es ein Manöver ausführt oder anderweitig unter Verwendung einer Schablone seine Position verändert (z. B. bei einer Fassrolle oder einem Schub). Ein Schiff bewegt sich durch ein Objekt <strong>hindurch</strong>, wenn die Schablone beim Bewegen auf dem Objekt platziert wird. <br>• Bewegt sich ein Schiff durch ein Hindernis hindurch, erleidet es die Effekte jenes Hindernisses. <br>• Bewegt sich ein Schiff durch ein Gerät hindurch, kann es je nach Gerät bestimmte Effekte erleiden. <br>• Bewegt sich ein Schiff durch ein anderes Schiff hindurch, gibt es an sich keinen Effekt. Da das Plastikmodell des anderen Schiffes physisch den Weg versperrt, sollte man seine Position markieren und es vorübergehend entfernen. Um die Position eines im Weg stehenden Schiffes zu markieren, kann man entweder die Positionsmarkierung aus dem Grundspiel verwenden oder Schablonen zwischen den Stopper des Schiffes oder an seinen Basiskanten platzieren. Nach Abschluss der Bewegung werden alle entfernten Schiffe in ihre Ursprungspositionen zurückgebracht."
+        },
+        "BOMBEN": {
+          name: "Bombe",
+          text: "Eine Bombe ist eine Art von Gerät, das über den Karteneffekt einer %DEVICE%-Aufwertungskarte auf die Spielfläche kommt. Die zugehörige Aufwertungskarte hat das Merkmal „Bombe“ über ihrem Kartentext. Bomben können während der Systemphase abgeworfen oder gestartet werden und detonieren am Ende der Aktivierungsphase."
+        },
+        "BONUSANGRIFF": {
+          name: "Bonusangriff",
+          text: "Wird ein Schiff von einem Karteneffekt zum Durchführen eines Bonusangriffs aufgefordert, führt es während des Schrittes „Nachwirkungen“ einen zusätzlichen Angriff durch. <br>• Manche Spezialwaffen gewähren einen Bonusangriff unter Verwendung derselben Waffe. Sofern nichts anderes angegeben ist, gelten für das Durchführen solcher Bonusangriffe dieselben Bedingungen (Winkel, Reichweite, Kosten). <br>◊ Beispiel: Ein Schiff, das mit der Karte „Clusterraketen“ angegriffen hat, kann einen Bonusangriff gegen ein anderes Schiff in Reichweite 1 des Verteidigers durchführen und dabei die %LOCK%-Voraussetzung ignorieren. Die Reichweite (1–2), der Winkel (%FRONTARC%) und die Kosten (1 %CHARGE%) gelten auch für den Bonusangriff. <br>• Ein Schiff kann nur 1 Bonusangriff pro Runde durchführen. <br>• Haben beide Spieler einen Bonusangriff, der nach dem Angriff ausgelöst wird, handelt der verteidigende Spieler seinen Bonusangriff zuerst ab. <br>• Für riesige Schiffe gibt es Zusatzregeln für Bonusangriffe (vgl. Anhang: Riesige Schiffe)."
+        },
+        "BRAND": {
+          name: "Brand",
+          text: "Sobald dieses Objekt platziert wird, werden seine Stopper an die Aussparung der Brandbombe angelegt. Nachdem dieses Objekt platziert worden ist, wird ein Zeitzünder auf es platziert. <br>• Während der Endphase wird jeder Brand ohne Zeitzünder entfernt, dann wird 1 Zeitzünder von jedem Brand entfernt. Wenn sich ein Schiff bewegt und sich dabei durch ein Brand-Hindernis hindurchbewegt oder es überschneidet, erleidet es den folgenden Effekt: <br>• Nachdem die Bewegung abgehandelt wurde, wirf einen Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis erleidet das Schiff 1 %HIT%-Schaden, bei einem %FOCUS%-Ergebnis erhält es 1 Stressmarker. Dann überspringt das Schiff seinen Schritt „Aktion durchführen“ dieser Runde. <br>Nachdem ein Remote so neu positioniert worden ist, dass es danach in Reichweite 0 eines Brand-Hindernisses ist, erleidet es 1 %HIT%-Schaden. Falls ein Schiff verteidigt und der Angriff durch einen Brand versperrt wird, wirft es 1 zusätzlichen Verteidigungswürfel."
+        },
+        "DEFIZIT": {
+          name: "Defizit",
+          text: "Falls die Summe der Kommandopunkte eines Spielers kleiner ist als der maximal erlaubte Kommandowert, subtrahiert vor Spielbeginn den Kommandopunktewert der gesamten Staffel vom erlaubten Maximum. Dieser Wert stellt das <strong>Defizit</strong> des Spielers dar. <br>• Zu Beginn des Spiels verdient jeder Spieler Missionspunkte in Höhe des gegnerischen Defizits."
+        },
+        "DREHUNG": {
+          name: "Drehung",
+          text: "%BANKLEFT% und %BANKRIGHT%; Siehe Flugrichtung"
+        },
+        "EINHEIT": {
+          name: "Einheit",
+          text: "Schiffe und Remotes sind Einheiten."
+        },
+        "ELEKTRODÜPPEL-WOLKE": {
+          name: "Elektrodüppel-Wolke",
+          text: "Siehe Hindernisse."
+        },
+        "ENDPHASE": {
+          name: "Endphase",
+          text: "Die Endphase ist die fünfte Phase der Runde. Während der Endphase passiert Folgendes in dieser Reihenfolge: <br> 1. Fähigkeiten, die „zu Beginn der Endphase“ ausgelöst werden, bilden eine Fähigkeits-Warteschlange und werden abgehandelt. <br>2. Fähigkeiten, die „während der Endphase“ ausgelöst werden, bilden eine Fähigkeits-Warteschlange und werden abgehandelt. <br>3. Alle kreisförmigen Marker werden von allen Schiffen entfernt (zuerst grüne, dann orangefarbene). <br>4. Jede Karte mit mindestens einem Symbol für wiederkehrende Ladungen stellt ebenso viele Ladungen wieder her. Jede Karte mit mindestens einem Symbol für negative wiederkehrende Ladungen verliert ebenso viele Ladungen. <br>Nach dieser Phase werden die Siegbedingungen überprüft. Ist die Partie nicht vorbei, beginnt die nächste Runde mit der Planungsphase."
+        },
+        "ENTTARNEN": {
+          name: "Enttarnen",
+          text: "Siehe Tarnen."
+        },
+        "ENTWAFFNET": {
+          name: "Entwaffnet",
+          text: "Ein Schiff ist entwaffnet, falls es mindestens 1 Entwaffnet-Marker hat. Ein entwaffnetes Schiff kann keine Angriffe durchführen. Der Entwaffnet-Marker ist ein kreisförmiger, orangefarbener Marker und wird während der Endphase entfernt. <br>• Während der Kampfphase kämpfen auch entwaffnete Schiffe (obwohl sie keine Angriffe durchführen können)."
+        },
+        "ERLEIDEN": {
+          name: "Erleiden",
+          text: "Siehe Schaden."
+        },
+        "ERSCHÖPFT": {
+          name: "Erschöpft",
+          text: "Ein Schiff ist <strong>erschöpft</strong>, solange es mindestens 1 Erschöpfungsmarker (%DEPLETE%) hat. Solange ein erschöpftes Schiff einen Angriff durchführt, wirft es 1 Angriffswürfel weniger. Erschöpfungsmarker sind rote Marker. <br>• Nachdem ein erschöpftes Schiff den Effekt, 1 Angriffswürfel weniger zu werfen, angewandt hat, entfernt es 1 Erschöpfungsmarker. <br>• Nachdem ein erschöpftes Schiff ein blaues Manöver ausgeführt hat, entfernt es 1 Erschöpfungsmarker"
+        },
+        "FÄHIGKEITEN": {
+          name: "Fähigkeiten",
+          text: "Manche Texte von Zustands-, Schadens-, Schiffs- und Aufwertungskarten sind <strong>Fähigkeiten</strong>. Diese bestehen aus einem Zeitpunkt und einem Effekt. <br>• Kartenfähigkeiten sind verpflichtend und müssen zwangsweise abgehandelt werden, es sei denn, eine Kartenfähigkeit verwendet eine Form von „dürfen“ oder das Stichwort „<strong>Aktion</strong>“ oder „<strong>Angriff</strong>“. <br>• Ein Schiff kann keine Marker eines anderen Schiffes ausgeben oder entfernen, es sei denn, ein Effekt besagt ausdrücklich etwas anderes. Ebenso kann ein Schiff die Würfelergebnisse eines anderen Schiffes nicht ausgeben, modifizieren oder entfernen, es sei denn, ein Effekt besagt ausdrücklich etwas anderes. <br>• Falls mehrere Fähigkeiten gleichzeitig abgehandelt werden müssten, nutzt man die sogenannte Fähigkeits-Warteschlange, um die Reihenfolge ihrer Abhandlung zu bestimmen. <br>• Die Kartenfähigkeit eines zerstörten Schiffes bleibt aktiv, bis jenes Schiff entfernt wird, es sei denn, die Kartenfähigkeit gibt ausdrücklich an, zu welchem Zeitpunkt ihr Effekt endet, z. B. „bis zum Ende der Kampfphase“. Solche Effekte bleiben bis zum Ende der angegebenen Zeit aktiv. <br><br><h5>Piloten- und Schiffsfähigkeiten</h5> Manche Schiffskarten haben zusätzlich zu ihrem atmosphärischen Text (oder stattdessen) eine Fähigkeit. Alle limitierten Schiffe verfügen über individuelle <strong>Pilotenfähigkeiten</strong> und haben keine atmosphärischen Texte. Zudem haben manche Schiffe unterhalb ihrer Pilotenfähigkeit oder ihrem atmosphärischen Text eine <strong>Schiffsfähigkeit</strong>, die bei allen Schiffen dieses Typs gleich ist.<br><br><h5>Ersetzungseffekte</h5> Manche Fähigkeiten haben eine ersetzende Funktion – sie verändern die normale Abhandlung eines Effekts. Man erkennt sie an den Wörtern „anstatt“, „statt“ und „stattdessen“ sowie an der Verwendung des Konjunktivs. <br>• Ersetzungseffekte werden nicht ans Ende der Fähigkeits-Warteschlange gestellt, da sie gleichzeitig mit dem ersetzten Effekt abgehandelt werden. <br>• Wenn ein Ersetzungseffekt abgehandelt wird, behandelt man den ersetzten Effekt, als wäre er niemals eingetreten. <br>◊ Beispiel: Jyn Ersos Fähigkeit besagt: „Falls ein befreundetes Schiff in Reichweite 0–3 einen Fokusmarker erhalten würde, darf es stattdessen 1 Ausweichmarker erhalten.“ Falls diese Fähigkeit verwendet wird, kann ein Effekt, der nach dem Erhalt eines Fokusmarker ausgelöst wird, nicht ausgelöst werden. <br>• Gibt es mehrere Ersetzungseffekte, die denselben Effekt abändern, kann nur 1 Effekt den ursprünglichen Effekt ersetzen. <br>◊ Beispiel: Ein Schiff ist gerade dabei, einen Fokusmarker zu erhalten, und hat die beiden Fähigkeiten „Bevor du einen Fokusmarker erhalten würdest, erhalte stattdessen einen Ausweichmarker“ und „Bevor du einen Fokusmarker erhalten würdest, erhalte stattdessen einen Berechnungsmarker“. Nur 1 dieser Fähigkeiten kann abgehandelt werden.<br><br><h5>Kosten bezahlen</h5>Ein Schiff kann die Kosten eines Effekts nur dann bezahlen, wenn der Effekt auch abgehandelt werden kann. <br>• Beispiel: Die Fähigkeit des GNK-„Gonk“-Droiden besagt: „Aktion: Gib 1 %CHARGE% aus, um 1 Schild wiederherzustellen.“ Hat das Schiff keine inaktiven Schilde, kann es die Ladung nicht ausgeben. <br>• Ersetzungseffekte können die Kosten ersetzen, die ein Schiff für einen Effekt ausgeben muss. Werden Kosten so ersetzt, wird der Effekt trotzdem abgehandelt."
+        },
+        "FÄHIGKEITS-WARTESCHLANGE": {
+          name: "Fähigkeits-Warteschlange",
+          text: "Die <strong>Fähigkeits-Warteschlange</strong> wird verwendet, um die Abhandlungsreihenfolge von Fähigkeiten zu klären, die innerhalb desselben Zeitfensters ausgelöst werden. Fähigkeiten in der Warteschlange werden von vorne nach hinten abgehandelt. Folgende Regeln gelten für das Hinzufügen von Fähigkeiten zur Warteschlange: <br>1. Haben beide Spieler Fähigkeiten, die durch dasselbe Ereignis ausgelöst werden, werden die Fähigkeiten in Spielerreihenfolge in die Warteschlange gestellt. <br>2. Hat ein Spieler mehrere Fähigkeiten, die durch dasselbe Ereignis ausgelöst werden, bestimmt er selbst die Reihenfolge, in der die Fähigkeiten in die Warteschlange gestellt werden. <br>3. Werden durch das Abhandeln eines Effekts aus der Fähigkeits-Warteschlange weitere Effekte auslöst, werden sie gemäß den oben genannten Regeln ans vordere Ende der Warteschlange gestellt. <br>2 Beispiele für die Fähigkeits-Warteschlange finden sich im Anhang: Beispiele. <br>• Wenn ein Spieleffekt dasselbe Zeitfenster wie die Fähigkeit eines Spielers hat, wird der Spieleffekt immer zuerst abgehandelt. <br>◊ Beispiel: Ein Schiff mit einer Fähigkeit, die nach dem Durchführen einer Fassrolle ausgelöst wird, führt eine rote Fassrolle-Aktion durch. Bevor die Fähigkeit abgehandelt wird, erhält das Schiff einen Stressmarker, da es sich dabei um einen Spieleffekt handelt. <br>• Falls die Voraussetzungen einer Fähigkeit nicht erfüllt sind, kann sie der Fähigkeits-Warteschlange nicht hinzugefügt werden. Beispiel: Ein Schiff hat eine Fähigkeit, die zu Beginn der Kampfphase ausgelöst wird und voraussetzt, dass das Schiff gefangen ist. Nun beginnt die Kampfphase. Falls das Schiff nicht gefangen ist, kann es seine Fähigkeit nicht zur Warteschlange hinzufügen. Das gilt auch dann, wenn zu Beginn derselben Kampfphase eine andere Fähigkeit zur Warteschlange hinzugefügt wird, deren Abhandlung dazu führen wird, dass das Schiff gefangen wird. <br>• Falls ein Schiff entfernt würde, solange sich noch eine oder mehrere Fähigkeiten in der Warteschlange befinden, wird es nicht entfernt, bis sich keine Fähigkeiten mehr in der Warteschlange befinden"
+        },
+        "FANGSTRAHL": {
+          name: "Fangstrahl",
+          text: "Ein Schiff ist <strong>gefangen</strong>, solange es eine bestimmte Anzahl an Fangstrahlmarkern (%TRACTOR%), abhängig von seiner Größe, hat; mindestens 1 bei einem kleinen Schiff, mindestens 2 bei einem mittleren Schiff und mindestens 3 bei einem großen Schiff. Fangstrahlmarker sind orangefarbene Marker. Immer, wenn ein Schiff das erste Mal in einer Runde gefangen worden ist, darf der Spieler, dessen Effekt den Fangstrahlmarker angewendet hat, 1 der folgenden Effekte wählen:<br>• Das Schiff führt unter Verwendung der [1 %STRAIGHT%]-Manöverschablone eine Fassrolle durch. Der Spieler, der den Effekt anwendet, bestimmt die Richtung der Fassrolle sowie die Endposition des Schiffes. <br>• Das Schiff führt unter Verwendung der [1 %STRAIGHT%]-Manöverschablone einen Schub durch.<br>Diese Bewegung kann nicht dazu führen, dass sich das Schiff mit einem Hindernis überschneidet oder sich durch es hindurchbewegt. Nachdem ein Schiff auf diese Art bewegt worden ist, falls ein Gegner es bewegt hat, darf der Spieler des Schiffes wählen, das Schiff um 90° nach rechts oder links zu drehen. Falls er dies tut, erhält das Schiff einen Stressmarker. Solange ein gefangenes Schiff verteidigt, wirft es 1 Verteidigungswürfel weniger.<br>• Manche Spezialwaffen fügen Fangstrahlmarker zu, anstatt Schaden zuzuteilen. <br>• Riesige Schiffe haben zusätzliche Fangstrahl-Regeln (vgl. Anhang: Riesige Schiffe)"
+        },
+        "FASSROLLE": {
+          name: "Fassrolle",
+          text: "Piloten können eine Fassrolle fliegen, um ihr Schiff seitwärts zu steuern und ihre Position leicht anzupassen. Sobald ein kleines Schiff eine %BARRELROLL%-Aktion durchführt, werden die nachstehenden Schritte befolgt: <br>1. Die [1 %STRAIGHT%]-Schablone wird herausgesucht. <br>2. Das kurze Ende der Schablone wird bündig an der linken oder rechten Seite der Schiffsbasis platziert. Die Schablone muss so platziert werden, dass ihre Mittellinie auf einer Höhe mit der Markierung an der Seite der Basis ist. <br>3. Das Schiff wird von der Spielfläche angehoben und so platziert, dass die Markierung an der anderen Basisseite auf einer Höhe mit der Vorderkante, Mittellinie oder Hinterkante des anderen kurzen Endes der Schablone ist. <br>4. Die Schablone wird in den Vorrat zurückgelegt.<br>Wenn ein mittleres oder großes Schiff eine Fassrolle fliegt, wird in der obigen Anleitung „kurzes Ende“ durch „langes Ende“ ersetzt.<br>• Sobald eine Fassrolle deklariert wird, muss man auch deklarieren, ob das Schiff die Fassrolle nach links oder nach rechts fliegt. Anschließend darf man die drei möglichen Endpositionen (vorne, Mitte, hinten) ausprobieren, ehe man sich für eine entscheidet und das Schiff platziert.<br>• Die Fassrolle kann scheitern, falls bei dem Versuch, das Schiff am Ende der Fassrolle zu platzieren, eine der folgenden Situationen eintritt: <br>◊ Das Schiff würde sich an allen drei Positionen mit einem anderen Schiff überschneiden. <br>◊ Alle drei Positionen würden dazu führen, dass das Schiff sich durch ein Hindernis hindurchbewegt oder sich mit einem Hindernis überschneidet. <br>◊ Alle drei Positionen würden dazu führen, dass das Schiff außerhalb der Spielfläche wäre (und somit fliehen würde). <br>• Falls eine Fassrolle scheitert, wird das Schiff in die Ausgangsposition zurückgesetzt, die es vor der versuchten Fassrolle innehatte. Falls dies Bestandteil einer %BARRELROLL%-Aktion ist, scheitert diese Aktion. <br>• Gibt es eine Position, die nicht zum Scheitern der Aktion führt, kann man sich nicht freiwillig dafür entscheiden, die Fassrolle scheitern zu lassen. <br>• Das Durchführen einer Fassrolle zählt nicht als Ausführen eines Manövers, aber es zählt als Bewegung. <br>• Wenn eine Fähigkeit ein Schiff zum Fliegen einer Fassrolle auffordert, ist dies etwas anderes als das Durchführen einer %BARRELROLL%-Aktion. Ein Schiff, das eine Fassrolle fliegt, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %BARRELROLL%-Aktion durchführen."
+        },
+        "FEINDLICH": {
+          name: "Feindlich",
+          text: "Alle Schiffe/Geräte, die von Gegenspielern kontrolliert werden, sind <strong>feindliche</strong> Schiffe/Geräte. Alle Würfel, die ein Gegenspieler wirft, sind feindliche Würfel. Das Gegenteil von feindlich ist befreundet."
+        },
+        "FEUERWINKEL": {
+          name: "Feuerwinkel",
+          text: "Siehe Winkel."
+        },
+        "FLANKIEREN": {
+          name: "Flankieren",
+          text: "Siehe Winkel."
+        },
+        "FLIEHEN": {
+          name: "Fliehen",
+          text: "Ein Schiff <strong>flieht</strong>, falls irgendein Teil seiner Basis zu irgendeinem Zeitpunkt außerhalb der Spielfläche ist. Ein geflohenes Schiff wird aus dem Spiel entfernt. <br>• Ein Schiff flieht nicht, falls beim Bewegen ausschließlich die Schablone über den Spielflächenrand hinausragt. <br>• Ein geflohenes Schiff kann vor seiner Entfernung aus dem Spiel nur Effekte abhandeln, die ausgelöst werden, sobald es flieht. <br>• Solange ein Schiff Schub gibt, eine Fassrolle fliegt, sich enttarnt oder SLAM abhandelt, kann es nicht zur Flucht des Schiffes kommen. <br>• Ein teilweise ausgeführtes Manöver kann zur Flucht eines Schiffes führen, falls nach dem Manöver irgendein Teil der Schiffsbasis außerhalb der Spielfläche ist."
+        },
+        "FLUGRICHTUNG": {
+          name: "Flugrichtung",
+          text: "Jedes Manöver besteht aus drei Elementen: Geschwindigkeit (eine Zahl zwischen 0 und 5), Schwierigkeit (rot, weiß oder blau) und Flugrichtung (ein Pfeil oder ein anderes Symbol). Jede Flugrichtung wird zudem durch eine <strong>Orientierung</strong> (z. B. links, rechts oder gerade) näher definiert. Alle Manöver sind entweder Basismanöver oder Expertenmanöver. Zudem gelten alle Manöver, die an den vorderen Stoppern beginnen, als <strong>Vorwärtsmanöver</strong>.<br><br><h5>Basismanöver</h5>Folgende Flugrichtungen sind <strong>Basismanöver</strong>. Für sie gelten die normalen Regeln für das Ausführen von Manövern.<br> • <strong>Gerade:</strong> Die Flugrichtung %STRAIGHT% (Gerade) lässt das Schiff geradeaus vorwärts fliegen.<br> • <strong>Drehung:</strong> Die Flugrichtungen %BANKLEFT% (linke Drehung) und %BANKRIGHT% (rechte Drehung) lassen das Schiff eine sanfte Kurve fliegen, wobei sich seine Blickrichtung um 45° ändert.<br> • <strong>Wende:</strong> Die Flugrichtungen %TURNLEFT% (linke Wende) und %TURNRIGHT% (rechte Wende) lassen das Schiff eine enge Kurve fliegen, wobei sich seine Blickrichtung um 90° ändert. <br><br><h5>Expertenmanöver</h5> Folgende Manöver sind <strong>Expertenmanöver</strong>. Für sie gelten die normalen Regeln für das Ausführen von Manövern mit einigen Ausnahmen.<br> • <strong>Koiogran-Wende:</strong> Die Flugrichtung %KTURN% (Koiogran-Wende) lässt das Schiff geradeaus vorwärts fliegen, und dann seine Blickrichtung um 180° drehen. Hierfür wird dieselbe Schablone wie für das %STRAIGHT%-Manöver verwendet.<br> ◊ Falls das Schiff das Manöver vollständig ausführt, schiebt man es mit den vorderen Stoppern um das Ende der Schablone anstatt mit den hinteren Stoppern.<br> • <strong>Segnor-Looping:</strong> Die Flugrichtungen %SLOOPLEFT% (linker Segnor-Looping) und %SLOOPRIGHT% (rechter Segnor-Looping) lassen das Schiff eine sanfte Kurve fliegen und dann seine Blickrichtung um 180° drehen. Hierfür wird dieselbe Schablone wie für die %BANKLEFT%- und %BANKRIGHT%-Manöver verwendet.<br> ◊ Falls das Schiff das Manöver vollständig ausführt, schiebt man es mit den vorderen Stoppern um das Ende der Schablone anstatt mit den hinteren Stoppern.<br> • <strong>Tallon-Rolle:</strong> Die Flugrichtungen %TROLLLEFT% (linke Tallon-Rolle) und %TROLLRIGHT% (rechte Tallon- Rolle) lassen das Schiff eine enge Kurve fliegen, wobei sich seine Blickrichtung um 180° ändert. Hierfür wird dieselbe Schablone wie für die %TURNLEFT%- und %TURNRIGHT%-Manöver verwendet.<br>◊ Falls das Schiff das Manöver vollständig ausführt, wird es vor seiner Platzierung am anderen Ende der Schablone um 90° gedreht (nach links für eine %TROLLLEFT%, nach rechts für eine %TROLLRIGHT%). Dann platziert man das Schiff so, dass die Markierung an der Basisseite auf einer Höhe mit der linken Kante, der Mittellinie oder der rechten Kante des Endes der Schablone ist (ähnlich wie bei einer Fassrolle).<br> Überschneidet sich ein Schiff beim Ausführen einer Koiogran-Wende, eines Segnor-Loopings oder einer Tallon-Rolle mit einem anderen Schiff, führt es das Manöver teilweise aus und verwendet dabei seine hinteren Stopper, als würde es das Basismanöver ausführen, das dieselbe Schablone verwendet.<br> • <strong>Stationär:</strong> Die Flugrichtung %STOP% (Stationär) lässt das Schiff auf seiner gegenwärtigen Position verharren. Zu dieser Flugrichtung gibt es keine Schablone.<br> ◊ Ein Schiff, das dieses Manöver ausführt, zählt, als hätte es ein Manöver ausgeführt, es überschneidet sich nicht mit irgendwelchen Schiffen, löst Effekte durch Überschneidungen mit Hindernissen in Reichweite 0 aus und es bleibt in Reichweite 0 zu allen Objekten, die es vor dem Ausführen des Manövers berührt hat.<br> ◊ Stationäre Manöver sind keine Vorwärtsmanöver.<br> ◊ Ein Schiff, das ein stationäres Manöver ausführt, führt dieses Manöver stets vollständig aus.<br> Jedes <strong>Rückwärtsmanöver</strong> beginnt damit, dass die Schablone zwischen die hinteren Stopper der Schiffsbasis geschoben wird (und nicht zwischen die vorderen). Anschließend schiebt man das Schiff mit den vorderen Stoppern um das andere Ende der Schablone (anstatt mit den hinteren).<br> • <strong>Rückwärtsgerade:</strong> Die Flugrichtung %REVERSESTRAIGHT% (Rückwärtsgerade) lässt das Schiff geradewegs nach hinten fliegen. Hierfür wird dieselbe Schablone wie für das %STRAIGHT%-Manöver verwendet.<br> ◊ Eine Rückwärtsgerade ist ein Rückwärtsmanöver und kein Vorwärtsmanöver.<br> • Rückwärtsdrehung: Die Flugrichtungen %REVERSEBANKLEFT% (linke Rückwärtsdrehung) und %REVERSEBANKRIGHT% (rechte Rückwärtsdrehung) lassen das Schiff eine sanfte Kurve fliegen, wobei sich seine Blickrichtung um 45° ändert. Hierfür werden dieselben Schablonen wie für die %BANKLEFT%- und %BANKRIGHT%-Manöver verwendet.<br> ◊ Eine Rückwärtsdrehung ist ein Rückwärtsmanöver und kein Vorwärtsmanöver."
+        },
+        "FOKUSSIEREN": {
+          name: "Fokussieren",
+          text: "Piloten können fokussieren, um sich zu konzentrieren und ihre Kampfkraft zu stärken. Sobald ein Schiff die %FOCUS%-Aktion durchführt, erhält es 1 Fokusmarker. Solange ein Schiff mindestens 1 Fokusmarker hat, ist es <strong>fokussiert</strong>. Fokusmarker sind kreisförmige, grüne Marker. Für fokussierte Schiffe gelten folgende Regeln:<br> • Solange ein fokussiertes Schiff einen Angriff durchführt, darf es während des Schrittes „Angriffswürfel modifizieren“ einen Fokusmarker ausgeben, um alle seine %FOCUS%-Ergebnisse in %HIT%-Ergebnisse zu ändern.<br> • Solange ein fokussiertes Schiff verteidigt, darf es während des Schrittes „Verteidigungswürfel modifizieren“ einen Fokusmarker ausgeben, um alle seine %FOCUS%-Ergebnisse in %EVADE%-Ergebnisse zu ändern.<br> Außerdem gilt:<br> • Hat ein Schiff keine %FOCUS%-Ergebnisse, kann es keinen Fokusmarker ausgeben, um %FOCUS%-Ergebnisse in %EVADE%- oder %HIT%-Ergebnisse zu ändern.<br> • Wenn eine Fähigkeit besagt, dass ein Schiff einen Fokusmarker erhält, ist dies etwas anderes als das Durchführen einer %FOCUS%-Aktion. Ein Schiff, das einen Fokusmarker erhält, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %FOCUS%-Aktion durchführen."
+        },
+        "FRAKTION": {
+          name: "Fraktion",
+          text: "Aktuell gibt es sieben Spielfraktionen: Rebellen (die Rebellen-Allianz), Imperium (das Galaktische Imperium), Abschaum (Abschaum und Kriminelle), Widerstand, Erste Ordnung, Republik (die Galaktische Republik) und Separatisten (Separatistenallianz). Alle Schiffskarten sowie einige Aufwertungskarten gehören einer dieser Fraktionen an. Im Normalfall ist es nicht möglich, dass eine Staffel Karten aus mehreren Fraktionen enthält.<br> • Aufwertungskarten können von jeder Fraktion verwendet werden, es sei denn, sie haben eine Beschränkung."
+        },
+        "GEHEIME ZUSTÄNDE": {
+          name: "Geheime Zustände",
+          text: "Siehe Zustandskarten."
+        },
+        "GEKOPPELTE AKTION": {
+          name: "Gekoppelte Aktionen",
+          text: "Gekoppelte Aktionen erlauben, dass ein Schiff nach dem Durchführen einer Aktion eine zweite Aktion durchführt. Schiffs- und Aufwertungskarten können rechts neben ihrer Aktionsleiste eine gekoppelte Aktionsleiste haben. Nachdem ein Schiff eine Aktion aus seiner Aktionsleiste durchgeführt hat, kann es die damit verknüpfte Aktion aus der gekoppelten Aktionsleiste durchführen.<br> • Wenn man nach dem Durchführen einer Aktion, die mit einer gekoppelten Aktion verknüpft ist, die gekoppelte Aktion abhandeln will, wird sie der Fähigkeits-Warteschlange hinzugefügt. Falls ein Schiff mehrere Aktionen hat, die an dieselbe Anfangsaktion gekoppelt sind (z. B. %FOCUS%<i class=\"xwing-miniatures-font xwing-miniatures-font-linked\"></i>%BARRELROLL% und %FOCUS%<i class=\"xwing-miniatures-font xwing-miniatures-font-linked\"></i>%BOOST% ), kann es nur eine gekoppelte Aktion wählen und sie der Warteschlange hinzufügen.<br> • Eine gekoppelte Aktion kann nach dem Durchführen der verknüpften Aktion durchgeführt werden, auch wenn diese Aktion durch einen Karteneffekt oder anderen Spieleffekt gewährt wurde.<br> • Nachdem ein Schiff eine gekoppelte Aktion durchgeführt hat, kann es jene Aktion nicht verwenden, um der Warteschlange eine weitere gekoppelte Aktion hinzuzufügen. Falls ein Schiff zum Beispiel sowohl %FOCUS%<i class=\"xwing-miniatures-font xwing-miniatures-font-linked\"></i>%BARRELROLL% als auch %BARRELROLL%<i class=\"xwing-miniatures-font xwing-miniatures-font-linked\"></i>%EVADE% auf seiner Aktionsleiste hat, kann es die gekoppelte %BARRELROLL%-Aktion, die mit %FOCUS% verknüpft ist, nicht als %BARRELROLL%-Aktion nutzen, um eine gekoppelte %FOCUS%-Aktion durchzuführen."
+        },
+        "GENORMT": {
+          name: "Genormt",
+          text: "Einige Aufwertungskarten haben die Beschränkung <strong>genormt</strong>. Wenn ein Spieler beim Zusammenstellen seiner Staffel eines seiner Schiffe mit einer genormten Karte ausrüstet, muss er jedes Schiff dieses Schiffstyps (d. h. mit dem exakt gleichen Schiffsnamen) in seiner Staffel mit einer Kopie jener genormten Karte ausrüsten, falls es die Schiffsfähigkeit besitzt, die auf jener Karte benannt wird.<br> • Standardausstattung-Schiffe können keine zusätzlichen Aufwertungen ausrüsten und ignorieren die Beschränkung <strong>genormt</strong>."
+        },
+        "GERADE": {
+          name: "Gerade",
+          text: "%STRAIGHT%; Siehe Flugrichtung."
+        },
+        "GERÄT": {
+          name: "Gerät",
+          text: "Geräte sind Objekte, die auf der Spielfläche existieren und durch Markierungen aus Pappe dargestellt werden. Bestimmte Karten erlauben es einem Schiff, einen bestimmten Gerätetyp auf die Spielfläche zu legen, und stellen zusätzliche Regeln bereit, wie sich dieses Gerät verhält. Es gibt verschiedene Möglichkeiten, wie ein Gerät auf der Spielfläche erscheint oder seine Position verändert. Manche Geräte geben spezifische Anweisungen, wie sie auf der Spielfläche platziert werden, während andere einen oder mehrere der folgenden Prozesse nutzen:<br> Um ein Gerät <strong>abzuwerfen</strong>, befolgt man die nachstehenden Schritte:<br> 1. Die auf der Aufwertungskarte genannte Schablone wird herausgesucht.<br> 2. Die Schablone wird zwischen die hinteren Stopper des Schiffes gesteckt.<br> 3. Das auf der Aufwertungskarte genannte Gerät wird auf der Spielfläche platziert und seine Stopper werden um das andere Ende der Schablone geschoben. Dann wird die Schablone entfernt.<br> Um ein Gerät zu <strong>starten</strong>, befolgt man die nachstehenden Schritte:<br> 1. Die auf der Aufwertungskarte genannte Schablone wird herausgesucht.<br> 2. Die Schablone wird zwischen die vorderen Stopper des Schiffes gesteckt.<br> 3. Das auf der Aufwertungskarte genannte Gerät wird auf der Spielfläche platziert und seine Stopper werden um das andere Ende der Schablone geschoben. Dann wird die Schablone entfernt.<br> Um ein Gerät <strong>neu zu positionieren</strong>, befolgt man die folgenden Schritte:<br> 1. Das Gerät wird so genommen und versetzt, wie im Effekt beschrieben wird, der die Neupositionierung hervorruft. Dies kann eine Schablone erfordern oder das Gerät kann an den Schiffsstoppern platziert werden.<br> 2. Ein Gerät, das neu positioniert wird, zählt nicht, als würde es Hindernisse überschneiden oder sich durch diese hindurchbewegen.<br> Manche Geräte können <strong>detonieren</strong>. Sobald ein Gerät detoniert, werden abhängig von der Art des Gerätes bestimmte Effekte ausgelöst. Nachdem diese Effekte abgehandelt worden sind, wird jenes Gerät entfernt.<br> • Beispiele für das Abwerfen und Starten finden sich im Anhang.<br> • Auf einer Seite jedes Geräts befindet sich ein weißer Rand, um zu erkennen, zu welchem Spieler es gehört.<br> • Die meisten Geräte werden während der Systemphase platziert. Jedes Schiff kann nur ein Mal pro Systemphase ein Gerät platzieren.<br> • Die meisten Geräte haben eine zugehörige Aufwertungskarte, die es dem Spieler erlaubt, das Gerät durch Ausgeben von %CHARGE% zu platzieren. Viele dieser Karten sind Aufwertungen vom Typ Nutzlast (%DEVICE%).<br> • Sobald ein Effekt ein Schiff anweist, ein Gerät zu platzieren, das zu einer anderen Karte gehört (z. B. „Wirf 1 Bombe ab“), muss jenes Schiff sämtliche Kosten bezahlen (z. B. %CHARGE% ausgeben) und das Gerät so platzieren, wie es die zugehörige Karte vorschreibt. Andere Effekte können die Art, wie das Gerät platziert wird, wie gewohnt verändern (z. B. die „Wendiger Bomber“-Fähigkeit des TIE-Bombers).<br> • Jedes Schiff kann sich nicht in derselben Phase enttarnen und ein Gerät platzieren.<br> • Geräte sind keine Hindernisse, aber sie sind Objekte, es sei denn, eine Regel besagt etwas anderes.<br> • Wird ein Gerät in Überschneidung mit einem Schiff platziert, platziert man es unter der Schiffsbasis.<br> • Wird ein Gerät, das bei Überschneidung detoniert, unter mehr als 1 Schiffsbasis platziert, detoniert es sofort und der Spieler, der das Gerät platziert, entscheidet, welches Schiff davon betroffen ist.<br> • Die Stopper eines Gerätes zählen als Bestandteil des Gerätes, wenn es darum geht, die Reichweite von oder zu ihm abzumessen oder zu bestimmen, ob sich etwas mit dem Gerät überschneidet oder sich durch es hindurchbewegt.<br> • Ein Gerät kann nicht (auch nicht partiell) außerhalb der Spielfläche platziert werden. Wenn das passieren würde, wird das Spiel auf den Zustand vor dem Platzieren des Gerätes zurückgesetzt – das Gerät wird nicht platziert, ggf. ausgegebene Ladungen werden wiederhergestellt, andere bezahlte Kosten werden zurückerstattet und der Spieler kann entscheiden, das Gerät nicht zu platzieren.<br> • Führt ein Schiff ein Manöver teilweise aus, zählt nur der Teil der Schablone, der zwischen Ausgangs- und Endposition des Schiffes liegt, für Überschneidungen mit Geräten sowie für die Frage, ob sich das Schiff durch ein Gerät hindurchbewegt hat. Der Teil der Schablone, über den das Schiff zurückbewegt wurde, wird ignoriert."
+        },
+        "GESCHÜTZTURM-WINKEL": {
+          name: "Geschützturm-Winkel",
+          text: "%TURRETARC%; Siehe Winkel"
+        },
+        "GESCHWINDIGKEIT": {
+          name: "Geschwindigkeit",
+          text: "Jedes Manöver besteht aus drei Elementen: Geschwindigkeit (eine Zahl zwischen 0 und 5), Schwierigkeit (rot, weiß oder blau) und Flugrichtung (ein Pfeil oder ein anderes Symbol).<br> • Die Geschwindigkeit eines Manövers kann nur im Rahmen der existierenden Schablonen erhöht oder verringert werden.<br> ◊ Beispielsweise kann die Geschwindigkeit eines [3 %SLOOPRIGHT%]-Manövers nicht erhöht und die Geschwindigkeit eines [1 %STRAIGHT%]-Manövers nicht verringert werden.<br> • Die Geschwindigkeit eines [0 %STOP%]-Manövers kann weder erhöht noch verringert werden.<br> • Auch wenn ein Schiff ein Manöver nur teilweise ausführt, wird es behandelt, als hätte es ein Manöver mit der angegebenen Geschwindigkeit ausgeführt."
+        },
+        "GLEICHZEITIGER ANGRIFF": {
+          name: "Gleichzeitiger Angriff",
+          text: "Schiffe mit gleichen Initiativwerten greifen im Grunde simultan an. Um dies darzustellen, wird ein Schiff, das während der Kampfphase zerstört wird, erst dann entfernt, nachdem alle Schiffe mit derselben Initiative wie das gegenwärtig kämpfende Schiff gekämpft haben."
+        },
+        "HINDERNISSE": {
+          name: "Hindernisse",
+          text: "Hindernisse stellen Gefahren dar, die ein Schiff beeinträchtigen oder beschädigen können. Ein Schiff kann bestimmte Effekte erleiden, wenn es sich durch ein Hindernis hindurchbewegt, sich mit ihm überschneidet, oder solange es in Reichweite 0 zu ihm ist. Ein Schiff, das sich durch ein Hindernis hindurchbewegt oder sich mit ihm überschneidet, erleidet je nach Art des Hindernisses einen Effekt, nachdem es seine Bewegung abgehandelt hat:<br> • <strong>Asteroid:</strong> Das Schiff erleidet 1 %HIT%-Schaden. Wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis erleidet das Schiff 1 zusätzlichen %HIT%-Schaden.<br> • <strong>Brandbombe:</strong> Wirf 1 Angriffswürfel. Bei einem %HIT%- oder 󲁨-Ergebnis erleidet das Schiff 1 %HIT%-Schaden, bei einem %FOCUS%-Ergebnis erhält es 1 Stressmarker. Dann überspringt das Schiff seinen Schritt „Aktion durchführen“ dieser Runde.<br> • <strong>Elektrodüppel-Wolke:</strong> Das Schiff verliert sämtliche eigenen und fremden Zielerfassungen und dann wird ihm 1 Störsignalmarker zugeordnet. Wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis wird dem Schiff 1 Stressmarker zugeordnet.<br> • <strong>Ersatzteile:</strong> Dem Schiff wird 1 Anstrengungsmarker zugeordnet. Wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis wird dem Schiff 1 Stressmarker zugeordnet.<br> • <strong>Freie Fracht:</strong> Dem Schiff wird 1 Anstrengungsmarker zugeordnet. Wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis wird dem Schiff 1 Stressmarker zugeordnet.<br> • <strong>Gaswolke:</strong> Das Schiff verliert sämtliche eigenen und fremden Zielerfassungen und dann wird ihm 1 Anstrengungsmarker zugeordnet. Wirf 1 Angriffswürfel. Bei einem %HIT%-Ergebnis wird dem Schiff 1 Ionenmarker zugeordnet. Bei einem %CRIT%-Ergebnis werden dem Schiff 3 Ionenmarker zugeordnet.<br> • <strong>Trümmerwolke:</strong> Dem Schiff wird 1 Stressmarker zugeordnet. Wirf 1 Angriffswürfel. Bei einem %HIT%-Ergebnis erleidet das Schiff 1 %HIT%-Schaden. Bei einem %CRIT%-Ergebnis erleidet das Schiff 1 %CRIT%-Schaden.<br> • Falls ein Schiff beim Beenden seines Manövers ein Hindernis überschneidet, überspringt es seinen Schritt „Aktion durchführen“. Solange ein Schiff in Reichweite 0 eines Hindernisses ist, kann es diverse Effekte erleiden.<br> • <strong>Asteroid:</strong> Das Schiff kann keine Angriffe durchführen.<br> • <strong>Elektrodüppel-Wolke:</strong> Das Schiff kann keine Ziele erfassen und nicht als Ziel erfasst werden.<br> • <strong>Gaswolke:</strong> Das Schiff kann keine Ziele erfassen und nicht als Ziel erfasst werden. Das Schiff kann keine Angriffe durchführen.<br> • <strong>Trümmerwolke:</strong> Das Schiff kann keine Angriffe durchführen. Solange ein Schiff einen Angriff durchführt und der Angriff durch ein Hindernis versperrt ist, wirft der Verteidiger 1 zusätzlichen Verteidigungswürfel.<br> Außerdem gilt:<br> • Hindernisse werden während des Schrittes „Hindernisse platzieren“ des Spielaufbaus platziert.<br> • Einige Karten können während des Spiels ebenfalls Hindernisse platzieren, ähnlich dem Platzieren von Geräten.<br> • Falls ein Hindernis so platziert wird, dass es sich mit einem oder mehreren Schiffen überschneidet, handeln diese Schiffe jegliche Effekte dieser Überschneidung ab.<br> • Ein Schiff, das sich mit einem Hindernis überschneidet, kann weiterhin Aktionen durchführen, die ihm von anderen Spieleffekten gewährt werden.<br> • Führt ein Schiff ein Manöver teilweise aus, zählt nur der Teil der Schablone, der zwischen Ausgangs- und Endposition des Schiffes liegt, für Überschneidungen mit Hindernissen. Der Teil der Schablone, über den das Schiff zurückbewegt wurde, wird ignoriert.<br> • Bewegt sich ein Schiff durch mehrere Hindernisse oder überschneidet es sich mit mehreren Hindernissen, erleidet es die Effekte jedes einzelnen Hindernisses, beginnend mit dem, das am nächsten zu seiner Ausgangsposition ist und dann weiter entlang der Schablone.<br> • Ist ein Schiff vor seiner Bewegung in Reichweite 0 eines Hindernisses, erleidet es nicht die Effekte jenes Hindernisses, es sei denn, es bewegt sich erneut durch das Hindernis hindurch oder überschneidet sich mit ihm.<br> • Ist ein Schiff vor seiner Bewegung in Reichweite 0 eines Hindernisses, erleidet es nicht die Effekte jenes Hindernisses, außer es überschneidet das Hindernis erneut.<br> • Riesige Schiffe haben eigene Regeln in Bezug auf Hindernisse (vgl. Anhang: Riesige Schiffe)."
+        },
+        "HINDURCHBEWEGEN": {
+          name: "Hindurchbewegen",
+          text: "Siehe Bewegen."
+        },
+        "HINTER": {
+          name: "Hinter",
+          text: "Siehe Winkel."
+        },
+        "HÜLLE": {
+          name: "Hülle",
+          text: "Die gelbe Zahl auf der Schiffskarte gibt den Hüllenwert des Schiffes an. Der Hüllenwert besagt, wie viele Schadenskarten das Schiff braucht, um zerstört zu werden.<br> • Die <strong>übrige Hülle</strong> eines Schiffes ist die Differenz zwischen seinem Hüllenwert und der Anzahl der Schadenskarten, die es hat."
+        },
+        "ID-MARKER": {
+          name: "ID-Marker",
+          text: "ID-Marker verknüpfen die Schiffe auf der Spielfläche mit ihren jeweiligen Schiffskarten und ggf. auch mit den Zielen, die sie erfasst haben. Während des Spielaufbaus muss jedem Schiff ein ID-Marker zugeordnet werden. Um einem Schiff einen ID-Marker zuzuordnen, platziert man 1 ID-Marker auf der Schiffskarte und steckt anschließend 2 zugehörige ID-Marker in die Anhebung der Schiffsbasis. Die nach außen zeigende Seite muss farblich zur Oberseite des Markers auf der Schiffskarte passen.<br> • ID-Marker dürfen auch individuell eingefärbt werden (mit Filzstiften, Pinsel und Farbe etc.), solange jeder Spieler für alle seine aufgestellten Schiffe gleichfarbige Marker verwendet.<br> • Während des Spielaufbaus muss jeder Spieler ID-Marker verwenden, die sich farblich von denen des Gegenspielers unterscheiden, damit jedes Schiff eindeutig einer Seite zuzuordnen ist."
+        },
+        "IONEN": {
+          name: "Ionen",
+          text: "Ein Schiff ist <strong>ionisiert</strong>, solange es eine bestimmte Anzahl an Ionenmarkern (%ION%), abhängig von seiner Größe, hat: mindestens 1 bei einem kleinen Schiff, mindestens 2 bei einem mittleren Schiff und mindestens 3 bei einem großen Schiff. Ionenmarker sind rote Marker. Ein ionisiertes Schiff kann keine Ziele erfassen und keine Zielerfassungen aufrechterhalten. Sobald ein Schiff ionisiert wird, verliert es alle Zielerfassungen, die es aufrechterhält.<br> In der Aktivierungsphase wird ein ionisiertes Schiff wie folgt aktiviert:<br> 1. Das ionisierte Schiff deckt sein Rad wie gewohnt auf.<br> 2. Während des Schrittes „Manöver ausführen“ führt das ionisierte Schiff ein ionenmanöVer mit derselben Orientierung aus, die auf dem Rad gezeigt wird. Ein Ionenmanöver ist ein blaues Drehmanöver oder eine blaue Gerade [%TURNLEFT%, %STRAIGHT%, %TURNRIGHT%] mit Geschwindigkeit 1.<br> • Falls das Rad des ionisierten Schiffes ein stationäres Manöver [%STOP%] zeigt, führt es sein Ionenmanöver als [1 %STRAIGHT%]-Manöver aus.<br> • Flugrichtung, Schwierigkeit und Geschwindigkeit dieses Manövers können nicht verändert werden, es sei denn, eine Fähigkeit bezieht sich ausdrücklich auf das Ionenmanöver.<br> 3. Während des Schrittes „Aktion durchführen“ kann das Schiff nur die %FOCUS%-Aktion durchführen.<br> 4. Falls ein ionisiertes Schiff ein Ionenmanöver ausgeführt hat, entfernt es am Ende seiner Aktivierung alle seine Ionenmarker.<br> Außerdem gilt:<br> • Ein ionisiertes Schiff kann keine Aktionen außer der %FOCUS%-Aktion durchführen.<br> • Schiffe können keine Fähigkeiten nutzen, die ausgelöst werden, wenn ein ionisiertes Schiff sein Rad aufdeckt.<br> • Falls ein Schiff, das während der Planungsphase ionisiert wurde, zu Beginn seiner Aktivierung nicht länger ionisiert ist, wird das Schiff wie gewohnt aktiviert."
+        },
+        "INITIATIVE": {
+          name: "Initiative",
+          text: "Der Initiativwert eines Schiffes ist die orangefarbene Zahl links neben dem Schiffsnamen auf der Schiffskarte. Die Initiative bestimmt, in welcher Reihenfolge die Schiffe während der Systemphase ihre Fähigkeiten verwenden können, während der Aktivierungsphase aktiviert werden, während der Kampfphase kämpfen und während des Spielaufbaus platziert werden.<br> • Falls mehrere Fähigkeiten die Initiative eines Schiffes verändern, wird nur die zuletzt verwendete Fähigkeit angewandt.<br> ◊ Endet der zuletzt verwendete Effekt (z. B. „am Ende der Kampfphase“), bestimmt die zuletzt verwendete, immer noch aktive Fähigkeit den neuen Initiativwert."
+        },
+        "KAMPFPHASE": {
+          name: "Kampfphase",
+          text: "Die Kampfphase ist die vierte Phase der Runde. Während dieser Phase <strong>kämpfen</strong> alle Schiffe einzeln nacheinander, beginnend mit dem Schiff, das die höchste Initiative hat, und dann weiter in absteigender Reihenfolge. Sobald ein Schiff kämpft, darf es einen Angriff durchführen.<br> • Nachdem alle Schiffe mit einer bestimmten Initiative gekämpft haben, werden alle zerstörten Schiffe entfernt. Danach wird dieser Vorgang in absteigender Initiativreihenfolge fortgesetzt, d. h. alle Schiffe mit der nächstkleineren Initiative kämpfen, dann werden alle zerstörten Schiffe entfernt usw.<br> • Hat ein Spieler mehrere Schiffe mit gleicher Initiative, lässt er sie in beliebiger Reihenfolge kämpfen, wobei ein Schiff fertig gekämpft haben muss, bevor das nächste Schiff mit gleicher Initiative kämpfen kann.<br> • Haben mehrere Spieler Schiffe mit gleicher Initiative, bestimmt die Spielerreihenfolge, in welcher Reihenfolge sie kämpfen. Zuerst lässt der Startspieler alle seine Schiffe mit diesem Initiativwert kämpfen, dann lässt der zweite Spieler alle seine Schiffe mit diesem Initiativwert kämpfen.<br> • Auch entwaffnete Schiffe kämpfen, obwohl sie keine Angriffe durchführen können.<br> • Jedes Schiff kämpft während dieser Phase nur ein Mal."
+        },
+        "KOIOGRAN-WENDE": {
+          name: "Koiogran-Wende",
+          text: "%KTURN%, Siehe Flugrichtung."
+        },
+        "KOMMANDOPUNKTE": {
+          name: "Kommandopunkte",
+          text: "Jede Schiffskarte kostet Kommandopunkte. Diese Kosten werden während der Staffelzusammenstellung verwendet, um je nach Spielmodus eine zulässige Staffel zu generieren. Die jeweiligen Punktekosten können unter www.asmodee.de/StarWars eingesehen werden."
+        },
+        "KONFIGURATOR-SCHLÜSSELWÖRTER": {
+          name: "Konfigurator-Schlüsselwörter",
+          text: "Siehe Staffelzusammenstellung."
+        },
+        "KONSTRUKT": {
+          name: "Konstrukt",
+          text: "Konstrukte sind eine kommende Spielmechanik, auf die sich manche Karten beziehen, um mit zukünftigen Erweiterungen kompatibel zu sein. Aktuell gibt es noch keine Konstrukte."
+        },
+        "KOORDINIEREN": {
+          name: "Koordinieren",
+          text: "Piloten können koordinieren, um befreundete Schiffe zu unterstützen. Sobald ein Schiff die %COORDINATE%-Aktion durchführt, koordiniert es. Ein <strong>koordinierendes</strong> Schiff ist ein Schiff, das in folgenden Schritten versucht zu koordinieren:<br> 1. Das koordinierende Schiff misst die Reichweite zu beliebig vielen befreundeten Schiffen ab.<br> 2. Es wählt ein anderes befreundetes Schiff in Reichweite 1–2.<br> 3. Das gewählte Schiff darf 1 Aktion durchführen.<br> Außerdem gilt:<br> • Das Koordinieren scheitert, falls kein gültiges Schiff gewählt wird.<br> ◊ Das Koordinieren scheitert nicht, wenn das gewählte Schiff versucht eine Aktion durchzuführen und dabei scheitert.<br> • Wenn eine Fähigkeit ein Schiff zum Koordinieren auffordert, ist dies etwas anderes als das Durchführen einer %COORDINATE%-Aktion.<br> ◊ Ein Schiff, das koordiniert, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %COORDINATE%-Aktion durchführen.<br> ◊ Ein Schiff, das koordiniert, ohne die Aktion durchzuführen, darf ein befreundetes, verbündetes oder feindliches Schiff wählen. Falls es ein Schiff wählt, das von einem anderen Spieler kontrolliert wird, wählt der Spieler, der das koordinierte Schiff kontrolliert, die Aktion, die das Schiff durchführt."
+        },
+        "LADUNG": {
+          name: "Ladung",
+          text: "<strong>Ladungen</strong> (%CHARGE%, %FORCE%, %SHIELD% und %ENERGY%) sind doppelseitige Marker, die bestimmte begrenzte Ressourcen nachhalten. Auf einigen Schiffs- und Aufwertungskarten wird beschrieben, wie diese Ladungen zu verwenden sind. Alle Ladungen unterliegen den folgende Regeln:<br> • Wenn ein Effekt besagt, dass ein Schiff eine Ladung <strong>wiederherstellt</strong>, wird eine inaktive Ladung des Schiffes (von einer Schiffs- oder Aufwertungs karte) auf die aktive Seite gedreht. Liegen alle Ladungen bereits auf der aktiven Seite, kann das Schiff keine Ladung wiederherstellen.<br> • Wenn ein Effekt besagt, dass ein Schiff eine Ladung <strong>verliert</strong>, wird eine Ladung, die der betreffenden Karte zugeordnet ist, auf die inaktive Seite gedreht.<br> • Wenn ein Schiff eine Ladung <strong>ausgibt</strong>, verliert es jene Ladung. Ein Schiff kann keine Ladung für einen Effekt ausgeben, falls alle seine Ladungen, die für jenen Effekt zur Verfügung stehen, bereits inaktiv sind.<br> • Jede Karte mit einer <strong>Ladungskapazität</strong> (eine Zahl) beginnt das Spiel mit einer Anzahl Ladungen in Höhe der Ladungskapazität. Jede Ladung startet auf ihre aktive Seite gedreht.<br> • Die Ladungen, die zu einer Ladungskapazität mit Symbol für wiederkehrende Ladungen gehören, werden <strong>wiederkehrende Ladungen</strong> genannt. Umgekehrt werden die Ladungen, die zu einer Ladungskapazität ohne Symbol für wiederkehrende Ladungen gehören, <strong>nicht-wiederkehrende Ladungen</strong> genannt. Ladungen, die stattdessen über einen Zeitraum hinweg verloren werden, heißen <strong>negative wiederkehrende Ladungen</strong>. <br><br><h5>Ladungsarten</h5> Es gibt vier unterschiedliche Ladungsarten:<br> • <strong>Standardladungen</strong> (%CHARGE%). Sie repräsentieren eine begrenzte Ressource wie Munition oder die Ausdauer eines Piloten und werden mit goldenen Zahlen dargestellt.<br> • <strong>Machtladungen</strong> (%FORCE%). Sie repräsentieren den Fluss der Macht und werden mit violetten Zahlen dargestellt.<br> • <strong>Schilde</strong> (%SHIELD%). Sie repräsentieren die Stärke des Verteidigungsschildes eines Schiffes und werden mit blauen Zahlen dargestellt.<br> • <strong>Energie</strong> (%ENERGY%). Sie repräsentiert den Energieverbrauch der Schiffsmaschinen eines riesigen Schiffes (vgl. Anhang: Riesige Schiffe) und wird mit magentafarbenen Zahlen dargestellt.<br><br><h5>Wiederkehrende Ladungen</h5> Manche Ladungskapazitäten, Schildkapazitäten und alle Machtvermögen haben ein Symbol für wiederkehrende ladunGen. Während der Endphase stellt jede Karte mit einem <strong>Symbol für wiederkehrende Ladungen</strong> (%RECURRING%) 1 Ladung pro Symbol für wiederkehrende Ladungen wieder her. <br><br><h5>Negative wiederkehrende Ladungen</h5> Manche Ladungskapazitäten haben ein Symbol für <strong>negative wiederkehrende Ladungen</strong> (%NEGATIVERECURRING%). Während der Endphase verliert jede Karte mit einem Symbol für negative wiederkehrende Ladungen 1 Ladung pro Symbol für negative wiederkehrende Ladungen. <br><br><h5>Standardladung (%CHARGE%)</h5> Standardladungen (%CHARGE%) können alles Mögliche von begrenzter Munition bis zu erschöpfenden Tätigkeiten darstellen.<br> • <strong>Schiffsladungen</strong> sind Ladungen auf Schiffen und <strong>Aufwertungsladungen</strong> sind Ladungen auf Aufwertungskarten.<br> • Hat eine Aufwertungskarte eine Ladungskapazität, werden die %CHARGE% oberhalb dieser Aufwertungskarte platziert (nicht oberhalb der Schiffskarte, an die sie angelegt ist).<br> ◊ Wird ein Schiff von einer Aufwertungskarte zum Ausgeben von %CHARGE% aufgefordert, werden die %CHARGE% von ebendieser Aufwertungskarte ausgegeben. <br><br><h5>Machtladung (%FORCE%)</h5> Machtladungen (%FORCE%) repräsentieren das Gespür mancher Piloten und Crewmitglieder für die Macht. Solange ein Schiff einen Angriff durchführt, kann es während des Schrittes „Angriffswürfel modifizieren“ beliebig viele %FORCE% ausgeben, um ebenso viele seiner %FOCUS%-Ergebnisse in %HIT%-Ergebnisse zu ändern. Solange ein Schiff verteidigt, kann es während des Schrittes „Verteidigungswürfel modifizieren“ beliebig viele %FORCE% ausgeben, um ebenso viele seiner %FOCUS%-Ergebnisse in %EVADE%-Ergebnisse zu ändern.<br> • Hat eine Aufwertungskarte ein Machtvermögen, erhöht dies das Machtvermögen des Schiffes. Die %FORCE% werden oberhalb der Schiffskarte platziert, an welche die Aufwertungskarte angelegt ist (nicht oberhalb der Aufwertung selbst).<br> ◊ Eine Schiffskarte ohne Machtvermögen hat ein Machtvermögen von 0. Dieses kann durch Aufwertungskarten mit Machtvermögen erhöht werden.<br> ◊ Falls ein Schiff wiederkehrende %FORCE% aus verschiedenen Quellen hat, ist die Anzahl der Symbole für wiederkehrende Ladungen nicht kumulativ. Während der Endphase stellt jedes Schiff mit Machtvermögen eine Anzahl an %FORCE% in Höhe der höchsten Anzahl an Symbolen für wiederkehrende Ladungen seiner Karten mit Machtvermögen wieder her. Falls beispielsweise ein Schiff mit einem Machtvermögen von 0 zwei %CREW%-Karten mit Machtvermögen „+1“ und jeweils einem Symbol für wiederkehrende %FORCE% besitzt, so hat es ein gesamtes Machtvermögen von 2, stellt aber während der Endphase nur 1 %FORCE% wieder her.<br> ◊ Wird ein Schiff von einer Aufwertungskarte zum Ausgeben von %FORCE% aufgefordert, werden die %FORCE% von der Schiffskarte ausgegeben. <br><br><h5>Schild (%SHIELD%)</h5> Schilde (%SHIELD%) stellen defensive Energiebarrieren dar. Solange ein Schiff mindestens einen aktiven Schildmarker hat, <strong>hat es Schilde</strong>. Solange ein Schiff verteidigt, bieten Schilde Schutz gegen Schaden (vgl. Schaden). Außerdem gilt:<br> • Falls eine Aufwertungskarte eine Schildkapazität hat, erhöht dies die Schildkapazität des Schiffes. Die %SHIELD% werden oberhalb der Schiffskarte platziert, an welche die Aufwertungskarte angelegt ist (nicht oberhalb der Aufwertung selbst).<br> ◊ Ein Schiff ohne Schildkapazität auf seiner Karte besitzt eine Schildkapazität von 0. Dieser Wert kann jedoch durch Aufwertungskarten mit Schildkapazität erhöht werden. ◊ Während der Endphase stellt jedes Schiff mit einer Schildkapazität eine Anzahl %SHIELD% in Höhe der Anzahl an Symbolen für wiederkehrende %SHIELD% her (nur riesige Schiffe haben wiederkehrende %SHIELD%, vgl. Anhang: Riesige Schiffe). ◊ Falls eine Aufwertungskarte das Schiff anweist, %SHIELD% auszugeben, werden diese %SHIELD% von der Schiffskarte ausgegeben. <br><br><h5>Energie (%ENERGY%)</h5> Energie (%ENERGY%) stellt eine spezielle Ladung dar und wird nur von riesigen Schiffen verwendet (vgl. Anhang: Riesige Schiffe)."
+        },
+        "LIMITIERT": {
+          name: "Limitiert",
+          text: "Manche Schiffs- und Aufwertungskarten sind <strong>limitiert</strong>. Man erkennt sie an den Punkten (•) links neben ihren Kartennamen. Bei der Staffelzusammenstellung kann man nicht mehr Kopien einer gleichnamigen Karte in die Staffel aufnehmen, als Punkte vor ihrem Namen stehen.<br> • Beispiel: Wenn vor dem Namen einer Karte 1 Punkt steht, kann sie nur ein Mal in die Staffel aufgenommen werden. Stehen 2 Punkte vor dem Namen einer Karte, kann sie nur zwei Mal in die Staffel aufgenommen werden.<br> • Diese Beschränkung gilt über Kartentypen hinweg. Beispiel: Wenn eine Karte zwei Punkte vor dem Namen hat, kann man zwei Schiffskarten mit diesem Namen, zwei Aufwertungskarten mit diesem Namen oder eine Schiffskarte und eine Aufwertungskarte mit diesem Namen in die Staffel aufnehmen.<br> • Wenn eine Aufwertung auf einer Standardausstattung-Karte in der Staffel eines Spielers als limitiert angezeigt wird, muss er sich an diese Limitierung halten und darf nicht mehr Kopien der Aufwertung in seine Staffel aufnehmen, als die Standardausstattung-Karte angibt, selbst wenn diese Kopien nicht anzeigen, dass sie limitiert sind (also keine oder andere Punkte haben)."
+        },
+        "LIMITIERT 2 (••) UND 3 (•••)": {
+          name: "Limitiert 2 (••) und 3 (•••)",
+          text: "Wie im Regelheft des Grundspiels und im obigen Abschnitt erklärt, haben limitierte Karten vor ihrem Namen eine Anzahl an schwarzen Punkten (•), die ihrem Limitiert-Wert entspricht. Im Grundspiel gibt es einige Karten mit einem einzigen Punkt (•), die also auf 1 limitiert sind. Hat eine Karte zwei Punkte (••) vor dem Namen, ist sie Limitiert 2, d. h. man kann nicht mehr als zwei Karten mit diesem Namen in seine Staffel aufnehmen; hat eine Karte drei Punkte (•••), ist sie Limitiert 3, was bedeutet, dass man nicht mehr als drei Karten dieses Namens in die Staffel aufnehmen kann."
+        },
+        "MANÖVER": {
+          name: "Manöver",
+          text: "Ein Manöver ist eine Art von Bewegung, die ein Schiff ausführen kann. Jedes Manöver besteht aus drei Elementen: Geschwindigkeit (eine Zahl zwischen 0 und 5), Schwierigkeit (rot, weiß oder blau) und Flugrichtung (ein Pfeil oder ein anderes Symbol). Jede Flugrichtung wird zudem durch eine Orientierung näher definiert. Ein Schiff kann ein Manöver <strong>ausführen</strong>, indem es die folgenden Schritte der Reihe nach abhandelt:<br> 1. <strong>Schiff manövrieren:</strong> Während dieses Schrittes bewegt sich das Schiff unter Verwendung der passenden Manöverschablone.<br> a. Die passende Schablone für das Manöver wird aus dem Vorrat herausgesucht.<br> b. Die Schablone wird zwischen die vorderen Stopper des Schiffes geschoben, sodass sie bündig an der Basis anliegt.<br> c. Das Schiff wird angehoben und am anderen Ende der Schablone platziert, wobei die hinteren Stopper des Schiffes um das Ende der Schablone geschoben werden.<br> d. Die Schablone wird in den Vorrat zurückgelegt.<br> 2. <strong>Schwierigkeit überprüfen:</strong> Während dieses Schrittes wird die Farbe des Manövers überprüft. Ist es rot, erhält das Schiff 1 Stressmarker; ist das Manöver blau, entfernt das Schiff 1 Stress-, 1 Anstrengungsmarker und 1 Erschöpfungsmarker.<br> Außerdem gilt:<br> • Wenn ein Schiff beim Ausführen eines Manövers am Ende der Schablone auf einem anderen Objekt platziert würde, überschneidet es sich mit diesem Objekt.<br> • Wird beim Ausführen eines Manövers nur die Schablone auf einem anderen Objekt platziert, hat sich das Schiff durch das Objekt hindurchbewegt. • Wenn ein Schiff ein Manöver ausführt, wird es von seiner Ausgangsposition genommen und an seine Endposition platziert. Die volle Breite der Schiffsbasis spielt nur an Ausgangs- und Endposition eine Rolle, ansonsten wird sie ignoriert.<br> • Versucht ein gestresstes Schiff, ein Manöver mit roter Schwierigkeit auszuführen, führt es stattdessen ein weißes [2 %STRAIGHT%]-Manöver aus.<br> • Karteneffekte können dazu führen, dass ein Schiff ein Manöver ausführt, das nicht auf seinem Rad auftaucht.<br> • Manche Fähigkeiten beziehen sich außerhalb der Aktivierung eines Schiffes auf dessen <strong>aufgedecktes manöver</strong>. Das aufgedeckte Manöver eines Schiffes ist das auf seinem Rad ausgewählte Manöver, das bis zur nächsten Planungsphase offen neben seiner Schiffskarte liegen bleibt.<br> ◊ Falls das Rad eines Schiffes nicht aufgedeckt ist oder ihm in dieser Runde kein Rad zugeordnet wurde, hat jenes Schiff kein aufgedecktes Manöver."
+        },
+        "MARKER": {
+          name: "Marker",
+          text: "Manche Fähigkeiten bewirken, dass ein Schiff Marker erhält, ausgibt oder entfernt. Marker werden verwendet, um Effekte festzuhalten. Es gibt sie in verschiedenen Farben.<br> • Sobald ein Schiff angewiesen wird einen Marker zu <strong>erhalten</strong>, wird ein Marker aus dem Vorrat neben dem Schiff auf der Spielfläche platziert.<br> • Sobald ein Schiff angewiesen wird einen Marker <strong>auszugeben</strong> oder eine Anweisung besagt, dass ein Marker von einem Schiff <strong>entfernt</strong> wird, legt man einen Marker jener Art vom Schiff in den Vorrat zurück.<br> • Sobald ein Schiff angewiesen wird einen Marker auf ein anderes Schiff zu <strong>transferieren</strong>, wird der Marker vom ersten Schiff entfernt und dem anderen Schiff zugeordnet.<br> ◊ Ist eines der involvierten Schiffe nicht in der Lage, den entsprechenden Marker zu entfernen oder zu erhalten, kann der Transfer nicht stattfinden. <br><br><h5>Markerfarben und -formen</h5> Anhand der Farben und Formen der Marker kann man sich leicht merken, wann ein Marker entfernt wird und ob sein Effekt positiv oder negativ ist.<br> • Grüne und orangefarbene Marker werden während der Endphase entfernt. Diese Marker sind kreisförmig.<br> • Blaue und rote Marker können unter bestimmten Umständen entfernt oder ausgegeben werden. Diese Marker sind quadratisch.<br> Außerdem gilt:<br> • Die physische Position eines Markers auf der Spielfläche hat keinen Effekt und zeigt lediglich an, zu welchem Schiff der Marker gehört."
+        },
+        "MINEN": {
+          name: "Minen",
+          text: "Eine Mine ist eine Art von Gerät, das über den Karteneffekt einer %DEVICE%-Aufwertungskarte auf die Spielfläche kommt. Die zugehörige Aufwertungskarte hat das Merkmale „Mine“ über ihrem Kartentext. Minen können während der Systemphase abgeworfen oder gestartet werden und detonieren normalerweise, nachdem ein Schiff sich durch sie hindurchbewegt oder sich mit ihnen überschnitten hat."
+        },
+        "MINIATUREN": {
+          name: "Miniaturen",
+          text: "Ein Spieler muss alle Miniaturen für die Schiffe seiner Staffel besitzen. Sie dürfen modifiziert sein, dabei müssen aber folgende Richtlinien befolgt werden:<br> • Die Miniatur muss zum größten Teil aus Miniaturteilen der Star Wars: X-Wing-Reihe bestehen.<br> • Die Miniatur muss leicht als das Schiff erkennbar sein, das sie darstellt.<br> • Die Miniatur darf nicht so modifiziert sein, dass irgendein Teil von ihr etwas darstellt, das nicht geistiges Eigentum von Lucasfilm ist, u. A.: geschützte Logos, Symbole oder andere ikonische bzw. ikonografische Elemente.<br> • Die Größe oder From der Miniatur darf den Spielablauf nicht stören.<br> • Soweit möglich muss die Miniatur muss auf einer offiziellen Star Wars: X-Wing-Basis montiert sein, die der richtigen Größe und Form der originalen Miniatur entspricht. Falls eine mögliche Berührung von zwei oder mehr Miniaturen im Spiel zu einem Konflikt bei der Bewegung oder dem Platzieren der Schiffe führen könnte, dürfen die Spieler die Miniaturen von ihren Plastik-Haltestäbchen entfernen, bis der Konflikt beigelegt ist.<br> • Die Spieler dürfen die Basen der Schiffe weder in Form noch Größe verändern.<br> • Haltestäbchen (einschließlich der Verbindungsaufnahme, die an den Schiffsminiaturen befestigt ist) dürfen modifiziert oder durch eine alternative Verbindungsmethode ersetzt werden.<br> • Auf jede Schiffskarte findet sich zentriert im unteren Bereich ein Schiffstyp. Die Spieler können jede Miniatur von Star Wars: X-Wing verwenden, die dasselbe Schiffsmodell darstellen wie der Pilot in ihrer Staffel, solange es ohne Schwierigkeiten als das Schiff, das es darstellt, zu erkennen ist und solange es den passenden Schiffsmarker in seiner Basis hat. Beispiel: Die Modifzierter-YT-1300-Frachter-Miniatur kann verwendet werden, um eine YT1300-vom-Schrottplatz-Miniatur zu repräsentieren, falls die Rettungskapsel entfernt ist und der passende Schiffsmarker in der Basis liegt."
+        },
+        "MISSIONSPUNKTE": {
+          name: "Missionspunkte",
+          text: "Missionspunkte entscheiden darüber, wer das Spiel gewinnt. Die Szenarioregeln bestimmen, wie Missionspunkte verdient werden.<br> • Zu Beginn des Spiels verdient jeder Spieler Missionspunkte in Höhe des feindlichen Defizits.<br> • Die Spieler halten ihre Missionspunkte mit Siegmarkierungen nach."
+        },
+        "NACHLADEN": {
+          name: "Nachladen",
+          text: "Piloten können nachladen, um neue Raketen scharf zu machen oder frische Munition einzulegen. Sobald ein Schiff die %RELOAD%-Aktion durchführt, lädt es in folgenden Schritten nach:<br> 1. Das Schiff wählt 1 seiner ausgerüsteten %TORPEDO%-, %MISSILE%- oder %DEVICE%-Aufwertungskarten, deren aktive %CHARGE% unter ihrer Ladungskapazität sind.<br> 2. Jene Karte stellt 1 %CHARGE% wieder her.<br> 3. Das Schiff erhält 1 Entwaffnet-Marker.<br> Außerdem gilt:<br> • Wenn eine Fähigkeit einen Spieler zum Nachladen auffordert, ist dies etwas anderes als das Durchführen der %RELOAD%-Aktion. Ein Schiff, das nachlädt, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %RELOAD%-Aktion durchführen."
+        },
+        "NEGATIVE WIEDERKEHRENDE LADUNGEN": {
+          name: "Negative wiederkehrende Ladungen",
+          text: "%NEGATIVERECURRING%, Siehe Ladung"
+        },
+        "NEGIEREN": {
+          name: "Negieren",
+          text: "Wird ein Würfelergebnis negiert, nimmt man 1 Würfel, der das negierte Ergebnis zeigt, und entfernt ihn physisch aus dem gemeinsamen Spielbereich. Alle negierten Ergebnisse werden ignoriert.<br> • Das Negieren von Würfeln zählt nicht als Würfelmodifikation."
+        },
+        "OBJEKTE": {
+          name: "Objekte",
+          text: "Schiffe, Hindernisse und Geräte sind allesamt <strong>Objekte</strong>, deren exakte Position auf der Spielfläche festgehalten wird und durch Spieleffekte beschränkt ist.<br> • Schiffe können Objekte als Ziele erfassen.<br> • Schiffe können sich durch Objekte hindurchbewegen."
+        },
+        "ORIENTIERUNG": {
+          name: "Orientierung",
+          text: "Siehe Flugrichtung."
+        },
+        "PILOTENFÄHIGKEIT": {
+          name: "Pilotenfähigkeit",
+          text: "Siehe Fähigkeiten."
+        },
+        "PLANUNGSPHASE": {
+          name: "Planungsphase",
+          text: "Die Planungsphase ist die erste Phase der Runde. Während der Planungsphase wählt jeder Spieler im Geheimen ein Manöver für jedes seiner Schiffe. Dazu nimmt er ein zum Schiffstyp passendes Rad und dreht es so lange, bis der Pfeil auf das gewünschte Manöver zeigt. Anschließend platziert er das Rad verdeckt auf der Spielfläche neben dem passenden Schiff. Nachdem jedem Schiff ein Rad zugeordnet worden ist, würfeln die Spieler, um die Spielerreihenfolge festzulegen:<br> a. Jeder Spieler wirft 3 Angriffswürfel. Der Spieler mit den meisten %CRIT%-Ergebnissen ist Startspieler.<br> b. Herrscht Gleichstand, ist der Spieler mit den meisten %FOCUS%-Ergebnissen Startspieler.<br> c. Herrscht immer noch Gleichstand, ist der Spieler mit den meisten %HIT%-Ergebnissen Startspieler.<br> d. Herrscht immer noch Gleichstand, würfeln die Spieler erneut und beginnen wieder bei Punkt a), bis der Gleichstand aufgelöst ist.<br> • Diese Würfe können nicht durch Spieleffekte beeinflusst werden. Nachdem die Spielerreihenfolge festgelegt worden ist, wird mit der Systemphase fortgefahren.<br> • Die Phase endet, nachdem die Spieler gewürfelt haben, um die Spielerreihenfolge festzulegen.<br> • Es gibt keine festgelegte Reihenfolge für das Zuordnen von Rädern.<br> • Die Spieler dürfen ihre ausgewählten Manöver so lange ändern, bis die Spieler gewürfelt haben, um die Spielerreihenfolge festzulegen.<br> • Wer während der System- oder Aktivierungsphase eines seiner Räder berühren oder ansehen will, muss seinen Gegner vorher informieren.<br> • Falls ein Spieler vergisst, einem Schiff während der Planungsphase ein Rad zuzuordnen, erhält das Schiff während seiner Aktivierung 1 Stressmarker und führt dann ein <strong>Stressmanöver</strong> aus. Ein <strong>Stressmanöver</strong> ist ein weißes [%STRAIGHT% 2]-Manöver."
+        },
+        "POSITIONSMARKIERUNG": {
+          name: "Positionsmarkierung",
+          text: "Positionsmarkierungen werden verwendet, um die Position von Schiffen, die bei der Bewegung anderer Schiffe im Weg stehen, festzuhalten. Dazu platziert man einen Positionsmarkierung an der Ecke eines im Weg stehenden Schiffes und richtet die Aussparungen des Markers an den Stoppern des Schiffes aus. Auf diese Weise wird die Position des Schiffes präzise festgehalten, damit es später an seinen exakten Ursprungsort zurückgesetzt werden kann."
+        },
+        "PRIMÄRWAFFEN": {
+          name: "Primärwaffen",
+          text: "Jedes Schiff hat bis zu zwei Primärwaffen auf seiner Schiffskarte. Jede Primärwaffe hat ein Winkelsymbol und einen roten Angriffswert. Während eines Angriffs wählt das angreifende Schiff eine Waffe, mit der es den Angriff durchführen will. Führt es den Angriff mit einer Primärwaffe durch, bestimmt der Angriffswert, wie viele Angriffswürfel es während des Schrittes „Angriffswürfel werfen“ wirft, und das Winkelsymbol besagt, wo sich der Verteidiger befinden muss.<br> • Primärwaffen setzen eine Angriffsreichweite von 0–3 voraus. Standardmäßig haben Primärwaffen keine Kosten.<br> • Da Primärwaffen keine Spezialwaffen sind, profitieren sie nicht von Fähigkeiten, die durch das Durchführen eines Spezialangriffs ausgelöst werden."
+        },
+        "RAD": {
+          name: "Rad",
+          text: "Für jeden Schiffstyp gibt es ein individuelles Rad. Erweiterungssets enthalten Räder für alle Schiffe im Set. Während der Planungsphase werden Räder verwendet, um im Geheimen die Manöver der Schiffe auszuwählen.<br> • Wird ein Spieler angewiesen, das Rad eines Schiffes einzustellen, kann er sich, sofern nichts anderes angegeben ist, auch für das Manöver entscheiden, das bereits auf dem Rad eingestellt ist.<br> • Es ist nicht erlaubt, das verdeckte Rad eines Gegners zu berühren oder anzusehen. Wer ein eigenes verdecktes Rad berühren oder ansehen möchte, muss seinen Gegner über sein Vorhaben informieren, bevor er das Rad berührt.<br> • Für jede Fraktion gibt es ein Manöverrad-Aufrüstungsset, dessen Räder etwas anders aufgebaut sind, da bei ihnen das Manöver über einen ovalen Anzeiger ausgewählt wird."
+        },
+        "REICHWEITE": {
+          name: "Reichweite",
+          text: "Die <strong>Reichweite</strong> ist die Distanz zwischen zwei Objekten und wird mit dem Maßstab abgemessen. Der Maßstab ist in drei nummerierte Reichweitenabschnitte unterteilt. Um die Reichweite zwischen zwei Objekten abzumessen, platziert man den Maßstab an dem Punkt des ersten Objekts, der dem zweiten Objekt am nächsten ist, und richtet das andere Ende des Maßstabes auf den Punkt des zweiten Objekts, der am nächsten zum ersten Objekt ist. Ein Objekt ist <strong>in</strong> einer Reichweite, wenn der nächste Punkt des zweiten Objekts in den entsprechenden Reichweitenabschnitt des Maßstabes fällt. Beim Abmessen der <strong>Angriffsreichweite</strong> für einen Angriff misst der Angreifer von seinem Angriffswinkel zum nächsten Punkt des Zielschiffes, der <strong>im</strong> Angriffswinkel des Angreifers liegt.<br> • Folgende Begriffe werden in Bezug auf Reichweite verwendet:<br> ◊ <strong>Reichweite #–#:</strong> Die Reichweite enthält alle Reichweitenabschnitte vom angegebenen Minimum bis zum angegebenen Maximum.<br> ◊ <strong>In:</strong> Ein Objekt ist in einer bestimmten Reichweite, wenn sein nächster Punkt in diesen Reichweitenabschnitt fällt.<br> ◊ <strong>Innerhalb:</strong> Ein Objekt ist innerhalb einer bestimmten Reichweite, wenn es komplett innerhalb dieses Reichweitenabschnitts ist und nicht darüber hinausragt.<br> ◊ <strong>Jenseits:</strong> Ein Objekt ist jenseits einer bestimmten Reichweite, wenn kein Teil von ihm zwischen dem Ausgangsobjekt und diesem Reichweitenabschnitt liegt.<br> • Wird die Reichweite zu einem Schiff gemessen, misst man stets zum nächsten Punkt der Schiffsbasis und nie zum Schiffsmarker oder Modell.<br> • Wird die Reichweite zu einem Nicht-Schiff-Objekt gemessen, misst man stets zu dem Punkt des Objekts, der am nächsten zur Basis des Ausgangsschiffes ist.<br> • Beim Abmessen der Reichweite wird eine einzelne Kante des Maßstabes verwendet; Breite und Dicke des Maßstabes spielen keine Rolle.<br> • Reichweite 0 steht nicht auf dem Maßstab, wird aber verwendet, um die Reichweite von Objekten zu beschreiben, die einander physisch berühren.<br> ◊ Nachdem ein Schiff ein Manöver teilweise ausgeführt hat, ist es in Reichweite 0 des letzten Schiffes, mit dem es sich überschnitten hat.<br> ◊ Liegt ein Objekt physisch auf einem Hindernis oder Gerät, ist es in Reichweite 0 zu ihm.<br> ◊ Wenn zwei Schiffe sich physisch berühren, sind sie in Reichweite 0 zueinander.<br> ◊ Zwei Schiffe, die in Reichweite 0 zueinander sind, bleiben in Reichweite 0, bis eines der Schiffe sich so bewegt oder dreht dass ihre Basen keinen physischen Kontakt mehr haben.<br> ◊ Es ist möglich, wenn auch selten, dass ein Schiff sich in Reichweite 0 eines anderen Schiffes (also in physischen Kontakt mit ihm) bewegt, ohne sich mit ihm überschnitten zu haben."
+        },
+        "REICHWEITENBONUS": {
+          name: "Reichweitenbonus",
+          text: "Während eines Angriffs kann es passieren, dass Angreifer oder Verteidiger aufgrund der Angriffsreichweite zusätzliche Würfel werfen. Bei einer Angriffsreichweite von 1 wirft der Angreifer während des Schrittes „Angriffswürfel werfen“ 1 zusätzlichen Angriffswürfel. Bei einer Angriffsreichweite von 3 wirft der Verteidiger während des Schrittes „Verteidigungswürfel werfen“ 1 zusätzlichen Verteidigungswürfel.<br> • Sofern nichts anderes angegeben ist, wird der Reichweitenbonus auf alle Angriffe angewandt. Manche Spezialwaffen haben ein kleines Raketensymbol (%RANGEBONUS%), was bedeutet, dass bei Angriffen mit diesen Waffen keine Reichweitenbonusse angewandt werden.<br> • Für riesige Schiffe gelten zusätzliche Regeln für Angriffe in Reichweite 4 und 5 (vlg. Anhang: Riesige Schiffe)"
+        },
+        "REMOTES": {
+          name: "Remotes",
+          text: "Remotes sind Geräte, die einen Initiativ-, Wendigkeits- und Hüllenwert haben und angegriffen werden können. Schiffe können sich durch Remotes hindurchbewegen, sie überschneiden oder sich in Reichweite 0 zu ihnen befinden. <br><br><h5>Remotes angreifen</h5> Ein Remote kann als Verteidiger deklariert werden. Solange ein Remote angegriffen wird, wird es wie ein Schiff behandelt, mit folgenden Ausnahmen und Hinweisen:<br> • Effekte, die sich auf „befreundete Schiffe“ oder „verbündete Schiffe“ beziehen, werden nicht auf Remotes angewendet.<br> • Effekte, die sich auf „feindliche Schiffe“ beziehen, werden nur dann auf Remotes angewendet, falls der Angreifer der Ursprung des Effekts ist.<br> • Falls ein Remote aufgedruckte Winkel und zentrale Linien hat, erstrecken sich diese Winkel von Reichweite 0–3. Ein Schiff kann sich genau wie bei anderen Schiffen innerhalb dieser Winkel oder Zonen befinden.<br> • Falls ein Remote keine Mittellinie hat, kann ein Schiff es weder flankieren noch sich davor oder dahinter befinden.<br> • Falls ein Remote keine Winkel hat, kann sich kein Schiff innerhalb oder außerhalb eines Winkels dieses Remotes befinden.<br> • Ein Angriff gegen ein Remote kann versperrt sein und Reichweitenbonusse werden wie gewohnt angewendet.<br> • Falls die Größe eines Remotes nicht spezifiziert ist, wird es bei der Abhandlung von Effekten weder als kleiner noch größer als ein Schiff behandelt. <br><br><h5>Remotes beschädigen</h5> Falls ein Remote 1 oder mehr %HIT%/%CRIT%-Schaden erleidet, werden ihm ebenso viele verdeckte Schadenskarten zugeteilt. Falls es eine Anzahl Schadenskarten in Höhe seines Hüllenwerts oder mehr hat, wird das Remote zerstört. Nachdem ein Remote zerstört worden ist, wird es von der Spielfläche entfernt. Falls der Angriff bei derselben Initiative wie die Initiative des Remotes stattgefunden hat, wird es erst entfernt, nachdem alle Effekte bei dieser Initiative abgehandelt wurden, siehe gleichzeitiger Angriff. <br><br><h5>Remotes verwenden</h5> Ein Remote handelt während der Systemphase Effekte ab, wird während der Aktivierungsphase aktiviert, und es kämpft in der Kampfphase bei seiner aufgeführten Initiative, verhält sich aber ausschließlich entsprechend der Angaben in seinem Eintrag. Außerdem gilt Folgendes für Remotes:<br> • Remotes können keine Aktionen durchführen und ihnen können keine Marker zugeordnet werden, außer Zielerfassungen.<br> • Markierungen können einem Remote zugeordnet werden, sofern ein Effekt die Anweisung dazu gibt – platziert sie auf der Remote-Karte.<br> • Wenn ein Effekt die Anweisung gibt, ein Remote auf einer Schiffskarte zu platzieren, wird es hochgehoben und auf der jeweiligen Schiffskarte platziert. Nur Spieleffekte, die es auf die Spielfläche zurückbringen, wirken sich auf das Remote aus. Seine Schadenskarten werden nicht entfernt.<br> • Manche Geräte können wie in ihren individuellen Einträgen beschrieben Remotes beschädigen. Falls ein Gerät nicht besagt, dass es Remotes betrifft, betrifft es keine Remotes. <br><br><h5>Remotes neu positionieren</h5> Wenn ein Remote durch einen Effekt neu positioniert wird, hebt der kontrollierende Spieler es hoch und platziert es gemäß den Anweisungen des Effekts an seiner neuen Position. Außerdem gilt:<br> • Es gibt auch Effekte, die dazu anweisen, ein Remote unter Verwendung einer bestimmten Schablone (oder einer Auswahl an Schablonen) vorwärts neu zu positionieren. Dazu platziert der Spieler die genannte Schablone an den vorderen Stoppern des Remotes, hebt das Remote hoch und platziert seine hinteren Stopper am anderen Ende der Schablone, ähnlich wie beim Bewegen eines Schiffes.<br> • Wenn das Neupositionieren eines Remotes dazu führen würde, dass irgendein Teil des Remotes außerhalb der Spielfläche landet, flieht es auf dieselbe Weise, wie ein Schiff fliehen würde, und wird entfernt."
+        },
+        "RESERVE": {
+          name: "Reserve",
+          text: "Manche Karteneffekte führen dazu, dass Schiffe in der Reserve platziert werden. Ein Schiff, das in der Reserve platziert wird, kommt auf seine Schiffskarte. Solange ein Schiff in der Reserve ist, wird ihm kein Rad zugeordnet, es kann keine Aktionen durchführen und es kann nicht angreifen.<br> • Alle Schiffe, die in der Reserve sein können, haben einen Effekt, durch den sie auf der Spielfläche platziert werden.<br> • Schiffe, die in der Reserve platziert werden, sind nicht aus dem Spiel entfernt.<br> • Die Fähigkeiten von Schiffen in der Reserve sind inaktiv, es sei denn, sie besagen ausdrücklich, dass sie verwendet werden können, solange das Schiff in der Reserve ist.<br> • Angedockte Schiffe werden in der Reserve platziert.<br> • Während der Endphase entfernen auch Schiffe in der Reserve alle ihre kreisförmigen Marker und stellen mit allen ihren Karten, die ein Symbol für wiederkehrende Ladungen haben, Ladungen wieder her."
+        },
+        "ROTIEREN": {
+          name: "Rotieren",
+          text: "Piloten können rotieren, um ihrem Bordschützen Befehle zu erteilen oder eines ihrer Geschütze neu auszurichten. Sobald ein Schiff die %ROTATEARC%-Aktion durchführt, dreht es seinen Geschützturm-Winkelanzeiger auf einen beliebigen anderen Standardwinkel.<br> • Wird ein Doppel-Geschützturm-Winkelanzeiger rotiert, muss er auf die zwei anderen Standardwinkel gedreht werden, auf die er zuvor nicht gezeigt hat.<br> • Wenn eine Fähigkeit ein Schiff anweist, seinen %SINGLETURRETARC%-Indikator zu drehen, ist dies anders als das Durchführen einer %ROTATEARC%-Aktion. Ein Schiff, das seinen %SINGLETURRETARC%-Indikator dreht, ohne die Aktion durchzuführen, kann in dieser Runde noch eine %ROTATEARC%-Aktion durchführen.<br> • Manche Fähigkeiten weisen ein Schiff dazu an, sich um eine bestimmte Gradzahl zu drehen. Dabei handelt es sich um etwas anderes als rotieren, siehe Schiffe drehen."
+        },
+        "RÜCKWÄRTSDREHUNG": {
+          name: "Rückwärtsdrehung",
+          text: "%REVERSEBANKLEFT% und %REVERSEBANKRIGHT%; Siehe Flugrichtung"
+        },
+        "RÜCKWÄRTSGERADE": {
+          name: "Rückwärtsgerade",
+          text: "%REVERSESTRAIGHT%; Siehe Flugrichtung"
+        },
+        "RUNDE": {
+          name: "Runde",
+          text: "Eine <strong>Runde</strong>besteht aus fünf Phasen, die in der unten stehenden Reihenfolge abgehandelt werden:<br> 1. Planungsphase<br> 2. Systemphase<br> 3. Aktivierungsphase<br> 4. Kampfphase<br> 5. Endphase<br> Die erste Runde beginnt nach dem Spielaufbau."
+        },
+        "SCHADEN": {
+          name: "Schaden",
+          text: "Schaden stellt die strukturellen Beschädigungen eines Schiffes dar und wird über Schadenskarten festgehalten. Ein Schiff ist zerstört, sobald die Anzahl seiner Schadenskarten seinen Hüllenwert erreicht oder überschreitet. Es gibt zwei Arten von Schaden: %HIT% (normalen Schaden) und %CRIT% (kritischen Schaden). Wenn ein Schiff Schaden erleidet, wird 1 Schaden nach dem anderen erlitten. Für jeden erlittenen Schaden, verliert das Schiff 1 Schild, indem es ihn auf die inaktive Seite dreht. Hat es keine aktiven Schilde mehr, wird ihm stattdessen eine Schadenskarte zugeteilt. Bei %HIT%-Schaden wird die Karte <strong>verdeckt</strong> zugeteilt; bei %CRIT%-Schaden wird sie <strong>offen</strong> zugeteilt und ihr Text wird abgehandelt. Es wird zuerst aller %HIT%-Schaden erlitten, bevor %CRIT%-Schaden erlitten wird. Ein Schiff ist <strong>beschädigt</strong>, solange es mindestens 1 Schadenskarte hat. Ein Schiff ist <strong>kritisch beschädigt</strong>, solange es mindestens 1 offene Schadenskarte hat.<br> • Falls ein Effekt dazu auffordert, einem Schiff eine Schadenskarte zuzuteilen, ist dies etwas anderes als das Erleiden von Schaden. Die Karte wird dem Schiff zugeteilt, egal ob es aktive Schilde hat oder nicht.<br> • Wenn ein Schiff Schaden erleidet oder anderweitig Schadenskarten zugeteilt bekommt, die über seinen Hüllenwert hinausgehen, werden die überschüssigen Schadenskarten trotzdem zugeteilt."
+        },
+        "SCHADENSKARTEN": {
+          name: "Schadenskarten",
+          text: "Schadenskarten werden verwendet, um festzuhalten, wie viel Schaden ein Schiff bereits erlitten hat. Wenn einem Schiff Schadenskarten zugeteilt werden müssen, verwendet jeder Spieler seinen eigenen Schadensstapel. Nachdem ein Schiff zerstört worden ist, bleiben die Schadenskarten auf dem Schiff liegen. Manche Fähigkeiten führen dazu, dass Schadenskarten umgedreht werden. Eine verdeckte Schadenskarte kann <strong>offengelegt</strong> werden; dies bedeutet, dass sie auf die offene Seite gedreht und ihr Effekt abgehandelt wird. Sowohl verdeckte als auch offene Schadenskarten können <strong>repariert</strong> werden. Wird eine offene Schadenskarte repariert, dreht man sie auf die verdeckte Seite. Verdeckte Schadenskarten werden beim Reparieren abgelegt.<br> • Das Offenlegen einer Schadenskarte zählt nicht als Zuteilen einer Schadenskarte und löst somit keine Fähigkeiten aus, die mit dem Erleiden von Schaden zu tun haben.<br> • Wenn eine Fähigkeit eine verdeckte Schadenskarte eines Schiffes offenlegt oder repariert, und das Schiff mehrere verdeckte Schadenskarten hat, wird aus allen verdeckten Schadenskarten des Schiffes eine zufällige ausgewählt.<br> ◊ Um eine zufällige verdeckte Schadenskarte auszuwählen, mischt man alle diese Karten und lässt den Gegenspieler eine davon ziehen.<br> • Erlaubt eine Fähigkeit das Reparieren einer Schadenskarte, ohne genau anzugeben, ob es sich um eine offene oder eine verdeckte Karte handelt, kann man eine Karte beliebiger Art reparieren.<br> • Der Hüllenwert eines Schiffes wird durch das Zuteilen von Schadenskarten nicht verringert.<br> • Der Text einer verdeckten Schadenskarte eines Schiffes darf nicht angesehen werden, es sei denn, ein Effekt erlaubt es ausdrücklich.<br> • Wenn eine Schadenskarte zugeteilt oder gezogen werden muss und der Schadensstapel leer ist, werden alle Karten von den zerstörten Schiffen entfernt, auf die verdeckte Seite gedreht und zu einem neuen Schadensstapel zusammengemischt.<br> ◊ Wenn trotzdem noch nicht ausreichend viele Schadenskarten in einem Schadensstapel sind, wird auf einem Blatt Papier oder mit Markern notiert, wie viele verdeckte Schadenskarten jedes Schiff hat, dann werden diese verdeckten Schadenskarten zu einem neuen Stapel gemischt.<br> • Jede Schadenskarte hat am unteren Kartenrand eine Zahl zwischen 1 und 14. Die Punkte neben dieser Zahl geben an, wie viele Kopien dieser Schadenskarte im Stapel sind. Dies ist hilfreich, wenn ermittelt werden soll, ob ein Stapel vollständig ist und wenn nicht, welche Karten fehlen.<br> • Riesige Schiffe haben eigene Schadenskarten (vgl. Anhang: Riesige Schiffe)."
+        },
+        "SCHEITERN": {
+          name: "Scheitern",
+          text: "Manche Effekte können <strong>scheitern</strong>, was bedeutet, dass der Effekt nicht wie beabsichtigt abgehandelt werden konnte und stattdessen nach einer Standardmethode abgehandelt wird.<br> • Ein Schiff kann bei Folgendem scheitern: Fassrolle, Schub, Koordinieren, Enttarnen, Absetzen, Störsignal, Zielerfassung und SLAM.<br> • Ein gescheiterter Effekt löst keinerlei Effekte aus, die nach dem Abhandeln jenes Effekts eintreten würden.<br> • Scheitert eine Aktion, darf man keine andere Aktion zum Durchführen auswählen oder entscheiden, den Effekt auf andere Art abzuhandeln.<br> • Wenn eine Aktion scheitert, kann das betroffene Schiff keine gekoppelte Aktion durchführen, da die Aktion nicht abgeschlossen wurde.<br> • Nachdem eine rote Aktion gescheitert ist, erhält das Schiff einen Stressmarker."
+        },
+        "SCHIFF": {
+          name: "Schiff",
+          text: "Ein Schiff besteht aus einem Schiffsmodell, einer Basis, Haltestäbchen, einem Schiffsmarker und ID-Markern.<br> • Das Schiffsmodell muss zu dem auf der Schiffskarte angegebenen Schiffstyp passen.<br> • Jedes Schiff muss das zu seinem Schiffstyp passende Rad verwenden.<br> • Manche Schiffsmodelle ragen über ihre Plastikbasen hinaus. Aus diesem Grund hat das Schiffsmodell keinerlei Einfluss auf das Spielgeschehen, d. h. es darf sich ohne Konsequenzen mit Hindernissen überschneiden oder über den Spielflächenrand hinausragen. Berühren sich zwei Schiffsmodelle oder behindert das eine die Bewegung des anderen, kann man Haltestäbchen hinzufügen oder entfernen, um diesen Kontakt zu vermeiden. Alternativ kann man das Modell vorübergehend von der Basis entfernen und es nach der Bewegung wieder zurückstecken."
+        },
+        "SCHIFFE DREHEN": {
+          name: "Schiffe drehen",
+          text: "Manche Fähigkeiten und Effekte weisen einen Spieler dazu an, ein Schiff unabhängig von einem Manöver um eine bestimmte Gradzahl zu drehen. Der Wortlaut kann unter anderem „drehe dein Schiff um X°“ oder „drehe dich um X°“ sein, doch das wichtigste ist, dass eine Gradzahl dabei steht und nicht von Rotieren die Rede ist.<br> • Schiffe zu drehen zählt nicht als Bewegung.<br> • Falls beim Drehen eines Schiffes seine Basis ein Schiff überschneiden würde, kann es nicht gedreht werden und der Effekt wird nicht abgehandelt.<br> • Falls beim Drehen eines Schiffes seine Basis ein Objekt überschneiden würde (beispielsweise wenn die vorderen oder hinteren Stopper physisch auf der Basis des anderen Schiffes platziert würden), das kein Schiff ist (z. B. ein Hindernis oder ein Gerät), handelt es den Überschneidungseffekt dieses Objekts nicht ab. Allerdings ist es in Reichweite 0 zu diesem Objekt, wodurch entsprechende Effekte ausgelöst werden können."
+        },
+        "SCHIFFE ZERSTÖREN": {
+          name: "Schiffe zerstören",
+          text: "Ein Schiff wird <strong>zerstört</strong>, nachdem die Anzahl seiner Schadenskarten seinen Hüllenwert erreicht oder überschritten hat. Ein zerstörtes Schiff wird auf seiner Schiffskarte platziert.<br> • Nachdem ein Schiff in einer anderen Phase als der Kampfphase zerstört worden ist, wird es aus dem Spiel entfernt.<br> • Wird ein Schiff während der Kampfphase zerstört, entfernt man es erst, nachdem alle Schiffe mit derselben Initiative wie das gegenwärtig kämpfende Schiff gekämpft haben. Dies nennt man gleichzeitige Angriffe.<br> • Wird ein Effekt nach dem Zerstören eines Schiffes ausgelöst, handelt man ihn unverzüglich ab, bevor das Schiff entfernt wird.<br> • Die Fähigkeiten eines zerstörten Schiffes bleiben aktiv, bis das Schiff entfernt wird, es sei denn, die Fähigkeit gibt einen anderen Zeitpunkt an, zu dem ihr Effekt endet (z. B. „bis zum Ende der Kampfphase“). Derartige Effekte bleiben bis zum Ende des angegebenen Zeitpunktes aktiv."
+        },
+        "SCHIFFSFÄHIGKEITEN": {
+          name: "Schiffsfähigkeiten",
+          text: "Manche Schiffe haben <strong>Schiffsfähigkeiten</strong> auf ihren Schiffskarten. Diese stehen unterhalb der Pilotenfähigkeit bzw. dem atmosphärischen Text. Alle Piloten eines bestimmten Schiffstyps haben dieselbe Schiffsfähigkeit.<br> • Manche Schiffsfähigkeiten werden durch das Stichwort „<strong>Aktion:</strong>“ eingeleitet. Diese Aktionen werden <strong>Schiffsfähigkeitsaktionen</strong> genannt und tauchen nicht in den Aktionsleisten der Schiffe auf."
+        },
+        "SCHIFFSGRÖSSEN": {
+          name: "Schiffsgrößen",
+          text: "Es gibt vier verschiedene Schiffsgrößen: klein, mittel, groß und riesig. Kleine Schiffe verwenden Plastikbasen mit ca. 4 cm Seitenlänge. Da die Regeln von X-Wing für kleine Schiffe geschrieben sind, gelten für sie keine besonderen Ausnahmen. Mittlere Schiffe verwenden Plastikbasen mit ca. 6 cm Seitenlänge. Für mittlere Schiffe gelten folgende Ausnahmen:<br> • Ein mittleres Schiff benötigt 2 Ionenmarker, um ionisiert zu sein, und 2 Fangstrahlmarker, um gefangen zu sein.<br> • Mittlere Schiffe verfahren anders beim Fliegen von Fassrollen (auch beim Enttarnen).<br> Große Schiffe verwenden Plastikbasen mit ca. 8 cm Seitenlänge. Für große Schiffe gelten folgende Ausnahmen:<br> • Ein großes Schiff benötigt 3 Ionenmarker, um ionisiert zu sein, und 3 Fangstrahlmarker, um gefangen zu sein.<br> • Große Schiffe verfahren anders beim Fliegen von Fassrollen (auch beim Enttarnen).<br> • Während des Spielaufbaus darf die Basis eines großen Schiffes über Reichweite 1 des Spielflächenrandes hinausragen, solange sie die Breite des Startgebiets vollständig ausfüllt. Ein großes Schiff darf nicht so platziert werden, dass ein Teil seiner Basis außerhalb der Spielfläche ist.<br> Riesige Schiffe verwenden mehr als eine Plastikbasis. Für sie gelten diverse Sonderregeln, die in der ersten Edition von X-Wing eingeführt wurden und mit einer neuen Erweiterung zurückkehren werden."
+        },
+        "SCHIFFSTYP": {
+          name: "Schiffstyp",
+          text: "Jedes Schiff gehört einem Schiffstyp an, der am unteren Rand seiner Schiffskarte vermerkt ist.<br> • Jedes Schiff muss das zu seinem Schiffstyp passende Rad verwenden.<br> • Manche Aufwertungskarten haben Schiffsbeschränkungen, die sich auf bestimmte Schiffstypen beziehen."
+        },
+        "SCHILD": {
+          name: "Schilde",
+          text: "Schilde (%SHIELD%) sind eine Ladungsart. Siehe Ladungen."
+        },
+        "SCHUB": {
+          name: "Schub",
+          text: "Schub geben bedeutet, dass der Pilot zusätzliche Düsen zündet, um größere Strecken zurückzulegen. Sobald ein Schiff eine %BOOST%-Aktion durchführt, gibt es Schub und befolgt die nachstehenden Schritte:<br> 1. Eine der folgenden Schablonen wird gewählt [1 %BANKLEFT%], [1 %STRAIGHT] oder [1 %BANKRIGHT%].<br> 2. Die Schablone wird zwischen die vorderen Stopper des Schiffes geschoben.<br> 3. Das Schiff wird am anderen Ende der Schablone platziert und mit den hinteren Stoppern um das Ende der Schablone geschoben.<br> 4. Die Schablone wird in den Vorrat zurückgelegt.<br> • Sobald ein Schub deklariert wird, muss man auch deklarieren, ob das Schiff nach links, nach rechts oder geradeaus Schub gibt.<br> • Die Aktion kann scheitern, falls bei dem Versuch, das Schiff am Ende des Schubes zu platzieren, eine der folgenden Situationen eintritt:<br> ◊ Das Schiff würde sich an seiner Endposition mit einem anderen Schiff überschneiden.<br> ◊ Das Schiff würde sich durch ein Hindernis hindurchbewegen oder sich mit einem Hindernis überschneiden.<br> ◊ Die Endposition des Schiffes würde sich außerhalb der Spielfläche befinden (es würde also fliehen).<br> • Falls der Schub scheitert, wird das Schiff in die Ausgangsposition zurückgesetzt, die es vor dem versuchten Schub innehatte. Falls dies Bestandteil einer %BOOST%-Aktion ist, scheitert diese Aktion.<br> • Wenn die Endposition nicht zum Scheitern der Aktion führt, kann man sich nicht freiwillig dafür entscheiden, den Schub scheitern zu lassen.<br> • Das Durchführen eines Schubes zählt nicht als Ausführen eines Manövers, aber es zählt als Bewegung.<br> • Wenn eine Fähigkeit ein Schiff zum Schubgeben auffordert, ist dies etwas anderes als das Durchführen einer %BOOST%-Aktion. Ein Schiff, das Schub gibt, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %BOOST%-Aktion durchführen"
+        },
+        "SCHWIERIGKEIT": {
+          name: "Schwierigkeit",
+          text: "Jedes Manöver besteht aus drei Elementen: Geschwindigkeit (eine Zahl zwischen 0 und 5), Schwierigkeit (rot, weiß, blau oder violett) und Flugrichtung (ein Pfeil oder ein anderes Symbol). Beim Ausführen eines Manövers wird während des Schrittes „Schwierigkeit überprüfen“ die Farbe des Manövers überprüft. Ist es rot, erhält das Schiff 1 Stressmarker; ist das Manöver blau, entfernt das Schiff 1 Stressmarker; ist es violett, muss das Schiff 1 %FORCE% als Kosten ausgeben, um das Manöver auszuführen.<br> • Ein gestresstes Schiff kann keine roten Manöver ausführen und keine Aktionen durchführen.<br> • Erhöht ein Effekt die Schwierigkeit eines Manövers, wird blau zu weiß, und weiß wird zu rot. Verringert ein Effekt die Schwierigkeit eines Manövers, wird rot zu weiß, und weiß wird zu blau.<br> ◊ Eine Fähigkeit, welche die Schwierigkeit eines roten Manövers erhöht oder die Schwierigkeit eines blauen Manövers verringert, kann abgehandelt werden, hat jedoch keinen weiteren Effekt.<br> ◊ Falls mehrere Fähigkeiten die Schwierigkeit eines Manövers verändern, sind die Effekte kumulativ. Beispiel: Ein Schiff deckt ein rotes [4 %STRAIGHT%]-Manöver auf. Es hat einen Effekt, der die Schwierigkeit des Manövers erhöht und einen anderen, der die Schwierigkeit des Manövers verringert. Das Manöver wird also wie ein rotes Manöver behandelt.<br> ◊ Die Schwierigkeit eines violetten Manövers kann nicht erhöht oder verringert werden und die Schwierigkeit eines nicht-violetten Manövers kann nicht auf violett erhöht werden. Ein anderes Manöver kann durch eine Fähigkeit als violett behandelt werden und ein violettes Manöver kann als eine andere Farbe behandelt werden. Für Fähigkeiten, welche die Schwierigkeit vergleichen, gelten violette Manöver als schwieriger als nicht-violette Manöver und als gleich schwierig wie andere violette Manöver."
+        },
+        "SEGNOR-LOOPING": {
+          name: "Segnor-Looping",
+          text: "%SLOOPLEFT% und %SLOOPRIGHT%; Siehe Flugrichtung."
+        },
+        "SIEGMARKIERUNGEN": {
+          name: "Siegmarkierungen",
+          text: "Manche Szenarien verwenden <strong>Siegmarkierungen</strong> (%MISSIONPOINT%) innerhalb der Spielfläche, um bestimmte Fortschritte oder während des Spiels abgeschlossene Ziele nachzuhalten."
+        },
+        "SLAM": {
+          name: "SLAM",
+          text: "Piloten können ihren SLAM (Sublicht-Antriebsmotor) zünden, um mit ungeahnten Geschwindigkeiten durchs All zu düsen. Ein Schiff führt die %SLAM%-Aktion in folgenden Schritten durch:<br> 1. Der Spieler wählt ein Manöver auf dem Rad des Schiffes. Das Manöver muss dieselbe Geschwindigkeit haben wie das Manöver, welches das Schiff in dieser Runde ausgeführt hat.<br> 2. Das Schiff führt das gewählte Manöver aus.<br> 3. Das Schiff erhält 1 Entwaffnet-Marker.<br> Ein Schiff kann eine %SLAM%-Aktion nur während seiner Aktivierung in der Aktivierungsphase durchführen. Wird dem Schiff zu irgendeinem anderen Zeitpunkt eine Aktion gewährt, kann es damit keine %SLAM%-Aktion durchführen.<br> • Würde die Endposition dazu führen, dass das Schiff flieht, scheitert die %SLAM%-Aktion.<br> • Was Fähigkeiten betrifft, hat ein Schiff, das eine %SLAM%-Aktion durchführt, sowohl eine Aktion durchgeführt als auch ein Manöver ausgeführt."
+        },
+        "SLIP": {
+          name: "Slip",
+          text: "Ein <strong>Slip</strong> ist ein Expertenmanöver, für das die Wendeschablone (%TURNLEFT% oder %TURNRIGHT%) oder die Drehschablone (%BANKLEFT% oder %BANKRIGHT%) verwendet wird. Ein Slip wird wie folgt ausgeführt:<br> 1. Das kurze Ende der Schablone wird bündig an der Seite des Schiffes platziert.<br> ◊ Für einen <strong>linken</strong> (%TURNLEFT% oder %BANKLEFT%) Slip wird die Schablone an der <strong>rechten Seite</strong> des Schiffes platziert.<br> ◊ Für einen <strong>rechten</strong> (%TURNLEFT% oder %BANKLEFT%) Slip wird sie an der <strong>linken Seite</strong> platziert.<br> Die Schablone muss so platziert werden, dass ihre Mittellinie auf einer Höhe mit der Markierung an der entsprechenden Seite der Basis ist. Das andere Ende der Schablone muss im %FULLFRONTARC% des Schiffes sein.<br> 2. Das Schiff wird angehoben und am anderen Ende der Schablone so platziert, dass die Markierung auf der gegenüberliegenden Seite des Schiffes auf einer Höhe mit der Mittellinie der Schablone ist.<br> Außerdem gilt:<br> • Bei einem Slip wird die Manöverschablone mit derselben Ausrichtung platziert, wie wenn sie vorne an das Schiff angelegt werden würde, aber sie wird an die seitlichen Mittellinie des Schiffes angelegt. Das heißt, dass für einen Slip, der das Schiff nach rechts bewegt, das linke Manöver eingestellt wird und dabei die linke (%TURNLEFT% oder %BANKLEFT%)-Schablone verwendet wird, und umgekehrt.<br> • Falls das Schiff einen Slip nicht vollständig ausführen kann, führt es das Manöver teilweise unter Verwendung der linken/rechten Mittellinie der Schiffsbasis aus (statt der vorderen/hinteren Mittellinie der Schiffsbasis wie sonst üblich), um seine finale Position zu bestimmen."
+        },
+        "SOLITÄR": {
+          name: "Solitär",
+          text: "Eine Staffel darf nicht mehr als 1 Karte derselben Aufwertungsart mit der „Solitär“- Beschränkung beinhalten. Da alle %TACTICALRELAY%-Aufwertungen (Taktische Leitung) die „Solitär“- Beschränkung haben, darf keine Staffel mehr als 1 %TACTICALRELAY%-Aufwertung beinhalten."
+        },
+        "SPEZIALWAFFEN": {
+          name: "Spezialwaffen",
+          text: "Spezialwaffen werden in Kartentexten durch das Stichwort „<strong>Angriff:</strong>“ eingeleitet. Sie stellen zusätzliche Angriffsoptionen dar, die eine Alternative zu den Primärwaffen des Schiffes bieten. Spezialwaffen setzen sich aus einer Kombination aus Winkelbedingungen, Reichweitenbedingungen, Angriffswerten und ggf. anderen Bedingungen zusammen. Das <strong>Winkelsymbol</strong> gibt an, wo sich das Ziel befinden muss, damit diese Waffe verwendet werden kann. Die <strong>Reichweitenbedingung</strong> bezeichnet die Spanne der zulässigen Angriffsreichweiten. Der rote <strong>Angriffswert</strong> bestimmt, wie viele Angriffswürfel während des Schrittes „Angriffswürfel werfen“ geworfen werden. Bei Karten mit speziellen Bedingungen müssen alle diese Bedingungen erfüllt sein, damit der Angriff durchgeführt werden kann.<br> • Manche Spezialwaffen haben ein kleines <strong>Raketensymbol</strong (%RANGEBONUS%). Dies zeigt an, dass bei Angriffen mit diesen Waffen keine Reichweitenbonusse angewandt werden.<br> • Winkelbedingungen stehen in Form von Winkelsymbolen links neben dem Angriffswert. Eine Winkelbedingung bedeutet, dass der Verteidiger in jenem Winkel des Angreifers sein muss.<br> • Reichweitenbedingungen stehen in Form von weißen Zahlen unter dem Angriffswert und der Winkelbedingung.<br> • Manche Angriffe haben zudem spezielle Voraussetzungen, die hinter dem Stichwort „<strong>Angriff:</strong>“ in Klammern stehen.<br> ◊ Das Stichwort „<strong>Angriff (%LOCK%):</strong>“ bedeutet, dass der Angreifer den Verteidiger als Ziel erfasst haben muss.<br> ◊ Das Stichwort „<strong>Angriff (%FOCUS%):</strong>“ bedeutet, dass der Angreifer einen Fokusmarker haben muss.<br> • Da Spezialwaffen keine Primärwaffen sind, profitieren sie nicht von Fähigkeiten, die durch das Durchführen eines Primärangriffs ausgelöst werden.<br> • Jede Art von Aufwertungskartenangriff (wie z. B. ein %CANNON%-Angriff) ist ein Spezialangriff."
+        },
+        "SPIELERMARKIERUNG": {
+          name: "Spielermarkierungen",
+          text: "Spielermarkierungen werden in einigen Szenarien benutzt, um anzuzeigen, welcher Spieler ein Einsatzziel kontrolliert."
+        },
+        "SPIELERREIHENFOLGE": {
+          name: "Spielerreihenfolge",
+          text: "Viele Spieleffekte greifen im Falle eines Gleichstands auf die Spielerreihenfolge zurück. Soll ein Effekt in <strong>Spielerreihenfolge</strong> abgehandelt werden, handelt zuerst der Startspieler alle seine Effekte ab, dann handelt der zweite Spieler alle seine Effekte ab. Während des Schrittes „Spielreihenfolge festlegen“ des Spielaufbaus wird dem Startspieler die Startspielermarkierung zugeordnet. Die Startspielermarkierung wird dem Startspieler in jeder Runde gegeben, nachdem in der Planungsphase gewürfelt wurde, um die Spielerreihenfolge festzulegen.<br> • Während der System-, Aktivierungs- und Kampfphase entscheidet die Spielerreihenfolge bei gleichen Initiativwerten.<br> • Bei mehr als zwei Spielern muss die Spielerreihenfolge für alle teilnehmenden Spieler festgelegt werden. Die Spieler würfeln wie gewohnt, um den Startspieler zu bestimmen. Dann würfeln die übrigen Spieler, um den zweiten Spieler zu bestimmen usw., bis die Spielerreihenfolge vollständig festgelegt ist."
+        },
+        "SPIELDAUER UND NACHHALTEN VON RUNDEN": {
+          name: "Spieldauer und Nachhalten von Runden",
+          text: "Standardspiele werden über 12 Runden gespielt. Die Spieler halten die Runden mit Hilfe von Ladungsmarkern nach. Zu Beginn des Spiels werden 12 auf ihre aktive Seite gedrehte Ladungsmarker in die Nähe der Spielfläche platziert. Am Ende jeder Runde drehen die Spieler einen Ladungsmarker auf die inaktive Seite. Am Ende der 12. Runde endet das Spiel.<br> • Falls alle Schiffe eines Spielers zerstört sind, endet das Spiel am Ende der aktuellen Runde.<br> • Wünschen die Spieler ein längeres oder kürzeres Spiel, können sie sich vor dem Aufbau auf eine beliebige Rundenzahl einigen und platzieren zu Spielbeginn eine entsprechende Anzahl Ladungsmarker in die Nähe de Spielfläche. Das Spiel endet am Ende der letzten vereinbarten Runde."
+        },
+        "SPIELFLÄCHE": {
+          name: "Spielfläche",
+          text: "Die Spielfläche ist der zuvor abgesteckte Bereich eines flachen Untergrunds, auf dem die Schiffe platziert werden. Falls nach dem Ausführen eines Manövers irgendein Teil einer Schiffsbasis außerhalb der Spielfläche liegt, ist das Schiff geflohen. Die empfohlene Spielfläche für ein Standardspiel mit 20 Kommandopunkten ist 3‘ x 3‘ (91 x 91 cm) groß. Wird mit anderen Punktesummen gespielt, kann die Länge und/oder Breite der Spielfläche entsprechend vergrößert oder verkleinert werden."
+        },
+        "SPIELMODUS": {
+          name: "Spielmodus",
+          text: "Die verschiedenen Spielmodi beschränken die zur Verfügung stehenden Schiffe und Aufwertungen für die Staffelzusammenstellung.<br> • Manche Spielmodi haben eine Bannliste und eine Beschränkungsliste.<br> • Die gebräuchlichsten Spielmodi sind „Standard“ und „Erweitert“. Die Punktelisten auf der Produktseite unter www.asmodee.de/StarWars geben genaue Auskunft darüber, welche Schiffe und welche Aufwertungen während des Zusammenstellens der Staffel in jedem Spielmodus zur Verfügung stehen."
+        },
+        "SPIELSIEG": {
+          name: "Spielsieg",
+          text: "Während des Spiels halten die Spieler ihre Missionspunkte fest. Am Ende des Spiels gewinnt der Spieler mit den meisten Missionspunkten. Während eines Szenariospiels wird der Sieg auf Grundlage der szenariospezifischen Siegbedingungen ermittelt."
+        },
+        "STAFFELZUSAMMENSTELLUNG": {
+          name: "Staffelzusammenstellung",
+          text: "Jeder Spieler stellt eine Staffel zusammen, indem er Schiffs- und Aufwertungskarten wählt, deren Kommandopunktekosten die vom Spielmodus vorgeschriebene Summe nicht überschreiten. Die empfohlene Summe für ein Standardgefecht sind 20 Kommandopunkte. Staffeln werden aus Schiffs- und Aufwertungskarten zusammengestellt. Dabei gelten folgende Beschränkungen:<br> • Jedes Schiff hat eine Aufwertungsleiste mit einer Reihe von Aufwertungssymbolen. Diese bestimmen, wie viele Aufwertungen welcher Art das Schiff ausrüsten kann. Unter www. asmodee.de/StarWars gibt es eine Liste mit allen Schiffen und ihren Aufwertungsleisten.<br> • Beinahe alle Spielmodi beschränken die Auswahl der Schiffe auf eine Fraktion. Alle Schiffskarten einer Staffel müssen derselben Fraktion angehören. Zudem haben manche Aufwertungskarten Fraktionsbeschränkungen in ihrem Beschränkungsfeld.<br> • Manche Aufwertungskarten haben Schiffsgrößenbeschränkungen. Sie können nur von Schiffen der jeweiligen Größe ausgerüstet werden.<br> • Manche Aufwertungskarten haben Schiffstypenbeschränkungen. Sie können nur von Schiffen des jeweiligen Typs ausgerüstet werden.<br> • Manche Aufwertungskarten haben Konfigurator-Schlüsselwörter-Beschränkungen und können nur von Schiffen mit diesen Konfigurator-Schlüsselwörtern ausgerüstet werden. Die Konfigurator-Schlüsselwörter sind in den Punktetabellen auf der X-Wing-Produktseite unter Asmodee.de/StarWars zu finden.<br> • Alle Karten einer Staffel unterliegen den Regeln für limitierte und Solitär-Karten.<br> • Ein Schiff kann nicht mehr als 1 Kopie einer gleichnamigen Aufwertungskarte ausrüsten."
+        },
+        "STANDARDAUSSTATTUNG-SCHIFFSKARTEN": {
+          name: "Standardausstattung-Schiffskarten",
+          text: "Manche Schiffskarten sind <strong>Standardausstattung-Schiffskarten</strong>. Diese Schiffskarten sind größer als normale Schiffskarten und führen alle Aufwertungen auf, die das abgebildete Schiff ausgerüstet hat. Manche Standardausstattung-Schiffskarten haben einzigartige Schiffsfähigkeiten, Aufwertungen oder Aktionsleisten. Standardausstattung-Schiffe können keine weiteren Aufwertungen ausrüsten."
+        },
+        "STANDARDSCHIFF": {
+          name: "Standardschiff",
+          text: "Alle nicht-riesigen Schiffe sind Standardschiffe (siehe Anhang: Riesige Schiffe)."
+        },
+        "STANDARDWINKEL": {
+          name: "Standardwinkel",
+          text: "Siehe Winkel."
+        },
+        "STARTEN": {
+          name: "Starten",
+          text: "Siehe Gerät."
+        },
+        "STARTSPIELER": {
+          name: "Startspieler",
+          text: "Siehe Spielerreihenfolge."
+        },
+        "STATIONÄR": {
+          name: "Stationär",
+          text: "%STOP%; Siehe Flugrichtung."
+        },
+        "STOPPER": {
+          name: "Stopper",
+          text: "Jede Schiffsbasis hat zwei Stopperpaare, ein vorderes und ein hinteres. Manche Geräte haben ebenfalls ein Stopperpaar.<br> • Für das Abmessen der Reichweite sowie für die Frage, ob ein Schiff in einem bestimmten Winkel ist, werden die Stopper an der Schiffsbasis ignoriert."
+        },
+        "STÖRSIGNAL": {
+          name: "Störsignal",
+          text: "Piloten können ein Störsignal senden, um mithilfe von elektronischen Kampfmitteln die feindlichen Schiffssysteme zu blockieren. Sobald ein Schiff die %JAM%-Aktion durchführt, sendet es ein Störsignal. Ein <strong>störendes</strong> Schiff ist ein Schiff, das in folgenden Schritten versucht ein Störsignal zu senden:<br> 1. Das störende Schiff misst die Reichweite zu beliebig vielen feindlichen Schiffen ab.<br> 2. Es wählt ein feindliches Schiff in Reichweite 1 oder in Reichweite 1–2 im %BULLSEYEARC% des störenden Schiffes.<br> 3. Das gewählte Schiff erhält 1 Störsignalmarker.<br> Ein Schiff ist <strong>gestört</strong>, falls es mindestens 1 Störsignalmarker hat. Störsignalmarker sind kreisförmige, orangefarbene Marker. Sobald ein Schiff gestört wird, entscheidet der Spieler, dessen Effekt zum Erhalt des Störsignalmarkers geführt hat, ob das Schiff 1 seiner grünen Marker entfernt oder 1 seiner Zielerfassungen verliert. Wird einer dieser Effekte abgehandelt, entfernt das Schiff den Störsignal- marker. Wenn das Schiff keine grünen Marker hat und momentan keine Zielerfassungen aufrechterhält, bleibt es gestört. Nachdem ein gestörtes Schiff einen grünen Marker erhalten oder ein Ziel erfasst hat, entfernt das gestörte Schiff jenen Marker bzw. verliert jene Zielerfassung. Dann entfernt es 1 Störsignalmarker.<br> • Manche Spezialwaffen fügen Störsignalmarker zu, anstatt Schaden zuzuteilen. • Das Störsignal scheitert, falls kein Schiff gewählt wird.<br> • Eine Fähigkeit, die ein gestörtes Schiff einen grünen Marker erhalten oder ein Ziel erfassen lässt, löst trotzdem Effekte aus, die durch das Abhandeln dieser Fähigkeit eintreten, auch wenn der Marker sofort wieder entfernt wird bzw. die Zielerfassung verloren geht. Der Störsignalmarker führt nicht zum Scheitern der Fähigkeit.<br> • Wenn eine Fähigkeit ein Schiff zum Senden eines Störsignals auffordert, ist dies etwas anderes als das Durchführen einer %JAM%-Aktion. Ein Schiff, das ein Störsignal sendet, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %JAM%-Aktion durchführen.<br> • Falls ein Schiff mehrere grüne Marker oder Zielerfassungen hat, wählt der Spieler, dessen Effekt zum Erhalt des Störsignalmarkers geführt hat, welcher grüne Marker entfernt wird oder welche Zielerfassung verloren wird."
+        },
+        "STRESS": {
+          name: "Stress",
+          text: "Solange ein Schiff mindestens 1 Stressmarker (%STRESS%) hat, ist es <strong>gestresst</strong>. Ein gestresstes Schiff kann keine roten Manöver ausführen und keine Aktionen durchführen. Stressmarker sind rote Marker.<br> • Ein Schiff erhält 1 Stressmarker, solange es ein rotes Manöver ausführt, oder nachdem es eine rote Aktion durchgeführt hat. Solange ein Schiff ein blaues Manöver ausführt, entfernt es 1 Stressmarker.<br> • Versucht ein gestresstes Schiff, ein rotes Manöver auszuführen, führt es stattdessen ein weißes [2 %STRAIGHT%]-Manöver aus.<br> ◊ Nachdem ein gestresstes Schiff ein rotes Manöver aufgedeckt hat, können Fähigkeiten verwendet werden, die dieses Manöver verändern. Würde das Schiff nach dem Abhandeln dieser Fähigkeiten immer noch ein rotes Manöver ausführen, führt es stattdessen ein weißes [2 %STRAIGHT%]-Manöver aus.<br> • Riesige Schiffe haben zusätzliche Regeln für Stress (vgl. Anhang: Riesige Schiffe)."
+        },
+        "SYSTEMPHASE": {
+          name: "Systemphase",
+          text: "Die Systemphase ist die zweite Phase der Runde. Während dieser Phase wird in aufsteigender Initiativreihenfolge gespielt, beginnend mit dem Schiff, das die niedrigste Initiative hat. Während dieser Phase bekommt jedes Schiff die Gelegenheit, beliebig viele Fähigkeiten, die ausdrücklich während der Systemphase abgehandelt werden, zu wählen und abzuhandeln.<br> • Ohne spezielle Aufwertungen, Fähigkeiten oder Marker können die meisten Schiffe während dieser Phase keine Effekte abhandeln. Zu den Fähigkeiten, die zu diesem Zeitpunkt verwendet werden, gehört das Abwerfen und Starten von Geräten, das Enttarnen sowie das Absetzen und Andocken von Schiffen.<br> • Hat ein Spieler mehrere Schiffe mit gleichem Initiativwert, handelt er ihre Fähigkeiten in beliebiger Reihenfolge ab, wobei er zuerst alle Fähigkeiten eines Schiffes abhandeln muss, bevor er die Fähigkeiten des nächsten Schiffes mit gleicher Initiative abhandeln kann.<br> • Haben mehrere Spieler Schiffe mit gleichem Initiativwert, entscheidet die Spielerreihenfolge. Zuerst handelt der Startspieler alle Fähigkeiten seiner Schiffe mit diesem Initiativwert in beliebiger Reihenfolge ab, dann handelt der zweite Spieler alle Fähigkeiten seiner Schiffe mit diesem Initiativwert in beliebiger Reihenfolge ab usw."
+        },
+        "TALLON-ROLLE": {
+          name: "Tallon-Rolle",
+          text: "%TROLLLEFT% und %TROLLRIGHT%; Siehe Flugrichtung."
+        },
+        "TARNEN": {
+          name: "Tarnen",
+          text: "Schiffe können sich tarnen, um ihren Gegnern ein schlechteres Ziel zu bieten, oder sich enttarnen, um plötzlich an anderer Stelle aufzutauchen. Sobald ein Schiff die %CLOAK%-Aktion durchführt, erhält es 1 Tarnungsmarker. Solange ein Schiff einen Tarnungsmarker hat, ist es <strong>getarnt.</strong> Tarnungsmarker sind blaue Marker. Ein getarntes Schiff hat folgende Effekte:<br> • Sein Wendigkeitswert ist um 2 erhöht.<br> • Es ist entwaffnet.<br> • Es kann die Aktion „Tarnen“ nicht durchführen und keinen zweiten Tarnungsmarker erhalten.<br> Während der Systemphase darf jedes getarnte Schiff seinen Tarnungsmarker ausgeben, um sich zu <strong>enttarnen</strong>. Sobald ein kleines Schiff sich enttarnt, muss es einen der folgenden Effekte wählen:<br> 1. Es fliegt eine Fassrolle unter Verwendung der [2 %STRAIGHT%]-Schablone.<br> 2. Es gibt Schub unter Verwendung der [2 %STRAIGHT%]-Schablone.<br> Sobald ein mittleres oder großes Schiff sich enttarnt, muss es einen der folgenden Effekte wählen:<br> 1. Es fliegt eine Fassrolle unter Verwendung der [1 %STRAIGHT%]-Schablone.<br> 2. Es gibt Schub unter Verwendung der [1 %STRAIGHT%]-Schablone.<br> • Enttarnen zählt nicht als Ausführen eines Manövers und nicht als Durchführen einer Aktion, aber es zählt als Bewegung.<br> • Ein Schiff kann sich auch enttarnen, solange es gestresst ist.<br> • Sobald die Enttarnung eines Schiffes deklariert wird, muss man auch deklarieren, welche Art von Schub oder Fassrolle es durchführen wird, bevor man eine Schablone auf der Spielfläche platziert.<br> • Scheitert das Enttarnen, wird das Schiff in die Ausgangsposition zurückgesetzt, die es vor der versuchten Enttarnung innehatte, und sein Tarnungsmarker wird nicht entfernt.<br> • Jedes Schiff darf in derselben Phase, in der es sich enttarnt, keine Geräte abwerfen oder starten."
+        },
+        "TEILWEISE AUSFÜHREN": {
+          name: "Teilweise ausführen",
+          text: "Siehe Überschneiden."
+        },
+        "TITEL": {
+          name: "Titel",
+          text: "Ein Titel ist eine Art von Aufwertung, die ein ganz bestimmtes Exemplar eines Schiffes darstellt. Aus diesem Grund ist jeder Titel auf einen bestimmten Schiffstyp beschränkt. Ein Beispiel für eine %TITLE%-Aufwertung ist der Millennium Falke."
+        },
+        "TREFFEN": {
+          name: "Treffen",
+          text: "Ein Angriff <strong>trifft</strong>, falls während des Schrittes „Ergebnisse neutralisieren“ mindestens 1 %HIT%- oder %CRIT%-Ergebnis übrig bleibt, ohne negiert zu werden. Bleibt kein %HIT%- oder %CRIT%-Ergebnis übrig, verfehlt er Angriff."
+        },
+        "ÜBERSCHNEIDEN": {
+          name: "Überschneiden",
+          text: "Solange ein Schiff ein Manöver ausführt oder sich anderweitig bewegt, <strong>überschneidet</strong> es sich mit einem Objekt, falls seine Endposition dieses Objekt physisch überlappen würde. Kommt es nicht zur Überschneidung mit einem anderen Schiff, führt das Schiff sein Manöver <strong>vollständig</strong> aus. Überschneidet es sich beim Ausführen seines Manövers mit einem anderen Schiff, muss es das Manöver <strong>teilweise</strong> ausführen. Dies geschieht in folgenden Schritten:<br> 1. Das Schiff wird entlang der Schablone zurückbewegt, bis es kein anderes Schiff mehr überlappt. Dabei wird das Schiff so ausgerichtet, dass die Markierungen zwischen beiden Stopperpaaren auf die Mittellinie der Schablone zentriert sind.<br> 2. Sobald das Schiff kein anderes Schiff mehr überlappt, wird es so platziert, dass es das letzte Schiff, über das es zurückbewegt wurde, berührt. (Dies kann unter Umständen dazu führen, dass es an seine Ausgangsposition zurückkehrt) Dann erleidet es nach dem Schritt „Schwierigkeit überprüfen“ einen Effekt in Abhängigkeit von dem überschnittenen Schiff, das ursprünglich dafür verantwortlich war, dass es sein Manöver nur teilweise ausgeführt hat:<br> • Falls das überschnittene Schiff befreundet oder verbündet war, wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis erleidet das überschneidende Schiff 1 %HIT%-Schaden. Dann überspringt es seinen Schritt „Aktion durchführen“.<br> • Falls das überschnittene Schiff feindlich ist, kann das überschneidende Schiff, falls es nicht gestresst ist, sofort eine %FOCUS%- oder %CALCULATE%-Aktion aus seiner Aktionsleiste durchführen, wobei die Aktion als rote Aktion behandelt wird. Dann überspringt das überschneidende Schiff seinen Schritt „Aktion durchführen“.<br> ◊ Das überschneidende Schiff kann während dieser Aktivierung keine zusätzlichen Aktionen durchführen.<br> • Falls es eine gleichzeitige Überschneidung von freundlichen oder verbündeten und feindlichen Schiffen gab, wird der Effekt für die Überschneidung mit einem befreundeten oder verbündeten Schiff abgehandelt.<br> Auch wenn ein Schiff ein Manöver nur teilweise ausführt, wird es behandelt, als hätte es ein Manöver mit der angegebenen Geschwindigkeit, Flugrichtung und Schwierigkeit ausgeführt. Außerdem gilt:<br> • Nachdem ein Objekt platziert worden ist, falls es unterhalb eines oder mehrerer Schiffe platziert worden ist, handeln diese Schiffe jegliche Effekte der Überschneidung mit diesem Objekt ab."
+        },
+        "VERBÜNDET": {
+          name: "Verbündet",
+          text: "Manche Schiffe oder Geräte, die vom selben Spieler kontrolliert werden, sind nicht miteinander befreundet, sondern <strong>verbündet</strong>. Verbündete Schiffe werden von ihrem Spieler ähnlich wie befreundete Schiffe verwendet, doch sie interagieren nicht mit Effekten, die sich auf „befreundete Schiffe“ beziehen.<br> • Schiffe können keine Angriffe gegen verbündete Schiffe durchführen, außer etwas anderes ist angegeben.<br> • Verbündete Schiffe sind keine befreundeten Schiffe und Fähigkeiten, die sich auf „befreundete Schiffe“ beziehen, beziehen sich nicht auf verbündete Schiffe.<br> • Ein Schiff ist nie mit sich selbst „verbündet“. Fähigkeiten, die sich auf „verbündete Schiffe“ beziehen, haben also keinen Einfluss auf das Schiff, das diese Fähigkeiten hat."
+        },
+        "VERFEHLEN": {
+          name: "Verfehlen",
+          text: "Ein Angriff <strong>verfehlt</strong>, falls während des Schrittes „Ergebnisse neutralisieren“ kein %HIT%- oder %CRIT%-Ergebnis übrig bleibt. Wird mindestens ein %HIT%- oder %CRIT%-Ergebnis nicht negiert, trifft der Angriff.<br> • Wenn ein Angriff verfehlt, wird der Schritt „Schaden zuteilen“ des Angriffs übersprungen."
+        },
+        "VERLIEREN": {
+          name: "Verlieren",
+          text: "Siehe Zielerfassung oder Spielsieg."
+        },
+        "VERTEIDIGEN": {
+          name: "Verteidigen",
+          text: "Siehe Angreifen."
+        },
+        "VERSPERRT": {
+          name: "Versperrt",
+          text: "Ein Angriff ist <strong>versperrt</strong>, falls der Angreifer die Reichweite durch ein Objekt hindurch abmisst. Ist der Angriff durch ein Schiff oder Gerät versperrt, hat dies keinen Effekt. Versperrt ein Hindernis den Angriff, kommt es zu folgendem zusätzlichen Effekt.<br> • Falls der Angriff von mindestens 1 Hindernis versperrt ist, wirft der Verteidiger während des Schrittes „Verteidigungswürfel werfen“ 1 zusätzlichen Verteidigungswürfel.<br> • Der Angreifer misst stets die kürzeste Strecke, also vom nächsten Punkt seiner Basis zum nächsten Punkt der Basis des Verteidigers im Angriffswinkel. Der Angreifer kann daher nicht von oder zu einem anderen Punkt messen, um ein Objekt zu umgehen.<br> ◊ Gibt es mehrere Punkte in gleicher Entfernung (z. B. wenn Angreifer und Verteidiger parallel zueinander stehen), wählt der Angreifer eine dieser Strecken zum Abmessen der Reichweite von oder zu einem anderen Punkt. Im unten stehenden Beispiel kann der X-Flügler wählen, ob sein Angriff versperrt sein soll oder nicht."
+        },
+        "VERSTÄRKEN": {
+          name: "Verstärken",
+          text: "Piloten können verstärken, um ihre Deflektorschilde zu kalibrieren und eine Sektion ihres Schiffes besonders gut zu schützen. Sobald ein Schiff die %REINFORCE%-Aktion durchführt, erhält es einen Verstärkungs- marker, bei dem entweder die Bugseite oder die Heckseite nach oben zeigt. Ein Schiff ist <strong>verstärkt</strong>, solange ihm ein Verstärkungsmarker zugeordnet ist. Verstärkungsmarker sind kreisförmige, grüne Marker. Solange ein verstärktes Schiff verteidigt, falls der Angreifer innerhalb des vollen Winkels ist, der dem Verstärkungsmarker entspricht (und nicht im anderen vollen Winkel), entfaltet der Marker seine Wirkung. Für einen Bug-Verstärkungsmarker muss der Angreifer im %FULLFRONTARC% des Verteidigers sein; für einen Heck-Verstärkungsmarker muss der Angreifer im %FULLREARARC% des Verteidigers sein. Wenn sich während des Schrittes „Ergebnisse neutralisieren“ herausstellt, dass der Angriff treffen würde und mehr als 1 %HIT%/%CRIT%-Ergebnis übrig ist, wird 1 %EVADE%-Ergebnis hinzugefügt, um 1 Ergebnis zu negieren.<br> • Ein Schiff kann auch mehrere Verstärkungsmarker haben. Hat ein Schiff mehrere gleichartige Verstärkungsmarker, werden ihre Effekte einzeln nacheinander angewandt. Damit zwei Verstärkungsmarker ihre Wirkung entfalten können, müssen also mindestens drei %HIT%/%CRIT%-Ergebnisse übrig sein.<br> • Sobald ein Schiff einen Verstärkungsmarker erhält, entscheidet sein kontrollierender Spieler, ob es ein Bug- oder Heck-Verstärkungsmarker sein soll, es sei denn, etwas anderes ist angegeben.<br> • Schiffe geben ihre Verstärkungsmarker nicht aus, wenn sie deren Effekte abhandeln.<br> • Wenn eine Fähigkeit besagt, dass ein Schiff 1 Verstärkungsmarker erhält, ist dies etwas anderes als das Durchführen einer %REINFORCE%-Aktion. Ein Schiff, das einen Verstärkungsmarker erhält, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %REINFORCE%-Aktion durchführen.<br> • Verstärken kann auch gegen Angriffe in Reichweite 4–5 genutzt werden, selbst wenn sich der %FULLFRONTARC% oder %FULLREARARC% des Verteidigers normalerweise nur bis Reichweite 3 erstreckt. Falls der Angreifer in Reichweite 4–5 ist, wird der %FULLFRONTARC%- oder %FULLREARARC%-Winkel des Verteidigers behandelt, als würde er sich bis Reichweite 5 erstrecken, aber nur, um für den Verstärkungsmarker des Verteidigers zu bestimmen, in welchem Winkel der Angreifer ist. (nicht für andere Effekte oder Fähigkeiten)."
+        },
+        "VERTEIDIGER": {
+          name: "Verteidiger",
+          text: "Ein Schiff, das während des Unterschrittes „Verteidiger deklarieren“ des Schrittes „Ziel deklarieren“ eines Angriffs gewählt wird, ist der Verteidiger.<br> • Das Schiff bleibt der Verteidiger, bis im Schritt „Nachwirkungen“ alle „Nachdem du einen Angriff durchgeführt hast“- und „Nachdem du verteidigt hast“- Fähigkeiten abgehandelt worden sind."
+        },
+        "VIOLETTE AKTIONEN": {
+          name: "Violette Aktionen",
+          text: "Als Kosten zum Durchführen einer violetten Aktion muss das Schiff, das die Aktion durchführt, 1 %FORCE% ausgeben."
+        },
+        "VOLLER WINKEL": {
+          name: "Voller Winkel",
+          text: "Siehe Winkel"
+        },
+        "VOLLSTÄNDIG AUSFÜHREN": {
+          name: "Vollständig Ausführen",
+          text: "Siehe Überschneiden."
+        },
+        "VOR": {
+          name: "Vor",
+          text: "Siehe Winkel."
+        },
+        "VORRAT": {
+          name: "Vorrat",
+          text: "Der Vorrat enthält das gemeinsame Spielmaterial, das momentan von keinem Spieler verwendet wird, z. B. nicht zugeordnete Fokusmarker, nicht verwendete Schiffskarten usw."
+        },
+        "WENDIGKEIT": {
+          name: "Wendigkeit",
+          text: "Die Wendigkeit eines Schiffes ist die grüne Zahl auf der Schiffskarte. Dieser Wert bestimmt, wie viele Verteidigungswürfel das Schiff wirft, solange es verteidigt.<br> • Ein Schiff mit einem Wendigkeitswert von 0 kann während eines Angriffs trotzdem alle zusätzlichen Verteidigungswürfel werfen, die ihm durch Spieleffekte wie den Reichweitenbonus, die Versperrung durch ein Hindernis oder durch andere Kartenfähigkeiten gewährt werden.<br> • Fähigkeiten und Spieleffekte, die bewirken, dass ein Schiff zusätzliche oder weniger Verteidigungswürfel wirft, modifizieren nicht den Wendigkeitswert des Verteidigers.<br> • Alle Modifkationen der Wendigkeit sind kumulativ.<br> • Falls nach Anwendung aller Modifikationen ein Wurf mit weniger als 0 Verteidigungswürfeln gemacht werden müsste, wird er wie ein Wurf mit 0 Würfeln behandelt.<br> • Falls nach Anwendung aller Modifikationen ein Wurf mit mehr als 6 Verteidigungswürfeln gemacht werden müsste, wird er wie ein Wurf mit 6 Würfeln behandelt."
+        },
+        "WINKEL": {
+          name: "Winkel",
+          text: "Ein Winkel ist die Fläche zwischen zwei Linien, die durch Verlängerung der aufgedruckten Markierungen oder Winkellinien eines Schiffsmarkers auf Reichweite 3 entstehen. Ein Schiff ist <strong>in</strong> einem Winkel, falls seine Basis zumindest partiell auf dieser Fläche steht.<br> • Winkel werden jenseits der Schiffsbasis abgemessen. Der Teil eines Objekts, der unter einem Schiff liegt, ist nicht in irgendeinem Winkel jenes Schiffes. <br><br><h5>Standardwinkel</h5> Es gibt drei Arten von Standardwinkeln, die durch das Kreuz aus diagonalen Winkellinien gebildet werden:<br> 1. <strong>Vorderer Winkel (%FRONTARC%):</strong> Dieser Winkel erstreckt sich in Blickrichtung des Schiffes. Die meisten Schiffe haben %FRONTARC%-Primärwaffen. Beinahe alle %CANNON%-, %TORPEDO%- und %MISSILE%-Waffen verwenden diesen Winkel.<br> 2. <strong>Seitenwinkel:</strong> Diese beiden Winkel befinden sich auf der linken und rechten Seite des Schiffes.<br> 3. <strong>Hinterer Winkel (%REARARC%):</strong> Dieser Winkel erstreckt sich entgegengesetzt zur Blickrichtung des Schiffes. Manche Schiffe haben %REARARC%-Primärwaffen. <br><br><h5>Zentraler Winkel</h5> Jedes Schiff hat innerhalb seines vorderen Winkels einen zentralen Winkel.<br> <strong>Zentraler Winkel (%BULLSEYEARC%):</strong> Dieser Winkel befindet sich innerhalb des %FRONTARC%. Wenn etwas im %BULLSEYEARC%  eines Schiffes ist, so ist es immer auch in seinem %FRONTARC%.<br> • Der %BULLSEYEARC%  hat die Breite und Länge des Maßstabes.<br> • Angriffe auf ein Schiff im %BULLSEYEARC% haben an sich keinen besonderen Effekt, jedoch können Kartenfähigkeiten darauf Bezug nehmen. <br><br><h5>Volle Winkel</h5> Es gibt 2 <strong>volle Winkel</strong> welche die Mittellinie, anstatt der aufgedruckten Winkel verwenden.<br> 1. <strong>Vorderer voller Winkel (%FULLFRONTARC%):</strong> Dieser Winkel deckt den gesamten Bereich vor dem Schiff ab. Manche Schiffe haben %FULLFRONTARC%-Primärwaffen.<br> 2. <strong>Hinterer voller Winkel (%FULLREARARC%):</strong> Dieser Winkel deckt den gesamten Bereich hinter dem Schiff ab.<br> Über die Winkel %FULLFRONTARC% und %FULLREARARC% sowie eine Verlängerung der Mittelinie auf Reichweite 3 lässt sich das räumliche Verhältnis von Schiffen zueinander beschreiben. Dabei kommen folgende Begriffe zum Einsatz:<br> • <strong>Hinter:</strong> Wenn Schiff A im %FULLREARARC% von Schiff B ist und Schiff A nicht über die Mittellinie von Schiff B hinausragt, dann ist Schiff A <strong>hinter</strong> Schiff B.<br> • <strong>Vor:</strong> Wenn Schiff A im %FULLFRONTARC% von Schiff B ist und Schiff A nicht über die Mittellinie von Schiff B hinausragt, dann ist Schiff A <strong>vor</strong> Schiff B.<br> • <strong>Flankieren:</strong> Wenn Schiff A über die Mittellinie von Schiff B hinausragt, dann wird Schiff B von Schiff A <strong>flankiert</strong>. <br><br><h5>Geschützturm-Winkel</h5> Manche Waffen haben einen drehbaren Winkel, dessen Position mit einem Geschützturm-Winkelanzeiger markiert wird. Es gibt zwei Arten von Geschützturm- Winkelanzeigern: einzel (%SINGLETURRETARC%) und doppel (%DOUBLETURRETARC%). Wenn ein Schiff eine %SINGLETURRETARC%- oder %DOUBLETURRETARC%-Waffe als Primär- oder Spezialwaffe hat, wird während des Spielaufbaus ein passender Geschützturm-Winkelanzeiger zu seiner Basis hinzugefügt. Der Geschützturm-Winkelanzeiger zeigt auf einen der vier Standardwinkel des Schiffes. Dieser Winkel ist weiterhin ein Standardwinkel, aber gleichzeitig auch ein %SINGLETURRETARC%. Solange ein Schiff einen %SINGLETURRETARC%-Angriff durchführt, kann es ein Ziel in seinem %SINGLETURRETARC% angreifen. Ein Schiff mit einem Doppel-Geschützturm-Winkelanzeiger hat zwei %SINGLETURRETARC% in entgegengesetzten Richtungen. Mit der Aktion „Rotieren“ (%ROTATEARC%) kann ein Schiff seinen Geschützturm-Winkelanzeiger auf einen (oder zwei) andere Standardwinkel drehen. Für riesige Schiffe gibt es Zusatzregeln für Geschützturm- Winkelanzeiger (vgl. Anhang: Riesige Schiffe). <br><br><h5>Feuerwinkel</h5> Die feuerwinkel eines Schiffes umfassen alle eingefärbten Winkel auf dem Schiffsmarker sowie alle %SINGLETURRETARC%, falls vorhanden.<br> • Wenn eine Aufwertungskarte einem Schiff einen %SINGLETURRETARC% oder eine Primärwaffe mit einem bestimmten Winkel verleiht, so sind diese Winkel ebenfalls Feuerwinkel."
+        },
+        "WÜRFELMODIFIKATION": {
+          name: "Würfelmodifikation",
+          text: "Die Spieler können verschiedene Marker ausgeben und Fähigkeiten abhandeln, um Würfel zu modifizieren. Würfel können auf folgende Arten modifiziert werden:<br> • <strong>Hinzufügen:</strong> Ein Würfelergebnis wird hinzugefügt, indem man einen ungenutzten Würfel auf das jeweilige Ergebnis dreht und ihn neben den geworfenen Würfeln platziert. Ein auf diese Weise hinzugefügter Würfel gilt in allen Belangen als normaler Würfel und kann modifiziert und negiert werden.<br> • <strong>Ändern:</strong> Ein Würfelergebnis wird geändert, indem man den Würfel auf das neue Ergebnis dreht.<br> • <strong>Neu werfen:</strong> Ein Würfelergebnis wird neu geworfen, indem man den Würfel nimmt und ihn erneut wirft.<br> • <strong>Ausgeben:</strong> Ein Würfelergebnis wird ausgegeben, indem man den Würfel aus dem Würfelpool entfernt.<br> Außerdem gilt:<br> • Würfelmodifikationen finden während des Schrittes „Angriffswürfel modifizieren“ bzw. „Verteidigungswürfel modifizieren“ statt, es sei denn, etwas anderes ist angegeben.<br> • Würfel können zwar von mehreren Effekten modifiziert werden, aber jeder Würfel kann höchstens ein Mal neu geworfen werden.<br> • Wenn eine Fähigkeit ein Schiff anweist, ein Ergebnis auszugeben, kann es die Ergebnisse eines anderen Schiffes nicht ausgeben, sofern nicht anders angegeben.<br> • Das Negieren von Würfeln ist keine Würfelmodifikation.<br> • Das Werfen zusätzlicher oder weniger Würfel ist keine Würfelmodifikation.<br> • Wenn ein Würfel nicht zu einem bestimmten Ergebnis geändert werden kann, passiert nichts.<br> ◊ Beispiel: Ein Angriffswürfel kann nicht auf ein %EVADE%-Ergebnis geändert werden, da der Würfel dieses Symbol nicht hat."
+        },
+        "ZEITPUNKTE": {
+          name: "Zeitpunkte",
+          text: "Bestimmte Begriffe werden verwendet, um den genauen Zeitpunkt eines Effekts zu definieren:<br> • <strong>Bevor:</strong> Der Effekt wird unmittelbar vor dem genannten Zeitpunkt abgehandelt.<br> • <strong>Zu Beginn des/der:</strong> Dieser Zeitpunkt ist mit einer bestimmte Phase oder einem Spielschritt verbunden. Der Effekt wird ausgelöst, bevor irgendetwas anderes während dieser Phase oder dieses Schrittes passiert.<br> • <strong>Solange:</strong> Dieser Begriff wird oft im Zusammenhang mit Spieleffekten verwendet, die aus mehreren Schritten bestehen (wie z. B. ein Angriff, eine Aktion oder ein Manöver). Er ist nicht so spezifisch wie andere Begriffe, grenzt aber den Zeitrahmen ein, in dem die Fähigkeit abgehandelt wird. Der genaue Zeitpunkt, zu dem der Effekt angewandt wird, ergibt sich aus dem Kontext.<br> ◊ Beispiel: Eine Fähigkeit, die zusätzliche Angriffswürfel werfen lässt, wird während des Schrittes „Angriffswürfel werfen“ ausgelöst. Eine Fähigkeit, die Verteidigungswürfel modifiziert, wird während des Schrittes „Verteidigungswürfel modifizieren“ ausgelöst.<br> • <strong>Am Ende des/der:</strong> Dieser Zeitpunkt ist mit einer bestimmten Phase oder einem Schritt der Schiffsaktivierung verbunden. Der Effekt wird ausgelöst, nachdem die normalen Effekte der Phase oder des Schrittes eingetreten sind.<br> • <strong>Nachdem:</strong> Der Effekt wird unmittelbar nach dem genannten Zeitpunkt abgehandelt.<br> Die Fähigkeits-Warteschlange hilft beim Abhandeln von Fähigkeiten, die eigentlich gleichzeitig abgehandelt werden sollten."
+        },
+        "ZEITZÜNDER": {
+          name: "Zeitzünder",
+          text: "Ein Gerät oder Hindernis ist <strong>gezündet</strong>, solange es mindestens 1 Zeitzünder (%FUSE%) hat. Sobald ein gezündetes Gerät detonieren würde, wird statt dessen 1 Zeitzünder von ihm entfernt und das Gerät detoniert nicht. Sobald ein gezündetes Hindernis entfernt werden würde, wird stattdessen 1 Zeitzünder von ihm entfernt und das Hindernis wird nicht entfernt."
+        },
+        "ZENTRALER WINKEL": {
+          name: "Zentraler Winkel",
+          text: "%BULLSEYEARC%; Siehe Winkel."
+        },
+        "ZIEL": {
+          name: "Ziel",
+          text: "Das Ziel eines Angriffs wird während des Schrittes „Ziel deklarieren“ festgelegt. Ein feindliches Schiff, das erfolgreich zum Ziel deklariert wurde, wird Verteidiger genannt."
+        },
+        "ZIELERFASSUNG": {
+          name: "Zielerfassung",
+          text: "Piloten können ein Ziel erfassen, um Gefahrenstellen oder andere Schiffe vom Bordcomputer analysieren zu lassen. Sobald ein Schiff eine %LOCK%-Aktion durchführt, erfasst es ein Ziel. Ein <strong>erfassendes</strong> Schiff ist ein Schiff, das in folgenden Schritten versucht, ein Ziel zu erfassen:<br> Das erfassende Schiff misst die Reichweite zu beliebig vielen Objekten ab.<br> 1. Es wählt ein anderes Objekt in Reichweite 0–3.<br> 2. Dem gewählten Objekt wird ein Zielerfassungsmarker zugeordnet, dessen Nummer dem ID-Marker des erfassenden Schiffes entspricht.<br> Ein Objekt ist <strong>als Ziel erfasst</strong>, solange ihm mindestens 1 Zielerfassungsmarker zugeordnet ist. Zielerfassungsmarker sind rote Marker. Solange ein Schiff ein anderes Schiff als Ziel erfasst hat, gilt folgende Regel:<br> • Beim Angreifen kann ein Schiff während des Schrittes „Angriffswürfel modifizieren“ einen Zielerfassungsmarker, den es auf dem Verteidiger hat, ausgeben, um 1 oder mehrere seiner Angriffswürfel neu zu werfen.<br> Außerdem gilt:<br> • Besagt eine Anweisung, dass ein Schiff eine seiner Zielerfassungen <strong>verliert</strong>, wird der zu seinem ID-Marker gehörende Zielerfassungsmarker entfernt.<br> • Solange du ein Ziel erfasst, scheitert das nur, falls kein zulässiges Objekt gewählt werden kann.<br> • Ein Schiff kann sich nicht selbst als Ziel erfassen oder erfasst haben.<br> • Ein Objekt kann auch von mehreren Schiffen gleichzeitig als Ziel erfasst sein.<br> • Ein Schiff kann nur 1 Zielerfassung aufrechterhalten. Bevor ein Schiff ein zweites Objekt als Ziel erfasst, wird der bisherige Zielerfassungsmarker entfernt.<br> • Wenn eine Fähigkeit ein Schiff zum Erfassen eines Ziels auffordert, ist dies etwas anderes als das Durchführen einer %LOCK%-Aktion. Ein Schiff, das ein Ziel erfasst, ohne die Aktion durchzuführen, kann in dieser Runde immer noch die %LOCK%-Aktion durchführen.<br> ◊ Wird ein Schiff dazu angewiesen, ein Ziel zu erfassen, muss das erfasste Objekt in Reichweite 0–3 sein, es sei denn, etwas anderes ist angegeben."
+        },
+        "ZUFÜGEN": {
+          name: "Zufügen",
+          text: "Manche Spezialwaffen fügen Marker zu, anstatt Schaden zuzuteilen. Wenn ein Angriff Marker zufügt, erhält der Verteidiger die genannte Anzahl und Art an Markern."
+        },
+        "ZUSTANDSKARTEN": {
+          name: "Zustandskarten",
+          text: "Zustandskarten sind Karten, die über Schiffs- und Aufwertungskarten zugeordnet werden, und einen andauernden Spieleffekt darstellen. Eine Zustandskarte ist nicht im Spiel, bis sie durch einen Spieleffekt einem Schiff zugeordnet wird. Sobald eine Zustandskarte zugeordnet wird, handelt man ihren Text ab. Nachdem einem Schiff eine Zustandskarte zugeordnet worden ist, wird dem Schiff der passende Zustandsmarker zugeordnet, um an den andauernden Effekt der Karte zu erinnern.<br> • Ein Zustandsmarker wird entfernt, sobald die zugehörige Zustandskarte entfernt wird.<br> • Ein entfernter Zustand kann erneut zugeordnet werden.<br> • Wird ein Schiff aus dem Spiel entfernt, werden alle Zustandskarten, die ihm zugeordnet waren, nicht entfernt. <br><br><h5>Limitierte Zustände</h5> Manche Zustände sind limitiert. Das bedeutet, dass jeder Spieler diesen Zustand nur in begrenzter Ausführung im Spiel haben kann. Wenn ein Effekt eine neue Ausführung eines limitierten Zustands zuordnet und dadurch das Limit eines Spielers für diesen Zustand überschritten wird, dann wählt der Spieler, dessen Effekt zum Zuordnen des Zustands geführt hat, eine im Spiel befindliche Ausführung des limitierten Zustands und entfernt sie. Anschließend ordnet er die neue Ausführung jenes limitierten Zustands zu. Beispiel: Ein Zustand ist Limitiert 1 und ein Spieler würde eine zweite Ausführung dieses Zustands zugeordnet bekommen. In diesem Fall würde die erste Ausführung der Zustandskarte entfernt und anschließend die zweite zugeordnet. <br><br><h5>Geheime Zustände</h5> <strong>Geheime Zustände</strong> sind Zustandskarten, die sich einen Zustandsmarker teilen und die verdeckt statt offen zugeordnet werden. Ein geheimer Zustand wird von einem Spieler zugeordnet und die anderen Spieler wissen nicht, welcher der geheimen Zustände, die denselben Marker teilen, zugeordnet wurde. Sie werden aufgedeckt, sobald ihr Effekt abgehandelt wird. Außerdem gilt:<br> • Kein Schiff kann mehr als 1 geheimen Zustand mit demselben Zustandsmarker haben.<br> • Wird einem Schiff, das bereits einen geheimen Zustand hat, ein neuer geheimer Zustand mit demselben Zustandsmarker zugeordnet, wird der vorherige Zustand entfernt. (Falls er verdeckt war, wird er dabei nicht aufgedeckt.)<br> • Der Spieler, der durch einen Effekt den Zustand zugeordnet hat, darf sich die verdeckte Zustandskarte jederzeit anschauen.<br> • Für alle anderen Spieler sind der zugeordnete geheime Zustand sowie alle nicht zugeordneten geheimen Zustände mit demselben Zustandsmarker verborgene Informationen.<br> • Der Text von geheimen Zuständen stellt eine offene Information dar und kann von jedem Spieler jederzeit eingesehen werden. Produkte mit geheimen Zuständen enthalten eine zusätzliche Kopie der geheimen Zustände zur Ansicht aller Spieler. Dadurch muss der Zustand, der im Spiel ist, nicht enthüllt werden."
+        }
+      },
+      faq: {
+        "ABSETZEN": {
+          name: "Absetzen",
+          text: "<strong>F: Falls ein Schiff, das mit Boba Fett ausgerüstet ist, nicht in Reichweite 0 zu einem Hindernis und jenseits von Reichweite 3 zu einem beliebigen feindlichen Schiff platziert werden kann, was passiert dann?</strong><br>A: Jenes Schiff wird stattdessen in Reichweite 1 zum Spielflächenrand des kontrollierenden Spielers aufgestellt."
+        },
+        "AKTIVIERUNGSPHASE UND AKTIONEN": {
+          name: "Aktivierungsphase und Aktionen",
+          text: "<strong>F: Falls ein Effekt besagt, „behandle eine Aktion als violett“ und ein anderer „behandle eine Aktion als rot“, was passiert? </strong><br>A: Aktionen haben drei Schwierigkeiten, von wenig bis sehr restriktiv: weiß, rot, violett. Falls zwei oder mehr Effekte die Ausgangsfarbe einer Aktion verändern würden, wird die restriktivste Farbe angewandt. Wenn eine Aktion also zugleich als rot und als violett behandelt wird, wird sie als violett behandelt, da dies die restrikivste Farbe darstellt. <br><br><strong>F: Was ist die Schwierigkeit einer Aktion, deren Schwierigkeit nicht angegeben ist? (Z. B. Lando Calrissians (Rebellen, %CREW%) einzigartige Aktion oder die Koordinieren-Aktion, die „Wesir“ (TIE-Schnitter) als Teil seiner Pilotenfähigkeit durchführen kann.)</strong><br>A: Weiß. Allerdings verwendet ein Schiff die Schwierigkeit einer Aktion auf der Aktionsleiste, falls es dazu angewiesen wird, eine Aktion „auf seiner Aktionsleiste“ durchzuführen <br><br><strong>F: Falls ein Schiff ein rotes Ausweichen an eine andere Aktion gekoppelt hat (wie z. B. der TIE-Aggressor oder das Jagdshuttle), Trümmertanz (%TALENT%) ausgerüstet hat und in Reichweite eines Hindernisses ist, behandelt es dann das gekoppelte rote Ausweichen als weiß? </strong><br>A: Ja. Trümmertanz verändert jede rote Ausweichen-Aktion auf der Aktionsleiste des Schiffes, dazu zählen auch gekoppelte Aktionen. <br><br><strong>F: Kann ein ionisiertes Schiff nach dem Durchführen einer %FOCUS%-Aktion eine andere Aktion durchführen, die an die %FOCUS%-Aktion gekoppelt ist?</strong><br>A: Nein. Ein ionisiertes Schiff ist auf die Durchführung seiner %FOCUS%-Aktion beschränkt.<br><br><strong>F: Kann ein ionisiertes Schiff, dem nach dem Ausführen eines Manövers eine Nicht-%FOCUS%-Aktion gewährt wird (etwa ein Delta-7-Aethersprite, der unter Verwendung seiner Präzisionssteuerung eine %BARRELROLL%- oder %BOOST%-Aktion durchführt, oder ein TIE-Abwehrjäger, der mittels Vollgas eine %EVADE%-Aktion durchführt), diese Aktion durchführen?</strong><br>A: Nein. Ein ionisiertes Schiff ist auf die Durchführung seiner %FOCUS%-Aktion beschränkt. <br><br><strong>F: Falls ein Schiff versucht, eine violette Aktion durchzuführen (etwa eine %BARRELROLL%- oder %BOOST%-Aktion), und dabei scheitert, muss es trotzdem die %FORCE% bezahlen?</strong><br>A: Ja. Die %FORCE%-Kosten einer violetten Aktion sind „Kosten für den Versuch, eine violette Aktion durchzuführen“ (vgl. Aktionen) und müssen auch bezahlt werden, wenn der Versuch scheitert. <br><br><strong>F: Falls Anakin Skywalker (Königlicher N-1-Sternenjäger von Naboo) seine Pilotenfähigkeit für eine Fassrolle nutzt (was nicht als %BARRELROLL%-Aktion zählt) und scheitert, muss er trotzdem die %FORCE% bezahlen?</strong><br>A: Nein. Eine Fassrolle kann genauso wie eine %BARRELROLL%-Aktion scheitern, da aber Anakins Fähigkeit keine Aktion ist, sind die %FORCE%-Kosten nicht als Kosten für den Versuch eine Aktion durchzuführen, sondern als Kosten zur Abhandlung des Effektes zu sehen.<br><br><strong>F: Erfordert Gespür (%FORCEPOWER%) das Ausgeben von 1 %FORCE% vor dem Abmessen der Reichweite zu anderen Schiffen?</strong><br>A: Nein. Das Messen der Reichweite zur Überprüfung, welche Schiffe in Reichweite 0–1 und welche in Reichweite 0–3 sind, erfolgt vor der Entscheidung, ob %FORCE% ausgegeben wird, um ein Schiff in Reichweite 0–3 als Ziel wählen zu können.<br><br><strong>F: Was passiert, falls ein Quadrijet-Transferschlepper seine „Schlepperstrahl“-Aktion verwendet und kein Schiff in seinem vorderen Winkel in Reichweite 1 wählen kann? </strong><br>A: Die Aktion scheitert.<br><strong>A: Solange ein Schiff eine Tallon-Rolle ausführt und nicht an der mittleren Position platziert werden kann (Markierung an der Basisseite auf einer Höhe mit der Mittellinie der Schablone), kann es dann sein Manöver vollständig ausführen? </strong><br>A: Ja, solange es eine gültige Position gibt, wo es platziert werden kann. Solange das Schiff beim Ausführen einer Tallon-Rolle an mindestens einer der drei möglichen Positionen platziert werden kann (Markierung an der Basisseite auf einer Höhe mit der linken Kante, der Mittellinie oder der rechten Kante des Endes der Schablone), muss es eine der gültigen Positionen wählen und führt damit das Manöver vollständig aus. Falls eine gültige Position existiert, kann es keine ungültige Position wählen und so das Manöver nur teilweise ausführen. Wie beim Abhandeln einer Fassrolle kann der Spieler die drei unterschiedlichen Positionen ausprobieren, bevor er sich für eine davon entscheidet. <br><br><strong>F: Kann Ved Foslo [TIE-x1-Turbojäger] seine Schiffsfähigkeit verwenden, um die Geschwindigkeit eines [1 %BANKLEFT%]- oder [1 %BANKRIGHT%]-Manövers zu reduzieren und so ein [0 %BANKLEFT%]- oder [0 %BANKRIGHT%]-Manöver auszuführen?</strong><br> A: Nein. Drehmanöver mit Geschwindigkeit 0 können nur von riesigen Schiffen ausgeführt werden. Sie können nicht von Standardschiffen ausgeführt werden, selbst wenn ein bestimmtes Schiff die Fähigkeit zum Ausführen eines Manövers besitzt, das nicht auf seinem Rad aufgeführt ist.<br><br><strong>F: Was ist der Unterschied zwischen „ein Rad umdrehen“ und „ein Rad aufdecken“ und wann tritt was davon ein? </strong><br>A: „Ein Rad umdrehen“ bezeichnet das physische Umdrehen eines Rades, sodass die Oberseite (mit den Manövern) sichtbar ist. „Ein Rad aufdecken“ ist die Spielmechanik, die während der Aktivierung eines Schiffes eintritt. Ein Schiff, das sein Rad aufdeckt, dreht es dabei um. Allerdings decken andere Effekte, die sich auf das Umdrehen eines Rades beziehen, wie der Zustand Abhörgerät der Aufwertung Informant [%CREW%], ein Rad <strong>nicht</strong> auf, sodass Fähigkeiten, die ausgelöst werden, sobald ein Rad aufgedeckt wird, durch Umdrehen nicht ausgelöst werden. Außerdem kann ein Schiff sein Rad immer noch zum passenden Zeitpunkt seiner Aktivierung „aufdecken“ (und dadurch entsprechende Effekte auslösen), obwohl das Rad bereits umgedreht ist."
+        },
+        "FÄHIGKEITEN UND DIE FÄHIGKEITS-WARTESCHLANGE": {
+          name: "Fähigkeiten und die Fähigkeits-Warteschlange",
+          text: "<strong>F: Was macht einen Effekt zur „Fähigkeit“?</strong><br> A: Eine Fähigkeit ist ein Text einer Karte unter der Kontrolle eines Spielers (wie Schiffskarten, Aufwertungskarten, Schadenskarten, Remotekarten, Geräte, Zustandskarten etc.). Einige Fähigkeiten sind dauerhaft (wie der Abschnitt „Erhalte eine %FRONTARC%-Primärwaffe mit einem Wert von 3.“ der Moldy Crow). Dauerhafte Fähigkeiten werden nicht über die Fähigkeits-Warteschlange abgehandelt. Die meisten Fähigkeiten werden ausgelöst und treten nur zu einem spezifizierten Zeitfenster auf (wie der Abschnitt „Während der Endphase entferne bis zu 2 Fokusmarker nicht.“ der Moldy Crow). Ausgelöste Fähigkeiten werden über die Fähigkeits-Warteschlange abgehandelt. Jede ausgelöste Fähigkeit besteht aus folgenden Teilen:<br> • Der Zeitpunkt (wann sie der Fähigkeits-Warteschlange hinzugefügt wird)<br> • Ein Effekt (was sie bewirkt)<br> Weiterhin kann sie einen oder mehrere der folgenden Teile aufweisen:<br> • Eine oder mehrere Voraussetzungen, die das Schiff erfüllen muss.<br> • Kosten, die das Schiff bezahlen muss.<br> • Eine Textbox kann mehrere Fähigkeiten enthalten, falls es mehrere dauerhafte Fähigkeiten oder Auslöser gibt, die eine Fähigkeit der Fähigkeits-Warteschlange hinzufügen (wie etwa bei der Moldy Crow).<br><br> <strong>F: Was ist mit einer Voraussetzung für eine Fähigkeit gemeint?</strong><br> A: Eine Voraussetzung für eine Fähigkeit ist eine konditionale „Falls“- Aussage, etwa „falls du gefangen bist“ oder „falls sich der Verteidiger in deinem zentralen Winkel befindet“. Dass sich ein Schiff für einen Angriff, der als Teil einer ausgelösten Fähigkeit durchgeführt wird, in Winkel und Reichweite des Angriffs befinden muss (wie bei Schnellfeuer oder Vorausahnung), stellt ebenfalls eine Voraussetzung für eine Fähigkeit dar. Falls die Voraussetzungen einer Fähigkeit zu dem Zeitpunkt, zu dem sie der Fähigkeits-Warteschlange hinzugefügt werden würde, nicht erfüllt sind, kann die Fähigkeit der Warteschlange nicht hinzugefügt werden. Falls die Voraussetzungen einer Fähigkeit zu dem Zeitpunkt, zu dem sie in der Fähigkeits-Warteschlange abgehandelt werden würde, nicht erfüllt sind, kann die Fähigkeit nicht abgehandelt werden und wird stattdessen aus der Warteschlange entfernt. Falls eine Fähigkeit dazu anweist, eine Wahl zu treffen, etwa ein Schiff auszuwählen, so stellt dies keine Voraussetzung für eine Fähigkeit dar.<br><br> <strong>F: Wann werden die Kosten einer Fähigkeit bezahlt?</strong><br> A: Die Kosten einer Fähigkeit werden bezahlt, sobald die Fähigkeit abgehandelt wird. Eine Fähigkeit kann der Warteschlange nicht hinzugefügt werden, falls die Kosten zum Zeitpunkt des Hinzufügens nicht bezahlt werden könnten. Falls die Kosten einer Fähigkeit nicht bezahlt werden können, sobald sie in der Warteschlange abgehandelt würde, wird die Fähigkeit nicht abgehandelt und stattdessen aus der Warteschlange entfernt. Die Kosten der Fähigkeit werden nicht bezahlt. Eine Fähigkeit kann mehrere Kosten haben. Falls sie dies hat, müssen zum Abhandeln alle Kosten bezahlt werden. Falls nicht alle Kosten bezahlt werden können, werden gar kein Kosten bezahlt und die Fähigkeit wird aus der Warteschlange entfernt, ohne abgehandelt zu werden.<br><br> <strong>F: Werden optionale Fähigkeiten automatisch der Fähigkeits-Warteschlange hinzugefügt, sobald sie ausgelöst werden, oder trifft ein Spieler seine Entscheidung, indem er sie der Warteschlange hinzufügt?</strong><br> A: Sie werden der Fähigkeits-Warteschlange automatisch hinzugefügt, sobald sie ausgelöst werden, solange sie die Bedingungen erfüllen, um hinzugefügt zu werden. Die Spieler müssen nicht jede Fähigkeit deklarieren, die der Warteschlange hinzugefügt wird. Falls ein Spieler jedoch eine Fähigkeit während des passenden Zeitfensters nicht abhandelt, verfällt die Möglichkeit, die Fähigkeit zu nutzen. Zum Beispiel sind Nachbrenner und Präzisionssteuerung beides optionale Fähigkeiten, die der Fähigkeits-Warteschlange hinzugefügt werden, „nachdem du ein Manöver vollständig ausgeführt hast“. Eine Delta-7-Aethersprite mit Nachbrenner würde beide Fähigkeiten der Warteschlange in beliebiger Reihenfolge hinzufügen. Allerdings kann eine Fähigkeit nur der Warteschlange hinzugefügt werden, wenn die Bedingungen erfüllt werden können. Falls z. B. Nachbrenner keine aktiven %CHARGE% mehr hat oder die Delta-7-Aethersprite nach dem Ausführen des Manövers keine aktiven %FORCE% mehr hat, können diese beiden Fähigkeiten nicht hinzugefügt werden.<br><br> F: Sind optionale Fähigkeiten verpflichtend, nachdem sie der Fähigkeits-Warteschlange hinzugefügt wurden?</strong><br> A: Nein. Erst, sobald eine Fähigkeit in der Fähigkeits-Warteschlange erreicht wird, trifft der Spieler alle relevanten Entscheidungen für diese Fähigkeit, auch, ob er sie einsetzt oder nicht. Falls zum Beispiel eine Delta-7-Aethersprite nach dem vollständigen Ausführen eines Manövers zuerst Präzisionssteuerung und dann Nachbrenner zur Warteschlange hinzufügt, entscheidet der Spieler erst, wenn die Warteschlange Präzisionssteuerung erreicht, ob er die Kosten zum Abhandeln der Fähigkeit bezahlen will, und falls ja, handelt er die Fähigkeit ab. Sobald die Warteschlange danach Nachbrenner erreicht, entscheidet der Spieler erneut, ob er die Kosten zum Abhandeln dieser Fähigkeit bezahlen will, und falls ja, handelt er sie ab.<br><br> F: Wie werden Fähigkeiten, durch die ein Schiff gewählt werden darf (z. B. K-2SO [%CREW%] oder Darth Vader [%CREW%]), abgehandelt, sobald sie in der Fähigkeits-Warteschlange erreicht werden?</strong><br> A: Sobald eine Fähigkeit, durch die ein Schiff gewählt werden darf, in der Fähigkeits-Warteschlange erreicht wird, darf der Spieler des Schiffes, bevor er ihre Kosten bezahlt, die Reichweite zu beliebig vielen Schiffen messen. Dann darf jener Spieler eines der Schiffe, die entsprechend der Fähigkeit gültig wären, oder kein Schiff wählen. Falls er kein Schiff gewählt hat, bezahlt er die Kosten nicht und die Fähigkeit wird aus der Warteschlange entfernt, ohne abgehandelt zu werden."
+        },
+        "KAMPFPHASE UND ANGREIFEN": {
+          name: "Kampfphase und Angreifen",
+          text: "<strong>F: Wenn ein Schiff durch einen Spieleffekt zerstört wird, der „bevor es kämpft“ ausgelöst wird, kämpft es dann trotzdem?</strong><br> A: Ja. Da das Spiel bereits in diesem Initiativschritt ist, wird es nicht entfernt, bevor nicht alle Schiffe bei dieser Initiative gekämpft haben, siehe Gleichzeitiger Angriff. <br><br><strong>F: Wann genau während eines Angriffs werden Effekte angewandt, die „solange du einen Angriff durchführst“ oder „solange du verteidigst“ angewandt werden?</strong></br> A: Fähigkeiten werden in dem Schritt des Angriffs angewandt, in dem sie einen Effekt haben. Beispielsweise wird Jagdinstinkt, bei dem es sich um eine Würfelmodifikation handelt, bei „Schritt 2b: Angriffswürfel modifizieren“ angewandt. Beachte allerdings, dass Effekte, die während „Schritt 2b: Angriffswürfel modifizieren“ und „3b: Verteidigungswürfel modifzieren“ abgehandelt werden, nicht in die Fähigkeits-Warteschlange eingereiht werden, da sie in einer festgelegten Reihenfolge abgehandelt werden. Diese ist im entsprechenden Abschnitt des Referenzhandbuchs beschrieben. <br><br><strong>F: Falls ein Schiff zerstört wird, wann werden Effekte abgehandelt, die durch seine Zerstörung ausgelöst werden?</strong></br> A: Falls es während eines Angriff zerstört wurde, werden sie während „Schritt 6: Nachwirkungen“ abgehandelt. Andernfalls werden diese Effekte sofort in die Fähigkeits-Warteschlange eingereiht (selbst wenn das Schiff noch nicht sofort entfernt wird, etwa aufgrund der Regel zum Gleichzeitigen Angriff oder eines Karteneffekts). <br><br><strong>F: Falls ein Schiff zerstört wird und ein Effekt wie der von R1-J5 [%ASTROMECH%] eine oder mehrere seiner Schadenskarten repariert, bevor es entfernt wird, wird das Schiff dennoch zerstört (und daher doch entfernt)?</strong></br> A: Ja. Nachdem ein Schiff aus welchem Grund auch immer „zerstört“ worden ist, bleibt es auch zerstört, egal welche Effekte zwischen seiner Zerstörung und seiner Entfernung abgehandelt werden. Effekte können den Zeitpunkt der Entfernung ändern, aber nicht den Status Zerstört aufheben."
+        },
+        "LISTEN ZUSAMMENSTELLEN": {
+          name: "Listen Zusammenstellen",
+          text: "<strong>F: Kann ein T-70-X-Flügler oder ein M-3A-Abfangjäger mittels der Schiffsfähigkeit „Waffenaufhängung“ eine Aufwertung ausrüsten, die einen doppelten Slot benötigt (etwa die Raketensalve (%MISSILE%%MISSILE%))? A: Nein. Die Waffenaufhängung gewährt einem Schiff einen speziellen Aufwertungsslot, der nur für eine Aufwertung genutzt werden kann, die exakt den angegeben Symbolen entspricht (in diesem Fall %CANNON%, %TORPEDO% oder %MISSILE%)."
+        },
+        "OBJEKTE": {
+          name: "Objekte",
+          text: "<strong>F: Was bedeutet „Hindernisse ignorieren“? Funktionieren Han Solo (Pilot, Modifizierter YT-1300) und Qi’ra zusammen? Was ist mit Dash Rendar (YT-2400) und Outrider? </strong><br>A: Wenn ein Effekt besagt, dass ein Schiff „Hindernisse ignoriert“, bedeutet das, dass dieses Schiff „alle Effekte von Hindernissen ignoriert“. Ein Schiff, das „Hindernisse ignoriert“, wendet keine Hinderniseffekte an, wenn es Hindernisse überschneidet oder sich durch sie hindurchbewegt, und kann sich durch Hindernisse hindurchbewegen, indem es Schub gibt oder eine Fassrolle fliegt. Wenn dieses Schiff einen Angriff durchführt, der von einem Hindernis versperrt wird, ignoriert es die Effekte dieses Versperrens. Das bedeutet, dass der Verteidiger keinen zusätzlichen Verteidigungswürfel wirft, wenn der Angriff durch Hindernisse versperrt wird, die der Angreifer ignoriert. Allerdings gelten die Hindernisse trotzdem als auf der Spielfläche befindlich für Effekte, die überprüfen ob es Hindernisse gibt (z. B. Trümmertanz [󲁋] oder die Schadenskarte Benommener Pilot). Außerdem wird ein Angriff trotzdem durch ein Hindernis versperrt, auch wenn die Effekte des Hindernisses ignoriert werden. Das betrifft Karten wie Outrider, Han Solo (Pilot, Modifizierter YT-1300) und Trickschuss. Außerdem ignorieren andere Schiffe Hindernisse nicht, wenn sie Effekte abhandeln, die mit einem Schiff interagieren, das Hindernisse ignoriert. Solange zum Beispiel ein Schiff, das Hindernisse ignoriert, verteidigt und falls der Angriff versperrt ist, würfelt es trotzdem 1 zusätzlichen Verteidigungswürfel, da der Angreifer keine Effekte von Hindernissen ignoriert. <br><br><strong>F: Detoniert eine Mine sofort, wenn sie in der Systemphase so abgeworfen wird, dass sie ein Schiff überschneidet? </strong><br>A: Ja. Wenn ein Objekt unter einem Schiff platziert wird, wird das Schiff als das Objekt überschneidend gewertet. <br><br><strong>F: Wenn sich ein Schiff durch eine Mine hindurchbewegt (und sie überschneidet), ist das Zeitfenster von Sabine Wren bevor oder nachdem das Schiff die Möglichkeit hatte, eine Aktion durchzuführen? </strong><br>A: Fangfrage! Sabine beeinflusst nur Geräte, die als Bomben klassifiziert sind, keine anderen Geräte oder Minen wie die Annäherungsmine. <br><br><strong>F: Wie interagieren Zeitzünder (siehe S. 24) mit Minen? </strong><br>A: Falls sich ein Schiff durch eine gezündete Mine hindurchbewegen und/ oder sie überschneiden würde, wird 1 Zeitzünder von dieser Mine entfernt und sie detoniert nicht, selbst falls das Schiff auf der Mine stehen bleibt, nachdem der Zeitzünder entfernt wurde. Wenn ein Schiff physisch auf einer Mine steht, die aufgrund des Effekts eines Zeitzünders nicht detoniert ist, und sich während einer späteren Bewegung erneut durch diese Mine hindurchbewegt und/oder sie überschneidet, detoniert die Mine wie gewohnt. <br><br><strong>F: Was passiert, wenn Freie Fracht von Manipulierte Frachtrampe oder Ersatzteile von Ersatzteilkanister ein anderes Schiff überschneiden? </strong><br>A: Die Freie Fracht oder die Ersatzteile werden unter dem Schiff platziert und das Schiff überschneidet sie, wobei es die Effekte der Überschneidung erleidet. <br><br><strong>F: Falls ein Remote keine Winkel hat, können Fähigkeiten abgehandelt werden, die abgehandelt werden, solange man sich nicht in einem Winkel des Verteidigers befindet? </strong><br>A: Nein. Ein Schiff kann nicht außerhalb eines Winkels eines Remotes sein, falls dieses Remote keine Winkel hat. <br><br><strong>F: Was passiert, wenn eine Annäherungsmine so abgeworfen wird, dass sie von zwei oder mehr Schiffen überschnitten wird? </strong><br>A: Der Besitzer der Annäherungsmine wählt ein Schiff, das von ihrem Effekt betroffen wird. <br><br><strong>F: Was passiert, wenn ein Clusterminenset so abgeworfen wird, dass es von zwei oder mehr Schiffen überschnitten wird? </strong><br>A: Zuerst wählt der Besitzer der Clusterminen je ein Schiff, das vom Effekt jeder einzelnen Clustermine betroffen wird. Dann bestimmt jener Spieler die Reihenfolge, in der die Würfel geworfen werden, um die Effekte der Detonationen an jedem jener Schiffe abzuhandeln. <br><br><strong>F: Wenn zwei oder mehr Geräte gleichzeitig detonieren, wer bestimmt die Reihenfolge, in der ihre Effekte abgehandelt werden? </strong><br>A: Der Startspieler handelt alle seine Geräte in beliebiger Reihenfolge ab, indem er jede Detonation und jeden nachfolgenden Effekt vollständig abhandelt (wie z. B. Sabine Wrens [%CREW%] Effekt „Nachdem ein Schiff den Effekt einer befreundeten Bombe erlitten hat“), bevor er zum nächsten übergeht. Danach handelt der zweite Spieler in Spielerreihenfolge alle seine Geräte in beliebiger Reihenfolge ab, indem er jede Detonation vollständig abhandelt, bevor er zur nächsten übergeht (und so weiter für Mehrspielerpartien). <br><br><strong>F: Wenn ein Schiff eine Elektrodüppel-Wolke überschneidet, wer bestimmt den Effekt des Störsignalmarkers? </strong><br>A: Der Spieler, dessen Schiff die Elektrodüppel-Wolke überschneidet, bestimmt, welcher grüne Marker entfernt / welche Zielerfassung verloren wird"
+        },
+        "SCHADENSKARTEN": {
+          name: "Schadenskarten",
+          text: "<strong>F: Wird der erste Effekt der Schadenskarte Verletzter Pilot („Nachdem du eine Aktion durchgeführt hast, wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis erhalte 1 Stressmarker.“) abgehandelt, wenn man sie repariert?</strong><br> A: Nein. Die Karte ist repariert, deswegen gibt es keinen Effekt mehr, der abgehandelt werden müsste."
+        },
+        "WINKEL": {
+          name: "Winkel",
+          text: "<strong>F: Können Schiffe, die nur %SINGLETURRETARC%- oder %FULLFRONTARC%-Angriffe verwenden, Effekte verwenden, die verlangen, dass das Schiff einen %FRONTARC%-Angriff durchführt? (z. B. Furchtlos, Ausmanövrieren) </strong><br>A: Nein. Beachte den Unterschied zwischen den Voraussetzungen von Furchtlos: „Solange du einen %FRONTARC%-Primärangriff durchführst, ...“ und Vollstrecker Eins: „Solange du einen Primärangriff durchführst, falls der Verteidiger in deinem %FRONTARC% ist,...“ Ein %FRONTARC%-Angriff verwendet das %FRONTARC%-Symbol über dem Angriffswert, wie auf der Schiffskarte angegeben. Dies unterscheidet sich von einem Angriff, der gegen ein Schiff in seinem %FRONTARC% durchgeführt wird. <br><br><strong>F: Wenn ein Schiff, dessen Geschützturm-Winkelanzeiger auf sein %FRONTARC% zeigt, einen %SINGLETURRETARC%-Angriff durchführt, hat es dann auch von seinem %FRONTARC% aus angegriffen? </strong><br>A: Nein. Falls beispielsweise ein Schiff, dass mit Kampferprobter Geschützkanonier ausgerüstet ist, einen Primär-%FRONTARC%-Angriff durchführt, kann es die Fähigkeit von Kampferprobter Geschützkanonier verwenden, um einen %SINGLETURRETARC%-Angriff durchzuführen, auch wenn der Geschützturm- Winkelanzeigen auf seinen %FRONTARC% zeigt. <br><br><strong>F: Ist ein Schiff in seinem eigenen Feuerwinkel? </strong><br>A: Nein. <br><br><strong>F: Erstreckt sich der Feuerwinkel eines Schiffes bis auf Reichweite 3, auch wenn das für die Waffe, die diesen Winkel verwendet, nicht gilt? </strong><br>A: Ja. Falls zum Beispiel Drea Renthal (Abschaum, BTL-A4-Y-Flügler) mit Dorsaler Geschützturm ausgerüstet wird, kann sie ihre Fähigkeit auf Schiffe mit Reichweite 1–3 in ihrem Geschützturmwinkel verwenden."
+        },
+        "WÜRFEL WERFEN UND NEU WERFEN": {
+          name: "Würfel werfen und neu werfen",
+          text: "<strong>F: Gelten Neuwürfe für Effekte, die eintreten, bevor oder nachdem ein Spieler Würfel wirft (wie Count Dooku[%CREW%]), als „Würfel werfen“? </strong><br>A: Nein. Auch wenn man für Neuwürfe Würfel aufnimmt und sie erneut wirft, ist „Würfel neu werfen“ eine andere Spielmechanik als „Würfel werfen“. <br><br><strong>F: Wenn eine Karte wie Flächenangriff (%TALENT%) einen Spieler anweist, „alle Würfel“ oder eine bestimmte Anzahl von Würfeln erneut zu werfen, aber es nicht genügend geeignete Würfel gibt, was passiert dann? </strong><br>A: Der Spieler wirft so viele geeignete Würfel wie möglich erneut. Im Falle von Flächenangriff und ähnlichen Effekten, wenn ein Schiff Flächenangriff (das 2 Verteidigungswürfel neu wirft) gegen ein Schiff verwendet, das nur 1 Verteidigungswürfel wirft, kann es immer noch dazu führen, dass dieses Schiff seinen 1 Verteidigungswürfel neu wirft, indem es den Effekt so vollständig wie möglich abhandelt (gegen den 1 geeigneten Verteidigungswürfel). Beachtet, dass, wenn das Schiff Flächenangriff gegen ein Schiff verwendet, das 3 Verteidigungswürfel wirft (z. B.: %EVADE%, Leerseite, Leerseite), es genau 2 dieser Würfel wählen muss, um sie neu zu werfen, da es den Effekt so vollständig wie möglich abhandeln muss (in diesem Fall bei 2 geeigneten Würfeln). <br><br><strong>F: Kann die Fähigkeit von Han Solo (Pilot, Modifizierter YT-1300) mit einem Würfel verwendet werden, der bereits neu geworfen wurde? </strong><br>A: Ja. Han Solos Fähigkeit wird nicht als Neuwurf behandelt, deswegen kann sie mit einem neu geworfenen Würfel verwendet werden."
+        },
+        "ZIEL ERFASSEN": {
+          name: "Ziel erfassen",
+          text: "<strong>F: Kann ein Spieler während der Zielerfassung kein Objekt auswählen? </strong><br>A: Ja, aber nur, wenn es keine gültigen Objekte zur Auswahl gibt. Während der Zielerfassung muss ein Spieler ein anderes Objekt in Reichweite 0–3 wählen, falls möglich. Folglich kann die Zielerfassung scheitern, wenn es in Reichweite 0–3 kein anderes Objekt gibt, sie scheitert aber nur unter diesem Umstand. <br><br><strong>F: Was passiert, wenn zwei Zielerfassungen vom gleichen Schiff mit einem R3-Astromechdroiden auf ein einzelnes Schiff transferiert werden (z. B. durch die Pilotenfähigkeit von Captain Kagi)? </strong><br>A: Der R3-Astromechdroide erlaubt es nur, zwei Zielerfassungen zu haben, wenn sie auf verschiedenen Schiffen sind, so dass eine der Zielerfassungen verloren geht, falls sie auf ein einzelnes Schiff transferiert werden. <br><br><strong>F: Falls ein Effekt ein Schiff dazu anweist, einen zusätzlichen Zielerfassungsmarker zu erhalten (z. B. Unteroffizier Thanisson [󲁒]), kann ein Spieler dem Schiff dann einen Zielerfassungsmarker mit einer anderen Nummer als der des ersten Zielerfassungsmarkers zuordnen? </strong><br>A: Nein. Es muss eine Zielerfassung mit derselben Nummer wie die erste erhalten (was in den meisten Fällen dazu führt, dass das Schiff die originale Zielerfassung verliert, wodurch es nur einen Zielerfassungsmarker hat). <br><br><strong>F: Unter welchen Umständen zählt eine Zielerfassung, falls sich ein Effekt auf „deine Marker“ bezieht, als „dein Marker“, und unter welchen nicht? </strong><br>A: Für Effekte, die sich auf „deine Marker“ beziehen, ist die Zielerfassung immer der rote Marker des Schiffes, dem er zugeordnet wurde. Falls zum Beispiel Schff A Schiff B als Ziel erfasst, ist die Zielerfassung der rote Marker von Schiff B und nicht von Schiff A. <strong>Kein</strong> Effekt von Schiff A, der sich auf „deine Marker“ bezieht, bezieht sich auf die Zielerfassung. <strong>Jeder</strong> Effekt von Schiff B, der sich auf „deine Marker“ bezieht, bezieht sich auf die Zielerfassung. Falls sich ein Effekt auf „deine Zielerfassung“ bezieht, bezieht er sich auf die Zielerfassung, die dein Schiff hat (die es also zugeordnet hat). Falls also Schiff A einen Effekt hat, der sich auf „deine Zielerfassung“ bezieht, bezieht er sich auf die Zielerfassung von Schiff A auf Schiff B. Für Effekte von Schiff B würde dieselbe Zielerfassung allerdings <strong>nicht</strong> unter „deine Zielerfassung“ fallen."
+        },
+        "FRAGEN ZU SPEZIFISCHEN KARTEN": {
+          name: "Fragen zu spezifischen Karten",
+          text: "<strong>F: Kann Cikatro Vizago (%CREW%) eine %ILLICIT%-Aufwertungskarte auf\neinem Schiff gegen eine Aufwertung, die es normalerweise\nnicht ausrüsten kann, austauschen (z. B. einen Z-95-Kopfjäger mit einer Tarnvorrichtung ausrüsten und dann\ngegen eine Manipulierte Frachtrampe eines YV-666\naustauschen)?\n</strong><br>A: Nein. Cikatro Vizago kann die Manipulierte Frachtrampe nicht auf den Z-95\nbewegen, da der Z-95 die \"Mittleres oder großes Schiff\"-Beschränkung\nder Manipulierten Frachtrampe nicht erfüllt, wie im Abschnitt\nAufwertungskarten beschrieben.\n<br><br><strong>F: Kann der Großinquisitor [TIE-v1-Turbojäger] den Reich-\nweitenbonus anwenden, wenn er mit einer Waffe mit dem\nRaketensymbol (z. B. Protonenraketen) angreift oder sich\ngegen einen Angriff mit dem Raketensymbol verteidigt?\n</strong><br>A: Nein.\n<br><br><strong>F: Ist Han Solos [Rebellen, %GUNNER%] zusätzlicher Angriff ein\nBonusangriff?\n</strong><br>A: Ja. Alles, was außerhalb des Standardangriffs, den ein Schiff durchführen\ndarf, sobald es kämpft, einen Angriff erlaubt, ist ein Bonusangriff.\n<br><br><strong>F: Wenn ein Schiff, das mit Han Solo (Rebellen, %GUNNER%)\nausgerüstet ist, durch eine Karte wie Roark Garnet\n(HWK-290) oder Geschärfte Sinne dazu gebracht wird,\nbei Initiative 7 zu kämpfen, muss es dann Han Solos\nBonusangriff zuerst durchführen?\n</strong><br>A: Ja. Han Solos Effekt tritt bei Initiative 7 ein, bevor irgendein Schiff\nbei dieser Initiative kämpft (darunter auch das Schiff, das mit Han\nSolo ausgerüstet ist), deswegen wird Han Solos Bonusangriff immer\nzuerst durchgeführt. Das bedeutet, dass das Schiff nicht Han Solos\nBonusangriff und anschließend einen weiteren Angriff aus demselben\nGeschützturmwinkel durchführen kann.\n<br><br><strong>F: Wie interagieren Effekte, die „Schaden verhindern“, wie z. B.\nIden Versio, mit Effekten wie Ionenkanone und Fangstrahl,\ndie „Marker [z. B. Ionen-, Fangstrahl- und Störsignalmarker]\nzufügen, anstatt Schaden zuzuteilen“?\n</strong><br>A: Wenn ein Effekt %HIT%/%CRIT%-Ergebnisse für einen Effekt verwendet, anstatt\nSchaden zuzuteilen (z. B. Ionen-, Fangstrahl- oder Störsignalmarker), kann\ndieser Effekt nicht durch einen Effekt verhindert werden, der “Schaden\nverhindert”.\nBeachte, dass Iden Versio den Schaden verhindern kann, den eine\nIonenkanone verursacht, bevor sie Ionenmarkern zufügt, aber dies\nverhindert nicht, dass Iden Versio die nachfolgenden Ionenmarker erhält.\n<br><br><strong>F: Wenn der\nNashtahwelpe abgesetzt wird, erhält er\ndann Ladungen in Höhe der Ladungskapazität von der\nSchiffskarte der\nReißzahn?\n</strong><br>A: Nein, wenn der\nNashtahwelpe per Notabsetzung abgesetzt wird, erhält\ner die Anzahl der aktiven und inaktiven Ladungen, die das Schiff mit der\nReißzahn hatte, bevor es zerstört wurde.\n<br><br><strong>F: Wird die Fähigkeit von Autopilot-Drone (Rettungskapsel)\nauch ausgelöst, falls sie durch eine andere Art zerstört\nwird als durch den Verlust aller Ladungen?\n</strong><br>A: Nein.\n<br><br><strong>F: Was passiert, falls ein Schiff mit Tarngerät (%ILLICIT%) ein\nFokusergebnis wirft und dann scheitert, während es\nversucht, sich zu enttarnen?\n</strong><br>A: Das Schiff entfernt seinen Tarnungsmarker nicht.\n<br><br><strong>F: Kann ein Schiff „Schwer zu treffen“ verwenden, um\nLadungen auf anderen Aufwertungen wiederherzustellen,\nindem es rote Manöver vollständig ausführt?\n</strong><br>A: Nein. „Schwer zu treffen“ und andere Effekte, die mit dem Wiederherstellen\nvon Ladungen zu tun haben, werden nur auf die Ladungen dieser\nspezifischen Karte angewendet, es sei denn, der Effekt besagt explizit\netwas anderes (wie bei Chopper (Rebellen, %CREW%)).\n<br><br><strong>F: Wirft Kavil (Abschaum, BTL-A4-Y-Flügler) einen zusätzlichen\nAngriffswürfel, wenn er mit einem Geschützturm angreift\nund der Geschützturm-Winkelanzeiger auf seinen vorderen\nWinkel eingestellt ist?\n</strong><br>A: Ja. Außerdem würde Kavil auch einen zusätzlichen Angriffswürfel werfen,\nwenn er einen Angriff durchführt, der den zentralen Winkel verwendet,\nobwohl das Ziel per Definition ebenfalls in seinem vorderen Winkel ist.\n<br><br><strong>F: Kann Lieutenant Sai (Raumfähre der\nLambda-Klasse), falls\ner ein Schiff koordiniert, das eine Aktion gefolgt von einer\ngekoppelten Aktion durchführt, die gekoppelte Aktion\nanstatt der ursprünglichen Aktion durchführen?\n</strong><br>A: Nein. Lieutenant Sai kann nur die ursprüngliche Aktion durchführen.\n<br><br><strong>F: Die Pilotenfähigkeit von Airen Cracken (Z-95-Kopfjäger)\nerlaubt einem anderen befreundeten Schiff, eine Aktion\ndurchzuführen und als rote Aktion zu behandeln. Kann\ndieses Schiff eine rote Aktion durchführen und als rote\nAktion behandeln? Kann es eine violette Aktion durchführen\nund als rote Aktion behandeln?\n</strong><br>A: Es kann eine rote Aktion durchführen und sie als rote Aktion behandeln.\nAllerdings kann es <strong>keine</strong> violette Aktion durchführen und sie als rote Aktion\nbehandeln, da violette Aktionen schwieriger sind als rote.\n<br><br><strong>F: Wird die Schiffsfähigkeit der Angriffsplattform derSternenViper-Klasse (Mikrodüsen) auf die Fassrolle\nangewendet, die sie aufgrund von Fangstrahlmarkern\ndurchführen muss?\n</strong><br>A: Mikrodüsen beeinflusst diese Fassrolle. Der Spieler, dessen Effekt den\nFangstrahlmarker zugeordnet hat, bestimmt die Richtung und Position der\nSchablone.\n<br><br><strong>F: Kann ein TIE-x1-Turbojäger, der durch Verbesserter\nZielcomputer 1 zusätzlichen Würfel geworfen hat, später\nwährend des Angriffs eine Zielerfassung ausgeben? Falls ja,\nkann er 1 %HIT% in 1 %CRIT% ändern?\n</strong><br>A: Während er einen Angriff durchführt, kann ein TIE-x1-Turbojäger seine\nZielerfassung ausgeben, um Angriffswürfel neu zu werfen, nachdem er 1\nzusätzlichen Würfel geworfen hat.\nEr kann außerdem 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis ändern und dann\ndie Zielerfassung ausgeben, um Angriffswürfel neu zu werfen. Allerdings\nkann er kein %HIT%-Ergebnis in ein %CRIT%-Ergebnis ändern, nachdem er die\nZielerfassung ausgegeben hat, da er den Verteidiger nicht mehr erfasst\nhat.\n<br><br><strong>F: Kann „Todesfeuer“ (TIE-Bomber) ein Gerät starten, das\nnormalerweise nicht gestartet werden kann, nachdem\nTodesfeuer zerstört wurde?\n</strong><br>A: Nein.\n<br><br><strong>F: Falls „Todesfeuer“ (TIE-Bomber) oder ein Schiff, das mit\nPaige Tico (%GUNNER%) ausgerüstet ist, ein Gerät während der\nSystemphase platziert, kann jenes Schiff nach seiner\nZerstörung eine Bombe abwerfen?\n</strong><br>A: Ja. Ein Schiff kann nur einmal pro Systemphase ein Gerät platzieren, es\nkann jedoch durch eine Piloten- oder Aufwertungskartenfähigkeit eine\nweitere Bombe abwerfen.\nEs ist jedoch zu beachten, dass manche Karten, die das Platzieren eines\nGerätes außerhalb der Systemphase erlauben (wie Edon Kappehl (MG-100\nMG-100-SternenFestung) und „Genie“ (%ASTROMECH%)), den Text „falls du in dieser\nRunde noch kein Gerät abgeworfen oder gestartet hast“ beinhalten, was\ndas Platzieren eines weiteren Gerätes verhindert, falls das Schiff bereits\neines in der Systemphase platziert hat.\n<br><br><strong>F: Bei welcher Schiffsinitiative wird die Zustandskarte Abhör-\ngerät ausgelöst, die durch Informant (%CREW%) zugeordnet wird?\n</strong><br>A: Der Effekt von Abhörgerät wird bei der Initiative des Schiffs, das den\nZustand hat, ausgelöst.\n<br><br><strong>F: Wird ein Effekt auch dann abgehandelt, falls ein Schiff\nals Teil der Kosten dafür einen Entwaffnet-Marker\nerhalten würde, zum Beispiel durch Vorarbeiter Proach\n(Modifizierter TIE/ln-Jäger) oder Quinn Jast (M3-A-\nAbfangjäger), aber Raffineriebetreiber Yushyn (Modifizierter\nTIE/ln-Jäger) es stattdessen einen Stressmarker erhalten\nlässt?\n</strong><br>A: Ja. Die Fähigkeit von Raffineriebetreiber Yushyn ist ein Ersetzungseffekt,\nund falls sie einen Teil der Kosten ersetzt, die ein Schiff für einen Effekt\nbezahlen würde (in diesem Fall der Entwaffnet-Marker, den das Schiff\nerhalten würde), wird der Effekt trotzdem abgehandelt (siehe „Kosten\nbezahlen“).\nFähigkeiten, die ausgelöst werden, „nachdem ein Schiff einen Entwaffnet-\nMarker erhalten hat“, werden dennoch nicht abgehandelt, da es sich um\nein Zeitfenster handelt, das nicht ausgelöst wurde, und nicht um Kosten,\ndie ersetzt wurden.\n<br><br><strong>F: Wann verliert der Verteidiger einen Schild, falls ein Angriff\nmit Plasmatorpedos (%TORPEDO%) trifft?\n</strong><br>A: Ob ein Angriff trifft oder nicht, wird am Ende von Schritt 4 „Ergebnisse\nneutralisieren“ bestimmt. Deswegen verliert das Schiff ein Schild am Ende\nvon Schritt 4 und vor Schritt 5 „Schaden zuteilen“.\n<br><br><strong>F: Was passiert, falls ein Schiff seine eigene Zielerfassung auf\nsich selbst transferiert (etwa durch die Verwendung von\nAdmiral Holdo (%CREW%))?\n</strong><br>A: Ein Schiff kann sich nicht selbst als Ziel erfasst haben (vgl. Zielerfassung),\nweshalb die Zielerfassung verloren geht.\n</strong><br>A: Wenn ein Effekt die Schwierigkeit eines aufgedeckten\nManövers überprüft (etwa durch Cova Nells\nPilotenfähigkeit), werden dabei Effekte berücksichtigt, die\ndie Schwierigkeit des Manövers beeinflussen (etwa durch\nR4-Astromechdroide (%ASTROMECH%) oder Leia Organa\n(Widerstand, %CREW%%CREW%))?\n</strong><br>A: Nein. Die Schwierigkeit eines aufgedeckten Manövers entspricht der\ngedruckten Farbe. Geschwindigkeit und Flugrichtung eines aufgedeckten\nManövers entsprechen ebenfalls ihrem gedruckten Wert bzw. Typ.\n<br><br><strong>F: Wenn ein Effekt (wie Erfahrener Navigator) ein Schiff\nanweist, sein Rad auf ein anderes Manöver einzustellen\n„nachdem du dein Rad aufgedeckt hast“, wird das\nursprüngliche oder das neu eingestellte Manöver als das\naufgedeckte Manöver behandelt?\n</strong><br>A: Das aufgedeckte Manöver eines Schiffes ist das Manöver, auf das das Rad\neingestellt ist. Falls durch einen Effekt wie Erfahrener Navigator das Rad\nphysisch auf ein neues Manöver gedreht wird, ist dieses neue Manöver\ndas aufgedeckte Manöver des Schiffes. Falls mehrere Effekte das Rad\nbetreffen, ist das aufgedeckte Manöver das zuletzt eingestellte, nachdem\nalle das Rad betreffende Effekte abgehandelt sind.\n<br><br><strong>F: Falls ein Schiff von Padmé Amidalas Pilotenfähigkeit\nbetroffen ist und 1 seiner %FOCUS%-Ergebnisse modifizert,\nkann die Fähigkeit von Imperator Palpatine (Imperium, %CREW%)\nverwendet werden, um ein zweites %FOCUS%-Ergebnis zu\nmodifizieren?\n</strong><br>A: Ja. Das mit Imperator Palpatine (Crew) ausgerüstete Schiff modifiziert das\nzweite Fokus-Ergebnis jenes Schiffes und nicht das Schiff selbst.\n<br><br><strong>F: Falls ein Effekt eine Maximalanzahl für die zu werfenden\nWürfel festlegt (etwa Kanonier der Siebten Flotte (%GUNNER%) oder\nVorausschauender Schuss (%FORCE%)) und ein weiterer Effekt\nangibt, dass zusätzliche Würfel über dieses Maximum\nhinaus geworfen werden, spielt die Reihenfolge, in der diese\nEffekte angewandt werden, eine Rolle?\n</strong><br>A: Nein. Sobald ein Effekt eine zu werfende Maximalanzahl an Würfeln festlegt\n(„wirf 1 zusätzlichen Würfel (bis zu einem Maximum von X)“ oder „Der\nVerteidiger kann nicht mehr als X Verteidigungswürfel werfen“), wird\ndieses Maximum in Schritt „2</strong><br>A: Angriffswürfel werfen“ oder „Schritt 2b:\nVerteidigungswürfel werfen“ (vgl. Angreifen) angewandt, nachdem alle\nEffekte angewandt wurden, die das Schiff mehr oder weniger Würfel werfen\nlassen.\n<br><br><strong>F: Falls ein Schiff mit Wendigkeitswert 0 (wie der VCX-100)\nZiel eines Effektes wird, der es 1 Verteidigungswürfel\nweniger werfen lässt, und eines anderen Effektes, der es\n1 Verteidigungswürfel mehr werfen lässt, beeinflusst die\nReihenfolge dieser Effekte die Anzahl der tatsächlich zu\nwerfenden Würfel?\n</strong><br>A: Nein. Unabhängig davon, welcher Effekt zuerst angewandt wird, das\nSchiff wirft 0 Verteidigungswürfel. Wird der negative Modifikator\nzuerst angewandt, wird sein Verteidigungspool zu „–1“ (1 negativer\nVerteidigungswürfel), dann wird der positive Modifikator angewandt, der\nden Verteidigungspool wieder auf 0 anhebt. Falls der positive Modifikator\nzuerst angewandt wird, reduziert der negative Modifikator die Anzahl im\nAnschluss auf 0.\nEs ist zu beachten, dass es nach dem Anwenden der Modifikatoren,\nbevor die Würfel geworfen werden, ein Standardminimum von 0 gibt\n(vgl. Angreifen). Deshalb wirft ein Schiff, das aufgrund von Modifikatoren\nweniger als 0 Würfel werfen würde, stattdessen immer 0 Würfel.\nB: Falls ein Schiff mit Wendigkeitswert 0 (wie der VCX-100)\nangestrengt ist und gegen einen Angriff in Angriffsreichweite\n1 verteidigt (wofür es normalerweise 0 Verteidigungswürfel\nwerfen würde), entfernt es dann den Anstrengungsmarker?\n</strong><br>A: Ja. Auch wenn es aufgrund des festen Minimums von 0 Würfeln nicht\ngezwungen werden kann, weniger als 0 Würfel zu werfen, wird der Effekt\nvon „wirf 1 Verteidigungswürfel weniger“ angewandt (vgl. Angreifen),\nweshalb der Anstrengungsmarker entfernt wird.\n<br><br><strong>F: Falls ein mit Kanan Jarrus (%CREW%) ausgerüstetes Schiff\nTrägheitsdämpfer (%ILLICIT%) verwendet, um ein weißes\nstationäres Manöver durchzuführen, in welcher Reihenfolge\nwerden Kanans Fähigkeit und der „erhalte 1 Stressmarker“-\nAbschnitt der Trägheitsdämpfer abgehandelt?\n</strong><br>A: Beide Fähigkeiten haben dasselbe Zeitenster: nachdem das Schiff sein\nManöver ausgeführt hat. Falls der Spieler sich also entscheidet, eine\nMachtladung auszugeben und so Kanans Fähigkeit zu aktivieren, werden\nnach dem Ausführen des weißen stationären Manövers zwei Fähigkeiten\nin die Fähigkeits-Warteschlange eingereiht: „erhalte 1 Stressmarker“\nder Trägheitsdämpfer und „entferne 1 Stressmarker“ von Kanan Jarrus.\nDer Spieler, der die beiden Effekte kontrolliert, entscheidet über die\nReihenfolge, in der die Fähigkeiten in die Warteschlange eingereiht werden,\nund die Fähigkeiten werden in dieser Reihenfolge abgehandelt. Falls der\nSpieler beabsichtigt, dass das Schiff erst einen Stressmarker erhält und\ndann verliert, muss er die Fähigkeit der Trägheitsdämpfer vor Kanans\nFähigkeit einreihen.\n<br><br><strong>F: Dalan Oberos [M12-L-Kimogila-Jäger] Pilotenfähigkeit\nlautet: „Zu Beginn der Kampfphase darfst du 1 Schiff, das\nSchilde hat, in deinem %BULLSEYEARC%  wählen und 1 %CHARGE% ausgeben. Falls\ndu das tust, verliert jenes Schiff 1 Schild und du stellst\n1 Schild wieder her.“ Müssen beide Bestandteile des\nEffekts („verliert jenes Schiff 1 Schild“ und „du stellst 1\nSchild wieder her“) abhandelbar sein, damit ich einen davon\nabhandeln kann?\n</strong><br>A: Ja. „Verliert jenes Schiff 1 Schild und du stellst 1 Schild wieder her“ ist\nein einzelner Effekt, daher müssen beide Teile abgehandelt werden können,\ndamit er eintritt.\n<br><br><strong>F: Heben die Fähigkeiten von Paige Tico (%CREW%) und „Todesfeuer“\n(TIE-Bomber) die „ein Gerät pro Runde“-Beschränkung auf?\n</strong><br>A: Ja. Diese Fähigkeiten erlauben es einem Schiff ein zweites Gerät in\nderselben Runde abzuwerfen (zum passenden Zeitpunkt), da sie die\nBeschränkung „falls du in dieser Runde noch kein Gerät abgeworfen oder\ngestartet hast“ nicht haben (wie bei Edon Kappehl).\n<br><br><strong>F: Falls ein Effekt besagt, dass ein Schiff „einen Schild verliert“\n(oder „Schilde verliert“), hat dieses Schiff dann Schaden\nerlitten?\n</strong><br>A: Nein. Das Erleiden von Schaden kann dazu führen, dass ein Schiff Schilde\nverliert. Falls ein Effekt dazu führt, dass ein Schiff direkt einen oder\nmehrere Schilde verliert, hat es hingegen keinen Schaden genommen.\n<br><br><strong>F: Wie ist Han Solos Fähigkeit (Rebellen, Modifizierter\nleichter YT-1300-Frachter) einzuordnen? Ist sie eine\nWürfelmodifikation? Ein Neuwerfen? Wann genau wirkt der\nEffekt?\n</strong><br>A: Han Solos Fähigkeit wird als Würfelmodifikation behandelt, nicht als\nNeuwerfen. Aufgrund dieser Einordnung wird dieser Effekt während\ndes Schrittes „Angriffswürfel modifizieren“ oder des Schrittes\n„Verteidigungswürfel modifizieren“ ausgelöst. Dabei ist allerdings zu\nbeachten, dass er auch andere Würfelwürfe betreffen kann, etwa einen\nWurf zur Ermittlung, ob ein Schiff durch die Überschneidung mit oder das\nHindurchbewegen durch ein Hindernis Schaden erleidet.\n<br><br><strong>F: Wie interagiert Han Solos Fähigkeit (Rebellen, Modifizierter\nleichter YT-1300-Frachter) mit C-3PO (Rebellen, %CREW%)?\n</strong><br>A: Der Abschnitt „Falls du das tust und genau so viele Ergebnisse wirfst\n…“ von C-3POs Fähigkeit wird nach dem Würfelwurf, vor dem Schritt\n„Verteidigungswürfel modifizieren“ ausgelöst. Daher kommt Han Solos\nEffekt erst nach der Abhandlung von C-3POs Effekt zum Tragen. Falls\nHan Solo nach der Verwendung von C-3PO verwendet wird, muss der\nhinzugefügte Würfel ebenfalls neu geworfen werden.\n<br><br><strong>F: Wie interagiert Han Solos (Rebellen, Modifizierter leichter\nYT-1300-Frachter) Fähigkeit mit „Midnight“?\n</strong><br>A: „Midnight“ verhindert Würfelmodifikationen. Da Han Solos Fähigkeit eine\nWürfelmodifikation ist, verhindert „Midnight“ die Verwendung.\n<br><br><strong>F: Falls ein Schiff ein stätionäres Manöver im Winkel in\nReichweite 2 eines feindlichen Schiffes mit Schnellfeuer\n(oder im zentralen Winkel eines feindlichen Schiffes mit\nVorausahnung) ausführt, kann das Schiff mit Schnellfeuer\n(oder Vorausahnung) den Bonusangriff durchführen?\n</strong><br>A: Ja.\n<br><br><strong>F: Solange „Geissel“ Skutu einen Angriff unter Verwendung\nvon Schnellfeuer durchführt, falls der Verteidiger sich in\n„Geissel“ Skutus zentralem Winkel befindet, fügt „Geissel“\nSkutu einen zusätzlichen Angriffswürfel hinzu?\n</strong><br>A: Ja.\n<br><br><strong>F: Falls ein Schiff mit der Schiffsfähigkeit Präzisionssteuerung\n(oder einer anderen Fähigkeit, die ausgelöst wird,\n„nachdem du ein Manöver (vollständig) ausgeführt hast“)\nein Manöver im Winkel und in Reichweite 2 eines Schiffes\nmit Schnellfeuer vollständig ausführt, wie wird dies\nabgehandelt?\n</strong><br>A: Hier gibt es verschiedene Möglichkeiten in Abhängigkeit davon, welcher\nSpieler der Startspieler ist.\nIn allen Fällen werden beide Fähigkeiten („Nachdem du ein Manöver\nvollständig ausgeführt hast, darfst du 1 Machtladung ausgeben, um Schub\nzu geben oder eine Fassrolle durchzuführen“ und „Nachdem ein feindliches\nSchiff ein Manöver ausgeführt hat, darfst du diesen Angriff gegen ihn als\nBonusangriff durchführen“) in die Fähigkeits-Warteschlange eingereiht.\nFalls der Startspieler das Schiff mit der Präzisionssteuerung kontrolliert,\nhandelt dieser Spieler diese Fähigkeit ab, bevor Schnellfeuer abgehandelt\nwird. Falls nach der Durchführung des Schubs oder der Fassrolle das Schiff\nmit der Präzisionssteuerung nicht mehr in Reichweite oder im Winkel\nist und nicht mehr als Ziel für Schnellfeuer gewählt werden kann, wird\nSchnellfeuer nicht abgehandelt und aus der Warteschlange entfernt.\nFalls der zweite Spieler das Schiff mit der Präzisionssteuerung kontrolliert,\nhandelt sein Gegner Schnellfeuer zuerst ab.\n<br><br><strong>F: Wie werden Fähigkeiten abgehandelt, die die\nGeschwindigkeit, Flugrichtung und/oder Schwierigkeit eines\nManövers verändern, das während des Schrittes „Rad\naufdecken“ aufgedeckt wird und während des Schrittes\n„Manöver ausführen“ ausgeführt wird? Falls z. B. Hera\nSyndulla (Jagdshuttle) mit R4-Astromechdroide und\nErfahrener Navigator ausgerüstet ist und zusätzlich die\nSchadenskarte Triebwerksschaden hat, was passiert?\n</strong><br>A: R4-Astromechdroide und Triebwerksschaden (sowie andere dauerhafte\nEffekte, die die Schwierigkeit eines Manövers verändern, etwa\nNien Nunb (%CREW%), Programmierung von L3-37 und Leia Organa (Rebellen und\nWiderstand, %CREW%)) werden nur während des Schrittes „Manöver ausführen“\nangewandt, für Effekte, die ausgelöst werden, bevor ein Schiff ein Manöver\nausführt (z. B. BB-Astromechdroide) und für Effekte, die ausgelöst werden,\nnachdem ein Schiff ein Manöver ausgeführt hat (z. B. Schwer zu fassen).\nDaher kann der Spieler von Hera, nachdem Heras Rad aufgedeckt worden\nist, ihre Pilotenfähigkeit und die Fähigkeit von Erfahrener Navigator in\nbeliebiger Reihenfolge der Fähigkeits-Warteschlange hinzufügen. Beide\nFähigkeiten werden abgehandelt und falls die Fähigkeit von Erfahrener\nNavigator abgehandelt wird, wird die Schwierigkeit des Manövers während\ndes Schrittes „Manöver ausführen“ erhöht (d. h. zu dem Zeitpunkt, zu dem\nHeras Pilotenfähigkeit abgehandelt wird, ist die Schwierigkeit noch nicht\nerhöht worden).\nWährend des Schrittes „Manöver ausführen“ sind dann alle Fähigkeiten, die\ndie Schwierigkeit des Manöver verändern, wie üblich kumulativ.\nEs ist zu beachten, dass Fähigkeiten, die ein Manöver verändern, ohne ein\nneues Manöver auf dem Rad einzustellen, nicht das \"aufgedeckte Manöver\"\ndes Schiffes beeinflussen, auf das Fähigkeiten wie etwa die Pilotenfähigkeit\nvon Ric Olié Bezug nehmen.\n<br><br><strong>F: Angenommen, ein Sternenjäger der Nantex-Klasse führt\nein Manöver aus. Danach benutzt er seine Fähigkeit\nFangstrahl-Zielsystem und teilt sich dadurch selbst einen\nFangstrahlmarker zu, um seinen Geschützturm-Winkel zu\ndrehen. Nun ist er gefangen und fliegt als Konsequenz eine\nFassrolle. Diese bringt ihn in Überschneidung mit einer\nTrümmerwolke, wodurch er einen Stressmarker erhält. Wie\nhandle ich das alles ab?\n</strong><br>A: Nachdem ein Sternenjäger der\nNantex-Klasse sein Manöver\nausgeführt hat, hat er die Möglichkeit, eine Fähigkeit mit dem Effekt\n„erhalte 1 Fangstrahlmarker, um eine %ROTATEARC%-Aktion durchzuführen“ in die\nWarteschlange einzureihen.\nSobald diese Fähigkeit abgehandelt wird, bezahlt der Sternenjäger der Nantex-Klasse die Kosten („erhalte 1 Fangstrahlmarker“), um diesen Effekt\nabzuhandeln. Der Sternenjäger der\nNantex-Klasse erhält 1 Fangstrahl-\nmarker und führt dann die Aktion „Rotieren“ durch. Beachte, dass er den\nSpieleffekt des Gefangenwerdens (der ausgelöst wird, sobald ein Schiff\nzum ersten Mal in einer Runde gefangen wird) erst abhandelt, nachdem\ner diese Fähigkeit mit dem Beenden der Aktion „Rotieren“ vollständig\nabgehandelt hat.\nNachdem die Fähigkeit vollständig abgehandelt ist, wird der Spieleffekt,\nder ausgelöst wird, nachdem ein Schiff gefangen worden ist, auf den\nSternenjäger der\nNantex-Klasse angewandt (bevor andere Fähigkeiten\nin der Warteschlange abgehandelt werden). Dadurch wird sein Spieler\nveranlasst, das Schiff – falls gewünscht – zu bewegen. Falls er das tut und\ndiese Bewegung den Sternenjäger in eine Trümmerwolke führt, handelt\ner den Effekt der Bewegung durch oder des Überschneidens mit der\nTrümmerwolke ab, einschließlich des Erhalts eines Stressmarkers.\nAbschließend werden alle anderen Fähigkeiten in der Warteschlange\nabgehandelt.\n<br><br><strong>F: Kann Schnellfeuer oder Voraussicht während der\nKampfphase als Spezialwaffe für den Angriff eines Schiffes\ngewählt werden?\n</strong><br>A: Ja. Die Formulierung „nachdem ein feindliches Schiff ein Manöver\nausgeführt hat, darfst du diesen Angriff als Bonusangriff gegen\nes durchführen“ erlaubt es, den Angriff als Bonusangriff unter den\nangegebenen Bedingungen zu nutzen, sie verbietet jedoch nicht, ihn\nwährend der Kampfphase zu verwenden.\n<br><br><strong>F: Betreffen Fähigkeiten, die sich auf Aufwertungskarten\neines bestimmten Typs beziehen (wie Captain Jonus’\nPilotenfähigkeit), Aufwertungen mit mehreren Typen, die\ndiesen Typ beinhalten?\n</strong><br>A: Ja. Captain Jonus’ Fähigkeit kann z. B. mit der Raketensalve (%MISSILE%%MISSILE%) eines\nbefreundeten Schiffes verwendet werden, und Paige Ticos (%GUNNER%) Fähigkeit\nmit einer Elektro-Protonen-Bombe (%DEVICE%%MODIFICATION%). Jede dieser Aufwertungen hat\nden notwendigen Typ (%MISSILE% bei Raketensalve, %DEVICE% bei der Elektro-Protonen-\nBombe) und zusätzlich einen weiteren Typ.\nBeachte, dass die Fähigkeit Waffenaufhängung sich nicht so verhält, da sie\neinen speziellen Aufwertungsslot gewährt.\n<br><br><strong>F: Wenn man sich mit Kaz’\nFireball eine Schadenskarte\nansieht, muss man sie dem Gegner zeigen?\n</strong><br>A: Nein. Die Karte muss dem Gegner nicht gezeigt werden.\n<br><br><strong>F: Kann eine\nFireball, die keine verdeckten Schadenskarten\nhat, mit denen sie die Kosten ihrer Schiffsfähigkeit\n„Explosion mit Flügeln“ (1 Schadenskarte offenlegen)\nbezahlen könnte, trotzdem den Effekt dieser Fähigkeit\n(1 Entwaffnet-Marker entfernen) abhandeln?\n</strong><br>A: Nein. Da das Offenlegen einer Schadenskarte die Kosten für das Entfernen\ndes Entwaffnet-Markers darstellt, kann der Effekt nicht abgehandelt\nwerden, wenn die Kosten nicht bezahlt werden können.\n<br><br><strong>F: Falls „Rush“ während der Kampfphase vor Beginn des\nInitativschritts 2 beschädigt wird, wodurch seine Initiative\nauf 6 erhöht wird, was passiert?\n</strong><br>A: „Rush“ kämpft beim aktuellen Initiativschritt, nachdem alle anderen Schiffe\ndieses Schrittes gekämpft haben.\n<br><br><strong>F: Erlaubt es die Schiffsfähigkeit Stabilisatorkerbe des TIE\nder Minengilde, dass er durch oder auf Asteroiden eine\nFassrolle fliegt?\n</strong><br>A: Ja.\n<br><br><strong>F: Kann Hondo Ohnaka [%CREW%] feindliche Schiffe koordinieren?\nFalls ja, wer bestimmt die Aktion, die das Schiff durchführt?\n</strong><br>A: Ja, Hondo kann feindliche Schiffe so koordinieren. Falls er das tut,\nbestimmt der Spieler, der das koordinierte Schiff kontrolliert, welche Aktion\ndas Schiff durchführt.\n<br><br><strong>F: Wann tritt Count Dookus [%CREW%] Fähigkeit in Kraft?\n</strong><br>A: Count Dookus Fähigkeit tritt in Kraft, nachdem die Würfel geworfen worden\nsind. (Vor dem Schritt „Würfel modifizieren“ eines Angriffs oder bevor\nandere Effekte, die Würfelergebnisse modifizieren, angewendet werden,\nfalls die Würfel zu einem anderen Zeitpunkt gewürfelt wurden.)\n<br><br><strong>F: Was passiert, wenn zwei Spieler Count Dooku [%CREW%] beim\nselben Würfelwurf einsetzen?\n</strong><br>A: Der Startspieler handelt Count Dooku ab. Falls der Wurf nicht das\nErgebnis enthält, das der Startspieler benannt hat, muss der Spieler, der\ndas Schiff kontrolliert, ein Ergebnis in das benannte Ergebnis ändern.\nDann handelt der zweite Spieler Count Dooku ab. Falls der Wurf nicht das\nErgebnis enthält, das der zweite Spieler benannt hat, muss der Spieler, der\ndas Schiff kontrolliert, ein Ergebnis in das benannte Ergebnis ändern.\nDas bedeutet, dass es möglich ist, dass derselbe Würfel so zwei Mal\nmodifiziert wird.\n<br><br><strong>F: Kann die Schwierigkeit eines violetten Manövers erhöht\noder verringert werden?\n</strong><br>A: Nein. Allerdings können Effekte dazu führen, dass du das Manöver als eine\nandere Farbe behandelst.\n<br><br><strong>F: In welchem Aufbauschritt tritt „Explosion mit Flügeln“\n(Fireball) in Kraft?\n</strong><br>A: Während <strong>Schritt 6: Sonstiges Material vorbereiten</strong>, nachdem\nder Schadensstapel gemischt wurde.\n<br><br><strong>F: Wie interagiert Chewbacca (Widerstand, %CREW%) mit der\nSchiffsfähigkeit „Explosion mit Flügeln“?\n</strong><br>A: Chewbaccas Fähigkeit „<strong>Aufbau</strong>: Verliere 1 %CHARGE%“ tritt in Kraft, nachdem\ndas Schiff, das mit Chewbacca ausgerüstet ist, während <strong>Schritt 5:\nStreitkräfte platzieren</strong> platziert worden ist.\n„Explosion mit Flügeln“ teilt einem Schiff eine Schadenskarte während\n<strong>Schritt 6: Sonstiges Material vorbereiten</strong> zu.\nAllerdings werden ausgelöste Fähigkeiten ohne das Stichwort „<strong>Aufbau:</strong>“\nnicht während des Aufbaus ausgelöst, außer, sie erwähnen explizit einen\nZeitpunkt während des Aufbaus. Das heißt, dass Chewbaccas zweite\nFähigkeit („Nachdem einem befreundeten Schiff in Reichweite 0–3\n1 Schadenskarte zugeteilt worden ist, stelle 1 %CHARGE% wieder her.“), die weder\nden Aufbau erwähnt noch das entsprechende Stichwort hat, nicht durch\n„Explosion mit Flügeln“ ausgelöst wird.\n<br><br><strong>F: Kann durch „Holo“s (TIE/BA-Abfangjäger) Schiffsfähigkeit\nein roter Zielerfassungsmarker, der „Holo“ zugeordnet\nwurde, auf ein befreundetes Schiff transferiert werden?\n</strong><br>A: Ja. Dieser rote Marker zählt als „dein Marker“, also kann „Holo“ ihn\ntransferieren.\n<br><br><strong>F: Kann durch „Holo“s (TIE/BA-Abfangjäger) Schiffsfähigkeit\nein roter Zielerfassungsmarker, der durch „Holo“ einem\nanderen Schiff zugeordnet wurde, auf ein befreundetes\nSchiff transferiert werden?\n</strong><br>A: Nein. „Holos“ Zielerfassung ist ein roter Marker, der einem anderen Schiff\nzugeordnet wurde. Er zählt nicht als „dein Marker“ für jene Fähigkeit (oder\nandere Fähigkeiten, die sich auf „deine Marker“ beziehen). Allerdings ist es\n„Holo“s Zielerfassung und zählt als „deine Zielerfassung“ für Fähigkeiten,\ndie sich auf „deine Zielerfassung“ beziehen.\n<br><br><strong>F: Nachdem Leia Organa (Widerstand, %CREW%) die Schwierigkeit\ndes Manövers eines Schiffes verringert hat, falls die\nverringerte Schwierigkeit blau ist, kann das Schiff den BB-\nAstromechdroiden verwenden, um eine %BARRELROLL% durchzuführen?\n</strong><br>A: Ja. Leia Organa (Widerstand, %CREW%) hat eine Fähigkeit, die in Kraft tritt,\nnachdem das Rad aufgedeckt worden ist, und die Fähigkeit von BB-\nAstromechdroide wird nachfolgend ausgelöst, bevor das Schiff sein\nManöver ausführt.\n<br><br><strong>F: Was bedeutet es genau, wenn auf Automatisches\nZielsystem von der „kürzesten gültigen Angriffsreichweite“\ndie Rede ist?\n</strong><br>A: Die „kürzeste gültige Angriffsreichweite“ ist die kürzeste Angriffsreichweite\neines bestimmten Angriffs, die einen oder mehrere mögliche gültige\nVerteidiger hat. Ein gültiger Verteidiger ist ein Schiff in der korrekten\nAngriffsreichweite im Winkel, das die Voraussetzungen des gewählten\nAngriffs erfüllt (wie z. B. <strong>Angriff [%LOCK%]</strong>).\nBeispiel: Ein TIE/SF-Jäger mit Erschütterung raketen hat ein feindliches\nSchiff in seinem %FRONTARC% in Reichweite 0, ein feindliches Schiff außerhalb seines %FRONTARC% \nin Reichweite 1, zwei feindliche Schiffe in seinem %FRONTARC% in Reichweite 2\nund ein feindliches Schiff (das es als Ziel erfasst hat) in seinem %FRONTARC% in\nReichweite 3. Sein %SINGLETURRETARC% ist in seinem %FRONTARC%.\nDer TIE/SF-Jäger misst die Reichweite (wobei er obige Informationen\nerhält) und wählt eine Waffe wie gewohnt.\nFalls er seine <strong>Primärwaffe</strong> wählt, bestimmt er die kürzeste gültige\nAngriffsreichweite wie folgt:<br>\nReichweite 0: Reichweite 0 ist keine gültige Angriffsreichweite für seine\nPrimärwaffe, also kann er das Schiff in seinem %FRONTARC% in Reichweite 0 nicht\nwählen.<br>\nReichweite 1: Das Schiff außerhalb seines %FRONTARC% in Reichweite 1 ist\nnicht im Winkel, also kann er es nicht wählen. Es gibt keine möglichen\ngültigen Verteidiger in Reichweite 1, also ist Reichweite 1 keine gültige\nAngriffsreichweite.<br>\nReichweite 2: Er hat 2 feindliche Schiffe in seinem %FRONTARC% in Reichweite 2. Der\nAngriff hat keine besonderen Voraussetzungen, also ist Reichweite 2 eine\ngültige Angriffsreichweite. Der angreifende Spieler kann eines der beiden\nSchiffe als Verteidiger bestimmen, unabhängig davon, welches physisch\nnäher ist.<br>\nReichweite 3: Es gab mindestens ein gültiges Ziel in Reichweite 2, also\nkann Reichweite 3 nicht die kürzeste gültige Reichweite sein. Er kann das\nSchiff in seinem %FRONTARC% in Reichweite 3 nicht wählen.<br>\nFalls er seine <strong>Erschütterungsraketen</strong> wählt, bestimmt er die\nkürzeste gültige Angriffsreichweite wie folgt:<br>\nReichweite 0: Reichweite 0 ist keine gültige Angriffsreichweite für\ndie Erschütterungsraketen, also kann er das Schiff in seinem %FRONTARC% in\nReichweite 0 nicht wählen.<br>\nReichweite 1: Reichweite 1 ist keine gültige Angriffsreichweite für die\nErschütterungsraketen, also könnte er das Schiff in Reichweite 1 selbst\ndann nicht wählen, wenn es im Winkel wäre.<br>\nReichweite 2: Er hat 2 feindliche Schiffe in seinem %FRONTARC% in Reichweite 2.\nAllerdings haben die Erschütterungsraketen die besondere Voraussetzung\n<strong>Angriff [%LOCK%]</strong> und der Angreifer hat keines der Schiffe in Reichweite 2 als\nZiel erfasst, also ist Reichweite 2 keine gültige Angriffsreichweite für die\nErschütterungsraketen.<br>\nReichweite 3: Er hat ein feindliches Schiff in seinem %FRONTARC% in Reichweite 3 als\nZiel erfasst. Also ist Reichweite 3 eine gültige Angriffsreichweite und das\nSchiff in Reichweite 3 kann als Verteidiger bestimmt werden.<br>\nFalls der TIE/SF zwei Zielerfassungen hätte, eine auf ein Schiff in\nReichweite 2 und die andere auf das Schiff in Reichweite 3, wäre\nReichweite 2 die kürzeste gültige Angriffsreichweite, also müsste er das\nSchiff, das er in Reichweite 2 als Ziel erfasst hat, wählen.\n<br><br><strong>F: Wie oft kann Kalani (%TACTICALRELAY%) ausgelöst werden, nachdem ein\nfeindliches Schiff ein Manöver ausgeführt hat, falls es im\nZentralen Winkel mehrerer befreundeter Schiffe ist?\n</strong><br>A: Ein Mal.\n<br><br><strong>F: Bleiben Effekte, die „solange du einen Angriff durchführst“\nangewendet werden (wie z. B. Feuerkontrollsystem),\nwährend des Schrittes „Nachwirkungen“ des Angriffs\nbestehen?\n</strong><br>A: Nein. Der Schritt „Nachwirkungen“ findet nach jedem einzelnen Angriff\nstatt, ist aber kein Teil des Angriffs.\nDas bedeutet auch, dass ein Bonusangriff, der während des Schrittes\n„Nachwirkungen“ durchgeführt wird, nicht von „solange du einen Angriff\ndurchführst“-Effekten des ursprünglichen Angriffs betroffen ist.\n<br><br><strong>F: Wenn ein Schiff angewiesen wird, durch einen einzigen\nEffekt 2 oder mehr Marker zu erhalten (wie z. B. Admiral\nSloane), wird dies als einmaliges Erhalten von 2 oder mehr\nMarkern oder als zwei- oder mehrmaliges Erhalten von\n1 Marker abgehandelt?\n</strong><br>A: Es wird als einmaliges Erhalten von 2 oder mehr Markern abgehandelt.\nWenn ein Schiff also durch einen einzigen Effekt wie dem von Admiral\nSloane 2 oder mehr Marker erhält, werden Fähigkeiten, die „nachdem du\neinen Marker erhalten hast“ ausgelöst werden, ein Mal ausgelöst.\n<br><br><strong>F: Kann Major Rhymer einen %TORPEDO%- oder %MISSILE%-Angriff in\nAngriffsreichweite 0 durchführen?\n</strong><br>A: Ja. Major Rhymers Pilotenfähigkeit überschreibt die Grundregel, dass\nSchiffe keine Angriffe in Reichweite 0 ausführen können.\n<br><br><strong>F: Wenn ein Schiff, das mit Thermaldetonatoren (%DEVICE%)\nausgerüstet ist, 2 Thermaldetonatoren abwerfen will, zählt\ndas als ein- oder zweimaliges Abwerfen von einem Gerät?\n</strong><br>A: Im Gegensatz zu Clusterminen (%DEVICE%) werden Thermaldetonatoren einer nach\ndem anderen abgeworfen und jeder abgeworfene Thermaldetonator zählt\nals einmaliges Abwerfen von einem Gerät. Das bedeutet Folgendes:<br>\n• Nachdem Paige Tico (MG-100-SternenFestung) einen Thermaldetonator\nabgeworfen hat, darf sie 1 %CHARGE% ausgeben, um 1 zusätzlichen Thermal-\ndetonator abzuwerfen. Da sie nur 1 Ladung hat, kann sie normalerweise\nmaximal 3 Thermaldetonatoren abwerfen.<br>\n• Nachdem ein Schiff mit Paige Tico (%CREW%) zerstört worden ist, darf jenes\nSchiff 1 Thermaldetonator abwerfen.<br>\n• Fähigkeiten, die ausgelöst werden, nachdem ein Gerät abgeworfen\nworden ist, werden pro abgeworfenem Thermaldetonator ausgelöst.\nFür die Reihenfolge der Effekte bedeutet das Folgendes: Der erste\nThermaldetonator wird abgeworfen und alle Fähigkeiten, die dadurch\nausgelöst werden (wie z. B. „Todesregen“ [TIE/CA-Vergelter] oder\nZeitverzögerter Zünder [%MODIFICATION%]), werden der Warteschlange hinzugefügt\nund abgehandelt. Danach wird der zweite Thermaldetonator abgeworfen\nund alle Fähigkeiten, die dadurch ausgelöst werden, werden der\nWarteschlange hinzugefügt und abgehandelt.<br>\n• Flugbahnsimulator (%SENSOR%) kann für bis zu 1 Thermaldetonator verwendet\nwerden, doch da die 2 Geräte mit unterschiedlichen Schablonen\nabgeworfen (oder gestartet) werden müssen, können nicht beide so\ngestartet werden.\n<br><br><strong>F: Zählen die Schablonen für linke Drehungen (oder Wenden)\nund rechte Drehungen (oder Wenden) mit derselben\nGeschwindigkeit als unterschiedliche Schablonen?\n</strong><br>A: Ja. Auch wenn die beiden Schablonen mit demselben physischen Hilfsmittel\nabgehandelt werden, zählen sie als unterschiedliche Schablonen.\nBeispielsweise zählen die [3 %TURNLEFT%]- und die [3 %TURNRIGHT%]-Schablone, obwohl\nsie dasselbe physische Hilfsmittel verwenden (nur umgedreht), als\nunterschiedliche Schablonen. Wenn also ein Effekt verlangt, dass „zwei\nunterschiedliche Schablonen“ gewählt werden, dürfen die [3 %TURNLEFT%]- und die\n[3 %TURNRIGHT%]-Schablone gewählt werden.\n<br><br><strong>F: Was ist dieses Konstrukt, das auf Marg-Sabl-Einkesselung\n(%TALENT%) erwähnt wird?\n</strong><br>A: Konstrukte sind … Moment mal, das dürft ihr noch gar nicht wissen!\nWartet’s ab!"
+        }
+      }
+    };
+  };
 };
 
 /*

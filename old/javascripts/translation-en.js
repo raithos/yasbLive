@@ -112,7 +112,7 @@ exportObj.translations.English = {
       return "" + (translator('slot', slot)) + " Upgrade";
     },
     damageHeader: function(translator, type) {
-      return "Damage Card (" + (translator('type', type)) + ")";
+      return "Damage Card (" + (translator('types', type)) + ")";
     },
     "unreleased": "unreleased",
     "epic": "epic",
@@ -123,6 +123,7 @@ exportObj.translations.English = {
     "Collection warning": "You cannot field this list with your collection!",
     "Ship number warning": "A tournament legal squad must contain 3-8 ships!",
     "Multi-Faction warning": "Multi-Faction Lists are NEVER tournament legal!",
+    "Epic Unofficial": "Epic points are unofficial and not supported, endorsed, or accepted by AMG. Also, not balanced, so don't expect updates or it to be good. Please don't make a big deal about it.",
     "XWS Import Dialog": "Import your list via XWS into YASB.<br><i>XWS is a common format to share lists between applications.</i>",
     "Copy below simple text": "<p>Copy the below and paste it elsewhere.</p>",
     "Copy below markdown": "<p>Copy the below and paste it into your reddit post.</p><p>Make sure that the post editor is set to markdown mode.</p>",
@@ -134,8 +135,8 @@ exportObj.translations.English = {
     "Choose obstacles dialog": "Choose up to three obstacles, to include in the permalink for use in external programs",
     "Mark obstacles": "Mark the three obstacles you are using.",
     "Scan QR-Code": "Scan to open this list in the builder",
-    "View in YASB": "View in YASB 2",
-    "YASB advertisment": "YASB 2 is a simple, fast, and easy to use squad builder for X-Wing Miniatures by Atomic Mass Games.",
+    "View in YASB": "View in YASB",
+    "YASB advertisment": "YASB is a simple, fast, and easy to use squad builder for X-Wing Miniatures by Atomic Mass Games.",
     collectionContentShips: function(translator, number) {
       return "You have " + number + " ship " + (number === 1 ? 'model' : 'models') + " in your collection.";
     },
@@ -157,6 +158,9 @@ exportObj.translations.English = {
     varPointCostsConditionBase: function(translator, values) {
       return "base size is small, medium, large or huge";
     },
+    varPointCostsConditionFaction: function(translator, values) {
+      return "faction is " + values;
+    },
     "Missing Item List:": "To field this squad you need the following additional items:",
     pilotFlyingShip: function(translator, pilot, ship) {
       return "Pilot " + pilot + " flying " + ship;
@@ -177,7 +181,7 @@ exportObj.translations.English = {
     "Name in use": "You already have a squad with that name",
     "select OAuth provider": "Select one of the OAuth providers below to log in and start saving squads.",
     "OAuth explanation": "<p>\n    <a href=\"http://en.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> is an authorization system which lets you prove your identity at a web site without having to create a new account.  Instead, you tell some provider with whom you already have an account (e.g. Google or Facebook) to prove to this web site that you say who you are.  That way, the next time you visit, this site remembers that you're that user from Google.\n</p>\n<p>\n    The best part about this is that you don't have to come up with a new username and password to remember.  And don't worry, I'm not collecting any data from the providers about you.  I've tried to set the scope of data to be as small as possible, but some places send a bunch of data at minimum.  I throw it away.  All I look at is a unique identifier (usually some giant number).\n</p>\n<p>\n    For more information, check out this <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">introduction to OAuth</a>.\n</p>",
-    "Intro Card YASB": "<h2>YASB for X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<p>Current Version: 11/25/2022</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n\n<p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>\n<p><a href=\"privacy.html\">Privacy Policy</a></p>\n<p><button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button> <button class=\"btn btn-primary paypal\" onclick=\"window.open('https://www.patreon.com/raithos');\">Patreon</button></p>",
+    "Intro Card YASB": "<h2>YASB for X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<p>Current Version: 11/25/2022</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n<p><a href=\"privacy.html\">Privacy Policy</a></p>\n\n<p>This site will always be free, and always 100% available for all people to use. If you want to support me, I also have a podcast, please check that out!</p>\n<p><button class=\"btn btn-success podcast\" onclick=\"window.open('http://offmeta.club');\">Off-Meta Podcast</button> <button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button> <button class=\"btn btn-primary patreon\" onclick=\"window.open('https://www.patreon.com/raithos');\">Patreon</button> </p>",
     "Continue to OAuth provider": "This will open a new window to let you authenticate with the chosen provider. You may have to allow pop ups for this site.",
     "iOS requires cross-site control": "Due to a new feature in iOS systems OAuth won't work unless you enable \"cross-site control\".",
     "login in progress": "OAuth login is in progress. Please finish authorization at the specified provider using the window that was just created.",
@@ -2262,7 +2266,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Hol Okand (BoY)": {
       display_name: "Hol Okand (BoY)",
-      text: "During the System Phasse, if there are no enemy ships at range 1-2, you may recover 1 %CHARGE% on any upgrade."
+      text: "During the System Phase, if there are no enemy ships at range 1-2, you may recover 1 %CHARGE% on any upgrade."
     },
     '"Pops" Krail (BoY)': {
       display_name: "“Pops” Krail (BoY)",
@@ -2396,6 +2400,46 @@ exportObj.cardLoaders.English = function() {
       display_name: "Haor Chall Prototype (SoC)",
       text: "After an enemy ship in your %BULLSEYEARC% declares a scenario feature or another friendly ship as the defender, you may perform a %CALCULATE% or %LOCK% action."
     },
+    '"Deathfire" (TBE)': {
+      display_name: "“Deathfire” (TBE)",
+      text: "After you fully execute a speed 3-5 maneuver, if you have not dropped or launched a device this round, you may spend 2 %CHARGE% to drop or launch a bomb using the [3 %STRAIGHT%] template."
+    },
+    "Major Rhymer (TBE)": {
+      display_name: "Major Rhymer (TBE)",
+      text: "While you perform a %TORPEDO% attack, if the defender is in your %BULLSEYEARC%, change 1 %FOCUS% result to a %CRIT% result."
+    },
+    "Captain Jonus (TBE)": {
+      display_name: "Captain Jonus (TBE)",
+      text: "After you drop or launch a device, gain an evade token."
+    },
+    "Tomax Bren (TBE)": {
+      display_name: "Tomax Bren (TBE)",
+      text: "After you perform a %BARRELROLL% action, you may spend 2 %CHARGE%. If you do, gain a focus token."
+    },
+    "Dash Rendar (YLF)": {
+      display_name: "Dash Rendar (YLF)",
+      text: "During the Engagement Phase, you ignore the effects of obstacles that you are overlapping."
+    },
+    "Dash Rendar (YLF-SL)": {
+      display_name: "Dash Rendar (YLF-SL)",
+      text: "After you gain a red token as a result of moving through or overlapping an obstacle, you may transfer that red token to a friendly ship at range 0-1."
+    },
+    "Dash Rendar (Scum)": {
+      display_name: "Dash Rendar (SL)",
+      text: "After you gain a red token as a result of moving through or overlapping an obstacle, you may transfer that red token to a friendly ship at range 0-1."
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo” (YLF)",
+      text: "After you defend or perform an attack, if you spent a calculate token, gain 1 calculate token."
+    },
+    '"Leebo" (YLF-SL)': {
+      display_name: "“Leebo” (YLF-SL)",
+      text: "At the end of the Engagement Phase, you may spend a calculate token to acquire a lock on an enemy ship at range 2-3."
+    },
+    '"Leebo" (Scum)': {
+      display_name: "“Leebo” (SL)",
+      text: "At the end of the Engagement Phase, you may spend a calculate token to acquire a lock on an enemy ship at range 2-3."
+    },
     "Corran Horn (X-Wing)": {
       display_name: "Corran Horn",
       text: "After you declare the defender of an attack, if you have a lock on the defender, a friendly ship may transfer their lock token from you to the defender."
@@ -2474,7 +2518,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Lapin": {
       display_name: "Lapin",
-      text: "While you defend or perform an attack, if the enemy ship is stressed, that ship's dice cannot be modified."
+      text: "While you defend or perform an attack, if the enemy ship is stressed, that ship's dice cannot be modified. %LINEBREAK% <i>Errata (since rules reference 1.4.5): Changed Initiative value on the card to match the correct value on the ship token."
     },
     "Volan Das": {
       display_name: "Volan Das",
@@ -2494,7 +2538,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Kelrodo-Ai Holdout": {
       display_name: "Kelrodo-Ai Holdout",
-      text: "After you are destroyed, you may transfer each of your locks and green tokens to another friendly Kelrodo-Ai Holdout at range 0-3"
+      text: "After you are destroyed, you may transfer each of your locks and green tokens to another friendly Kelrodo-Ai Holdout at range 0-3 %LINEBREAK% <i>Errata (since rules reference 1.4.5): Changed Initiative value on the card to match the correct value on the ship token."
     },
     "Lieutenant Galek": {
       display_name: "Lieutenant Galek",
@@ -2539,6 +2583,62 @@ exportObj.cardLoaders.English = function() {
     "Gavyn Sykes": {
       display_name: "Gavyn Sykes",
       text: "While you defend or perfrom an attack, if the speed of your revealed maneuver is greater than the enemy ship's, you may reroll your blank results."
+    },
+    "Darth Vader (SSP)": {
+      display_name: "Darth Vader (SSP)",
+      text: "After you perform an action, you may spend 1 %FORCE% to perform an action."
+    },
+    "Maarek Stele (SSP)": {
+      display_name: "Maarek Stele (SSP)",
+      text: "While you perform an attack, if the defender would be dealt a faceup damage card, instead draw 3 damage cards, choose 1, and discard the rest. "
+    },
+    "Captain Jonus (SSP)": {
+      display_name: "Captain Jonus (SSP)",
+      text: "While a friendly ship at range 0-1 performs a %TORPEDO% or %MISSILE% attack, that ship may reroll up to 2 attack dice. "
+    },
+    "Tomax Bren (SSP)": {
+      display_name: "Tomax Bren (SSP)",
+      text: "After you perform a %RELOAD% action, you may recover 1 %CHARGE% token on 1 of your equipped %TALENT% upgrade cards. "
+    },
+    '"Night Beast" (SSP)': {
+      display_name: "“Night Beast” (SSP)",
+      text: "After you fully execute a blue maneuver, you may perform a %FOCUS% action."
+    },
+    "Valen Rudor (SSP)": {
+      display_name: "Valen Rudor (SSP)",
+      text: "After a friendly ship at range 0-1 defends (after damage is resolved, if any), you may perform an action."
+    },
+    "Iden Versio (SSP)": {
+      display_name: "Iden Versio (SSP)",
+      text: "Before a friendly TIE/ln fighter at range 0-1 would suffer 1 or more damage, you may spend 1 %CHARGE%. If you do, prevent that damage."
+    },
+    "Luke Skywalker (SSP)": {
+      display_name: "Luke Skywalker (SSP)",
+      text: "After you become the defender (before dice are rolled), you may recover 1 %FORCE%."
+    },
+    "Jek Porkins (SSP)": {
+      display_name: "Jek Porkins (SSP)",
+      text: "After you receive a stress token, you may roll 1 attack die to remove it. On a %HIT% result, suffer 1 %HIT% damage."
+    },
+    '"Dutch" Vander (SSP)': {
+      display_name: "“Dutch” Vander (SSP)",
+      text: "After you perform the %LOCK% action, you may choose 1 friendly ship at range 1-3. That ship may acquire a lock on the object you locked, ignoring range restrictions."
+    },
+    "Horton Salm (SSP)": {
+      display_name: "Horton Salm (SSP)",
+      text: "While you perform an attack, you may reroll 1 attack die for each other friendly ship at range 0-1 of the defender."
+    },
+    "Arvel Crynyd (SSP)": {
+      display_name: "Arvel Crynyd (SSP)",
+      text: "If you would fail a %BOOST% action by overlapping another ship, you may resolve it as though you were partially executing a maneuver instead. While you perform an attack at attack range 0, treat it as an attack at attack range 1."
+    },
+    "Jake Farrell (SSP)": {
+      display_name: "Jake Farrell (SSP)",
+      text: "After you perform a %BARRELROLL% or %BOOST% action, you may choose a friendly ship at range 0-1. That ship may perform a %FOCUS% action."
+    },
+    "Shara Bey (SSP)": {
+      display_name: "Shara Bey (SSP)",
+      text: "While you defend or perform a primary attack, you may spend 1 lock you have on the enemy ship to add 1 %FOCUS% result to your dice results. "
     },
     "Republic Judiciary": {
       display_name: "Republic Judiciary",
@@ -2644,7 +2744,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Outrider": {
       display_name: "Outrider",
-      text: " While you perform an attack that is obstructed by an obstacle, the defender rolls 1 fewer defense die. %LINEBREAK% After you fully execute a maneuver, if you moved through or overlapped an obstacle, you may remove 1 of your red or orange tokens. %LINEBREAK% <i>Errata (since rules reference 1.0.2): changed \"obstructed attack\" to \"an attack that is obstructed by an obstacle\"</i>"
+      text: "While you perform a primary attack at range 3, roll 1 additional attack die. %LINEBREAK% While you perform an attack that is obstructed by an obstacle, you may change one of the defender's %EVADE% results to a %FOCUS% result. %LINEBREAK% <i>Errata (since rules reference 1.4.6): new gametext</i>"
     },
     "Phantom": {
       display_name: "Phantom",
@@ -4153,6 +4253,38 @@ exportObj.cardLoaders.English = function() {
       display_name: "Wolfpack",
       text: "While you perform an attack, you may spend a lock belonging to a friendly <b>Plo Koon</b> ship or ship with the <b>Born for This</b> ability that is on the defender to reroll any number of attack dice."
     },
+    "Swift Approach (TBE)": {
+      display_name: "Swift Approach",
+      text: "During the System Phase, after you drop or launch a device, you may perform a white %BARRELROLL% or %BOOST% action, even while stressed."
+    },
+    "Automated Loaders (TBE)": {
+      display_name: "Automated Loaders",
+      text: "After you perform a primary attack, you may spend 1 %CHARGE% to perform a %RELOAD% action."
+    },
+    "Top Cover (TBE)": {
+      display_name: "Top Cover",
+      text: "After a friendly ship at range 0-1 defends, if you have not dropped or launched a device this round, you may launch a device using the [3 %BANKLEFT%], [3 %STRAIGHT%], or [3 %BANKRIGHT%] template. %LINEBREAK% You ignore the effects of friendly devices."
+    },
+    "True Grit (TBE)": {
+      display_name: "True Grit",
+      text: "At the end of the Activation Phase, if you are not strained, you may gain 1 strain token to remove 1 non-lock red or orange token."
+    },
+    "Mercenary (YLF)": {
+      display_name: "Mercenary",
+      text: "After another friendly ship at range 0-2 is destroyed, before it is removed from the play area, transfer one of its green tokens to yourself."
+    },
+    "Seeker Missiles (YLF)": {
+      display_name: "Seeker Missiles",
+      text: "<strong>Attack (%LOCK%):</strong> Spend 1 %CHARGE%. During the Modify Attack Dice step, you may spend up to 2 additional %CHARGE%. Change one %FOCUS% result to a %HIT% result for each %CHARGE% spent in this way."
+    },
+    '"Leebo" (YLF)': {
+      display_name: "“Leebo”",
+      text: "After you repair a damage card, you may perform an action from your action bar."
+    },
+    "Efficient Processing (YLF)": {
+      display_name: "Efficient Processing",
+      text: "After you perform a %CALCULATE% action, gain 1 calculate token."
+    },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
       text: "While a friendly large or huge ship at range 0-3 executes a maneuver, it may suffer 1 %HIT% damage to execute a maneuver of the same bearing and difficulty of a speed 1 higher or lower instead."
@@ -4457,7 +4589,7 @@ exportObj.cardLoaders.English = function() {
       text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0-1 suffers 1 %CRIT% damage.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
     },
     'Seismic Charge': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, choose 1 obstacle at range 0-1. Each ship and remote at range 0-1 of the obstacle suffers 1 %HIT% damage. Then remove that obstacle.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i> '
+      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, choose 1 obstacle at range 0-1. The obstacle deals 1 %HIT% damage to each ship and remote at range 0-1. Then remove that obstacle.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i> '
     },
     'Bomblet': {
       text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0-1 rolls 2 attack dice. Each ship and remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
@@ -4597,6 +4729,10 @@ exportObj.cardLoaders.English = function() {
     "Sensor Blindspot": {
       display_name: "Sensor Blindspot",
       text: "While you perform a primary attack at attack range 0-1, do not apply the range 0-1 bonus and roll 1 fewer attack die."
+    },
+    "Sensor Blackout": {
+      display_name: "Sensor Blackout",
+      text: "While you perform a primary attack at range 0-1, you roll 1 fewer attack die. %LINEBREAK% While you defend at range 1, you roll 1 fewer defense die."
     },
     "Microthrusters": {
       display_name: "Microthrusters",
