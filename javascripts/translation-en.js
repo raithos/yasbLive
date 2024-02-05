@@ -2676,6 +2676,26 @@ exportObj.cardLoaders.English = function() {
       display_name: "Maus Monare (BoE)",
       text: "After you perform an %EVADE% action, gain a calculate token."
     },
+    "Major Mianda (BoE)": {
+      display_name: "Major Mianda (BoE)",
+      text: "During the End Phase, you may choose up to 2 friendly small ships at range 0-2, You and the chosen ships may perform a red %BARRELROLL% or red %BOOST% action."
+    },
+    "Lieutenant Hebsly (BoE)": {
+      display_name: "Lieutenant Hebsly (BoE)",
+      text: "After you defend, you may perform a red %BOOST% action, even while stressed."
+    },
+    "Scythe 6 (BoE)": {
+      display_name: "Scythe 6 (BoE)",
+      text: "While you perform an attack at range 1-2, roll 1 additional attack die."
+    },
+    "Scimitar 1 (BoE)": {
+      display_name: "Scimitar 1 (BoE)",
+      text: "After a friendly ship at range 0-3 performs an attack, you may spend 1 %CHARGE% to acquire a lock on the defender."
+    },
+    "Scimitar 3 (BoE)": {
+      display_name: "Scimitar 3 (BoE)",
+      text: "After you drop a bomb, you may spend 1 %CHARGE% to perform a %BOOST% action."
+    },
     "Republic Judiciary": {
       display_name: "Republic Judiciary",
       text: "<i class = flavor_text>The Galactic Republic uses small, swift warships such as the CR90 corvette to respond rapidly to Separatist incursions across the galaxy.</i> %LINEBREAK% <strong>Broadside Batteries:</strong> You can acquire locks and perform primary attacks at range 1-4."
