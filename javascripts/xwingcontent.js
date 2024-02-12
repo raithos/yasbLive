@@ -8075,7 +8075,7 @@ exportObj.basicCardData = function() {
         recurring: 1,
         chassis: "Gyro-Cockpit",
         ship_override: {
-          shields: 3,
+          shields: 5,
           actions: ["Focus", "R-> Barrel Roll", "Lock", "Barrel Roll", "R-> Lock", "R-Reload"]
         },
         upgrades: ["It's A Trap! (BoE)", "Homing Missiles", "Proton Bombs", "Delayed Fuses"]
