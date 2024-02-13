@@ -8151,7 +8151,6 @@ exportObj.basicCardData = function() {
         charge: 2,
         chassis: "High Stakes",
         ship_override: {
-          shields: 3,
           actions: ["Focus", "Lock", "Evade", "R-Boost", "Rotate Arc", "R-Coordinate", "R-> Focus"]
         },
         upgrades: ["Ace In The Hole (BoE)", "It's A Trap! (BoE)", "Nien Nunb", "Airen Cracken (BoE)", "Millennium Falcon (BoE)"]
