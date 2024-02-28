@@ -7801,7 +7801,7 @@ Ship = (function() {
   };
 
   Ship.prototype.getPoints = function() {
-    var effective_stats, loadout, points, quickbuild, threat, _ref, _ref1, _ref2, _ref3, _ref4;
+    var effective_stats, loadout, points, quickbuild, threat, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
     if (!this.builder.isQuickbuild) {
       if (this.pilot != null) {
         effective_stats = this.effectiveStats();
@@ -7811,7 +7811,7 @@ Ship = (function() {
         loadout = (_ref2 = (_ref3 = this.pilot) != null ? _ref3.loadout : void 0) != null ? _ref2 : 0;
       }
       this.points_container.find('div').text("" + points);
-      this.points_container.find('.upgrade-points').text(loadout > 0 ? "(" + this.upgrade_points_total + "/" + loadout + ")" : "");
+      this.points_container.find('.upgrade-points').text((((_ref4 = this.pilot) != null ? _ref4.loadout : void 0) != null) && (this.pilot.loadout > 0) ? "(" + this.upgrade_points_total + "/" + this.pilot.loadout + ")" : "");
       if (points > 0) {
         this.points_container.fadeTo('fast', 1);
       } else {
@@ -7820,7 +7820,7 @@ Ship = (function() {
       return points;
     } else {
       quickbuild = exportObj.quickbuildsById[this.quickbuildId];
-      threat = this.primary ? (_ref4 = quickbuild != null ? quickbuild.threat : void 0) != null ? _ref4 : 0 : 0;
+      threat = this.primary ? (_ref5 = quickbuild != null ? quickbuild.threat : void 0) != null ? _ref5 : 0 : 0;
       if ((quickbuild != null ? quickbuild.wingleader : void 0) != null) {
         threat = quickbuild.threat[quickbuild.wingmates.indexOf(this.wingmates.length)];
       }
