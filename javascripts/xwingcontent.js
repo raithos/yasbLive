@@ -5985,7 +5985,7 @@ exportObj.basicCardData = function() {
         ship: "Trident-class Assault Ship",
         skill: 8,
         engagement: 0,
-        points: 12,
+        points: 11,
         loadout: 45,
         slots: ["Command", "Torpedo", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Title"]
       }, {
@@ -5995,7 +5995,7 @@ exportObj.basicCardData = function() {
         ship: "Trident-class Assault Ship",
         skill: 8,
         engagement: 0,
-        points: 12,
+        points: 11,
         loadout: 45,
         slots: ["Command", "Torpedo", "Hardpoint", "Hardpoint", "Crew", "Crew", "Gunner", "Team", "Cargo", "Title"]
       }, {
@@ -12165,7 +12165,7 @@ exportObj.basicCardData = function() {
       }, {
         name: "Sabine Wren (Command)",
         id: 422,
-        points: 99,
+        points: 5,
         slot: "Command",
         unique: true,
         faction: "Rebel Alliance",
@@ -13017,6 +13017,108 @@ exportObj.basicCardData = function() {
         id: 524,
         standard: true,
         slot: "Talent"
+      }, {
+        name: "New Recruit",
+        id: 525,
+        points: 0,
+        max_per_squad: 3,
+        slot: "Command",
+        restrictions: [["isUnique", false]],
+        modifier_func: function(stats) {
+          return stats.points -= 1;
+        }
+      }, {
+        name: "Locked-Turret Specialist",
+        id: 526,
+        points: 2,
+        slot: "Command",
+        charge: 2,
+        restrictions: [["Action", "Rotate Arc"]],
+        modifier_func: function(stats) {
+          if (__indexOf.call(stats.actions, 'R-Boost') < 0) {
+            return stats.actions.push('R-Boost');
+          }
+        }
+      }, {
+        name: "Heavy Reinforced Vanguard",
+        id: 527,
+        unique: true,
+        points: 0,
+        slot: "Command",
+        modifier_func: function(stats) {
+          stats.points += 1;
+          return stats.hull += 2;
+        }
+      }, {
+        name: "Evasive Interceptor",
+        id: 528,
+        unique: true,
+        points: 8,
+        slot: "Command",
+        restrictions: [["Base", "Small"]],
+        modifier_func: function(stats) {
+          stats.points -= 1;
+          stats.hull -= 1;
+          return stats.agility += 1;
+        }
+      }, {
+        name: "Countermeasures Specialist",
+        id: 529,
+        points: 4,
+        unique: true,
+        slot: "Command",
+        charge: 2,
+        restrictions: [["Base", "Small"]],
+        modifier_func: function(stats) {
+          if (__indexOf.call(stats.actions, 'Jam') < 0) {
+            return stats.actions.push('Jam');
+          }
+        }
+      }, {
+        name: "Combat Veteran",
+        id: 530,
+        points: 0,
+        unique: true,
+        slot: "Command",
+        restrictions: [["HasForce", false], ["isUnique", true], ["InitiativeGreaterThan", 3]],
+        modifier_func: function(stats) {
+          return stats.points += 1;
+        },
+        confersAddons: [
+          {
+            type: exportObj.Upgrade,
+            slot: 'Talent'
+          }, {
+            type: exportObj.Upgrade,
+            slot: 'Modification'
+          }
+        ]
+      }, {
+        name: "Force Adept Pilot",
+        id: 531,
+        points: 0,
+        slot: "Command",
+        unique: true,
+        restrictions: [["HasForce", true]],
+        modifier_func: function(stats) {
+          return stats.points += 1;
+        },
+        confersAddons: [
+          {
+            type: exportObj.Upgrade,
+            slot: 'Force'
+          }
+        ]
+      }, {
+        name: "Adaptable Pilot",
+        id: 532,
+        points: 0,
+        max_per_squad: 2,
+        slot: "Command",
+        modifier_func: function(stats) {
+          stats.points += 1;
+          return stats.loadout += 10;
+        }
       }
     ],
     conditionsById: [
