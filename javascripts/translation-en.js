@@ -2330,7 +2330,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Shaak Ti (SoC)": {
       display_name: "Shaak Ti (SoC)",
-      text: "At the start of the End Phase, you may perfrom a purple %COORDINATE% action, even while stressed %LINEBREAK% After you perform a %COORDINATE% action, if the chosen ship has the <b>Born for This</b> ship ability, you may coordinate 1 additional ship."
+      text: "At the start of the End Phase, you may perform a purple %COORDINATE% action, even while stressed %LINEBREAK% After you perform a %COORDINATE% action, if the chosen ship has the <b>Born for This</b> ship ability, you may coordinate 1 additional ship."
     },
     '"Odd Ball" (SoC)': {
       display_name: "“Odd Ball” (SoC)",
@@ -2354,7 +2354,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Kickback" (SoC)': {
       display_name: "“Kickback” (SoC)",
-      text: "After you perform a %BARRELROLL% action, you may perform a red %LOCK% action. If you do, before you perfrom the %LOCK% action, you may gain 1 strain to treat it as white."
+      text: "After you perform a %BARRELROLL% action, you may perform a red %LOCK% action. If you do, before you perform the %LOCK% action, you may gain 1 strain to treat it as white."
     },
     '"Axe" (SoC)': {
       display_name: "“Axe” (SoC)",
@@ -2582,7 +2582,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Gavyn Sykes": {
       display_name: "Gavyn Sykes",
-      text: "While you defend or perfrom an attack, if the speed of your revealed maneuver is greater than the enemy ship's, you may reroll your blank results."
+      text: "While you defend or perform an attack, if the speed of your revealed maneuver is greater than the enemy ship's, you may reroll your blank results."
     },
     "Darth Vader (SSP)": {
       display_name: "Darth Vader (SSP)",
