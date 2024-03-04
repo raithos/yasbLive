@@ -4767,7 +4767,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Adaptable Pilot": {
       display_name: "Adaptable Pilot",
-      text: "Add 10 loadout to this ship. This ship costs and scores for 1 More."
+      text: "Add 10 loadout to this ship. This ship costs and scores for 1 more."
     }
   };
   condition_translations = {
