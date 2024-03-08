@@ -6039,7 +6039,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 9,
-        slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "Lega Fossang",
         id: 481,
