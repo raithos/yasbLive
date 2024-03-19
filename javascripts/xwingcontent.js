@@ -14244,7 +14244,8 @@ String.prototype.serialtoxws = function() {
         link: "https://yasb.app/" + this
       }
     },
-    version: '02/23/2024'
+    version: '02/23/2024',
+    obstacles: this.ParseParameter('obs')
   };
   serialized = this.ParseParameter('d');
   re = __indexOf.call(serialized, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
