@@ -14245,7 +14245,7 @@ String.prototype.serialtoxws = function() {
       }
     },
     version: '02/23/2024',
-    obstacles: this.ParseParameter('obs')
+    obstacles: this.ParseParameter('obs').split(",")
   };
   serialized = this.ParseParameter('d');
   re = __indexOf.call(serialized, "Z") >= 0 ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
