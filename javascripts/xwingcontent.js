@@ -6355,7 +6355,7 @@ exportObj.basicCardData = function() {
         ship: "Gauntlet Fighter",
         skill: 2,
         points: 7,
-        loadout: 16,
+        loadout: 12,
         unique: true,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Illicit", "Modification", "Configuration"]
@@ -8017,6 +8017,8 @@ exportObj.basicCardData = function() {
         chassis: "Vectored Cannons",
         upgrades: ["It's A Trap! (BoE)", "Heroic Sacrifice (BoE)", "Proton Rockets"],
         ship_override: {
+          attackt: 2,
+          attack: 0,
           shields: 3,
           actions: ["Focus", "Evade", "Lock", "Barrel Roll", "R-> Focus", "Boost", "Slam"]
         }
@@ -8030,7 +8032,11 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         chassis: "Vectored Cannons",
-        upgrades: ["It's A Trap! (BoE)", "Precision-Tuned Cannons (BoE)", "Chaff Particles (BoE)", "Target-Assist Algorithm (BoE)"]
+        upgrades: ["It's A Trap! (BoE)", "Precision-Tuned Cannons (BoE)", "Chaff Particles (BoE)", "Target-Assist Algorithm (BoE)"],
+        ship_override: {
+          attackt: 2,
+          attack: 0
+        }
       }, {
         name: "Tycho Celchu (BoE)",
         xwsaddon: "battleoverendor",
@@ -8042,6 +8048,8 @@ exportObj.basicCardData = function() {
         points: 4,
         chassis: "Vectored Cannons",
         ship_override: {
+          attackt: 2,
+          attack: 0,
           shields: 3,
           actions: ["Focus", "R-> Reload", "Evade", "Lock", "Barrel Roll", "Boost", "R-> Evade"]
         },
@@ -14265,7 +14273,8 @@ String.prototype.serialtoxws = function() {
         gamemode = 'standard';
         break;
       case 'e':
-        return "error: game mode not supported";
+        gamemode = 'epic';
+        break;
       case 'q':
         return "error: game mode not supported";
     }
