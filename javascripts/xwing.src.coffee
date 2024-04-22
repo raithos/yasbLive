@@ -1159,6 +1159,9 @@ class exportObj.CardBrowser
                                         <label class = "advanced-search-label toggle-non-unique">
                                             <input type="checkbox" class="non-unique-checkbox advanced-search-checkbox" /> <span class="translated" defaultText="Is not unique"></span>
                                         </label>
+                                        <label class = "advanced-search-label toggle-limited">
+                                            <input type="checkbox" class="limited-checkbox advanced-search-checkbox" /> <span class="translated" defaultText="Is limited"></span>
+                                        </label>
                                         <label class = "advanced-search-label toggle-standard">
                                             <input type="checkbox" class="standard-checkbox advanced-search-checkbox" />  <span class="translated" defaultText="Standard legal"></span>
                                         </label>
@@ -1404,6 +1407,7 @@ class exportObj.CardBrowser
         @standard_checkbox = ($ @container.find('.xwing-card-browser .standard-checkbox'))[0]
         @unique_checkbox = ($ @container.find('.xwing-card-browser .unique-checkbox'))[0]
         @non_unique_checkbox = ($ @container.find('.xwing-card-browser .non-unique-checkbox'))[0]
+        @limited_checkbox = ($ @container.find('.xwing-card-browser .limited-checkbox'))[0]
         @base_size_checkboxes = 
             Small: ($ @container.find('.xwing-card-browser .small-base-checkbox'))[0]
             Medium: ($ @container.find('.xwing-card-browser .medium-base-checkbox'))[0]
@@ -1533,6 +1537,7 @@ class exportObj.CardBrowser
         @standard_checkbox.onclick = => @renderList_advanced @sort_selector.val()
         @unique_checkbox.onclick = => @renderList_advanced @sort_selector.val()
         @non_unique_checkbox.onclick = => @renderList_advanced @sort_selector.val()
+        @limited_checkbox.onclick = => @renderList_advanced @sort_selector.val()
         @slot_available_selection[0].onchange = => @renderList_advanced @sort_selector.val()
         @keyword_available_selection[0].onchange = => @renderList_advanced @sort_selector.val()
         @duplicateslots.onclick = => @renderList_advanced @sort_selector.val()
@@ -1924,6 +1929,7 @@ class exportObj.CardBrowser
         # check for uniqueness
         return false unless not @unique_checkbox.checked or card.data.unique
         return false unless not @non_unique_checkbox.checked or not card.data.unique
+        return false unless not @limited_checkbox.checked or card.data.max_per_squad
         
         # check charge stuff
         return false unless (card.data.charge? and card.data.charge <= @maximum_charge.value and card.data.charge >= @minimum_charge.value) or (@minimum_charge.value <= 0 and not card.data.charge?)
