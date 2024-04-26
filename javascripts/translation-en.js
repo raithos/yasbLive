@@ -1145,7 +1145,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Prince Xizor": {
       display_name: "Prince Xizor",
-      text: "While you defend, after the Neutralize Results step, another friendly ship at range 0-1 and in the attack arc may suffer 1 %HIT% or %CRIT% damage. If it does, cancel 1 matching result.%LINEBREAK%<strong>Microthrusters:</strong> While you perform a barrel roll, you <b>must</b> use the %BANKLEFT% or %BANKRIGHT% template instead of the %STRAIGHT% template."
+      text: "While you defend, after the Neutralize Results step, another friendly ship at range 0-1 and in the attack arc may suffer 1 %HIT% or %CRIT% damage. If it does, cancel 1 matching result."
     },
     "Quinn Jast": {
       display_name: "Quinn Jast",
