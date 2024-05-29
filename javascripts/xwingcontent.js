@@ -8240,7 +8240,7 @@ exportObj.basicCardData = function() {
         chassis: "Formed Up",
         ship_override: {
           hull: 4,
-          actions: ["Focus", "Evade", "Lock", "Barrel Roll", "R-> Evade", "R-Boost"]
+          actions: ["Focus", "Evade", "Barrel Roll", "R-> Evade", "R-Boost"]
         },
         upgrades: ["Collected (BoE)", "Elusive", "No Escape (BoE)"]
       }, {
@@ -8255,7 +8255,7 @@ exportObj.basicCardData = function() {
         chassis: "Formed Up",
         ship_override: {
           shields: 1,
-          actions: ["Focus", "Evade", "Lock", "Barrel Roll", "R-> Evade", "R-Coordinate"]
+          actions: ["Focus", "Evade", "Barrel Roll", "R-> Evade", "R-Coordinate"]
         },
         upgrades: ["Ruthless", "Swarm Tactics", "No Escape (BoE)"]
       }, {
@@ -8270,7 +8270,7 @@ exportObj.basicCardData = function() {
         chassis: "Formed Up",
         ship_override: {
           hull: 4,
-          actions: ["Focus", "Evade", "Lock", "Barrel Roll", "R-> Evade"]
+          actions: ["Focus", "Evade", "Barrel Roll", "R-> Evade"]
         },
         upgrades: ["No Escape (BoE)", "Predator", "Ion Maneuvering Jet (BoE)", "Targeting Matrix (BoE)"]
       }, {
