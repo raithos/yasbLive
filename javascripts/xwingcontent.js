@@ -7938,7 +7938,7 @@ exportObj.basicCardData = function() {
         upgrades: ["True Grit (TBE)", "Plasma Torpedoes", "Ion Bombs"]
       }, {
         name: "Dash Rendar (YLF)",
-        xwsaddon: "swz103",
+        xwsaddon: "swz103-rebelalliance",
         unique: true,
         id: 648,
         faction: "Rebel Alliance",
@@ -7969,7 +7969,7 @@ exportObj.basicCardData = function() {
         upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider"]
       }, {
         name: '"Leebo" (YLF)',
-        xwsaddon: "swz103",
+        xwsaddon: "swz103-rebelalliance",
         unique: true,
         id: 651,
         faction: "Rebel Alliance",

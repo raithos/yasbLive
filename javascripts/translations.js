@@ -5280,7 +5280,7 @@ exportObj.translations['Español'] = {
     " or Squad Including": " o incluye a escuadrón",
     "Ship": "Nave",
     "Extra": "Extra",
-    "Vectored Thrusters": "Cañones vectoriales",
+    "Vectored Thrusters": "Propulsores vectoriales",
     "Autothrusters": "Autopropulsores",
     "Networked Calculations": "Procesado de cálculos en red",
     "X-wing": "Ala-X",
@@ -5922,7 +5922,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Arvel Crynyd": {
       display_name: "Arvel Crynyd",
-      text: "Eres capaz de efectuar ataques principales a alcance 0.%LINEBREAK%Si una acción %BOOST% tuya va a fracasar debido a que te solapas con otra nave, en vez de eso resuélvela como si estuvieras ejecutando parcialmente una maniobra.%LINEBREAK%Propulsores vectoriales: Después de que realices una acción, puedes realizar una acción %BOOST% roja."
+      text: "Si una acción %BOOST% tuya va a fracasar debido a que te solapas con otra nave, en vez de eso resuélvela como si estuvieras ejecutando parcialmente una maniobra. Mientras efectúas un ataque a rango 0 tratarlo como un ataque a rango 1."
     },
     "Asajj Ventress": {
       display_name: "Asajj Ventress",
@@ -6310,7 +6310,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Fenn Rau": {
       display_name: "Fenn Rau",
-      text: "Mientras te defiendes o efectúas un ataque, si el alcance de ataque es 1, puedes tirar 1 dado adicional.%LINEBREAK%Envite de Concordia: Mientras te defiendes, si el alcance de ataque es 1 y estás en el %FRONTARC% del atacante, cambia 1 resultado por un resultado %EVADE%."
+      text: "Mientras te defiendes o efectúas un ataque, si el alcance de ataque es 1, puedes tirar 1 dado adicional."
     },
     "Fifth Brother": {
       display_name: "Quinto hermano",
@@ -6410,7 +6410,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Green Squadron Pilot": {
       display_name: "Piloto del Escuadrón Verde",
-      text: "<i class = flavor_text>Debido a la sensibilidad de sus mandos y su elevada capacidad de maniobra, sólo los mejores pilotos se sientan en la carlinga de un Ala-A.</i>%LINEBREAK%Propulsores vectoriales: Después de que realices una acción, puedes realizar una acción %BOOST% roja."
+      text: "<i class = flavor_text>Debido a la sensibilidad de sus mandos y su elevada capacidad de maniobra, sólo los mejores pilotos se sientan en la carlinga de un Ala-A.</i>"
     },
     "Greer Sonnel": {
       display_name: "Greer Sonnel",
@@ -6498,7 +6498,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Jake Farrell": {
       display_name: "Jake Farrell",
-      text: "Después de que realices una acción %BARRELROLL% o %BOOST%, puedes elegir una nave aliada que tengas a alcance 0-1. Esa nave puede realizar una acción %FOCUS%.%LINEBREAK%Propulsores vectoriales: Después de que realices una acción, puedes realizar una acción %BOOST% roja."
+      text: "Después de que realices una acción %BARRELROLL% o %BOOST%, puedes elegir una nave aliada que tengas a alcance 0-1. Esa nave puede realizar una acción %FOCUS%."
     },
     "Jakku Gunrunner": {
       display_name: "Traficante de armas de Jakku",
@@ -6538,7 +6538,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Joy Rekkoff": {
       display_name: "Joy Rekkoff",
-      text: "Mientras efectúas un ataque, puedes gastar 1 %CHARGE% de una mejora %TORPEDO% que tengas equipada. Si lo haces, el defensor tira 1 dado de defensa menos.%LINEBREAK%Envite de Concordia: Mientras te defiendes, si el alcance de ataque es 1 y estás en el %FRONTARC% del atacante, cambia 1 resultado por un resultado %EVADE%."
+      text: "Mientras efectúas un ataque, puedes gastar 1 %CHARGE% de una mejora %TORPEDO% que tengas equipada. Si lo haces, el defensor tira 1 dado de defensa menos."
     },
     "K-2SO": {
       display_name: "K-2SO",
@@ -6550,7 +6550,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Kad Solus": {
       display_name: "Kad Solus",
-      text: "Después de que ejecutes completamente una maniobra roja, recibes 2 fichas de Concentración.%LINEBREAK%Envite de Concordia: Mientras te defiendes, si el alcance de ataque es 1 y estás en el %FRONTARC% del atacante, cambia 1 resultado por un resultado %EVADE%."
+      text: "Después de que ejecutes completamente una maniobra roja, recibes 2 fichas de Concentración."
     },
     "Kanan Jarrus": {
       display_name: "Kanan Jarrus",
@@ -6814,7 +6814,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Old Teroch": {
       display_name: "Viejo Teroch",
-      text: "Al comienzo de la fase de Enfrentamiento, puedes elegir 1 nave enemiga que tengas a alcance 1. Si lo haces y estás en su %FRONTARC%, esa nave retira todas sus fichas verdes.%LINEBREAK%Envite de Concordia: Mientras te defiendes, si el alcance de ataque es 1 y estás en el %FRONTARC% del atacante, cambia 1 resultado por un resultado %EVADE%."
+      text: "Al comienzo de la fase de Enfrentamiento, puedes elegir 1 nave enemiga que tengas a alcance 1. Si lo haces y estás en su %FRONTARC%, esa nave retira todas sus fichas verdes."
     },
     "Omega Squadron Ace": {
       display_name: "As del Escuadrón Omega",
@@ -6882,7 +6882,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Phoenix Squadron Pilot": {
       display_name: "Piloto Esc. Fénix",
-      text: "<i class = flavor_text>Bajo el mando del comandante Jun Sato, los valerosos pero inexpertos pilotos del Escuadrón Fénix se enfrentan al Imperio Galáctico teniéndolo todo en su contra.</i>%LINEBREAK%Propulsores vectoriales: Después de que realices una acción, puedes realizar una acción %BOOST% roja."
+      text: "<i class = flavor_text>Bajo el mando del comandante Jun Sato, los valerosos pero inexpertos pilotos del Escuadrón Fénix se enfrentan al Imperio Galáctico teniéndolo todo en su contra.</i>"
     },
     "Planetary Sentinel": {
       display_name: "Centinela planetario",
@@ -7070,7 +7070,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Skull Squadron Pilot": {
       display_name: "Piloto del Escuadrón Calavera",
-      text: "<i class = flavor_text>Los ases del Escuadrón Calavera prefieren los estilos de vuelo agresivos con los que gracias al diseño de ala pivotante de sus naves disfrutan de una agilidad insuperable mientras persiguen a sus presas.</i>%LINEBREAK%Envite de Concordia: Mientras te defiendes, si el alcance de ataque es 1 y estás en el %FRONTARC% del atacante, cambia 1 resultado por un resultado %EVADE%."
+      text: "<i class = flavor_text>Los ases del Escuadrón Calavera prefieren los estilos de vuelo agresivos con los que gracias al diseño de ala pivotante de sus naves disfrutan de una agilidad insuperable mientras persiguen a sus presas.</i>"
     },
     "Sol Sixxa": {
       display_name: "Sol Sixxa",
@@ -7230,7 +7230,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Zealous Recruit": {
       display_name: "Recluta entusiasta",
-      text: "<i class = flavor_text>Los pilotos del caza Colmillo mandaloriano deben dominar el Envite de Concordia, una maniobra que se vale de la estilizada silueta del vehículo para efectuar mortíferos asaltos frontales.</i>%LINEBREAK%Envite de Concordia: Mientras te defiendes, si el alcance de ataque es 1 y estás en el %FRONTARC% del atacante, cambia 1 resultado por un resultado %EVADE%."
+      text: "<i class = flavor_text>Los pilotos del caza Colmillo mandaloriano deben dominar el Envite de Concordia, una maniobra que se vale de la estilizada silueta del vehículo para efectuar mortíferos asaltos frontales.</i>"
     },
     "Zertik Strom": {
       display_name: "Zertik Strom",
@@ -8655,7 +8655,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "C1-10P": {
       display_name: "C1-10P",
-      text: "<strong>C1-10P:</strong><strong>Configuración:</strong> Debe estar equipado con esta cara visible.%LINEBREAK%Después de ejecutar completamente una maniobra, puedes gastar 1 %CHARGE% para realizar una acción %EVADE% roja, incluso si estás bajo tensión.%LINEBREAK>En la fase final, si esta carta no tiene fichas activas, dala la vuelta.%LINEBREAK%<strong>C1-10P (Errático)</strong>%LINEBREAK>Después de ejecutar completamente una maniobra, <b>debes</b> elegir una nave a alcance 0-1. Esa nave recibe 1 ficha de obstrucción.%LINEBREAK><i>Errata (1.4): agregado \"completamente\"</i>"
+      text: "<strong>C1-10P:</strong><strong>Configuración:</strong> Debe estar equipado con esta cara visible.%LINEBREAK%Después de ejecutar completamente una maniobra, puedes gastar 1 %CHARGE% para realizar una acción %EVADE% roja, incluso si estás bajo tensión.%LINEBREAK%En la fase final, si esta carta no tiene fichas activas, dala la vuelta.%LINEBREAK%<strong>C1-10P (Errático)</strong>%LINEBREAK%Después de ejecutar completamente una maniobra, <b>debes</b> elegir una nave a alcance 0-1. Esa nave recibe 1 ficha de obstrucción.%LINEBREAK%<i>Errata (1.4): agregado \"completamente\"</i>"
     },
     "Cad Bane": {
       display_name: "Cad Bane",
@@ -8675,7 +8675,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Chancellor Palpatine": {
       display_name: "Canciller Palpatine",
-      text: "<strong>Canciller Palpatine:</strong>%LINEBREAK><strong>Configuración:</strong> Debe estar equipado con esta cara visible.%LINEBREAK>Después de defenderte, si el atacante está a alcance 0-2, puedes gastar 1 %FORCE%. En ese caso, el atacante recibe 1 ficha de tensión.%LINEBREAK>Durante la fase final, puedes darle la vuelta a esta carta.%LINEBREAK><strong>Darth Sidious:</strong>%LINEBREAK>Después de realizar una acción %COORDINATE% violeta, la nave que coordinaste recibe 1 ficha de tensión. Luego, recibe 1 ficha de concentración o recupera 1 %FORCE%."
+      text: "<strong>Canciller Palpatine:</strong>%LINEBREAK%<strong>Configuración:</strong> Debe estar equipado con esta cara visible.%LINEBREAK%Después de defenderte, si el atacante está a alcance 0-2, puedes gastar 1 %FORCE%. En ese caso, el atacante recibe 1 ficha de tensión.%LINEBREAK%Durante la fase final, puedes darle la vuelta a esta carta.%LINEBREAK%<strong>Darth Sidious:</strong>%LINEBREAK%Después de realizar una acción %COORDINATE% violeta, la nave que coordinaste recibe 1 ficha de tensión. Luego, recibe 1 ficha de concentración o recupera 1 %FORCE%."
     },
     "Chewbacca": {
       display_name: "Chewbacca",
@@ -8687,7 +8687,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Chewbacca (Resistance)": {
       display_name: "Chewbacca",
-      text: "<strong>Preparación:</strong> Pierdes 1 %CHARGE%.%LINEBREAK>Después de que se le haya asignado una carta de daño a una nave aliada a alcance 0-3, recupera 1 %CHARGE%.%LINEBREAK>Mientras realizas un ataque, puedes gastar 2 %CHARGE% para cambiar 1 resultado %FOCUS% en un resultado %CRIT%."
+      text: "<strong>Preparación:</strong> Pierdes 1 %CHARGE%.%LINEBREAK%Después de que se le haya asignado una carta de daño a una nave aliada a alcance 0-3, recupera 1 %CHARGE%.%LINEBREAK%Mientras realizas un ataque, puedes gastar 2 %CHARGE% para cambiar 1 resultado %FOCUS% en un resultado %CRIT%."
     },
     "Ciena Ree": {
       display_name: "Ciena Ree",
@@ -9167,7 +9167,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Passive Sensors": {
       display_name: "Sensores pasivos",
-      text: "<strong>Acción:</strong> gasta 1 %CHARGE%. Solo puedes realizar esta acción durante tu paso de \"Realizar una acción\".%LINEBREAK>Mientras tu %CHARGE% esté inactiva, no puedes ser coordinado.%LINEBREAK>Antes de comprometerte, si tu %CHARGE% está inactiva, puedes realizar una acción %CALCULATE% o %LOCK%."
+      text: "<strong>Acción:</strong> gasta 1 %CHARGE%. Solo puedes realizar esta acción durante tu paso de \"Realizar una acción\".%LINEBREAK%Mientras tu %CHARGE% esté inactiva, no puedes ser coordinado.%LINEBREAK%Antes de comprometerte, si tu %CHARGE% está inactiva, puedes realizar una acción %CALCULATE% o %LOCK%."
     },
     "Pattern Analyzer": {
       display_name: "Analizador de patrones",
@@ -9386,7 +9386,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Stabilized S-Foils": {
       display_name: "Alas-S Estabilizadas",
-      text: "<strong>Alas-S Estabilizadas (Plegadas)</strong>%LINEBREAK%<i>Añade %BARRELROLL% <i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i> <r>%EVADE%</r>, <r>%RELOAD%</r></i>%LINEBREAK>Antes de activarte, si no estás críticamente dañado, puedes voltear esta carta.%LINEBREAK%<strong>Alas-S Estabilizadas (Desplegadas)</strong>%LINEBREAK%<i>Añade %BARRELROLL% <i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i> <r>%LOCK%</r></i>%LINEBREAK>Después de realizar un ataque, puedes gastar tu bloqueo en el defensor para realizar un ataque adicional %CANNON% contra esa nave usando una mejora %CANNON% con la que no hayas atacado en esta ronda.%LINEBREAK>Antes de activarte, si no estás críticamente dañado, puedes voltear esta carta."
+      text: "<strong>Alas-S Estabilizadas (Plegadas)</strong>%LINEBREAK%<i>Añade %BARRELROLL% <i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i> <r>%EVADE%</r>, <r>%RELOAD%</r></i>%LINEBREAK%Antes de activarte, si no estás críticamente dañado, puedes voltear esta carta.%LINEBREAK%<strong>Alas-S Estabilizadas (Desplegadas)</strong>%LINEBREAK%<i>Añade %BARRELROLL% <i class=\"xwing-miniatures-font xwing-miniatures-font-linked red\"></i> <r>%LOCK%</r></i>%LINEBREAK%Después de realizar un ataque, puedes gastar tu bloqueo en el defensor para realizar un ataque adicional %CANNON% contra esa nave usando una mejora %CANNON% con la que no hayas atacado en esta ronda.%LINEBREAK%Antes de activarte, si no estás críticamente dañado, puedes voltear esta carta."
     },
     "Static Discharge Vanes": {
       display_name: "Aparejos de descarga electrostática",
@@ -9502,7 +9502,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Phoenix Squadron": {
       display_name: "Escuadrón Fénix",
-      text: "<strong>Cara de Despliegue:</strong>%LINEBREAK>Despliegue: Equipar con esta cara visible. %LINEBREAK> Eres el <b>líder</b>. Tus alas deben consistir en 2-5 naves de entre las siguientes: %LINEBREAK> - 0-1 Transporte de Ataque %LINEBREAK> - 0-1 Transporte clase Sheathipede %LINEBREAK> - 0-5 A-wings RZ-1 %LINEBREAK> Después de ser colocado, voltea esta carta. %LINEBREAK> <strong>Cara de Juego:</strong>%LINEBREAK> Al comienzo de la fase de preparación, 1 de tus alas que esté aparejado contigo puede unirse a tu patrulla sin recibir un marcador de estrés. %LINEBREAK> Mientras tú, o tu ala Transporte de Ataque o Transporte clase Sheathipede, te defiendes, hasta 2 de tus alas A-wing RZ-1 en el arco de ataque pueden cada uno sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
+      text: "<strong>Cara de Despliegue:</strong>%LINEBREAK%Despliegue: Equipar con esta cara visible. %LINEBREAK% Eres el <b>líder</b>. Tus alas deben consistir en 2-5 naves de entre las siguientes: %LINEBREAK% - 0-1 Transporte de Ataque %LINEBREAK% - 0-1 Transporte clase Sheathipede %LINEBREAK% - 0-5 A-wings RZ-1 %LINEBREAK% Después de ser colocado, voltea esta carta. %LINEBREAK% <strong>Cara de Juego:</strong>%LINEBREAK% Al comienzo de la fase de preparación, 1 de tus alas que esté aparejado contigo puede unirse a tu patrulla sin recibir un marcador de estrés. %LINEBREAK% Mientras tú, o tu ala Transporte de Ataque o Transporte clase Sheathipede, te defiendes, hasta 2 de tus alas A-wing RZ-1 en el arco de ataque pueden cada uno sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
     },
     "Deadeye Shot": {
       display_name: "Disparo certero",
@@ -9522,7 +9522,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Tierfon Belly Run": {
       display_name: "Pasada rasante de Tierfon",
-      text: "Puedes realizar ataques especiales incluso si estás a alcance 0 de asteroides. %LINEBREAK> Mientras te defiendes, si estás a alcance 0 de un obstáculo, los dados de ataque no pueden ser relanzados."
+      text: "Puedes realizar ataques especiales incluso si estás a alcance 0 de asteroides. %LINEBREAK% Mientras te defiendes, si estás a alcance 0 de un obstáculo, los dados de ataque no pueden ser relanzados."
     },
     "Extreme Maneuvers": {
       display_name: "Maniobras extremas",
@@ -9554,15 +9554,15 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Vectored Cannons (RZ-1)": {
       display_name: "Cañones vectoriales (RZ-1)",
-      text: "Gana un indicador %SINGLETURRETARC%. Considera el requisito de arco de tus ataques principales como %SINGLETURRETARC%. %LINEBREAK> Reemplaza tu capacidad de nave <strong>Propulsores Vectoriales</strong> con la siguiente: %LINEBREAK> <strong>Cañones Vectoriales:</strong> Durante la fase de sistema, puedes realizar una acción %BOOST% roja o %ROTATEARC% roja. Solo puedes girar tu indicador %SINGLETURRETARC% hacia tu %FRONTARC% o %REARARC%."
+      text: "Gana un indicador %SINGLETURRETARC%. Considera el requisito de arco de tus ataques principales como %SINGLETURRETARC%. %LINEBREAK% Reemplaza tu capacidad de nave <strong>Propulsores Vectoriales</strong> con la siguiente: %LINEBREAK% <strong>Cañones Vectoriales:</strong> Durante la fase de sistema, puedes realizar una acción %BOOST% roja o %ROTATEARC% roja. Solo puedes girar tu indicador %SINGLETURRETARC% hacia tu %FRONTARC% o %REARARC%."
     },
     "Shadow Wing": {
       display_name: "Escuadrón Alas de las Sombras",
-      text: "<strong>Cara de Despliegue:</strong>%LINEBREAK>Despliegue: Equípala con esta cara visible. %LINEBREAK> Eres el <b>líder</b>. Tus alas deben consistir en 2-5 otras naves del mismo tipo que la tuya. %LINEBREAK> Después de ser colocada, voltea esta carta. %LINEBREAK> <strong>Cara de Juego:</strong>%LINEBREAK> Tus alas pueden realizar acciones %BARRELROLL% o %BOOST%. Si lo hacen, se separan voluntariamente de la patrulla. %LINEBREAK> Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
+      text: "<strong>Cara de Despliegue:</strong>%LINEBREAK%Despliegue: Equípala con esta cara visible. %LINEBREAK% Eres el <b>líder</b>. Tus alas deben consistir en 2-5 otras naves del mismo tipo que la tuya. %LINEBREAK% Después de ser colocada, voltea esta carta. %LINEBREAK% <strong>Cara de Juego:</strong>%LINEBREAK% Tus alas pueden realizar acciones %BARRELROLL% o %BOOST%. Si lo hacen, se separan voluntariamente de la patrulla. %LINEBREAK% Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
     },
     "Skystrike Academy Class": {
       display_name: "Clase  de la Academia Skystrike",
-      text: "<strong>Cara de Despliegue:</strong>%LINEBREAK>Despliegue: Equípala con esta cara visible. %LINEBREAK> Eres el <b>líder</b>. Tus alas deben consistir en 2-5 cazas TIE/ln con una iniciativa menor que la tuya. %LINEBREAK> Después de ser colocada, voltea esta carta. %LINEBREAK> <strong>Cara de Juego:</strong>%LINEBREAK> Después de realizar un tonel o una aceleración, cada una de tus alas está obligada a separarse de la patrulla. %LINEBREAK> Mientras te defiendes, hasta 5 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
+      text: "<strong>Cara de Despliegue:</strong>%LINEBREAK%Despliegue: Equípala con esta cara visible. %LINEBREAK% Eres el <b>líder</b>. Tus alas deben consistir en 2-5 cazas TIE/ln con una iniciativa menor que la tuya. %LINEBREAK% Después de ser colocada, voltea esta carta. %LINEBREAK% <strong>Cara de Juego:</strong>%LINEBREAK% Después de realizar un tonel o una aceleración, cada una de tus alas está obligada a separarse de la patrulla. %LINEBREAK% Mientras te defiendes, hasta 5 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT%/%CRIT% para cancelar 1 resultado correspondiente."
     },
     "Disciplined": {
       display_name: "Disciplinado",
@@ -9578,11 +9578,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Sensitive Controls": {
       display_name: "Controles de alta precisión",
-      text: "Reemplaza tu capacidad de nave <strong>Propulsores Automáticos</strong> con la siguiente: %LINEBREAK> <strong>Controles Sensibles</strong>: Durante la fase de sistema, puedes realizar una acción %BARRELROLL% roja o %BOOST% roja."
+      text: "Reemplaza tu capacidad de nave <strong>Propulsores Automáticos</strong> con la siguiente: %LINEBREAK% <strong>Controles Sensibles</strong>: Durante la fase de sistema, puedes realizar una acción %BARRELROLL% roja o %BOOST% roja."
     },
     "TIE Defender Elite": {
       display_name: "Defensor TIE de Élite",
-      text: "Reduce la dificultad de tus maniobras de giro (%TURNLEFT% o %TURNRIGHT%). Aumenta la dificultad de tus maniobras Torniquete (%KTURN%). Reemplaza tu capacidad de nave <strong>Aceleración Total</strong> con la siguiente: %LINEBREAK> <strong>Comando de Disparo Avanzado:</strong> Después de realizar un ataque %CANNON% o %MISSILE%, si tienes un objetivo fijado en el defensor, puedes realizar un ataque principal adicional contra el defensor."
+      text: "Reduce la dificultad de tus maniobras de giro (%TURNLEFT% o %TURNRIGHT%). Aumenta la dificultad de tus maniobras Torniquete (%KTURN%). Reemplaza tu capacidad de nave <strong>Aceleración Total</strong> con la siguiente: %LINEBREAK% <strong>Comando de Disparo Avanzado:</strong> Después de realizar un ataque %CANNON% o %MISSILE%, si tienes un objetivo fijado en el defensor, puedes realizar un ataque principal adicional contra el defensor."
     },
     "L3-37's Programming (BoY)": {
       display_name: "Programación de L3-37 (BoY)",
@@ -9590,15 +9590,15 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Agent of the Empire": {
       display_name: "Agente del Imperio",
-      text: "Eres el <strong>líder</strong>. Tus alas deben consistir en 2, 3, 4 o 5 cazas TIE/ln. %LINEBREAK> Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT% o %CRIT% para cancelar un resultado correspondiente."
+      text: "Eres el <strong>líder</strong>. Tus alas deben consistir en 2, 3, 4 o 5 cazas TIE/ln. %LINEBREAK% Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT% o %CRIT% para cancelar un resultado correspondiente."
     },
     "First Order Elite": {
       display_name: "Élite de la Primera Orden",
-      text: "Eres el <strong>líder</strong>. Tus alas deben consistir en 2 o 3 cazas TIE/fo o TIE/sf. %LINEBREAK> Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT% o %CRIT% para cancelar un resultado correspondiente."
+      text: "Eres el <strong>líder</strong>. Tus alas deben consistir en 2 o 3 cazas TIE/fo o TIE/sf. %LINEBREAK% Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT% o %CRIT% para cancelar un resultado correspondiente."
     },
     "Veteran Wing Leader": {
       display_name: "Jefe de ala veterano",
-      text: "Eres el <strong>líder</strong>. Tus alas deben consistir en 2, 3, 4 o 5 otras naves del mismo tipo que la tuya. %LINEBREAK> Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT% o %CRIT% para cancelar un resultado correspondiente."
+      text: "Eres el <strong>líder</strong>. Tus alas deben consistir en 2, 3, 4 o 5 otras naves del mismo tipo que la tuya. %LINEBREAK% Mientras te defiendes, hasta 2 de tus alas en el arco de ataque pueden sufrir 1 daño %HIT% o %CRIT% para cancelar un resultado correspondiente."
     },
     "Dreadnought Hunter": {
       display_name: "Cazador de acorazados",
@@ -9638,23 +9638,23 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Ion Cannon Battery": {
       display_name: "Batería iónica",
-      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible.%LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. Si este ataque impacta, el defensor sufre 1 daño %CRIT%, y todos los resultados %HIT%/%CRIT% infligen marcadores iónicos en lugar de daño. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
+      text: "<strong>En línea:</strong>%LINEBREAK%Preparación: Equipada con esta cara visible.%LINEBREAK%Ataque Adicional: Gasta 1 %ENERGY%. Si este ataque impacta, el defensor sufre 1 daño %CRIT%, y todos los resultados %HIT%/%CRIT% infligen marcadores iónicos en lugar de daño. %LINEBREAK%<strong>Fuera de línea:</strong>%LINEBREAK%Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
     },
     "Targeting Battery": {
       display_name: "Batería defensiva",
-      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible.%LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. Después de realizar este ataque, puedes fijar blanco al defensor. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
+      text: "<strong>En línea:</strong>%LINEBREAK%Preparación: Equipada con esta cara visible.%LINEBREAK%Ataque Adicional: Gasta 1 %ENERGY%. Después de realizar este ataque, puedes fijar blanco al defensor. %LINEBREAK%<strong>Fuera de línea:</strong>%LINEBREAK%Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
     },
     "Ordnance Tubes": {
       display_name: "Tubos de municiones",
-      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible. %LINEBREAK>Puedes realizar ataques %TORPEDO% y %MISSILE% solo como ataques adicionales. Debes considerar el requisito %FRONTARC% de tus mejoras %TORPEDO% y %MISSILE% equipadas como %FULLFRONTARC%. %LINEBREAK>Ataque Adicional: Realiza un ataque %TORPEDO%. %LINEBREAK>Ataque Adicional: Realiza un ataque %MISSILE%. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Debes considerar el requisito %FRONTARC% de tus mejoras %TORPEDO% y %MISSILE% equipadas como %BULLSEYEARC%. %LINEBREAK>Acción: Gasta 2 %ENERGY% para voltear esta carta."
+      text: "<strong>En línea:</strong>%LINEBREAK%Preparación: Equipada con esta cara visible. %LINEBREAK%Puedes realizar ataques %TORPEDO% y %MISSILE% solo como ataques adicionales. Debes considerar el requisito %FRONTARC% de tus mejoras %TORPEDO% y %MISSILE% equipadas como %FULLFRONTARC%. %LINEBREAK%Ataque Adicional: Realiza un ataque %TORPEDO%. %LINEBREAK%Ataque Adicional: Realiza un ataque %MISSILE%. %LINEBREAK%<strong>Fuera de línea:</strong>%LINEBREAK%Debes considerar el requisito %FRONTARC% de tus mejoras %TORPEDO% y %MISSILE% equipadas como %BULLSEYEARC%. %LINEBREAK%Acción: Gasta 2 %ENERGY% para voltear esta carta."
     },
     "Point-Defense Battery": {
       display_name: "Batería de rastreo de blancos",
-      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible. %LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK>Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
+      text: "<strong>En línea:</strong>%LINEBREAK%Preparación: Equipada con esta cara visible. %LINEBREAK%Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK%Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK%Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK%Ataque Adicional: Gasta 1 %ENERGY%. %LINEBREAK%<strong>Fuera de línea:</strong>%LINEBREAK%Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
     },
     "Turbolaser Battery": {
       display_name: "Batería de turboláser",
-      text: "<strong>En línea:</strong>%LINEBREAK>Preparación: Equipada con esta cara visible.%LINEBREAK>Ataque Adicional [%LOCK%]: Gasta 3 %ENERGY%. Si este ataque impacta, agrega 3 resultados %HIT%. %LINEBREAK><strong>Fuera de línea:</strong>%LINEBREAK>Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
+      text: "<strong>En línea:</strong>%LINEBREAK%Preparación: Equipada con esta cara visible.%LINEBREAK%Ataque Adicional [%LOCK%]: Gasta 3 %ENERGY%. Si este ataque impacta, agrega 3 resultados %HIT%. %LINEBREAK%<strong>Fuera de línea:</strong>%LINEBREAK%Después de que te hayas comprometido, puedes gastar 2 %ENERGY% para voltear esta carta."
     },
     "Toryn Farr": {
       display_name: "Toryn Farr",
@@ -9670,7 +9670,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Damage Control Team": {
       display_name: "Personal de control de daños",
-      text: "Antes de comprometerte, puedes gastar 1 o más %ENERGY% para voltear tantas de tus cartas de mejora <strong>Fuera de línea</strong>. %LINEBREAK><strong>Acción:</strong> Gasta 1 o más %ENERGY% para reparar tantas de tus cartas de daño de <strong>Vaisseau</strong> boca arriba."
+      text: "Antes de comprometerte, puedes gastar 1 o más %ENERGY% para voltear tantas de tus cartas de mejora <strong>Fuera de línea</strong>. %LINEBREAK%<strong>Acción:</strong> Gasta 1 o más %ENERGY% para reparar tantas de tus cartas de daño de <strong>Vaisseau</strong> boca arriba."
     },
     "Gunnery Specialists": {
       display_name: "Especialistas en artillería",
@@ -9682,11 +9682,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Ordnance Team": {
       display_name: "Equipo de municiones",
-      text: "Mientras efectúas una acción %RELOAD%, puedes gastar hasta 3 %ENERGY% para recargar una cantidad igual de fichas de %CHARGE% de tus mejoras %MISSILE%/%TORPEDO% equipadas. %LINEBREAK>Después de efectuar una acción %RELOAD%, puedes gastar 1 %ENERGY% para retirar 1 ficha de desarme."
+      text: "Mientras efectúas una acción %RELOAD%, puedes gastar hasta 3 %ENERGY% para recargar una cantidad igual de fichas de %CHARGE% de tus mejoras %MISSILE%/%TORPEDO% equipadas. %LINEBREAK%Después de efectuar una acción %RELOAD%, puedes gastar 1 %ENERGY% para retirar 1 ficha de desarme."
     },
     "Sensor Experts": {
       display_name: "Expertos en sensores",
-      text: "Puedes mantener hasta 3 fijaciones en objetos diferentes. %LINEBREAK>Después de efectuar una acción %LOCK%, puedes gastar hasta 2 %ENERGY% para fijar blanco a una cantidad igual de objetos adicionales a alcance 0–1 del objeto que fijaste, ignorando las restricciones de alcance."
+      text: "Puedes mantener hasta 3 fijaciones en objetos diferentes. %LINEBREAK%Después de efectuar una acción %LOCK%, puedes gastar hasta 2 %ENERGY% para fijar blanco a una cantidad igual de objetos adicionales a alcance 0–1 del objeto que fijaste, ignorando las restricciones de alcance."
     },
     "Adaptive Shields": {
       display_name: "Escudos adaptativos",
@@ -9706,7 +9706,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Quick-Release Locks": {
       display_name: "Enganches de apertura rápida",
-      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para colocar 1 dispositivo de carga en tu %REARARC% a alcance 0. El marcador de dispositivo de carga no puede superponerse a ninguna nave de esta manera. %LINEBREAK>Los %CHARGE% de esta carta no se pueden recuperar."
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para colocar 1 dispositivo de carga en tu %REARARC% a alcance 0. El marcador de dispositivo de carga no puede superponerse a ninguna nave de esta manera. %LINEBREAK%Los %CHARGE% de esta carta no se pueden recuperar."
     },
     "Saboteur's Map": {
       display_name: "Mapa de saboteador",
@@ -9726,7 +9726,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Liberator": {
       display_name: "Libertador",
-      text: "Puedes arrimar hasta 2 naves pequeñas. %LINEBREAK>Después de que una nave se ha desplegado desde ti, puede realizar una acción %FOCUS% o %BARRELROLL%."
+      text: "Puedes arrimar hasta 2 naves pequeñas. %LINEBREAK%Después de que una nave se ha desplegado desde ti, puede realizar una acción %FOCUS% o %BARRELROLL%."
     },
     "Tantive IV": {
       display_name: "Tantive IV",
@@ -9734,11 +9734,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Bright Hope": {
       display_name: "Esperanza Brillante",
-      text: "Solo puedes reforzar tu %FULLFRONTARC%. %LINEBREAK>Mientras te defiendes, si estás reforzado y el atacante está en tu %FULLFRONTARC%, puedes lanzar 1 dado de defensa adicional."
+      text: "Solo puedes reforzar tu %FULLFRONTARC%. %LINEBREAK%Mientras te defiendes, si estás reforzado y el atacante está en tu %FULLFRONTARC%, puedes lanzar 1 dado de defensa adicional."
     },
     "Luminous": {
       display_name: "Luminoso",
-      text: "<strong>Preparación:</strong> Comienzas en reserva. %LINEBREAK>Al final de la Preparación, colócate en el campo de juego a alcance 0–2 de una nave aliada."
+      text: "<strong>Preparación:</strong> Comienzas en reserva. %LINEBREAK%Al final de la Preparación, colócate en el campo de juego a alcance 0–2 de una nave aliada."
     },
     "Quantum Storm": {
       display_name: "Tormenta Cuántica",
@@ -9750,7 +9750,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Corvus": {
       display_name: "Corvus",
-      text: "Puedes arrimar hasta 2 naves pequeñas. %LINEBREAK>Después de realizar una acción %CALCULATE%, gana 1 ficha de cálculo."
+      text: "Puedes arrimar hasta 2 naves pequeñas. %LINEBREAK%Después de realizar una acción %CALCULATE%, gana 1 ficha de cálculo."
     },
     "Impetuous": {
       display_name: "Impetuoso",
@@ -9798,7 +9798,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Commander Pyre": {
       display_name: "Comandante Pyre",
-      text: "<strong>Preparación:</strong> después de colocar las fuerzas, elige una nave enemiga. Recibe 2 fichas de tensión. %LINEBREAK>Mientras te defiendes, si el atacante está bajo tensión, puedes volver a lanzar 1 dado de defensa."
+      text: "<strong>Preparación:</strong> después de colocar las fuerzas, elige una nave enemiga. Recibe 2 fichas de tensión. %LINEBREAK%Mientras te defiendes, si el atacante está bajo tensión, puedes volver a lanzar 1 dado de defensa."
     },
     "Clone Captain Rex": {
       display_name: "Capitán clon Rex",
@@ -9810,11 +9810,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Repulsorlift Stabilizers": {
       display_name: "Repulsores de estabilización",
-      text: "<strong>Inactivo:</strong> %LINEBREAK>Preparación: Equípate con esta cara visible. %LINEBREAK>Reduce la dificultad de tus maniobras en línea recta (%STRAIGHT%). %LINEBREAK>Después de ejecutar completamente una maniobra, puedes girar esta carta. %LINEBREAK><strong>Activo:</strong> %LINEBREAK>Después de revelar una maniobra de giro en el ala (%BANKLEFT% o %BANKRIGHT%) o de giro (%TURNLEFT% o %TURNRIGHT%), <b>debes</b> realizar esa maniobra como un derrape y luego gira esta carta. %LINEBREAK>Después de ejecutar completamente una maniobra que no sea un derrape, puedes girar esta carta."
+      text: "<strong>Inactivo:</strong> %LINEBREAK%Preparación: Equípate con esta cara visible. %LINEBREAK%Reduce la dificultad de tus maniobras en línea recta (%STRAIGHT%). %LINEBREAK%Después de ejecutar completamente una maniobra, puedes girar esta carta. %LINEBREAK%<strong>Activo:</strong> %LINEBREAK%Después de revelar una maniobra de giro en el ala (%BANKLEFT% o %BANKRIGHT%) o de giro (%TURNLEFT% o %TURNRIGHT%), <b>debes</b> realizar esa maniobra como un derrape y luego gira esta carta. %LINEBREAK%Después de ejecutar completamente una maniobra que no sea un derrape, puedes girar esta carta."
     },
     "Agent Terex": {
       display_name: "Agente Terex",
-      text: "<strong>Preparación:</strong> Equípate con esta cara visible. Coloca 3 fichas de cálculo en esta carta. %LINEBREAK>Al comienzo de la fase de enganche, puedes elegir una nave aliada a alcance 0–3 y retirar 1 ficha de cálculo de esta carta para que esa nave aliada reciba una ficha correspondiente. Luego, si no quedan fichas de cálculo en esta carta, gírala. %LINEBREAK><strong>Cyborg:</strong> %LINEBREAK>Durante la fase de sistema, lanza 1 dado de ataque. En un resultado %HIT% o %CRIT%, obtén 1 ficha de cálculo. De lo contrario, obtén 1 ficha de interferencia. %LINEBREAK><strong>Acción:</strong> Transfiere 1 ficha de cálculo o interferencia a una nave a alcance 0–3."
+      text: "<strong>Preparación:</strong> Equípate con esta cara visible. Coloca 3 fichas de cálculo en esta carta. %LINEBREAK%Al comienzo de la fase de enganche, puedes elegir una nave aliada a alcance 0–3 y retirar 1 ficha de cálculo de esta carta para que esa nave aliada reciba una ficha correspondiente. Luego, si no quedan fichas de cálculo en esta carta, gírala. %LINEBREAK%<strong>Cyborg:</strong> %LINEBREAK%Durante la fase de sistema, lanza 1 dado de ataque. En un resultado %HIT% o %CRIT%, obtén 1 ficha de cálculo. De lo contrario, obtén 1 ficha de interferencia. %LINEBREAK%<strong>Acción:</strong> Transfiere 1 ficha de cálculo o interferencia a una nave a alcance 0–3."
     },
     "Plo Koon": {
       display_name: "Plo Koon",
@@ -9854,7 +9854,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Zam Wesell": {
       display_name: "Zam Wesell",
-      text: "<strong>Preparación:</strong> Pierde 2 %CHARGE%. %LINEBREAK>Durante la fase de sistema, puedes asignarte, boca abajo, 1 de tus estados secretos: %LINEBREAK><strong>Deberías Agradecerme</strong> %LINEBREAK><strong>Deberías Hacer Negocios</strong>"
+      text: "<strong>Preparación:</strong> Pierde 2 %CHARGE%. %LINEBREAK%Durante la fase de sistema, puedes asignarte, boca abajo, 1 de tus estados secretos: %LINEBREAK%<strong>Deberías Agradecerme</strong> %LINEBREAK%<strong>Deberías Hacer Negocios</strong>"
     },
     'Alpha-3B "Besh"': {
       display_name: "Alpha-3B 'Besh'",
@@ -9862,7 +9862,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Thermal Detonators": {
       display_name: "Detonadores termales",
-      text: "<strong>Bomba</strong> %LINEBREAK>Durante la fase de sistema, puedes gastar hasta 2 %CHARGE% para soltar tantos Detonadores Térmicos utilizando la plantilla [1 %STRAIGHT%] o [2 %STRAIGHT%]. Cada uno debe ser colocado utilizando una plantilla diferente. %LINEBREAK>Cuando recargues esta carta, recupera 1 %CHARGE% adicional."
+      text: "<strong>Bomba</strong> %LINEBREAK%Durante la fase de sistema, puedes gastar hasta 2 %CHARGE% para soltar tantos Detonadores Térmicos utilizando la plantilla [1 %STRAIGHT%] o [2 %STRAIGHT%]. Cada uno debe ser colocado utilizando una plantilla diferente. %LINEBREAK%Cuando recargues esta carta, recupera 1 %CHARGE% adicional."
     },
     "R2-D2 (Republic)": {
       display_name: "R2-D2",
@@ -9874,19 +9874,19 @@ exportObj.cardLoaders['Español'] = function() {
     },
     '"Fives"': {
       display_name: "Cincos",
-      text: "Después de realizar un ataque fallido, si la iniciativa del defensor es igual o mayor que tu iniciativa, coloca 1 ficha de evasión o concentración en esta carta. %LINEBREAK>Antes de entrar en juego, puedes quitar 1 ficha de esta carta para recibir 1 ficha correspondiente."
+      text: "Después de realizar un ataque fallido, si la iniciativa del defensor es igual o mayor que tu iniciativa, coloca 1 ficha de evasión o concentración en esta carta. %LINEBREAK%Antes de entrar en juego, puedes quitar 1 ficha de esta carta para recibir 1 ficha correspondiente."
     },
     "Commander Malarus": {
       display_name: "Comandante Malarus",
-      text: "<strong>Preparación:</strong> Equípate con esta cara visible. %LINEBREAK>Mientras una nave aliada sin limitaciones a alcance 0–1 realiza un ataque principal, puede volver a lanzar 1 resultado en blanco. En ese caso, y si el ataque no impacta, <b>debes</b> dar la vuelta a esta carta. %LINEBREAK><strong>Sublimado:</strong> Mientras realizas un ataque, si el defensor está en tu %BULLSEYEARC%, <b>debes</b> convertir todos tus resultados %FOCUS% en resultados %HIT% y ganar 1 ficha de estrés. Luego, si tienes al menos 2 fichas de estrés, sufres 1 daño %HIT%."
+      text: "<strong>Preparación:</strong> Equípate con esta cara visible. %LINEBREAK%Mientras una nave aliada sin limitaciones a alcance 0–1 realiza un ataque principal, puede volver a lanzar 1 resultado en blanco. En ese caso, y si el ataque no impacta, <b>debes</b> dar la vuelta a esta carta. %LINEBREAK%<strong>Sublimado:</strong> Mientras realizas un ataque, si el defensor está en tu %BULLSEYEARC%, <b>debes</b> convertir todos tus resultados %FOCUS% en resultados %HIT% y ganar 1 ficha de estrés. Luego, si tienes al menos 2 fichas de estrés, sufres 1 daño %HIT%."
     },
     "Automated Target Priority": {
       display_name: "Priorización de blancos automatizadaa",
-      text: "Mientras realizas un ataque, <b>debes</b> elegir un defensor a la distancia de ataque válida más corta. %LINEBREAK>Después de realizar un ataque que falla, coloca 1 ficha de cálculo en esta carta. %LINEBREAK>Antes de entrar en juego, puedes quitar 1 ficha de cálculo de esta carta para obtener la ficha correspondiente."
+      text: "Mientras realizas un ataque, <b>debes</b> elegir un defensor a la distancia de ataque válida más corta. %LINEBREAK%Después de realizar un ataque que falla, coloca 1 ficha de cálculo en esta carta. %LINEBREAK%Antes de entrar en juego, puedes quitar 1 ficha de cálculo de esta carta para obtener la ficha correspondiente."
     },
     "Sensor Buoy Suite": {
       display_name: "Conjunto de boyas de sensores",
-      text: "<strong>Preparación:</strong> Antes de colocar las fuerzas, coloca 2 dispositivos distantes de Boya de Detección más allá de alcance 2 de cualquier borde. %LINEBREAK>Antes de entrar en juego, puedes bloquear una nave a alcance 0–1 de cualquier boya de detección aliada, ignorando las restricciones de alcance."
+      text: "<strong>Preparación:</strong> Antes de colocar las fuerzas, coloca 2 dispositivos distantes de Boya de Detección más allá de alcance 2 de cualquier borde. %LINEBREAK%Antes de entrar en juego, puedes bloquear una nave a alcance 0–1 de cualquier boya de detección aliada, ignorando las restricciones de alcance."
     },
     "Ghost Company": {
       display_name: "Compañía Fantasma",
@@ -9902,7 +9902,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Concussion Bombs": {
       display_name: "Bombas de impacto",
-      text: "Durante la fase de sistema, si alguna %CHARGE% de esta carta está inactiva, <b>debes</b> gastar 1 %CHARGE% para soltar una bomba de concusión, si es posible, utilizando la plantilla [1 %STRAIGHT%]. De lo contrario, puedes gastar 1 %CHARGE% para soltar una bomba de concusión. %LINEBREAK> <i>Errata (Guía de Referencia 1.3.0): Agrega 'utilizando la plantilla [1 %STRAIGHT%]' al final de la primera frase.</i>"
+      text: "Durante la fase de sistema, si alguna %CHARGE% de esta carta está inactiva, <b>debes</b> gastar 1 %CHARGE% para soltar una bomba de concusión, si es posible, utilizando la plantilla [1 %STRAIGHT%]. De lo contrario, puedes gastar 1 %CHARGE% para soltar una bomba de concusión. %LINEBREAK% <i>Errata (Guía de Referencia 1.3.0): Agrega 'utilizando la plantilla [1 %STRAIGHT%]' al final de la primera frase.</i>"
     },
     "Target-Assist MGK-300": {
       display_name: "MGK-300 de cálculo de tiro",
@@ -9910,11 +9910,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Backwards Tailslide": {
       display_name: "Caída de cola hacia atrás",
-      text: "Mientras realizas un impulso o un tonel volado, si la cara 'Replegada' de tu mejora %CONFIGURATION% equipada está visible, puedes moverte a través y superponerte a obstáculos. %LINEBREAK>Después de acelerar o realizar un tonel a través de un obstáculo y si no estás a alcance 0 de él, gana 1 ficha de evasión."
+      text: "Mientras realizas un impulso o un tonel volado, si la cara 'Replegada' de tu mejora %CONFIGURATION% equipada está visible, puedes moverte a través y superponerte a obstáculos. %LINEBREAK%Después de acelerar o realizar un tonel a través de un obstáculo y si no estás a alcance 0 de él, gana 1 ficha de evasión."
     },
     "R2-D2 (Resistance)": {
       display_name: "R2-D2",
-      text: "Durante la fase de desenlace, puedes gastar 1 %CHARGE% y 1 %SHIELD% para quitar 1 ficha roja. %LINEBREAK>Durante la fase de desenlace, si no tienes ningún %SHIELD% activo, puedes gastar 2 %CHARGE% para recuperar 1 %SHIELD% y ganar 1 ficha de agotamiento."
+      text: "Durante la fase de desenlace, puedes gastar 1 %CHARGE% y 1 %SHIELD% para quitar 1 ficha roja. %LINEBREAK%Durante la fase de desenlace, si no tienes ningún %SHIELD% activo, puedes gastar 2 %CHARGE% para recuperar 1 %SHIELD% y ganar 1 ficha de agotamiento."
     },
     "R6-D8": {
       display_name: "R6-D8",
@@ -9922,11 +9922,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Underslung Blaster Cannon": {
       display_name: "Cañón blaster inferior",
-      text: "Después de que una nave enemiga haya realizado una maniobra, puedes realizar este ataque contra ella como un ataque adicional. %LINEBREAK><strong>Ataque (%LOCK%):</strong> Tus dados solo pueden modificarse gastando un bloqueo para el efecto predeterminado."
+      text: "Después de que una nave enemiga haya realizado una maniobra, puedes realizar este ataque contra ella como un ataque adicional. %LINEBREAK%<strong>Ataque (%LOCK%):</strong> Tus dados solo pueden modificarse gastando un bloqueo para el efecto predeterminado."
     },
     "Jedi Commander": {
       display_name: "Comandante Jedi",
-      text: "<strong>Cara de Despliegue:</strong> %LINEBREAK>Despliegue: Equípate con esta cara visible. %LINEBREAK>Eres el <b>líder</b>. Tus alas deben ser cazas Torrent V-19 de 2–5 o V-wings de clase Nimbus de 2–5. %LINEBREAK>Después de ser colocado, voltea esta carta. %LINEBREAK><strong>Cara de Juego:</strong> %LINEBREAK>Mientras tus alas realizan maniobras violetas, las consideran rojas en su lugar. %LINEBREAK>Cuando te defiendes, hasta 2 de tus alas en el arco de ataque pueden recibir 1 daño %HIT%/%CRIT% cada una para cancelar 1 resultado correspondiente."
+      text: "<strong>Cara de Despliegue:</strong> %LINEBREAK%Despliegue: Equípate con esta cara visible. %LINEBREAK%Eres el <b>líder</b>. Tus alas deben ser cazas Torrent V-19 de 2–5 o V-wings de clase Nimbus de 2–5. %LINEBREAK%Después de ser colocado, voltea esta carta. %LINEBREAK%<strong>Cara de Juego:</strong> %LINEBREAK%Mientras tus alas realizan maniobras violetas, las consideran rojas en su lugar. %LINEBREAK%Cuando te defiendes, hasta 2 de tus alas en el arco de ataque pueden recibir 1 daño %HIT%/%CRIT% cada una para cancelar 1 resultado correspondiente."
     },
     "Syliure-31 Hyperdrive": {
       display_name: "Hiperimpulsor Siluro-31",
@@ -9946,11 +9946,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Intercept Booster": {
       display_name: "Impulsor de Interceptación",
-      text: "<strong>Enganchado:</strong> %LINEBREAK>Despliegue: Equípate con esta cara visible. %LINEBREAK>Durante la fase de sistema, gana 1 ficha de desarme a menos que des la vuelta a esta carta. %LINEBREAK>Al final de la fase de desenlace, si no tienes ninguna %CHARGE% activa, voltea esta carta. %LINEBREAK><strong>Desenganchado: </strong> Sin acciones agregadas."
+      text: "<strong>Enganchado:</strong> %LINEBREAK%Despliegue: Equípate con esta cara visible. %LINEBREAK%Durante la fase de sistema, gana 1 ficha de desarme a menos que des la vuelta a esta carta. %LINEBREAK%Al final de la fase de desenlace, si no tienes ninguna %CHARGE% activa, voltea esta carta. %LINEBREAK%<strong>Desenganchado: </strong> Sin acciones agregadas."
     },
     "Independent Calculations": {
       display_name: "Cálculos independientes",
-      text: "Reemplaza tu capacidad de nave <strong>Cálculos en Red</strong> con la siguiente: %LINEBREAK><strong>Cálculos Independientes:</strong> Mientras realizas una acción blanca %CALCULATE%, puedes considerarla como roja para ganar 1 ficha de cálculo adicional. Las otras naves no pueden gastar tus fichas de cálculo utilizando la capacidad de nave <strong>Cálculos en Red</strong>."
+      text: "Reemplaza tu capacidad de nave <strong>Cálculos en Red</strong> con la siguiente: %LINEBREAK%<strong>Cálculos Independientes:</strong> Mientras realizas una acción blanca %CALCULATE%, puedes considerarla como roja para ganar 1 ficha de cálculo adicional. Las otras naves no pueden gastar tus fichas de cálculo utilizando la capacidad de nave <strong>Cálculos en Red</strong>."
     },
     "False Transponder Codes": {
       display_name: "Códigos de transpondedor falsos",
@@ -9970,11 +9970,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "In It For The Money": {
       display_name: "Lo hago por el dinero",
-      text: "<strong>Por el Dinero:</strong> %LINEBREAK>Despliegue: Equípate con esta cara visible. %LINEBREAK>Puedes ser integrado en escuadrones de la República, la Alianza Rebelde y la Resistencia. %LINEBREAK>Después de que una nave amiga limitada de tu escuadrón sea destruida, gana 1 ficha de concentración y voltea esta carta. %LINEBREAK><strong>Por Tu Rebelión:</strong> %LINEBREAK>Las naves no Scum de tu escuadrón se consideran aliadas en lugar de amigas."
+      text: "<strong>Por el Dinero:</strong> %LINEBREAK%Despliegue: Equípate con esta cara visible. %LINEBREAK%Puedes ser integrado en escuadrones de la República, la Alianza Rebelde y la Resistencia. %LINEBREAK%Después de que una nave amiga limitada de tu escuadrón sea destruida, gana 1 ficha de concentración y voltea esta carta. %LINEBREAK%<strong>Por Tu Rebelión:</strong> %LINEBREAK%Las naves no Scum de tu escuadrón se consideran aliadas en lugar de amigas."
     },
     "Bounty": {
       display_name: "Recompensa",
-      text: "<strong>Contratado:</strong> %LINEBREAK>Despliegue: Equípate con esta cara visible. %LINEBREAK>Puedes ser integrado en escuadrones Separatistas, Imperiales y del Primer Orden. %LINEBREAK>Después de que hayas realizado un ataque, si el defensor era una nave limitada y fue destruido, puedes recuperar 1 %CHARGE% en tu carta de nave y en cada una de tus cartas de mejora. Luego, voltea esta carta. %LINEBREAK><strong>Pagado:</strong> <i>Vacío</i>"
+      text: "<strong>Contratado:</strong> %LINEBREAK%Despliegue: Equípate con esta cara visible. %LINEBREAK%Puedes ser integrado en escuadrones Separatistas, Imperiales y del Primer Orden. %LINEBREAK%Después de que hayas realizado un ataque, si el defensor era una nave limitada y fue destruido, puedes recuperar 1 %CHARGE% en tu carta de nave y en cada una de tus cartas de mejora. Luego, voltea esta carta. %LINEBREAK%<strong>Pagado:</strong> <i>Vacío</i>"
     },
     "Gamut Key": {
       display_name: "Gamut Key",
@@ -9982,7 +9982,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Protectorate Gleb": {
       display_name: "Protectora Gleb",
-      text: "Después de coordinar una nave aliada, puedes transferir 1 ficha naranja o roja a la nave que coordinaste. %LINEBREAK><i>Errata (1.3.2): Agrega '...una nave aliada...'</i>"
+      text: "Después de coordinar una nave aliada, puedes transferir 1 ficha naranja o roja a la nave que coordinaste. %LINEBREAK%<i>Errata (1.3.2): Agrega '...una nave aliada...'</i>"
     },
     "R4-B11": {
       display_name: "R4-B11",
@@ -9990,11 +9990,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Asajj Ventress (Command)": {
       display_name: "Asajj Ventress",
-      text: "Durante la fase de sistema, puedes gastar 1 %FORCE%. En ese caso, cada nave enemiga en tu %FRONTARC% a alcance 0-1 gana 1 ficha de tensión a menos que elija ganar 1 ficha de bloqueo. %LINEBREAK><i>Errata (1.3.2): Agrega el símbolo a la derecha del modificador de la Fuerza.</i>"
+      text: "Durante la fase de sistema, puedes gastar 1 %FORCE%. En ese caso, cada nave enemiga en tu %FRONTARC% a alcance 0-1 gana 1 ficha de tensión a menos que elija ganar 1 ficha de bloqueo. %LINEBREAK%<i>Errata (1.3.2): Agrega el símbolo a la derecha del modificador de la Fuerza.</i>"
     },
     "General Grievous (Command)": {
       display_name: "General Grievous",
-      text: "Mientras te defiendes, después del paso 'Neutralizar resultados', si hay al menos 2 resultados %HIT%/%CRIT%, puedes gastar 1 %CHARGE% para cancelar 1 resultado %HIT% o %CRIT%. %LINEBREAK>Después de que una nave aliada sea destruida, recupera 1 %CHARGE%."
+      text: "Mientras te defiendes, después del paso 'Neutralizar resultados', si hay al menos 2 resultados %HIT%/%CRIT%, puedes gastar 1 %CHARGE% para cancelar 1 resultado %HIT% o %CRIT%. %LINEBREAK%Después de que una nave aliada sea destruida, recupera 1 %CHARGE%."
     },
     "Hondo Ohnaka (Command)": {
       display_name: "Hondo Ohnaka",
@@ -10002,11 +10002,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Mar Tuuk": {
       display_name: "Mar Tuuk",
-      text: "<strong>Despliegue:</strong> después de colocar las fuerzas, elige un patrullero aliado de naves con %CALCULATE% en su barra de acciones y coloca este patrullero en reserva. %LINEBREAK>En la fase de desenlace, puedes colocar este patrullero en tu zona de despliegue o más allá de alcance 2 de cualquier nave enemiga. Luego puedes elegir una nave enemiga a alcance 0-1 de ti: cada nave de este patrullero traba ese enemigo."
+      text: "<strong>Despliegue:</strong> después de colocar las fuerzas, elige un patrullero aliado de naves con %CALCULATE% en su barra de acciones y coloca este patrullero en reserva. %LINEBREAK%En la fase de desenlace, puedes colocar este patrullero en tu zona de despliegue o más allá de alcance 2 de cualquier nave enemiga. Luego puedes elegir una nave enemiga a alcance 0-1 de ti: cada nave de este patrullero traba ese enemigo."
     },
     "Riff Tamson": {
       display_name: "Riff Tamson",
-      text: "Durante la fase de Enfrentamiento, en la iniciativa 5, puedes gastar 1 %ENERGY% para realizar un ataque %HARDPOINT% adicional. %LINEBREAK>Después de que hayas realizado un ataque, si el defensor ha recibido al menos 1 carta de daño boca arriba, gana 2 fichas de tensión."
+      text: "Durante la fase de Enfrentamiento, en la iniciativa 5, puedes gastar 1 %ENERGY% para realizar un ataque %HARDPOINT% adicional. %LINEBREAK%Después de que hayas realizado un ataque, si el defensor ha recibido al menos 1 carta de daño boca arriba, gana 2 fichas de tensión."
     },
     "Zealous Captain": {
       display_name: "Capitán Zeloso",
@@ -10014,27 +10014,27 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Tractor Tentacles": {
       display_name: "Tentáculos tractores",
-      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK><strong>Ataque Bonus</strong> %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. %LINEBREAK><strong>Fuera de línea:</strong> %LINEBREAK><strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
+      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK%<strong>Ataque Bonus</strong> %LINEBREAK%<strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. %LINEBREAK%<strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. %LINEBREAK%<strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. %LINEBREAK%<strong>Fuera de línea:</strong> %LINEBREAK%<strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
     },
     "Drill Beak": {
       display_name: "Pico de Perforación",
-      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK>Puedes realizar este ataque a alcance 0. %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. Si el alcance de ataque es 0, cambia todos los resultados %HIT% a resultados %CRIT%. %LINEBREAK><strong>Fuera de línea:</strong> %LINEBREAK><strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
+      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK%Puedes realizar este ataque a alcance 0. %LINEBREAK%<strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. Si el alcance de ataque es 0, cambia todos los resultados %HIT% a resultados %CRIT%. %LINEBREAK%<strong>Fuera de línea:</strong> %LINEBREAK%<strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
     },
     "Enhanced Propulsion": {
       display_name: "Propulsión mejorada",
-      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK>Al comienzo de la fase de desenlace, puedes gastar 2 %ENERGY% para realizar una maniobra blanca [2 %STRAIGHT%], [1 %BANKLEFT%] o [1 %BANKRIGHT%]. %LINEBREAK><strong>Fuera de línea:</strong> %LINEBREAK><strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
+      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK%Al comienzo de la fase de desenlace, puedes gastar 2 %ENERGY% para realizar una maniobra blanca [2 %STRAIGHT%], [1 %BANKLEFT%] o [1 %BANKRIGHT%]. %LINEBREAK%<strong>Fuera de línea:</strong> %LINEBREAK%<strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
     },
     "Proton Cannon Battery": {
       display_name: "Batería de cañones de protones",
-      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK><strong>Ataque Bonus:</strong> cambia 1 resultado %HIT% a resultado %CRIT%. %LINEBREAK><strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. Cambia 1 resultado %HIT% a resultado %CRIT%. %LINEBREAK><strong>Fuera de línea:</strong> %LINEBREAK><strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
+      text: "<strong>Despliegue:</strong> equípate con esta cara visible. %LINEBREAK%<strong>Ataque Bonus:</strong> cambia 1 resultado %HIT% a resultado %CRIT%. %LINEBREAK%<strong>Ataque Bonus:</strong> gasta 1 %ENERGY%. Cambia 1 resultado %HIT% a resultado %CRIT%. %LINEBREAK%<strong>Fuera de línea:</strong> %LINEBREAK%<strong>Acción:</strong> Gasta 1 %ENERGY% para voltear esta carta."
     },
     "Droid Crew": {
       display_name: "Tripulación droide",
-      text: "Mientras realizas una acción %FOCUS% blanca, considérala como roja en su lugar. %LINEBREAK>Al comienzo de la fase de desenlace, repara todas tus cartas de daño <b>Tripulación</b> boca arriba."
+      text: "Mientras realizas una acción %FOCUS% blanca, considérala como roja en su lugar. %LINEBREAK%Al comienzo de la fase de desenlace, repara todas tus cartas de daño <b>Tripulación</b> boca arriba."
     },
     "Tractor Technicians": {
       display_name: "Técnicos de tractores",
-      text: "Durante la fase de desenlace, ninguna otra nave a alcance 0-1 puede quitar sus fichas de rayo tractor. %LINEBREAK>Antes de que una nave enemiga tractada a alcance 0-1 revele su selector de maniobra, puedes gastar 1 %ENERGY%. En ese caso, mientras esa nave ejecute su maniobra en esa activación, disminuye su velocidad en 1, con un mínimo de 1."
+      text: "Durante la fase de desenlace, ninguna otra nave a alcance 0-1 puede quitar sus fichas de rayo tractor. %LINEBREAK%Antes de que una nave enemiga tractada a alcance 0-1 revele su selector de maniobra, puedes gastar 1 %ENERGY%. En ese caso, mientras esa nave ejecute su maniobra en esa activación, disminuye su velocidad en 1, con un mínimo de 1."
     },
     "Corsair Crew": {
       display_name: "Tripulación corsaria",
@@ -10050,7 +10050,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Neimoidian Grasp": {
       display_name: "Agarre Neimoidiano",
-      text: "Después de realizar un ataque, puedes realizar una acción %EVADE% roja. %LINEBREAK>Mientras te defiendes, si tienes fichas de evasión, puedes lanzar 1 dado de defensa adicional."
+      text: "Después de realizar un ataque, puedes realizar una acción %EVADE% roja. %LINEBREAK%Mientras te defiendes, si tienes fichas de evasión, puedes lanzar 1 dado de defensa adicional."
     },
     "Trident": {
       display_name: "Tridente",
@@ -10058,7 +10058,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Tracking Torpedoes": {
       display_name: "Torpedos de Rastreo",
-      text: "Durante la fase de sistema, puedes gastar hasta 3 %CHARGE% para lanzar la misma cantidad de torpedos de rastreo utilizando las plantillas [3%BANKLEFT%], [4%STRAIGHT%] o [3%BANKRIGHT%]. Cada dispositivo debe usar una plantilla diferente. Luego, cada dispositivo puede fijar un objeto que hayas fijado, ignorando las restricciones de alcance. %LINEBREAK>No puedes recuperar las %CHARGE% de esta carta. %LINEBREAK><i>Errata (1.3.2): Añade la no recuperación de las cargas.</i>"
+      text: "Durante la fase de sistema, puedes gastar hasta 3 %CHARGE% para lanzar la misma cantidad de torpedos de rastreo utilizando las plantillas [3%BANKLEFT%], [4%STRAIGHT%] o [3%BANKRIGHT%]. Cada dispositivo debe usar una plantilla diferente. Luego, cada dispositivo puede fijar un objeto que hayas fijado, ignorando las restricciones de alcance. %LINEBREAK%No puedes recuperar las %CHARGE% de esta carta. %LINEBREAK%<i>Errata (1.3.2): Añade la no recuperación de las cargas.</i>"
     },
     "L4E-R5": {
       display_name: "L4E-R5",
@@ -10066,7 +10066,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Wartime Loadout": {
       display_name: "Carga bélica",
-      text: "Reemplaza tu capacidad de nave por la siguiente: %LINEBREAK><strong>Disparo de Cañón Masivo:</strong> Mientras realizas un ataque %TORPEDO% o %MISIL%, si el defensor está en tu %BULLSEYEARC%, tus resultados %CRIT% no pueden ser anulados por resultados %EVADE%."
+      text: "Reemplaza tu capacidad de nave por la siguiente: %LINEBREAK%<strong>Disparo de Cañón Masivo:</strong> Mientras realizas un ataque %TORPEDO% o %MISIL%, si el defensor está en tu %BULLSEYEARC%, tus resultados %CRIT% no pueden ser anulados por resultados %EVADE%."
     },
     "Watchful Astromech": {
       display_name: "Droide astromecánico alerta",
@@ -10074,15 +10074,15 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Overtuned Modulators": {
       display_name: "Moduladores sobrecalibrados",
-      text: "Durante la fase de sistema, si no estás bajo estrés, puedes gastar 1 %CHARGE% para obtener 3 fichas de cálculo. %LINEBREAK>En la fase de desenlace, si tu %CHARGE% está inactiva, por cada ficha verde que retires, obtén 1 ficha de tensión."
+      text: "Durante la fase de sistema, si no estás bajo estrés, puedes gastar 1 %CHARGE% para obtener 3 fichas de cálculo. %LINEBREAK%En la fase de desenlace, si tu %CHARGE% está inactiva, por cada ficha verde que retires, obtén 1 ficha de tensión."
     },
     "DT-798": {
       display_name: "DT-798",
-      text: "Al comienzo de la fase de compromiso, puedes elegir una nave aliada en tu arco de tiro. En ese caso, obtiene 1 ficha de tensión. %LINEBREAK>Mientras realizas un ataque, puedes volver a lanzar hasta 1 dado por cada nave en el arco de ataque con al menos 1 ficha roja u naranja que no sea un blanco."
+      text: "Al comienzo de la fase de compromiso, puedes elegir una nave aliada en tu arco de tiro. En ese caso, obtiene 1 ficha de tensión. %LINEBREAK%Mientras realizas un ataque, puedes volver a lanzar hasta 1 dado por cada nave en el arco de ataque con al menos 1 ficha roja u naranja que no sea un blanco."
     },
     "Enhanced Jamming Suite": {
       display_name: "Emisor de Interferencias mejorado",
-      text: "Mientras realizas bloqueo, puedes elegirte a ti mismo o a otra nave aliada. %LINEBREAK>Mientras te defiendes, si el atacante no tiene fichas verdes o hay una nave bloqueada en el arco de ataque, puedes lanzar 1 dado de defensa adicional."
+      text: "Mientras realizas bloqueo, puedes elegirte a ti mismo o a otra nave aliada. %LINEBREAK%Mientras te defiendes, si el atacante no tiene fichas verdes o hay una nave bloqueada en el arco de ataque, puedes lanzar 1 dado de defensa adicional."
     },
     "First Order Ordnance Tech": {
       display_name: "Técnico en explosivos de la Primera Orden",
@@ -10090,11 +10090,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Sensor Scramblers": {
       display_name: "Inhibidores de sensores",
-      text: "<strong>Preparación:</strong> Obtén 1 ficha de ocultación. %LINEBREAK%Mientras estás oculto, las otras naves no pueden fijarte con sus blancos. %LINEBREAK>Durante la fase de desenlace, si estás oculto y hay una nave enemiga a alcance 0-3, <b>debes</b> dejar de estar oculto. En ese caso, si el intento de dejar de estar oculto falla, pierdes 1 ficha de ocultación."
+      text: "<strong>Preparación:</strong> Obtén 1 ficha de ocultación. %LINEBREAK%Mientras estás oculto, las otras naves no pueden fijarte con sus blancos. %LINEBREAK%Durante la fase de desenlace, si estás oculto y hay una nave enemiga a alcance 0-3, <b>debes</b> dejar de estar oculto. En ese caso, si el intento de dejar de estar oculto falla, pierdes 1 ficha de ocultación."
     },
     "Babu Frik": {
       display_name: "Babu Frik",
-      text: "Antes de que ganes una ficha roja u naranja que no sea un blanco, puedes gastar 1 %CHARGE% para ponerla en esta carta en su lugar. %LINEBREAK>Durante la fase de sistema, si hay al menos 1 ficha en esta carta, <b>debes</b> gastar 1 %CHARGE%. Si no puedes, elimina las fichas de esta carta y gana las fichas correspondientes."
+      text: "Antes de que ganes una ficha roja u naranja que no sea un blanco, puedes gastar 1 %CHARGE% para ponerla en esta carta en su lugar. %LINEBREAK%Durante la fase de sistema, si hay al menos 1 ficha en esta carta, <b>debes</b> gastar 1 %CHARGE%. Si no puedes, elimina las fichas de esta carta y gana las fichas correspondientes."
     },
     "Compassion": {
       display_name: "Compasión",
@@ -10118,11 +10118,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Sabine Wren (Command)": {
       display_name: "Sabine Wren",
-      text: "<strong>Preparación:</strong> Antes de desplegar las fuerzas, asóciate el estado <b>Pruebas del Sable Oscuro</b>. %LINEBREAK>Mientras realizas una acción %COORDINATE%, puedes coordinar una nave aliada adicional."
+      text: "<strong>Preparación:</strong> Antes de desplegar las fuerzas, asóciate el estado <b>Pruebas del Sable Oscuro</b>. %LINEBREAK%Mientras realizas una acción %COORDINATE%, puedes coordinar una nave aliada adicional."
     },
     "Clan Training": {
       display_name: "Entrenamiento de Clan",
-      text: "Antes de comprometerte, si no estás concentrado y hay una nave enemiga en tu %FRONTARC% a alcance 1, puedes gastar 1 %CHARGE% para realizar una acción roja. %LINEBREAK>Después de que hayas realizado un ataque. Si el defensor es destruido, recuperas 1 %CHARGE%."
+      text: "Antes de comprometerte, si no estás concentrado y hay una nave enemiga en tu %FRONTARC% a alcance 1, puedes gastar 1 %CHARGE% para realizar una acción roja. %LINEBREAK%Después de que hayas realizado un ataque. Si el defensor es destruido, recuperas 1 %CHARGE%."
     },
     "Ahsoka Tano (Crew)": {
       display_name: "Ahsoka Tano",
@@ -10162,7 +10162,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Prime Minister Almec": {
       display_name: "Primer Ministro Almec",
-      text: "<strong>Preparación:</strong> Equípate con esta cara visible. %LINEBREAK%Después de que una nave aliada a alcance 0-2 haya revelado una maniobra blanca, si no tiene una ficha verde, puede ganar 1 ficha de tensión para ganar 1 ficha de cálculo. %LINEBREAK%Durante la fase de conclusión, si tienes al menos 2 fichas de tensión, voltea esta carta. %LINEBREAK><strong>Almec, Marioneta de Maul: </strong>Después de que una nave aliada a alcance 0-2 haya ejecutado completamente una maniobra roja, puede realizar una acción de %CALCULATE% o %FOCUS% de su barra de acciones, incluso si está bajo tensión."
+      text: "<strong>Preparación:</strong> Equípate con esta cara visible. %LINEBREAK%Después de que una nave aliada a alcance 0-2 haya revelado una maniobra blanca, si no tiene una ficha verde, puede ganar 1 ficha de tensión para ganar 1 ficha de cálculo. %LINEBREAK%Durante la fase de conclusión, si tienes al menos 2 fichas de tensión, voltea esta carta. %LINEBREAK%<strong>Almec, Marioneta de Maul: </strong>Después de que una nave aliada a alcance 0-2 haya ejecutado completamente una maniobra roja, puede realizar una acción de %CALCULATE% o %FOCUS% de su barra de acciones, incluso si está bajo tensión."
     },
     "Rook Kast": {
       display_name: "Rook Kast",
@@ -10178,7 +10178,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Tal Merrik": {
       display_name: "Tal Merrik",
-      text: "<strong>Preparación:</strong> Antes de desplegar las fuerzas, elige 1 nave enemiga y asígnale el estado de <b>Falso Hermano</b>. %LINEBREAK><strong>Acción:</strong> Si el estado de <b>Falso Hermano</b> no está asignado a una nave enemiga, asígnalo a una nave enemiga en tu %FRONTARC% a alcance 0-2."
+      text: "<strong>Preparación:</strong> Antes de desplegar las fuerzas, elige 1 nave enemiga y asígnale el estado de <b>Falso Hermano</b>. %LINEBREAK%<strong>Acción:</strong> Si el estado de <b>Falso Hermano</b> no está asignado a una nave enemiga, asígnalo a una nave enemiga en tu %FRONTARC% a alcance 0-2."
     },
     "Tristan Wren": {
       display_name: "Tristan Wren",
@@ -10186,7 +10186,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Ursa Wren": {
       display_name: "Ursa Wren",
-      text: "Puedes mantener hasta 2 bloqueos. Cada bloqueo debe estar en un objetivo diferente. %LINEBREAK%Después de que una nave aliada a alcance 0-3 sea bloqueada por una nave enemiga, puedes realizar una acción %LOCK%. %LINEBREAK> <i>Errata (1.5): Texto actualizado para reflejar el efecto originalmente previsto.</i>"
+      text: "Puedes mantener hasta 2 bloqueos. Cada bloqueo debe estar en un objetivo diferente. %LINEBREAK%Después de que una nave aliada a alcance 0-3 sea bloqueada por una nave enemiga, puedes realizar una acción %LOCK%. %LINEBREAK% <i>Errata (1.5): Texto actualizado para reflejar el efecto originalmente previsto.</i>"
     },
     "Maul (Mandalore)": {
       display_name: "Maul",
@@ -10226,7 +10226,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Swivel Wing": {
       display_name: "Ala basculante",
-      text: "<strong>Ala Giratoria (Abajo):</strong> %LINEBREAK%Después de ejecutar una maniobra [0 %STOP%], puedes girar tu nave 90° o 180°. En este caso, <b>debes</b> darle la vuelta a esta carta. %LINEBREAK%<strong>Ala Giratoria (Arriba):</strong> %LINEBREAK>Mientras te defiendes, lanza 1 dado de defensa menos. %LINEBREAK>Después de ejecutar completamente una maniobra no estacionaria [0 %STOP%], puedes darle la vuelta a esta carta."
+      text: "<strong>Ala Giratoria (Abajo):</strong> %LINEBREAK%Después de ejecutar una maniobra [0 %STOP%], puedes girar tu nave 90° o 180°. En este caso, <b>debes</b> darle la vuelta a esta carta. %LINEBREAK%<strong>Ala Giratoria (Arriba):</strong> %LINEBREAK%Mientras te defiendes, lanza 1 dado de defensa menos. %LINEBREAK%Después de ejecutar completamente una maniobra no estacionaria [0 %STOP%], puedes darle la vuelta a esta carta."
     },
     "Clan Wren Commandos": {
       display_name: "Comandos del Clan Wren",
@@ -10234,7 +10234,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Razor Crest": {
       display_name: "Razor Crest",
-      text: "<strong>Preparación:</strong> Coloca 1 mejora %ILLICIT% sin restricciones boca abajo bajo esta carta. %LINEBREAK> Durante la fase de sistema, puedes revelar esa mejora %ILLICIT% y equiparla como si hubiera sido equipada en la Preparación (sin pagar su costo en puntos)."
+      text: "<strong>Preparación:</strong> Coloca 1 mejora %ILLICIT% sin restricciones boca abajo bajo esta carta. %LINEBREAK% Durante la fase de sistema, puedes revelar esa mejora %ILLICIT% y equiparla como si hubiera sido equipada en la Preparación (sin pagar su costo en puntos)."
     },
     "The Mandalorian": {
       display_name: "El Mandaloriano",
@@ -10242,15 +10242,15 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "The Child": {
       display_name: "El Niño",
-      text: "<strong>Preparación:</strong> Después de colocar las fuerzas, elige a un oponente: él asigna el estado de <b>Persecución Implacable</b> a 2 de sus naves. %LINEBREAK>Tu %FORCE% pierde el icono recurrente. Después de defender, si has recibido al menos 1 daño durante ese ataque, recupera 1 %FORCE%."
+      text: "<strong>Preparación:</strong> Después de colocar las fuerzas, elige a un oponente: él asigna el estado de <b>Persecución Implacable</b> a 2 de sus naves. %LINEBREAK%Tu %FORCE% pierde el icono recurrente. Después de defender, si has recibido al menos 1 daño durante ese ataque, recupera 1 %FORCE%."
     },
     "Tracking Fob": {
       display_name: "Rastreador de presas",
-      text: "<strong>Preparación:</strong> Antes de colocar las fuerzas, elige a un oponente: él asigna el estado de <b>Destinado a Morir</b> a 1 de sus naves. Debe asignarlo a una nave limitada, si es posible. %LINEBREAK>Ignoras las restricciones de alcance cuando bloqueas la nave que tiene el estado de <b>Destinado a Morir</b>."
+      text: "<strong>Preparación:</strong> Antes de colocar las fuerzas, elige a un oponente: él asigna el estado de <b>Destinado a Morir</b> a 1 de sus naves. Debe asignarlo a una nave limitada, si es posible. %LINEBREAK%Ignoras las restricciones de alcance cuando bloqueas la nave que tiene el estado de <b>Destinado a Morir</b>."
     },
     "Notorious": {
       display_name: "Célebre",
-      text: "Después de que te hayas defendido y si el atacante está en tu arco de tiro, puedes gastar 1 %CHARGE%. En ese caso, el atacante recibe 1 ficha de estrés. %LINEBREAK>Mientras realizas un ataque y si el defensor está bajo estrés, puedes volver a tirar 1 resultado en blanco."
+      text: "Después de que te hayas defendido y si el atacante está en tu arco de tiro, puedes gastar 1 %CHARGE%. En ese caso, el atacante recibe 1 ficha de estrés. %LINEBREAK%Mientras realizas un ataque y si el defensor está bajo estrés, puedes volver a tirar 1 resultado en blanco."
     },
     "Enduring": {
       display_name: "Perseverante",
@@ -10258,11 +10258,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "IG-11": {
       display_name: "IG-11",
-      text: "<strong>Preparación:</strong> Debes equipar esto con esta cara visible. %LINEBREAK> Antes de que te asignen una carta de daño cara visible, <b>debes</b> colocar 1 ficha de cebado en esta mejora y ganas 1 ficha de cálculo en su lugar. Luego, si hay 2 fichas de cebado en esta mejora, dale la vuelta. %LINEBREAK> <strong>IG-11 (Protocolo Anti-Captura)</strong> %LINEBREAK> Durante la fase de desenlace, retira 1 ficha de cebado de esta carta. Luego, si esta carta ya no tiene fichas de cebado, eres destruido y cada otra nave a alcance 0-1 sufre 1 daño %CRIT%. %LINEBREAK> <strong>Acción:</strong> Coloca 1 ficha de cebado en esta carta."
+      text: "<strong>Preparación:</strong> Debes equipar esto con esta cara visible. %LINEBREAK% Antes de que te asignen una carta de daño cara visible, <b>debes</b> colocar 1 ficha de cebado en esta mejora y ganas 1 ficha de cálculo en su lugar. Luego, si hay 2 fichas de cebado en esta mejora, dale la vuelta. %LINEBREAK% <strong>IG-11 (Protocolo Anti-Captura)</strong> %LINEBREAK% Durante la fase de desenlace, retira 1 ficha de cebado de esta carta. Luego, si esta carta ya no tiene fichas de cebado, eres destruido y cada otra nave a alcance 0-1 sufre 1 daño %CRIT%. %LINEBREAK% <strong>Acción:</strong> Coloca 1 ficha de cebado en esta carta."
     },
     "Greef Karga": {
       display_name: "Greef Karga",
-      text: "Puedes coordinar naves amigas como si fueran naves aliadas. %LINEBREAK> Después de coordinar una nave, esa nave puede bloquear un objetivo que hayas bloqueado."
+      text: "Puedes coordinar naves amigas como si fueran naves aliadas. %LINEBREAK% Después de coordinar una nave, esa nave puede bloquear un objetivo que hayas bloqueado."
     },
     "Kuiil": {
       display_name: "Kuiil",
@@ -10270,7 +10270,7 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Peli Motto": {
       display_name: "Peli Motto",
-      text: "Durante la fase de sistema, puedes realizar una acción de una de tus cartas de daño incluso si estás bajo estrés. %LINEBREAK> Después de reparar una carta de daño <b>Vaisseau</b> cara visible, puedes lanzar 1 dado de ataque. Con un resultado %HIT%, repara otra carta de daño <b>Vaisseau</b> cara visible. Con un resultado %CRIT%, expone 1 carta de daño."
+      text: "Durante la fase de sistema, puedes realizar una acción de una de tus cartas de daño incluso si estás bajo estrés. %LINEBREAK% Después de reparar una carta de daño <b>Vaisseau</b> cara visible, puedes lanzar 1 dado de ataque. Con un resultado %HIT%, repara otra carta de daño <b>Vaisseau</b> cara visible. Con un resultado %CRIT%, expone 1 carta de daño."
     },
     "Migs Mayfeld": {
       display_name: "Migs Mayfeld",
@@ -10278,11 +10278,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Burnout Thrusters": {
       display_name: "Propulsores de aceleración",
-      text: "Después de realizar una acción %SLAM%, pierdes 1 %CHARGE%. Luego puedes ganar 1 ficha de agotamiento para eliminar 1 ficha de desarme. %LINEBREAK> Si tu %CHARGE% está inactiva, no puedes realizar una acción %SLAM%."
+      text: "Después de realizar una acción %SLAM%, pierdes 1 %CHARGE%. Luego puedes ganar 1 ficha de agotamiento para eliminar 1 ficha de desarme. %LINEBREAK% Si tu %CHARGE% está inactiva, no puedes realizar una acción %SLAM%."
     },
     "Hotshot Tail Blaster": {
       display_name: "Bláster de cola fulminante",
-      text: "Este ataque puede realizarse a alcance 0. %LINEBREAK> <strong>Ataque:</strong> Gasta 1 %CHARGE%."
+      text: "Este ataque puede realizarse a alcance 0. %LINEBREAK% <strong>Ataque:</strong> Gasta 1 %CHARGE%."
     },
     "Combat Boarding Tube": {
       display_name: "Conducto de abordaje de combate",
@@ -10294,19 +10294,19 @@ exportObj.cardLoaders['Español'] = function() {
     },
     "Mandalorian Super Commandos": {
       display_name: "Supercomandos Mandalorianos",
-      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK> Las %CHARGE% de esta carta no pueden ser recuperadas."
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK% Las %CHARGE% de esta carta no pueden ser recuperadas."
     },
     "Imperial Super Commandos": {
       display_name: "Supercomandos Imperiales",
-      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK> Las %CHARGE% de esta carta no pueden ser recuperadas."
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK% Las %CHARGE% de esta carta no pueden ser recuperadas."
     },
     "Nite Owl Commandos": {
       display_name: "Comandos de Nite Owl",
-      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK> Las %CHARGE% de esta carta no pueden ser recuperadas."
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK% Las %CHARGE% de esta carta no pueden ser recuperadas."
     },
     "Death Watch Commandos": {
       display_name: "Comandos de la Guardia de la muerte",
-      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK> Las %CHARGE% de esta carta no pueden ser recuperadas."
+      text: "Durante la fase de sistema, puedes gastar 1 %CHARGE% para soltar un dispositivo distante <b>Equipo Comandos</b> utilizando la plantilla [1 %STRAIGHT%]. Puedes colocar ese dispositivo utilizando sus guías delanteras o traseras. %LINEBREAK% Las %CHARGE% de esta carta no pueden ser recuperadas."
     },
     "Proton Cannons": {
       display_name: "Cañones de Protones",
@@ -10468,47 +10468,47 @@ exportObj.cardLoaders['Español'] = function() {
     },
     'It\'s the Resistance': {
       display_name: "Es la Resistencia",
-      text: "<strong>Configuración:</strong> Comienzas en reserva. %LINEBREAK%Cuando despliegues, colócate completamente a alcance 1 de cualquier borde del área de juego y más allá de alcance 3 de cualquier nave enemiga. %LINEBREAK>Al comienzo de la ronda, si todas las cargas del <b>GA-97</b> aliado están activas, <b>debes</b> desplegarte. Luego, retira esta carta. %LINEBREAK>Después de que el aliado <b>GA-97</b> sea destruido, <b>debes</b> desplegarte. Luego, gana 1 ficha de desarme y retira esta carta."
+      text: "<strong>Configuración:</strong> Comienzas en reserva. %LINEBREAK%Cuando despliegues, colócate completamente a alcance 1 de cualquier borde del área de juego y más allá de alcance 3 de cualquier nave enemiga. %LINEBREAK%Al comienzo de la ronda, si todas las cargas del <b>GA-97</b> aliado están activas, <b>debes</b> desplegarte. Luego, retira esta carta. %LINEBREAK%Después de que el aliado <b>GA-97</b> sea destruido, <b>debes</b> desplegarte. Luego, gana 1 ficha de desarme y retira esta carta."
     },
     'Electro-Proton Bomb': {
       display_name: "Bomba Electro-Protónica",
-      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK>Al final de la Fase de Activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave y nave distante a alcance 0–2 lanza 4 dados de ataque. Cada nave pierde 1 escudo por cada resultado en blanco, gana 1 ficha iónica por cada resultado %FOCUS%/%HIT% y gana 1 ficha de desarme por cada resultado %CRIT%. Cada nave distante pierde 1 escudo por cada resultado en blanco y sufre 1 daño por cada %FOCUS%/%HIT%."
+      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK%Al final de la Fase de Activación, esta bomba explota. %LINEBREAK%Cuando esta bomba explota, cada nave y nave distante a alcance 0–2 lanza 4 dados de ataque. Cada nave pierde 1 escudo por cada resultado en blanco, gana 1 ficha iónica por cada resultado %FOCUS%/%HIT% y gana 1 ficha de desarme por cada resultado %CRIT%. Cada nave distante pierde 1 escudo por cada resultado en blanco y sufre 1 daño por cada %FOCUS%/%HIT%."
     },
     'Decoyed': {
       display_name: "Engañado",
-      text: "Mientras te defiendes, cada nave aliada <b>Sirviente de Naboo</b> en el arco de ataque puede gastar 1 ficha de evasión para cambiar uno de tus resultados en un resultado %EVADE%. %LINEBREAK>Si eres un Caza Real Naboo N-1, cada nave aliada <b>Sirviente de Naboo</b> en el arco de ataque puede gastar 1 ficha de evasión para añadir un resultado %EVADE% en su lugar."
+      text: "Mientras te defiendes, cada nave aliada <b>Sirviente de Naboo</b> en el arco de ataque puede gastar 1 ficha de evasión para cambiar uno de tus resultados en un resultado %EVADE%. %LINEBREAK%Si eres un Caza Real Naboo N-1, cada nave aliada <b>Sirviente de Naboo</b> en el arco de ataque puede gastar 1 ficha de evasión para añadir un resultado %EVADE% en su lugar."
     },
     'Compromising Intel': {
       display_name: "Información Comprometida",
-      text: "Durante la fase del sistema, si el enemigo <b>Vi Moradi</b> está a alcance 0-3, voltea tu dial hacia arriba. %LINEBREAK>Mientras te defiendes o realizas un ataque contra el enemigo <b>Vi Moradi</b>, no puedes gastar fichas de concentración."
+      text: "Durante la fase del sistema, si el enemigo <b>Vi Moradi</b> está a alcance 0-3, voltea tu dial hacia arriba. %LINEBREAK%Mientras te defiendes o realizas un ataque contra el enemigo <b>Vi Moradi</b>, no puedes gastar fichas de concentración."
     },
     'Cluster Mine': {
       display_name: "Minas de racimo",
-      text: "<strong>Tipo:</strong> Nave, Mina %LINEBREAK>Una serie de minas en racimo consta de 3 minas en racimo individuales. %LINEBREAK>Cuando se coloca una serie de minas en racimo, la Mina Central se coloca normalmente, luego las dos Minas adicionales se colocan en las muescas en los lados. %LINEBREAK>Después de que una nave haya superpuesto o se haya movido a través de cualquier mina en racimo individual, esta explota. Las otras minas en racimo de la serie que no hayan sido superpuestas o atravesadas por una nave no explotan. %LINEBREAK>Cuando cada una de estas naves explota, la nave lanza 2 dados de ataque. Luego, la nave sufre 1 daño %HIT%/%CRIT% por cada resultado correspondiente obtenido."
+      text: "<strong>Tipo:</strong> Nave, Mina %LINEBREAK%Una serie de minas en racimo consta de 3 minas en racimo individuales. %LINEBREAK%Cuando se coloca una serie de minas en racimo, la Mina Central se coloca normalmente, luego las dos Minas adicionales se colocan en las muescas en los lados. %LINEBREAK%Después de que una nave haya superpuesto o se haya movido a través de cualquier mina en racimo individual, esta explota. Las otras minas en racimo de la serie que no hayan sido superpuestas o atravesadas por una nave no explotan. %LINEBREAK%Cuando cada una de estas naves explota, la nave lanza 2 dados de ataque. Luego, la nave sufre 1 daño %HIT%/%CRIT% por cada resultado correspondiente obtenido."
     },
     'Ion Bomb': {
       display_name: "Bombas de iones",
-      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK>Al final de la Fase de Activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave a alcance 0–1 gana 3 fichas iónicas y cada nave distante a alcance 0–1 sufre 1 daño %HIT%."
+      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK%Al final de la Fase de Activación, esta bomba explota. %LINEBREAK%Cuando esta bomba explota, cada nave a alcance 0–1 gana 3 fichas iónicas y cada nave distante a alcance 0–1 sufre 1 daño %HIT%."
     },
     'Concussion Bomb': {
       display_name: "Bombas de impacto",
-      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK>Al final de la Fase de Activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave y nave distante a alcance 0–1 recibe 1 carta de daño boca abajo. Luego, cada nave a alcance 0–1 <b>debe</b> exponer 1 carta de daño a menos que elija ganar 1 ficha de tensión."
+      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK%Al final de la Fase de Activación, esta bomba explota. %LINEBREAK%Cuando esta bomba explota, cada nave y nave distante a alcance 0–1 recibe 1 carta de daño boca abajo. Luego, cada nave a alcance 0–1 <b>debe</b> exponer 1 carta de daño a menos que elija ganar 1 ficha de tensión."
     },
     'Thermal Detonator': {
       display_name: "Detonadores termales",
-      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK>Al final de la Fase de Activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave y nave distante a alcance 0–1 lanza 1 dado de ataque. Cada nave recibe 1 ficha de tensión por cada resultado %FOCUS% y cada nave y nave distante sufre 1 daño %HIT%/%CRIT% por cada resultado correspondiente obtenido."
+      text: "<strong>Tipo:</strong> Nave, Bomba %LINEBREAK%Al final de la Fase de Activación, esta bomba explota. %LINEBREAK%Cuando esta bomba explota, cada nave y nave distante a alcance 0–1 lanza 1 dado de ataque. Cada nave recibe 1 ficha de tensión por cada resultado %FOCUS% y cada nave y nave distante sufre 1 daño %HIT%/%CRIT% por cada resultado correspondiente obtenido."
     },
     'Sensor Buoy': {
       display_name: "Boyas de sensores",
-      text: "Iniciativa: 0 <br>%AGILITY%: 3 <br>%HULL%: 2 %LINEBREAK%<strong>Tipo:</strong> Nave, Distante %LINEBREAK>Las boyas de detección son naves distantes que vienen en pares y se colocan con la carta de mejora <b>Boyas de Detección</b>. Aparte de cumplir con las reglas normales de las naves distantes e interactuar con esta carta, estas boyas no tienen reglas adicionales."
+      text: "Iniciativa: 0 <br>%AGILITY%: 3 <br>%HULL%: 2 %LINEBREAK%<strong>Tipo:</strong> Nave, Distante %LINEBREAK%Las boyas de detección son naves distantes que vienen en pares y se colocan con la carta de mejora <b>Boyas de Detección</b>. Aparte de cumplir con las reglas normales de las naves distantes e interactuar con esta carta, estas boyas no tienen reglas adicionales."
     },
     'Electro-Chaff Cloud': {
       display_name: "Nube de Confusión Electrónica",
-      text: "<strong>Tipo:</strong> Nave (neutra), Obstáculo %LINEBREAK>Durante la fase de resolución, retira cada nube de confusión electrónica que no tenga una ficha de activación, luego retira una ficha de activación de cada nube de confusión electrónica. Una nube de confusión electrónica nunca puede tener más de una ficha de activación en ella."
+      text: "<strong>Tipo:</strong> Nave (neutra), Obstáculo %LINEBREAK%Durante la fase de resolución, retira cada nube de confusión electrónica que no tenga una ficha de activación, luego retira una ficha de activación de cada nube de confusión electrónica. Una nube de confusión electrónica nunca puede tener más de una ficha de activación en ella."
     },
     'Tracking Torpedoes': {
       display_name: "Torpedos de Seguimiento",
-      text: "Iniciativa: 0 <br>%AGILITY%: 3 <br>%HULL%: 3 %LINEBREAK%<strong>Tipo:</strong> Nave, Distante %LINEBREAK><strong>Fase de sistema:</strong> a iniciativa de la nave distante, su controlador la coloca hacia adelante, usando una plantilla [3 %BANKLEFT%], [3 %BANKRIGHT%], o [4 %STRAIGHT%]. %LINEBREAK> <strong>Fase de activación:</strong> Sin efecto. %LINEBREAK> <strong>Fase de compromiso:</strong> a iniciativa de la nave distante, si un objeto sobre el cual tiene un blanco está en su %FRONTARC% a alcance 0–1, esta nave distante explota. %LINEBREAK><strong>Fase de resolución:</strong> durante esta fase, si esta nave distante no tiene un blanco en un objeto, debe apuntar a un objeto en su %FRONTARC% a alcance 1–3, si es posible. %LINEBREAK> <strong>Otras reglas:</strong> después de que esta nave distante haya sido destruida, lanza 1 dado de ataque. Con un resultado %HIT% o %CRIT%, explota. %LINEBREAK>Cuando esta nave distante explota, cada nave, nave distante y estructura a alcance 0 o en su %FRONTARC% a alcance 1 lanza 4 dados de ataque y sufre 1 daño correspondiente por cada resultado %HIT% o %CRIT% obtenido."
+      text: "Iniciativa: 0 <br>%AGILITY%: 3 <br>%HULL%: 3 %LINEBREAK%<strong>Tipo:</strong> Nave, Distante %LINEBREAK%<strong>Fase de sistema:</strong> a iniciativa de la nave distante, su controlador la coloca hacia adelante, usando una plantilla [3 %BANKLEFT%], [3 %BANKRIGHT%], o [4 %STRAIGHT%]. %LINEBREAK% <strong>Fase de activación:</strong> Sin efecto. %LINEBREAK% <strong>Fase de compromiso:</strong> a iniciativa de la nave distante, si un objeto sobre el cual tiene un blanco está en su %FRONTARC% a alcance 0–1, esta nave distante explota. %LINEBREAK%<strong>Fase de resolución:</strong> durante esta fase, si esta nave distante no tiene un blanco en un objeto, debe apuntar a un objeto en su %FRONTARC% a alcance 1–3, si es posible. %LINEBREAK% <strong>Otras reglas:</strong> después de que esta nave distante haya sido destruida, lanza 1 dado de ataque. Con un resultado %HIT% o %CRIT%, explota. %LINEBREAK%Cuando esta nave distante explota, cada nave, nave distante y estructura a alcance 0 o en su %FRONTARC% a alcance 1 lanza 4 dados de ataque y sufre 1 daño correspondiente por cada resultado %HIT% o %CRIT% obtenido."
     },
     'Fearful Prey': {
       display_name: "Presa Temerosa",
@@ -10516,11 +10516,11 @@ exportObj.cardLoaders['Español'] = function() {
     },
     'You Should Thank Me': {
       display_name: "Deberías Agradecerme",
-      text: "Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK>Después de defender, <b>Zam Wesell</b> recupera 1 %CHARGE%. Luego puedes apuntar al atacante. %LINEBREAK>Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta y gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, puedes realizar un ataque adicional. %LINEBREAK>Al comienzo de la fase de sistema, retira este estado."
+      text: "Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK%Después de defender, <b>Zam Wesell</b> recupera 1 %CHARGE%. Luego puedes apuntar al atacante. %LINEBREAK%Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta y gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, puedes realizar un ataque adicional. %LINEBREAK%Al comienzo de la fase de sistema, retira este estado."
     },
     'You\'d Better Mean Business': {
       display_name: "Deberías Tomarlo en Serio",
-      text: "Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK>Después de defender, puedes gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, realiza un ataque adicional contra el atacante. %LINEBREAK>Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta. En ese caso, <b>Zam Wesell</b> recupera 2 %CHARGE%. %LINEBREAK>Al comienzo de la fase de sistema, retira este estado."
+      text: "Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK%Después de defender, puedes gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, realiza un ataque adicional contra el atacante. %LINEBREAK%Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta. En ese caso, <b>Zam Wesell</b> recupera 2 %CHARGE%. %LINEBREAK%Al comienzo de la fase de sistema, retira este estado."
     },
     'Merciless Pursuit': {
       display_name: "Persecución implacable",
@@ -10532,35 +10532,35 @@ exportObj.cardLoaders['Español'] = function() {
     },
     'False Friend': {
       display_name: "Falso Amigo",
-      text: "Durante la fase de sistema, si una nave enemiga con la mejora <b>Tal Merrik</b> está a alcance 0-2 o si una nave distante enemiga está a alcance 0-2, voltea tu dial a la posición visible. %LINEBREAK> <strong>Acción:</strong> gana 1 ficha de agotamiento y 1 ficha de tensión para descartar este estado."
+      text: "Durante la fase de sistema, si una nave enemiga con la mejora <b>Tal Merrik</b> está a alcance 0-2 o si una nave distante enemiga está a alcance 0-2, voltea tu dial a la posición visible. %LINEBREAK% <strong>Acción:</strong> gana 1 ficha de agotamiento y 1 ficha de tensión para descartar este estado."
     },
     'Trials of the Darksaber': {
       display_name: "Pruebas del Sable Oscuro",
-      text: "Mientras realizas un ataque a alcance 0-2, puedes gastar 1 resultado %CRIT%. En ese caso, si el jugador de la nave defensora tiene más de %POINT% marcado que tú, pierde 1 %POINT% marcado. Coloca este %POINT% en esta carta. %LINEBREAK>Después de defender, si eres destruido por una nave enemiga a alcance 0-2, asigna el estado <b>Pruebas del Sable Oscuro</b> al atacante (todos los %POINT% restan en esta carta). %LINEBREAK>Al final del juego, esta nave suma todos los %POINT% en esta carta."
+      text: "Mientras realizas un ataque a alcance 0-2, puedes gastar 1 resultado %CRIT%. En ese caso, si el jugador de la nave defensora tiene más de %POINT% marcado que tú, pierde 1 %POINT% marcado. Coloca este %POINT% en esta carta. %LINEBREAK%Después de defender, si eres destruido por una nave enemiga a alcance 0-2, asigna el estado <b>Pruebas del Sable Oscuro</b> al atacante (todos los %POINT% restan en esta carta). %LINEBREAK%Al final del juego, esta nave suma todos los %POINT% en esta carta."
     },
     'Blazer Bomb': {
       display_name: "Bomba incendiaria",
-      text: "<strong>Tipos:</strong> Nave, Bomba %LINEBREAK>Al final de la fase de activación, esta bomba explota. %LINEBREAK>Cuando esta bomba explota, cada nave y nave distante a alcance 0-1 lanza 1 dado de ataque. Cada nave o nave distante sufre 1 daño %HIT% por cada resultado %HIT%/%CRIT% obtenido. %LINEBREAK>Después de que esta bomba explote, coloca una Llama calzando sus guías contra la lengüeta de la nave distante. %LINEBREAK>Una Llama es un obstáculo. Después de colocar este obstáculo, coloca una ficha de activación en él. %LINEBREAK> Durante la fase de resolución, retira cada Llama sin ficha de activación, luego retira una ficha de activación de cada Llama."
+      text: "<strong>Tipos:</strong> Nave, Bomba %LINEBREAK%Al final de la fase de activación, esta bomba explota. %LINEBREAK%Cuando esta bomba explota, cada nave y nave distante a alcance 0-1 lanza 1 dado de ataque. Cada nave o nave distante sufre 1 daño %HIT% por cada resultado %HIT%/%CRIT% obtenido. %LINEBREAK%Después de que esta bomba explote, coloca una Llama calzando sus guías contra la lengüeta de la nave distante. %LINEBREAK%Una Llama es un obstáculo. Después de colocar este obstáculo, coloca una ficha de activación en él. %LINEBREAK% Durante la fase de resolución, retira cada Llama sin ficha de activación, luego retira una ficha de activación de cada Llama."
     },
     'Clan Wren Commandos': {
       display_name: "Comandos del Clan Wren",
-      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Nave, Distante %LINEBREAK%Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK% <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK% <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
     },
     'Death Watch Commandos': {
       display_name: "Comandos de la Guardia de la Muerte",
-      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Nave, Distante %LINEBREAK%Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK% <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK% <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
     },
     'Nite Owl Commandos': {
       display_name: "Comandos de los Búhos Nocturnos",
-      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Nave, Distante %LINEBREAK%Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK% <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK% <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
     },
     'Imperial Super Commandos': {
       display_name: "Supercomandos Imperiales",
-      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Nave, Distante %LINEBREAK%Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK% <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK% <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
     },
     'Mandalorian Super Commandos': {
       display_name: "Supercomandos Mandalorianos",
-      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK> <strong>Tipos:</strong> Nave, Distante %LINEBREAK>Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK> <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK> <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
+      text: "Iniciativa: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Alcance: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Nave, Distante %LINEBREAK%Después de que una nave enemiga te haya chevauchado, gana 1 ficha de tensión. %LINEBREAK% <strong>Fase de Activación:</strong> al comienzo de esta fase, puedes reposicionarte hacia adelante usando una plantilla [1 %TURNLEFT%], [2 %STRAIGHT%], o [1 %TURNRIGHT%]. %LINEBREAK% <strong>Fase de Enganche:</strong> no puedes atacar si hay naves enemigas a alcance 0. Para realizar un ataque debes gastar 1 %CHARGE%. Mientras realizas un ataque, puedes cambiar 1 resultado %FOCUS% en un resultado %HIT%."
     },
     'Guarded': {
       display_name: "Sin protección",
@@ -10580,9 +10580,9 @@ exportObj.cardLoaders['Español'] = function() {
     }
   };
   chassis_translations = {
-    "Versatile Frame": {
-      display_name: "Chasis Versátil",
-      text: "Puedes equipar 1 mejora %TORPEDO% o %MISSILE%. Mientras tu maniobra revelada es azul, agrega %BOOST% blanco a tu barra de acciones."
+    "Vectored Thrusters": {
+      display_name: "Propulsores vectoriales",
+      text: "Después de que realices una acción, puedes realizar una acción %BOOST% roja."
     },
     "Advanced Targeting Computer": {
       display_name: "Ordenador de Apuntado Avanzado",
