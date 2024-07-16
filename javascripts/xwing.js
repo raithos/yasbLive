@@ -8438,7 +8438,7 @@ Ship = (function() {
 
   Ship.prototype.toSimpleCopy = function() {
     var halfPoints, points, simplecopy, simplecopy_upgrades, slotted_upgrades, threshold, upgrade, upgrade_simplecopy, _i, _len;
-    simplecopy = "" + this.pilot.name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + ")    \n";
+    simplecopy = "" + this.pilot.display_name + " – " + this.data.display_name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + ")    \n";
     slotted_upgrades = (function() {
       var _i, _len, _ref, _results;
       _ref = this.upgrades;

@@ -1129,7 +1129,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 18,
-        slots: ["Torpedo", "Astromech", "Modification", "Configuration"]
+        slots: ["Astromech", "Modification", "Configuration"]
       }, {
         name: "Edrio Two Tubes",
         id: 8,
