@@ -6742,7 +6742,7 @@ class Ship
 
     toHTML: ->
         effective_stats = @effectiveStats()
-        action_bar = @builder.formatActions(effective_stats.actions,"&nbsp;&nbsp;", @pilot.keyword ? [])
+        action_bar = @builder.formatActions(effective_stats.actions,"<div class=\"action-separator\">&nbsp;&vert;&nbsp;</div>", @pilot.keyword ? [])
 
         attack_icon = @data.attack_icon ? 'xwing-miniatures-font-frontarc'
 
@@ -6892,7 +6892,9 @@ class Ship
                     #{forceHTML}
                     #{chargeHTML}
                     <br />
-                    #{action_bar}
+                    <div class="action-bar">
+                        #{action_bar}
+                    </div>
                 </div>
             </div>
         """
