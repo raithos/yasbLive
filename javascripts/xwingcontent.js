@@ -10827,7 +10827,7 @@ exportObj.basicCardData = function() {
         id: 163,
         slot: "Title",
         points: 0,
-        pointsbeta: 10,
+        pointsbeta: 8,
         unique: true,
         charge: 2,
         ship: "StarViper-class Attack Platform",
