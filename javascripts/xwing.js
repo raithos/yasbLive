@@ -8841,7 +8841,6 @@ Ship = (function() {
                 upgradeslot = _ref13[_n];
                 meets_restrictions = meets_restrictions && upgrade.occupiesAnUpgradeSlot(upgradeslot);
               }
-              console.log("" + meets_restrictions);
             }
           }
           restrictions = (_ref14 = upgrade != null ? (_ref15 = upgrade.data) != null ? _ref15.restrictions : void 0 : void 0) != null ? _ref14 : void 0;
@@ -9330,7 +9329,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7489
+                lineno: 7488
               })
             ]);
             __iced_deferrals._fulfill();
@@ -9502,7 +9501,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7591
+                  lineno: 7590
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -9528,7 +9527,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7598
+                      lineno: 7597
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9659,7 +9658,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7663
+            lineno: 7662
           }));
         }
         __iced_deferrals._fulfill();
@@ -9872,17 +9871,24 @@ GenericAddon = (function() {
   };
 
   GenericAddon.prototype.occupyOtherUpgrades = function() {
-    var slot, upgrade, _i, _len, _ref, _ref1, _ref2, _results;
-    _ref2 = (_ref = (_ref1 = this.data) != null ? _ref1.also_occupies_upgrades : void 0) != null ? _ref : [];
+    var checkupgrades, slot, upgrade, _i, _len, _ref, _ref1, _ref2, _ref3, _results;
+    checkupgrades = [];
+    if ((this.ship.builder.isBeta != null) && (((_ref = this.data) != null ? _ref.also_occupies_upgrades_beta : void 0) != null)) {
+      checkupgrades = (_ref1 = this.data) != null ? _ref1.also_occupies_upgrades_beta : void 0;
+    } else {
+      if (((_ref2 = this.data) != null ? _ref2.also_occupies_upgrades : void 0) != null) {
+        checkupgrades = (_ref3 = this.data) != null ? _ref3.also_occupies_upgrades : void 0;
+      }
+    }
     _results = [];
-    for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
-      slot = _ref2[_i];
+    for (_i = 0, _len = checkupgrades.length; _i < _len; _i++) {
+      slot = checkupgrades[_i];
       _results.push((function() {
-        var _j, _len1, _ref3, _results1;
-        _ref3 = this.ship.upgrades;
+        var _j, _len1, _ref4, _results1;
+        _ref4 = this.ship.upgrades;
         _results1 = [];
-        for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
-          upgrade = _ref3[_j];
+        for (_j = 0, _len1 = _ref4.length; _j < _len1; _j++) {
+          upgrade = _ref4[_j];
           if (!exportObj.slotsMatching(upgrade.slot, slot) || upgrade === this || upgrade.isOccupied()) {
             continue;
           }
