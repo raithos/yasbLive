@@ -5097,7 +5097,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 16,
         pointsbeta: 3,
-        loadoutbeta: 13,
+        loadoutbeta: 3,
         keyword: ["Droid"],
         slots: ["Sensor", "Tactical Relay", "Modification", "Configuration"],
         ship_override: {
