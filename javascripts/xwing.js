@@ -3014,9 +3014,9 @@ exportObj.SquadBuilder = (function() {
       fill_zero_pts: false
     };
     this.total_points = 0;
-    this.isStandard = (_ref = (_ref1 = exportObj.builders[0]) != null ? _ref1.isStandard : void 0) != null ? _ref : false;
+    this.isStandard = (_ref = (_ref1 = exportObj.builders[0]) != null ? _ref1.isStandard : void 0) != null ? _ref : true;
     this.isEpic = (_ref2 = (_ref3 = exportObj.builders[0]) != null ? _ref3.isEpic : void 0) != null ? _ref2 : false;
-    this.isBeta = (_ref4 = (_ref5 = exportObj.builders[0]) != null ? _ref5.isBeta : void 0) != null ? _ref4 : true;
+    this.isBeta = (_ref4 = (_ref5 = exportObj.builders[0]) != null ? _ref5.isBeta : void 0) != null ? _ref4 : false;
     this.isQuickbuild = (_ref6 = (_ref7 = exportObj.builders[0]) != null ? _ref7.isQuickbuild : void 0) != null ? _ref6 : false;
     this.backend = null;
     this.current_squad = {};
