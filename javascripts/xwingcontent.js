@@ -1058,7 +1058,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 4,
-        slots: ["Astromech", "Illicit", "Configuration"]
+        pointsbeta: 4,
+        loadoutbeta: 12,
+        slots: ["Astromech", "Illicit", "Configuration"],
+        slotsbeta: ["Astromech", "Illicit", "Modification", "Configuration"]
       }, {
         name: "Blue Squadron Escort",
         id: 1,
@@ -1067,7 +1070,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 4,
-        slots: ["Astromech", "Configuration"]
+        pointsbeta: 5,
+        loadoutbeta: 18,
+        slots: ["Astromech", "Configuration"],
+        slotsbeta: ["Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Red Squadron Veteran",
         id: 2,
@@ -1076,6 +1082,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 3,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         slots: ["Talent", "Astromech", "Configuration"]
       }, {
         name: "Jek Porkins",
@@ -1086,6 +1094,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 15,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         slots: ["Talent", "Torpedo", "Astromech", "Configuration"]
       }, {
         name: "Luke Skywalker",
@@ -1098,6 +1108,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 6,
         loadout: 24,
+        pointsbeta: 5,
+        loadoutbeta: 5,
         slots: ["Force", "Talent", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Wedge Antilles",
@@ -1108,6 +1120,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 5,
         loadout: 9,
+        pointsbeta: 5,
+        loadoutbeta: 11,
         slots: ["Talent", "Talent", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Garven Dreis (X-Wing)",
@@ -1119,6 +1133,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 16,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         slots: ["Talent", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Biggs Darklighter",
@@ -1129,6 +1145,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 18,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         slots: ["Astromech", "Modification", "Configuration"]
       }, {
         name: "Edrio Two Tubes",
@@ -1150,6 +1168,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         slots: ["Talent", "Missile", "Astromech", "Configuration"]
       }, {
         name: "Leevan Tenza",
@@ -1160,6 +1180,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         keyword: ["Partisan"],
         slots: ["Talent", "Missile", "Astromech", "Illicit", "Configuration"]
       }, {
@@ -1175,6 +1197,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         keyword: ["Partisan"],
         slots: ["Talent", "Missile", "Astromech", "Illicit", "Configuration"]
       }, {
@@ -1187,6 +1211,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 2,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         keyword: ["Spectre", "Mandalorian"],
         slots: ["Talent", "Modification"]
       }, {
@@ -1199,6 +1225,8 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 3,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         keyword: ["Light Side", "Spectre"],
         slots: ["Force", "Crew", "Modification"]
       }, {
@@ -1210,6 +1238,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         keyword: ["Spectre"],
         slots: ["Crew", "Modification"]
       }, {
@@ -1221,6 +1251,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         keyword: ["Clone"],
         slots: ["Talent", "Talent", "Modification"],
         applies_condition: 'Suppressive Fire'.canonicalize()
@@ -1233,6 +1265,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 14,
+        pointsbeta: 5,
+        loadoutbeta: 25,
         slots: ["Torpedo", "Missile", "Gunner", "Crew", "Device", "Device", "Modification"]
       }, {
         name: "Esege Tuketu",
@@ -1243,6 +1277,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 16,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         slots: ["Torpedo", "Missile", "Missile", "Gunner", "Crew", "Device", "Modification"]
       }, {
         name: "empty",
@@ -1256,6 +1292,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 7,
+        pointsbeta: 5,
+        loadoutbeta: 25,
         slots: ["Torpedo", "Missile", "Gunner", "Device", "Device"]
       }, {
         name: "Corran Horn",
@@ -1266,6 +1304,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 6,
         loadout: 20,
+        pointsbeta: 5,
+        loadoutbeta: 9,
         slots: ["Talent", "Tech", "Sensor", "Sensor", "Torpedo", "Astromech", "Modification"]
       }, {
         name: "Gavin Darklighter",
@@ -1276,6 +1316,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 18,
+        pointsbeta: 5,
+        loadoutbeta: 12,
         slots: ["Talent", "Tech", "Sensor", "Torpedo", "Astromech", "Modification"]
       }, {
         name: "Rogue Squadron Escort",
@@ -1285,7 +1327,10 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 12,
-        slots: ["Sensor", "Torpedo", "Astromech", "Modification"]
+        pointsbeta: 5,
+        loadoutbeta: 14,
+        slots: ["Sensor", "Torpedo", "Astromech", "Modification"],
+        slotsbeta: ["Talent", "Sensor", "Tech", "Torpedo", "Astromech", "Modification"]
       }, {
         name: "Knave Squadron Escort",
         id: 24,
@@ -1294,7 +1339,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 14,
-        slots: ["Tech", "Torpedo", "Astromech", "Modification"]
+        pointsbeta: 6,
+        loadoutbeta: 22,
+        slots: ["Sensor", "Tech", "Astromech", "Modification"],
+        slotsbeta: ["Sensor", "Tech", "Torpedo", "Astromech", "Modification"]
       }, {
         name: "Norra Wexley (Y-Wing)",
         id: 25,
@@ -1304,7 +1352,10 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 18,
-        slots: ["Talent", "Turret", "Gunner", "Astromech", "Device", "Modification"]
+        pointsbeta: 5,
+        loadoutbeta: 25,
+        slots: ["Talent", "Turret", "Gunner", "Astromech", "Device", "Modification"],
+        slotsbeta: ["Talent", "Turret", "Gunner", "Astromech", "Device", "Modification"]
       }, {
         name: "Horton Salm",
         id: 26,
@@ -1314,6 +1365,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 16,
         slots: ["Turret", "Torpedo", "Missile", "Astromech", "Device", "Modification"]
       }, {
         name: '"Dutch" Vander',
@@ -1324,6 +1377,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Device", "Device", "Modification"]
       }, {
         name: "Evaan Verlaine",
@@ -1334,6 +1389,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 5,
         slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Device", "Modification", "Modification"]
       }, {
         name: "Gold Squadron Veteran",
@@ -1343,6 +1400,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         slots: ["Turret", "Missile", "Modification"]
       }, {
         name: "Gray Squadron Bomber",
@@ -1352,7 +1411,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 8,
-        slots: ["Device", "Missile", "Modification"]
+        pointsbeta: 4,
+        loadoutbeta: 18,
+        slots: ["Device", "Missile", "Modification"],
+        slotsbeta: ["Turret", "Astromech", "Device", "Missile", "Modification"]
       }, {
         name: "Bodhi Rook",
         id: 31,
@@ -1362,6 +1424,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         slots: ["Sensor", "Crew", "Crew", "Modification", "Configuration"]
       }, {
         name: "Cassian Andor",
@@ -1372,6 +1436,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 12,
+        pointsbeta: 5,
+        loadoutbeta: 14,
         slots: ["Talent", "Sensor", "Crew", "Modification", "Configuration"]
       }, {
         name: "Heff Tobber",
@@ -1382,6 +1448,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 9,
+        pointsbeta: 5,
+        loadoutbeta: 21,
         slots: ["Talent", "Sensor", "Crew", "Crew", "Modification", "Configuration"]
       }, {
         name: "Magva Yarro",
@@ -1392,6 +1460,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 14,
+        pointsbeta: 5,
+        loadoutbeta: 15,
         keyword: ["Partisan"],
         slots: ["Talent", "Sensor", "Crew", "Crew", "Illicit", "Modification", "Configuration"]
       }, {
@@ -1403,6 +1473,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 18,
+        pointsbeta: 5,
+        loadoutbeta: 13,
         keyword: ["Partisan"],
         slots: ["Talent", "Sensor", "Crew", "Crew", "Illicit", "Modification", "Configuration"]
       }, {
@@ -1414,6 +1486,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 16,
+        pointsbeta: 5,
+        loadoutbeta: 17,
         keyword: ["Partisan"],
         slots: ["Talent", "Sensor", "Crew", "Crew", "Illicit", "Modification", "Configuration"]
       }, {
@@ -1424,7 +1498,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 6,
-        slots: ["Modification", "Configuration"]
+        pointsbeta: 5,
+        loadoutbeta: 22,
+        slots: ["Modification", "Configuration"],
+        slotsbeta: ["Sensor", "Crew", "Crew", "Modification", "Configuration"]
       }, {
         name: "Partisan Renegade",
         id: 38,
@@ -1433,8 +1510,11 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 6,
+        pointsbeta: 5,
+        loadoutbeta: 22,
         keyword: ["Partisan"],
-        slots: ["Illicit", "Configuration"]
+        slots: ["Illicit", "Configuration"],
+        slotsbeta: ["Crew", "Crew", "Illicit", "Modification", "Configuration"]
       }, {
         name: "Dash Rendar",
         id: 39,
@@ -1444,7 +1524,10 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 10,
         loadout: 22,
+        pointsbeta: 8,
+        loadoutbeta: 20,
         slots: ["Talent", "Missile", "Crew", "Illicit", "Illicit", "Modification", "Title"],
+        slotsbeta: ["Talent", "Missile", "Crew", "Illicit", "Illicit", "Modification"],
         chassis: "Sensor Blindspot",
         ship_override: {
           attackdt: 4
@@ -1458,8 +1541,11 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 8,
         loadout: 16,
+        pointsbeta: 7,
+        loadoutbeta: 22,
         keyword: ["Droid"],
         slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Title"],
+        slotsbeta: ["Talent", "Missile", "Illicit", "Illicit", "Modification"],
         chassis: "Sensor Blindspot",
         ship_override: {
           attackdt: 4
@@ -1472,7 +1558,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 8,
         loadout: 7,
+        pointsbeta: 7,
+        loadoutbeta: 19,
         slots: ["Missile", "Illicit"],
+        slotsbeta: ["Missile", "Gunner", "Illicit", "Modification"],
         chassis: "Sensor Blindspot",
         ship_override: {
           attackdt: 4
@@ -1487,6 +1576,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 7,
         loadout: 15,
+        pointsbeta: 7,
+        loadoutbeta: 9,
         slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Lando Calrissian",
@@ -1498,6 +1589,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 21,
+        pointsbeta: 7,
+        loadoutbeta: 12,
         slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Chewbacca",
@@ -1510,6 +1603,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 7,
         loadout: 18,
+        pointsbeta: 7,
+        loadoutbeta: 20,
         slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Outer Rim Smuggler",
@@ -1519,7 +1614,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 7,
         loadout: 6,
-        slots: ["Missile", "Gunner"]
+        pointsbeta: 6,
+        loadoutbeta: 11,
+        slots: ["Missile", "Gunner"],
+        slotsbeta: ["Missile", "Crew", "Gunner", "Modification"]
       }, {
         name: "Jan Ors",
         id: 46,
@@ -1529,6 +1627,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 6,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 0,
         slots: ["Talent", "Crew", "Device", "Device", "Modification", "Modification", "Title"]
       }, {
         name: "Roark Garnet",
@@ -1539,6 +1639,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 12,
+        pointsbeta: 5,
+        loadoutbeta: 11,
         slots: ["Talent", "Crew", "Device", "Modification", "Modification", "Title"]
       }, {
         name: "Kyle Katarn",
@@ -1549,6 +1651,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         slots: ["Talent", "Talent", "Crew", "Device", "Modification", "Title"]
       }, {
         name: "Rebel Scout",
@@ -1558,6 +1662,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Device", "Modification"]
       }, {
         name: "Jake Farrell",
@@ -1568,6 +1674,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 11,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         slots: ["Talent", "Talent", "Missile", "Modification", "Configuration"]
       }, {
         name: "Arvel Crynyd",
@@ -1578,6 +1686,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 5,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Talent", "Talent", "Configuration"]
       }, {
         name: "Green Squadron Pilot",
@@ -1587,7 +1697,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 4,
-        slots: ["Talent", "Talent", "Configuration"]
+        pointsbeta: 4,
+        loadoutbeta: 13,
+        slots: ["Talent", "Talent", "Configuration"],
+        slotsbeta: ["Talent", "Talent", "Missile", "Configuration"]
       }, {
         name: "Phoenix Squadron Pilot",
         id: 53,
@@ -1596,6 +1709,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Talent", "Configuration"]
       }, {
         name: "Airen Cracken",
@@ -1606,6 +1721,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 11,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Talent", "Sensor", "Torpedo", "Modification"]
       }, {
         name: "Lieutenant Blount",
@@ -1625,6 +1742,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 10,
         slots: ["Talent", "Modification"]
       }, {
         name: "Bandit Squadron Pilot",
@@ -1634,6 +1753,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 5,
+        pointsbeta: 3,
+        loadoutbeta: 12,
         slots: ["Missile", "Modification"]
       }, {
         name: "Wullffwarro",
@@ -1644,7 +1765,10 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 11,
-        slots: ["Talent", "Crew", "Crew", "Modification"]
+        pointsbeta: 4,
+        loadoutbeta: 7,
+        slots: ["Talent", "Crew", "Crew", "Modification"],
+        slotsbeta: ["Talent", "Crew", "Crew"]
       }, {
         name: "Lowhhrick",
         id: 59,
@@ -1654,6 +1778,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 15,
         slots: ["Talent", "Crew", "Crew", "Modification"]
       }, {
         name: "Kashyyyk Defender",
@@ -1663,7 +1789,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 6,
-        slots: ["Crew", "Modification"]
+        pointsbeta: 5,
+        loadoutbeta: 16,
+        slots: ["Crew", "Modification"],
+        slotsbeta: ["Crew", "Crew", "Modification"]
       }, {
         name: "Hera Syndulla (VCX-100)",
         id: 61,
@@ -1673,6 +1802,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 20,
+        pointsbeta: 7,
+        loadoutbeta: 22,
         keyword: ["Spectre"],
         slots: ["Talent", "Sensor", "Turret", "Torpedo", "Crew", "Crew", "Gunner", "Modification", "Title"]
       }, {
@@ -1686,6 +1817,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 7,
         loadout: 20,
+        pointsbeta: 7,
+        loadoutbeta: 18,
         slots: ["Force", "Sensor", "Turret", "Torpedo", "Crew", "Crew", "Gunner", "Modification", "Title"]
       }, {
         name: '"Chopper"',
@@ -1696,8 +1829,11 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 6,
         loadout: 14,
+        pointsbeta: 6,
+        loadoutbeta: 12,
         keyword: ["Droid", "Spectre"],
-        slots: ["Sensor", "Turret", "Torpedo", "Crew", "Crew", "Gunner", "Modification", "Title"]
+        slots: ["Sensor", "Turret", "Torpedo", "Crew", "Crew", "Gunner", "Modification", "Title"],
+        slotsbeta: ["Sensor", "Turret", "Torpedo", "Crew", "Crew", "Crew", "Modification", "Title"]
       }, {
         name: "Lothal Rebel",
         id: 64,
@@ -1706,7 +1842,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         loadout: 8,
-        slots: ["Turret", "Torpedo", "Gunner"]
+        pointsbeta: 6,
+        loadoutbeta: 10,
+        slots: ["Turret", "Torpedo", "Gunner"],
+        slotsbeta: ["Turret", "Torpedo", "Crew"]
       }, {
         name: "Hera Syndulla",
         id: 65,
@@ -1716,6 +1855,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 14,
         keyword: ["Spectre"],
         slots: ["Talent", "Turret", "Crew", "Modification", "Title"]
       }, {
@@ -1727,6 +1868,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         keyword: ["Mandalorian", "Spectre"],
         slots: ["Talent", "Turret", "Crew", "Modification", "Title"]
       }, {
@@ -1740,6 +1883,8 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Force", "Turret", "Crew", "Modification", "Title"]
       }, {
         name: '"Zeb" Orrelios',
@@ -1750,6 +1895,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 10,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         keyword: ["Spectre"],
         slots: ["Talent", "Turret", "Crew", "Modification", "Title"]
       }, {
@@ -1761,6 +1908,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 5,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         keyword: ["Mandalorian", "Spectre"],
         slots: ["Talent", "Crew", "Astromech", "Modification", "Title"]
       }, {
@@ -1773,6 +1922,8 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 4,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         keyword: ["Light Side", "Spectre"],
         slots: ["Force", "Crew", "Astromech", "Modification", "Title"]
       }, {
@@ -1784,6 +1935,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         keyword: ["Spectre"],
         slots: ["Talent", "Crew", "Astromech", "Modification", "Title"]
       }, {
@@ -1795,6 +1948,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 5,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         keyword: ["Droid", "Spectre"],
         slots: ["Crew", "Modification", "Astromech", "Title"]
       }, {
@@ -1806,6 +1961,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 12,
+        loadoutbeta: 13,
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Torpedo", "Device", "Modification", "Configuration"]
       }, {
         name: "Ten Numb",
@@ -1816,6 +1972,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 14,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Torpedo", "Device", "Modification", "Configuration"]
       }, {
         name: "Blade Squadron Veteran",
@@ -1825,6 +1983,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 4,
+        pointsbeta: 5,
+        loadoutbeta: 17,
         slots: ["Sensor", "Cannon", "Cannon", "Torpedo", "Configuration"]
       }, {
         name: "Blue Squadron Pilot",
@@ -1834,6 +1994,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 4,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         slots: ["Sensor", "Cannon", "Cannon", "Device", "Configuration"]
       }, {
         name: "Norra Wexley",
@@ -1844,6 +2006,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 8,
+        pointsbeta: 5,
+        loadoutbeta: 12,
         slots: ["Talent", "Talent", "Torpedo", "Gunner", "Astromech", "Modification"]
       }, {
         name: "Shara Bey",
@@ -1854,6 +2018,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 8,
+        pointsbeta: 5,
+        loadoutbeta: 15,
         slots: ["Talent", "Torpedo", "Missile", "Gunner", "Astromech", "Modification"]
       }, {
         name: "Garven Dreis",
@@ -1864,6 +2030,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 3,
         slots: ["Talent", "Cannon", "Missile", "Gunner", "Astromech", "Modification"]
       }, {
         name: "Ibtisam",
@@ -1874,6 +2042,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         slots: ["Talent", "Torpedo", "Gunner", "Astromech", "Modification"]
       }, {
         name: "IG-88A",
@@ -1884,6 +2054,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         loadout: 16,
+        pointsbeta: 6,
+        loadoutbeta: 12,
         keyword: ["Bounty Hunter", "Droid"],
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -1895,6 +2067,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         loadout: 16,
+        pointsbeta: 6,
+        loadoutbeta: 16,
         keyword: ["Bounty Hunter", "Droid"],
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -1906,6 +2080,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         loadout: 16,
+        pointsbeta: 6,
+        loadoutbeta: 15,
         keyword: ["Bounty Hunter", "Droid"],
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -1917,6 +2093,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 6,
         loadout: 13,
+        pointsbeta: 6,
+        loadoutbeta: 16,
         keyword: ["Bounty Hunter", "Droid"],
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -1928,6 +2106,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Device", "Illicit", "Modification"]
       }, {
         name: "Drea Renthal",
@@ -1938,6 +2118,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         slots: ["Talent", "Turret", "Torpedo", "Missile", "Astromech", "Device", "Illicit", "Modification"]
       }, {
         name: "Hired Gun",
@@ -1947,6 +2129,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Turret", "Torpedo", "Missile", "Device", "Illicit"]
       }, {
         name: "Crymorah Goon",
@@ -1956,6 +2140,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Turret", "Missile", "Device", "Illicit"]
       }, {
         name: "Han Solo (Scum)",
@@ -1967,6 +2153,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 6,
         loadout: 20,
+        pointsbeta: 5,
+        loadoutbeta: 14,
         slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
         name: "Lando Calrissian (Scum)",
@@ -1978,6 +2166,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 18,
         slots: ["Talent", "Missile", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "L3-37",
@@ -1988,6 +2178,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 9,
+        pointsbeta: 5,
+        loadoutbeta: 21,
         keyword: ["Droid"],
         slots: ["Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
@@ -1998,7 +2190,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 6,
-        slots: ["Missile", "Gunner", "Illicit"]
+        pointsbeta: 6,
+        loadoutbeta: 24,
+        slots: ["Missile", "Gunner", "Illicit"],
+        slotsbeta: ["Missile", "Crew", "Crew", "Gunner", "Illicit"]
       }, {
         name: "Lando Calrissian (Scum) (Escape Craft)",
         id: 93,
@@ -2008,6 +2203,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 10,
         slots: ["Talent", "Crew", "Modification"]
       }, {
         name: "Outer Rim Pioneer",
@@ -2018,6 +2215,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         slots: ["Talent", "Crew", "Modification"]
       }, {
         name: "L3-37 (Escape Craft)",
@@ -2028,6 +2227,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 13,
         keyword: ["Droid"],
         slots: ["Talent", "Crew", "Modification"]
       }, {
@@ -2040,6 +2241,8 @@ exportObj.basicCardData = function() {
         charge: 3,
         points: 2,
         loadout: 0,
+        pointsbeta: 1,
+        loadoutbeta: 0,
         keyword: ["Droid"],
         chassis: "Rigged Energy Cells",
         slots: []
@@ -2052,6 +2255,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 6,
         loadout: 12,
+        pointsbeta: 6,
+        loadoutbeta: 10,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Talent", "Torpedo", "Modification", "Modification"]
       }, {
@@ -2063,6 +2268,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 9,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Talent", "Torpedo", "Modification", "Modification"]
       }, {
@@ -2085,6 +2292,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Missile", "Torpedo", "Modification", "Modification"]
       }, {
@@ -2095,6 +2304,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         keyword: ["Mandalorian"],
         slots: ["Torpedo", "Modification"]
       }, {
@@ -2105,8 +2316,11 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 5,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         keyword: ["Mandalorian"],
-        slots: ["Modification", "Modification"]
+        slots: ["Modification", "Modification"],
+        slotsbeta: ["Missile", "Modification", "Modification"]
       }, {
         name: "Boba Fett",
         id: 103,
@@ -2116,8 +2330,11 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 9,
         loadout: 18,
+        pointsbeta: 8,
+        loadoutbeta: 13,
         keyword: ["Bounty Hunter"],
-        slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Modification", "Title"]
+        slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Modification", "Title"],
+        slotsbeta: ["Talent", "Cannon", "Missile", "Device", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Emon Azzameen",
         id: 104,
@@ -2127,6 +2344,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         loadout: 17,
+        pointsbeta: 7,
+        loadoutbeta: 14,
         slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"]
       }, {
         name: "Kath Scarlet",
@@ -2137,6 +2356,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         loadout: 18,
+        pointsbeta: 6,
+        loadoutbeta: 6,
         slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"]
       }, {
         name: "Koshka Frost",
@@ -2147,6 +2368,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 7,
         loadout: 16,
+        pointsbeta: 7,
+        loadoutbeta: 15,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -2158,6 +2381,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 7,
         loadout: 18,
+        pointsbeta: 7,
+        loadoutbeta: 20,
         slots: ["Talent", "Cannon", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"]
       }, {
         name: "Bounty Hunter",
@@ -2167,8 +2392,11 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         loadout: 10,
+        pointsbeta: 6,
+        loadoutbeta: 16,
         keyword: ["Bounty Hunter"],
-        slots: ["Cannon", "Missile", "Device", "Illicit"]
+        slots: ["Cannon", "Missile", "Device", "Illicit"],
+        slotsbeta: ["Cannon", "Missile", "Gunner", "Device", "Illicit"]
       }, {
         name: "4-LOM",
         id: 109,
@@ -2178,6 +2406,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 14,
+        pointsbeta: 5,
+        loadoutbeta: 15,
         keyword: ["Bounty Hunter", "Droid"],
         slots: ["Talent", "Sensor", "Crew", "Illicit", "Modification", "Title"]
       }, {
@@ -2189,6 +2419,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Sensor", "Crew", "Illicit", "Modification", "Title"]
       }, {
@@ -2199,8 +2431,11 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 3,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         keyword: ["Bounty Hunter"],
-        slots: ["Illicit"]
+        slots: ["Illicit"],
+        slotsbeta: ["Sensor", "Crew", "Illicit", "Modification"]
       }, {
         name: "Palob Godalhi",
         id: 112,
@@ -2210,6 +2445,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 9,
         slots: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Dace Bonearm",
@@ -2222,6 +2459,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         slots: ["Talent", "Crew", "Device", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "Torkil Mux",
@@ -2232,7 +2471,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 8,
-        slots: ["Crew", "Device", "Illicit", "Modification", "Modification"]
+        pointsbeta: 5,
+        loadoutbeta: 11,
+        slots: ["Crew", "Device", "Illicit", "Modification", "Modification"],
+        slotsbeta: ["Crew", "Device", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Dengar",
         id: 115,
@@ -2244,6 +2486,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 6,
         loadout: 11,
+        pointsbeta: 6,
+        loadoutbeta: 14,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Torpedo", "Cannon", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
@@ -2256,6 +2500,8 @@ exportObj.basicCardData = function() {
         charge: 1,
         points: 6,
         loadout: 20,
+        pointsbeta: 5,
+        loadoutbeta: 21,
         slots: ["Talent", "Cannon", "Cannon", "Torpedo", "Crew", "Gunner", "Illicit", "Modification"]
       }, {
         name: "Manaroo",
@@ -2276,7 +2522,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 4,
-        slots: ["Torpedo", "Cannon", "Illicit"]
+        pointsbeta: 6,
+        loadoutbeta: 20,
+        slots: ["Torpedo", "Cannon", "Illicit"],
+        slotsbeta: ["Torpedo", "Cannon", "Crew", "Gunner", "Illicit"]
       }, {
         name: "Talonbane Cobra",
         id: 119,
@@ -2286,6 +2535,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 4,
         slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Modification"]
       }, {
         name: "Graz",
@@ -2296,6 +2547,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Modification"]
       }, {
@@ -2307,6 +2560,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 22,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Modification"]
       }, {
@@ -2318,6 +2573,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         slots: ["Missile", "Illicit", "Illicit", "Modification", "Modification"]
       }, {
         name: "Black Sun Ace",
@@ -2327,7 +2584,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 3,
-        slots: ["Talent"]
+        pointsbeta: 4,
+        loadoutbeta: 9,
+        slots: ["Talent"],
+        slotsbeta: ["Talent", "Illicit", "Modification"]
       }, {
         name: "Cartel Marauder",
         id: 124,
@@ -2336,7 +2596,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 7,
-        slots: ["Illicit"]
+        pointsbeta: 5,
+        loadoutbeta: 15,
+        slots: ["Illicit"],
+        slotsbeta: ["Missile", "Illicit", "Modification"]
       }, {
         name: "Asajj Ventress",
         id: 125,
@@ -2346,6 +2609,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 8,
         loadout: 20,
+        pointsbeta: 7,
+        loadoutbeta: 23,
         force: 2,
         keyword: ["Bounty Hunter", "Dark Side"],
         slots: ["Force", "Talent", "Crew", "Illicit", "Illicit", "Modification"]
@@ -2358,6 +2623,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 15,
+        pointsbeta: 6,
+        loadoutbeta: 11,
         keyword: ["Bounty Hunter", "Mandalorian"],
         slots: ["Talent", "Crew", "Illicit", "Illicit", "Modification", "Title"]
       }, {
@@ -2369,6 +2636,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 6,
         loadout: 9,
+        pointsbeta: 6,
+        loadoutbeta: 19,
         keyword: ["Bounty Hunter", "Mandalorian"],
         slots: ["Talent", "Crew", "Illicit", "Illicit", "Modification", "Title"]
       }, {
@@ -2379,8 +2648,11 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 6,
         loadout: 6,
+        pointsbeta: 6,
+        loadoutbeta: 15,
         keyword: ["Bounty Hunter"],
-        slots: ["Illicit", "Illicit"]
+        slots: ["Illicit", "Illicit"],
+        slotsbeta: ["Crew", "Illicit", "Illicit", "Modification"]
       }, {
         name: "Torani Kulda",
         id: 129,
@@ -2390,6 +2662,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 17,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Torpedo", "Missile", "Astromech", "Illicit", "Modification"]
       }, {
@@ -2402,6 +2676,8 @@ exportObj.basicCardData = function() {
         charge: 2,
         points: 5,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Torpedo", "Missile", "Astromech", "Illicit", "Modification"]
       }, {
@@ -2412,7 +2688,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 3,
-        slots: ["Missile"]
+        pointsbeta: 4,
+        loadoutbeta: 5,
+        slots: ["Missile"],
+        slotsbeta: ["Torpedo", "Missile", "Astromech", "Illicit", "Modification"]
       }, {
         name: "Serissu",
         id: 132,
@@ -2422,6 +2701,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         slots: ["Talent", "Talent", "Cannon", "Modification", "Modification", "HardpointShip"]
       }, {
         name: "Genesis Red",
@@ -2432,7 +2713,10 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 14,
-        slots: ["Talent", "Illicit", "Modification", "HardpointShip"]
+        pointsbeta: 4,
+        loadoutbeta: 13,
+        slots: ["Talent", "Illicit", "Modification", "HardpointShip"],
+        slotsbeta: ["Talent", "Modification", "HardpointShip"]
       }, {
         name: "Laetin A'shera",
         id: 134,
@@ -2442,6 +2726,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 9,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Talent", "Modification", "HardpointShip"]
       }, {
         name: "Quinn Jast",
@@ -2452,6 +2738,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 16,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Modification", "HardpointShip"]
       }, {
@@ -2462,7 +2750,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 3,
-        slots: ["Modification", "HardpointShip"]
+        pointsbeta: 4,
+        loadoutbeta: 13,
+        slots: ["Modification", "HardpointShip"],
+        slotsbeta: ["Talent", "Sensor", "Modification", "HardpointShip"]
       }, {
         name: "Inaldra",
         id: 137,
@@ -2472,6 +2763,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 11,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Modification", "HardpointShip"]
       }, {
         name: "Sunny Bounder",
@@ -2482,6 +2775,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 12,
         slots: ["Modification", "HardpointShip"]
       }, {
         name: "Cartel Spacer",
@@ -2491,6 +2786,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Modification", "HardpointShip"]
       }, {
         name: "Constable Zuvio",
@@ -2501,6 +2798,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 13,
+        pointsbeta: 4,
+        loadoutbeta: 23,
         slots: ["Talent", "Tech", "Device", "Device", "Illicit", "Modification"]
       }, {
         name: "Sarco Plank",
@@ -2511,6 +2810,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 10,
         keyword: ["Bounty Hunter"],
         slots: ["Tech", "Crew", "Device", "Illicit", "Illicit", "Modification"]
       }, {
@@ -2522,6 +2823,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Tech", "Crew", "Device", "Illicit", "Modification"]
       }, {
         name: "Jakku Gunrunner",
@@ -2531,6 +2834,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Device", "Illicit", "Illicit"]
       }, {
         name: "Captain Nym",
@@ -2543,6 +2848,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 6,
         loadout: 17,
+        pointsbeta: 5,
+        loadoutbeta: 18,
         slots: ["Talent", "Turret", "Crew", "Gunner", "Device", "Device", "Modification", "Title"]
       }, {
         name: "Sol Sixxa",
@@ -2553,6 +2860,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 12,
+        pointsbeta: 5,
+        loadoutbeta: 21,
         slots: ["Talent", "Turret", "Crew", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Lok Revenant",
@@ -2562,7 +2871,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 7,
-        slots: ["Turret", "Gunner", "Device", "Device"]
+        pointsbeta: 6,
+        loadoutbeta: 25,
+        slots: ["Turret", "Gunner", "Device", "Device"],
+        slotsbeta: ["Turret", "Crew", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Guri",
         id: 147,
@@ -2572,8 +2884,11 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 20,
+        pointsbeta: 5,
+        loadoutbeta: 8,
         keyword: ["Droid"],
-        slots: ["Talent", "Tech", "Torpedo", "Modification", "Title"]
+        slots: ["Talent", "Tech", "Torpedo", "Modification", "Title"],
+        slotsbeta: ["Talent", "Tech", "Sensor", "Torpedo", "Modification", "Title"]
       }, {
         name: "Prince Xizor",
         id: 148,
@@ -2583,6 +2898,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 7,
+        pointsbeta: 5,
+        loadoutbeta: 14,
         slots: ["Talent", "Tech", "Torpedo", "Modification", "Title"]
       }, {
         name: "Dalan Oberos (StarViper)",
@@ -2593,6 +2910,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 3,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Tech", "Torpedo", "Modification"]
       }, {
@@ -2603,7 +2922,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 6,
-        slots: ["Tech"]
+        pointsbeta: 5,
+        loadoutbeta: 12,
+        slots: ["Tech"],
+        slotsbeta: ["Talent", "Sensor", "Illicit", "Tech"]
       }, {
         name: "Black Sun Enforcer",
         id: 151,
@@ -2612,7 +2934,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 6,
-        slots: ["Tech"]
+        pointsbeta: 4,
+        loadoutbeta: 7,
+        slots: ["Tech"],
+        slotsbeta: ["Illicit", "Tech"]
       }, {
         name: "Moralo Eval",
         id: 152,
@@ -2623,6 +2948,8 @@ exportObj.basicCardData = function() {
         charge: 2,
         points: 7,
         loadout: 20,
+        pointsbeta: 6,
+        loadoutbeta: 14,
         slots: ["Talent", "Cannon", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification"]
       }, {
         name: "Bossk",
@@ -2644,6 +2971,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 6,
         loadout: 22,
+        pointsbeta: 6,
+        loadoutbeta: 18,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
@@ -2654,7 +2983,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 6,
         loadout: 6,
-        slots: ["Cannon", "Missile", "Modification"]
+        pointsbeta: 7,
+        loadoutbeta: 27,
+        slots: ["Cannon", "Missile", "Modification"],
+        slotsbeta: ["Cannon", "Missile", "Crew", "Crew", "Gunner", "Modification"]
       }, {
         name: "N'dru Suhlak",
         id: 156,
@@ -2664,6 +2996,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         slots: ["Talent", "Missile", "Missile", "Illicit"]
       }, {
         name: "Kaa'to Leeachos",
@@ -2674,6 +3008,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 11,
+        pointsbeta: 3,
+        loadoutbeta: 15,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Missile", "Illicit", "Modification"]
       }, {
@@ -2684,7 +3020,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 4,
-        slots: ["Illicit", "Modification"]
+        pointsbeta: 3,
+        loadoutbeta: 9,
+        slots: ["Illicit", "Modification"],
+        slotsbeta: ["Talent", "Illicit", "Modification"]
       }, {
         name: "Binayre Pirate",
         id: 159,
@@ -2693,7 +3032,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 2,
-        slots: ["Illicit"]
+        pointsbeta: 3,
+        loadoutbeta: 11,
+        slots: ["Illicit"],
+        slotsbeta: ["Illicit", "Modification"]
       }, {
         name: "Nashtah Pup",
         id: 160,
@@ -2703,6 +3045,8 @@ exportObj.basicCardData = function() {
         skill: "*",
         points: 2,
         loadout: 0,
+        pointsbeta: 0,
+        loadoutbeta: 0,
         slots: [],
         restrictions: [["Unique", "Hound's Tooth"]],
         restriction_func: function(ship) {
@@ -2750,6 +3094,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 16,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Talent", "Sensor", "Torpedo", "Modification", "Configuration"]
       }, {
         name: "Lieutenant Karsabi",
@@ -2760,6 +3106,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 14,
+        pointsbeta: 3,
+        loadoutbeta: 9,
         slots: ["Talent", "Sensor", "Missile", "Modification", "Configuration"]
       }, {
         name: "Rho Squadron Pilot",
@@ -2769,6 +3117,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 15,
         slots: ["Talent", "Sensor", "Modification", "Configuration"]
       }, {
         name: "Nu Squadron Pilot",
@@ -2778,6 +3128,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 20,
         slots: ["Sensor", "Cannon", "Modification", "Configuration"]
       }, {
         name: "Captain Kagi",
@@ -2788,6 +3140,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 6,
         loadout: 22,
+        pointsbeta: 5,
+        loadoutbeta: 15,
         slots: ["Sensor", "Cannon", "Crew", "Crew", "Modification", "Title"]
       }, {
         name: "Lieutenant Sai",
@@ -2798,6 +3152,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 14,
+        pointsbeta: 4,
+        loadoutbeta: 3,
         slots: ["Sensor", "Cannon", "Crew", "Crew", "Modification", "Title"]
       }, {
         name: "Colonel Jendon",
@@ -2809,7 +3165,10 @@ exportObj.basicCardData = function() {
         charge: 2,
         points: 6,
         loadout: 20,
-        slots: ["Sensor", "Cannon", "Cannon", "Crew", "Modification", "Title"]
+        pointsbeta: 5,
+        loadoutbeta: 13,
+        slots: ["Sensor", "Cannon", "Cannon", "Crew", "Modification", "Title"],
+        slotsbeta: ["Sensor", "Cannon", "Cannon", "Crew", "Crew", "Modification", "Title"]
       }, {
         name: "Omicron Group Pilot",
         id: 168,
@@ -2818,7 +3177,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 8,
-        slots: ["Sensor", "Cannon", "Modification"]
+        pointsbeta: 5,
+        loadoutbeta: 24,
+        slots: ["Sensor", "Cannon", "Modification"],
+        slotsbeta: ["Sensor", "Cannon", "Cannon", "Crew", "Crew", "Modification"]
       }, {
         name: "Grand Inquisitor",
         id: 169,
@@ -2828,6 +3190,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 13,
         force: 2,
         keyword: ["Dark Side"],
         slots: ["Force", "Force", "Talent", "Sensor", "Missile"]
@@ -2840,6 +3204,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         force: 2,
         keyword: ["Dark Side"],
         slots: ["Force", "Talent", "Sensor", "Missile"]
@@ -2851,6 +3217,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 5,
+        pointsbeta: 4,
+        loadoutbeta: 13,
         force: 1,
         keyword: ["Dark Side"],
         slots: ["Force", "Sensor"]
@@ -2862,6 +3230,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 5,
         slots: ["Talent", "Sensor", "Missile"]
       }, {
         name: "Darth Vader",
@@ -2873,6 +3243,8 @@ exportObj.basicCardData = function() {
         keyword: ["Dark Side", "Sith"],
         points: 7,
         loadout: 21,
+        pointsbeta: 6,
+        loadoutbeta: 12,
         force: 3,
         slots: ["Force", "Force", "Talent", "Tech", "Sensor", "Missile", "Modification", "Modification"]
       }, {
@@ -2884,6 +3256,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         slots: ["Talent", "Talent", "Sensor", "Missile", "Modification"]
       }, {
         name: "Ved Foslo",
@@ -2894,6 +3268,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         slots: ["Talent", "Sensor", "Missile", "Modification"]
       }, {
         name: "Zertik Strom",
@@ -2904,6 +3280,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 14,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Sensor", "Missile", "Modification"]
       }, {
         name: "Storm Squadron Ace",
@@ -2913,6 +3291,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 2,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         slots: ["Talent", "Sensor", "Modification"]
       }, {
         name: "Tempest Squadron Pilot",
@@ -2922,6 +3302,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 4,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Sensor", "Modification"]
       }, {
         name: "Soontir Fel",
@@ -2932,7 +3314,10 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 5,
         loadout: 10,
-        slots: ["Talent", "Talent", "Modification", "Configuration"]
+        pointsbeta: 4,
+        loadoutbeta: 1,
+        slots: ["Talent", "Talent", "Modification", "Configuration"],
+        slotsbeta: ["Talent", "Modification"]
       }, {
         name: "Turr Phennir",
         id: 180,
@@ -2942,6 +3327,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         slots: ["Talent", "Talent", "Modification", "Configuration"]
       }, {
         name: "Saber Squadron Ace",
@@ -2951,7 +3338,10 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 3,
-        slots: ["Talent", "Configuration"]
+        pointsbeta: 4,
+        loadoutbeta: 12,
+        slots: ["Talent", "Configuration"],
+        slotsbeta: ["Talent", "Configuration"]
       }, {
         name: "Alpha Squadron Pilot",
         id: 182,
@@ -2960,6 +3350,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 2,
+        pointsbeta: 3,
+        loadoutbeta: 0,
         slots: ["Talent", "Configuration"]
       }, {
         name: "Major Vermeil",
@@ -2990,6 +3382,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         slots: ["Crew", "Crew", "Modification"]
       }, {
         name: "Scarif Base Pilot",
@@ -2999,6 +3393,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 6,
+        pointsbeta: 5,
+        loadoutbeta: 19,
         slots: ["Crew", "Modification"]
       }, {
         name: "Lieutenant Kestal",
@@ -3009,6 +3405,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 19,
+        pointsbeta: 4,
+        loadoutbeta: 19,
         slots: ["Talent", "Turret", "Missile", "Missile", "Gunner", "Modification", "Modification"]
       }, {
         name: '"Double Edge"',
@@ -3019,6 +3417,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 13,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         slots: ["Talent", "Turret", "Missile", "Missile", "Gunner", "Modification"]
       }, {
         name: "Onyx Squadron Scout",
@@ -3028,7 +3428,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 12,
-        slots: ["Talent", "Turret", "Missile", "Gunner"]
+        pointsbeta: 4,
+        loadoutbeta: 14,
+        slots: ["Talent", "Turret", "Missile", "Gunner"],
+        slotsbeta: ["Talent", "Turret", "Missile", "Gunner", "Modifiaction"]
       }, {
         name: "Sienar Specialist",
         id: 190,
@@ -3037,6 +3440,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 5,
         slots: ["Turret", "Missile", "Gunner", "Modification"]
       }, {
         name: '"Redline"',
@@ -3047,6 +3452,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 25,
+        pointsbeta: 5,
+        loadoutbeta: 14,
         slots: ["Sensor", "Torpedo", "Missile", "Missile", "Gunner", "Device", "Modification", "Modification"]
       }, {
         name: '"Deathrain"',
@@ -3057,6 +3464,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 6,
         loadout: 20,
+        pointsbeta: 5,
+        loadoutbeta: 22,
         slots: ["Talent", "Sensor", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Cutlass Squadron Pilot",
@@ -3066,6 +3475,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 13,
         slots: ["Sensor", "Torpedo", "Missile", "Gunner", "Device", "Modification"]
       }, {
         name: "Colonel Vessery",
@@ -3076,6 +3487,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         loadout: 10,
+        pointsbeta: 8,
+        loadoutbeta: 23,
         slots: ["Talent", "Sensor", "Cannon", "Missile", "Configuration"]
       }, {
         name: "Countess Ryad",
@@ -3105,6 +3518,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         loadout: 6,
+        pointsbeta: 7,
+        loadoutbeta: 18,
         slots: ["Talent", "Sensor", "Cannon", "Missile", "Configuration"]
       }, {
         name: "Delta Squadron Pilot",
@@ -3114,6 +3529,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 7,
         loadout: 4,
+        pointsbeta: 6,
+        loadoutbeta: 11,
         slots: ["Sensor", "Cannon", "Configuration"]
       }, {
         name: '"Whisper"',
@@ -3124,6 +3541,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 8,
+        pointsbeta: 5,
+        loadoutbeta: 13,
         slots: ["Talent", "Sensor", "Gunner", "Modification", "Modification"]
       }, {
         name: '"Echo"',
@@ -3134,6 +3553,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         slots: ["Talent", "Talent", "Sensor", "Gunner", "Modification"]
       }, {
         name: "Sigma Squadron Ace",
@@ -3143,6 +3564,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 6,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 3,
         slots: ["Talent", "Sensor", "Gunner", "Modification"]
       }, {
         name: "Imdaar Test Pilot",
@@ -3152,6 +3575,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         slots: ["Sensor", "Gunner", "Modification"]
       }, {
         name: "Captain Jonus",
@@ -3162,6 +3587,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 3,
         slots: ["Talent", "Torpedo", "Missile", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Major Rhymer",
@@ -3172,6 +3599,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         slots: ["Talent", "Torpedo", "Missile", "Missile", "Gunner", "Device", "Modification"]
       }, {
         name: "Tomax Bren",
@@ -3182,6 +3611,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 3,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Talent", "Talent", "Missile", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: '"Deathfire"',
@@ -3192,6 +3623,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 11,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Torpedo", "Torpedo", "Missile", "Gunner", "Device", "Modification"]
       }, {
         name: "Gamma Squadron Ace",
@@ -3201,7 +3634,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 8,
-        slots: ["Torpedo", "Gunner", "Device", "Device", "Modification"]
+        pointsbeta: 4,
+        loadoutbeta: 10,
+        slots: ["Torpedo", "Gunner", "Device", "Device", "Modification"],
+        slotsbeta: ["Talent", "Torpedo", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Scimitar Squadron Pilot",
         id: 208,
@@ -3210,6 +3646,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: '"Countdown"',
@@ -3220,7 +3658,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 11,
-        slots: ["Talent", "Talent", "Gunner", "Device", "Modification"]
+        slots: ["Talent", "Talent", "Gunner", "Device", "Modification"],
+        slotsbeta: ["Talent", "Talent", "Gunner", "Device", "Modification"]
       }, {
         name: '"Pure Sabacc"',
         id: 210,
@@ -3230,6 +3669,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         slots: ["Talent", "Gunner", "Device", "Modification"]
       }, {
         name: '"Duchess"',
@@ -3240,6 +3681,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 18,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Talent", "Talent", "Gunner", "Device", "Modification"]
       }, {
         name: "Black Squadron Scout",
@@ -3249,6 +3692,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 5,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         slots: ["Talent", "Gunner", "Device"]
       }, {
         name: "Planetary Sentinel",
@@ -3258,7 +3703,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 4,
-        slots: ["Gunner", "Device", "Modification"]
+        pointsbeta: 4,
+        loadoutbeta: 10,
+        slots: ["Gunner", "Device", "Modification"],
+        slotsbeta: ["Gunner", "Modification"]
       }, {
         name: "Rear Admiral Chiraneau",
         id: 214,
@@ -3268,6 +3716,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 20,
+        pointsbeta: 7,
+        loadoutbeta: 10,
         slots: ["Talent", "Torpedo", "Crew", "Crew", "Crew", "Gunner", "Device", "Modification", "Title"]
       }, {
         name: "Captain Oicunn",
@@ -3278,6 +3728,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 7,
         loadout: 19,
+        pointsbeta: 7,
+        loadoutbeta: 16,
         slots: ["Talent", "Talent", "Torpedo", "Crew", "Crew", "Gunner", "Device", "Modification", "Title"]
       }, {
         name: "Patrol Leader",
@@ -3287,6 +3739,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         loadout: 12,
+        pointsbeta: 7,
+        loadoutbeta: 19,
         slots: ["Torpedo", "Crew", "Gunner", "Device", "Modification"]
       }, {
         name: '"Howlrunner"',
@@ -3297,6 +3751,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         slots: ["Talent", "Talent", "Modification"]
       }, {
         name: "Iden Versio",
@@ -3308,6 +3764,8 @@ exportObj.basicCardData = function() {
         charge: 1,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Talent", "Talent", "Cannon", "Missile", "Modification"]
       }, {
         name: '"Mauler" Mithel',
@@ -3318,6 +3776,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         slots: ["Talent", "Cannon"]
       }, {
         name: '"Scourge" Skutu',
@@ -3328,7 +3788,10 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 3,
         loadout: 3,
-        slots: ["Talent"]
+        pointsbeta: 3,
+        loadoutbeta: 11,
+        slots: ["Talent"],
+        slotsbeta: ["Talent", "Modification"]
       }, {
         name: '"Wampa"',
         id: 221,
@@ -3340,6 +3803,8 @@ exportObj.basicCardData = function() {
         charge: 1,
         points: 3,
         loadout: 5,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         slots: ["Talent", "Modification"]
       }, {
         name: "Del Meeko",
@@ -3350,6 +3815,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 10,
+        pointsbeta: 3,
+        loadoutbeta: 12,
         slots: ["Talent", "Cannon", "Modification"]
       }, {
         name: "Gideon Hask",
@@ -3390,6 +3857,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Talent", "Talent"]
       }, {
         name: "Black Squadron Ace",
@@ -3399,7 +3868,9 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 2,
         loadout: 0,
-        slots: []
+        pointsbeta: 3,
+        loadoutbeta: 14,
+        slots: ["Talent", "Modification"]
       }, {
         name: "Obsidian Squadron Pilot",
         id: 228,
@@ -3417,7 +3888,9 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 2,
         loadout: 0,
-        slots: []
+        pointsbeta: 2,
+        loadoutbeta: 4,
+        slots: ["Modification"]
       }, {
         name: "Spice Runner",
         id: 230,
@@ -3426,7 +3899,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 4,
-        slots: ["Device", "Illicit"]
+        pointsbeta: 3,
+        loadoutbeta: 7,
+        slots: ["Device", "Illicit"],
+        slotsbeta: ["Crew", "Device", "Illicit", "Modification"]
       }, {
         name: "Poe Dameron",
         id: 231,
@@ -3436,6 +3912,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 7,
         loadout: 25,
+        pointsbeta: 7,
+        loadoutbeta: 26,
         charge: 1,
         recurring: 1,
         slots: ["Talent", "Astromech", "Tech", "Torpedo", "Modification", "Modification", "Configuration", "Title", "HardpointShip"]
@@ -3451,7 +3929,10 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 3,
         loadout: 7,
-        slots: ["Talent", "Talent", "Tech", "Modification", "Modification"]
+        pointsbeta: 4,
+        loadoutbeta: 17,
+        slots: ["Talent", "Talent", "Tech", "Modification", "Modification"],
+        slotsbeta: ["Talent", "Talent", "Tech", "Missile", "Modification", "Modification"]
       }, {
         name: '"Longshot"',
         id: 234,
@@ -3484,6 +3965,8 @@ exportObj.basicCardData = function() {
         keyword: ["Dark Side"],
         points: 7,
         loadout: 22,
+        pointsbeta: 6,
+        loadoutbeta: 8,
         applies_condition: 'I\'ll Show You the Dark Side'.canonicalize(),
         slots: ["Force", "Talent", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
@@ -3495,6 +3978,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 12,
+        pointsbeta: 6,
+        loadoutbeta: 17,
         slots: ["Talent", "Tech", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
         name: "Lieutenant Dormitz",
@@ -3505,6 +3990,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 8,
         loadout: 20,
+        pointsbeta: 7,
+        loadoutbeta: 18,
         slots: ["Sensor", "Sensor", "Tech", "Tech", "Crew", "Crew", "Crew", "Cannon", "Modification"]
       }, {
         name: "L'ulo L'ampar",
@@ -3515,6 +4002,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         slots: ["Talent", "Talent", "Tech", "Modification"]
       }, {
         name: "Tallissan Lintra",
@@ -3527,6 +4016,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 15,
         slots: ["Talent", "Talent", "Talent", "Torpedo", "Tech", "Modification"]
       }, {
         name: "blanks",
@@ -3541,6 +4032,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 5,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         slots: ["Talent", "Sensor", "Tech", "Missile", "Gunner", "Modification"]
       }, {
         name: '"Quickdraw"',
@@ -3564,6 +4057,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 25,
+        pointsbeta: 7,
+        loadoutbeta: 21,
         force: 2,
         slots: ["Force", "Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
@@ -3575,6 +4070,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 6,
         loadout: 15,
+        pointsbeta: 6,
+        loadoutbeta: 9,
         slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Modification"]
       }, {
         name: "Chewbacca (Resistance)",
@@ -3585,6 +4082,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 6,
         loadout: 18,
+        pointsbeta: 6,
+        loadoutbeta: 16,
         slots: ["Talent", "Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "Captain Seevor",
@@ -3597,6 +4096,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 3,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Talent", "Missile", "Modification"]
       }, {
         name: "Mining Guild Surveyor",
@@ -3606,6 +4107,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 1,
+        pointsbeta: 2,
+        loadoutbeta: 0,
         slots: ["Talent"]
       }, {
         name: "Ahhav",
@@ -3616,6 +4119,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         slots: ["Talent", "Illicit", "Illicit", "Modification"]
       }, {
         name: "Finch Dallow",
@@ -3626,7 +4131,10 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 6,
         loadout: 22,
-        slots: ["Sensor", "Tech", "Missile", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
+        pointsbeta: 6,
+        loadoutbeta: 23,
+        slots: ["Sensor", "Tech", "Missile", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"],
+        slotsbeta: ["Tech", "Missile", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Major Stridan",
         id: 251,
@@ -3636,6 +4144,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         loadout: 13,
+        pointsbeta: 6,
+        loadoutbeta: 17,
         slots: ["Tech", "Tech", "Crew", "Crew", "Crew", "Cannon", "Sensor", "Modification"]
       }, {
         name: "Kare Kun",
@@ -3646,6 +4156,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         slots: ["Talent", "Tech", "Cannon", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Joph Seastriker",
@@ -3656,6 +4168,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 13,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         slots: ["Talent", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Lieutenant Bastian",
@@ -3666,6 +4180,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 14,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         slots: ["Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Jaycris Tubbs",
@@ -3676,6 +4192,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         slots: ["Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Black Squadron Ace (T-70)",
@@ -3685,6 +4203,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 2,
         slots: ["Talent", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Red Squadron Expert",
@@ -3694,6 +4214,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 2,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         slots: ["Talent", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Blue Squadron Rookie",
@@ -3703,6 +4225,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 4,
+        pointsbeta: 5,
+        loadoutbeta: 13,
         slots: ["Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Zeta Squadron Survivor",
@@ -3712,6 +4236,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 4,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         slots: ["Talent", "Tech", "Gunner", "Sensor"]
       }, {
         name: "Cobalt Squadron Bomber",
@@ -3721,6 +4247,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 6,
         loadout: 11,
+        pointsbeta: 6,
+        loadoutbeta: 14,
         slots: ["Sensor", "Tech", "Gunner", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "TN-3465",
@@ -3731,6 +4259,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 5,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         slots: ["Tech", "Modification"]
       }, {
         name: '"Scorch"',
@@ -3741,6 +4271,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 14,
         slots: ["Talent", "Talent", "Tech", "Modification"]
       }, {
         name: '"Longshot"',
@@ -3751,6 +4283,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 9,
         slots: ["Talent", "Tech", "Tech", "Modification"]
       }, {
         name: '"Static"',
@@ -3771,6 +4305,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         slots: ["Talent", "Tech", "Modification"]
       }, {
         name: "Commander Malarus",
@@ -3781,6 +4317,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 3,
         loadout: 4,
+        pointsbeta: 4,
+        loadoutbeta: 19,
         charge: 2,
         slots: ["Talent", "Talent", "Missile", "Tech", "Modification"]
       }, {
@@ -3791,6 +4329,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 10,
         slots: ["Talent", "Tech", "Modification", "Modification"]
       }, {
         name: "Zeta Squadron Pilot",
@@ -3800,6 +4340,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 12,
         slots: ["Tech", "Modification"]
       }, {
         name: "Epsilon Squadron Cadet",
@@ -3809,7 +4351,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 2,
-        slots: ["Tech"]
+        pointsbeta: 3,
+        loadoutbeta: 11,
+        slots: ["Tech"],
+        slotsbeta: ["Tech", "Modification"]
       }, {
         name: "Greer Sonnel",
         id: 270,
@@ -3819,6 +4364,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Talent", "Missile", "Tech", "Modification"]
       }, {
         name: "Zari Bangel",
@@ -3829,6 +4376,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 11,
+        pointsbeta: 4,
+        loadoutbeta: 17,
         slots: ["Talent", "Talent", "Missile", "Tech", "Tech", "Modification"]
       }, {
         name: "Darth Maul",
@@ -3841,6 +4390,8 @@ exportObj.basicCardData = function() {
         keyword: ["Dark Side", "Sith"],
         points: 7,
         loadout: 19,
+        pointsbeta: 7,
+        loadoutbeta: 20,
         slots: ["Force", "Force", "Cannon", "Torpedo", "Crew", "Crew", "Device", "Modification", "Title", "Tactical Relay"]
       }, {
         name: "Anakin Skywalker",
@@ -3852,6 +4403,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 6,
         loadout: 10,
+        pointsbeta: 6,
+        loadoutbeta: 12,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Astromech", "Modification", "Configuration"]
       }, {
@@ -3876,6 +4429,8 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 4,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Modification", "Configuration"]
       }, {
@@ -3899,8 +4454,10 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 4,
         loadout: 3,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Astromech", "Configuration", "Modification"]
+        slots: ["Force", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Obi-Wan Kenobi",
         id: 278,
@@ -3911,8 +4468,11 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 9,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Force", "Talent", "Astromech", "Configuration", "Modification", "Modification"]
+        slots: ["Force", "Force", "Talent", "Astromech", "Modification", "Modification", "Configuration"],
+        slotsbeta: ["Force", "Force", "Talent", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Trade Federation Drone",
         id: 279,
@@ -3921,8 +4481,11 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 2,
         loadout: 0,
+        pointsbeta: 2,
+        loadoutbeta: 5,
         keyword: ["Droid"],
-        slots: ["Configuration", "Modification"]
+        slots: ["Modification", "Configuration"],
+        slotsbeta: ["Missile", "Modification", "Configuration"]
       }, {
         name: '"Sinker"',
         id: 280,
@@ -3932,6 +4495,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 15,
+        pointsbeta: 5,
+        loadoutbeta: 12,
         keyword: ["Clone"],
         slots: ["Talent", "Torpedo", "Crew", "Gunner", "Gunner", "Astromech", "Modification"]
       }, {
@@ -3943,6 +4508,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 7,
         loadout: 14,
+        pointsbeta: 6,
+        loadoutbeta: 19,
         charge: 1,
         recurring: 1,
         slots: ["Tech", "Tech", "Crew", "Crew", "Crew", "Cannon", "Cannon", "Sensor", "Modification"]
@@ -3955,6 +4522,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 7,
         loadout: 12,
+        pointsbeta: 6,
+        loadoutbeta: 16,
         charge: 2,
         slots: ["Talent", "Tech", "Tech", "Crew", "Crew", "Crew", "Cannon", "Sensor", "Modification"]
       }, {
@@ -3966,6 +4535,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 9,
         slots: ["Talent", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
         name: '"Recoil"',
@@ -3976,6 +4547,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 9,
         slots: ["Talent", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
         name: "Omega Squadron Expert",
@@ -3985,7 +4558,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 3,
-        slots: ["Tech", "Missile", "Gunner", "Sensor", "Modification"]
+        pointsbeta: 5,
+        loadoutbeta: 13,
+        slots: ["Tech", "Missile", "Gunner", "Sensor", "Modification"],
+        slotsbeta: ["Talent", "Tech", "Missile", "Gunner", "Sensor", "Modification"]
       }, {
         name: "Sienar-Jaemus Engineer",
         id: 286,
@@ -3994,6 +4570,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 5,
+        pointsbeta: 5,
+        loadoutbeta: 15,
         slots: ["Tech", "Torpedo", "Missile", "Modification", "Configuration"]
       }, {
         name: "First Order Test Pilot",
@@ -4003,6 +4581,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 5,
+        pointsbeta: 5,
+        loadoutbeta: 9,
         slots: ["Talent", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
         name: "Starkiller Base Pilot",
@@ -4012,6 +4592,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         loadout: 8,
+        pointsbeta: 7,
+        loadoutbeta: 22,
         slots: ["Tech", "Tech", "Crew", "Crew", "Cannon", "Sensor", "Modification"]
       }, {
         name: "Lieutenant Tavson",
@@ -4024,6 +4606,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 8,
         loadout: 17,
+        pointsbeta: 7,
+        loadoutbeta: 25,
         slots: ["Tech", "Tech", "Crew", "Crew", "Cannon", "Sensor", "Modification"]
       }, {
         name: '"Null"',
@@ -4034,6 +4618,8 @@ exportObj.basicCardData = function() {
         skill: 0,
         points: 3,
         loadout: 5,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Talent", "Talent", "Tech", "Tech"]
       }, {
         name: "Cat",
@@ -4044,6 +4630,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 5,
         loadout: 17,
+        pointsbeta: 5,
+        loadoutbeta: 14,
         slots: ["Talent", "Sensor", "Tech", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Ben Teene",
@@ -4054,6 +4642,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 19,
+        pointsbeta: 5,
+        loadoutbeta: 11,
         slots: ["Sensor", "Tech", "Tech", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"],
         applies_condition: 'Rattled'.canonicalize()
       }, {
@@ -4065,6 +4655,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 6,
         loadout: 22,
+        pointsbeta: 5,
+        loadoutbeta: 10,
         slots: ["Sensor", "Tech", "Cannon", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Vennie",
@@ -4075,7 +4667,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 6,
         loadout: 18,
-        slots: ["Sensor", "Torpedo", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
+        pointsbeta: 6,
+        loadoutbeta: 20,
+        slots: ["Sensor", "Torpedo", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"],
+        slotsbeta: ["Torpedo", "Crew", "Crew", "Gunner", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Resistance Sympathizer",
         id: 295,
@@ -4084,6 +4679,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 6,
         loadout: 10,
+        pointsbeta: 6,
+        loadoutbeta: 18,
         slots: ["Talent", "Missile", "Gunner", "Modification", "Modification"]
       }, {
         name: "Jessika Pava",
@@ -4094,6 +4691,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 6,
+        pointsbeta: 5,
+        loadoutbeta: 14,
         charge: 1,
         recurring: 1,
         slots: ["Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
@@ -4106,6 +4705,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 9,
+        pointsbeta: 5,
+        loadoutbeta: 16,
         slots: ["Talent", "Tech", "Astromech", "Modification", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Nien Nunb",
@@ -4116,6 +4717,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 16,
+        pointsbeta: 5,
+        loadoutbeta: 11,
         slots: ["Talent", "Tech", "Missile", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Ello Asty",
@@ -4126,6 +4729,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 8,
+        pointsbeta: 5,
+        loadoutbeta: 12,
         slots: ["Talent", "Talent", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Green Squadron Expert",
@@ -4135,6 +4740,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 2,
+        pointsbeta: 3,
+        loadoutbeta: 5,
         slots: ["Talent", "Talent", "Tech"]
       }, {
         name: "Blue Squadron Recruit",
@@ -4144,7 +4751,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 4,
-        slots: ["Talent", "Tech"]
+        pointsbeta: 4,
+        loadoutbeta: 12,
+        slots: ["Talent", "Tech"],
+        slotsbeta: ["Talent", "Tech", "Missile"]
       }, {
         name: "Foreman Proach",
         id: 302,
@@ -4154,6 +4764,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 10,
         slots: ["Talent", "Talent", "Modification"]
       }, {
         name: "Overseer Yushyn",
@@ -4162,11 +4774,14 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Modified TIE/ln Fighter",
         skill: 2,
-        loadout: 7,
         charge: 1,
         recurring: 1,
         points: 3,
-        slots: ["Talent", "Modification"]
+        loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 12,
+        slots: ["Talent", "Modification"],
+        slotsbeta: ["Talent", "Illicit", "Modification"]
       }, {
         name: "Mining Guild Sentry",
         id: 304,
@@ -4175,6 +4790,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         slots: ["Illicit"]
       }, {
         name: "General Grievous",
@@ -4185,6 +4802,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 11,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         slots: ["Talent", "Missile", "Modification", "Modification", "Title"]
       }, {
         name: "Wat Tambor",
@@ -4195,7 +4814,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 9,
-        slots: ["Talent", "Tactical Relay", "Modification", "Modification"]
+        pointsbeta: 4,
+        loadoutbeta: 15,
+        slots: ["Talent", "Tactical Relay", "Modification", "Modification"],
+        slotsbeta: ["Talent", "Tactical Relay", "Modification", "Modification", "Title"]
       }, {
         name: "Feethan Ottraw Autopilot",
         id: 307,
@@ -4204,6 +4826,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 5,
+        pointsbeta: 4,
+        loadoutbeta: 17,
         keyword: ["Droid"],
         slots: ["Tactical Relay", "Modification"]
       }, {
@@ -4215,6 +4839,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 17,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         slots: ["Tactical Relay", "Modification", "Modification"]
       }, {
         name: "Precise Hunter",
@@ -4224,6 +4850,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 8,
+        pointsbeta: 2,
+        loadoutbeta: 4,
         max_per_squad: 3,
         keyword: ["Droid"],
         slots: ["Cannon", "Configuration", "Modification"]
@@ -4235,6 +4863,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 2,
         loadout: 4,
+        pointsbeta: 2,
+        loadoutbeta: 2,
         max_per_squad: 2,
         keyword: ["Droid"],
         slots: ["Missile", "Modification", "Configuration"]
@@ -4246,6 +4876,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 2,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 16,
         unique: true,
         keyword: ["Droid"],
         slots: ["Missile", "Modification", "Configuration"]
@@ -4259,6 +4891,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 5,
         loadout: 14,
+        pointsbeta: 4,
+        loadoutbeta: 3,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Talent", "Astromech", "Modification", "Configuration"]
       }, {
@@ -4271,6 +4905,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Modification", "Configuration"]
       }, {
@@ -4283,6 +4919,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 3,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Astromech", "Modification", "Configuration"]
       }, {
@@ -4294,6 +4932,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 10,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Modification"]
       }, {
@@ -4305,6 +4945,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 16,
+        pointsbeta: 4,
+        loadoutbeta: 23,
         keyword: ["Clone"],
         slots: ["Talent", "Torpedo", "Missile", "Modification"]
       }, {
@@ -4316,6 +4958,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 13,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Missile", "Modification"]
       }, {
@@ -4327,6 +4971,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Modification"]
       }, {
@@ -4338,6 +4984,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 13,
+        pointsbeta: 3,
+        loadoutbeta: 13,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Missile", "Modification"]
       }, {
@@ -4348,6 +4996,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         keyword: ["Clone"],
         slots: ["Missile", "Modification"]
       }, {
@@ -4358,6 +5008,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Modification"]
       }, {
@@ -4370,6 +5022,8 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 5,
         loadout: 20,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         keyword: ["Light Side"],
         slots: ["Talent", "Sensor", "Torpedo", "Astromech"]
       }, {
@@ -4380,6 +5034,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Sensor", "Torpedo", "Astromech"]
       }, {
         name: "Techno Union Bomber",
@@ -4389,6 +5045,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 13,
         keyword: ["Droid"],
         slots: ["Torpedo", "Device", "Modification", "Configuration"]
       }, {
@@ -4401,6 +5059,8 @@ exportObj.basicCardData = function() {
         keyword: ["Droid"],
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 9,
         slots: ["Device", "Device", "Modification", "Configuration"]
       }, {
         name: "DBS-404",
@@ -4411,6 +5071,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 10,
+        pointsbeta: 3,
+        loadoutbeta: 9,
         keyword: ["Droid"],
         slots: ["Torpedo", "Missile", "Device", "Modification", "Configuration"]
       }, {
@@ -4421,6 +5083,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 10,
         keyword: ["Droid"],
         slots: ["Missile", "Device", "Modification", "Configuration"]
       }, {
@@ -4432,6 +5096,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 16,
+        pointsbeta: 3,
+        loadoutbeta: 13,
         keyword: ["Droid"],
         slots: ["Sensor", "Tactical Relay", "Modification", "Configuration"],
         ship_override: {
@@ -4446,6 +5112,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 9,
+        pointsbeta: 3,
+        loadoutbeta: 10,
         keyword: ["Droid"],
         slots: ["Sensor", "Missile", "Missile", "Modification", "Configuration"]
       }, {
@@ -4457,6 +5125,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         applies_condition: 'Decoyed'.canonicalize(),
         slots: ["Sensor", "Astromech", "Modification"]
       }, {
@@ -4480,6 +5150,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 16,
+        pointsbeta: 5,
+        loadoutbeta: 22,
         slots: ["Talent", "Sensor", "Torpedo", "Astromech"]
       }, {
         name: "Ric Olié",
@@ -4502,6 +5174,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 7,
         loadout: 24,
+        pointsbeta: 6,
+        loadoutbeta: 13,
         keyword: ["Dark Side", "Sith"],
         slots: ["Force", "Cannon", "Torpedo", "Crew", "Crew", "Device", "Modification", "Title", "Tactical Relay"]
       }, {
@@ -4514,7 +5188,8 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 12,
         keyword: ["Droid"],
-        slots: ["Talent", "Cannon", "Torpedo", "Crew", "Device", "Modification"]
+        slots: ["Talent", "Cannon", "Torpedo", "Crew", "Device", "Modification"],
+        slotsbeta: ["Talent", "Cannon", "Torpedo", "Device", "Modification", "Title"]
       }, {
         name: "Dark Courier",
         id: 336,
@@ -4523,6 +5198,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 6,
         loadout: 9,
+        pointsbeta: 6,
+        loadoutbeta: 15,
         slots: ["Cannon", "Torpedo", "Device", "Modification"]
       }, {
         name: "DFS-311",
@@ -4532,6 +5209,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 10,
+        pointsbeta: 2,
+        loadoutbeta: 2,
         unique: true,
         keyword: ["Droid"],
         slots: ["Missile", "Modification", "Modification", "Configuration"]
@@ -4544,6 +5223,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 7,
+        pointsbeta: 5,
+        loadoutbeta: 17,
         keyword: ["Clone"],
         slots: ["Talent", "Sensor", "Torpedo", "Torpedo", "Gunner", "Gunner", "Astromech", "Modification"]
       }, {
@@ -4555,6 +5236,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 9,
+        pointsbeta: 5,
+        loadoutbeta: 18,
         keyword: ["Clone"],
         slots: ["Talent", "Torpedo", "Gunner", "Gunner", "Astromech", "Modification", "Modification"]
       }, {
@@ -4565,6 +5248,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         keyword: ["Clone"],
         slots: ["Talent", "Gunner", "Gunner", "Astromech", "Modification"]
       }, {
@@ -4575,6 +5260,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 8,
+        pointsbeta: 5,
+        loadoutbeta: 13,
         keyword: ["Clone"],
         slots: ["Torpedo", "Gunner", "Gunner", "Astromech", "Modification"]
       }, {
@@ -4587,8 +5274,11 @@ exportObj.basicCardData = function() {
         charge: 1,
         points: 4,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         keyword: ["Clone"],
-        slots: ["Talent", "Torpedo", "Gunner", "Gunner", "Astromech", "Modification"]
+        slots: ["Talent", "Torpedo", "Gunner", "Gunner", "Astromech", "Modification"],
+        slotsbeta: ["Talent", "Torpedo", "Crew", "Gunner", "Astromech", "Modification"]
       }, {
         name: "Separatist Drone",
         id: 343,
@@ -4597,6 +5287,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 2,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 14,
         keyword: ["Droid"],
         slots: ["Missile", "Configuration", "Modification"]
       }, {
@@ -4607,6 +5299,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 4,
+        pointsbeta: 4,
+        loadoutbeta: 14,
         slots: ["Talent", "Modification", "Modification"]
       }, {
         name: "Rose Tico",
@@ -4617,6 +5311,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 9,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         slots: ["Talent", "Tech", "Crew", "Modification", "Modification"]
       }, {
         name: "Logistics Division Pilot",
@@ -4626,6 +5322,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 18,
         slots: ["Cannon", "Crew", "Astromech", "Astromech"]
       }, {
         name: "Pammich Nerro Goode",
@@ -4636,6 +5334,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 17,
         slots: ["Tech", "Sensor", "Cannon", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
       }, {
         name: "Vi Moradi",
@@ -4646,6 +5346,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 12,
         applies_condition: 'Compromising Intel'.canonicalize(),
         slots: ["Tech", "Crew", "Modification"]
       }, {
@@ -4657,6 +5359,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 2,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 14,
         keyword: ["Droid"],
         slots: ["Tech", "Tech", "Crew", "Modification"]
       }, {
@@ -4668,6 +5372,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 15,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Talent", "Talent", "Tech", "Crew", "Modification"]
       }, {
         name: "Cova Nell",
@@ -4678,6 +5384,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 20,
+        pointsbeta: 5,
+        loadoutbeta: 19,
         slots: ["Talent", "Tech", "Cannon", "Cannon", "Torpedo", "Crew", "Crew", "Astromech", "Modification"]
       }, {
         name: "Nodin Chavdri",
@@ -4688,6 +5396,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 5,
         loadout: 20,
+        pointsbeta: 4,
+        loadoutbeta: 15,
         slots: ["Tech", "Cannon", "Cannon", "Torpedo", "Missile", "Crew", "Astromech", "Modification"]
       }, {
         name: "Stalgasin Hive Guard",
@@ -4697,6 +5407,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 4,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         slots: ["Talent"]
       }, {
         name: "Petranaki Arena Ace",
@@ -4706,6 +5418,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 6,
+        pointsbeta: 5,
+        loadoutbeta: 9,
         slots: ["Talent", "Talent"]
       }, {
         name: "Gorgol",
@@ -4716,6 +5430,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 9,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Talent", "Modification"]
       }, {
         name: "Chertek",
@@ -4726,6 +5442,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 16,
         slots: ["Talent", "Talent"]
       }, {
         name: "Sun Fac",
@@ -4736,6 +5454,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 5,
         loadout: 15,
+        pointsbeta: 5,
+        loadoutbeta: 21,
         slots: ["Talent", "Talent", "Talent", "Modification"]
       }, {
         name: "Berwer Kret",
@@ -4746,6 +5466,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 2,
         slots: ["Talent", "Talent"]
       }, {
         name: "Anakin Skywalker (Y-Wing)",
@@ -4757,6 +5479,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 6,
         loadout: 20,
+        pointsbeta: 5,
+        loadoutbeta: 25,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"]
       }, {
@@ -4767,8 +5491,11 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         keyword: ["Clone"],
-        slots: ["Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"]
+        slots: ["Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"],
+        slotsbeta: ["Turret", "Torpedo", "Astromech", "Device", "Modification"]
       }, {
         name: "Red Squadron Bomber",
         id: 361,
@@ -4777,8 +5504,11 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 9,
         keyword: ["Clone"],
-        slots: ["Turret", "Torpedo", "Gunner", "Astromech", "Device"]
+        slots: ["Turret", "Torpedo", "Gunner", "Astromech", "Device"],
+        slotsbeta: ["Turret", "Torpedo", "Astromech", "Device"]
       }, {
         name: "R2-D2",
         id: 362,
@@ -4788,6 +5518,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 9,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         keyword: ["Droid"],
         slots: ["Sensor", "Turret", "Torpedo", "Crew", "Device", "Device", "Modification"]
       }, {
@@ -4810,6 +5542,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 10,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         keyword: ["Clone"],
         slots: ["Talent", "Turret", "Astromech", "Device", "Modification"]
       }, {
@@ -4821,6 +5555,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         keyword: ["Clone"],
         slots: ["Talent", "Turret", "Astromech", "Device", "Modification"]
       }, {
@@ -4832,6 +5568,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 18,
+        pointsbeta: 4,
+        loadoutbeta: 13,
         keyword: ["Clone"],
         slots: ["Talent", "Turret", "Torpedo", "Torpedo", "Gunner", "Astromech", "Modification"]
       }, {
@@ -4943,6 +5681,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 3,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 20,
         slots: ["Talent", "Talent", "Missile", "Astromech", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Kazuda Xiono",
@@ -4953,6 +5693,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 14,
+        pointsbeta: 4,
+        loadoutbeta: 13,
         slots: ["Talent", "Missile", "Astromech", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "R1-J5",
@@ -4963,6 +5705,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 12,
         keyword: ["Droid"],
         slots: ["Missile", "Crew", "Modification", "Title"]
       }, {
@@ -4973,6 +5717,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 5,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Missile", "Modification"]
       }, {
         name: "Major Vonreg",
@@ -4983,6 +5729,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/ba Interceptor",
         points: 5,
         loadout: 14,
+        pointsbeta: 5,
+        loadoutbeta: 11,
         slots: ["Talent", "Talent", "Tech", "Missile", "Modification", "Modification"]
       }, {
         name: '"Holo"',
@@ -5012,6 +5760,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/ba Interceptor",
         points: 4,
         loadout: 3,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         slots: ["Talent", "Tech", "Modification"]
       }, {
         name: "Captain Phasma",
@@ -5022,6 +5772,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/sf Fighter",
         points: 4,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         slots: ["Talent", "Sensor", "Tech", "Missile", "Gunner", "Modification", "Modification"]
       }, {
         name: '"Rush"',
@@ -5032,6 +5784,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/vn Silencer",
         points: 5,
         loadout: 11,
+        pointsbeta: 5,
+        loadoutbeta: 8,
         slots: ["Talent", "Talent", "Tech", "Missile", "Configuration"]
       }, {
         name: "Zizi Tlo",
@@ -5044,6 +5798,8 @@ exportObj.basicCardData = function() {
         ship: "RZ-2 A-wing",
         points: 5,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         slots: ["Talent", "Talent", "Missile", "Tech", "Modification"]
       }, {
         name: "Ronith Blario",
@@ -5054,6 +5810,8 @@ exportObj.basicCardData = function() {
         ship: "RZ-2 A-wing",
         points: 4,
         loadout: 10,
+        pointsbeta: 3,
+        loadoutbeta: 5,
         slots: ["Talent", "Missile", "Tech", "Modification"]
       }, {
         name: "Paige Tico",
@@ -5066,7 +5824,8 @@ exportObj.basicCardData = function() {
         loadout: 23,
         charge: 1,
         recurring: 1,
-        slots: ["Talent", "Sensor", "Tech", "Crew", "Gunner", "Device", "Device", "Modification"]
+        slots: ["Talent", "Sensor", "Tech", "Crew", "Gunner", "Device", "Device", "Modification"],
+        slotsbeta: ["Talent", "Sensor", "Tech", "Crew", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "K-2SO",
         id: 390,
@@ -5076,6 +5835,8 @@ exportObj.basicCardData = function() {
         ship: "UT-60D U-wing",
         points: 5,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 4,
         keyword: ["Droid"],
         slots: ["Sensor", "Crew", "Crew", "Modification", "Configuration"]
       }, {
@@ -5087,6 +5848,7 @@ exportObj.basicCardData = function() {
         ship: "A/SF-01 B-wing",
         points: 4,
         loadout: 11,
+        loadoutbeta: 7,
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Torpedo", "Device", "Modification", "Configuration"]
       }, {
         name: "Alexsandr Kallus",
@@ -5097,8 +5859,11 @@ exportObj.basicCardData = function() {
         ship: "VCX-100 Light Freighter",
         points: 7,
         loadout: 16,
+        pointsbeta: 6,
+        loadoutbeta: 10,
         keyword: ["Spectre"],
-        slots: ["Talent", "Torpedo", "Sensor", "Turret", "Crew", "Crew", "Modification", "Gunner", "Title"]
+        slots: ["Talent", "Torpedo", "Sensor", "Turret", "Crew", "Crew", "Modification", "Gunner", "Title"],
+        slotsbeta: ["Talent", "Torpedo", "Sensor", "Turret", "Crew", "Crew", "Crew", "Modification", "Title"]
       }, {
         name: "Leia Organa",
         id: 393,
@@ -5109,6 +5874,8 @@ exportObj.basicCardData = function() {
         keyword: ["Light Side"],
         points: 7,
         loadout: 24,
+        pointsbeta: 7,
+        loadoutbeta: 15,
         force: 1,
         slots: ["Force", "Missile", "Gunner", "Crew", "Crew", "Modification", "Modification", "Title"]
       }, {
@@ -5121,6 +5888,8 @@ exportObj.basicCardData = function() {
         ship: "TIE Advanced v1",
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         force: 2,
         slots: ["Force", "Talent", "Sensor", "Missile"]
       }, {
@@ -5132,6 +5901,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/sk Striker",
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 20,
         slots: ["Talent", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Morna Kee",
@@ -5142,6 +5913,8 @@ exportObj.basicCardData = function() {
         ship: "VT-49 Decimator",
         points: 7,
         loadout: 22,
+        pointsbeta: 7,
+        loadoutbeta: 14,
         charge: 3,
         slots: ["Talent", "Torpedo", "Crew", "Crew", "Gunner", "Device", "Modification", "Modification", "Title"]
       }, {
@@ -5153,6 +5926,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/sf Fighter",
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         slots: ["Talent", "Tech", "Missile", "Missile", "Gunner", "Sensor", "Modification"]
       }, {
         name: "Bossk (Z-95 Headhunter)",
@@ -5163,6 +5938,8 @@ exportObj.basicCardData = function() {
         ship: "Z-95-AF4 Headhunter",
         points: 2,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         keyword: ["Bounty Hunter"],
         chassis: "Pursuit Craft",
         slots: ["Talent", "Talent", "Missile", "Illicit", "Modification"]
@@ -5175,6 +5952,8 @@ exportObj.basicCardData = function() {
         ship: "M3-A Interceptor",
         points: 3,
         loadout: 9,
+        pointsbeta: 3,
+        loadoutbeta: 11,
         keyword: ["Droid"],
         slots: ["Modification", "HardpointShip"]
       }, {
@@ -5186,6 +5965,8 @@ exportObj.basicCardData = function() {
         ship: "JumpMaster 5000",
         points: 5,
         loadout: 11,
+        pointsbeta: 5,
+        loadoutbeta: 21,
         keyword: ["Bounty Hunter"],
         slots: ["Cannon", "Cannon", "Torpedo", "Crew", "Gunner", "Illicit", "Modification"]
       }, {
@@ -5196,6 +5977,8 @@ exportObj.basicCardData = function() {
         ship: "Xi-class Light Shuttle",
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 14,
         slots: ["Tech", "Tech", "Crew", "Modification"]
       }, {
         name: "Agent Terex",
@@ -5206,6 +5989,8 @@ exportObj.basicCardData = function() {
         ship: "Xi-class Light Shuttle",
         points: 4,
         loadout: 13,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Talent", "Tech", "Tech", "Crew", "Illicit", "Illicit", "Illicit", "Modification"]
       }, {
         name: "Gideon Hask (Xi Shuttle)",
@@ -5216,6 +6001,8 @@ exportObj.basicCardData = function() {
         ship: "Xi-class Light Shuttle",
         points: 4,
         loadout: 15,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Talent", "Talent", "Tech", "Tech", "Crew", "Crew", "Modification"]
       }, {
         name: "Commander Malarus (Xi Shuttle)",
@@ -5226,6 +6013,8 @@ exportObj.basicCardData = function() {
         ship: "Xi-class Light Shuttle",
         points: 4,
         loadout: 15,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         slots: ["Talent", "Tech", "Tech", "Crew", "Crew", "Modification", "Modification"]
       }, {
         name: "Baktoid Drone",
@@ -5264,6 +6053,8 @@ exportObj.basicCardData = function() {
         ship: "HMP Droid Gunship",
         points: 4,
         loadout: 12,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Cannon", "Cannon", "Tactical Relay", "Modification", "Configuration"]
       }, {
@@ -5275,6 +6066,8 @@ exportObj.basicCardData = function() {
         ship: "HMP Droid Gunship",
         points: 3,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Tactical Relay", "Crew", "Device", "Modification", "Configuration"]
       }, {
@@ -5286,6 +6079,8 @@ exportObj.basicCardData = function() {
         ship: "HMP Droid Gunship",
         points: 3,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Tactical Relay", "Crew", "Device", "Modification", "Configuration"]
       }, {
@@ -5297,6 +6092,8 @@ exportObj.basicCardData = function() {
         ship: "HMP Droid Gunship",
         points: 4,
         loadout: 15,
+        pointsbeta: 4,
+        loadoutbeta: 14,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Crew", "Device", "Modification", "Configuration"]
       }, {
@@ -5309,6 +6106,8 @@ exportObj.basicCardData = function() {
         ship: "LAAT/i Gunship",
         points: 5,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         keyword: ["Clone"],
         slots: ["Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -5322,6 +6121,8 @@ exportObj.basicCardData = function() {
         ship: "LAAT/i Gunship",
         points: 6,
         loadout: 20,
+        pointsbeta: 5,
+        loadoutbeta: 14,
         keyword: ["Clone"],
         slots: ["Sensor", "Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -5335,6 +6136,8 @@ exportObj.basicCardData = function() {
         ship: "LAAT/i Gunship",
         points: 6,
         loadout: 18,
+        pointsbeta: 6,
+        loadoutbeta: 26,
         keyword: ["Clone"],
         slots: ["Talent", "Torpedo", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -5348,6 +6151,8 @@ exportObj.basicCardData = function() {
         ship: "LAAT/i Gunship",
         points: 6,
         loadout: 25,
+        pointsbeta: 5,
+        loadoutbeta: 10,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Missile", "Crew", "Crew", "Gunner", "Gunner", "Modification"]
       }, {
@@ -5358,6 +6163,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/rb Heavy",
         points: 5,
         loadout: 8,
+        pointsbeta: 5,
+        loadoutbeta: 18,
         slots: ["Cannon", "Cannon", "Configuration"]
       }, {
         name: "Onyx Squadron Sentry",
@@ -5367,6 +6174,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/rb Heavy",
         points: 5,
         loadout: 7,
+        pointsbeta: 5,
+        loadoutbeta: 17,
         slots: ["Cannon", "Cannon", "Modification", "Configuration"]
       }, {
         name: "Lyttan Dree",
@@ -5377,6 +6186,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/rb Heavy",
         points: 5,
         loadout: 14,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         slots: ["Sensor", "Cannon", "Cannon", "Gunner", "Modification", "Configuration"]
       }, {
         name: '"Rampage"',
@@ -5387,6 +6198,8 @@ exportObj.basicCardData = function() {
         ship: "TIE/rb Heavy",
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Talent", "Cannon", "Cannon", "Gunner", "Modification", "Configuration"]
       }, {
         name: "Fearsome Predator",
@@ -5408,6 +6221,8 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-fighter",
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 3,
         slots: ["Talent", "Sensor", "Missile", "Modification", "Modification", "Configuration"]
       }, {
         name: "DIS-T81",
@@ -5418,6 +6233,8 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-fighter",
         points: 3,
         loadout: 3,
+        pointsbeta: 4,
+        loadoutbeta: 15,
         slots: ["Talent", "Sensor", "Cannon", "Modification", "Modification", "Configuration"]
       }, {
         name: "Phlac-Arphocc Prototype",
@@ -5428,6 +6245,8 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-fighter",
         points: 3,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 14,
         slots: ["Talent", "Sensor", "Missile", "Modification", "Modification", "Configuration"]
       }, {
         name: "Colicoid Interceptor",
@@ -5437,6 +6256,8 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-fighter",
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 5,
         slots: ["Talent", "Modification", "Configuration"]
       }, {
         name: "Separatist Interceptor",
@@ -5446,6 +6267,8 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-fighter",
         points: 3,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Talent", "Missile", "Modification", "Configuration"]
       }, {
         name: "Separatist Racketeer",
@@ -5455,6 +6278,8 @@ exportObj.basicCardData = function() {
         ship: "Firespray-class Patrol Craft",
         points: 7,
         loadout: 10,
+        pointsbeta: 6,
+        loadoutbeta: 9,
         slots: ["Cannon", "Missile", "Device"]
       }, {
         name: "Boba Fett (Separatist)",
@@ -5465,6 +6290,8 @@ exportObj.basicCardData = function() {
         ship: "Firespray-class Patrol Craft",
         points: 7,
         loadout: 16,
+        pointsbeta: 6,
+        loadoutbeta: 5,
         keyword: ["Bounty Hunter"],
         slots: ["Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -5477,6 +6304,8 @@ exportObj.basicCardData = function() {
         ship: "Firespray-class Patrol Craft",
         points: 8,
         loadout: 22,
+        pointsbeta: 8,
+        loadoutbeta: 17,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Modification", "Title"],
         applies_condition: ['You\'d Better Mean Business'.canonicalize(), 'You Should Thank Me'.canonicalize()]
@@ -5489,6 +6318,8 @@ exportObj.basicCardData = function() {
         ship: "Firespray-class Patrol Craft",
         points: 8,
         loadout: 22,
+        pointsbeta: 8,
+        loadoutbeta: 21,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Missile", "Crew", "Device", "Illicit", "Illicit", "Modification", "Title"]
       }, {
@@ -5499,6 +6330,8 @@ exportObj.basicCardData = function() {
         ship: "Nimbus-class V-wing",
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 5,
         slots: ["Modification", "Configuration"]
       }, {
         name: "Shadow Squadron Escort",
@@ -5508,6 +6341,8 @@ exportObj.basicCardData = function() {
         ship: "Nimbus-class V-wing",
         points: 3,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         keyword: ["Clone"],
         slots: ["Modification", "Configuration"]
       }, {
@@ -5529,6 +6364,8 @@ exportObj.basicCardData = function() {
         ship: "Nimbus-class V-wing",
         points: 3,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 5,
         charge: 1,
         recurring: 1,
         keyword: ["Clone"],
@@ -5542,6 +6379,8 @@ exportObj.basicCardData = function() {
         ship: "Nimbus-class V-wing",
         points: 3,
         loadout: 11,
+        pointsbeta: 3,
+        loadoutbeta: 3,
         keyword: ["Clone"],
         slots: ["Talent", "Astromech", "Modification", "Configuration"]
       }, {
@@ -5553,6 +6392,8 @@ exportObj.basicCardData = function() {
         ship: "Nimbus-class V-wing",
         points: 3,
         loadout: 9,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         keyword: ["Clone"],
         slots: ["Talent", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
@@ -5563,6 +6404,8 @@ exportObj.basicCardData = function() {
         ship: "Eta-2 Actis",
         points: 5,
         loadout: 4,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         force: 2,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Cannon", "Astromech", "Modification"]
@@ -5575,6 +6418,8 @@ exportObj.basicCardData = function() {
         ship: "Eta-2 Actis",
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 7,
         force: 3,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Cannon", "Astromech", "Modification"]
@@ -5587,6 +6432,8 @@ exportObj.basicCardData = function() {
         ship: "Eta-2 Actis",
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         force: 2,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Cannon", "Astromech", "Modification"]
@@ -5599,6 +6446,8 @@ exportObj.basicCardData = function() {
         ship: "Eta-2 Actis",
         points: 5,
         loadout: 15,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         force: 2,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Cannon", "Astromech", "Modification"]
@@ -5612,6 +6461,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 5,
         loadout: 15,
+        pointsbeta: 5,
+        loadoutbeta: 17,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Cannon", "Astromech", "Modification"]
       }, {
@@ -5624,6 +6475,8 @@ exportObj.basicCardData = function() {
         ship: "Eta-2 Actis",
         points: 5,
         loadout: 15,
+        pointsbeta: 4,
+        loadoutbeta: 3,
         keyword: ["Jedi", "Light Side", "Dark Side"],
         slots: ["Force", "Force", "Talent", "Cannon", "Astromech", "Modification"]
       }, {
@@ -5636,6 +6489,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 6,
         loadout: 19,
+        pointsbeta: 5,
+        loadoutbeta: 7,
         charge: 2,
         recurring: 1,
         slots: ["Talent", "Talent", "Tech", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
@@ -5649,6 +6504,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 5,
         loadout: 13,
+        pointsbeta: 5,
+        loadoutbeta: 12,
         slots: ["Talent", "Tech", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Merl Cobben",
@@ -5659,6 +6516,8 @@ exportObj.basicCardData = function() {
         ship: "RZ-2 A-wing",
         points: 3,
         loadout: 4,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Talent", "Missile", "Tech", "Modification"]
       }, {
         name: "Suralinda Javos",
@@ -5669,6 +6528,8 @@ exportObj.basicCardData = function() {
         ship: "RZ-2 A-wing",
         points: 4,
         loadout: 10,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Talent", "Talent", "Cannon", "Tech", "Modification"]
       }, {
         name: "Wrobie Tyce",
@@ -5689,6 +6550,8 @@ exportObj.basicCardData = function() {
         ship: "RZ-2 A-wing",
         points: 4,
         loadout: 12,
+        pointsbeta: 3,
+        loadoutbeta: 2,
         slots: ["Talent", "Talent", "Missile", "Tech", "Modification"]
       }, {
         name: "Nimi Chireen",
@@ -5699,6 +6562,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         slots: ["Astromech", "Tech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "C'ai Threnalli",
@@ -5709,6 +6574,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         slots: ["Talent", "Astromech", "Tech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Hera Syndulla (B-Wing)",
@@ -5731,6 +6598,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 4,
         loadout: 5,
+        pointsbeta: 4,
+        loadoutbeta: 4,
         slots: ["Talent", "Talent", "Sensor", "Missile", "Configuration", "Modification"]
       }, {
         name: "Wedge Antilles (A-Wing)",
@@ -5741,6 +6610,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 5,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Talent", "Talent", "Modification", "Configuration"]
       }, {
         name: "Sabine Wren (A-Wing)",
@@ -5752,6 +6623,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Talent", "Modification", "Modification", "Configuration"]
       }, {
         name: "Vult Skerris",
@@ -5764,6 +6637,8 @@ exportObj.basicCardData = function() {
         recurring: -1,
         points: 7,
         loadout: 13,
+        pointsbeta: 7,
+        loadoutbeta: 14,
         slots: ["Talent", "Talent", "Sensor", "Cannon", "Missile", "Configuration"]
       }, {
         name: "Ciena Ree",
@@ -5774,6 +6649,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 5,
         loadout: 14,
+        pointsbeta: 4,
+        loadoutbeta: 4,
         slots: ["Talent", "Talent", "Modification", "Configuration"]
       }, {
         name: "Gideon Hask (TIE Interceptor)",
@@ -5784,6 +6661,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 4,
         slots: ["Talent", "Talent", "Missile", "Modification", "Configuration"]
       }, {
         name: "Kanan Jarrus (HWK-290)",
@@ -5796,7 +6675,10 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 4,
         loadout: 6,
-        slots: ["Force", "Crew", "Device", "Illicit", "Modification", "Modification"]
+        pointsbeta: 5,
+        loadoutbeta: 6,
+        slots: ["Force", "Crew", "Device", "Illicit", "Modification", "Modification"],
+        slotsbeta: ["Force", "Crew", "Device", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Leema Kai",
         id: 458,
@@ -5806,6 +6688,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 3,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 17,
         slots: ["Tech", "Turret", "Torpedo", "Missile", "Astromech", "Device"]
       }, {
         name: "Arliz Hadrassian",
@@ -5816,6 +6700,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Tech", "Turret", "Torpedo", "Missile", "Astromech", "Device"]
       }, {
         name: "Padric",
@@ -5826,6 +6712,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 10,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Talent", "Tech", "Turret", "Torpedo", "Missile", "Astromech", "Device", "Modification"]
       }, {
         name: "Derek Klivian",
@@ -5836,6 +6724,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 9,
         slots: ["Talent", "Missile", "Configuration"]
       }, {
         name: "Shara Bey (A-Wing)",
@@ -5846,6 +6736,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Talent", "Missile", "Configuration"]
       }, {
         name: "Ahsoka Tano (A-Wing)",
@@ -5858,6 +6750,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 5,
         loadout: 12,
+        pointsbeta: 5,
+        loadoutbeta: 16,
         slots: ["Force", "Force", "Talent", "Missile", "Modification", "Configuration"]
       }, {
         name: "Netrem Pollard",
@@ -5868,6 +6762,7 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 10,
+        loadoutbeta: 12,
         slots: ["Talent", "Sensor", "Cannon", "Cannon", "Missile", "Device", "Modification", "Configuration"]
       }, {
         name: "Commandant Goran",
@@ -5878,6 +6773,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 9,
         slots: ["Talent", "Modification", "Configuration"]
       }, {
         name: "Nash Windrider",
@@ -5890,6 +6787,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 4,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 11,
         slots: ["Missile", "Modification", "Configuration"]
       }, {
         name: "Lieutenant Lorrir",
@@ -5900,6 +6799,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 13,
         slots: ["Talent", "Modification", "Configuration"]
       }, {
         name: "Vult Skerris (TIE Interceptor)",
@@ -5924,6 +6825,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 9,
         loadout: 10,
+        pointsbeta: 9,
+        loadoutbeta: 5,
         slots: ["Force", "Tech", "Cannon", "Missile", "Configuration"]
       }, {
         name: "Captain Dobbs",
@@ -5934,6 +6837,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 7,
         loadout: 15,
+        pointsbeta: 7,
+        loadoutbeta: 18,
         slots: ["Talent", "Sensor", "Cannon", "Missile", "Configuration"]
       }, {
         name: "Jinata Security Officer",
@@ -5943,7 +6848,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 5,
-        slots: ["Turret", "Torpedo", "Missile", "Device"]
+        pointsbeta: 4,
+        loadoutbeta: 14,
+        slots: ["Turret", "Torpedo", "Missile", "Device"],
+        slotsbeta: ["Turret", "Astromech", "Torpedo", "Missile", "Device"]
       }, {
         name: "Amaxine Warrior",
         id: 472,
@@ -5952,7 +6860,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 6,
-        slots: ["Turret", "Torpedo", "Missile", "Astromech", "Device"]
+        pointsbeta: 4,
+        loadoutbeta: 14,
+        slots: ["Turret", "Torpedo", "Missile", "Astromech", "Device"],
+        slotsbeta: ["Turret", "Torpedo", "Astromech", "Device"]
       }, {
         name: "Gamut Key",
         id: 473,
@@ -5964,7 +6875,10 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 4,
         loadout: 8,
-        slots: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification"]
+        pointsbeta: 5,
+        loadoutbeta: 15,
+        slots: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification"],
+        slotsbeta: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Tápusk",
         xws: "tapusk",
@@ -5977,7 +6891,10 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 4,
         loadout: 10,
-        slots: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification"]
+        pointsbeta: 4,
+        loadoutbeta: 6,
+        slots: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification"],
+        slotsbeta: ["Talent", "Crew", "Device", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Colicoid Destroyer",
         id: 475,
@@ -6007,6 +6924,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 9,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         charge: 1,
         recurring: 1,
         slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Illicit", "Configuration"]
@@ -6019,6 +6938,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 13,
         slots: ["Talent", "Tech", "Missile", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "Wilsa Teshlo",
@@ -6029,7 +6950,10 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 12,
-        slots: ["Tech", "Turret", "Missile", "Astromech", "Device", "Device", "Modification", "Modification", "Configuration"]
+        pointsbeta: 3,
+        loadoutbeta: 5,
+        slots: ["Tech", "Turret", "Missile", "Astromech", "Device", "Device", "Modification", "Modification", "Configuration"],
+        slotsbeta: ["Tech", "Turret", "Missile", "Astromech", "Device", "Device", "Modification", "Modification"]
       }, {
         name: "Shasa Zaro",
         id: 480,
@@ -6039,7 +6963,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 9,
-        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+        pointsbeta: 3,
+        loadoutbeta: 6,
+        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"],
+        slotsbeta: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "Lega Fossang",
         id: 481,
@@ -6049,7 +6976,10 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 7,
-        slots: ["Tech", "Turret", "Missile", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+        pointsbeta: 3,
+        loadoutbeta: 6,
+        slots: ["Tech", "Turret", "Missile", "Astromech", "Device", "Modification", "Modification", "Configuration"],
+        slotsbeta: ["Tech", "Turret", "Missile", "Astromech", "Device", "Modification", "Modification"]
       }, {
         name: "Aftab Ackbar",
         id: 482,
@@ -6069,7 +6999,10 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 3,
         loadout: 8,
-        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Illicit", "Configuration"]
+        pointsbeta: 3,
+        loadoutbeta: 7,
+        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Illicit", "Configuration"],
+        slotsbeta: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Illicit"]
       }, {
         name: "C'ai Threnalli (Y-Wing)",
         id: 484,
@@ -6079,6 +7012,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
       }, {
         name: "New Republic Patrol",
@@ -6088,6 +7023,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         slots: ["Talent", "Tech", "Turret", "Astromech", "Device", "Modification", "Configuration"]
       }, {
         name: "Kijimi Spice Runner",
@@ -6097,7 +7034,10 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 4,
-        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Illicit", "Configuration"]
+        pointsbeta: 3,
+        loadoutbeta: 8,
+        slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Illicit", "Configuration"],
+        slotsbeta: ["Tech", "Turret", "Astromech", "Device", "Modification", "Illicit"]
       }, {
         name: "Kylo Ren (TIE Whisper)",
         id: 487,
@@ -6109,6 +7049,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 5,
         loadout: 14,
+        pointsbeta: 6,
+        loadoutbeta: 17,
         slots: ["Force", "Force", "Talent", "Missile", "Tech", "Tech", "Modification", "Configuration"]
       }, {
         name: '"Wrath"',
@@ -6119,6 +7061,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 15,
+        pointsbeta: 5,
+        loadoutbeta: 12,
         slots: ["Talent", "Talent", "Cannon", "Tech", "Tech", "Configuration"]
       }, {
         name: '"Nightfall"',
@@ -6129,6 +7073,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 3,
         slots: ["Talent", "Missile", "Tech", "Tech", "Configuration"]
       }, {
         name: '"Whirlwind"',
@@ -6139,6 +7085,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 12,
+        pointsbeta: 5,
+        loadoutbeta: 18,
         slots: ["Talent", "Talent", "Missile", "Tech", "Tech", "Configuration"]
       }, {
         name: "709th Legion Ace",
@@ -6148,6 +7096,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         slots: ["Talent", "Missile", "Tech", "Tech", "Configuration"]
       }, {
         name: "Red Fury Zealot",
@@ -6157,6 +7107,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 3,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         slots: ["Talent", "Missile", "Tech", "Tech", "Configuration"]
       }, {
         name: '"Breach"',
@@ -6167,6 +7119,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 18,
+        pointsbeta: 4,
+        loadoutbeta: 16,
         slots: ["Talent", "Talent", "Tech", "Torpedo", "Torpedo", "Missile", "Gunner", "Device", "Modification"]
       }, {
         name: '"Scorch" (TIE/Se Bomber)',
@@ -6177,6 +7131,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Talent", "Tech", "Missile", "Gunner", "Device", "Device", "Modification", "Modification"]
       }, {
         name: '"Dread"',
@@ -6187,6 +7143,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 20,
         slots: ["Tech", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: '"Grudge"',
@@ -6197,6 +7155,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 15,
+        pointsbeta: 4,
+        loadoutbeta: 16,
         slots: ["Talent", "Tech", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "First Order Cadet",
@@ -6206,6 +7166,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Tech", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Sienar-Jaemus Test Pilot",
@@ -6215,6 +7177,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 4,
         loadout: 8,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         slots: ["Tech", "Tech", "Missile", "Device", "Device", "Modification"]
       }, {
         name: "Bodica Venj",
@@ -6248,6 +7212,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 5,
         loadout: 9,
+        pointsbeta: 5,
+        loadoutbeta: 10,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Talent", "Torpedo", "Modification", "Modification"]
       }, {
@@ -6272,7 +7238,10 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 4,
         loadout: 8,
-        slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification"]
+        pointsbeta: 4,
+        loadoutbeta: 10,
+        slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification"],
+        slotsbeta: ["Talent", "Missile", "Modification"]
       }, {
         name: "ISB Jingoist",
         id: 504,
@@ -6281,6 +7250,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 5,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         max_per_squad: 2,
         slots: ["Talent", "Illicit"]
       }, {
@@ -6291,6 +7262,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 4,
         max_per_squad: 2,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Missile", "Modification", "Modification"]
@@ -6306,6 +7279,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 6,
         loadout: 14,
+        pointsbeta: 7,
+        loadoutbeta: 20,
         charge: 2,
         recurring: 1,
         unique: true,
@@ -6319,6 +7294,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         loadout: 10,
+        pointsbeta: 6,
+        loadoutbeta: 15,
         unique: true,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Illicit", "Modification", "Configuration"]
@@ -6331,6 +7308,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 6,
         loadout: 12,
+        pointsbeta: 6,
+        loadoutbeta: 8,
         charge: 1,
         recurring: 1,
         unique: true,
@@ -6356,6 +7335,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         loadout: 12,
+        pointsbeta: 6,
+        loadoutbeta: 16,
         unique: true,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Illicit", "Modification", "Configuration"]
@@ -6367,6 +7348,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 8,
         loadout: 15,
+        pointsbeta: 7,
+        loadoutbeta: 12,
         unique: true,
         force: 3,
         keyword: ["Dark Side", "Sith"],
@@ -6379,6 +7362,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 7,
         loadout: 10,
+        pointsbeta: 7,
+        loadoutbeta: 20,
         keyword: ["Mandalorian"],
         slots: ["Crew", "Gunner", "Device", "Device", "Modification", "Illicit", "Configuration"]
       }, {
@@ -6389,6 +7374,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 7,
         loadout: 14,
+        pointsbeta: 6,
+        loadoutbeta: 8,
         unique: true,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Modification", "Illicit", "Configuration"]
@@ -6411,6 +7398,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         loadout: 10,
+        pointsbeta: 6,
+        loadoutbeta: 10,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Device", "Illicit", "Modification", "Configuration"]
       }, {
@@ -6421,6 +7410,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 7,
         loadout: 18,
+        pointsbeta: 7,
+        loadoutbeta: 19,
         charge: 2,
         recurring: 1,
         unique: true,
@@ -6434,6 +7425,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 7,
         loadout: 10,
+        pointsbeta: 6,
+        loadoutbeta: 20,
         unique: true,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Device", "Illicit", "Modification", "Configuration"]
@@ -6445,6 +7438,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 6,
         loadout: 10,
+        pointsbeta: 6,
+        loadoutbeta: 15,
         keyword: ["Droid", "Spectre"],
         unique: true,
         slots: ["Crew", "Gunner", "Device", "Illicit", "Modification", "Modification", "Configuration", "Title"]
@@ -6457,6 +7452,8 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 6,
         loadout: 12,
+        pointsbeta: 6,
+        loadoutbeta: 10,
         keyword: ["Light Side", "Spectre"],
         unique: true,
         slots: ["Force", "Talent", "Crew", "Gunner", "Device", "Illicit", "Modification", "Modification", "Title", "Configuration"]
@@ -6468,6 +7465,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 6,
         loadout: 16,
+        pointsbeta: 6,
+        loadoutbeta: 14,
         unique: true,
         keyword: ["Droid"],
         slots: ["Crew", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
@@ -6479,6 +7478,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 6,
         loadout: 10,
+        pointsbeta: 7,
+        loadoutbeta: 25,
         unique: true,
         keyword: ["Bounty Hunter", "Mandalorian"],
         slots: ["Talent", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Title"]
@@ -6490,6 +7491,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 6,
         loadout: 14,
+        pointsbeta: 5,
+        loadoutbeta: 6,
         max_per_squad: 2,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Crew", "Gunner", "Illicit", "Illicit", "Modification"]
@@ -6501,6 +7504,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 6,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 10,
         slots: ["Crew", "Gunner", "Illicit", "Modification", "Modification"]
       }, {
         name: "Plo Koon (Delta-7b)",
@@ -6512,6 +7517,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 7,
         loadout: 19,
+        pointsbeta: 6,
+        loadoutbeta: 15,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Talent", "Astromech", "Modification"]
       }, {
@@ -6524,6 +7531,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 6,
         loadout: 9,
+        pointsbeta: 6,
+        loadoutbeta: 6,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Modification"]
       }, {
@@ -6536,6 +7545,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 5,
         loadout: 7,
+        pointsbeta: 5,
+        loadoutbeta: 4,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Astromech", "Modification"]
       }, {
@@ -6560,6 +7571,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 6,
         loadout: 7,
+        pointsbeta: 5,
+        loadoutbeta: 8,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Modification"]
       }, {
@@ -6572,6 +7585,8 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 5,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 12,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Modification"]
       }, {
@@ -6584,6 +7599,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 6,
         loadout: 10,
+        pointsbeta: 5,
+        loadoutbeta: 10,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Modification"]
       }, {
@@ -6595,6 +7612,8 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 6,
         loadout: 8,
+        pointsbeta: 5,
+        loadoutbeta: 9,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Astromech", "Modification"]
       }, {
@@ -6607,6 +7626,8 @@ exportObj.basicCardData = function() {
         force: 3,
         points: 7,
         loadout: 15,
+        pointsbeta: 6,
+        loadoutbeta: 9,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Astromech", "Modification"]
       }, {
@@ -6652,6 +7673,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 5,
+        pointsbeta: 4,
+        loadoutbeta: 15,
         slots: ["Cannon", "Cannon", "Illicit", "Modification"]
       }, {
         name: "Cad Bane (Separatist)",
@@ -6676,6 +7699,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 11,
+        pointsbeta: 4,
+        loadoutbeta: 16,
         chassis: "Networked Calculations",
         keyword: ["Droid"],
         slots: ["Cannon", "Cannon", "Modification", "Modification"]
@@ -6688,6 +7713,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 11,
+        pointsbeta: 4,
+        loadoutbeta: 13,
         chassis: "Networked Calculations",
         keyword: ["Droid"],
         slots: ["Cannon", "Cannon", "Modification", "Modification"]
@@ -6700,6 +7727,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         chassis: "Networked Calculations",
         keyword: ["Droid"],
         slots: ["Cannon", "Cannon", "Modification", "Modification"]
@@ -6712,6 +7741,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         chassis: "Networked Calculations",
         keyword: ["Droid"],
         slots: ["Cannon", "Cannon", "Missile", "Modification"],
@@ -6724,6 +7755,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 6,
+        pointsbeta: 4,
+        loadoutbeta: 16,
         chassis: "Networked Calculations",
         keyword: ["Droid"],
         slots: ["Cannon", "Cannon", "Modification"]
@@ -6736,6 +7769,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 3,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 9,
         keyword: ["Clone"],
         slots: ["Talent", "Talent", "Sensor", "Modification", "VersatileShip"]
       }, {
@@ -6749,6 +7784,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 2,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 3,
         keyword: ["Clone"],
         slots: ["Talent", "Talent", "Sensor", "Modification", "Modification", "VersatileShip"]
       }, {
@@ -6760,6 +7797,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 8,
+        pointsbeta: 4,
+        loadoutbeta: 14,
         keyword: ["Clone"],
         slots: ["Talent", "Sensor", "Modification", "Modification", "VersatileShip"]
       }, {
@@ -6771,6 +7810,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 19,
         keyword: ["Clone"],
         slots: ["Talent", "Sensor", "Modification", "VersatileShip"]
       }, {
@@ -6782,6 +7823,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 2,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 12,
         keyword: ["Clone"],
         slots: ["Talent", "Talent", "Sensor", "Modification", "VersatileShip"]
       }, {
@@ -6793,6 +7836,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 5,
+        pointsbeta: 4,
+        loadoutbeta: 16,
         keyword: ["Clone"],
         slots: ["Talent", "Sensor", "Modification", "VersatileShip"]
       }, {
@@ -6815,6 +7860,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 11,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         keyword: ["Clone"],
         slots: ["Talent", "Talent", "Sensor", "Cannon", "Modification", "VersatileShip"]
       }, {
@@ -6825,6 +7872,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 2,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         keyword: ["Clone"],
         slots: ["Talent", "Sensor", "VersatileShip"]
       }, {
@@ -6835,6 +7884,8 @@ exportObj.basicCardData = function() {
         skill: 2,
         points: 3,
         loadout: 3,
+        pointsbeta: 3,
+        loadoutbeta: 8,
         keyword: ["Clone"],
         slots: ["Sensor", "Modification", "VersatileShip"]
       }, {
@@ -6846,6 +7897,7 @@ exportObj.basicCardData = function() {
         ship: "T-65 X-wing",
         skill: 4,
         points: 4,
+        pointsbeta: 5,
         chassis: "Hope",
         upgrades: ["Adv. Proton Torpedoes", "R5-K6 (BoY)"]
       }, {
@@ -6857,6 +7909,7 @@ exportObj.basicCardData = function() {
         ship: "T-65 X-wing",
         skill: 5,
         points: 5,
+        pointsbeta: 6,
         force: 2,
         chassis: "Hope",
         upgrades: ["Instinctive Aim", "Attack Speed (BoY)", "Proton Torpedoes", "R2-D2 (BoY)"]
@@ -6868,7 +7921,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 4,
-        points: 4,
+        points: 5,
         chassis: "Hope",
         upgrades: ["Adv. Proton Torpedoes", "R5-D8 (BoY)", "Unstable Sublight Engines (BoY)"]
       }, {
@@ -6891,6 +7944,7 @@ exportObj.basicCardData = function() {
         ship: "T-65 X-wing",
         skill: 5,
         points: 5,
+        pointsbeta: 6,
         chassis: "Hope",
         upgrades: ["Attack Speed (BoY)", "Marksmanship", "Proton Torpedoes", "R2-A3 (BoY)"]
       }, {
@@ -6947,6 +8001,7 @@ exportObj.basicCardData = function() {
         ship: "BTL-A4 Y-wing",
         skill: 4,
         points: 3,
+        pointsbeta: 4,
         chassis: "Hope",
         upgrades: ["Dorsal Turret", "Adv. Proton Torpedoes", "Precise Astromech (BoY)"]
       }, {
@@ -6958,6 +8013,7 @@ exportObj.basicCardData = function() {
         ship: "TIE Advanced x1",
         skill: 6,
         points: 6,
+        pointsbeta: 7,
         force: 3,
         keyword: ["Dark Side", "Sith"],
         ship_override: {
@@ -6986,6 +8042,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/ln Fighter",
         skill: 5,
         points: 3,
+        pointsbeta: 4,
         ship_override: {
           hull: 4
         },
@@ -7105,6 +8162,7 @@ exportObj.basicCardData = function() {
         ship: "Eta-2 Actis",
         skill: 6,
         points: 4,
+        pointsbeta: 5,
         force: 3,
         chassis: "Intuitive Controls",
         keyword: ["Jedi", "Light Side", "Dark Side"],
@@ -7131,6 +8189,7 @@ exportObj.basicCardData = function() {
         ship: "Eta-2 Actis",
         skill: 4,
         points: 4,
+        pointsbeta: 5,
         force: 2,
         chassis: "Intuitive Controls",
         keyword: ["Jedi", "Light Side"],
@@ -7144,6 +8203,7 @@ exportObj.basicCardData = function() {
         ship: "ARC-170 Starfighter",
         skill: 5,
         points: 4,
+        pointsbeta: 5,
         chassis: "Born for This",
         ship_override: {
           shields: 4
@@ -7159,6 +8219,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         charge: 1,
         points: 4,
+        pointsbeta: 5,
         chassis: "Born for This",
         upgrades: ["Wolfpack (SoC)", "Veteran Tail Gunner", "Q7 Astromech"]
       }, {
@@ -7208,6 +8269,7 @@ exportObj.basicCardData = function() {
         ship: "V-19 Torrent Starfighter",
         skill: 5,
         points: 3,
+        pointsbeta: 4,
         chassis: "Born for This",
         ship_override: {
           hull: 6
@@ -7248,6 +8310,7 @@ exportObj.basicCardData = function() {
         ship: "Hyena-class Droid Bomber",
         skill: 3,
         points: 3,
+        pointsbeta: 4,
         charge: 2,
         ship_override: {
           actions: ["Calculate", "Lock", "Barrel Roll", "R-> Lock", "R-Jam"]
@@ -7262,6 +8325,7 @@ exportObj.basicCardData = function() {
         ship: "Hyena-class Droid Bomber",
         skill: 4,
         points: 3,
+        pointsbeta: 4,
         upgrades: ["Adv. Proton Torpedoes", "Contingency Protocol (SoC)", "Strut-Lock Override (SoC)"]
       }, {
         name: "Baktoid Prototype (SoC)",
@@ -7272,6 +8336,7 @@ exportObj.basicCardData = function() {
         skill: 1,
         max_per_squad: 2,
         points: 3,
+        pointsbeta: 2,
         upgrades: ["Homing Missiles", "Contingency Protocol (SoC)", "Strut-Lock Override (SoC)"]
       }, {
         name: "DIS-347 (SoC)",
@@ -7282,6 +8347,7 @@ exportObj.basicCardData = function() {
         ship: "Droid Tri-fighter",
         skill: 3,
         points: 3,
+        pointsbeta: 4,
         upgrades: ["Marksmanship", "Afterburners", "Contingency Protocol (SoC)"]
       }, {
         name: "DIS-T81 (SoC)",
@@ -7323,6 +8389,7 @@ exportObj.basicCardData = function() {
         ship: "Vulture-class Droid Fighter",
         skill: 1,
         points: 3,
+        pointsbeta: 2,
         upgrades: ["Discord Missiles", "Contingency Protocol (SoC)", "Strut-Lock Override (SoC)"]
       }, {
         name: "Haor Chall Prototype (SoC)",
@@ -7355,6 +8422,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 5,
         loadout: 15,
+        pointsbeta: 5,
+        loadoutbeta: 17,
         slots: ["Talent", "Missile", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Tycho Celchu",
@@ -7365,6 +8434,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 14,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         slots: ["Talent", "Talent", "Cannon", "Missile", "Configuration"]
       }, {
         name: "Keo Venzee",
@@ -7375,6 +8446,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         force: 1,
         forcerecurring: 0,
         slots: ["Talent", "Missile", "Configuration"]
@@ -7387,6 +8460,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 16,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Talent", "Turret", "Torpedo", "Astromech", "Device", "Missile", "Modification"]
       }, {
         name: "Flight Leader Ubbel",
@@ -7397,6 +8472,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         slots: ["Talent", "Cannon", "Cannon", "Gunner", "Modification", "Modification", "Configuration"]
       }, {
         name: "Juno Eclipse",
@@ -7407,7 +8484,10 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 8,
-        slots: ["Talent", "Tech", "Sensor", "Missile", "Modification"]
+        pointsbeta: 4,
+        loadoutbeta: 9,
+        slots: ["Talent", "Tech", "Sensor", "Missile", "Modification"],
+        slotsbeta: ["Talent", "Sensor", "Missile", "Modification"]
       }, {
         name: "Second Sister",
         id: 601,
@@ -7418,6 +8498,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 5,
         loadout: 14,
+        pointsbeta: 5,
+        loadoutbeta: 15,
         keyword: ["Dark Side"],
         slots: ["Force", "Talent", "Missile", "Modification", "Configuration"]
       }, {
@@ -7451,6 +8533,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 7,
         loadout: 25,
+        pointsbeta: 7,
+        loadoutbeta: 24,
         slots: ["Talent", "Talent", "Missile", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
         name: "Lando Calrissian (Resistance)",
@@ -7473,6 +8557,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 4,
         loadout: 7,
+        pointsbeta: 5,
+        loadoutbeta: 13,
         slots: ["Talent", "Tech", "Missile", "Missile", "Astromech", "Modification", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Zay Versio",
@@ -7483,6 +8569,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         slots: ["Talent", "Talent", "Tech", "Astromech", "Modification", "Configuration", "HardpointShip"]
       }, {
         name: "Taka Jamoreesa",
@@ -7503,6 +8591,8 @@ exportObj.basicCardData = function() {
         skill: 1,
         points: 7,
         loadout: 18,
+        pointsbeta: 7,
+        loadoutbeta: 10,
         slots: ["Cannon", "Cannon", "Missile", "Crew", "Device", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "Tor Phun",
@@ -7513,6 +8603,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 4,
         loadout: 11,
+        pointsbeta: 5,
+        loadoutbeta: 16,
         keyword: ["Mandalorian"],
         slots: ["Talent", "Missile", "Modification", "Modification"]
       }, {
@@ -7524,6 +8616,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 8,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Talent", "Cannon", "Cannon", "Illicit", "Modification"]
       }, {
@@ -7536,7 +8630,8 @@ exportObj.basicCardData = function() {
         points: 6,
         loadout: 22,
         charge: 3,
-        slots: ["Cannon", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Modification", "Title"]
+        slots: ["Cannon", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Modification", "Title"],
+        slotsbeta: ["Cannon", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Modification"]
       }, {
         name: "Lapin",
         id: 613,
@@ -7556,6 +8651,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 4,
         loadout: 12,
+        pointsbeta: 4,
+        loadoutbeta: 10,
         chassis: "Modified for Organics",
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Missile", "Illicit", "Modification"],
@@ -7572,6 +8669,8 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 7,
         loadout: 10,
+        pointsbeta: 7,
+        loadoutbeta: 15,
         keyword: ["Dark Side", "Bounty Hunter"],
         slots: ["Talent", "Cannon", "Cannon", "Device", "Illicit", "Modification", "Title"]
       }, {
@@ -7585,8 +8684,11 @@ exportObj.basicCardData = function() {
         charge: 1,
         points: 4,
         loadout: 10,
+        pointsbeta: 4,
+        loadoutbeta: 6,
         keyword: ["Bounty Hunter"],
-        slots: ["Talent", "Cannon", "Cannon", "Illicit", "Modification", "Modification", "Title"]
+        slots: ["Talent", "Cannon", "Cannon", "Illicit", "Modification", "Modification", "Title"],
+        slotsbeta: ["Talent", "Cannon", "Cannon", "Illicit", "Modification", "Modification"]
       }, {
         name: "The Iron Assembler",
         id: 617,
@@ -7597,6 +8699,8 @@ exportObj.basicCardData = function() {
         charge: 3,
         points: 2,
         loadout: 5,
+        pointsbeta: 3,
+        loadoutbeta: 12,
         keyword: ["Droid"],
         slots: ["Missile", "Modification", "Modification", "Configuration"]
       }, {
@@ -7608,6 +8712,8 @@ exportObj.basicCardData = function() {
         max_per_squad: 3,
         points: 2,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 14,
         chassis: "Modified for Organics",
         slots: ["Talent", "Missile", "Modification"],
         ship_override: {
@@ -7622,6 +8728,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 5,
         loadout: 12,
+        pointsbeta: 5,
+        loadoutbeta: 6,
         force: 2,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Talent", "Astromech", "Modification", "Configuration"]
@@ -7635,6 +8743,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 7,
         loadout: 18,
+        pointsbeta: 6,
+        loadoutbeta: 10,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Talent", "Astromech", "Modification"]
       }, {
@@ -7661,6 +8771,8 @@ exportObj.basicCardData = function() {
         force: 2,
         points: 4,
         loadout: 11,
+        pointsbeta: 4,
+        loadoutbeta: 5,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Cannon", "Astromech", "Modification"]
       }, {
@@ -7674,6 +8786,8 @@ exportObj.basicCardData = function() {
         recurring: 1,
         points: 3,
         loadout: 7,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         keyword: ["Clone"],
         slots: ["Talent", "Missile", "Missile", "Modification"]
       }, {
@@ -7695,6 +8809,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 3,
         loadout: 7,
+        pointsbeta: 4,
+        loadoutbeta: 15,
         slots: ["Talent", "Tech", "Tech", "Cannon", "Modification"]
       }, {
         name: "Jul Jerjerrod",
@@ -7706,6 +8822,8 @@ exportObj.basicCardData = function() {
         charge: 3,
         points: 4,
         loadout: 13,
+        pointsbeta: 3,
+        loadoutbeta: 7,
         slots: ["Talent", "Tech", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification", "Modification"]
       }, {
         name: "DT-798",
@@ -7716,6 +8834,8 @@ exportObj.basicCardData = function() {
         skill: 4,
         points: 3,
         loadout: 6,
+        pointsbeta: 3,
+        loadoutbeta: 4,
         slots: ["Talent", "Tech", "Modification", "Modification"]
       }, {
         name: "Lin Gaava",
@@ -7737,6 +8857,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 5,
         loadout: 15,
+        pointsbeta: 5,
+        loadoutbeta: 20,
         slots: ["Talent", "Talent", "Tech", "Crew", "Crew", "Modification", "Modification"],
         ship_override: {
           actions: ["Focus", "Lock", "R-Coordinate", "Jam"]
@@ -7751,6 +8873,7 @@ exportObj.basicCardData = function() {
         ship: "TIE Advanced x1",
         skill: 6,
         points: 6,
+        pointsbeta: 7,
         force: 3,
         keyword: ["Dark Side", "Sith"],
         ship_override: {
@@ -7786,6 +8909,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/sa Bomber",
         skill: 5,
         points: 5,
+        pointsbeta: 4,
         upgrades: ["Elusive", "Barrage Rockets", "Proximity Mines"]
       }, {
         name: "Iden Versio (SSP)",
@@ -7857,6 +8981,7 @@ exportObj.basicCardData = function() {
         ship: "RZ-1 A-wing",
         skill: 4,
         points: 5,
+        pointsbeta: 4,
         upgrades: ["Elusive", "Outmaneuver", "Ion Missiles"]
       }, {
         name: "Jek Porkins (SSP)",
@@ -7898,6 +9023,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/sa Bomber",
         skill: 2,
         points: 3,
+        pointsbeta: 4,
         charge: 2,
         recurring: 1,
         upgrades: ["Swift Approach (TBE)", "Conner Nets", "Proton Bombs"]
@@ -7910,6 +9036,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/sa Bomber",
         skill: 4,
         points: 4,
+        pointsbeta: 5,
         upgrades: ["Adv. Proton Torpedoes", "Automated Loaders (TBE)", "Afterburners"]
       }, {
         name: "Captain Jonus (TBE)",
@@ -7933,6 +9060,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/sa Bomber",
         skill: 5,
         points: 3,
+        pointsbeta: 4,
         charge: 2,
         recurring: 1,
         upgrades: ["True Grit (TBE)", "Plasma Torpedoes", "Ion Bombs"]
@@ -7946,6 +9074,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 20,
+        pointsbeta: 7,
+        loadoutbeta: 12,
         slots: ["Talent", "Missile", "Crew", "Illicit", "Illicit", "Modification", "Title"]
       }, {
         name: "Dash Rendar (YLF-SL)",
@@ -7977,8 +9107,11 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 6,
         loadout: 16,
+        pointsbeta: 6,
+        loadoutbeta: 7,
         keyword: ["Droid"],
-        slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Title"]
+        slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification", "Title"],
+        slotsbeta: ["Talent", "Missile", "Crew", "Illicit", "Illicit", "Title"]
       }, {
         name: '"Leebo" (YLF-SL)',
         xwsaddon: "swz103-sl-rebelalliance",
@@ -7988,6 +9121,7 @@ exportObj.basicCardData = function() {
         ship: "YT-2400 Light Freighter",
         skill: 3,
         points: 6,
+        pointsbeta: 7,
         upgrades: ["Efficient Processing (YLF)", "Seeker Missiles (YLF)", "Outrider"],
         ship_override: {
           actions: ["Calculate", "Lock", "R-> Rotate Arc", "R-Barrel Roll", "Rotate Arc"]
@@ -8031,6 +9165,7 @@ exportObj.basicCardData = function() {
         ship: "RZ-1 A-wing",
         skill: 2,
         points: 3,
+        pointsbeta: 4,
         chassis: "Vectored Cannons",
         upgrades: ["It's A Trap! (BoE)", "Precision-Tuned Cannons (BoE)", "Chaff Particles (BoE)", "Target-Assist Algorithm (BoE)"],
         ship_override: {
@@ -8063,6 +9198,7 @@ exportObj.basicCardData = function() {
         ship: "A/SF-01 B-wing",
         skill: 1,
         points: 5,
+        pointsbeta: 4,
         charge: 2,
         recurring: 1,
         chassis: "Gyro-Cockpit",
@@ -8079,6 +9215,7 @@ exportObj.basicCardData = function() {
         ship: "A/SF-01 B-wing",
         skill: 4,
         points: 4,
+        pointsbeta: 5,
         charge: 2,
         recurring: 1,
         chassis: "Gyro-Cockpit",
@@ -8096,6 +9233,7 @@ exportObj.basicCardData = function() {
         ship: "A/SF-01 B-wing",
         skill: 5,
         points: 5,
+        pointsbeta: 6,
         charge: 2,
         recurring: 1,
         chassis: "Gyro-Cockpit",
@@ -8127,6 +9265,7 @@ exportObj.basicCardData = function() {
         ship: "T-65 X-wing",
         skill: 6,
         points: 5,
+        pointsbeta: 6,
         chassis: "Locked S-Foils",
         ship_override: {
           shields: 3,
@@ -8172,6 +9311,7 @@ exportObj.basicCardData = function() {
         skill: 4,
         charge: 2,
         points: 6,
+        pointsbeta: 7,
         chassis: "Chiss Engineering",
         ship_override: {
           actions: ["Focus", "Evade", "R-> Barrel Roll", "Lock", "Barrel Roll", "Boost"]
@@ -8186,6 +9326,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/d Defender",
         skill: 6,
         points: 7,
+        pointsbeta: 8,
         chassis: "Chiss Engineering",
         ship_override: {
           actions: ["Focus", "Evade", "R-> Barrel Roll", "Lock", "Barrel Roll", "Boost"]
@@ -8200,6 +9341,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/in Interceptor",
         skill: 3,
         points: 5,
+        pointsbeta: 4,
         chassis: "Sensitive Controls",
         upgrades: ["No Escape (BoE)", "Outmaneuver", "Fuel Injection Override (BoE)"],
         ship_override: {
@@ -8311,6 +9453,7 @@ exportObj.basicCardData = function() {
         id: 1,
         slot: "Astromech",
         points: 2,
+        pointsbeta: 0,
         unique: true,
         faction: "Scum and Villainy"
       }, {
@@ -8318,13 +9461,15 @@ exportObj.basicCardData = function() {
         id: 2,
         slot: "Astromech",
         points: 6,
-        charge: 2
+        charge: 2,
+        pointsbeta: 8
       }, {
         name: "R2-D2",
         id: 3,
         unique: true,
         slot: "Astromech",
         points: 8,
+        pointsbeta: 10,
         charge: 3,
         faction: "Rebel Alliance"
       }, {
@@ -8363,6 +9508,7 @@ exportObj.basicCardData = function() {
         id: 6,
         slot: "Astromech",
         points: 4,
+        pointsbeta: 7,
         charge: 2
       }, {
         name: "R5-D8",
@@ -8370,6 +9516,7 @@ exportObj.basicCardData = function() {
         unique: true,
         slot: "Astromech",
         points: 6,
+        pointsbeta: 9,
         charge: 3,
         faction: "Rebel Alliance"
       }, {
@@ -8420,6 +9567,7 @@ exportObj.basicCardData = function() {
         id: 14,
         slot: "Crew",
         points: 16,
+        pointsbeta: 25,
         unique: true,
         faction: "Galactic Empire"
       }, {
@@ -8435,6 +9583,7 @@ exportObj.basicCardData = function() {
         id: 16,
         slot: "Crew",
         points: 2,
+        pointsbeta: 7,
         unique: true,
         faction: "Scum and Villainy"
       }, {
@@ -8442,6 +9591,7 @@ exportObj.basicCardData = function() {
         id: 17,
         slot: "Crew",
         points: 5,
+        pointsbeta: 7,
         unique: true,
         faction: "Rebel Alliance"
       }, {
@@ -8461,6 +9611,7 @@ exportObj.basicCardData = function() {
         id: 19,
         slot: "Crew",
         points: 5,
+        pointsbeta: 7,
         unique: true,
         faction: "Rebel Alliance"
       }, {
@@ -8513,6 +9664,7 @@ exportObj.basicCardData = function() {
         id: 26,
         slot: "Crew",
         points: 12,
+        pointsbeta: 15,
         force: 1,
         unique: true,
         faction: "Galactic Empire",
@@ -8524,12 +9676,10 @@ exportObj.basicCardData = function() {
         id: 27,
         slot: "Crew",
         points: 4,
+        pointsbeta: 10,
         unique: true,
         faction: "Galactic Empire",
         restrictions: [["Slot", "Crew"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Director Krennic",
@@ -8553,9 +9703,6 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Galactic Empire",
         restrictions: [["Slot", "Crew"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         modifier_func: function(stats) {
           return stats.force += 1;
@@ -8570,6 +9717,7 @@ exportObj.basicCardData = function() {
         id: 31,
         slot: "Crew",
         points: 8,
+        pointsbeta: 5,
         unique: true,
         faction: "Scum and Villainy"
       }, {
@@ -8583,6 +9731,7 @@ exportObj.basicCardData = function() {
         id: 33,
         slot: "Crew",
         points: 15,
+        pointsbeta: 12,
         unique: true,
         force: 1,
         faction: "Galactic Empire",
@@ -8623,6 +9772,7 @@ exportObj.basicCardData = function() {
         id: 37,
         slot: "Crew",
         points: 4,
+        pointsbeta: 6,
         unique: true,
         applies_condition: 'Listening Device'.canonicalize()
       }, {
@@ -8640,9 +9790,6 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         charge: 4,
         restrictions: [["Slot", "Crew"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Jyn Erso",
@@ -8711,8 +9858,8 @@ exportObj.basicCardData = function() {
         id: 48,
         slot: "Crew",
         variablepoints: "Faction",
-        pointsarray: [10, 12],
         points: [10, 12],
+        pointsbeta: 12,
         unique: true,
         keyword: ["Dark Side"],
         faction: ["Scum and Villainy", "Rebel Alliance"],
@@ -8841,6 +9988,7 @@ exportObj.basicCardData = function() {
         id: 62,
         slot: "Crew",
         points: 2,
+        pointsbeta: 8,
         unique: true,
         faction: "Scum and Villainy"
       }, {
@@ -8877,12 +10025,10 @@ exportObj.basicCardData = function() {
         id: 67,
         slot: "Device",
         points: 2,
+        pointsbeta: 3,
         charge: 2,
         applies_condition: 'Bomblet'.canonicalize(),
         restrictions: [["Slot", "Device"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Device");
-        },
         also_occupies_upgrades: ["Device"]
       }, {
         name: "Conner Nets",
@@ -8903,6 +10049,7 @@ exportObj.basicCardData = function() {
         id: 70,
         slot: "Device",
         points: 10,
+        pointsbeta: 7,
         charge: 2,
         applies_condition: 'Proximity Mine'.canonicalize()
       }, {
@@ -8916,7 +10063,8 @@ exportObj.basicCardData = function() {
         name: "Heightened Perception",
         id: 72,
         slot: "Force",
-        points: 3
+        points: 3,
+        pointsbeta: 5
       }, {
         name: "Instinctive Aim",
         id: 73,
@@ -8932,17 +10080,20 @@ exportObj.basicCardData = function() {
         name: "Sense",
         id: 75,
         slot: "Force",
-        points: 6
+        points: 6,
+        pointsbeta: 10
       }, {
         name: "Agile Gunner",
         id: 76,
         slot: "Gunner",
-        points: 1
+        points: 1,
+        pointsbeta: 4
       }, {
         name: "Bistan",
         id: 77,
         slot: "Gunner",
         points: 8,
+        pointsbeta: 12,
         unique: true,
         faction: "Rebel Alliance"
       }, {
@@ -8950,6 +10101,7 @@ exportObj.basicCardData = function() {
         id: 78,
         slot: "Gunner",
         points: 6,
+        pointsbeta: 4,
         unique: true,
         faction: "Scum and Villainy"
       }, {
@@ -9012,13 +10164,15 @@ exportObj.basicCardData = function() {
         id: 85,
         slot: "Gunner",
         points: 9,
+        pointsbeta: 7,
         unique: true,
         faction: "Scum and Villainy"
       }, {
         name: "Hotshot Gunner",
         id: 86,
         slot: "Gunner",
-        points: 6
+        points: 6,
+        pointsbeta: 5
       }, {
         name: "Luke Skywalker",
         id: 87,
@@ -9040,12 +10194,14 @@ exportObj.basicCardData = function() {
         id: 89,
         slot: "Gunner",
         points: 5,
+        pointsbeta: 6,
         restrictions: [["AttackArc", "Rear Arc"]]
       }, {
         name: "Veteran Turret Gunner",
         id: 90,
         slot: "Gunner",
         points: 3,
+        pointsbeta: 4,
         restrictions: [["Action", "Rotate Arc"]]
       }, {
         name: "Cloaking Device",
@@ -9089,14 +10245,12 @@ exportObj.basicCardData = function() {
         id: 97,
         slot: "Missile",
         points: 6,
+        pointsbeta: 8,
         attack: 3,
         range: "2-3",
         rangebonus: true,
         charge: 5,
         restrictions: [["Slot", "Missile"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Missile");
-        },
         also_occupies_upgrades: ["Missile"]
       }, {
         name: "Cluster Missiles",
@@ -9106,12 +10260,14 @@ exportObj.basicCardData = function() {
         attack: 3,
         range: "1-2",
         rangebonus: true,
-        charge: 4
+        charge: 4,
+        pointsbeta: 6
       }, {
         name: "Concussion Missiles",
         id: 99,
         slot: "Missile",
         points: 5,
+        pointsbeta: 7,
         attack: 3,
         range: "2-3",
         rangebonus: true,
@@ -9130,6 +10286,7 @@ exportObj.basicCardData = function() {
         id: 101,
         slot: "Missile",
         points: 4,
+        pointsbeta: 3,
         attack: 3,
         range: "2-3",
         rangebonus: true,
@@ -9139,6 +10296,7 @@ exportObj.basicCardData = function() {
         id: 102,
         slot: "Missile",
         points: 8,
+        pointsbeta: 6,
         attackbull: 5,
         range: "1-2",
         rangebonus: true,
@@ -9148,6 +10306,7 @@ exportObj.basicCardData = function() {
         id: 103,
         slot: "Modification",
         points: 4,
+        pointsbeta: 2,
         charge: 2,
         restrictions: [["Base", "Medium", "Large"]]
       }, {
@@ -9199,7 +10358,8 @@ exportObj.basicCardData = function() {
         name: "Advanced Sensors",
         id: 111,
         slot: "Sensor",
-        points: 12
+        points: 12,
+        pointsbeta: 8
       }, {
         name: "Collision Detector",
         id: 112,
@@ -9215,7 +10375,8 @@ exportObj.basicCardData = function() {
         name: "Trajectory Simulator",
         id: 114,
         slot: "Sensor",
-        points: 8
+        points: 8,
+        pointsbeta: 10
       }, {
         name: "Composure",
         id: 115,
@@ -9227,18 +10388,21 @@ exportObj.basicCardData = function() {
         id: 116,
         slot: "Talent",
         points: 4,
+        pointsbeta: 5,
         charge: 1
       }, {
         name: "Daredevil",
         id: 117,
         slot: "Talent",
         points: 5,
+        pointsbeta: 4,
         restrictions: [["Action", "W-Boost"], ["Base", "Small"]]
       }, {
         name: "Debris Gambit",
         id: 118,
         slot: "Talent",
         points: 4,
+        pointsbeta: 3,
         restrictions: [["Base", "Small", "Medium"]],
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'R-Evade') < 0) {
@@ -9273,7 +10437,9 @@ exportObj.basicCardData = function() {
         name: "Intimidation",
         id: 122,
         slot: "Talent",
-        points: 3
+        points: 3,
+        pointsbeta: 7,
+        restrictionsbeta: [["isUnique", true], ["Base", "Small", "Medium"]]
       }, {
         name: "Juke",
         id: 123,
@@ -9292,12 +10458,14 @@ exportObj.basicCardData = function() {
         name: "Marksmanship",
         id: 125,
         slot: "Talent",
-        points: 1
+        points: 1,
+        pointsbeta: 2
       }, {
         name: "Outmaneuver",
         id: 126,
         slot: "Talent",
-        points: 12
+        points: 12,
+        pointsbeta: 9
       }, {
         name: "Predator",
         id: 127,
@@ -9314,6 +10482,7 @@ exportObj.basicCardData = function() {
         id: 129,
         slot: "Talent",
         points: 2,
+        pointsbeta: 4,
         restrictions: [["Action", "Reload"]]
       }, {
         name: "Selfless",
@@ -9326,6 +10495,7 @@ exportObj.basicCardData = function() {
         id: 131,
         slot: "Talent",
         points: 6,
+        pointsbeta: 4,
         unique: true,
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'R-Coordinate') < 0) {
@@ -9336,7 +10506,8 @@ exportObj.basicCardData = function() {
         name: "Swarm Tactics",
         id: 132,
         slot: "Talent",
-        points: 5
+        points: 5,
+        pointsbeta: 7
       }, {
         name: "Trick Shot",
         id: 133,
@@ -9356,6 +10527,7 @@ exportObj.basicCardData = function() {
         id: 135,
         slot: "Torpedo",
         points: 4,
+        pointsbeta: 5,
         attack: 4,
         range: "2-3",
         rangebonus: true,
@@ -9365,6 +10537,7 @@ exportObj.basicCardData = function() {
         id: 136,
         slot: "Torpedo",
         points: 12,
+        pointsbeta: 14,
         attack: 4,
         range: "2-3",
         rangebonus: true,
@@ -9374,6 +10547,7 @@ exportObj.basicCardData = function() {
         id: 137,
         slot: "Turret",
         points: 2,
+        pointsbeta: 3,
         attackt: 2,
         range: "1-2",
         modifier_func: function(stats) {
@@ -9386,6 +10560,7 @@ exportObj.basicCardData = function() {
         id: 138,
         slot: "Turret",
         points: 5,
+        pointsbeta: 6,
         attackt: 3,
         range: "1-2",
         modifier_func: function(stats) {
@@ -9476,6 +10651,7 @@ exportObj.basicCardData = function() {
         id: 147,
         slot: "Title",
         points: 0,
+        pointsbeta: 4,
         unique: true,
         faction: "Galactic Empire",
         ship: "VT-49 Decimator"
@@ -9511,6 +10687,7 @@ exportObj.basicCardData = function() {
         id: 150,
         slot: "Title",
         points: 0,
+        pointsbeta: 6,
         unique: true,
         faction: "Scum and Villainy",
         ship: "YV-666 Light Freighter"
@@ -9626,6 +10803,7 @@ exportObj.basicCardData = function() {
         id: 161,
         slot: "Title",
         points: 0,
+        pointsbeta: 10,
         unique: true,
         faction: "Scum and Villainy",
         ship: "Firespray-class Patrol Craft",
@@ -9640,6 +10818,7 @@ exportObj.basicCardData = function() {
         id: 162,
         slot: "Title",
         points: 0,
+        pointsbeta: 3,
         unique: true,
         faction: "Galactic Empire",
         ship: "Lambda-class T-4a Shuttle"
@@ -9648,6 +10827,7 @@ exportObj.basicCardData = function() {
         id: 163,
         slot: "Title",
         points: 0,
+        pointsbeta: 10,
         unique: true,
         charge: 2,
         ship: "StarViper-class Attack Platform",
@@ -9665,6 +10845,7 @@ exportObj.basicCardData = function() {
         id: 164,
         slot: "Modification",
         points: 6,
+        pointsbeta: 9,
         modifier_func: function(stats) {
           return stats.hull += 1;
         }
@@ -9673,6 +10854,7 @@ exportObj.basicCardData = function() {
         id: 165,
         slot: "Modification",
         points: 8,
+        pointsbeta: 10,
         modifier_func: function(stats) {
           return stats.shields += 1;
         }
@@ -9681,7 +10863,8 @@ exportObj.basicCardData = function() {
         id: 166,
         slot: "Modification",
         points: 8,
-        charge: 1
+        charge: 1,
+        restrictionsbeta: [["Base", "Medium", "Large"]]
       }, {
         name: "Phantom",
         id: 167,
@@ -9777,6 +10960,7 @@ exportObj.basicCardData = function() {
         id: 180,
         slot: "Crew",
         points: 3,
+        pointsbeta: 8,
         unique: true,
         faction: "First Order",
         restrictions: [["Action", "Coordinate"]]
@@ -9806,12 +10990,10 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         unique: true,
         points: 10,
+        pointsbeta: 15,
         force: 1,
         faction: "First Order",
         restrictions: [["Slot", "Crew"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         modifier_func: function(stats) {
           return stats.force += 1;
@@ -9822,6 +11004,7 @@ exportObj.basicCardData = function() {
         slot: "Tech",
         faction: "First Order",
         points: 2,
+        pointsbeta: 15,
         restrictions: [["Base", "Large"]]
       }, {
         name: "Advanced Optics",
@@ -9834,6 +11017,7 @@ exportObj.basicCardData = function() {
         slot: "Gunner",
         xwsaddon: "gunner",
         points: 10,
+        pointsbeta: 14,
         unique: true,
         force: 1,
         faction: "Resistance",
@@ -9903,6 +11087,7 @@ exportObj.basicCardData = function() {
         id: 194,
         slot: "Crew",
         points: 3,
+        pointsbeta: 5,
         unique: true,
         faction: "First Order"
       }, {
@@ -9925,6 +11110,7 @@ exportObj.basicCardData = function() {
         id: 197,
         slot: "Astromech",
         points: 5,
+        pointsbeta: 7,
         unique: true,
         faction: "Resistance"
       }, {
@@ -9932,6 +11118,7 @@ exportObj.basicCardData = function() {
         id: 198,
         slot: "Tech",
         points: 3,
+        pointsbeta: 4,
         faction: "Resistance"
       }, {
         name: "Brilliant Evasion",
@@ -9945,9 +11132,6 @@ exportObj.basicCardData = function() {
         ship: "Delta-7 Aethersprite",
         points: 0,
         restrictions: [["Slot", "Modification"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Modification");
-        },
         also_occupies_upgrades: ["Modification"]
       }, {
         name: "Delta-7B",
@@ -10014,13 +11198,16 @@ exportObj.basicCardData = function() {
         rangebonus: true,
         charge: 1,
         points: 4,
-        restrictions: [["Action", "Calculate"]]
+        pointsbeta: 2,
+        restrictions: [["Action", "Calculate"]],
+        also_occupies_upgrades_beta: ["Modification"]
       }, {
         name: "Dedicated",
         id: 210,
         faction: "Galactic Republic",
         slot: "Talent",
         points: 3,
+        pointsbeta: 5,
         restrictions: [["Keyword", "Clone"]]
       }, {
         name: "Synchronized Console",
@@ -10046,7 +11233,8 @@ exportObj.basicCardData = function() {
         faction: "Galactic Republic",
         slot: "Astromech",
         charge: 2,
-        points: 2
+        points: 2,
+        pointsbeta: 3
       }, {
         name: "R4-P17",
         id: 214,
@@ -10087,6 +11275,7 @@ exportObj.basicCardData = function() {
         faction: ["Galactic Republic", "Separatist Alliance"],
         force: 1,
         points: 14,
+        pointsbeta: 11,
         modifier_func: function(stats) {
           stats.force += 1;
           if (__indexOf.call(stats.actions, 'F-Coordinate') < 0) {
@@ -10137,6 +11326,7 @@ exportObj.basicCardData = function() {
         solitary: true,
         faction: "Separatist Alliance",
         points: 8,
+        pointsbeta: 6,
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'Calculate') < 0) {
             return stats.actions.push('Calculate');
@@ -10158,6 +11348,7 @@ exportObj.basicCardData = function() {
         charge: 1,
         max_per_squad: 3,
         points: 2,
+        pointsbeta: 4,
         applies_condition: 'Buzz Droid Swarm'.canonicalize()
       }, {
         name: "Clone Commander Cody",
@@ -10179,14 +11370,16 @@ exportObj.basicCardData = function() {
         charge: 1,
         slot: "Gunner",
         faction: "Galactic Republic",
-        points: 13
+        points: 13,
+        pointsbeta: 9
       }, {
         name: "Treacherous",
         id: 228,
         charge: 1,
         slot: "Talent",
         faction: "Separatist Alliance",
-        points: 3
+        points: 3,
+        pointsbeta: 4
       }, {
         name: "Soulless One",
         id: 229,
@@ -10195,6 +11388,7 @@ exportObj.basicCardData = function() {
         ship: "Belbullab-22 Starfighter",
         faction: "Separatist Alliance",
         points: 0,
+        pointsbeta: 9,
         modifier_func: function(stats) {
           return stats.hull += 2;
         }
@@ -10239,6 +11433,7 @@ exportObj.basicCardData = function() {
         id: 234,
         slot: "Torpedo",
         points: 5,
+        pointsbeta: 7,
         attack: 3,
         range: "2-3",
         rangebonus: true,
@@ -10251,9 +11446,6 @@ exportObj.basicCardData = function() {
         points: 8,
         charge: 1,
         restrictions: [["Action", "Reload"], ["Slot", "Modification"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Modification");
-        },
         also_occupies_upgrades: ["Modification"],
         applies_condition: 'Electro-Proton Bomb'.canonicalize()
       }, {
@@ -10278,9 +11470,6 @@ exportObj.basicCardData = function() {
         rangebonus: true,
         charge: 3,
         restrictions: [["Slot", "Missile"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Missile");
-        },
         also_occupies_upgrades: ["Missile"]
       }, {
         name: "TA-175",
@@ -10327,10 +11516,8 @@ exportObj.basicCardData = function() {
         faction: "Resistance",
         force: 1,
         points: 14,
+        pointsbeta: 10,
         restrictions: [["Slot", "Crew"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         modifier_func: function(stats) {
           stats.force += 1;
@@ -10362,6 +11549,7 @@ exportObj.basicCardData = function() {
         id: 247,
         slot: "Modification",
         points: 4,
+        pointsbeta: 1,
         restrictions: [["ShieldsGreaterThan", 0], ["Base", "Small", "Medium"]],
         modifier_func: function(stats) {
           stats.shields -= 1;
@@ -10406,6 +11594,7 @@ exportObj.basicCardData = function() {
         slot: "Astromech",
         charge: 2,
         points: 8,
+        pointsbeta: 10,
         faction: "Galactic Republic"
       }, {
         name: "Ahsoka Tano",
@@ -10442,6 +11631,7 @@ exportObj.basicCardData = function() {
         id: 256,
         slot: "Talent",
         points: 9,
+        pointsbeta: 7,
         attack: 2,
         range: "2",
         rangebonus: true
@@ -10484,9 +11674,6 @@ exportObj.basicCardData = function() {
         points: 6,
         faction: "Galactic Empire",
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Azmorigan",
@@ -10496,9 +11683,6 @@ exportObj.basicCardData = function() {
         points: 4,
         faction: "Scum and Villainy",
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Captain Needa",
@@ -10509,9 +11693,6 @@ exportObj.basicCardData = function() {
         points: 8,
         charge: 4,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Carlist Rieekan",
@@ -10521,9 +11702,6 @@ exportObj.basicCardData = function() {
         slot: "Command",
         points: 4,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Jan Dodonna",
@@ -10533,9 +11711,6 @@ exportObj.basicCardData = function() {
         slot: "Command",
         points: 3,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Raymus Antilles",
@@ -10545,9 +11720,6 @@ exportObj.basicCardData = function() {
         points: 8,
         faction: "Rebel Alliance",
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Stalwart Captain",
@@ -10556,9 +11728,6 @@ exportObj.basicCardData = function() {
         slot: "Command",
         points: 6,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Strategic Commander",
@@ -10568,9 +11737,6 @@ exportObj.basicCardData = function() {
         charge: 3,
         points: 6,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Ion Cannon Battery",
@@ -11124,6 +12290,7 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         unique: true,
         points: 6,
+        pointsbeta: 8,
         modifier_func: function(stats) {
           stats.actions.push('Calculate');
           return stats.actions.push('Jam');
@@ -11155,12 +12322,10 @@ exportObj.basicCardData = function() {
         id: 318,
         slot: "Tech",
         points: 6,
+        pointsbeta: 8,
         charge: 2,
         faction: "First Order",
         restrictions: [["Slot", "Modification"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Modification");
-        },
         also_occupies_upgrades: ["Modification"]
       }, {
         name: "Proud Tradition",
@@ -11174,7 +12339,8 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         unique: true,
         faction: "First Order",
-        points: 5
+        points: 5,
+        pointsbeta: 10
       }, {
         name: "Clone Captain Rex",
         id: 321,
@@ -11234,9 +12400,6 @@ exportObj.basicCardData = function() {
         rangebonus: true,
         charge: 5,
         restrictions: [["Slot", "Missile"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Missile");
-        },
         also_occupies_upgrades: ["Missile"]
       }, {
         name: "Kit Fisto",
@@ -11323,6 +12486,7 @@ exportObj.basicCardData = function() {
         slot: "Gunner",
         unique: true,
         points: 2,
+        pointsbeta: 4,
         faction: ["Scum and Villainy", "Separatist Alliance"]
       }, {
         name: "Jango Fett",
@@ -11339,6 +12503,7 @@ exportObj.basicCardData = function() {
         charge: 2,
         faction: ["Scum and Villainy", "Separatist Alliance"],
         points: 11,
+        pointsbeta: 9,
         applies_condition: ['You\'d Better Mean Business'.canonicalize(), 'You Should Thank Me'.canonicalize()]
       }, {
         name: 'Alpha-3B "Besh"',
@@ -11357,6 +12522,7 @@ exportObj.basicCardData = function() {
         id: 338,
         slot: "Modification",
         points: 2,
+        pointsbeta: 1,
         charge: 2,
         restrictions: [["Keyword", "TIE"], ["AgilityEquals", 3]]
       }, {
@@ -11379,6 +12545,7 @@ exportObj.basicCardData = function() {
         name: "Extreme Maneuvers",
         id: 341,
         points: 8,
+        pointsbeta: 5,
         slot: "Force",
         restrictions: [["Action", "Boost"], ["Base", "Small"]]
       }, {
@@ -11448,9 +12615,6 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         points: 5,
         restrictions: [["Action", "Rotate Arc"], ["Slot", "Gunner"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Gunner");
-        },
         also_occupies_upgrades: ["Gunner"],
         modifier_func: function(stats) {
           stats.actions.push('*Rotate Arc');
@@ -11464,9 +12628,6 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         points: 4,
         restrictions: [["Slot", "Gunner"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Gunner");
-        },
         also_occupies_upgrades: ["Gunner"]
       }, {
         name: "Kalani",
@@ -11491,9 +12652,6 @@ exportObj.basicCardData = function() {
         attack: 3,
         range: "2-3",
         restrictions: [["Slot", "Cannon"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Cannon");
-        },
         also_occupies_upgrades: ["Cannon"]
       }, {
         name: "Concussion Bombs",
@@ -11501,6 +12659,7 @@ exportObj.basicCardData = function() {
         slot: "Device",
         charge: 3,
         points: 4,
+        pointsbeta: 5,
         applies_condition: 'Concussion Bomb'.canonicalize()
       }, {
         name: "Target-Assist MGK-300",
@@ -11519,6 +12678,7 @@ exportObj.basicCardData = function() {
         id: 357,
         slot: "Talent",
         points: 2,
+        pointsbeta: 1,
         restrictions: [["Keyword", "X-wing"], ["Equipped", "Configuration"]]
       }, {
         name: "R2-D2 (Resistance)",
@@ -11526,6 +12686,7 @@ exportObj.basicCardData = function() {
         slot: "Astromech",
         xwsaddon: "resistance",
         points: 6,
+        pointsbeta: 8,
         unique: true,
         charge: 4,
         faction: "Resistance"
@@ -11533,6 +12694,7 @@ exportObj.basicCardData = function() {
         name: "R6-D8",
         id: 359,
         points: 4,
+        pointsbeta: 6,
         unique: true,
         slot: "Astromech",
         faction: "Resistance"
@@ -11728,9 +12890,6 @@ exportObj.basicCardData = function() {
             slot: "Gunner"
           }
         ],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Title");
-        },
         also_occupies_upgrades: ["Title"]
       }, {
         name: "Hopeful",
@@ -11794,6 +12953,7 @@ exportObj.basicCardData = function() {
         id: 386,
         unique: true,
         points: 8,
+        pointsbeta: 7,
         slot: "Crew",
         charge: 2,
         recurring: 1,
@@ -11832,9 +12992,6 @@ exportObj.basicCardData = function() {
         points: 8,
         faction: ["Scum and Villainy", "Separatist Alliance"],
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         force: 1,
         modifier_func: function(stats) {
@@ -11850,9 +13007,6 @@ exportObj.basicCardData = function() {
         points: 5,
         faction: "Separatist Alliance",
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Hondo Ohnaka (Command)",
@@ -11862,9 +13016,6 @@ exportObj.basicCardData = function() {
         points: 7,
         charge: 2,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         modifier_func: function(stats) {
           stats.actions.push('*Coordinate');
@@ -11878,9 +13029,6 @@ exportObj.basicCardData = function() {
         points: 4,
         faction: "Separatist Alliance",
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Riff Tamson",
@@ -11890,9 +13038,6 @@ exportObj.basicCardData = function() {
         points: 6,
         faction: "Separatist Alliance",
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Zealous Captain",
@@ -11901,9 +13046,6 @@ exportObj.basicCardData = function() {
         slot: "Command",
         points: 4,
         restrictions: [["Slot", "Crew"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"]
       }, {
         name: "Tractor Tentacles",
@@ -11925,9 +13067,6 @@ exportObj.basicCardData = function() {
         rangebonus: true,
         ship: "Trident-class Assault Ship",
         restrictions: [["Slot", "Cargo"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Cargo");
-        },
         also_occupies_upgrades: ["Cargo"]
       }, {
         name: "Enhanced Propulsion",
@@ -11936,9 +13075,6 @@ exportObj.basicCardData = function() {
         points: 6,
         ship: "Trident-class Assault Ship",
         restrictions: [["Slot", "Cargo"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Cargo");
-        },
         also_occupies_upgrades: ["Cargo"]
       }, {
         name: "Proton Cannon Battery",
@@ -11948,9 +13084,6 @@ exportObj.basicCardData = function() {
         attackbull: 4,
         range: "2-5",
         restrictions: [["Slot", "Cargo"], ["Base", "Huge"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Cargo");
-        },
         also_occupies_upgrades: ["Cargo"]
       }, {
         name: "Droid Crew",
@@ -11974,9 +13107,6 @@ exportObj.basicCardData = function() {
         points: 5,
         faction: "Scum and Villainy",
         restrictions: [["Slot", "Gunner"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Gunner");
-        },
         also_occupies_upgrades: ["Gunner"]
       }, {
         name: "Grappler",
@@ -12050,13 +13180,12 @@ exportObj.basicCardData = function() {
         id: 409,
         slot: "Configuration",
         points: 2,
+        pointsbeta: 0,
         ship: "BTA-NR2 Y-wing",
         standardized: true,
+        standardizedbeta: false,
         chassis: "Devastating Barrage",
         restrictions: [["Slot", "Modification"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Modification");
-        },
         also_occupies_upgrades: ["Modification"],
         modifier_func: function(stats) {
           stats.actions.push('Lock');
@@ -12097,9 +13226,6 @@ exportObj.basicCardData = function() {
         points: 0,
         ship: "TIE/wi Whisper Modified Interceptor",
         restrictions: [["Slot", "Tech"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Tech");
-        },
         also_occupies_upgrades: ["Tech"],
         modifier_func: function(stats) {
           stats.actions.push('*Focus');
@@ -12155,13 +13281,11 @@ exportObj.basicCardData = function() {
         name: "Electro-Chaff Missiles",
         id: 420,
         points: 9,
+        pointsbeta: 11,
         slot: "Missile",
         max_per_squad: 2,
         charge: 1,
         restrictions: [["Slot", "Device"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Device");
-        },
         also_occupies_upgrades: ["Device"],
         applies_condition: 'Electro-Chaff Cloud'.canonicalize()
       }, {
@@ -12178,9 +13302,6 @@ exportObj.basicCardData = function() {
         unique: true,
         faction: "Rebel Alliance",
         restrictions: [["Slot", "Crew"], ["Base", "Standard"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         modifier_func: function(stats) {
           if (__indexOf.call(stats.actions, 'R-Coordinate') < 0) {
@@ -12266,6 +13387,7 @@ exportObj.basicCardData = function() {
         name: "Pre Vizsla",
         id: 432,
         points: 9,
+        pointsbeta: 8,
         slot: "Crew",
         faction: ["Scum and Villainy", "Separatist Alliance"],
         unique: true,
@@ -12297,6 +13419,7 @@ exportObj.basicCardData = function() {
         name: "Satine Kryze",
         id: 435,
         points: 10,
+        pointsbeta: 15,
         charge: 2,
         recurring: 1,
         slot: "Crew",
@@ -12336,6 +13459,7 @@ exportObj.basicCardData = function() {
         id: 439,
         points: 6,
         slot: "Crew",
+        pointsbeta: 8,
         unique: true,
         faction: "Rebel Alliance"
       }, {
@@ -12347,9 +13471,6 @@ exportObj.basicCardData = function() {
         force: 1,
         faction: "Scum and Villainy",
         restrictions: [["Slot", "Crew"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         modifier_func: function(stats) {
           stats.force += 1;
@@ -12400,6 +13521,7 @@ exportObj.basicCardData = function() {
         points: 3,
         slot: "Modification",
         charge: 2,
+        pointsbeta: 6,
         restrictions: [["Keyword", "Mandalorian"]]
       }, {
         name: "Mandalorian Optics",
@@ -12418,9 +13540,6 @@ exportObj.basicCardData = function() {
         faction: ["Galactic Republic", "Separatist Alliance"],
         ship: "Gauntlet Fighter",
         restrictions: [["Slot", "Modification"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Modification");
-        },
         also_occupies_upgrades: ["Modification"],
         confersAddons: [
           {
@@ -12439,9 +13558,6 @@ exportObj.basicCardData = function() {
         recurring: 1,
         ship: "Gauntlet Fighter",
         restrictions: [["Slot", "Modification"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Modification");
-        },
         also_occupies_upgrades: ["Modification"],
         confersAddons: [
           {
@@ -12464,9 +13580,6 @@ exportObj.basicCardData = function() {
         charge: 2,
         faction: "Rebel Alliance",
         restrictions: [["Slot", "Crew"], ["Base", "Non-Small"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         applies_condition: 'Clan Wren Commandos'.canonicalize()
       }, {
@@ -12516,6 +13629,7 @@ exportObj.basicCardData = function() {
         name: "Notorious",
         id: 455,
         points: 7,
+        pointsbeta: 6,
         charge: 2,
         recurring: 1,
         slot: "Talent",
@@ -12525,6 +13639,7 @@ exportObj.basicCardData = function() {
         name: "Enduring",
         id: 456,
         points: 5,
+        pointsbeta: 4,
         slot: "Talent"
       }, {
         name: "IG-11",
@@ -12599,14 +13714,12 @@ exportObj.basicCardData = function() {
         slot: "Command",
         ship: "Gauntlet Fighter",
         restrictions: [["Slot", "Configuration"], ["Base", "Standard"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Configuration");
-        },
         also_occupies_upgrades: ["Configuration"]
       }, {
         name: "Drop-Seat Bay",
         id: 465,
         points: 5,
+        pointsbeta: 2,
         slot: "Modification",
         ship: "Gauntlet Fighter",
         unequips_upgrades: ['Device'],
@@ -12629,9 +13742,6 @@ exportObj.basicCardData = function() {
         charge: 2,
         faction: "Scum and Villainy",
         restrictions: [["Slot", "Crew"], ["Base", "Non-Small"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         applies_condition: 'Mandalorian Super Commandos'.canonicalize()
       }, {
@@ -12643,9 +13753,6 @@ exportObj.basicCardData = function() {
         charge: 2,
         faction: "Galactic Empire",
         restrictions: [["Slot", "Crew"], ["Base", "Non-Small"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         applies_condition: 'Imperial Super Commandos'.canonicalize()
       }, {
@@ -12657,9 +13764,6 @@ exportObj.basicCardData = function() {
         charge: 2,
         faction: "Galactic Republic",
         restrictions: [["Slot", "Crew"], ["Base", "Non-Small"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         applies_condition: 'Nite Owl Commandos'.canonicalize()
       }, {
@@ -12671,9 +13775,6 @@ exportObj.basicCardData = function() {
         charge: 2,
         faction: "Separatist Alliance",
         restrictions: [["Slot", "Crew"], ["Base", "Non-Small"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Crew");
-        },
         also_occupies_upgrades: ["Crew"],
         applies_condition: 'Death Watch Commandos'.canonicalize()
       }, {
@@ -12681,20 +13782,19 @@ exportObj.basicCardData = function() {
         id: 470,
         slot: "Cannon",
         points: 4,
+        pointsbeta: 5,
         attackbull: 4,
         range: "2-3",
         charge: 2,
         recurring: 1,
         restrictions: [["Slot", "Cannon"]],
-        validation_func: function(ship, upgrade_obj) {
-          return upgrade_obj.occupiesAnUpgradeSlot("Cannon");
-        },
         also_occupies_upgrades: ["Cannon"]
       }, {
         name: "Homing Torpedoes",
         id: 471,
         slot: "Torpedo",
         points: 5,
+        pointsbeta: 4,
         attack: 4,
         range: "1-2",
         rangebonus: true,
@@ -14238,7 +15338,7 @@ String.prototype.ParseParameter = function(name) {
 };
 
 String.prototype.serialtoxws = function() {
-  var card_data, card_pilots, cards_upgrades, desired_points, g, game_type_abbrev, gamemode, i, matches, name_parse, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, slot, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _k, _l, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+  var card_data, card_pilots, cards_upgrades, desired_points, g, game_type_abbrev, gamemode, i, matches, name_parse, p, pilot_data, pilot_id, pilot_splitter, pilot_xws, points, re, s, serialized, serialized_ship, serialized_ships, ship_splitter, slot, upgrade_data, upgrade_id, upgrade_ids, upgrade_obj, upgrade_splitter, version, xws, _i, _j, _k, _l, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
   xws = {
     description: "",
     faction: this.ParseParameter('f').canonicalize(),
@@ -14274,6 +15374,9 @@ String.prototype.serialtoxws = function() {
         break;
       case 'e':
         gamemode = 'epic';
+        break;
+      case 'b':
+        gamemode = 'xwabeta';
         break;
       case 'q':
         return "error: game mode not supported";
@@ -14314,13 +15417,18 @@ String.prototype.serialtoxws = function() {
         serialized_ship = _ref4[_k];
         pilot_splitter = 'X';
         upgrade_splitter = 'W';
+        if (gamemode === 'xwabeta' && pilot_data.pointsbeta) {
+          points = pilot_data.pointsbeta;
+        } else {
+          points = points = pilot_data.points;
+        }
         _ref5 = serialized_ship.split(pilot_splitter), pilot_id = _ref5[0], upgrade_ids = _ref5[1];
         pilot_data = card_pilots[parseInt(pilot_id)];
         if (pilot_data) {
           pilot_xws = {
             id: (_ref6 = pilot_data.xws) != null ? _ref6 : pilot_data.canonical_name,
             name: (_ref7 = pilot_data.xws) != null ? _ref7 : pilot_data.canonical_name,
-            points: pilot_data.points,
+            points: points,
             ship: pilot_data.ship.canonicalize(),
             upgrades: []
           };

@@ -1263,7 +1263,7 @@ exportObj.CardBrowser = (function() {
 
   CardBrowser.prototype.setupUI = function() {
     var action, faction, factionless_option, i, keyword_item, keyword_items, keyword_list, keywords, linkedaction, opt, pilot, slot, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref2;
-    this.container.append($.trim("<div class=\"container-fluid xwing-card-browser\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"card card-search-container\">\n            <h5 class=\"card-title translated\" defaultText=\"Card Search\"></h5>\n                <div class=\"advanced-search-container\">\n                    <div class = \"card search-container general-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"General\"></h6>\n                        <label class = \"text-search advanced-search-label\">\n                        <strong class=\"translated\" defaultText=\"Textsearch:\"></strong>\n                            <input type=\"search\" placeholder=\"" + (exportObj.translate('ui', "Placeholder Textsearch Browser")) + "\" class = \"card-search-text\">\n                        </label>\n                        <div class= \"advanced-search-faction-selection-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Factions:\"></strong>\n                                <select class=\"advanced-search-selection faction-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "All factions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-point-selection-container\">\n                            <strong class=\"translated\" defaultText=\"Point cost:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-points\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-point-cost advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-points\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-point-cost advanced-search-number-input\" value=\"20\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-loadout-selection-container\">\n                            <strong class=\"translated\" defaultText=\"Loadout cost:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-loadout\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-loadout-cost advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-loadout\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-loadout-cost advanced-search-number-input\" value=\"99\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-collection-container\">\n                            <strong class=\"translated\" defaultText=\"Owned copies:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-owned-copies\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-owned-copies advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-owened-copies\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-owned-copies advanced-search-number-input\" value=\"99\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-misc-container\">\n                            <strong class=\"translated\" defaultText=\"Misc:\"></strong>\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-non-unique\">\n                                <input type=\"checkbox\" class=\"non-unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is not unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-limited\">\n                                <input type=\"checkbox\" class=\"limited-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is limited\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-standard\">\n                                <input type=\"checkbox\" class=\"standard-checkbox advanced-search-checkbox\" />  <span class=\"translated\" defaultText=\"Standard legal\"></span>\n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container ship-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Ships and Pilots\"></h6>\n                        <div class = \"advanced-search-slot-available-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Slots:\"></strong>\n                                <select class=\"advanced-search-selection slot-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"duplicate-slots-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Has multiple of the chosen slots\"></span> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-keyword-available-container\">\n                            <label class = \"advanced-search-label select-available-keywords\">\n                                <strong class=\"translated\" defaultText=\"Keywords:\"></strong>\n                                <select class=\"advanced-search-selection keyword-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "keywords")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-actions-available-container\">\n                            <label class = \"advanced-search-label select-available-actions\">\n                                <strong class=\"translated\" defaultText=\"Actions:\"></strong>\n                                <select class=\"advanced-search-selection action-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-linkedactions-available-container\">\n                            <label class = \"advanced-search-label select-available-linkedactions\">\n                                <strong class=\"translated\" defaultText=\"Linked actions:\"></strong>\n                                <select class=\"advanced-search-selection linkedaction-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-ini-container\">\n                            <strong class=\"translated\" defaultText=\"Initiative:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-ini\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-ini advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-ini\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-ini advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-hull-container\">\n                            <strong class=\"translated\" defaultText=\"Hull:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-hull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-hull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-hull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-hull advanced-search-number-input\" value=\"12\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-shields-container\">\n                            <strong class=\"translated\" defaultText=\"Shields:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-shields\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-shields advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-shields\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-shields advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-agility-container\">\n                            <strong class=\"translated\" defaultText=\"Agility:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-agility\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-agility advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-agility\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-agility advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-base-size-container\">\n                            <strong class=\"translated\" defaultText=\"Base size:\"></strong>\n                            <label class = \"advanced-search-label toggle-small-base\">\n                                <input type=\"checkbox\" class=\"small-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Small\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-medium-base\">\n                                <input type=\"checkbox\" class=\"medium-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Medium\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-large-base\">\n                                <input type=\"checkbox\" class=\"large-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Large\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-huge-base\">\n                                <input type=\"checkbox\" class=\"huge-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Huge\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attack-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-frontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attack\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attack advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attack\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attack advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-singleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackdt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-doubleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackdt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackdt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackdt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackdt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackf-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-fullfrontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackf\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackf advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackf\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackf advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackb-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-reararc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackb\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackb advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackb\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackb advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackbull-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-bullseyearc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackbull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackbull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackbull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackbull advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container other-stuff-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Other Stuff\"></h6>\n                        <div class = \"advanced-search-slot-used-container\">\n                            <label class = \"advanced-search-label select-used-slots\">\n                                <strong class=\"translated\" defaultText=\"Used slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-slot-used-second-slot-container\">\n                            <label class = \"advanced-search-label select-used-second-slots\">\n                                <strong class=\"translated\" defaultText=\"Used double-slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-second-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-a-second-slot\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-a-second-slot-checkbox\" /> <span class=\"translated\" defaultText=\"Only upgrades requiring multiple slots\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-charge-container\">\n                            <strong class=\"translated\" defaultText=\"Charges:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-charge\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-charge advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-charge\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-charge advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Recurring\"></span>\n                            </label>\n                            <label class = \"advanced-search-label has-not-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-not-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Not recurring\"></span>\n                            </label>\n                        <div class = \"advanced-search-force-container\">\n                            <strong class=\"translated\" defaultText=\"Force:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-force\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-force advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-force\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-force advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-4 card-selecting-area\">\n            <span class=\"translate sort-cards-by\" defaultText=\"Sort cards by\"></span><span class=\"translated\" defaultText=\"Sort by\">:</span> <select class=\"sort-by\">\n                <option value=\"name\" class=\"translated\" defaultText=\"Name\"></option>\n                <option value=\"source\" class=\"translated\" defaultText=\"Source\"></option>\n                <option value=\"type-by-points\" class=\"translated\" defaultText=\"Type (by Points)\"></option>\n                <option value=\"type-by-name\" selected=\"1\" class=\"translated\" defaultText=\"Type (by Name)\" selected=\"selected\">" + (exportObj.translate('ui', 'Type (by Name)')) + "</option>\n            </select>\n            <div class=\"card-selector-container\">\n\n            </div>\n            <br>\n            <div class=\"card-viewer-conditions-container\">\n            </div>\n        </div>\n        <div class=\"col-md-4\">\n            <div class=\"card-viewer-container\">\n            </div>\n        </div>\n    </div>\n</div>"));
+    this.container.append($.trim("<div class=\"container-fluid xwing-card-browser\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <div class=\"card card-search-container\">\n            <h5 class=\"card-title translated\" defaultText=\"Card Search\"></h5>\n                <div class=\"advanced-search-container\">\n                    <div class = \"card search-container general-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"General\"></h6>\n                        <label class = \"text-search advanced-search-label\">\n                        <strong class=\"translated\" defaultText=\"Textsearch:\"></strong>\n                            <input type=\"search\" placeholder=\"" + (exportObj.translate('ui', "Placeholder Textsearch Browser")) + "\" class = \"card-search-text\">\n                        </label>\n                        <div class= \"advanced-search-faction-selection-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Factions:\"></strong>\n                                <select class=\"advanced-search-selection faction-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "All factions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-point-selection-container\">\n                            <strong class=\"translated\" defaultText=\"Point cost:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-points\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-point-cost advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-points\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-point-cost advanced-search-number-input\" value=\"20\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-loadout-selection-container\">\n                            <strong class=\"translated\" defaultText=\"Loadout cost:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-loadout\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-loadout-cost advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-loadout\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-loadout-cost advanced-search-number-input\" value=\"99\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-collection-container\">\n                            <strong class=\"translated\" defaultText=\"Owned copies:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-owned-copies\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-owned-copies advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-owened-copies\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-owned-copies advanced-search-number-input\" value=\"99\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-misc-container\">\n                            <strong class=\"translated\" defaultText=\"Misc:\"></strong>\n                            <label class = \"advanced-search-label toggle-xwa\">\n                                <input type=\"checkbox\" class=\"xwa-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Use XWA points\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-non-unique\">\n                                <input type=\"checkbox\" class=\"non-unique-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is not unique\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-limited\">\n                                <input type=\"checkbox\" class=\"limited-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Is limited\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-standard\">\n                                <input type=\"checkbox\" class=\"standard-checkbox advanced-search-checkbox\" />  <span class=\"translated\" defaultText=\"Standard legal\"></span>\n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container ship-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Ships and Pilots\"></h6>\n                        <div class = \"advanced-search-slot-available-container\">\n                            <label class = \"advanced-search-label select-available-slots\">\n                                <strong class=\"translated\" defaultText=\"Slots:\"></strong>\n                                <select class=\"advanced-search-selection slot-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label toggle-unique\">\n                                <input type=\"checkbox\" class=\"duplicate-slots-checkbox advanced-search-checkbox\" /> <span class=\"translated\" defaultText=\"Has multiple of the chosen slots\"></span> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-keyword-available-container\">\n                            <label class = \"advanced-search-label select-available-keywords\">\n                                <strong class=\"translated\" defaultText=\"Keywords:\"></strong>\n                                <select class=\"advanced-search-selection keyword-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "keywords")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-actions-available-container\">\n                            <label class = \"advanced-search-label select-available-actions\">\n                                <strong class=\"translated\" defaultText=\"Actions:\"></strong>\n                                <select class=\"advanced-search-selection action-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-linkedactions-available-container\">\n                            <label class = \"advanced-search-label select-available-linkedactions\">\n                                <strong class=\"translated\" defaultText=\"Linked actions:\"></strong>\n                                <select class=\"advanced-search-selection linkedaction-available-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "actions")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-ini-container\">\n                            <strong class=\"translated\" defaultText=\"Initiative:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-ini\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-ini advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-ini\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-ini advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-hull-container\">\n                            <strong class=\"translated\" defaultText=\"Hull:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-hull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-hull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-hull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-hull advanced-search-number-input\" value=\"12\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-shields-container\">\n                            <strong class=\"translated\" defaultText=\"Shields:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-shields\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-shields advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-shields\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-shields advanced-search-number-input\" value=\"6\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-agility-container\">\n                            <strong class=\"translated\" defaultText=\"Agility:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-agility\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-agility advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-agility\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-agility advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-base-size-container\">\n                            <strong class=\"translated\" defaultText=\"Base size:\"></strong>\n                            <label class = \"advanced-search-label toggle-small-base\">\n                                <input type=\"checkbox\" class=\"small-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Small\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-medium-base\">\n                                <input type=\"checkbox\" class=\"medium-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Medium\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-large-base\">\n                                <input type=\"checkbox\" class=\"large-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Large\"></span>\n                            </label>\n                            <label class = \"advanced-search-label toggle-huge-base\">\n                                <input type=\"checkbox\" class=\"huge-base-checkbox advanced-search-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Huge\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attack-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-frontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attack\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attack advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attack\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attack advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-singleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackdt-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-doubleturretarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackdt\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackdt advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackdt\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackdt advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackf-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-fullfrontarc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackf\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackf advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackf\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackf advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackb-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-reararc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackb\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackb advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackb\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackb advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                        <div class = \"advanced-search-attackbull-container\">\n                            <strong><i class=\"xwing-miniatures-font xwing-miniatures-font-bullseyearc\"></i>:</strong>\n                            <label class = \"advanced-search-label set-minimum-attackbull\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-attackbull advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-attackbull\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-attackbull advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                        </div>\n                    </div>\n                    <div class = \"card search-container other-stuff-search-container\">\n                        <h6 class=\"card-subtitle mb-3 text-muted version translated\" defaultText=\"Other Stuff\"></h6>\n                        <div class = \"advanced-search-slot-used-container\">\n                            <label class = \"advanced-search-label select-used-slots\">\n                                <strong class=\"translated\" defaultText=\"Used slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-slot-used-second-slot-container\">\n                            <label class = \"advanced-search-label select-used-second-slots\">\n                                <strong class=\"translated\" defaultText=\"Used double-slot:\"></strong>\n                                <select class=\"advanced-search-selection slot-used-second-selection\" multiple=\"1\" data-placeholder=\"" + (exportObj.translate('ui', "noXYselected", "slots")) + "\"></select>\n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-a-second-slot\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-a-second-slot-checkbox\" /> <span class=\"translated\" defaultText=\"Only upgrades requiring multiple slots\"></span>\n                            </label>\n                        </div>\n                        <div class = \"advanced-search-charge-container\">\n                            <strong class=\"translated\" defaultText=\"Charges:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-charge\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-charge advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-charge\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-charge advanced-search-number-input\" value=\"5\" /> \n                            </label>\n                            <br />\n                            <label class = \"advanced-search-label has-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Recurring\"></span>\n                            </label>\n                            <label class = \"advanced-search-label has-not-recurring-charge\">\n                                <input type=\"checkbox\" class=\"advanced-search-checkbox has-not-recurring-charge-checkbox\" checked=\"checked\"/> <span class=\"translated\" defaultText=\"Not recurring\"></span>\n                            </label>\n                        <div class = \"advanced-search-force-container\">\n                            <strong class=\"translated\" defaultText=\"Force:\"></strong>\n                            <label class = \"advanced-search-label set-minimum-force\">\n                                <span class=\"translated\" defaultText=\"from\"></span> <input type=\"number\" class=\"minimum-force advanced-search-number-input\" value=\"0\" /> \n                            </label>\n                            <label class = \"advanced-search-label set-maximum-force\">\n                                <span class=\"translated\" defaultText=\"to\"></span> <input type=\"number\" class=\"maximum-force advanced-search-number-input\" value=\"3\" /> \n                            </label>\n                        </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-4 card-selecting-area\">\n            <span class=\"translate sort-cards-by\" defaultText=\"Sort cards by\"></span><span class=\"translated\" defaultText=\"Sort by\">:</span> <select class=\"sort-by\">\n                <option value=\"name\" class=\"translated\" defaultText=\"Name\"></option>\n                <option value=\"source\" class=\"translated\" defaultText=\"Source\"></option>\n                <option value=\"type-by-points\" class=\"translated\" defaultText=\"Type (by Points)\"></option>\n                <option value=\"type-by-name\" selected=\"1\" class=\"translated\" defaultText=\"Type (by Name)\" selected=\"selected\">" + (exportObj.translate('ui', 'Type (by Name)')) + "</option>\n            </select>\n            <div class=\"card-selector-container\">\n\n            </div>\n            <br>\n            <div class=\"card-viewer-conditions-container\">\n            </div>\n        </div>\n        <div class=\"col-md-4\">\n            <div class=\"card-viewer-container\">\n            </div>\n        </div>\n    </div>\n</div>"));
     this.card_selector_container = $(this.container.find('.xwing-card-browser .card-selector-container'));
     this.card_viewer_container = $(this.container.find('.xwing-card-browser .card-viewer-container'));
     this.card_viewer_container.append($.trim(exportObj.builders[7].createInfoContainerUI(false)));
@@ -1296,6 +1296,7 @@ exportObj.CardBrowser = (function() {
     this.maximum_point_costs = ($(this.container.find('.xwing-card-browser .maximum-point-cost')))[0];
     this.minimum_loadout_costs = ($(this.container.find('.xwing-card-browser .minimum-loadout-cost')))[0];
     this.maximum_loadout_costs = ($(this.container.find('.xwing-card-browser .maximum-loadout-cost')))[0];
+    this.use_xwa_points = ($(this.container.find('.xwing-card-browser .xwa-checkbox')))[0];
     this.standard_checkbox = ($(this.container.find('.xwing-card-browser .standard-checkbox')))[0];
     this.unique_checkbox = ($(this.container.find('.xwing-card-browser .unique-checkbox')))[0];
     this.non_unique_checkbox = ($(this.container.find('.xwing-card-browser .non-unique-checkbox')))[0];
@@ -1485,6 +1486,11 @@ exportObj.CardBrowser = (function() {
       };
     })(this);
     this.standard_checkbox.onclick = (function(_this) {
+      return function() {
+        return _this.renderList_advanced(_this.sort_selector.val());
+      };
+    })(this);
+    this.use_xwa_points.onclick = (function(_this) {
       return function() {
         return _this.renderList_advanced(_this.sort_selector.val());
       };
@@ -1686,6 +1692,27 @@ exportObj.CardBrowser = (function() {
     })(this);
   };
 
+  CardBrowser.prototype.getPoints = function(a) {
+    if (this.use_xwa_points.checked && (a.pointsbeta != null)) {
+      return a.pointsbeta;
+    }
+    return a.points;
+  };
+
+  CardBrowser.prototype.getLoadout = function(a) {
+    if (this.use_xwa_points.checked && (a.loadoutbeta != null)) {
+      return a.loadoutbeta;
+    }
+    return a.loadout;
+  };
+
+  CardBrowser.prototype.getSlots = function(a) {
+    if (this.use_xwa_points.checked && (a.slotsbeta != null)) {
+      return a.slotsbeta;
+    }
+    return a.slots;
+  };
+
   CardBrowser.prototype.prepareData = function() {
     var card, card_data, card_name, sorted_sources, sorted_types, source, type, upgrade_text, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _m, _n, _ref, _ref1, _ref2, _ref3, _results;
     this.all_cards = [];
@@ -1850,6 +1877,9 @@ exportObj.CardBrowser = (function() {
     if (sort_by == null) {
       sort_by = 'name';
     }
+    if (this.use_xwa_points.checked != null) {
+      exportObj.builders[7].isBeta = this.use_xwa_points.checked;
+    }
     if (this.card_selector != null) {
       this.card_selector.empty();
     } else {
@@ -1983,7 +2013,7 @@ exportObj.CardBrowser = (function() {
   CardBrowser.prototype.addCardTo = function(container, card) {
     var option;
     option = $(document.createElement('OPTION'));
-    option.text("" + (card.display_name ? card.display_name : card.name) + " (" + (card.data.points != null ? card.data.points : (card.data.quantity != null ? card.data.quantity + 'x' : '*')) + (card.data.loadout != null ? "/" + card.data.loadout : '') + ")");
+    option.text("" + (card.display_name ? card.display_name : card.name) + " (" + (this.getPoints(card.data) != null ? this.getPoints(card.data) : (card.data.quantity != null ? card.data.quantity + 'x' : '*')) + (this.getLoadout(card.data) != null ? "/" + (this.getLoadout(card.data)) : '') + ")");
     option.data('name', card.name);
     option.data('display_name', card.display_name);
     option.data('type', card.type);
@@ -2123,7 +2153,7 @@ exportObj.CardBrowser = (function() {
     }
     required_slots = this.searchInputs.required_slots;
     if (required_slots.length > 0) {
-      slots = card.data.slots;
+      slots = this.getSlots(card.data);
       for (_m = 0, _len4 = required_slots.length; _m < _len4; _m++) {
         slot = required_slots[_m];
         if (!(((slot === "Torpedo") || (slot === "Missile") || (slot === "Cannon")) && ((slots != null) && (__indexOf.call(slots, "HardpointShip") >= 0)))) {
@@ -2185,7 +2215,7 @@ exportObj.CardBrowser = (function() {
       }
     }
     if (this.minimum_point_costs.value > 0 || this.maximum_point_costs.value < 20) {
-      if (!((card.data.points >= this.minimum_point_costs.value && card.data.points <= this.maximum_point_costs.value) || (card.data.variablepoints != null))) {
+      if (!((this.getPoints(card.data) >= this.minimum_point_costs.value && this.getPoints(card.data) <= this.maximum_point_costs.value) || (card.data.variablepoints != null))) {
         return false;
       }
       if (card.data.variablepoints != null) {
@@ -2212,7 +2242,7 @@ exportObj.CardBrowser = (function() {
             for (_t = 0, _len11 = pilots.length; _t < _len11; _t++) {
               pilot = pilots[_t];
               if (pilot.ship === card.data.name) {
-                if (pilot.points >= this.minimum_point_costs.value && pilot.points <= this.maximum_point_costs.value) {
+                if (this.getPoints(pilot) >= this.minimum_point_costs.value && this.getPoints(pilot) <= this.maximum_point_costs.value) {
                   matching_points = true;
                   break;
                 }
@@ -2232,7 +2262,7 @@ exportObj.CardBrowser = (function() {
       }
     }
     if (this.minimum_loadout_costs.value > 0 || this.maximum_loadout_costs.value < 99) {
-      if (!(card.data.loadout >= this.minimum_loadout_costs.value && card.data.loadout <= this.maximum_loadout_costs.value)) {
+      if (!(this.getLoadout(card.data) >= this.minimum_loadout_costs.value && this.getLoadout(card.data) <= this.maximum_loadout_costs.value)) {
         return false;
       }
       if (card.orig_type === 'Ship') {
@@ -2245,7 +2275,7 @@ exportObj.CardBrowser = (function() {
             for (_v = 0, _len13 = pilots.length; _v < _len13; _v++) {
               pilot = pilots[_v];
               if (pilot.ship === card.data.name) {
-                if (pilot.loadout >= this.minimum_loadout_costs.value && pilot.loadout <= this.maximum_loadout_costs.value) {
+                if (this.getLoadout(pilot) >= this.minimum_loadout_costs.value && this.getLoadout(pilot) <= this.maximum_loadout_costs.value) {
                   matching_loadout = true;
                   break;
                 }
@@ -2692,7 +2722,7 @@ exportObj.setupTranslationSupport = function() {
                     parent: ___iced_passed_deferral
                   });
                   builder.container.trigger('xwing:beforeLanguageLoad', __iced_deferrals.defer({
-                    lineno: 2269
+                    lineno: 2289
                   }));
                   __iced_deferrals._fulfill();
                 })(_next);
@@ -2958,7 +2988,7 @@ exportObj.SquadBuilder = (function() {
     this.updateShipOrder = __bind(this.updateShipOrder, this);
     this.getPermaLink = __bind(this.getPermaLink, this);
     this.getPermaLinkParams = __bind(this.getPermaLinkParams, this);
-    var _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7;
+    var _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
     this.container = $(args.container);
     this.faction = $.trim(args.faction);
     this.printable_container = $(args.printable_container);
@@ -2984,19 +3014,20 @@ exportObj.SquadBuilder = (function() {
       fill_zero_pts: false
     };
     this.total_points = 0;
-    this.isStandard = (_ref = (_ref1 = exportObj.builders[0]) != null ? _ref1.isStandard : void 0) != null ? _ref : true;
+    this.isStandard = (_ref = (_ref1 = exportObj.builders[0]) != null ? _ref1.isStandard : void 0) != null ? _ref : false;
     this.isEpic = (_ref2 = (_ref3 = exportObj.builders[0]) != null ? _ref3.isEpic : void 0) != null ? _ref2 : false;
-    this.isQuickbuild = (_ref4 = (_ref5 = exportObj.builders[0]) != null ? _ref5.isQuickbuild : void 0) != null ? _ref4 : false;
+    this.isBeta = (_ref4 = (_ref5 = exportObj.builders[0]) != null ? _ref5.isBeta : void 0) != null ? _ref4 : true;
+    this.isQuickbuild = (_ref6 = (_ref7 = exportObj.builders[0]) != null ? _ref7.isQuickbuild : void 0) != null ? _ref6 : false;
     this.backend = null;
     this.current_squad = {};
-    this.language = (_ref6 = exportObj.currentLanguage) != null ? _ref6 : 'English';
+    this.language = (_ref8 = exportObj.currentLanguage) != null ? _ref8 : 'English';
     this.collection = null;
     this.current_obstacles = [];
     this.setupUI();
     if (this.faction === "All") {
       this.game_type_selector.val("epic").trigger('change');
     } else {
-      this.game_type_selector.val(((_ref7 = exportObj.builders[0]) != null ? _ref7 : this).game_type_selector.val());
+      this.game_type_selector.val(((_ref9 = exportObj.builders[0]) != null ? _ref9 : this).game_type_selector.val());
     }
     this.setupEventHandlers();
     window.setInterval(this.updatePermaLink, 250);
@@ -3080,7 +3111,7 @@ exportObj.SquadBuilder = (function() {
     DEFAULT_RANDOMIZER_SHIP_LIMIT = 0;
     this.status_container = $(document.createElement('DIV'));
     this.status_container.addClass('container-fluid');
-    this.status_container.append($.trim("<div class=\"row squad-name-and-points-row\">\n    <div class=\"col-md-3 squad-name-container\">\n        <div class=\"display-name\">\n            <span class=\"squad-name\"></span>\n            <i class=\"far fa-edit\"></i>\n        </div>\n        <div class=\"input-append\">\n            <input type=\"text\" maxlength=\"64\" placeholder=\"" + (this.uitranslation("Name your squad...")) + "\" />\n            <button class=\"btn save\"><i class=\"fa fa-pen-square\"></i></button>\n        </div>\n        <br />\n        <select class=\"game-type-selector\">\n            <option value=\"standard\" class=\"translated\" defaultText=\"Standard\" selected=\"selected\">" + (this.uitranslation("Standard")) + "</option>\n            <option value=\"extended\" class=\"translated\" defaultText=\"Extended\"></option>\n            <option value=\"epic\" class=\"translated\" defaultText=\"Epic\"></option>\n            <option value=\"quickbuild\" class=\"translated\" defaultText=\"Quickbuild\"></option>\n        </select>\n    </div>\n    <div class=\"col-md-4 points-display-container\">\n        Points: <span class=\"total-points\">0</span> / <input type=\"number\" class=\"desired-points\" value=\"20\">\n        <span class=\"points-remaining-container\">(<span class=\"points-remaining\"></span>&nbsp;left) <span class=\"points-destroyed red\"></span></span>\n        <span class=\"content-warning unreleased-content-used d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Unreleased content warning\"></span></span>\n        <span class=\"content-warning loading-failed-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Broken squad link warning\"></span></span>\n        <span class=\"content-warning old-version-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"This squad was created for an older version of X-Wing.\"></span></span>\n        <span class=\"content-warning collection-invalid d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Collection warning\"></span></span>\n        <span class=\"content-warning ship-number-invalid-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Ship number warning\"></span></span>\n        <span class=\"content-warning multi-faction-warning-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Multi-Faction warning\"></span></span>\n        <span class=\"content-warning epic-not-legal-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Epic Unofficial\"></span></span>\n    </div>\n    <div class=\"col-md-5 float-right button-container\">\n        <div class=\"btn-group float-right\">\n\n            <button class=\"btn btn-info view-as-text\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print/Export\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-print\"></i></span></button>\n            <a class=\"btn btn-primary d-none collection\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-folder-open\"></i> <span class=\"translated\" defaultText=\"Your Collection\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-folder-open\"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class=\"btn btn-danger randomize\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-random\"></i> <span class=\"translated\" defaultText=\"Randomize!\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-random\"></i></span></button>\n            <button class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\">\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu\">\n                <li><a class=\"dropdown-item randomize-options translated\" defaultText=\"Randomizer Options\"></a></li>\n                <li><a class=\"dropdown-item misc-settings translated\" defaultText=\"Misc Settings\"></a></li>\n            </ul>\n        </div>\n    </div>\n</div>\n\n<div class=\"row squad-save-buttons\">\n    <div class=\"col-md-12\">\n        <button class=\"show-authenticated btn btn-primary save-list\"><i class=\"far fa-save\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save\"></span></button>\n        <button class=\"show-authenticated btn btn-primary save-list-as\"><i class=\"far fa-file\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save As...\"></span></button>\n        <button class=\"show-authenticated btn btn-primary delete-list disabled\"><i class=\"fa fa-trash\"></i>&nbsp;<span class=\"translated\" defaultText=\"Delete\"></span></button>\n        <button class=\"show-authenticated btn btn-info backend-list-my-squads show-authenticated\"><i class=\"fa fa-download\"></i>&nbsp;<span class = \"translated\" defaultText=\"Load Squad\"></span></button>\n        <button class=\"btn btn-info import-squad\"><i class=\"fa fa-file-import\"></i>&nbsp;<span class=\"translated\" defaultText=\"Import\"></span></button>\n        <button class=\"btn btn-info show-points-destroyed\"><i class=\"fas fa-bullseye\"></i>&nbsp;<span class=\"show-points-destroyed-span translated\" defaultText=\"" + (this.uitranslation("Show Points Destroyed")) + "\"></span></button>                    \n        <button class=\"btn btn-danger clear-squad\"><i class=\"fa fa-plus-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"New Squad\"></span></button>\n        <span class=\"show-authenticated backend-status\"></span>\n    </div>\n</div>"));
+    this.status_container.append($.trim("<div class=\"row squad-name-and-points-row\">\n    <div class=\"col-md-3 squad-name-container\">\n        <div class=\"display-name\">\n            <span class=\"squad-name\"></span>\n            <i class=\"far fa-edit\"></i>\n        </div>\n        <div class=\"input-append\">\n            <input type=\"text\" maxlength=\"64\" placeholder=\"" + (this.uitranslation("Name your squad...")) + "\" />\n            <button class=\"btn save\"><i class=\"fa fa-pen-square\"></i></button>\n        </div>\n        <br />\n        <select class=\"game-type-selector\">\n            <option value=\"xwabeta\" class=\"translated\" defaultText=\"XWA Beta\" selected=\"selected\">" + (this.uitranslation("XWA Beta")) + "</option>\n            <option value=\"standard\" class=\"translated\" defaultText=\"Standard\">" + (this.uitranslation("Standard")) + "</option>\n            <option value=\"extended\" class=\"translated\" defaultText=\"Extended\">" + (this.uitranslation("Extended")) + "</option>\n            <option value=\"epic\" class=\"translated\" defaultText=\"Epic\">" + (this.uitranslation("Epic")) + "</option>\n            <option value=\"quickbuild\" class=\"translated\" defaultText=\"Quickbuild\">" + (this.uitranslation("Standard")) + "</option>\n        </select>\n    </div>\n    <div class=\"col-md-4 points-display-container\">\n        Points: <span class=\"total-points\">0</span> / <input type=\"number\" class=\"desired-points\" value=\"20\">\n        <span class=\"points-remaining-container\">(<span class=\"points-remaining\"></span>&nbsp;left) <span class=\"points-destroyed red\"></span></span>\n        <span class=\"content-warning unreleased-content-used d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Unreleased content warning\"></span></span>\n        <span class=\"content-warning loading-failed-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Broken squad link warning\"></span></span>\n        <span class=\"content-warning old-version-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"This squad was created for an older version of X-Wing.\"></span></span>\n        <span class=\"content-warning collection-invalid d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Collection warning\"></span></span>\n        <span class=\"content-warning ship-number-invalid-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Ship number warning\"></span></span>\n        <span class=\"content-warning multi-faction-warning-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Multi-Faction warning\"></span></span>\n        <span class=\"content-warning epic-not-legal-container d-none\"><br /><i class=\"fa fa-exclamation-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"Epic Unofficial\"></span></span>\n    </div>\n    <div class=\"col-md-5 float-right button-container\">\n        <div class=\"btn-group float-right\">\n\n            <button class=\"btn btn-info view-as-text\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-print\"></i>&nbsp;<span class=\"translated\" defaultText=\"Print/Export\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-print\"></i></span></button>\n            <a class=\"btn btn-primary d-none collection\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-folder-open\"></i> <span class=\"translated\" defaultText=\"Your Collection\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-folder-open\"></i></span></a>\n            <!-- Randomize button is marked as danger, since it creates a new squad -->\n            <button class=\"btn btn-danger randomize\"><span class=\"d-none d-lg-block\"><i class=\"fa fa-random\"></i> <span class=\"translated\" defaultText=\"Randomize!\"></span></span><span class=\"d-lg-none\"><i class=\"fa fa-random\"></i></span></button>\n            <button class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\">\n                <span class=\"caret\"></span>\n            </button>\n            <ul class=\"dropdown-menu\">\n                <li><a class=\"dropdown-item randomize-options translated\" defaultText=\"Randomizer Options\"></a></li>\n                <li><a class=\"dropdown-item misc-settings translated\" defaultText=\"Misc Settings\"></a></li>\n            </ul>\n        </div>\n    </div>\n</div>\n\n<div class=\"row squad-save-buttons\">\n    <div class=\"col-md-12\">\n        <button class=\"show-authenticated btn btn-primary save-list\"><i class=\"far fa-save\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save\"></span></button>\n        <button class=\"show-authenticated btn btn-primary save-list-as\"><i class=\"far fa-file\"></i>&nbsp;<span class=\"translated\" defaultText=\"Save As...\"></span></button>\n        <button class=\"show-authenticated btn btn-primary delete-list disabled\"><i class=\"fa fa-trash\"></i>&nbsp;<span class=\"translated\" defaultText=\"Delete\"></span></button>\n        <button class=\"show-authenticated btn btn-info backend-list-my-squads show-authenticated\"><i class=\"fa fa-download\"></i>&nbsp;<span class = \"translated\" defaultText=\"Load Squad\"></span></button>\n        <button class=\"btn btn-info import-squad\"><i class=\"fa fa-file-import\"></i>&nbsp;<span class=\"translated\" defaultText=\"Import\"></span></button>\n        <button class=\"btn btn-info show-points-destroyed\"><i class=\"fas fa-bullseye\"></i>&nbsp;<span class=\"show-points-destroyed-span translated\" defaultText=\"" + (this.uitranslation("Show Points Destroyed")) + "\"></span></button>                    \n        <button class=\"btn btn-danger clear-squad\"><i class=\"fa fa-plus-circle\"></i>&nbsp;<span class=\"translated\" defaultText=\"New Squad\"></span></button>\n        <span class=\"show-authenticated backend-status\"></span>\n    </div>\n</div>"));
     this.container.append(this.status_container);
     this.xws_import_modal = $(document.createElement('DIV'));
     this.xws_import_modal.addClass('modal fade import-modal d-print-none');
@@ -3766,7 +3797,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3383
+              lineno: 3405
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4094,6 +4125,9 @@ exportObj.SquadBuilder = (function() {
         if (_this.isEpic) {
           _this.printable_container.find('.squad-name').append(" <i class=\"xwing-miniatures-font xwing-miniatures-font-energy\"></i>");
         }
+        if (_this.isBeta) {
+          _this.printable_container.find('.squad-name').append(" <i class=\"xwing-miniatures-font xwing-miniatures-font-point\"></i>");
+        }
         _this.printable_container.find('.fancy-under-header').append($.trim("<div class=\"version\">Points Version: 02/23/2024</div>"));
         if ($.trim(_this.notes.val()) !== '') {
           _this.printable_container.find('.printable-body').append($.trim("<h5 class=\"print-notes translated\" defaultText=\"Notes:\"></h5>\n<pre class=\"print-notes\"></pre>"));
@@ -4238,18 +4272,21 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.onGameTypeChanged = function(gametype, cb) {
-    var oldEpic, oldQuickbuild, old_id, oldstandard;
+    var oldQuickbuild, old_id;
     if (cb == null) {
       cb = $.noop;
     }
-    oldstandard = this.isStandard;
-    oldEpic = this.isEpic;
     oldQuickbuild = this.isQuickbuild;
     this.isStandard = false;
+    this.isBeta = false;
     this.isEpic = false;
     this.isQuickbuild = false;
     this.epic_not_legal_container.toggleClass('d-none', true);
     switch (gametype) {
+      case 'xwabeta':
+        this.isBeta = true;
+        this.desired_points_input.val(20);
+        break;
       case 'extended':
         this.desired_points_input.val(20);
         break;
@@ -4500,6 +4537,8 @@ exportObj.SquadBuilder = (function() {
           return 'h';
         case 'extended':
           return 's';
+        case 'xwabeta':
+          return 'b';
         case 'epic':
           return 'e';
         case 'quickbuild':
@@ -4555,6 +4594,9 @@ exportObj.SquadBuilder = (function() {
           break;
         case 'h':
           this.changeGameTypeOnSquadLoad('standard');
+          break;
+        case 'b':
+          this.changeGameTypeOnSquadLoad('xwabeta');
           break;
         case 'e':
           this.changeGameTypeOnSquadLoad('epic');
@@ -4715,7 +4757,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4298
+              lineno: 4328
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4725,7 +4767,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4299
+                lineno: 4329
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -4911,8 +4953,8 @@ exportObj.SquadBuilder = (function() {
           pilot = available_faction_pilots[_i];
           _results.push({
             id: pilot.id,
-            text: "" + ((((_ref = exportObj.settings) != null ? _ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? pilot.skill + ' - ' : '') + (pilot.display_name ? pilot.display_name : pilot.name) + " (" + pilot.points + (pilot.loadout != null ? "/" + pilot.loadout : "") + ")",
-            points: pilot.points,
+            text: "" + ((((_ref = exportObj.settings) != null ? _ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? pilot.skill + ' - ' : '') + (pilot.display_name ? pilot.display_name : pilot.name) + " (" + (this.isBeta && (pilot.pointsbeta != null) ? pilot.pointsbeta : pilot.points) + (pilot.loadout != null ? (this.isBeta && (pilot.loadoutbeta != null) ? "/" + pilot.loadoutbeta : "/" + pilot.loadout) : "") + ")",
+            points: (this.isBeta && (pilot.pointsbeta != null) ? pilot.pointsbeta : pilot.points),
             ship: pilot.ship,
             name: pilot.name,
             display_name: pilot.display_name,
@@ -4920,7 +4962,7 @@ exportObj.SquadBuilder = (function() {
           });
         }
         return _results;
-      })();
+      }).call(this);
     } else {
       quickbuilds_matching_ship_and_faction = (function() {
         var _ref, _results;
@@ -5168,7 +5210,7 @@ exportObj.SquadBuilder = (function() {
       _results = [];
       for (upgrade_name in available_upgrades) {
         upgrade = available_upgrades[upgrade_name];
-        if ((__indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && ship.standardized_check(upgrade) && ship.restriction_check((upgrade.restrictions ? upgrade.restrictions : void 0), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) && __indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((_ref = upgrade.slot, __indexOf.call(this.uniques_in_use['Slot'], _ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
+        if ((__indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && ship.standardized_check(upgrade) && ship.restriction_check((ship.builder.isBeta && (upgrade.restrictionsbeta != null) ? upgrade.restrictionsbeta : (upgrade.restrictions ? upgrade.restrictions : void 0)), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) && __indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((_ref = upgrade.slot, __indexOf.call(this.uniques_in_use['Slot'], _ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
           _results.push(upgrade);
         }
       }
@@ -5489,7 +5531,7 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.showTooltip = function(type, data, additional_opts, container, force_update) {
-    var addon_count, chargeHTML, chassis_title, cls, count, effective_stats, faction, first, forcerecurring, ini, inis, item, loadout_range_text, matching_pilots, missingStuffInfoText, name, pilot, pilot_count, point_info, point_range_text, possible_costs, possible_inis, possible_loadout, recurringicon, restriction_info, ship, ship_count, slot, slot_types, source, sources, state, uniquedots, upgrade, well, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref33, _ref34, _ref35, _ref36, _ref37, _ref38, _ref39, _ref4, _ref40, _ref41, _ref42, _ref43, _ref44, _ref45, _ref46, _ref47, _ref48, _ref49, _ref5, _ref50, _ref51, _ref52, _ref53, _ref54, _ref55, _ref56, _ref57, _ref58, _ref59, _ref6, _ref60, _ref61, _ref62, _ref63, _ref64, _ref65, _ref66, _ref67, _ref68, _ref69, _ref7, _ref70, _ref71, _ref72, _ref73, _ref74, _ref75, _ref76, _ref77, _ref78, _ref79, _ref8, _ref80, _ref81, _ref82, _ref83, _ref84, _ref85, _ref86, _ref87, _ref88, _ref89, _ref9, _ref90, _ref91, _ref92, _ref93, _ref94, _ref95, _results, _results1;
+    var addon_count, chargeHTML, chassis_title, cls, count, effective_stats, faction, first, forcerecurring, ini, inis, item, loadout_range_text, matching_pilots, missingStuffInfoText, name, pilot, pilot_count, point_info, point_range_text, points, possible_costs, possible_inis, possible_loadout, recurringicon, restriction_info, ship, ship_count, slot, slot_types, source, sources, state, uniquedots, upgrade, well, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref33, _ref34, _ref35, _ref36, _ref37, _ref38, _ref39, _ref4, _ref40, _ref41, _ref42, _ref43, _ref44, _ref45, _ref46, _ref47, _ref48, _ref49, _ref5, _ref50, _ref51, _ref52, _ref53, _ref54, _ref55, _ref56, _ref57, _ref58, _ref59, _ref6, _ref60, _ref61, _ref62, _ref63, _ref64, _ref65, _ref66, _ref67, _ref68, _ref69, _ref7, _ref70, _ref71, _ref72, _ref73, _ref74, _ref75, _ref76, _ref77, _ref78, _ref79, _ref8, _ref80, _ref81, _ref82, _ref83, _ref84, _ref85, _ref86, _ref87, _ref88, _ref89, _ref9, _ref90, _ref91, _ref92, _ref93, _ref94, _ref95, _results, _results1;
     if (container == null) {
       container = this.info_container;
     }
@@ -5515,9 +5557,17 @@ exportObj.SquadBuilder = (function() {
             if (!(_ref1 = pilot.skill, __indexOf.call(possible_inis, _ref1) >= 0)) {
               possible_inis.push(pilot.skill);
             }
-            possible_costs.push(pilot.points);
-            if (pilot.loadout != null) {
-              possible_loadout.push(pilot.loadout);
+            if (this.isBeta && (pilot.pointsbeta != null)) {
+              possible_costs.push(pilot.pointsbeta);
+            } else {
+              possible_costs.push(pilot.points);
+            }
+            if (this.isBeta && (pilot.loadoutbeta != null)) {
+              possible_loadout.push(pilot.loadoutbeta);
+            } else {
+              if (pilot.loadout != null) {
+                possible_loadout.push(pilot.loadout);
+              }
             }
             if (pilot.slots != null) {
               for (slot in slot_types) {
@@ -5776,9 +5826,9 @@ exportObj.SquadBuilder = (function() {
           container.find('tr.info-base').show();
           container.find('tr.info-skill td.info-data').text(data.skill);
           container.find('tr.info-skill').toggle(data.skill != null);
-          container.find('tr.info-points td.info-data').text(data.points);
+          container.find('tr.info-points td.info-data').text((this.isBeta && (data.pointsbeta != null) ? data.pointsbeta : data.points));
           container.find('tr.info-points').show();
-          container.find('tr.info-loadout td.info-data').text(data.loadout);
+          container.find('tr.info-loadout td.info-data').text((this.isBeta && (data.loadoutbeta != null) ? data.loadoutbeta : data.loadout));
           if (data.upgrades != null) {
             container.find('tr.info-loadout').hide();
           } else {
@@ -5884,16 +5934,29 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-upgrades').hide();
           } else {
             container.find('tr.info-upgrades').show();
-            container.find('tr.info-upgrades td.info-data').html(data.slots != null ? ((function() {
-              var _k, _len2, _ref60, _results;
-              _ref60 = data.slots;
-              _results = [];
-              for (_k = 0, _len2 = _ref60.length; _k < _len2; _k++) {
-                slot = _ref60[_k];
-                _results.push(exportObj.translate('sloticon', slot));
-              }
-              return _results;
-            })()).join(' ') : (data.upgrades != null ? this.listStandardUpgrades(data.upgrades) : 'None'));
+            if (this.isBeta && (data.slotsbeta != null)) {
+              container.find('tr.info-upgrades td.info-data').html(data.slotsbeta != null ? ((function() {
+                var _k, _len2, _ref60, _results;
+                _ref60 = data.slotsbeta;
+                _results = [];
+                for (_k = 0, _len2 = _ref60.length; _k < _len2; _k++) {
+                  slot = _ref60[_k];
+                  _results.push(exportObj.translate('sloticon', slot));
+                }
+                return _results;
+              })()).join(' ') : (data.upgrades != null ? this.listStandardUpgrades(data.upgrades) : 'None'));
+            } else {
+              container.find('tr.info-upgrades td.info-data').html(data.slots != null ? ((function() {
+                var _k, _len2, _ref60, _results;
+                _ref60 = data.slots;
+                _results = [];
+                for (_k = 0, _len2 = _ref60.length; _k < _len2; _k++) {
+                  slot = _ref60[_k];
+                  _results.push(exportObj.translate('sloticon', slot));
+                }
+                return _results;
+              })()).join(' ') : (data.upgrades != null ? this.listStandardUpgrades(data.upgrades) : 'None'));
+            }
           }
           container.find('p.info-maneuvers').show();
           container.find('p.info-maneuvers').html(this.getManeuverTableHTML((_ref60 = effective_stats != null ? effective_stats.maneuvers : void 0) != null ? _ref60 : ship.maneuvers, ship.maneuvers));
@@ -6074,20 +6137,25 @@ exportObj.SquadBuilder = (function() {
             container.find('.info-collection').hide();
           }
           container.find('.info-name').html("" + uniquedots + (data.display_name ? data.display_name : data.name) + (exportObj.isReleased(data) || (data.standard != null) ? "" : " (" + (this.uitranslation('unreleased')) + ")") + (data.standard != null ? " (S)" : ""));
-          if (data.variablepoints != null) {
-            point_info = "<i>" + this.uitranslation("varPointCostsPoints", data.points);
+          if (this.isBeta && (data.pointsbeta != null)) {
+            points = data.pointsbeta;
+          } else {
+            points = data.points;
+          }
+          if (Array.isArray(points)) {
+            point_info = "<i>" + this.uitranslation("varPointCostsPoints", points);
             switch (data.variablepoints) {
               case "Agility":
                 point_info += this.uitranslation("varPointCostsConditionAgility", (function() {
                   _results = [];
-                  for (var _k = 0, _ref87 = data.points.length - 1; 0 <= _ref87 ? _k <= _ref87 : _k >= _ref87; 0 <= _ref87 ? _k++ : _k--){ _results.push(_k); }
+                  for (var _k = 0, _ref87 = points.length - 1; 0 <= _ref87 ? _k <= _ref87 : _k >= _ref87; 0 <= _ref87 ? _k++ : _k--){ _results.push(_k); }
                   return _results;
                 }).apply(this));
                 break;
               case "Initiative":
                 point_info += this.uitranslation("varPointCostsConditionIni", (function() {
                   _results1 = [];
-                  for (var _l = 0, _ref88 = data.points.length - 1; 0 <= _ref88 ? _l <= _ref88 : _l >= _ref88; 0 <= _ref88 ? _l++ : _l--){ _results1.push(_l); }
+                  for (var _l = 0, _ref88 = points.length - 1; 0 <= _ref88 ? _l <= _ref88 : _l >= _ref88; 0 <= _ref88 ? _l++ : _l--){ _results1.push(_l); }
                   return _results1;
                 }).apply(this));
                 break;
@@ -6673,13 +6741,22 @@ exportObj.SquadBuilder = (function() {
   };
 
   SquadBuilder.prototype.restriction_text = function(card) {
-    var array, b, comma, data, factionitem, ignoreShip, index, othertext, r, shipname, text, uniquetext, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref2;
+    var array, b, card_restrictions, comma, data, factionitem, ignoreShip, index, othertext, r, shipname, standardized, text, uniquetext, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1;
     uniquetext = comma = othertext = text = '';
     ignoreShip = false;
-    if (card.restrictions) {
-      _ref = card.restrictions;
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        r = _ref[_i];
+    if (this.isBeta && (card.restrictionsbeta != null)) {
+      card_restrictions = card.restrictionsbeta;
+    }
+    standardized = card.standardized != null;
+    if (this.isBeta && (card.standardizedbeta != null)) {
+      standardized = card.standardizedbeta;
+    }
+    if (card.restrictions != null) {
+      card_restrictions = card.restrictions;
+    }
+    if (card_restrictions != null) {
+      for (_i = 0, _len = card_restrictions.length; _i < _len; _i++) {
+        r = card_restrictions[_i];
         switch (r[0]) {
           case "FactionOrUnique":
             othertext += comma + exportObj.translate('faction', "" + r[2]);
@@ -6755,9 +6832,9 @@ exportObj.SquadBuilder = (function() {
       if (othertext === '') {
         if (card.faction) {
           if (card.faction instanceof Array) {
-            _ref1 = card.faction;
-            for (_k = 0, _len2 = _ref1.length; _k < _len2; _k++) {
-              factionitem = _ref1[_k];
+            _ref = card.faction;
+            for (_k = 0, _len2 = _ref.length; _k < _len2; _k++) {
+              factionitem = _ref[_k];
               othertext += comma + exportObj.translate('faction', "" + factionitem);
               comma = ' or ';
             }
@@ -6769,9 +6846,9 @@ exportObj.SquadBuilder = (function() {
       }
       if (card.ship && ignoreShip === false) {
         if (card.ship instanceof Array) {
-          _ref2 = card.ship;
-          for (_l = 0, _len3 = _ref2.length; _l < _len3; _l++) {
-            shipname = _ref2[_l];
+          _ref1 = card.ship;
+          for (_l = 0, _len3 = _ref1.length; _l < _len3; _l++) {
+            shipname = _ref1[_l];
             othertext += comma + shipname;
             comma = ' or ';
           }
@@ -6784,7 +6861,7 @@ exportObj.SquadBuilder = (function() {
         othertext += comma + exportObj.translate('gameterms', "Solitary");
         comma = ', ';
       }
-      if (card.standardized) {
+      if (standardized) {
         othertext += comma + exportObj.translate('gameterms', "Standardized");
         comma = ', ';
       }
@@ -7057,6 +7134,10 @@ exportObj.SquadBuilder = (function() {
         error = "";
         if (this.isStandard) {
           gamemode = 'h';
+        } else if (this.isEpic) {
+          gamemode = 'e';
+        } else if (this.isBeta) {
+          gamemode = 'b';
         } else {
           gamemode = 's';
         }
@@ -7185,7 +7266,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 6061
+                  lineno: 6106
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -7268,7 +7349,7 @@ Ship = (function() {
       _ref4 = other.upgrades;
       for (_j = 0, _len1 = _ref4.length; _j < _len1; _j++) {
         upgrade = _ref4[_j];
-        if (((upgrade != null ? upgrade.data : void 0) != null) && (upgrade.data.standardized == null) && (upgrade.data.standard == null) && !upgrade.data.unique && ((upgrade.data.max_per_squad == null) || this.builder.countUpgrades(upgrade.data.canonical_name) < upgrade.data.max_per_squad)) {
+        if (((upgrade != null ? upgrade.data : void 0) != null) && !upgrade.isStandardized() && (upgrade.data.standard == null) && !upgrade.data.unique && ((upgrade.data.max_per_squad == null) || this.builder.countUpgrades(upgrade.data.canonical_name) < upgrade.data.max_per_squad)) {
           if (other_upgrades[_name = upgrade.slot] == null) {
             other_upgrades[_name] = [];
           }
@@ -7396,7 +7477,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 6178
+                          lineno: 6223
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -7446,7 +7527,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 6211
+                                  lineno: 6256
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7615,7 +7696,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 6312
+                      lineno: 6357
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7710,7 +7791,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 6357
+                lineno: 6402
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7727,7 +7808,7 @@ Ship = (function() {
   };
 
   Ship.prototype.setupAddons = function() {
-    var slot, upgrade, upgrade_data, upgrade_name, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _results, _results1, _results2;
+    var pilotslots, slot, upgrade, upgrade_data, upgrade_name, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _results, _results1, _results2;
     if (!this.builder.isQuickbuild) {
       if (this.pilot.upgrades != null) {
         this.hasFixedUpgrades = true;
@@ -7752,10 +7833,15 @@ Ship = (function() {
         return _results;
       } else {
         this.hasFixedUpgrades = false;
-        _ref3 = (_ref2 = this.pilot.slots) != null ? _ref2 : [];
+        if (this.builder.isBeta && (this.pilot.slotsbeta != null)) {
+          pilotslots = this.pilot.slotsbeta;
+        } else {
+          pilotslots = this.pilot.slots;
+        }
+        _ref2 = pilotslots != null ? pilotslots : [];
         _results1 = [];
-        for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
-          slot = _ref3[_j];
+        for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
+          slot = _ref2[_j];
           _results1.push(this.upgrades.push(new exportObj.Upgrade({
             ship: this,
             container: this.addon_container,
@@ -7765,10 +7851,10 @@ Ship = (function() {
         return _results1;
       }
     } else {
-      _ref5 = (_ref4 = exportObj.quickbuildsById[this.quickbuildId].upgrades) != null ? _ref4 : [];
+      _ref4 = (_ref3 = exportObj.quickbuildsById[this.quickbuildId].upgrades) != null ? _ref3 : [];
       _results2 = [];
-      for (_k = 0, _len2 = _ref5.length; _k < _len2; _k++) {
-        upgrade_name = _ref5[_k];
+      for (_k = 0, _len2 = _ref4.length; _k < _len2; _k++) {
+        upgrade_name = _ref4[_k];
         upgrade_data = exportObj.upgrades[upgrade_name];
         if (upgrade_data == null) {
           console.log("Unknown Upgrade: " + upgrade_name);
@@ -7803,7 +7889,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6401
+              lineno: 6448
             }));
           }
         }
@@ -7817,18 +7903,18 @@ Ship = (function() {
   };
 
   Ship.prototype.getPoints = function() {
-    var effective_stats, loadout, points, quickbuild, threat, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
+    var effective_stats, loadout, points, quickbuild, threat, _ref, _ref1;
     if (!this.builder.isQuickbuild) {
       if (this.pilot != null) {
         effective_stats = this.effectiveStats();
         points = effective_stats != null ? effective_stats.points : void 0;
         loadout = effective_stats != null ? effective_stats.loadout : void 0;
       } else {
-        points = (_ref = (_ref1 = this.pilot) != null ? _ref1.points : void 0) != null ? _ref : 0;
-        loadout = (_ref2 = (_ref3 = this.pilot) != null ? _ref3.loadout : void 0) != null ? _ref2 : 0;
+        points = 0;
+        loadout = 0;
       }
       this.points_container.find('div').text("" + points);
-      this.points_container.find('.upgrade-points').text((((_ref4 = this.pilot) != null ? _ref4.loadout : void 0) != null) && (this.pilot.loadout > 0) ? "(" + this.upgrade_points_total + "/" + loadout + ")" : "");
+      this.points_container.find('.upgrade-points').text((((_ref = this.pilot) != null ? _ref.loadout : void 0) != null) && (this.pilot.loadout > 0) ? "(" + this.upgrade_points_total + "/" + loadout + ")" : "");
       if (points > 0) {
         this.points_container.fadeTo('fast', 1);
       } else {
@@ -7837,7 +7923,7 @@ Ship = (function() {
       return points;
     } else {
       quickbuild = exportObj.quickbuildsById[this.quickbuildId];
-      threat = this.primary ? (_ref5 = quickbuild != null ? quickbuild.threat : void 0) != null ? _ref5 : 0 : 0;
+      threat = this.primary ? (_ref1 = quickbuild != null ? quickbuild.threat : void 0) != null ? _ref1 : 0 : 0;
       if ((quickbuild != null ? quickbuild.wingleader : void 0) != null) {
         threat = quickbuild.threat[quickbuild.wingmates.indexOf(this.wingmates.length)];
       }
@@ -7898,7 +7984,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6463
+                lineno: 6510
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -7946,7 +8032,7 @@ Ship = (function() {
       });
       this.pilot_selector.select2('data', {
         id: this.pilot.id,
-        text: "" + ((((_ref = exportObj.settings) != null ? _ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? this.pilot.skill + ' - ' : '') + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + (this.quickbuildId !== -1 ? exportObj.quickbuildsById[this.quickbuildId].suffix : "") + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + (this.quickbuildId !== -1 || (this.pilot.loadout == null) ? "" : "/" + this.pilot.loadout) + ")",
+        text: "" + ((((_ref = exportObj.settings) != null ? _ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? this.pilot.skill + ' - ' : '') + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + (this.quickbuildId !== -1 ? exportObj.quickbuildsById[this.quickbuildId].suffix : "") + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : (this.builder.isBeta && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + (this.quickbuildId !== -1 || (this.pilot.loadout == null) ? "" : (this.builder.isBeta && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : "/" + this.pilot.loadout)) + ")",
         chassis: this.pilot.chassis != null ? this.pilot.chassis : ""
       });
       this.pilot_selector.data('select2').container.show();
@@ -8365,7 +8451,7 @@ Ship = (function() {
       }
       hullIconHTML += "<i class=\"xwing-miniatures-font header-hull xwing-miniatures-font-hull\"></i>";
     }
-    html = $.trim("<div class=\"fancy-pilot-header\">\n    <div class=\"pilot-header-text\">" + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + " <i class=\"xwing-miniatures-ship xwing-miniatures-ship-" + (this.data.name.canonicalize()) + "\"></i><span class=\"fancy-ship-type\"> " + (this.data.display_name ? this.data.display_name : this.data.name) + "</span></div>\n    <div class=\"mask\">\n        <div class=\"outer-circle\">\n            <div class=\"inner-circle pilot-points\">" + (this.quickbuildId !== -1 ? (this.primary ? this.getPoints() : '*') : this.pilot.points) + "</div>\n        </div>\n    </div>\n</div>\n<div class=\"fancy-pilot-stats\">\n    <div class=\"pilot-stats-content\">\n        <span class=\"info-data info-skill\">INI " + (statAndEffectiveStat(this.pilot.skill, effective_stats, 'skill')) + "</span>\n        " + engagementHTML + "\n        " + attackbullHTML + "\n        " + attackHTML + "\n        " + attackbHTML + "\n        " + attackfHTML + "\n        " + attacktHTML + "\n        " + attacklHTML + "\n        " + attackrHTML + "\n        " + attackdtHTML + "\n        <i class=\"xwing-miniatures-font header-agility xwing-miniatures-font-agility\"></i>\n        <span class=\"info-data info-agility\">" + (statAndEffectiveStat((_ref28 = (_ref29 = this.pilot.ship_override) != null ? _ref29.agility : void 0) != null ? _ref28 : this.data.agility, effective_stats, 'agility')) + "</span>                    \n        " + hullIconHTML + "\n        <span class=\"info-data info-hull\">" + (statAndEffectiveStat((_ref30 = (_ref31 = this.pilot.ship_override) != null ? _ref31.hull : void 0) != null ? _ref30 : this.data.hull, effective_stats, 'hull')) + "</span>\n        " + shieldIconHTML + "\n        <span class=\"info-data info-shields\">" + (statAndEffectiveStat((_ref32 = (_ref33 = this.pilot.ship_override) != null ? _ref33.shields : void 0) != null ? _ref32 : this.data.shields, effective_stats, 'shields')) + shieldRECUR + "</span>\n        " + energyHTML + "\n        " + forceHTML + "\n        " + chargeHTML + "\n        <br />\n        <div class=\"action-bar\">\n            " + action_bar + "\n        </div>\n    </div>\n</div>");
+    html = $.trim("<div class=\"fancy-pilot-header\">\n    <div class=\"pilot-header-text\">" + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + " <i class=\"xwing-miniatures-ship xwing-miniatures-ship-" + (this.data.name.canonicalize()) + "\"></i><span class=\"fancy-ship-type\"> " + (this.data.display_name ? this.data.display_name : this.data.name) + "</span></div>\n    <div class=\"mask\">\n        <div class=\"outer-circle\">\n            <div class=\"inner-circle pilot-points\">" + (this.quickbuildId !== -1 ? (this.primary ? this.getPoints() : '*') : (this.builder.isBeta && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + "</div>\n        </div>\n    </div>\n</div>\n<div class=\"fancy-pilot-stats\">\n    <div class=\"pilot-stats-content\">\n        <span class=\"info-data info-skill\">INI " + (statAndEffectiveStat(this.pilot.skill, effective_stats, 'skill')) + "</span>\n        " + engagementHTML + "\n        " + attackbullHTML + "\n        " + attackHTML + "\n        " + attackbHTML + "\n        " + attackfHTML + "\n        " + attacktHTML + "\n        " + attacklHTML + "\n        " + attackrHTML + "\n        " + attackdtHTML + "\n        <i class=\"xwing-miniatures-font header-agility xwing-miniatures-font-agility\"></i>\n        <span class=\"info-data info-agility\">" + (statAndEffectiveStat((_ref28 = (_ref29 = this.pilot.ship_override) != null ? _ref29.agility : void 0) != null ? _ref28 : this.data.agility, effective_stats, 'agility')) + "</span>                    \n        " + hullIconHTML + "\n        <span class=\"info-data info-hull\">" + (statAndEffectiveStat((_ref30 = (_ref31 = this.pilot.ship_override) != null ? _ref31.hull : void 0) != null ? _ref30 : this.data.hull, effective_stats, 'hull')) + "</span>\n        " + shieldIconHTML + "\n        <span class=\"info-data info-shields\">" + (statAndEffectiveStat((_ref32 = (_ref33 = this.pilot.ship_override) != null ? _ref33.shields : void 0) != null ? _ref32 : this.data.shields, effective_stats, 'shields')) + shieldRECUR + "</span>\n        " + energyHTML + "\n        " + forceHTML + "\n        " + chargeHTML + "\n        <br />\n        <div class=\"action-bar\">\n            " + action_bar + "\n        </div>\n    </div>\n</div>");
     if (this.pilot.text) {
       html += $.trim("<div class=\"fancy-pilot-text\">" + this.pilot.text + "</div>");
     }
@@ -8402,13 +8488,13 @@ Ship = (function() {
     }
     HalfPoints = Math.floor(this.getPoints() / 2);
     Threshold = Math.floor((effective_stats['hull'] + effective_stats['shields']) / 2);
-    html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.pilot.loadout != null ? "/" + this.pilot.loadout : "") + "), " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Damage Threshold")) + ": " + Threshold + "</strong> \n</div>");
+    html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + ((this.builder.isBeta != null) && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + "), " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Damage Threshold")) + ": " + Threshold + "</strong> \n</div>");
     return "<div class=\"fancy-ship\">" + html + "</div>";
   };
 
   Ship.prototype.toTableRow = function() {
     var halfPoints, points, slotted_upgrades, table_html, threshold, upgrade, _i, _len;
-    table_html = $.trim("<tr class=\"simple-pilot\">\n    <td class=\"name\">" + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + " &mdash; " + (this.data.display_name ? this.data.display_name : this.data.name) + "</td>\n    <td class=\"points\">" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + "</td>\n</tr>");
+    table_html = $.trim("<tr class=\"simple-pilot\">\n    <td class=\"name\">" + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + " &mdash; " + (this.data.display_name ? this.data.display_name : this.data.name) + "</td>\n    <td class=\"points\">" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta != null) && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + "</td>\n</tr>");
     slotted_upgrades = (function() {
       var _i, _len, _ref, _results;
       _ref = this.upgrades;
@@ -8431,14 +8517,14 @@ Ship = (function() {
     table_html += "<tr class=\"simple-ship-total\"><td colspan=\"2\">" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "</td></tr>";
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.pilot.loadout != null ? "/" + this.pilot.loadout : "") + ") " + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "</td></tr>";
+    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + ((this.builder.isBeta != null) && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + ") " + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "</td></tr>";
     table_html += '<tr><td>&nbsp;</td><td></td></tr>';
     return table_html;
   };
 
   Ship.prototype.toSimpleCopy = function() {
     var halfPoints, points, simplecopy, simplecopy_upgrades, slotted_upgrades, threshold, upgrade, upgrade_simplecopy, _i, _len;
-    simplecopy = "" + this.pilot.display_name + " – " + this.data.display_name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + ")    \n";
+    simplecopy = "" + this.pilot.display_name + " – " + this.data.display_name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta != null) && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + ")    \n";
     slotted_upgrades = (function() {
       var _i, _len, _ref, _results;
       _ref = this.upgrades;
@@ -8467,13 +8553,13 @@ Ship = (function() {
     }
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    simplecopy += "" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.pilot.loadout != null ? "/" + this.pilot.loadout : "") + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "    \n    \n";
+    simplecopy += "" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + ((this.builder.isBeta != null) && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "    \n    \n";
     return simplecopy;
   };
 
   Ship.prototype.toRedditText = function() {
     var halfPoints, points, reddit, reddit_upgrades, slotted_upgrades, threshold, upgrade, upgrade_reddit, _i, _len;
-    reddit = "**" + this.pilot.name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : this.pilot.points) + ")**    \n";
+    reddit = "**" + this.pilot.name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta != null) && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + ")**    \n";
     slotted_upgrades = (function() {
       var _i, _len, _ref, _results;
       _ref = this.upgrades;
@@ -8500,7 +8586,7 @@ Ship = (function() {
         }
       }
       reddit += reddit_upgrades.join("    ");
-      reddit += "&nbsp;*" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.pilot.loadout != null ? "/" + this.pilot.loadout : "") + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "*    \n";
+      reddit += "&nbsp;*" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + ((this.builder.isBeta != null) && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "*    \n";
     }
     return reddit;
   };
@@ -8649,6 +8735,14 @@ Ship = (function() {
       loadout: (_ref35 = this.pilot.loadout) != null ? _ref35 : 0,
       skill: (_ref36 = this.pilot.skill) != null ? _ref36 : 0
     };
+    if (this.builder.isBeta) {
+      if (this.pilot.pointsbeta != null) {
+        stats.points = this.pilot.pointsbeta;
+      }
+      if (this.pilot.loadoutbeta != null) {
+        stats.loadout = this.pilot.loadoutbeta;
+      }
+    }
     stats.maneuvers = [];
     for (s = _i = 0, _ref37 = ((_ref38 = this.data.maneuvers) != null ? _ref38 : []).length; 0 <= _ref37 ? _i < _ref37 : _i > _ref37; s = 0 <= _ref37 ? ++_i : --_i) {
       stats.maneuvers[s] = this.data.maneuvers[s].slice(0);
@@ -8682,7 +8776,7 @@ Ship = (function() {
   };
 
   Ship.prototype.validate = function() {
-    var addCommand, equipped_upgrades, func, i, max_checks, meets_restrictions, pilot_func, pilot_upgrades_check, restrictions, unchanged, upgrade, valid, _i, _j, _k, _l, _len, _len1, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+    var addCommand, equipped_upgrades, func, i, max_checks, meets_restrictions, pilot_func, pilot_upgrades_check, restrictions, unchanged, upgrade, upgradeslot, valid, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
     if (this.pilot == null) {
       return true;
     }
@@ -8734,11 +8828,27 @@ Ship = (function() {
           if (func != null) {
             meets_restrictions = meets_restrictions && (upgrade != null ? (_ref9 = upgrade.data) != null ? _ref9.validation_func(this, upgrade) : void 0 : void 0);
           }
-          restrictions = (_ref10 = upgrade != null ? (_ref11 = upgrade.data) != null ? _ref11.restrictions : void 0 : void 0) != null ? _ref10 : void 0;
+          if (this.builder.isBeta && ((upgrade != null ? (_ref10 = upgrade.data) != null ? _ref10.also_occupies_upgrades_beta : void 0 : void 0) != null)) {
+            _ref11 = upgrade.data.also_occupies_upgrades_beta;
+            for (_m = 0, _len2 = _ref11.length; _m < _len2; _m++) {
+              upgradeslot = _ref11[_m];
+              meets_restrictions = meets_restrictions && upgrade.occupiesAnUpgradeSlot(upgradeslot);
+            }
+          } else {
+            if ((upgrade != null ? (_ref12 = upgrade.data) != null ? _ref12.also_occupies_upgrades : void 0 : void 0) != null) {
+              _ref13 = upgrade.data.also_occupies_upgrades;
+              for (_n = 0, _len3 = _ref13.length; _n < _len3; _n++) {
+                upgradeslot = _ref13[_n];
+                meets_restrictions = meets_restrictions && upgrade.occupiesAnUpgradeSlot(upgradeslot);
+              }
+              console.log("" + meets_restrictions);
+            }
+          }
+          restrictions = (_ref14 = upgrade != null ? (_ref15 = upgrade.data) != null ? _ref15.restrictions : void 0 : void 0) != null ? _ref14 : void 0;
           meets_restrictions = meets_restrictions && this.restriction_check(restrictions, upgrade, upgrade.getPoints(), this.upgrade_points_total);
         }
-        if ((!meets_restrictions || (((upgrade != null ? upgrade.data : void 0) != null) && ((_ref12 = upgrade.data, __indexOf.call(equipped_upgrades, _ref12) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !pilot_upgrades_check && !this.builder.isQuickbuild) {
-          console.log("Invalid upgrade: " + (upgrade != null ? (_ref13 = upgrade.data) != null ? _ref13.name : void 0 : void 0) + ", check " + ((_ref14 = this.pilot) != null ? _ref14.upgrades : void 0) + " on pilot " + ((_ref15 = this.pilot) != null ? _ref15.name : void 0));
+        if ((!meets_restrictions || (((upgrade != null ? upgrade.data : void 0) != null) && ((_ref16 = upgrade.data, __indexOf.call(equipped_upgrades, _ref16) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !pilot_upgrades_check && !this.builder.isQuickbuild) {
+          console.log("Invalid upgrade: " + (upgrade != null ? (_ref17 = upgrade.data) != null ? _ref17.name : void 0 : void 0) + ", check " + ((_ref18 = this.pilot) != null ? _ref18.upgrades : void 0) + " on pilot " + ((_ref19 = this.pilot) != null ? _ref19.name : void 0));
           upgrade.setById(null);
           valid = false;
           unchanged = false;
@@ -8868,7 +8978,10 @@ Ship = (function() {
                 break;
               }
             }
-            return check;
+            if (check === false) {
+              return false;
+            }
+            break;
           case "Action":
             if (r[1].startsWith("W-")) {
               w = r[1].substring(2);
@@ -8930,10 +9043,10 @@ Ship = (function() {
             }
             break;
           case "HasForce":
-            if ((this.pilot.force != null) === r[1]) {
-              return true;
+            if ((this.pilot.force != null) !== r[1]) {
+              false;
             }
-            return false;
+            break;
           case "AgilityEquals":
             if (!(effective_stats.agility === r[1])) {
               return false;
@@ -8943,7 +9056,7 @@ Ship = (function() {
             if (r[1] !== ((this.pilot.unique != null) || (this.pilot.max_per_squad != null))) {
               return false;
             }
-            return true;
+            break;
           case "Format":
             switch (r[1]) {
               case "Epic":
@@ -8963,13 +9076,32 @@ Ship = (function() {
   };
 
   Ship.prototype.standardized_check = function(upgrade_data) {
-    var ship, slotfree, upgrade, _i, _j, _len, _len1, _ref, _ref1, _ref2;
-    if (upgrade_data.standardized != null) {
+    var checkstandard, restrictions, ship, slotfree, upgrade, _i, _j, _len, _len1, _ref, _ref1, _ref2;
+    checkstandard = false;
+    if (this.builder.isBeta) {
+      if (upgrade_data.standardizedbeta != null) {
+        checkstandard = upgrade_data.standardizedbeta;
+      }
+    } else {
+      if (upgrade_data.standardized != null) {
+        checkstandard = true;
+      }
+    }
+    if (checkstandard) {
       _ref = this.builder.ships;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         ship = _ref[_i];
         if (((ship != null ? ship.data : void 0) != null) && ship.data.name === this.data.name) {
-          if ((upgrade_data.restrictions != null) && ship.restriction_check(upgrade_data.restrictions, upgrade_data) && !(((_ref1 = ship.pilot) != null ? _ref1.upgrades : void 0) != null)) {
+          if (this.builder.isBeta) {
+            if (upgrade_data.restrictionsbeta != null) {
+              restrictions = upgrade_data.restrictionsbeta;
+            } else {
+              if (upgrade_data.restrictions != null) {
+                restrictions = upgrade_data.restrictions;
+              }
+            }
+          }
+          if ((restrictions != null) && ship.restriction_check(restrictions, upgrade_data) && !(((_ref1 = ship.pilot) != null ? _ref1.upgrades : void 0) != null)) {
             if ((ship.pilot.loadout != null) && (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)) {
               return false;
             }
@@ -9198,7 +9330,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7418
+                lineno: 7489
               })
             ]);
             __iced_deferrals._fulfill();
@@ -9209,12 +9341,12 @@ GenericAddon = (function() {
       });
     })(this)((function(_this) {
       return function() {
-        var _i, _len, _ref, _ref1;
-        if (((_ref = _this.data) != null ? _ref.standardized : void 0) != null) {
+        var _i, _len, _ref;
+        if (_this.isStandardized()) {
           isLastShip = true;
-          _ref1 = _this.ship.builder.ships;
-          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-            ship = _ref1[_i];
+          _ref = _this.ship.builder.ships;
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            ship = _ref[_i];
             if ((ship.data != null) && (_this.ship.data.name === ship.data.name) && (_this.ship !== ship)) {
               isLastShip = false;
             }
@@ -9231,6 +9363,19 @@ GenericAddon = (function() {
         return cb(args);
       };
     })(this));
+  };
+
+  GenericAddon.prototype.isStandardized = function() {
+    var _ref, _ref1;
+    if (this.ship.builder.isBeta) {
+      if (((_ref = this.data) != null ? _ref.standardizedbeta : void 0) != null) {
+        return this.data.standardizedbeta;
+      }
+    }
+    if (((_ref1 = this.data) != null ? _ref1.standardized : void 0) != null) {
+      return true;
+    }
+    return false;
   };
 
   GenericAddon.prototype.setupSelector = function(args) {
@@ -9357,7 +9502,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7512
+                  lineno: 7591
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -9368,8 +9513,7 @@ GenericAddon = (function() {
         });
       })(this)((function(_this) {
         return function() {
-          var _ref1;
-          if ((((_ref1 = _this.data) != null ? _ref1.standardized : void 0) != null) && !_this.ship.hasFixedUpgrades) {
+          if (_this.isStandardized() && !_this.ship.hasFixedUpgrades) {
             _this.ship.removeStandardizedList(_this.data);
           }
           _this.rescindAddons();
@@ -9384,7 +9528,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7519
+                      lineno: 7598
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9398,7 +9542,7 @@ GenericAddon = (function() {
               return __iced_k();
             }
           })(function() {
-            var _ref2;
+            var _ref1;
             _this.data = _this.unadjusted_data = new_data;
             if (_this.data != null) {
               if (_this.data.superseded_by_id) {
@@ -9407,12 +9551,12 @@ GenericAddon = (function() {
               if (_this.adjustment_func != null) {
                 _this.data = _this.adjustment_func(_this.data);
               }
-              if (((_ref2 = _this.ship.pilot) != null ? _ref2.upgrades : void 0) == null) {
+              if (((_ref1 = _this.ship.pilot) != null ? _ref1.upgrades : void 0) == null) {
                 _this.unequipOtherUpgrades();
                 _this.occupyOtherUpgrades();
                 _this.conferAddons();
               }
-              if ((_this.data.standardized != null) && !_this.ship.hasFixedUpgrades) {
+              if (_this.isStandardized() && !_this.ship.hasFixedUpgrades) {
                 _this.ship.addToStandardizedList(_this.data);
               }
             } else {
@@ -9515,7 +9659,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7584
+            lineno: 7663
           }));
         }
         __iced_deferrals._fulfill();
@@ -9538,38 +9682,43 @@ GenericAddon = (function() {
   };
 
   GenericAddon.prototype.getPoints = function(data, ship) {
-    var _ref;
+    var points, _ref, _ref1;
     if (data == null) {
       data = this.data;
     }
     if (ship == null) {
       ship = this.ship;
     }
-    if ((data != null ? data.variablepoints : void 0) != null) {
+    if (((_ref = this.ship) != null ? _ref.builder.isBeta : void 0) && ((data != null ? data.pointsbeta : void 0) != null)) {
+      points = data.pointsbeta;
+    } else {
+      points = (_ref1 = data != null ? data.points : void 0) != null ? _ref1 : 0;
+    }
+    if (Array.isArray(points)) {
       switch (data.variablepoints) {
         case "Agility":
-          return data != null ? data.points[ship.data.agility] : void 0;
+          return points[ship.data.agility];
         case "Base":
           if ((ship != null ? ship.data.base : void 0) != null) {
             switch (ship.data.base) {
               case "Medium":
-                return data != null ? data.points[1] : void 0;
+                return points[1];
               case "Large":
-                return data != null ? data.points[2] : void 0;
+                return points[2];
               case "Huge":
-                return data != null ? data.points[3] : void 0;
+                return points[3];
             }
           } else {
-            return data != null ? data.points[0] : void 0;
+            return points[0];
           }
           break;
         case "Initiative":
-          return data != null ? data.points[ship.pilot.skill] : void 0;
+          return points[ship.pilot.skill];
         case "Faction":
-          return data != null ? data.points[data.faction.indexOf(ship.builder.faction)] : void 0;
+          return points[data.faction.indexOf(ship.builder.faction)];
       }
     } else {
-      return (_ref = data != null ? data.points : void 0) != null ? _ref : 0;
+      return points;
     }
   };
 
