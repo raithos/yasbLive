@@ -11200,6 +11200,7 @@ exportObj.basicCardData = function() {
         points: 4,
         pointsbeta: 2,
         restrictions: [["Action", "Calculate"]],
+        restrictionsbeta: [["Action", "Calculate"], ["Slot", "Modification"]],
         also_occupies_upgrades_beta: ["Modification"]
       }, {
         name: "Dedicated",

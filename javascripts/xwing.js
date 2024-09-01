@@ -6744,15 +6744,15 @@ exportObj.SquadBuilder = (function() {
     var array, b, card_restrictions, comma, data, factionitem, ignoreShip, index, othertext, r, shipname, standardized, text, uniquetext, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1;
     uniquetext = comma = othertext = text = '';
     ignoreShip = false;
-    if (this.isBeta && (card.restrictionsbeta != null)) {
-      card_restrictions = card.restrictionsbeta;
-    }
     standardized = card.standardized != null;
     if (this.isBeta && (card.standardizedbeta != null)) {
       standardized = card.standardizedbeta;
     }
     if (card.restrictions != null) {
       card_restrictions = card.restrictions;
+    }
+    if (this.isBeta && (card.restrictionsbeta != null)) {
+      card_restrictions = card.restrictionsbeta;
     }
     if (card_restrictions != null) {
       for (_i = 0, _len = card_restrictions.length; _i < _len; _i++) {
