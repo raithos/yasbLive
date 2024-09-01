@@ -15354,7 +15354,8 @@ String.prototype.serialtoxws = function() {
         link: "https://yasb.app/" + this
       }
     },
-    version: '02/23/2024'
+    version: '02/23/2024',
+    ruleset: 'AMG'
   };
   if (this.ParseParameter('obs')) {
     xws.obstacles = this.ParseParameter('obs').split(",");
@@ -15387,6 +15388,10 @@ String.prototype.serialtoxws = function() {
       return "error: serialization read failed";
     }
     card_data = exportObj.basicCardData();
+    if (gamemode === 'xwabeta') {
+      xws.version = 'BV1';
+      xws.ruleset = 'XWA';
+    }
     card_pilots = {};
     _ref2 = card_data.pilotsById;
     for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
