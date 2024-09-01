@@ -6966,7 +6966,7 @@ exportObj.basicCardData = function() {
         pointsbeta: 3,
         loadoutbeta: 6,
         slots: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"],
-        slotsbeta: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification", "Configuration"]
+        slotsbeta: ["Tech", "Turret", "Astromech", "Device", "Modification", "Modification"]
       }, {
         name: "Lega Fossang",
         id: 481,
