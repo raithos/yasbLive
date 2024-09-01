@@ -1355,7 +1355,7 @@ exportObj.basicCardData = function() {
         pointsbeta: 5,
         loadoutbeta: 25,
         slots: ["Talent", "Turret", "Gunner", "Astromech", "Device", "Modification"],
-        slotsbeta: ["Talent", "Turret", "Gunner", "Astromech", "Device", "Modification"]
+        slotsbeta: ["Talent", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"]
       }, {
         name: "Horton Salm",
         id: 26,
@@ -12258,6 +12258,7 @@ exportObj.basicCardData = function() {
         id: 311,
         slot: "Missile",
         points: 4,
+        pointsbeta: 7,
         attack: 3,
         range: "1-3",
         rangebonus: true,
