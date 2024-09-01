@@ -3659,7 +3659,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 11,
         slots: ["Talent", "Talent", "Gunner", "Device", "Modification"],
-        slotsbeta: ["Talent", "Talent", "Gunner", "Device", "Modification"]
+        slotsbeta: ["Talent", "Talent", "Gunner", "Device"]
       }, {
         name: '"Pure Sabacc"',
         id: 210,
