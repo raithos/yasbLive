@@ -217,7 +217,7 @@ exportObj.SquadBuilderBackend = (function() {
     url = "" + this.server + "/squads/list";
     return $.get(url, (function(_this) {
       return function(data, textStatus, jqXHR) {
-        var hasNotArchivedSquads, li, squad, tag, tag_array, tag_button, tag_entry, tagclean, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
+        var hasNotArchivedSquads, isbeta, li, squad, tag, tag_array, tag_button, tag_entry, tagclean, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
         hasNotArchivedSquads = false;
         _ref = data[builder.faction];
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -240,7 +240,12 @@ exportObj.SquadBuilderBackend = (function() {
           } else {
             hasNotArchivedSquads = true;
           }
-          li.append($.trim("<div class=\"row\">\n    <div class=\"col-md-9\">\n        <h4>" + squad.name + "</h4>\n    </div>\n    <div class=\"col-md-3\">\n        <h5>" + ((_ref5 = squad.additional_data) != null ? _ref5.points : void 0) + " " + (exportObj.translate('ui', "Points")) + "</h5>\n    </div>\n</div>\n<div class=\"row squad-description\">\n    <div class=\"col-md-9\">\n        " + ((_ref6 = squad.additional_data) != null ? _ref6.description : void 0) + "\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-modal convert-squad\"><i class=\"xwing-miniatures-font xwing-miniatures-font-first-player-1\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-modal load-squad\"><i class=\"fa fa-download\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-danger delete-squad\"><i class=\"fa fa-times\"></i></button>\n    </div>\n</div>\n<div class=\"row squad-convert-confirm\">\n    <div class=\"col-md-9 translated\" defaultText=\"Convert to Extended?\">\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-danger confirm-convert-squad translated\" defaultText=\"Convert\"></button>\n        &nbsp;\n        <button class=\"btn btn-modal cancel-convert-squad translated\" defaultText=\"Cancel\"></button>\n    </div>\n</div>\n<div class=\"row squad-delete-confirm\">\n    <div class=\"col-md-6\">\n        " + (exportObj.translate('ui', 'reallyDeleteSquadXY', "<em>" + squad.name + "</em>")) + "\n    </div>\n    <div class=\"col-md-6 btn-group\">\n        <button class=\"btn btn-danger confirm-delete-squad translated\" defaultText=\"Delete\"></button>\n        <button class=\"btn confirm-archive-squad translated\" defaultText=\"Archive\"></button>\n        <button class=\"btn btn-modal cancel-delete-squad translated\" defaultText=\"Unselect\"></button>\n    </div>\n</div>"));
+          if (squad.serialized.search(/v\d+Zb/) !== -1) {
+            isbeta = "<i class=\"xwing-miniatures-font xwing-miniatures-font-point\"></i>";
+          } else {
+            isbeta = "";
+          }
+          li.append($.trim("<div class=\"row\">\n    <div class=\"col-md-9\">\n        <h4>" + squad.name + isbeta + "</h4>\n    </div>\n    <div class=\"col-md-3\">\n        <h5>" + ((_ref5 = squad.additional_data) != null ? _ref5.points : void 0) + " " + (exportObj.translate('ui', "Points")) + "</h5>\n    </div>\n</div>\n<div class=\"row squad-description\">\n    <div class=\"col-md-9\">\n        " + ((_ref6 = squad.additional_data) != null ? _ref6.description : void 0) + "\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-modal convert-squad\"><i class=\"xwing-miniatures-font xwing-miniatures-font-first-player-1\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-modal load-squad\"><i class=\"fa fa-download\"></i></button>\n        &nbsp;\n        <button class=\"btn btn-danger delete-squad\"><i class=\"fa fa-times\"></i></button>\n    </div>\n</div>\n<div class=\"row squad-convert-confirm\">\n    <div class=\"col-md-9 translated\" defaultText=\"Convert to Extended?\">\n    </div>\n    <div class=\"squad-buttons col-md-3\">\n        <button class=\"btn btn-danger confirm-convert-squad translated\" defaultText=\"Convert\"></button>\n        &nbsp;\n        <button class=\"btn btn-modal cancel-convert-squad translated\" defaultText=\"Cancel\"></button>\n    </div>\n</div>\n<div class=\"row squad-delete-confirm\">\n    <div class=\"col-md-6\">\n        " + (exportObj.translate('ui', 'reallyDeleteSquadXY', "<em>" + squad.name + "</em>")) + "\n    </div>\n    <div class=\"col-md-6 btn-group\">\n        <button class=\"btn btn-danger confirm-delete-squad translated\" defaultText=\"Delete\"></button>\n        <button class=\"btn confirm-archive-squad translated\" defaultText=\"Archive\"></button>\n        <button class=\"btn btn-modal cancel-delete-squad translated\" defaultText=\"Unselect\"></button>\n    </div>\n</div>"));
           li.find('.squad-convert-confirm').hide();
           li.find('.squad-delete-confirm').hide();
           if (squad.serialized.search(/v\d+Zh/) === -1) {
@@ -1111,7 +1116,7 @@ exportObj.SquadBuilderBackend = (function() {
                 return headers = arguments[0];
               };
             })(),
-            lineno: 992
+            lineno: 998
           }));
           __iced_deferrals._fulfill();
         });
@@ -2722,7 +2727,7 @@ exportObj.setupTranslationSupport = function() {
                     parent: ___iced_passed_deferral
                   });
                   builder.container.trigger('xwing:beforeLanguageLoad', __iced_deferrals.defer({
-                    lineno: 2289
+                    lineno: 2295
                   }));
                   __iced_deferrals._fulfill();
                 })(_next);
@@ -3797,7 +3802,7 @@ exportObj.SquadBuilder = (function() {
                   return results = arguments[0];
                 };
               })(),
-              lineno: 3405
+              lineno: 3411
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4774,7 +4779,7 @@ exportObj.SquadBuilder = (function() {
               funcname: "SquadBuilder.removeShip"
             });
             ship.destroy(__iced_deferrals.defer({
-              lineno: 4337
+              lineno: 4343
             }));
             __iced_deferrals._fulfill();
           })(function() {
@@ -4784,7 +4789,7 @@ exportObj.SquadBuilder = (function() {
                 funcname: "SquadBuilder.removeShip"
               });
               _this.container.trigger('xwing:pointsUpdated', __iced_deferrals.defer({
-                lineno: 4338
+                lineno: 4344
               }));
               __iced_deferrals._fulfill();
             })(function() {
@@ -7290,7 +7295,7 @@ Ship = (function() {
                   funcname: "Ship.destroy"
                 });
                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                  lineno: 6117
+                  lineno: 6123
                 }));
                 __iced_deferrals._fulfill();
               })(__iced_k);
@@ -7501,7 +7506,7 @@ Ship = (function() {
                       });
                       _this.builder.container.trigger('xwing:claimUnique', [
                         new_pilot, 'Pilot', __iced_deferrals.defer({
-                          lineno: 6234
+                          lineno: 6240
                         })
                       ]);
                       __iced_deferrals._fulfill();
@@ -7551,7 +7556,7 @@ Ship = (function() {
                                   funcname: "Ship.setPilotById"
                                 });
                                 _this.builder.removeShip(_this.linkedShip, __iced_deferrals.defer({
-                                  lineno: 6267
+                                  lineno: 6273
                                 }));
                                 __iced_deferrals._fulfill();
                               })(__iced_k);
@@ -7720,7 +7725,7 @@ Ship = (function() {
                   });
                   _this.builder.container.trigger('xwing:claimUnique', [
                     new_pilot, 'Pilot', __iced_deferrals.defer({
-                      lineno: 6368
+                      lineno: 6374
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -7815,7 +7820,7 @@ Ship = (function() {
             });
             _this.builder.container.trigger('xwing:releaseUnique', [
               _this.pilot, 'Pilot', __iced_deferrals.defer({
-                lineno: 6413
+                lineno: 6419
               })
             ]);
             __iced_deferrals._fulfill();
@@ -7913,7 +7918,7 @@ Ship = (function() {
           upgrade = _ref[_i];
           if (upgrade != null) {
             upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6459
+              lineno: 6465
             }));
           }
         }
@@ -8008,7 +8013,7 @@ Ship = (function() {
                 funcname: "Ship.setWingmates"
               });
               _this.builder.removeShip(dyingMate, __iced_deferrals.defer({
-                lineno: 6521
+                lineno: 6527
               }));
               __iced_deferrals._fulfill();
             })(_next);
@@ -9349,7 +9354,7 @@ GenericAddon = (function() {
             });
             _this.ship.builder.container.trigger('xwing:releaseUnique', [
               _this.data, _this.type, __iced_deferrals.defer({
-                lineno: 7496
+                lineno: 7502
               })
             ]);
             __iced_deferrals._fulfill();
@@ -9521,7 +9526,7 @@ GenericAddon = (function() {
               });
               _this.ship.builder.container.trigger('xwing:releaseUnique', [
                 _this.unadjusted_data, _this.type, __iced_deferrals.defer({
-                  lineno: 7598
+                  lineno: 7604
                 })
               ]);
               __iced_deferrals._fulfill();
@@ -9547,7 +9552,7 @@ GenericAddon = (function() {
                   });
                   _this.ship.builder.container.trigger('xwing:claimUnique', [
                     new_data, _this.type, __iced_deferrals.defer({
-                      lineno: 7605
+                      lineno: 7611
                     })
                   ]);
                   __iced_deferrals._fulfill();
@@ -9678,7 +9683,7 @@ GenericAddon = (function() {
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           addon = _ref[_i];
           addon.destroy(__iced_deferrals.defer({
-            lineno: 7670
+            lineno: 7676
           }));
         }
         __iced_deferrals._fulfill();
