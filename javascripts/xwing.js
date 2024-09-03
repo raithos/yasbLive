@@ -241,7 +241,7 @@ exportObj.SquadBuilderBackend = (function() {
             hasNotArchivedSquads = true;
           }
           if (squad.serialized.search(/v\d+Zb/) !== -1) {
-            isbeta = "<i class=\"xwing-miniatures-font xwing-miniatures-font-point\"></i>";
+            isbeta = " <i class=\"xwing-miniatures-font xwing-miniatures-font-point\"></i>";
           } else {
             isbeta = "";
           }
