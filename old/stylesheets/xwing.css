@@ -27,9 +27,9 @@
   src: url("../fonts/bankgthd.ttf"); }
 
 body {
-  background-color: #202020;
+  background-color: #414018;
   font-family: EurostileStandard;
-  color: rgb(134, 76, 76);
+  color: white;
   overflow-x: hidden;
   overflow-y: scroll;
   font-size: 0.9em; }
