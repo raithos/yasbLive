@@ -29,7 +29,7 @@
 body {
   background-color: #202020;
   font-family: EurostileStandard;
-  color: white;
+  color: rgb(134, 76, 76);
   overflow-x: hidden;
   overflow-y: scroll;
   font-size: 0.9em; }
