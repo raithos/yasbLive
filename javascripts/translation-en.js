@@ -182,7 +182,7 @@ exportObj.translations.English = {
     "Name in use": "You already have a squad with that name",
     "select OAuth provider": "Select one of the OAuth providers below to log in and start saving squads.",
     "OAuth explanation": "<p>\n    <a href=\"http://en.wikipedia.org/wiki/OAuth\" target=\"_blank\">OAuth</a> is an authorization system which lets you prove your identity at a web site without having to create a new account.  Instead, you tell some provider with whom you already have an account (e.g. Google or Facebook) to prove to this web site that you say who you are.  That way, the next time you visit, this site remembers that you're that user from Google.\n</p>\n<p>\n    The best part about this is that you don't have to come up with a new username and password to remember.  And don't worry, I'm not collecting any data from the providers about you.  I've tried to set the scope of data to be as small as possible, but some places send a bunch of data at minimum.  I throw it away.  All I look at is a unique identifier (usually some giant number).\n</p>\n<p>\n    For more information, check out this <a href=\"http://hueniverse.com/oauth/guide/intro/\" target=\"_blank\">introduction to OAuth</a>.\n</p>",
-    "Intro Card YASB": "<h2>YASB for X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<p>Current Version: 02/23/2024</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n<p><a href=\"privacy.html\">Privacy Policy</a></p>\n\n<p>This site will always be free, and always 100% available for all people to use. If you want to support me, I also have a podcast, please check that out!</p>\n<p><button class=\"btn btn-success podcast\" onclick=\"window.open('http://offmeta.club');\">Off-Meta Podcast</button> <button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button> <button class=\"btn btn-primary patreon\" onclick=\"window.open('https://www.patreon.com/raithos');\">Patreon</button> </p>",
+    "Intro Card YASB": "<h2>YASB for X-Wing 2.5</h2>\n<p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href=\"https://www.atomicmassgames.com/\">Atomic Mass Games</a>.</p>\n<p>Current Version: 09/06/2024</p>\n<h5>Credits</h5>\n<p>Built upon the amazing original <a href=\"https://geordanr.github.io/xwing/\">Yet Another Squad Builder</a>.</p>\n<p>YASB is updated and maintained by Stephen Kim.</p>\n<p>Additional credits to:<br>\n2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>\n2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>\nTranslation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke<br>\nSite logo: Thomas Kohler<br>\nQuick Build Support: Patrick Mischke</p>\n\n<p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>\n<p><a href=\"privacy.html\">Privacy Policy</a></p>\n\n<p>This site will always be free, and always 100% available for all people to use. If you want to support me, I also have a podcast, please check that out!</p>\n<p><button class=\"btn btn-success podcast\" onclick=\"window.open('http://offmeta.club');\">Off-Meta Podcast</button> <button class=\"btn btn-primary paypal\" onclick=\"window.open('https://paypal.me/raithos');\">Donate</button> <button class=\"btn btn-primary patreon\" onclick=\"window.open('https://www.patreon.com/raithos');\">Patreon</button> </p>",
     "Continue to OAuth provider": "This will open a new window to let you authenticate with the chosen provider. You may have to allow pop ups for this site.",
     "iOS requires cross-site control": "Due to a new feature in iOS systems OAuth won't work unless you enable \"cross-site control\".",
     "login in progress": "OAuth login is in progress. Please finish authorization at the specified provider using the window that was just created.",
@@ -2721,6 +2721,22 @@ exportObj.cardLoaders.English = function() {
       display_name: "Scimitar 3 (BoE)",
       text: "After you drop a bomb, you may spend 1 %CHARGE% to perform a %BOOST% action."
     },
+    "Major Vynder (SSL)": {
+      display_name: "Major Vynder (SL)",
+      text: "After you perform a %MISSILE% attack, you may perform a bonus %CANNON% attack. While you perform this bonus attack, you may change 1 %FOCUS% result to a %HIT% result."
+    },
+    "Lieutenant Karsabi (SSL)": {
+      display_name: "Lieutenant Karsabi (SL)",
+      text: "When you perform a %RELOAD% action, the chosen upgrade recovers 1 additional %CHARGE%."
+    },
+    '"Whisper" (SSL)': {
+      display_name: "“Whisper” (SL)",
+      text: "After you perform an attack, you may spend 1 %CHARGE% to perform a %CLOAK% action."
+    },
+    '"Echo" (SSL)': {
+      display_name: "“Echo” (SL)",
+      text: "After an enemy ship at range 0-1 performs an action on its action bar, you may spend 1 %CHARGE% to perform the same action, treating it as white."
+    },
     "Republic Judiciary": {
       display_name: "Republic Judiciary",
       text: "<i class = flavor_text>The Galactic Republic uses small, swift warships such as the CR90 corvette to respond rapidly to Separatist incursions across the galaxy.</i> %LINEBREAK% <strong>Broadside Batteries:</strong> You can acquire locks and perform primary attacks at range 1-4."
@@ -4458,6 +4474,42 @@ exportObj.cardLoaders.English = function() {
       display_name: "Ion Maneuvering Jet",
       text: "After you fully execute a Koiogran Turn [%KTURN%], you may spend 1 %CHARGE% to perform an action, even while stressed."
     },
+    "Without A Trace (SL)": {
+      display_name: "Without A Trace",
+      text: "After you gain a cloak token, you may remove 1 red token. While you are cloaked, enenmy ships cannot acuqire locks on you."
+    },
+    "Relay System (SL)": {
+      display_name: "Relay System",
+      text: "After a friendly ship at range 0-2 performs a %LOCK% action, you may acquire a lock on the same object. %LINEBREAK% After you perform an attack that hits, you may spend a lock you have on the defender. If you do, another friendly ship at range 0-1 may acquire a lock on the defender."
+    },
+    "Stygium Reserve (SL)": {
+      display_name: "Stygium Reserve",
+      text: "After you fully execute a maneuver, you may spend 1 %CHARGE% to perform a %BOOST% action, even while stressed."
+    },
+    "Silent Hunter (SL)": {
+      display_name: "Silent Hunter",
+      text: "After you decloak, you may acquire a lock on an enemy ship in your %BULLSEYEARC%."
+    },
+    "Stealth Gambit (SL)": {
+      display_name: "Stealth Gambit",
+      text: "After a friendly ship performs an attack that hits an enemy ship in your %FRONTARC%, if you are cloaked, you may gain a strain token to remove your cloak token and perform a bonus primary attack against the defender. %LINEBREAK% At the end of the Engagement Phase, if you are strained, gain an evade token."
+    },
+    "Manual Ailerons (SL)": {
+      display_name: "Manual Ailerons",
+      text: "While you decloak, you may spend 1 %CHARGE% to use the [2 %BANKLEFT%] or [2 %BANKRIGHT%] template instead of the [2 %STRAIGHT%] template."
+    },
+    "Saturation Rockets (SL)": {
+      display_name: "Saturation Rockets",
+      text: "<strong>Attack:</strong> Spend 2 %CHARGE%. If the defender is in yuour %FRONTARC%, you may spend 1 additional %CHARGE% to roll 1 additional attack die. %LINEBREAK% After this attack, you may spend 1 %CHARGE% to perform this attack as a bonus attack against a different target at range 0-1 of the defender without paying the %CHARGE% cost."
+    },
+    "Long-Range Scanners (SL)": {
+      display_name: "Long-Range Scanners",
+      text: "Before you perform a %LOCK% action, you may spend 1 %CHARGE%. If you do, you may acquire a lock on an object at any range during that action."
+    },
+    "Heavy Plasma Missiles (SL)": {
+      display_name: "Heavy Plasma Missiles",
+      text: "<strong>Attack:</strong> Spend 1 %CHARGE%. After this attack hits, the defender loses 1 shield."
+    },
     "Admiral Ozzel": {
       display_name: "Admiral Ozzel",
       text: "While a friendly large or huge ship at range 0-3 executes a maneuver, it may suffer 1 %HIT% damage to execute a maneuver of the same bearing and difficulty of a speed 1 higher or lower instead."
@@ -5122,6 +5174,10 @@ exportObj.cardLoaders.English = function() {
     "Formed Up": {
       display_name: "Formed Up",
       text: "At the end of the End Phase, if there is another friendly <strong>TIE/ln Fighter</strong> ship at range 0-1, you may remove 1 stress token."
+    },
+    "Prioritized Weapons Systems": {
+      display_name: "Prioritized Weapons Systems",
+      text: "Before you engage, you may gain a strain token to remove a disarm token."
     }
   };
   damage_translations = {

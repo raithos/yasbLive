@@ -4133,7 +4133,7 @@ exportObj.SquadBuilder = (function() {
         if (_this.isBeta) {
           _this.printable_container.find('.squad-name').append(" <i class=\"xwing-miniatures-font xwing-miniatures-font-point\"></i>");
         }
-        versioninfo = "02/23/2024";
+        versioninfo = "09/06/2024";
         rules = "AMG";
         if (_this.isBeta) {
           versioninfo = "BV1";
@@ -5109,7 +5109,7 @@ exportObj.SquadBuilder = (function() {
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         upgrade = _ref[_i];
         upgrade_data = exportObj.upgrades[upgrade];
-        if (upgrade_data.unique === true) {
+        if (upgrade_data.unique != null) {
           _ref1 = this.ships;
           for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
             ship = _ref1[_j];
@@ -7011,7 +7011,7 @@ exportObj.SquadBuilder = (function() {
 
   SquadBuilder.prototype.toXWS = function() {
     var candidate, last_id, match, matches, multisection_id_to_pilots, obstacles, pilot, rules, ship, unmatched, unmatched_pilot, versioninfo, xws, _, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _name, _ref, _ref1, _ref2, _ref3;
-    versioninfo = "02/23/2024";
+    versioninfo = "09/06/2024";
     rules = "AMG";
     if (this.isBeta) {
       versioninfo = "BV1";
