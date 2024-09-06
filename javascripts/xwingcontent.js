@@ -2328,7 +2328,7 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Firespray-class Patrol Craft",
         skill: 5,
-        points: 9,
+        points: 8,
         loadout: 18,
         pointsbeta: 8,
         loadoutbeta: 18,
