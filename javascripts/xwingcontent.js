@@ -9448,6 +9448,9 @@ exportObj.basicCardData = function() {
         chassis: "Prioritized Weapons Systems",
         skill: 3,
         points: 5,
+        ship_override: {
+          actions: ["Focus", "Lock", "Slam", "R-> Lock", "Slam", "R-> Reload", "Reload"]
+        },
         upgrades: ["Proton Torpedoes", "Saturation Rockets (SL)", "Electronic Baffle"]
       }, {
         name: "Major Vynder (SSL)",
@@ -9458,6 +9461,9 @@ exportObj.basicCardData = function() {
         chassis: "Prioritized Weapons Systems",
         skill: 4,
         points: 5,
+        ship_override: {
+          actions: ["Focus", "Lock", "Slam", "R-> Lock", "Slam", "R-> Reload", "Reload"]
+        },
         upgrades: ["Long-Range Scanners (SL)", "Ion Cannon", "Heavy Plasma Missiles (SL)"]
       }, {
         name: '"Echo" (SSL)',
