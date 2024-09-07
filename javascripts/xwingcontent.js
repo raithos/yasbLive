@@ -9086,6 +9086,7 @@ exportObj.basicCardData = function() {
         ship: "YT-2400 Light Freighter",
         skill: 5,
         points: 6,
+        pointsbeta: 7,
         upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider"]
       }, {
         name: "Dash Rendar (Scum)",
@@ -9096,6 +9097,7 @@ exportObj.basicCardData = function() {
         ship: "YT-2400 Light Freighter",
         skill: 5,
         points: 6,
+        pointsbeta: 7,
         upgrades: ["Mercenary (YLF)", "Seeker Missiles (YLF)", '"Leebo" (YLF)', "Outrider"]
       }, {
         name: '"Leebo" (YLF)',
