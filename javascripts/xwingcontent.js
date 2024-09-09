@@ -9448,6 +9448,7 @@ exportObj.basicCardData = function() {
         chassis: "Prioritized Weapons Systems",
         skill: 3,
         points: 5,
+        pointsbeta: 20,
         ship_override: {
           actions: ["Focus", "Lock", "Slam", "R-> Lock", "Slam", "R-> Reload", "Reload"]
         },
@@ -9461,6 +9462,7 @@ exportObj.basicCardData = function() {
         chassis: "Prioritized Weapons Systems",
         skill: 4,
         points: 5,
+        pointsbeta: 20,
         ship_override: {
           actions: ["Focus", "Lock", "Slam", "R-> Lock", "Slam", "R-> Reload", "Reload"]
         },
@@ -9473,6 +9475,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/ph Phantom",
         skill: 4,
         points: 5,
+        pointsbeta: 20,
         charge: 1,
         recurring: 1,
         upgrades: ["Silent Hunter (SL)", "Stealth Gambit (SL)", "Manual Ailerons (SL)"]
@@ -9484,6 +9487,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/ph Phantom",
         skill: 5,
         points: 5,
+        pointsbeta: 20,
         charge: 2,
         upgrades: ["Without A Trace (SL)", "Relay System (SL)", "Stygium Reserve (SL)"]
       }
