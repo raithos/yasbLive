@@ -584,7 +584,7 @@ class exportObj.SquadBuilderBackend
                     <button class="btn btn-modal show-quickbuild-squads"><span class="d-none d-lg-block translated" defaultText="Quickbuild"></span><span class="d-lg-none translated" defaultText="QB"></span></button>
                     <button class="btn btn-modal show-epic-squads"><span class="d-none d-lg-block translated" defaultText="Epic"></span><span class="d-lg-none" ><i class="xwing-miniatures-font xwing-miniatures-font-energy" title="Energy"></i></span></button>
                     <button class="btn btn-modal show-archived-squads"><span class="d-none d-lg-block translated" defaultText="Archived"></span><span class="d-lg-none translated" defaultText="Arc"></span></button>
-                    <button class="btn btn-modal reload-all translated" title="Recalculate"><i class="xwing-miniatures-font xwing-miniatures-font-calculate" title="Calculate"></i></button>
+                    <button class="btn btn-modal reload-all" title="Recalculate Points"><span><i class="xwing-miniatures-font xwing-miniatures-font-calculate" title="Calculate"></i></span></button>
                 </div>
                 <div class="btn-group tags-display full-row">
                 </div>
