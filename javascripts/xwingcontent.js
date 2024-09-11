@@ -2151,8 +2151,8 @@ exportObj.basicCardData = function() {
         faction: "Scum and Villainy",
         ship: "Customized YT-1300 Light Freighter",
         skill: 6,
-        points: 6,
-        loadout: 20,
+        points: 5,
+        loadout: 10,
         pointsbeta: 5,
         loadoutbeta: 14,
         slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
@@ -2331,7 +2331,7 @@ exportObj.basicCardData = function() {
         points: 8,
         loadout: 18,
         pointsbeta: 8,
-        loadoutbeta: 18,
+        loadoutbeta: 13,
         keyword: ["Bounty Hunter"],
         slots: ["Talent", "Cannon", "Missile", "Device", "Illicit", "Modification", "Modification", "Title"],
         slotsbeta: ["Talent", "Cannon", "Missile", "Device", "Illicit", "Modification", "Modification", "Title"]
@@ -3431,7 +3431,7 @@ exportObj.basicCardData = function() {
         pointsbeta: 4,
         loadoutbeta: 14,
         slots: ["Talent", "Turret", "Missile", "Gunner"],
-        slotsbeta: ["Talent", "Turret", "Missile", "Gunner", "Modifiaction"]
+        slotsbeta: ["Talent", "Turret", "Missile", "Gunner", "Modification"]
       }, {
         name: "Sienar Specialist",
         id: 190,
@@ -14324,7 +14324,8 @@ exportObj.basicCardData = function() {
         charge: 4,
         recurring: 1,
         attackf: 3,
-        range: "1-2"
+        range: "1-2",
+        rangebonus: true
       }, {
         name: "Long-Range Scanners (SL)",
         id: 540,
@@ -14337,8 +14338,9 @@ exportObj.basicCardData = function() {
         standard: true,
         slot: "Missile",
         charge: 2,
-        attackf: 3,
-        range: "1-3"
+        attack: 3,
+        range: "1-3",
+        rangebonus: true
       }
     ],
     conditionsById: [
