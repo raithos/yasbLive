@@ -5825,7 +5825,7 @@ exportObj.basicCardData = function() {
         charge: 1,
         recurring: 1,
         slots: ["Talent", "Sensor", "Tech", "Crew", "Gunner", "Device", "Device", "Modification"],
-        slotsbeta: ["Talent", "Sensor", "Tech", "Crew", "Gunner", "Device", "Device", "Modification"]
+        slotsbeta: ["Talent", "Sensor", "Tech", "Crew", "Device", "Device", "Modification"]
       }, {
         name: "K-2SO",
         id: 390,
