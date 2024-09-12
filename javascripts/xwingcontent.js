@@ -7921,7 +7921,8 @@ exportObj.basicCardData = function() {
         faction: "Rebel Alliance",
         ship: "T-65 X-wing",
         skill: 4,
-        points: 5,
+        points: 4,
+        pointsbeta: 5,
         chassis: "Hope",
         upgrades: ["Adv. Proton Torpedoes", "R5-D8 (BoY)", "Unstable Sublight Engines (BoY)"]
       }, {
