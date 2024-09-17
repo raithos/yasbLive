@@ -4150,7 +4150,7 @@ exportObj.SquadBuilder = (function() {
         versioninfo = "09/06/2024";
         rules = "AMG";
         if (_this.isBeta) {
-          versioninfo = "BV1";
+          versioninfo = "BV2";
           rules = "XWA";
         }
         _this.printable_container.find('.fancy-under-header').append($.trim("<div class=\"version\">Points Version: " + rules + " - " + versioninfo + "</div>"));
@@ -7028,7 +7028,7 @@ exportObj.SquadBuilder = (function() {
     versioninfo = "09/06/2024";
     rules = "AMG";
     if (this.isBeta) {
-      versioninfo = "BV1";
+      versioninfo = "BV2";
       rules = "XWA";
     }
     xws = {

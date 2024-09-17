@@ -9443,6 +9443,7 @@ exportObj.basicCardData = function() {
         upgrades: ["No Escape (BoE)", "Parting Gift (BoE)", "Proton Torpedoes", "Proton Bombs"]
       }, {
         name: "Lieutenant Karsabi (SSL)",
+        xwsaddon: "ssl",
         unique: true,
         id: 674,
         faction: "Galactic Empire",
@@ -9457,6 +9458,7 @@ exportObj.basicCardData = function() {
         upgrades: ["Proton Torpedoes", "Saturation Rockets (SL)", "Electronic Baffle"]
       }, {
         name: "Major Vynder (SSL)",
+        xwsaddon: "ssl",
         unique: true,
         id: 675,
         faction: "Galactic Empire",
@@ -9471,6 +9473,7 @@ exportObj.basicCardData = function() {
         upgrades: ["Long-Range Scanners (SL)", "Ion Cannon", "Heavy Plasma Missiles (SL)"]
       }, {
         name: '"Echo" (SSL)',
+        xwsaddon: "ssl",
         unique: true,
         id: 676,
         faction: "Galactic Empire",
@@ -9483,6 +9486,7 @@ exportObj.basicCardData = function() {
         upgrades: ["Silent Hunter (SL)", "Stealth Gambit (SL)", "Manual Ailerons (SL)"]
       }, {
         name: '"Whisper" (SSL)',
+        xwsaddon: "ssl",
         unique: true,
         id: 677,
         faction: "Galactic Empire",
@@ -15512,7 +15516,7 @@ String.prototype.serialtoxws = function() {
     }
     card_data = exportObj.basicCardData();
     if (gamemode === 'xwabeta') {
-      xws.version = 'BV1';
+      xws.version = 'BV2';
       xws.ruleset = 'XWA';
     }
     card_pilots = {};
