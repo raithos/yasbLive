@@ -1266,7 +1266,7 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 14,
         pointsbeta: 5,
-        loadoutbeta: 25,
+        loadoutbeta: 20,
         slots: ["Torpedo", "Missile", "Gunner", "Crew", "Device", "Device", "Modification"]
       }, {
         name: "Esege Tuketu",
@@ -3315,9 +3315,9 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 10,
         pointsbeta: 4,
-        loadoutbeta: 1,
+        loadoutbeta: 0,
         slots: ["Talent", "Talent", "Modification", "Configuration"],
-        slotsbeta: ["Talent", "Modification"]
+        slotsbeta: ["Talent", "Modification", "Configuration"]
       }, {
         name: "Turr Phennir",
         id: 180,
@@ -3452,8 +3452,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 25,
-        pointsbeta: 5,
-        loadoutbeta: 14,
+        pointsbeta: 6,
+        loadoutbeta: 20,
         slots: ["Sensor", "Torpedo", "Missile", "Missile", "Gunner", "Device", "Modification", "Modification"]
       }, {
         name: '"Deathrain"',
@@ -3466,7 +3466,8 @@ exportObj.basicCardData = function() {
         loadout: 20,
         pointsbeta: 5,
         loadoutbeta: 22,
-        slots: ["Talent", "Sensor", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"]
+        slots: ["Talent", "Sensor", "Torpedo", "Missile", "Gunner", "Device", "Device", "Modification"],
+        slotsbeta: ["Talent", "Sensor", "Missile", "Gunner", "Device", "Device", "Modification"]
       }, {
         name: "Cutlass Squadron Pilot",
         id: 193,
@@ -8337,7 +8338,7 @@ exportObj.basicCardData = function() {
         skill: 1,
         max_per_squad: 2,
         points: 3,
-        pointsbeta: 2,
+        pointsbeta: 3,
         upgrades: ["Homing Missiles", "Contingency Protocol (SoC)", "Strut-Lock Override (SoC)"]
       }, {
         name: "DIS-347 (SoC)",
@@ -9449,7 +9450,7 @@ exportObj.basicCardData = function() {
         chassis: "Prioritized Weapons Systems",
         skill: 3,
         points: 5,
-        pointsbeta: 20,
+        pointsbeta: 6,
         ship_override: {
           actions: ["Focus", "Lock", "Slam", "R-> Lock", "Slam", "R-> Reload", "Reload"]
         },
@@ -9463,7 +9464,7 @@ exportObj.basicCardData = function() {
         chassis: "Prioritized Weapons Systems",
         skill: 4,
         points: 5,
-        pointsbeta: 20,
+        pointsbeta: 6,
         ship_override: {
           actions: ["Focus", "Lock", "Slam", "R-> Lock", "Slam", "R-> Reload", "Reload"]
         },
@@ -9476,7 +9477,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/ph Phantom",
         skill: 4,
         points: 5,
-        pointsbeta: 20,
+        pointsbeta: 6,
         charge: 1,
         recurring: 1,
         upgrades: ["Silent Hunter (SL)", "Stealth Gambit (SL)", "Manual Ailerons (SL)"]
@@ -9488,7 +9489,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/ph Phantom",
         skill: 5,
         points: 5,
-        pointsbeta: 20,
+        pointsbeta: 7,
         charge: 2,
         upgrades: ["Without A Trace (SL)", "Relay System (SL)", "Stygium Reserve (SL)"]
       }
@@ -10401,7 +10402,7 @@ exportObj.basicCardData = function() {
         name: "Static Discharge Vanes",
         id: 109,
         slot: "Modification",
-        points: 5
+        points: 12
       }, {
         name: "Tactical Scrambler",
         id: 110,
@@ -11467,7 +11468,7 @@ exportObj.basicCardData = function() {
         name: "Kaydel Connix",
         id: 231,
         slot: "Crew",
-        points: 5,
+        points: 8,
         faction: "Resistance",
         unique: true
       }, {
