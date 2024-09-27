@@ -8532,13 +8532,13 @@ Ship = (function() {
     }
     HalfPoints = Math.floor(this.getPoints() / 2);
     Threshold = Math.floor((effective_stats['hull'] + effective_stats['shields']) / 2);
-    html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + ((this.builder.isBeta != null) && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + "), " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Damage Threshold")) + ": " + Threshold + "</strong> \n</div>");
+    html += $.trim("<div class=\"ship-points-total\">\n    <strong>" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + ", " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.builder.isBeta && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + "), " + (this.uitranslation("Half Points")) + ": " + HalfPoints + ", " + (this.uitranslation("Damage Threshold")) + ": " + Threshold + "</strong> \n</div>");
     return "<div class=\"fancy-ship\">" + html + "</div>";
   };
 
   Ship.prototype.toTableRow = function() {
     var halfPoints, points, slotted_upgrades, table_html, threshold, upgrade, _i, _len;
-    table_html = $.trim("<tr class=\"simple-pilot\">\n    <td class=\"name\">" + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + " &mdash; " + (this.data.display_name ? this.data.display_name : this.data.name) + "</td>\n    <td class=\"points\">" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta != null) && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + "</td>\n</tr>");
+    table_html = $.trim("<tr class=\"simple-pilot\">\n    <td class=\"name\">" + (this.pilot.display_name ? this.pilot.display_name : this.pilot.name) + " &mdash; " + (this.data.display_name ? this.data.display_name : this.data.name) + "</td>\n    <td class=\"points\">" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : (this.builder.isBeta && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + "</td>\n</tr>");
     slotted_upgrades = (function() {
       var _i, _len, _ref, _results;
       _ref = this.upgrades;
@@ -8561,14 +8561,14 @@ Ship = (function() {
     table_html += "<tr class=\"simple-ship-total\"><td colspan=\"2\">" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "</td></tr>";
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + ((this.builder.isBeta != null) && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + ") " + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "</td></tr>";
+    table_html += "<tr class=\"simple-ship-half-points\"><td colspan=\"2\">" + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.builder.isBeta && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + ") " + (this.uitranslation("Half Points")) + ": " + halfPoints + " " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "</td></tr>";
     table_html += '<tr><td>&nbsp;</td><td></td></tr>';
     return table_html;
   };
 
   Ship.prototype.toSimpleCopy = function() {
     var halfPoints, points, simplecopy, simplecopy_upgrades, slotted_upgrades, threshold, upgrade, upgrade_simplecopy, _i, _len;
-    simplecopy = "" + this.pilot.display_name + " – " + this.data.display_name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta != null) && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + ")    \n";
+    simplecopy = "" + this.pilot.display_name + " – " + this.data.display_name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : (this.builder.isBeta && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + ")    \n";
     slotted_upgrades = (function() {
       var _i, _len, _ref, _results;
       _ref = this.upgrades;
@@ -8597,13 +8597,13 @@ Ship = (function() {
     }
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    simplecopy += "" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + ((this.builder.isBeta != null) && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "    \n    \n";
+    simplecopy += "" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.builder.isBeta && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "    \n    \n";
     return simplecopy;
   };
 
   Ship.prototype.toRedditText = function() {
     var halfPoints, points, reddit, reddit_upgrades, slotted_upgrades, threshold, upgrade, upgrade_reddit, _i, _len;
-    reddit = "**" + this.pilot.name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta != null) && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + ")**    \n";
+    reddit = "**" + this.pilot.name + " (" + (this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : (this.builder.isBeta && (this.pilot.pointsbeta != null) ? this.pilot.pointsbeta : this.pilot.points)) + ")**    \n";
     slotted_upgrades = (function() {
       var _i, _len, _ref, _results;
       _ref = this.upgrades;
@@ -8630,7 +8630,7 @@ Ship = (function() {
         }
       }
       reddit += reddit_upgrades.join("    ");
-      reddit += "&nbsp;*" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + ((this.builder.isBeta != null) && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "*    \n";
+      reddit += "&nbsp;*" + (this.uitranslation("Ship Cost")) + ": " + (this.getPoints()) + "  " + (this.uitranslation("Loadout")) + ": (" + this.upgrade_points_total + (this.builder.isBeta && (this.pilot.loadoutbeta != null) ? "/" + this.pilot.loadoutbeta : (this.pilot.loadout != null ? "/" + this.pilot.loadout : "")) + ")  " + (this.uitranslation("Half Points")) + ": " + halfPoints + "  " + (this.uitranslation("Damage Threshold")) + ": " + threshold + "*    \n";
     }
     return reddit;
   };
