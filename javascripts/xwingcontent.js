@@ -11815,7 +11815,7 @@ exportObj.basicCardData = function() {
         name: "Targeting Battery",
         id: 270,
         slot: "Hardpoint",
-        points: 5,
+        points: 10,
         attackt: 3,
         range: "2-5",
         modifier_func: function(stats) {
@@ -11889,7 +11889,7 @@ exportObj.basicCardData = function() {
         name: "Damage Control Team",
         id: 277,
         slot: "Team",
-        points: 3,
+        points: 8,
         modifier_func: function(stats) {
           stats.actions.push('*Reinforce');
           return stats.actions.push('> Calculate');
@@ -14188,142 +14188,40 @@ exportObj.basicCardData = function() {
         standard: true,
         slot: "Talent"
       }, {
-        name: "New Recruit",
-        id: 525,
-        points: 0,
-        max_per_squad: 3,
-        slot: "Command",
-        restrictions: [["isUnique", false]],
-        modifier_func: function(stats) {
-          return stats.points -= 1;
-        }
-      }, {
-        name: "Locked-Turret Specialist",
-        id: 526,
-        points: 2,
-        slot: "Command",
-        charge: 2,
-        restrictions: [["Action", "Rotate Arc"]],
-        modifier_func: function(stats) {
-          if (__indexOf.call(stats.actions, 'R-Boost') < 0) {
-            return stats.actions.push('R-Boost');
-          }
-        }
-      }, {
-        name: "Heavy Reinforced Vanguard",
-        id: 527,
-        unique: true,
-        points: 0,
-        slot: "Command",
-        modifier_func: function(stats) {
-          stats.points += 1;
-          return stats.hull += 2;
-        }
-      }, {
-        name: "Evasive Interceptor",
-        id: 528,
-        unique: true,
-        points: 8,
-        slot: "Command",
-        restrictions: [["Base", "Small"]],
-        modifier_func: function(stats) {
-          stats.points -= 1;
-          stats.hull -= 1;
-          return stats.agility += 1;
-        }
-      }, {
-        name: "Countermeasures Specialist",
-        id: 529,
-        points: 4,
-        unique: true,
-        slot: "Command",
-        charge: 2,
-        restrictions: [["Base", "Small"]],
-        modifier_func: function(stats) {
-          if (__indexOf.call(stats.actions, 'Jam') < 0) {
-            return stats.actions.push('Jam');
-          }
-        }
-      }, {
-        name: "Combat Veteran",
-        id: 530,
-        points: 0,
-        unique: true,
-        slot: "Command",
-        restrictions: [["HasForce", false], ["isUnique", true], ["InitiativeGreaterThan", 3]],
-        modifier_func: function(stats) {
-          return stats.points += 1;
-        },
-        confersAddons: [
-          {
-            type: exportObj.Upgrade,
-            slot: 'Talent'
-          }, {
-            type: exportObj.Upgrade,
-            slot: 'Modification'
-          }
-        ]
-      }, {
-        name: "Force Adept Pilot",
-        id: 531,
-        points: 0,
-        slot: "Command",
-        unique: true,
-        restrictions: [["HasForce", true]],
-        modifier_func: function(stats) {
-          return stats.points += 1;
-        },
-        confersAddons: [
-          {
-            type: exportObj.Upgrade,
-            slot: 'Force'
-          }
-        ]
-      }, {
-        name: "Adaptable Pilot",
-        id: 532,
-        points: 0,
-        max_per_squad: 2,
-        slot: "Command",
-        modifier_func: function(stats) {
-          stats.points += 1;
-          return stats.loadout += 10;
-        }
-      }, {
         name: "Without A Trace (SL)",
-        id: 533,
+        id: 525,
         standard: true,
         slot: "Talent"
       }, {
         name: "Relay System (SL)",
-        id: 534,
+        id: 526,
         standard: true,
         slot: "Sensor"
       }, {
         name: "Stygium Reserve (SL)",
-        id: 535,
+        id: 527,
         standard: true,
         slot: "Modification",
         charge: 1
       }, {
         name: "Silent Hunter (SL)",
-        id: 536,
+        id: 528,
         standard: true,
         slot: "Talent"
       }, {
         name: "Stealth Gambit (SL)",
-        id: 537,
+        id: 529,
         standard: true,
         slot: "Talent"
       }, {
         name: "Manual Ailerons (SL)",
-        id: 538,
+        id: 530,
         standard: true,
         slot: "Modification",
         charge: 2
       }, {
         name: "Saturation Rockets (SL)",
-        id: 539,
+        id: 531,
         unique: true,
         standard: true,
         slot: "Missile",
@@ -14334,13 +14232,13 @@ exportObj.basicCardData = function() {
         rangebonus: true
       }, {
         name: "Long-Range Scanners (SL)",
-        id: 540,
+        id: 532,
         standard: true,
         slot: "Sensor",
         charge: 2
       }, {
         name: "Heavy Plasma Missiles (SL)",
-        id: 541,
+        id: 533,
         standard: true,
         slot: "Missile",
         charge: 2,
