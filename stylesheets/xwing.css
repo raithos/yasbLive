@@ -79,8 +79,9 @@ strong em, em strong {
   font-style: normal;
   font-weight: normal; }
 
-.side-button {
-  margin-top: 5px; }
+@media (max-width: 768px) {
+  .side-button {
+    margin-top: 5px; } }
 
 .flavor_text {
   display: none; }
@@ -138,12 +139,14 @@ i.header-attack {
 i.xwing-miniatures-font-frontarc, i.xwing-miniatures-font-reararc, i.xwing-miniatures-font-bullseyearc, i.xwing-miniatures-font-fullfrontarc, i.xwing-miniatures-font-rightarc, i.xwing-miniatures-font-leftarc {
   padding-left: 9px;
   padding-right: 9px;
-  padding-bottom: 7px; }
+  padding-bottom: 7px;
+  padding-top: 7px; }
 
 i.xwing-miniatures-font-singleturretarc, i.xwing-miniatures-font-doubleturretarc {
   padding-left: 11px;
   padding-right: 11px;
-  padding-bottom: 7px; }
+  padding-bottom: 7px;
+  padding-top: 7px; }
 
 i.xwing-miniatures-font-rangebonusindicator {
   font-size: 1.1em; }
@@ -158,31 +161,36 @@ i.header-agility {
   color: #6BBE44;
   padding-left: 7px;
   padding-right: 7px;
-  padding-bottom: 6px; }
+  padding-bottom: 6px;
+  padding-top: 7px; }
 
 i.header-hull {
   color: #B6B335;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 7px; }
+  padding-bottom: 7px;
+  padding-top: 7px; }
 
 i.header-shield {
   color: #7ED3E5;
   padding-left: 8px;
   padding-right: 8px;
-  padding-bottom: 8px; }
+  padding-bottom: 8px;
+  padding-top: 8px; }
 
 i.header-force {
   color: #9D899D;
   padding-left: 7px;
   padding-right: 7px;
-  padding-bottom: 7px; }
+  padding-bottom: 7px;
+  padding-top: 7px; }
 
 i.header-charge {
   color: #C2B230;
   padding-left: 9px;
   padding-right: 9px;
-  padding-bottom: 7px; }
+  padding-bottom: 7px;
+  padding-top: 7px; }
 
 i.header-range {
   vertical-align: middle;
