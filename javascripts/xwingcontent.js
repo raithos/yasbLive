@@ -3947,7 +3947,8 @@ exportObj.basicCardData = function() {
         skill: 3,
         points: 3,
         loadout: 3,
-        slots: ["Talent", "Tech", "Tech", "Modification"]
+        slots: ["Talent", "Tech", "Tech", "Modification"],
+        slotsbeta: ["Talent", "Sensor", "Tech", "Tech", "Modification"]
       }, {
         name: '"Muse"',
         id: 235,
@@ -3984,7 +3985,7 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 12,
         pointsbeta: 5,
-        loadoutbeta: 11,
+        loadoutbeta: 6,
         slots: ["Talent", "Tech", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
         name: "Lieutenant Dormitz",
@@ -4281,7 +4282,7 @@ exportObj.basicCardData = function() {
         pointsbeta: 4,
         loadoutbeta: 14,
         slots: ["Talent", "Talent", "Tech", "Modification"],
-        slotsbeta: ["Talent", "Talent", "Sensor", "Tech", "Modification"]
+        slotsbeta: ["Talent", "Talent", "Sensor", "Tech", "Missile", "Modification"]
       }, {
         name: '"Longshot"',
         id: 263,
