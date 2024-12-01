@@ -1,0 +1,838 @@
+[
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-brands-400.eot",
+    "hash": "a16b10c0725218a49457bbf4b4ec5eff"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-brands-400.svg",
+    "hash": "68a5b51370dc49cfd32acb5b98e38c9a"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-brands-400.ttf",
+    "hash": "b37ae0f14cbc958316fac4635383b6e8"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-brands-400.woff",
+    "hash": "f53b1bbe62a382edb2b8ad97f1e10b5f"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-brands-400.woff2",
+    "hash": "174b41f65f8234795a2caaa56e1488b4"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-regular-400.eot",
+    "hash": "31e5692f074064e6f1e2dc583ae779fc"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-regular-400.svg",
+    "hash": "6d54ab5aa8d078d2fbc684cbfffd07ae"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-regular-400.ttf",
+    "hash": "5178af1d278432bec8fc830d50996d6f"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-regular-400.woff",
+    "hash": "ebe1d48e5b9b6918405443b02de834d9"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-regular-400.woff2",
+    "hash": "632445dad1d282f28b3b512c9245e840"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-solid-900.eot",
+    "hash": "01f55c4a5b7bd0ddd7fa69814045c4c3"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-solid-900.svg",
+    "hash": "ccc5544d44aaeacb0ae31d0a580fe58b"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-solid-900.ttf",
+    "hash": "aa1ec80f1b30a51d64c72f669c1326a7"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-solid-900.woff",
+    "hash": "65008e6cbdfc26a0ec5df3e78539ef6b"
+  },
+  {
+    "file": "bower_components/font-awesome/webfonts/fa-solid-900.woff2",
+    "hash": "750fbaeb93c1a30557f34d1c5ed7e2ea"
+  },
+  {
+    "file": "bower_components/jquery-ajaxtransport-xdomainrequest/jquery.xdomainrequest.min.js",
+    "hash": "b75a457bb7ea6933cb373acb66bb28c0"
+  },
+  {
+    "file": "bower_components/select2/select2-spinner.gif",
+    "hash": "7b9776076d5fceef4993b55c9383dedd"
+  },
+  {
+    "file": "bower_components/select2/select2.css",
+    "hash": "7e53e2a0051cd9f12fc0e095fbfa9ad8"
+  },
+  {
+    "file": "bower_components/select2/select2.js",
+    "hash": "32343f6cba8bf238eb9cb5e17bf2b2d6"
+  },
+  {
+    "file": "bower_components/select2/select2.png",
+    "hash": "2ca61b76e22053571dd8611e5aac4900"
+  },
+  {
+    "file": "bower_components/select2/select2x2.png",
+    "hash": "49e3f006018662f60f1db2aec0b2cca9"
+  },
+  {
+    "file": "fonts/Bank Gothic Medium BT.ttf",
+    "hash": "1d9f2941c1cb3bc8eaf9ade805f14421"
+  },
+  {
+    "file": "fonts/bankgthd.ttf",
+    "hash": "adfd298e421945768d7bf13da3ee8a45"
+  },
+  {
+    "file": "fonts/EurostileLTStd-Bold.otf",
+    "hash": "287f5a005f591197412bd648cd421283"
+  },
+  {
+    "file": "fonts/EurostileLTStd-BoldCn.otf",
+    "hash": "629e1904615423889cffab1df672eaaf"
+  },
+  {
+    "file": "fonts/EurostileLTStd-BoldEx2.otf",
+    "hash": "274567809b8e378672e886ff0b3e584f"
+  },
+  {
+    "file": "fonts/EurostileLTStd-BoldOblique.otf",
+    "hash": "e306b19efcc4a6f5e13fcb969bd40b93"
+  },
+  {
+    "file": "fonts/EurostileLTStd-Cn.otf",
+    "hash": "21533d88f31d725a7f28d63ae3bd0f91"
+  },
+  {
+    "file": "fonts/EurostileLTStd-Demi.otf",
+    "hash": "8d4cfe95d8cc272c346bccedaf909230"
+  },
+  {
+    "file": "fonts/EurostileLTStd-DemiOblique.otf",
+    "hash": "704bb1e818573b4e6cbae0ca2c00fd13"
+  },
+  {
+    "file": "fonts/EurostileLTStd-Ex2.otf",
+    "hash": "5215fdcc236f6cde4604ff86e7f20654"
+  },
+  {
+    "file": "fonts/EurostileLTStd-Oblique.otf",
+    "hash": "b9aba8dbdb73473094fb25cc3931a937"
+  },
+  {
+    "file": "fonts/EurostileLTStd.otf",
+    "hash": "17fae39a01baa65c1fadc386b4f74df2"
+  },
+  {
+    "file": "fonts/kimberley bl.ttf",
+    "hash": "220201383c9a6a82662450169bf0dd71"
+  },
+  {
+    "file": "fonts/xwing-miniatures-ships.ttf",
+    "hash": "af54472e41569d2c2ab05abbb7066a0d"
+  },
+  {
+    "file": "fonts/xwing-miniatures.css",
+    "hash": "b46f43e4118d39b6c1fab204940340d8"
+  },
+  {
+    "file": "fonts/xwing-miniatures.ttf",
+    "hash": "f9e5ad11ee75a9baa385f256c9ef595e"
+  },
+  {
+    "file": "images/aggressor0.png",
+    "hash": "170d3583193d4943640a9e45f2fcd50a"
+  },
+  {
+    "file": "images/arc170.png",
+    "hash": "14d4f1236c0eec74b76fbabc314f38e4"
+  },
+  {
+    "file": "images/attackshuttle0.png",
+    "hash": "67e05beaba173d53cad5b3d0586c0383"
+  },
+  {
+    "file": "images/auzituckgunship.png",
+    "hash": "32520ca9cc4dd06f80f30cfe8b2ae5af"
+  },
+  {
+    "file": "images/awing0.png",
+    "hash": "6fa24f94b8c40374dcfa4ba2ef65e487"
+  },
+  {
+    "file": "images/belbullab22starfighter.png",
+    "hash": "167ce12917029ee73af1984aea960606"
+  },
+  {
+    "file": "images/belbullab22starfighter0.png",
+    "hash": "b06781021984475ab62bfbabc8b05e84"
+  },
+  {
+    "file": "images/btanr2ywing.png",
+    "hash": "57ed1239c917e14e78f5da3816457fee"
+  },
+  {
+    "file": "images/btlbywing0.png",
+    "hash": "51ee83db22313c94601b9c35b4891f9e"
+  },
+  {
+    "file": "images/bwing.png",
+    "hash": "6ac76f4eb5770a48111afef3edd79b4a"
+  },
+  {
+    "file": "images/cancel.png",
+    "hash": "4edcf998f6f914993b8ba9ad1900c241"
+  },
+  {
+    "file": "images/clonez95headhunter.png",
+    "hash": "f708946b120f332275b73533877e4579"
+  },
+  {
+    "file": "images/core2asteroid0.png",
+    "hash": "b1ae71797bcfd8f20fe54d5424245205"
+  },
+  {
+    "file": "images/core2asteroid1.png",
+    "hash": "5d7d360ebc42b53068759bacfe72a3b9"
+  },
+  {
+    "file": "images/core2asteroid2.png",
+    "hash": "2df5b1c2c2509d9c638d06370ae923e6"
+  },
+  {
+    "file": "images/core2asteroid3.png",
+    "hash": "06059b80dd71565a938ddc100fb077bc"
+  },
+  {
+    "file": "images/core2asteroid4.png",
+    "hash": "7cee00581fda22b7dfd5a489165e26c9"
+  },
+  {
+    "file": "images/core2asteroid5.png",
+    "hash": "8aefb44296fbd017f2bc8c2729295a95"
+  },
+  {
+    "file": "images/coreasteroid0.png",
+    "hash": "f03f7ece1a1ac481ab67f98dc8364f14"
+  },
+  {
+    "file": "images/coreasteroid1.png",
+    "hash": "980f3dca5ec5927e8b86296892fe07e8"
+  },
+  {
+    "file": "images/coreasteroid2.png",
+    "hash": "4ad5e47ef1fb509852775a5888fffa13"
+  },
+  {
+    "file": "images/coreasteroid3.png",
+    "hash": "41b984d60dd3adef1316d1c24b79b0c2"
+  },
+  {
+    "file": "images/coreasteroid4.png",
+    "hash": "a4aa1247a2a1d71619288c7fe462d61b"
+  },
+  {
+    "file": "images/coreasteroid5.png",
+    "hash": "301bc60169ceedfff45cc43930253227"
+  },
+  {
+    "file": "images/cr90corelliancorvette.png",
+    "hash": "d9390c35eede9e5c5a96ce4027aed608"
+  },
+  {
+    "file": "images/croccruiser.png",
+    "hash": "52300453538d200cf9d012a249f83cdd"
+  },
+  {
+    "file": "images/delta7aethersprite0.png",
+    "hash": "3d64e5328a733975c8952b4eeeaa2a08"
+  },
+  {
+    "file": "images/delta7baethersprite0.png",
+    "hash": "f788c5cf52ddd3d6cb38e065ca7be829"
+  },
+  {
+    "file": "images/droidtrifighter.png",
+    "hash": "e107425814f7772a30ea360d78225c5b"
+  },
+  {
+    "file": "images/escapecraft.png",
+    "hash": "72bd279dcfac106cd678ec526cbb01f7"
+  },
+  {
+    "file": "images/escapecraft0.png",
+    "hash": "3d57d65934d1ddf8fedb9cd48c2f1169"
+  },
+  {
+    "file": "images/eta2actis.png",
+    "hash": "1c4de75fda157183f6811b8f1863e022"
+  },
+  {
+    "file": "images/ewing0.png",
+    "hash": "07f881db609786a0df7749b4736da3a8"
+  },
+  {
+    "file": "images/fangfighter.png",
+    "hash": "3dfeaf3d7d18015c181bbae4aa8aec20"
+  },
+  {
+    "file": "images/fireball.png",
+    "hash": "1849f56bf257cc941b58766029424de4"
+  },
+  {
+    "file": "images/g1astarfighter.png",
+    "hash": "6873ba10eb405d448400512f39dc9e51"
+  },
+  {
+    "file": "images/gascloud1.png",
+    "hash": "1ee343d8becea2d95196f1a13b737844"
+  },
+  {
+    "file": "images/gascloud2.png",
+    "hash": "81a10747f757c21021511d4771a9df0c"
+  },
+  {
+    "file": "images/gascloud3.png",
+    "hash": "8a383e8ebadfc4b4652ab1d1914e2bc6"
+  },
+  {
+    "file": "images/gascloud4.png",
+    "hash": "7112b22d901ce8167c9f97569c3a14ca"
+  },
+  {
+    "file": "images/gascloud5.png",
+    "hash": "3060a25d8bc46aa700d87f7c76790372"
+  },
+  {
+    "file": "images/gascloud6.png",
+    "hash": "1a91df036ff7474d4abea3f092ce1a52"
+  },
+  {
+    "file": "images/gauntletfighter.png",
+    "hash": "5ff4ee0926630c5622f4aa8a0a34f92d"
+  },
+  {
+    "file": "images/gozanticlasscruiser.png",
+    "hash": "ea91bacd7a65f2ef2564b28b88670e90"
+  },
+  {
+    "file": "images/gr75mediumtransport.png",
+    "hash": "48b0a9e734e8467b9139f66431abb929"
+  },
+  {
+    "file": "images/hmpdroidgunship.png",
+    "hash": "a43e5f58deeb1d097e3a7635dfc57e4d"
+  },
+  {
+    "file": "images/houndstooth.png",
+    "hash": "48e2260a537f48a56ba9f1b21427a9b8"
+  },
+  {
+    "file": "images/hwk290.png",
+    "hash": "e9aa0dd8b0e34be0351374739e3e0191"
+  },
+  {
+    "file": "images/hyenaclassdroidbomber.png",
+    "hash": "247ff9685f38f7ec5fa4f1a758978945"
+  },
+  {
+    "file": "images/hyenaclassdroidbomber0.png",
+    "hash": "41c832d979a18359b53dac46aca96e28"
+  },
+  {
+    "file": "images/jumpmaster5000.png",
+    "hash": "f0723b4648a4b3a188c0d3a68d2e959d"
+  },
+  {
+    "file": "images/kihraxzfighter.png",
+    "hash": "d1155de98710be1f88b1226985af33cb"
+  },
+  {
+    "file": "images/kwing.png",
+    "hash": "35928176e14f351e3835a74317b0365e"
+  },
+  {
+    "file": "images/kwing0.png",
+    "hash": "6944ab6a22eb1c615b94254aebc820f2"
+  },
+  {
+    "file": "images/laatigunship.png",
+    "hash": "25bb3fac2c8bacd8fd9bf1168f376fdc"
+  },
+  {
+    "file": "images/lambda_shuttle.png",
+    "hash": "e581006b241861dbc553057c01f9efeb"
+  },
+  {
+    "file": "images/lancerclasspursuitcraft.png",
+    "hash": "5f710da7860ef53302025ca22338ad23"
+  },
+  {
+    "file": "images/landos_millennium_falcon.png",
+    "hash": "5ac8d6f37293bc028b420e409009a7ba"
+  },
+  {
+    "file": "images/m12lkimogilafighter.png",
+    "hash": "420bb9122c39e62701766261bca19b86"
+  },
+  {
+    "file": "images/m3ainterceptor0.png",
+    "hash": "95099bdb320906ef239df1a4e61a0bde"
+  },
+  {
+    "file": "images/millennium_falcon_resistance.png",
+    "hash": "01d77c4af93af4945fa5d7185a33083e"
+  },
+  {
+    "file": "images/millennium_falcon.png",
+    "hash": "c2e2a6d8bbfa6d39b839e02f3cf5f95b"
+  },
+  {
+    "file": "images/miningguildtie.png",
+    "hash": "a2872e9295cc6fb18084502a236cc9be"
+  },
+  {
+    "file": "images/nabooroyaln1starfighter.png",
+    "hash": "bd9a7e2e5307949492009fdcb669b20b"
+  },
+  {
+    "file": "images/nabooroyaln1starfighter0.png",
+    "hash": "52a25be0b76e2fe820328163061f67aa"
+  },
+  {
+    "file": "images/nantexclassstarfighter.png",
+    "hash": "a1d9046c71f011ad3eb131de5fc39d69"
+  },
+  {
+    "file": "images/nantexclassstarfighter0.png",
+    "hash": "8650256500faf1e07dd93a4d4de9d60e"
+  },
+  {
+    "file": "images/nimbusclassvwing.png",
+    "hash": "9cd2f4c6f6be7653d6e844c1ef5f645a"
+  },
+  {
+    "file": "images/pomasteroid1.png",
+    "hash": "b2010451c14861cd6d830578364d13a7"
+  },
+  {
+    "file": "images/pomasteroid2.png",
+    "hash": "bec28b8369ee81eefa4b28989db36f47"
+  },
+  {
+    "file": "images/pomasteroid3.png",
+    "hash": "6baa7698c2808311979bf7eb4a379dd1"
+  },
+  {
+    "file": "images/pomdebris1.png",
+    "hash": "f1dd71f08416fae43dc57473505eaeb1"
+  },
+  {
+    "file": "images/pomdebris2.png",
+    "hash": "0d8d3ed6713255c4e374f421faacceed"
+  },
+  {
+    "file": "images/pomdebris3.png",
+    "hash": "52cfc1e8c8b6dd2b61616f695399af1a"
+  },
+  {
+    "file": "images/preview.png",
+    "hash": "24add97a39473bf5aa623a2b44c3959f"
+  },
+  {
+    "file": "images/quadjumper.png",
+    "hash": "016b8c0901080fb7abe9a968d38de8ed"
+  },
+  {
+    "file": "images/raiderclasscorvette.png",
+    "hash": "0afd21a8488d754c6f89f633ed64c7ad"
+  },
+  {
+    "file": "images/resistancebomber.png",
+    "hash": "49d9976625c914755103cb917fb35482"
+  },
+  {
+    "file": "images/resistancetransport0.png",
+    "hash": "1210f76738d44846da7b3fdeebf92342"
+  },
+  {
+    "file": "images/resistancetransportpod0.png",
+    "hash": "d089f8f5b9b4ad1f6ea3e2f8c4106fed"
+  },
+  {
+    "file": "images/rogueclassstarfighter.png",
+    "hash": "45be39fa6d7d1a1606f2f8f67d9abd76"
+  },
+  {
+    "file": "images/rz2awing.png",
+    "hash": "27e2d69b0c20300333ea41bb7e79c9b3"
+  },
+  {
+    "file": "images/scurrgh6bomber.png",
+    "hash": "57bfeb15ff77d98265eae6c2696a4624"
+  },
+  {
+    "file": "images/sheathipedeclassshuttle.png",
+    "hash": "ce41f2997f224dff82bb6806b04f4492"
+  },
+  {
+    "file": "images/sithinfiltrator0.png",
+    "hash": "2cf32b3ce1adea21e1c661dfd31ebb7e"
+  },
+  {
+    "file": "images/slave_i1.png",
+    "hash": "ba8a57a6585ed189c8ab0550fd56b157"
+  },
+  {
+    "file": "images/st70assaultship.png",
+    "hash": "40602a7eb8bbe833d369590a649ae3b7"
+  },
+  {
+    "file": "images/starviper0.png",
+    "hash": "ef44bac8e15a65a1369d2ba675998a37"
+  },
+  {
+    "file": "images/starwing.png",
+    "hash": "aeae9c6778d83daee63a7c7bfe208909"
+  },
+  {
+    "file": "images/syliureclasshyperspacering.png",
+    "hash": "fada4911875dfb55b97a8df03727db55"
+  },
+  {
+    "file": "images/t70xwing0.png",
+    "hash": "2a56f85d9998f22e8da4292f4ceb8401"
+  },
+  {
+    "file": "images/tie_bomber.png",
+    "hash": "b83b2604b89af6c801698fb4b3755dc5"
+  },
+  {
+    "file": "images/tieadvanced0.png",
+    "hash": "3c2110196ce488f6fc57310710991d2c"
+  },
+  {
+    "file": "images/tieadvancedprototype0.png",
+    "hash": "2d258eb154163b1b0ed7dd187b231f40"
+  },
+  {
+    "file": "images/tieaggressor.png",
+    "hash": "f21671fbd4aec0a2c4d2e7cd8a9a9308"
+  },
+  {
+    "file": "images/tiebainterceptor.png",
+    "hash": "0c16aea91c679fdc7fadcb879e8e335e"
+  },
+  {
+    "file": "images/tiedefender0.png",
+    "hash": "de5d3c36fc6fe033382f2f43528eda44"
+  },
+  {
+    "file": "images/tiefighter.png",
+    "hash": "f340bed822799ace2a3a26176e2be0f8"
+  },
+  {
+    "file": "images/tiefighter0.png",
+    "hash": "5f030645ed95397635a3e977dc651eaf"
+  },
+  {
+    "file": "images/tiefofighter0.png",
+    "hash": "0a844ef5d6dc0790289b26de7ddd9b6d"
+  },
+  {
+    "file": "images/tieinterceptor0.png",
+    "hash": "82e4e0881f1997dd7a6d78ea497fac49"
+  },
+  {
+    "file": "images/tiephantom0.png",
+    "hash": "9021fe59119f476094d846299c0c67bc"
+  },
+  {
+    "file": "images/tiepunisher.png",
+    "hash": "30c98acc5843e82686c33d6b25773e59"
+  },
+  {
+    "file": "images/tierbheavy.png",
+    "hash": "030e705b6a4ba63668bda1f798c87dc1"
+  },
+  {
+    "file": "images/tiereaper.png",
+    "hash": "3a9e0d5fad358d4003ae5edb813c6d10"
+  },
+  {
+    "file": "images/tiesebomber.png",
+    "hash": "2c4196da75c1d4b1979bca190d5a0fa6"
+  },
+  {
+    "file": "images/tiesf.png",
+    "hash": "384cb4e7a0094c82935b588e1835e9b3"
+  },
+  {
+    "file": "images/tiesilencer.png",
+    "hash": "3a50042d5b1165a9404cdd1ad1f15853"
+  },
+  {
+    "file": "images/tiestriker.png",
+    "hash": "5265be47d866a92368d5771d427fbede"
+  },
+  {
+    "file": "images/tiewhisper.png",
+    "hash": "f8fd2dab5c0d8f05baeedd9f6a54d5fd"
+  },
+  {
+    "file": "images/transparent.png",
+    "hash": "255e8d5f794000ce64a3d2841618a245"
+  },
+  {
+    "file": "images/tridentclassassaultship.png",
+    "hash": "33454c452a39ee3c6d941ba3e7f5b3d7"
+  },
+  {
+    "file": "images/underconstruction.gif",
+    "hash": "a44be0b10b8477f2897232827c3869be"
+  },
+  {
+    "file": "images/upsilonclassshuttle.png",
+    "hash": "1f0f59b251061813f9d2189281ec6bea"
+  },
+  {
+    "file": "images/uwing.png",
+    "hash": "3a1a8dd28a43613181433bda0b5b53b5"
+  },
+  {
+    "file": "images/v19torrent.png",
+    "hash": "aaf5a0d5b30ad6e6b0154d9f6e0811fb"
+  },
+  {
+    "file": "images/v19torrent0.png",
+    "hash": "ead73ddaf0b8058b73b064a4c9197fde"
+  },
+  {
+    "file": "images/vcx100.png",
+    "hash": "b7213e7a55ba0e5681f533bd1d6fa237"
+  },
+  {
+    "file": "images/vcx1000.png",
+    "hash": "09a3d898d9a6566b88800e2573d3b041"
+  },
+  {
+    "file": "images/vt49decimator0.png",
+    "hash": "30f7bd76751eec4e8df469e387f8d7a2"
+  },
+  {
+    "file": "images/vt49decimatordebris0.png",
+    "hash": "09ce83e9eef52b37077e60f880ef3a9b"
+  },
+  {
+    "file": "images/vt49decimatordebris1.png",
+    "hash": "819470a5421da6595b60d02d130e7465"
+  },
+  {
+    "file": "images/vt49decimatordebris2.png",
+    "hash": "358c09377e7e9da5a27e3b98525ec762"
+  },
+  {
+    "file": "images/vultureclassdroidfighter.png",
+    "hash": "5e258eb1088cdb85f2715003ff0835ea"
+  },
+  {
+    "file": "images/vultureclassdroidfighter0.png",
+    "hash": "28650cf3460004d0886f5ad49f2a3f48"
+  },
+  {
+    "file": "images/xiclasslightshuttle.png",
+    "hash": "f774088b70ee09f52a31501cf77303bf"
+  },
+  {
+    "file": "images/xwing0.png",
+    "hash": "c2b754138011e7a78c18c613121889fc"
+  },
+  {
+    "file": "images/xws-obstacles.png",
+    "hash": "608c4fa98258201e0582f0e054e34d37"
+  },
+  {
+    "file": "images/yt2400.png",
+    "hash": "ba0261cfc551f16e62022dea7a68bff5"
+  },
+  {
+    "file": "images/yt2400debris0.png",
+    "hash": "0a8b5f8cba2a9a0db9191c09bc7fcd7d"
+  },
+  {
+    "file": "images/yt2400debris1.png",
+    "hash": "5fbd8bf981db64078985b3991077dfc8"
+  },
+  {
+    "file": "images/yt2400debris2.png",
+    "hash": "ac15304b83740e621df3a6f224d67b69"
+  },
+  {
+    "file": "images/ywing1.png",
+    "hash": "7ed528eb6b14c964f72f7e1d715919d9"
+  },
+  {
+    "file": "images/z95headhunter0.png",
+    "hash": "9a9633ad6d9f3ff0c610b7526bf6b5b5"
+  },
+  {
+    "file": "index.html",
+    "hash": "e8ec2285d9e53f74033b799ddf710e2b"
+  },
+  {
+    "file": "javascripts/manifest.js",
+    "hash": "61711748901ee5f0d13bd2fd501160c2"
+  },
+  {
+    "file": "javascripts/manifest.js.map",
+    "hash": "8d5159021fe902cfbd3aa57778ef43b9"
+  },
+  {
+    "file": "javascripts/manifest.min.js",
+    "hash": "82912ae9275165ebdf3f2de50e31cc31"
+  },
+  {
+    "file": "javascripts/manifest.min.js.map",
+    "hash": "c9564c30292cd079e5a99722ae0d8916"
+  },
+  {
+    "file": "javascripts/translation-en.js",
+    "hash": "d0a73b4443ce3ff9b515531e49828295"
+  },
+  {
+    "file": "javascripts/translation-en.js.map",
+    "hash": "1a90f8816fcbf873e91444663c6ac2c5"
+  },
+  {
+    "file": "javascripts/translation-en.min.js",
+    "hash": "e2825363afa5faaf2190458113d853af"
+  },
+  {
+    "file": "javascripts/translation-en.min.js.map",
+    "hash": "dc560d7097cec1fbdf27188a29b6fed3"
+  },
+  {
+    "file": "javascripts/translations.js",
+    "hash": "29381c4fdec490af1085d8b70ecd8556"
+  },
+  {
+    "file": "javascripts/translations.js.map",
+    "hash": "553ba0f98a5f995f881170c431490d39"
+  },
+  {
+    "file": "javascripts/translations.min.js",
+    "hash": "9b148ffecdcc335f0e0d5c124fb5ea33"
+  },
+  {
+    "file": "javascripts/translations.min.js.map",
+    "hash": "ce44351dbe38feea4acf511056cfdb8a"
+  },
+  {
+    "file": "javascripts/translations.src.coffee",
+    "hash": "9c12598e9de170372e71f35e7b12d92a"
+  },
+  {
+    "file": "javascripts/xwing.js",
+    "hash": "4b36853f98d9013147ad7e16f3e1bbc9"
+  },
+  {
+    "file": "javascripts/xwing.js.map",
+    "hash": "a149b126d25c9310d136fcf08b9634a0"
+  },
+  {
+    "file": "javascripts/xwing.min.js",
+    "hash": "6f507d0a802e1f06bb5b64ccef360cbd"
+  },
+  {
+    "file": "javascripts/xwing.min.js.map",
+    "hash": "fcfb49f1d73fff49ffa0822ea17b1c3d"
+  },
+  {
+    "file": "javascripts/xwing.src.coffee",
+    "hash": "7dce672aeb98b16010cdf2fa3ff1364b"
+  },
+  {
+    "file": "javascripts/xwingcontent.js",
+    "hash": "97125221a6926fb671affbd8e8c96bba"
+  },
+  {
+    "file": "javascripts/xwingcontent.js.map",
+    "hash": "2560b355a1e50047927bd4bb0a4e8c4f"
+  },
+  {
+    "file": "javascripts/xwingcontent.min.js",
+    "hash": "1ab5ffb7047eb5854a2cb98a3d62759a"
+  },
+  {
+    "file": "javascripts/xwingcontent.min.js.map",
+    "hash": "c6cd25ad51433be79aaeaa28c15ebafe"
+  },
+  {
+    "file": "javascripts/xwingcontent.src.coffee",
+    "hash": "fa0bbcac093c23b49e56d274ed740eac"
+  },
+  {
+    "file": "javascripts/xwingquickbuilds.js",
+    "hash": "26f361ea570d87ae63639580cb2e1110"
+  },
+  {
+    "file": "javascripts/xwingquickbuilds.js.map",
+    "hash": "ff32ae5fd9fae28d1c4618ab7816de17"
+  },
+  {
+    "file": "javascripts/xwingquickbuilds.min.js",
+    "hash": "9925a22faf12bcd424045a5ab7d72975"
+  },
+  {
+    "file": "javascripts/xwingquickbuilds.min.js.map",
+    "hash": "b921ee0adfc56d78ce0f7129400e782a"
+  },
+  {
+    "file": "javascripts/xwingrules.js",
+    "hash": "57f03263343713eea4f2d6d9c9a2c41b"
+  },
+  {
+    "file": "javascripts/xwingrules.js.map",
+    "hash": "2804c4912942d66bf1d521812e67c24a"
+  },
+  {
+    "file": "javascripts/xwingrules.min.js",
+    "hash": "1fa6b6f0b981253da4a1c4f0096efef8"
+  },
+  {
+    "file": "javascripts/xwingrules.min.js.map",
+    "hash": "0486df60142b3cf99e44b2f1b7315f15"
+  },
+  {
+    "file": "privacy.html",
+    "hash": "66a0038fa83dff1d7a0a55a4a64c3e64"
+  },
+  {
+    "file": "site.webmanifest",
+    "hash": "49f32f5b83b8f84131e74580effcb041"
+  },
+  {
+    "file": "stylesheets/backgrounds.css",
+    "hash": "298771223d3e97561b186d93ba488106"
+  },
+  {
+    "file": "stylesheets/xwing-print.css",
+    "hash": "f32c8ef7141194dd070564c59e3d0d9e"
+  },
+  {
+    "file": "stylesheets/xwing-screen.css",
+    "hash": "2eb75862b285b66c77641324cc54a566"
+  },
+  {
+    "file": "stylesheets/xwing.css",
+    "hash": "fbec7c9e8947e90a83e31076f876c501"
+  }
+]
