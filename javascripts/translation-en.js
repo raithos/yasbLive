@@ -4476,7 +4476,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Without A Trace (SL)": {
       display_name: "Without A Trace",
-      text: "After you gain a cloak token, you may remove 1 red token. While you are cloaked, enenmy ships cannot acuqire locks on you."
+      text: "After you gain a cloak token, you may remove 1 red token. While you are cloaked, enemy ships cannot acquire locks on you."
     },
     "Relay System (SL)": {
       display_name: "Relay System",
