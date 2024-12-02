@@ -7132,7 +7132,7 @@ exportObj.basicCardData = function() {
         pointsbeta: 3,
         loadoutbeta: 8,
         slots: ["Talent", "Missile", "Tech", "Tech", "Configuration"],
-        slotsbeta: ["Talent", "Missile", "Tech", "Tech"]
+        slotsbeta: ["Talent", "Tech", "Tech"]
       }, {
         name: '"Breach"',
         id: 493,
