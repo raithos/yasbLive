@@ -3938,17 +3938,8 @@ exportObj.basicCardData = function() {
         slots: ["Talent", "Talent", "Tech", "Modification", "Modification"],
         slotsbeta: ["Talent", "Talent", "Sensor", "Tech", "Missile", "Modification", "Modification"]
       }, {
-        name: '"Longshot"',
         id: 234,
-        skip: true,
-        unique: true,
-        faction: "First Order",
-        ship: "TIE/fo Fighter",
-        skill: 3,
-        points: 3,
-        loadout: 3,
-        slots: ["Talent", "Tech", "Tech", "Modification"],
-        slotsbeta: ["Talent", "Sensor", "Tech", "Tech", "Modification"]
+        skip: true
       }, {
         name: '"Muse"',
         id: 235,
@@ -4295,7 +4286,7 @@ exportObj.basicCardData = function() {
         pointsbeta: 3,
         loadoutbeta: 9,
         slots: ["Talent", "Tech", "Tech", "Modification"],
-        slotsbeta: ["Talent", "Tech", "Tech", "Modification"]
+        slotsbeta: ["Talent", "Sensor", "Tech", "Tech", "Modification"]
       }, {
         name: '"Static"',
         id: 264,
