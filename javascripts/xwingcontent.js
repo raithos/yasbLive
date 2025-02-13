@@ -963,7 +963,7 @@ exportObj.basicCardData = function() {
       "CR90 Corellian Corvette": {
         name: "CR90 Corellian Corvette",
         icon: "cr90corvette",
-        factions: ["Galactic Republic", "Rebel Alliance"],
+        factions: ["Galactic Republic", "Rebel Alliance", "Resistance"],
         base: "Huge",
         attackl: 4,
         attackr: 4,
@@ -973,6 +973,7 @@ exportObj.basicCardData = function() {
         shieldrecurr: 2,
         energy: 7,
         energyrecurr: 2,
+        chassis: "Broadside Batteries",
         actions: ["Focus", "Reinforce", "Lock", "R-Coordinate", "Jam"],
         maneuvers: [[0, 3, 3, 3, 0], [0, 2, 2, 2, 0], [0, 1, 1, 1, 0], [0, 3, 1, 3, 0], [0, 0, 3, 0, 0], [0, 0, 3, 0, 0]]
       },
@@ -987,6 +988,7 @@ exportObj.basicCardData = function() {
         shieldrecurr: 2,
         energy: 6,
         energyrecurr: 2,
+        chassis: "Concentrated Batteries",
         actions: ["Focus", "Reinforce", "Lock", "Coordinate", "Jam"],
         maneuvers: [[0, 3, 3, 3, 0], [0, 1, 2, 1, 0], [0, 2, 1, 2, 0], [0, 3, 1, 3, 0], [0, 0, 2, 0, 0], [0, 0, 3, 0, 0]]
       },
@@ -1001,12 +1003,13 @@ exportObj.basicCardData = function() {
         shieldrecurr: 1,
         energy: 4,
         energyrecurr: 1,
+        chassis: "Resupply Craft",
         actions: ["Focus", "R-Lock", "Coordinate", "R-Reinforce", "Jam"],
         maneuvers: [[0, 3, 3, 3, 0], [0, 1, 1, 1, 0], [0, 2, 2, 2, 0], [0, 0, 3, 0, 0], [0, 0, 3, 0, 0]]
       },
       "Gozanti-class Cruiser": {
         name: "Gozanti-class Cruiser",
-        factions: ["Galactic Empire", "First Order"],
+        factions: ["Galactic Empire", "First Order", "Separatist Alliance"],
         base: "Huge",
         attack: 3,
         agility: 0,
@@ -1015,6 +1018,7 @@ exportObj.basicCardData = function() {
         shieldrecurr: 1,
         energy: 3,
         energyrecurr: 1,
+        chassis: "Docking Clamps",
         actions: ["Focus", "Reinforce", "Lock", "Coordinate", "Jam"],
         maneuvers: [[0, 3, 3, 3, 0], [0, 2, 1, 2, 0], [0, 3, 1, 3, 0], [0, 0, 1, 0, 0], [0, 0, 3, 0, 0]]
       },
@@ -1029,6 +1033,7 @@ exportObj.basicCardData = function() {
         shieldrecurr: 1,
         energy: 4,
         energyrecurr: 1,
+        chassis: "Overdrive Burners",
         actions: ["Focus", "Reinforce", "Lock", "R-Coordinate", "Jam"],
         maneuvers: [[0, 3, 3, 3, 0], [0, 2, 1, 2, 0], [0, 2, 1, 2, 0], [0, 3, 2, 3, 0], [0, 0, 3, 0, 0], [0, 0, 3, 0, 0]]
       },
@@ -1043,6 +1048,7 @@ exportObj.basicCardData = function() {
         shieldrecurr: 1,
         energy: 3,
         energyrecurr: 2,
+        chassis: "Tractor Grasp",
         actions: ["Focus", "R-Evade", "R-Reinforce", "Lock", "R-Coordinate"],
         maneuvers: [[0, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0], [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 3, 0], [0, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
         autoequip: ['Tractor Tentacles']
@@ -1110,7 +1116,8 @@ exportObj.basicCardData = function() {
         loadout: 24,
         pointsbeta: 5,
         loadoutbeta: 5,
-        slots: ["Force", "Talent", "Torpedo", "Astromech", "Modification", "Configuration"]
+        slots: ["Force", "Talent", "Torpedo", "Astromech", "Modification", "Configuration"],
+        slotsbeta: ["Force", "Force", "Torpedo", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Wedge Antilles",
         id: 5,
@@ -1576,8 +1583,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 7,
         loadout: 15,
-        pointsbeta: 7,
-        loadoutbeta: 9,
+        pointsbeta: 9,
+        loadoutbeta: 25,
         slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Lando Calrissian",
@@ -1590,7 +1597,7 @@ exportObj.basicCardData = function() {
         points: 7,
         loadout: 21,
         pointsbeta: 7,
-        loadoutbeta: 12,
+        loadoutbeta: 15,
         slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Chewbacca",
@@ -2153,8 +2160,8 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 5,
         loadout: 10,
-        pointsbeta: 5,
-        loadoutbeta: 14,
+        pointsbeta: 6,
+        loadoutbeta: 20,
         slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
         name: "Lando Calrissian (Scum)",
@@ -2613,7 +2620,8 @@ exportObj.basicCardData = function() {
         loadoutbeta: 23,
         force: 2,
         keyword: ["Bounty Hunter", "Dark Side"],
-        slots: ["Force", "Talent", "Crew", "Illicit", "Illicit", "Modification"]
+        slots: ["Force", "Talent", "Crew", "Illicit", "Illicit", "Modification"],
+        slotsbeta: ["Force", "Force", "Crew", "Illicit", "Illicit", "Modification"]
       }, {
         name: "Ketsu Onyo",
         id: 126,
@@ -3196,7 +3204,8 @@ exportObj.basicCardData = function() {
         loadoutbeta: 13,
         force: 2,
         keyword: ["Dark Side"],
-        slots: ["Force", "Force", "Talent", "Sensor", "Missile"]
+        slots: ["Force", "Force", "Talent", "Sensor", "Missile"],
+        slotsbeta: ["Force", "Force", "Sensor", "Missile", "Modification"]
       }, {
         name: "Seventh Sister",
         id: 170,
@@ -3210,7 +3219,8 @@ exportObj.basicCardData = function() {
         loadoutbeta: 9,
         force: 2,
         keyword: ["Dark Side"],
-        slots: ["Force", "Talent", "Sensor", "Missile"]
+        slots: ["Force", "Talent", "Sensor", "Missile"],
+        slotsbeta: ["Force", "Force", "Sensor", "Missile", "Modification"]
       }, {
         name: "Inquisitor",
         id: 171,
@@ -3223,7 +3233,8 @@ exportObj.basicCardData = function() {
         loadoutbeta: 13,
         force: 1,
         keyword: ["Dark Side"],
-        slots: ["Force", "Sensor"]
+        slots: ["Force", "Sensor"],
+        slotsbeta: ["Force", "Sensor", "Modification"]
       }, {
         name: "Baron of the Empire",
         id: 172,
@@ -3234,7 +3245,8 @@ exportObj.basicCardData = function() {
         loadout: 4,
         pointsbeta: 3,
         loadoutbeta: 5,
-        slots: ["Talent", "Sensor", "Missile"]
+        slots: ["Talent", "Sensor", "Missile"],
+        slotsbeta: ["Talent", "Sensor", "Missile", "Modification"]
       }, {
         name: "Darth Vader",
         id: 173,
@@ -3248,7 +3260,7 @@ exportObj.basicCardData = function() {
         pointsbeta: 6,
         loadoutbeta: 12,
         force: 3,
-        slots: ["Force", "Force", "Talent", "Tech", "Sensor", "Missile", "Modification", "Modification"]
+        slots: ["Force", "Force", "Tech", "Sensor", "Missile", "Modification", "Modification"]
       }, {
         name: "Maarek Stele",
         id: 174,
@@ -3719,8 +3731,8 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 20,
-        pointsbeta: 7,
-        loadoutbeta: 10,
+        pointsbeta: 8,
+        loadoutbeta: 24,
         slots: ["Talent", "Torpedo", "Crew", "Crew", "Crew", "Gunner", "Device", "Modification", "Title"]
       }, {
         name: "Captain Oicunn",
@@ -3756,7 +3768,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 8,
         pointsbeta: 4,
-        loadoutbeta: 11,
+        loadoutbeta: 18,
         slots: ["Talent", "Talent", "Modification"]
       }, {
         name: "Iden Versio",
@@ -3769,7 +3781,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 8,
         pointsbeta: 4,
-        loadoutbeta: 12,
+        loadoutbeta: 16,
         slots: ["Talent", "Talent", "Cannon", "Missile", "Modification"]
       }, {
         name: '"Mauler" Mithel',
@@ -3965,7 +3977,8 @@ exportObj.basicCardData = function() {
         pointsbeta: 6,
         loadoutbeta: 8,
         applies_condition: 'I\'ll Show You the Dark Side'.canonicalize(),
-        slots: ["Force", "Talent", "Tech", "Torpedo", "Missile", "Configuration"]
+        slots: ["Force", "Talent", "Tech", "Torpedo", "Missile", "Configuration"],
+        slotsbeta: ["Force", "Force", "Tech", "Torpedo", "Missile", "Configuration"]
       }, {
         name: '"Blackout"',
         id: 237,
@@ -4055,10 +4068,11 @@ exportObj.basicCardData = function() {
         skill: 5,
         points: 7,
         loadout: 25,
-        pointsbeta: 7,
-        loadoutbeta: 21,
+        pointsbeta: 8,
+        loadoutbeta: 28,
         force: 2,
-        slots: ["Force", "Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
+        slots: ["Force", "Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"],
+        slotsbeta: ["Force", "Force", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
         name: "Han Solo (Resistance)",
         id: 245,
@@ -4068,9 +4082,10 @@ exportObj.basicCardData = function() {
         skill: 6,
         points: 6,
         loadout: 15,
-        pointsbeta: 6,
-        loadoutbeta: 9,
-        slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Modification"]
+        pointsbeta: 7,
+        loadoutbeta: 24,
+        slots: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Modification"],
+        slotsbeta: ["Talent", "Missile", "Crew", "Crew", "Gunner", "Illicit", "Illicit", "Modification", "Modification", "Title"]
       }, {
         name: "Chewbacca (Resistance)",
         id: 246,
@@ -4412,7 +4427,8 @@ exportObj.basicCardData = function() {
         pointsbeta: 6,
         loadoutbeta: 12,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Force", "Talent", "Astromech", "Modification", "Configuration"]
+        slots: ["Force", "Force", "Talent", "Astromech", "Modification", "Configuration"],
+        slotsbeta: ["Force", "Force", "Force", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Luminara Unduli",
         id: 274,
@@ -4478,7 +4494,7 @@ exportObj.basicCardData = function() {
         loadoutbeta: 9,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Astromech", "Modification", "Modification", "Configuration"],
-        slotsbeta: ["Force", "Force", "Talent", "Astromech", "Modification", "Configuration"]
+        slotsbeta: ["Force", "Force", "Force", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Trade Federation Drone",
         id: 279,
@@ -4901,7 +4917,8 @@ exportObj.basicCardData = function() {
         pointsbeta: 4,
         loadoutbeta: 3,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Talent", "Astromech", "Modification", "Configuration"]
+        slots: ["Force", "Talent", "Astromech", "Modification", "Configuration"],
+        slotsbeta: ["Force", "Force", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Saesee Tiin",
         id: 313,
@@ -5032,7 +5049,8 @@ exportObj.basicCardData = function() {
         pointsbeta: 4,
         loadoutbeta: 9,
         keyword: ["Light Side"],
-        slots: ["Talent", "Sensor", "Torpedo", "Astromech"]
+        slots: ["Talent", "Sensor", "Torpedo", "Astromech"],
+        slotsbeta: ["Talent", "Talent", "Torpedo", "Astromech", "Modification"]
       }, {
         name: "Bravo Flight Officer",
         id: 323,
@@ -5489,9 +5507,10 @@ exportObj.basicCardData = function() {
         points: 6,
         loadout: 20,
         pointsbeta: 5,
-        loadoutbeta: 25,
+        loadoutbeta: 20,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"]
+        slots: ["Force", "Turret", "Torpedo", "Gunner", "Astromech", "Device", "Modification"],
+        slotsbeta: ["Force", "Turret", "Torpedo", "Gunner", "Astromech", "Device"]
       }, {
         name: "Shadow Squadron Veteran",
         id: 360,
@@ -5902,7 +5921,8 @@ exportObj.basicCardData = function() {
         pointsbeta: 4,
         loadoutbeta: 8,
         force: 2,
-        slots: ["Force", "Talent", "Sensor", "Missile"]
+        slots: ["Force", "Talent", "Sensor", "Missile"],
+        slotsbeta: ["Force", "Force", "Sensor", "Missile", "Modification"]
       }, {
         name: '"Vagabond"',
         id: 395,
@@ -6065,8 +6085,8 @@ exportObj.basicCardData = function() {
         ship: "HMP Droid Gunship",
         points: 4,
         loadout: 12,
-        pointsbeta: 3,
-        loadoutbeta: 8,
+        pointsbeta: 4,
+        loadoutbeta: 12,
         keyword: ["Droid"],
         slots: ["Missile", "Missile", "Cannon", "Cannon", "Tactical Relay", "Modification", "Configuration"]
       }, {
@@ -6091,10 +6111,11 @@ exportObj.basicCardData = function() {
         ship: "HMP Droid Gunship",
         points: 3,
         loadout: 7,
-        pointsbeta: 4,
-        loadoutbeta: 10,
+        pointsbeta: 3,
+        loadoutbeta: 6,
         keyword: ["Droid"],
-        slots: ["Missile", "Missile", "Tactical Relay", "Crew", "Device", "Modification", "Configuration"]
+        slots: ["Missile", "Missile", "Tactical Relay", "Crew", "Device", "Modification", "Configuration"],
+        slotsbeta: ["Missile", "Missile", "Tactical Relay", "Modification", "Configuration"]
       }, {
         name: "Onderon Oppressor",
         id: 411,
@@ -6765,7 +6786,8 @@ exportObj.basicCardData = function() {
         loadout: 7,
         pointsbeta: 5,
         loadoutbeta: 16,
-        slots: ["Force", "Force", "Talent", "Missile", "Modification", "Configuration"]
+        slots: ["Force", "Force", "Talent", "Missile", "Modification", "Configuration"],
+        slotsbeta: ["Force", "Force", "Missile", "Modification", "Modification", "Configuration"]
       }, {
         name: "Netrem Pollard",
         id: 464,
@@ -7063,8 +7085,9 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 14,
         pointsbeta: 6,
-        loadoutbeta: 17,
-        slots: ["Force", "Force", "Talent", "Missile", "Tech", "Tech", "Modification", "Configuration"]
+        loadoutbeta: 20,
+        slots: ["Force", "Force", "Talent", "Missile", "Tech", "Tech", "Modification", "Configuration"],
+        slotsbeta: ["Force", "Force", "Missile", "Tech", "Tech", "Modification", "Modification", "Configuration"]
       }, {
         name: '"Wrath"',
         id: 488,
@@ -7075,7 +7098,7 @@ exportObj.basicCardData = function() {
         points: 5,
         loadout: 15,
         pointsbeta: 5,
-        loadoutbeta: 12,
+        loadoutbeta: 17,
         slots: ["Talent", "Talent", "Cannon", "Tech", "Tech", "Configuration"]
       }, {
         name: '"Nightfall"',
@@ -7087,7 +7110,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 10,
         pointsbeta: 4,
-        loadoutbeta: 3,
+        loadoutbeta: 8,
         slots: ["Talent", "Missile", "Tech", "Tech", "Configuration"]
       }, {
         name: '"Whirlwind"',
@@ -7099,7 +7122,7 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 12,
         pointsbeta: 5,
-        loadoutbeta: 18,
+        loadoutbeta: 20,
         slots: ["Talent", "Talent", "Missile", "Tech", "Tech", "Configuration"]
       }, {
         name: "709th Legion Ace",
@@ -7255,9 +7278,9 @@ exportObj.basicCardData = function() {
         points: 4,
         loadout: 8,
         pointsbeta: 4,
-        loadoutbeta: 10,
+        loadoutbeta: 15,
         slots: ["Talent", "Missile", "Illicit", "Illicit", "Modification"],
-        slotsbeta: ["Talent", "Missile", "Modification"]
+        slotsbeta: ["Talent", "Missile", "Modification", "Modification"]
       }, {
         name: "ISB Jingoist",
         id: 504,
@@ -7267,9 +7290,10 @@ exportObj.basicCardData = function() {
         points: 3,
         loadout: 5,
         pointsbeta: 4,
-        loadoutbeta: 8,
+        loadoutbeta: 18,
         max_per_squad: 2,
-        slots: ["Talent", "Illicit"]
+        slots: ["Talent", "Illicit"],
+        slotsbeta: ["Talent", "Illicit", "Modification"]
       }, {
         name: "Mandalorian Royal Guard",
         id: 505,
@@ -7369,7 +7393,8 @@ exportObj.basicCardData = function() {
         unique: true,
         force: 3,
         keyword: ["Dark Side", "Sith"],
-        slots: ["Force", "Talent", "Crew", "Gunner", "Missile", "Device", "Illicit", "Modification", "Modification", "Title", "Configuration"]
+        slots: ["Force", "Talent", "Crew", "Gunner", "Missile", "Device", "Illicit", "Modification", "Modification", "Title", "Configuration"],
+        slotsbeta: ["Force", "Force", "Crew", "Gunner", "Missile", "Device", "Illicit", "Modification", "Modification", "Title", "Configuration"]
       }, {
         name: "Shadow Collective Operator",
         id: 513,
@@ -7472,7 +7497,8 @@ exportObj.basicCardData = function() {
         loadoutbeta: 10,
         keyword: ["Light Side", "Spectre"],
         unique: true,
-        slots: ["Force", "Talent", "Crew", "Gunner", "Device", "Illicit", "Modification", "Modification", "Title", "Configuration"]
+        slots: ["Force", "Talent", "Crew", "Gunner", "Device", "Illicit", "Modification", "Modification", "Title", "Configuration"],
+        slotsbeta: ["Force", "Force", "Crew", "Gunner", "Device", "Illicit", "Modification", "Modification", "Title", "Configuration"]
       }, {
         name: "Q9-0",
         id: 521,
@@ -7576,7 +7602,8 @@ exportObj.basicCardData = function() {
         points: 7,
         loadout: 15,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Force", "Talent", "Astromech", "Modification"]
+        slots: ["Force", "Force", "Talent", "Astromech", "Modification"],
+        slotsbeta: ["Force", "Force", "Astromech", "Modification", "Modification", "Modification"]
       }, {
         name: "Luminara Unduli (Delta-7b)",
         id: 529,
@@ -7645,7 +7672,8 @@ exportObj.basicCardData = function() {
         pointsbeta: 6,
         loadoutbeta: 9,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Force", "Talent", "Astromech", "Modification"]
+        slots: ["Force", "Force", "Talent", "Astromech", "Modification"],
+        slotsbeta: ["Force", "Force", "Talent", "Astromech", "Modification"]
       }, {
         name: "Cad Bane",
         id: 534,
@@ -8517,7 +8545,8 @@ exportObj.basicCardData = function() {
         pointsbeta: 5,
         loadoutbeta: 15,
         keyword: ["Dark Side"],
-        slots: ["Force", "Talent", "Missile", "Modification", "Configuration"]
+        slots: ["Force", "Talent", "Missile", "Modification", "Configuration"],
+        slotsbeta: ["Force", "Force", "Missile", "Modification", "Configuration"]
       }, {
         name: "Magna Tolvan",
         id: 602,
@@ -8550,7 +8579,7 @@ exportObj.basicCardData = function() {
         points: 7,
         loadout: 25,
         pointsbeta: 7,
-        loadoutbeta: 24,
+        loadoutbeta: 21,
         slots: ["Talent", "Talent", "Missile", "Crew", "Gunner", "Illicit", "Modification", "Title"]
       }, {
         name: "Lando Calrissian (Resistance)",
@@ -8748,7 +8777,8 @@ exportObj.basicCardData = function() {
         loadoutbeta: 6,
         force: 2,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Talent", "Astromech", "Modification", "Configuration"]
+        slots: ["Force", "Talent", "Astromech", "Modification", "Configuration"],
+        slotsbeta: ["Force", "Force", "Astromech", "Modification", "Configuration"]
       }, {
         name: "Adi Gallia (Delta-7B)",
         id: 620,
@@ -8762,7 +8792,8 @@ exportObj.basicCardData = function() {
         pointsbeta: 6,
         loadoutbeta: 10,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Talent", "Astromech", "Modification"]
+        slots: ["Force", "Talent", "Astromech", "Modification"],
+        slotsbeta: ["Force", "Force", "Astromech", "Modification"]
       }, {
         name: '"Sicko"',
         id: 621,
@@ -9431,6 +9462,7 @@ exportObj.basicCardData = function() {
         ship: "TIE/ln Fighter",
         skill: 2,
         points: 3,
+        pointsbeta: 4,
         chassis: "Formed Up",
         ship_override: {
           hull: 4,
@@ -9513,6 +9545,203 @@ exportObj.basicCardData = function() {
         pointsbeta: 6,
         charge: 2,
         upgrades: ["Without A Trace (SL)", "Relay System (SL)", "Stygium Reserve (SL)"]
+      }, {
+        name: "Raymus Antilles",
+        xwsaddon: "epicsl-rebelalliance",
+        unique: true,
+        id: 678,
+        faction: "Rebel Alliance",
+        ship: "CR90 Corellian Corvette",
+        skill: 8,
+        engagement: 0,
+        points: 12,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Focus", "Lock", "R-Coordinate", "Jam", "Rotate Arc"]
+        },
+        upgrades: ["Leia Organa (Epic)", "R2-D2 (Epic)", "C-3PO (Epic)", "Turbolaser Battery", "Tantive IV"]
+      }, {
+        name: "Raymus Antilles (Republic)",
+        xwsaddon: "epicsl-galacticrepublic",
+        unique: true,
+        id: 679,
+        faction: "Galactic Republic",
+        ship: "CR90 Corellian Corvette",
+        skill: 8,
+        engagement: 0,
+        points: 12,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Focus", "Lock", "R-Coordinate", "Jam", "Rotate Arc"]
+        },
+        upgrades: ["Born for This (Epic)", "Bail Organa (Epic)", "Secret Provisions (Epic)", "Turbolaser Battery", "Tantive IV (Republic)"]
+      }, {
+        name: "Leia Organa (CR90)",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 680,
+        faction: "Resistance",
+        ship: "CR90 Corellian Corvette",
+        skill: 8,
+        engagement: 0,
+        points: 12,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Focus", "Lock", "R-Coordinate", "Jam", "Rotate Arc"]
+        },
+        upgrades: ["Nien Nunb (Epic)", "Urcos Furdam (Epic)", "Tibanna Reserves", "Turbolaser Battery", "Tantive IV (Resistance)"]
+      }, {
+        name: "Iden Versio (Raider)",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 681,
+        faction: "Galactic Empire",
+        ship: "Raider-class Corvette",
+        skill: 8,
+        engagement: 0,
+        points: 13,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Focus", "Lock", "Coordinate", "Jam", "Rotate Arc"]
+        },
+        upgrades: ["Ruthless", "Fanatical (Epic)", "Inferno Squad (Epic)", "Twin Missile Launcher (Epic)", "Corvus"]
+      }, {
+        name: "Gideon Hask (Raider)",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 682,
+        faction: "First Order",
+        ship: "Raider-class Corvette",
+        skill: 8,
+        engagement: 0,
+        points: 13,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Focus", "Lock", "Coordinate", "Jam", "Rotate Arc"]
+        },
+        upgrades: ["Agent Terex (Epic)", "Protectorate Gleb (Epic)", "Jinata Security Forces (Epic)", "Twin Missile Launcher (Epic)", "Precursor (Epic)"]
+      }, {
+        name: "Aut-0",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 683,
+        faction: "Separatist Alliance",
+        ship: "Gozanti-class Cruiser",
+        skill: 7,
+        engagement: 1,
+        points: 8,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Coordinate", "Lock", "Coordinate", "Jam"]
+        },
+        upgrades: ["TX-25 (Epic)", "Endless Hordes (Epic)", "Alpha Revue (Epic)"]
+      }, {
+        name: "Cerra Fellian",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 684,
+        faction: "First Order",
+        ship: "Gozanti-class Cruiser",
+        skill: 7,
+        engagement: 1,
+        points: 8,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Coordinate", "Lock", "Coordinate", "Jam", "Rotate Arc"]
+        },
+        upgrades: ["Petty Officer Thanisson (Epic)", "Ion Cannon Battery", "Malefactor (Epic)"]
+      }, {
+        name: "Rik Virgilio",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 685,
+        faction: "Galactic Empire",
+        ship: "Gozanti-class Cruiser",
+        skill: 7,
+        engagement: 1,
+        points: 8,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Coordinate", "Lock", "Coordinate", "Jam", "Rotate Arc"]
+        },
+        upgrades: ["Thrawn (Epic)", "Heavy Laser Cannon Turret (Epic)", "Blood Crow (Epic)"]
+      }, {
+        name: "Wez Synat",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 686,
+        faction: "Galactic Republic",
+        ship: "Gozanti-class Cruiser",
+        skill: 7,
+        engagement: 1,
+        points: 8,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Coordinate", "Lock", "Coordinate", "Jam", "Rotate Arc"]
+        },
+        upgrades: ["Clone Commander Cody", "Point Defense Battery", "Spectre of Nayr (Epic)"]
+      }, {
+        name: "Oraf Desyk",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 687,
+        faction: "Resistance",
+        ship: "GR-75 Medium Transport",
+        skill: 7,
+        engagement: 1,
+        points: 8,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Coordinate", "R-Lock", "Coordinate", "Jam"]
+        },
+        upgrades: ["GA-75 (Epic)", "Adaptive Shields", "Hosnian Lament (Epic)"]
+      }, {
+        name: "Trebor Zednem",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 688,
+        faction: "Rebel Alliance",
+        ship: "GR-75 Medium Transport",
+        skill: 7,
+        engagement: 1,
+        points: 8,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Coordinate", "R-Lock", "Coordinate", "Jam"]
+        },
+        upgrades: ["Toryn Farr", "Planetary Ion Bombardment (Epic)", "Bright Hope"]
+      }, {
+        name: "Cikatro Vizago",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 689,
+        faction: "Scum and Villainy",
+        ship: "C-ROC Cruiser",
+        skill: 7,
+        engagement: 1,
+        points: 8,
+        ship_override: {
+          actions: ["Focus", "Reinforce", "R-> Jam", "Lock", "R-Coordinate", "Jam", "Rotate Arc"]
+        },
+        upgrades: ["Azmorigan (Epic)", "Illegal Countermeasures (Epic)", "Modified Dorsal Turret (Epic)", "Broken Horn"]
+      }, {
+        name: "Asajj Ventress (Trident)",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 690,
+        faction: "Scum and Villainy",
+        ship: "Trident-class Assault Ship",
+        skill: 8,
+        engagement: 1,
+        points: 8,
+        force: 1,
+        ship_override: {
+          actions: ["Focus", "R-Evade", "Reinforce", "Lock", "R-Coordinate"]
+        },
+        upgrades: ["AQ-Series Battle Droids (Epic)", "Tractor Tentacles", "Drill Beak (Epic)", "Trident (Epic)"]
+      }, {
+        name: "Sorc Tormo",
+        xwsaddon: "epicsl",
+        unique: true,
+        id: 691,
+        faction: "Scum and Villainy",
+        ship: "Trident-class Assault Ship",
+        skill: 8,
+        engagement: 1,
+        points: 8,
+        ship_override: {
+          actions: ["Focus", "R-Evade", "Reinforce", "Lock", "R-Coordinate"]
+        },
+        upgrades: ["Caij Vanda (Epic)", "Tractor Tentacles", "Drill Beak (Epic)", "Nautolan's Revenge (Epic)"]
       }
     ],
     upgradesById: [
@@ -14264,6 +14493,242 @@ exportObj.basicCardData = function() {
         attack: 3,
         range: "1-3",
         rangebonus: true
+      }, {
+        name: "Leia Organa (Epic)",
+        id: 534,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "R2-D2 (Epic)",
+        id: 535,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "C-3PO (Epic)",
+        id: 536,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "Endless Hordes (Epic)",
+        id: 537,
+        standard: true,
+        charge: 1,
+        recurring: 1,
+        slot: "Cargo"
+      }, {
+        name: "Bail Organa (Epic)",
+        id: 538,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "Alpha Revue (Epic)",
+        id: 539,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "Secret Provisions (Epic)",
+        id: 540,
+        standard: true,
+        slot: "Modification",
+        charge: 3
+      }, {
+        name: "Nien Nunb (Epic)",
+        id: 541,
+        standard: true,
+        unique: true,
+        slot: "Command",
+        charge: 1,
+        recurring: 1
+      }, {
+        name: "Urcos Furdam (Epic)",
+        id: 542,
+        standard: true,
+        unique: true,
+        slot: "Command"
+      }, {
+        name: "Tantive IV (Resistance)",
+        id: 543,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "Twin Missile Launcher (Epic)",
+        id: 544,
+        standard: true,
+        slot: "Missile",
+        attackt: 3,
+        range: "2-3"
+      }, {
+        name: "Fanatical (Epic)",
+        id: 545,
+        standard: true,
+        slot: "Talent"
+      }, {
+        name: "Inferno Squad (Epic)",
+        id: 546,
+        standard: true,
+        slot: "Crew"
+      }, {
+        name: "Corvus (Epic)",
+        id: 547,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "Agent Terex (Epic)",
+        id: 548,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "Protectorate Gleb (Epic)",
+        id: 549,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "Jinata Security Forces (Epic)",
+        id: 550,
+        standard: true,
+        slot: "Crew"
+      }, {
+        name: "Precursor (Epic)",
+        id: 551,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "TX-25 (Epic)",
+        id: 552,
+        standard: true,
+        unique: true,
+        slot: "Tactical Relay"
+      }, {
+        name: "Petty Officer Thanisson (Epic)",
+        id: 553,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "Malefactor (Epic)",
+        id: 554,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "Thrawn (Epic)",
+        id: 555,
+        standard: true,
+        unique: true,
+        slot: "Crew",
+        charge: 1,
+        recurring: 1
+      }, {
+        name: "Heavy Laser Cannon Turret (Epic)",
+        id: 556,
+        standard: true,
+        slot: "Hardpoint",
+        attackt: 3,
+        range: "2-3"
+      }, {
+        name: "Blood Crow (Epic)",
+        id: 557,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "Spectre of Nayr (Epic)",
+        id: 558,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "GA-75 (Epic)",
+        id: 559,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "Hosnian Lament (Epic)",
+        id: 560,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "Planetary Ion Bombardment (Epic)",
+        id: 561,
+        standard: true,
+        slot: "Hardpoint",
+        attackf: 5,
+        range: "1-3",
+        rangebonus: true
+      }, {
+        name: "Azmorigan (Epic)",
+        id: 562,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "Illegal Countermeasures (Epic)",
+        id: 563,
+        standard: true,
+        slot: "Cargo"
+      }, {
+        name: "Modified Dorsal Turret (Epic)",
+        id: 564,
+        standard: true,
+        slot: "Hardpoint",
+        attackt: 2,
+        range: "1-3"
+      }, {
+        name: "AQ-Series Battle Droids (Epic)",
+        id: 565,
+        standard: true,
+        slot: "Crew"
+      }, {
+        name: "Drill Beak (Epic)",
+        id: 566,
+        standard: true,
+        slot: "Hardpoint",
+        attackb: 3,
+        range: "0-1",
+        rangebonus: true
+      }, {
+        name: "Trident (Epic)",
+        id: 567,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "Caij Vanda (Epic)",
+        id: 568,
+        standard: true,
+        unique: true,
+        slot: "Crew"
+      }, {
+        name: "Nautolan's Revenge (Epic)",
+        id: 569,
+        standard: true,
+        unique: true,
+        slot: "Title",
+        charge: 1,
+        recurring: 1
+      }, {
+        name: "Tantive IV (Republic)",
+        id: 570,
+        standard: true,
+        unique: true,
+        slot: "Title"
+      }, {
+        name: "Born for This (Epic)",
+        id: 571,
+        standard: true,
+        slot: "Talent"
       }
     ],
     conditionsById: [
@@ -14604,6 +15069,24 @@ exportObj.basicCardData = function() {
       }, {
         name: "Prioritized Weapons Systems",
         id: 55
+      }, {
+        name: "Broadside Batteries",
+        id: 56
+      }, {
+        name: "Concentrated Batteries",
+        id: 57
+      }, {
+        name: "Docking Clamps",
+        id: 58
+      }, {
+        name: "Resupply Craft",
+        id: 59
+      }, {
+        name: "Overdrive Burners",
+        id: 60
+      }, {
+        name: "Tractor Grasp",
+        id: 61
       }
     ],
     damageById: [

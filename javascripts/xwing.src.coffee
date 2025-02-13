@@ -2632,7 +2632,7 @@ class exportObj.SquadBuilder
                         <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a class="dropdown-item randomize-options translated" defaultText="Randomizer Options"></a></li>
                             <li><a class="dropdown-item misc-settings translated" defaultText="Misc Settings"></a></li>
                         </ul>
@@ -3824,7 +3824,7 @@ class exportObj.SquadBuilder
             versioninfo = "09/06/2024"
             rules = "AMG"
             if @isBeta
-                versioninfo = "BV3"
+                versioninfo = "BV4"
                 rules = "XWA"
 
             # Version number
@@ -5916,7 +5916,7 @@ class exportObj.SquadBuilder
         versioninfo = "09/06/2024"
         rules = "AMG"
         if @isBeta
-            versioninfo = "BV3"
+            versioninfo = "BV4"
             rules = "XWA"
 
         xws =
