@@ -5050,7 +5050,7 @@ exportObj.basicCardData = function() {
         loadoutbeta: 9,
         keyword: ["Light Side"],
         slots: ["Talent", "Sensor", "Torpedo", "Astromech"],
-        slotsbeta: ["Talent", "Talent", "Torpedo", "Astromech", "Modification"]
+        slotsbeta: ["Force", "Torpedo", "Sensor", "Astromech", "Modification"]
       }, {
         name: "Bravo Flight Officer",
         id: 323,
@@ -7562,7 +7562,8 @@ exportObj.basicCardData = function() {
         pointsbeta: 6,
         loadoutbeta: 15,
         keyword: ["Jedi", "Light Side"],
-        slots: ["Force", "Talent", "Astromech", "Modification"]
+        slots: ["Force", "Talent", "Astromech", "Modification"],
+        slotsbeta: ["Force", "Force", "Astromech", "Modification"]
       }, {
         name: "Saesee Tiin (Delta-7b)",
         id: 526,
