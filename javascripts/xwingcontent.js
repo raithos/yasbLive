@@ -4428,7 +4428,7 @@ exportObj.basicCardData = function() {
         loadoutbeta: 12,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Astromech", "Modification", "Configuration"],
-        slotsbeta: ["Force", "Force", "Force", "Astromech", "Modification", "Configuration"]
+        slotsbeta: ["Force", "Force", "Astromech", "Modification", "Modification", "Configuration"]
       }, {
         name: "Luminara Unduli",
         id: 274,
@@ -4494,7 +4494,7 @@ exportObj.basicCardData = function() {
         loadoutbeta: 9,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Astromech", "Modification", "Modification", "Configuration"],
-        slotsbeta: ["Force", "Force", "Force", "Astromech", "Modification", "Configuration"]
+        slotsbeta: ["Force", "Force", "Astromech", "Modification", "Modification", "Configuration"]
       }, {
         name: "Trade Federation Drone",
         id: 279,
@@ -7604,7 +7604,7 @@ exportObj.basicCardData = function() {
         loadout: 15,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Astromech", "Modification"],
-        slotsbeta: ["Force", "Force", "Astromech", "Modification", "Modification", "Modification"]
+        slotsbeta: ["Force", "Force", "Astromech", "Modification", "Modification"]
       }, {
         name: "Luminara Unduli (Delta-7b)",
         id: 529,
@@ -7674,7 +7674,7 @@ exportObj.basicCardData = function() {
         loadoutbeta: 9,
         keyword: ["Jedi", "Light Side"],
         slots: ["Force", "Force", "Talent", "Astromech", "Modification"],
-        slotsbeta: ["Force", "Force", "Talent", "Astromech", "Modification"]
+        slotsbeta: ["Force", "Force", "Astromech", "Modification", "Modification"]
       }, {
         name: "Cad Bane",
         id: 534,
