@@ -7920,25 +7920,31 @@ Ship = (function() {
   };
 
   Ship.prototype.resetAddons = function() {
-    var upgrade, ___iced_passed_deferral, __iced_deferrals, __iced_k;
+    var ___iced_passed_deferral, __iced_deferrals, __iced_k;
     __iced_k = __iced_k_noop;
     ___iced_passed_deferral = iced.findDeferral(arguments);
     (function(_this) {
       return (function(__iced_k) {
-        var _i, _len, _ref;
         __iced_deferrals = new iced.Deferrals(__iced_k, {
           parent: ___iced_passed_deferral,
           funcname: "Ship.resetAddons"
         });
-        _ref = _this.upgrades;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          upgrade = _ref[_i];
-          if (upgrade != null) {
-            upgrade.destroy(__iced_deferrals.defer({
-              lineno: 6480
-            }));
+        (function() {
+          var upgrade, _i, _len, _ref, _results;
+          _ref = this.upgrades;
+          _results = [];
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            upgrade = _ref[_i];
+            if (upgrade != null) {
+              _results.push(upgrade.destroy(__iced_deferrals.defer({
+                lineno: 6480
+              })));
+            } else {
+              _results.push(void 0);
+            }
           }
-        }
+          return _results;
+        });
         __iced_deferrals._fulfill();
       });
     })(this)((function(_this) {
@@ -9692,18 +9698,22 @@ GenericAddon = (function() {
     ___iced_passed_deferral = iced.findDeferral(arguments);
     (function(_this) {
       return (function(__iced_k) {
-        var _i, _len, _ref;
         __iced_deferrals = new iced.Deferrals(__iced_k, {
           parent: ___iced_passed_deferral,
           funcname: "GenericAddon.rescindAddons"
         });
-        _ref = _this.conferredAddons;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          addon = _ref[_i];
-          addon.destroy(__iced_deferrals.defer({
-            lineno: 7695
-          }));
-        }
+        (function() {
+          var _i, _len, _ref, _results;
+          _ref = this.conferredAddons;
+          _results = [];
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            addon = _ref[_i];
+            _results.push(addon.destroy(__iced_deferrals.defer({
+              lineno: 7695
+            })));
+          }
+          return _results;
+        });
         __iced_deferrals._fulfill();
       });
     })(this)((function(_this) {
@@ -10029,7 +10039,6 @@ exportObj.RestrictedUpgrade = (function(_super) {
   __extends(RestrictedUpgrade, _super);
 
   function RestrictedUpgrade(args) {
-    this.filter_func = args.filter_func;
     RestrictedUpgrade.__super__.constructor.call(this, args);
     this.serialization_code = 'u';
     if (args.auto_equip != null) {

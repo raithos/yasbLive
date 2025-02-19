@@ -4895,7 +4895,7 @@ exportObj.cardLoaders.English = function() {
       text: "While you defend, friendly ships docked with you may suffer damage instead of you."
     },
     "Thrawn (Epic)": {
-      display_name: "Malefactor",
+      display_name: "Thrawn",
       text: "Before an enemy ship at range 0-3 reveals its dial, you may spend 1 %CHARGE% and choose a number. If the speed on the dial matches your choice, acquire a lock on that ship or recover 1 %ENERGY%."
     },
     "Heavy Laser Cannon Turret (Epic)": {
@@ -4979,7 +4979,8 @@ exportObj.cardLoaders.English = function() {
     'Optimized Prototype': {
       text: 'While you perform a %FRONTARC% primary attack against a ship locked by a friendly ship with the <strong>Director Krennic</strong> upgrade, you may spend 1 %HIT%/%CRIT%/%FOCUS% result. If you do, choose one: the defender loses 1 shield or the defender flips 1 of its facedown damage cards.'
     },
-    'I\'ll Show You the Dark Side': {
+    "I'll Show You the Dark Side": {
+      display_name: 'I\'ll Show You the Dark Side',
       text: ' When this card is assigned, if there is no faceup damage card on it, the player who assigned it searches the damage deck for 1 Pilot damage card and places it faceup on this card. Then shuffle the damage deck. When you would suffer 1 %CRIT% damage, you are instead dealt the faceup damage card on this card. Then, remove this card. '
     },
     'Proton Bomb': {
@@ -5009,7 +5010,7 @@ exportObj.cardLoaders.English = function() {
     'Buzz Droid Swarm': {
       text: 'INIT: 0 <br>AGILITY: 1 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>System, Activation, and End Phase:</strong> No effect. %LINEBREAK%<strong>Engagement Phase:</strong> When you engage, each enemy ship at range 0 of the buzz droid swarm suffers 1 %CRIT% damage. %LINEBREAK%<strong>Other Rules:</strong> After an enemy ship overlaps or moves through a buzz droid swarm, the swarm\'s controlling player relocates it by aligning the tab to that ship\'s front or rear guides (this ship is at range 0 of the swarm). The swarm cannot be aligned to a set of the ship\'s guides if doing so would cause it to overlap an object. If the swarm cannot be placed at a chosen set of guides, its controlling player must align it to the other set of the ship\'s guides. If it cannot be aligned to the other set, the swarm and the enemy ship that overlapped or moved through it each suffer 1 %HIT% damage. %LINEBREAK%<i>Errata (since rules reference 1.4): Agility adjusted for balance.</i>'
     },
-    'It\'s the Resistance': {
+    "It's the Resistance": {
       text: '<strong>Setup:</strong> Start in reserve. %LINEBREAK% When you deploy, you are placed within range 1 of any table edge and beyond range 3 of any enemy ship. %LINEBREAK% At the start of the round, if all of the friendly <strong>GA-97</strong>\'s %CHARGE% are active, you <strong>must</strong> deploy. Then remove this card. After the friendly <strong>GA-97</strong> is destroyed, you <strong>must</strong> deploy. Then gain 1 disarm token and remove this card.'
     },
     'Electro-Proton Bomb': {
@@ -5048,49 +5049,49 @@ exportObj.cardLoaders.English = function() {
     'You Should Thank Me': {
       text: 'This condition is assigned facedown. Reveal it after you defend. %LINEBREAK% After you defend, <strong>Zam Wesell</strong> recovers 1 %CHARGE%. Then, you may acquire a lock on the attacker. %LINEBREAK% At the end of the Engagement Phase, if this card is facedown and you are in an enemy ship\'s firing arc, you may reveal this card and spend 2 %CHARGE% from <strong>Zam Wesell</strong>. If you do, you may perform a bonus attack. %LINEBREAK% At the start of the System Phase, remove this condition.'
     },
-    'You\'d Better Mean Business': {
+    "You'd Better Mean Business": {
       text: 'This condition is assigned facedown. Reveal it after you defend. %LINEBREAK% After you defend, you may spend 2 %CHARGE% from <strong>Zam Wesell</strong>. If you do, perform a bonus attack against the attacker. %LINEBREAK% At the end of the Engagement Phase, if this card is facedown and you are in an enemy ship\'s firing arc, you may reveal this card. If you do, <strong>Zam Wesell</strong> recovers 2 %CHARGE%. %LINEBREAK% At the start of the System Phase, remove this condition.'
     },
-    'Merciless Pursuit': {
+    "Merciless Pursuit": {
       text: 'After you perform an attack, if the defender is equipped with <b>The Child</b>, you may acquire a lock on the defender.'
     },
-    'Marked for Elimination': {
+    "Marked for Elimination": {
       text: 'While you defend, if the attacker is equipped with <b>Tracking Fob</b> and has a lock on you, you cannot spend green tokens.'
     },
-    'False Friend': {
+    "False Friend": {
       text: 'During the System Phase, if an enemy ship with the <b>Tal Merrik</b> upgrade is at range 0-2 or an enemy remote is at range 0-2, flip your dial faceup. %LINEBREAK% <strong>Action:</strong> Gain 1 deplete token and stress token to discard this condition.'
     },
-    'Trials of the Darksaber': {
+    "Trials of the Darksaber": {
       text: 'While you perform an attack at attack range 0-2, you may spend 1 %CRIT% result. If you do, if the defending ship\'s player has scored more %MISSIONPOINT% than you, they lose 1 scored %MISSIONPOINT%. Place that %MISSIONPOINT% on this card. %LINEBREAK% After you defend, if you are destroyed by an enemy ship at attack range 0-2, assign the <b>Trials of the Darksaber</b> condition to the attacker (all %MISSIONPOINT% remain on this card). %LINEBREAK%. At the end of the game, this ship scores all %MISSIONPOINT% on this card.'
     },
-    'Blazer Bomb': {
+    "Blazer Bomb": {
       text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. %LINEBREAK% When this device detonates, each ship and remote at range 0-1 rolls 1 attack die. Each ship or remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result. %LINEBREAK% After this devices detonates, place a Blaze by aligning the Blaze\'s guides to the device\'s tab. %LINEBREAK% A Blaze is an obstacle. After this obstacle is placed, place a fuse marker on it. %LINEBREAK% During the End Phase, remove each Blaze with no fuse markers, then remove 1 fuse marker from each Blaze.'
     },
-    'Clan Wren Commandos': {
+    "Clan Wren Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token. %LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
     },
-    'Death Watch Commandos': {
+    "Death Watch Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
     },
-    'Nite Owl Commandos': {
+    "Nite Owl Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
     },
-    'Imperial Super Commandos': {
+    "Imperial Super Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
     },
-    'Mandalorian Super Commandos': {
+    "Mandalorian Super Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
     },
-    'Guarded': {
+    "Guarded": {
       text: 'While you defend, if you are not in the attacker\'s %BULLSEYEARC%, roll 1 additional defense die for each friendly calculating or evading <b>MagnaGuard Protector</b> in the attack arc.'
     },
-    'Sickening Maneuver': {
+    "Sickening Maneuver": {
       text: 'You can execute red maneuvers even while stressed. %LINEBREAK% After you reveal a bank [%BANKLEFT% or %BANKRIGHT%] or turn [%TURNLEFT% or %TURNRIGHT%] maneuver, you <b>must</b> gain 1 strain and execute the maneuver as a sideslip.%LINEBREAK% After you reveal a straight [%STRAIGHT%] maneuver, you must execute that maneuver as a red koiogran turn [%KTURN%]. %LINEBREAK% After you execute a maneuver, remove this condition.'
     },
-    'Primed For Speed': {
+    "Primed For Speed": {
       text: 'Add a white %SLAM% action to your action bar. %LINEBREAK% After you perform a %SLAM%, you must suffer 1 %HIT% damage to remove 1 disarm token.'
     },
-    'Broken Trust': {
+    "Broken Trust": {
       text: 'Treat friendly ships as allied.%LINEBREAK% Non-enemy ships treat you as allied.%LINEBREAK% While performing an attack, before declaring the defender, each allied ship in the attack arc that is not stressed gains 1 stress token. After you defend or perform an attack, if the defender was dealt at least 1 faceup damage card, or was destroyed, remove this condition.'
     }
   };

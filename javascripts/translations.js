@@ -4943,7 +4943,7 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: "Thermaldetonator",
       text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0–1 1 Angriffswürfel. Jedes Schiff erhält 1 Anstrengungsmarker für jedes %FOCUS%-Ergebnis und jedes Schiff und Remote erleidet 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.'
     },
-    'Blazer Bomb': {
+    "Blazer Bomb": {
       display_name: "Brandbombe",
       text: '<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. %LINEBREAK% Sobald dieses Gerät detoniert, wirft jedes Schiff und jedes Remote in Reichweite 0–1 1 Angriffswürfel. Jedes Schiff oder Remote erleidet 1 %HIT%-Schaden für jedes %HIT%/%CRIT%-Ergebnis. %LINEBREAK% Nachdem dieses Gerät detoniert ist, wird ein Brand so platziert, dass seine Stopper bündig an der Aussparung des Geräts anliegen. %LINEBREAK% Ein Brand ist ein Hindernis. Nachdem dieses Hindernis platziert worden ist, wird ein Zeitzünder darauf platziert.%LINEBREAK% Während der Endphase wird jeder Brand ohne Zeitzünder entfernt, dann wird 1 Zeitzünder von jedem Brand entfernt..'
     },
@@ -4979,7 +4979,7 @@ exportObj.cardLoaders.Deutsch = function() {
       display_name: 'Aus der Fassung',
       text: 'Nachdem eine Bombe oder Mine in Reichweite 0-1 detoniert ist, erleide 1 %CRIT% Schaden. Dann entferne diese Karte. %LINEBREAK% <strong>Aktion:</strong> Falls keine Bomben oder Minen in Reichweite 0-1 sind, entferne diese Karte.'
     },
-    'I\'ll Show You the Dark Side': {
+    "I'll Show You the Dark Side": {
       display_name: 'Ich zeige dir die dunkle Seite',
       text: 'Sobald diese Karte zugeordnet wird, falls keine offene Schadenskarte darauf liegt, sucht der Spieler, der sie zugeordnet hat, im Schadensstapel nach 1 <strong>Pilot</strong>-Schadenskarte und platziert sie offen auf dieser Karte. Dann mische den Schadensstapel. %LINEBREAK%Sobald du 1 %CRIT%-Schaden erleiden würdest, wird dir stattdessen die offene Schadenskarte auf dieser Karte zugeteilt. Dann entferne diese Karte. '
     },
@@ -10426,7 +10426,7 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Prototipo optimizado",
       text: "Cuando estés efectuando un ataque de armamento principal %FRONTARC% contra una nave que esté fijada como blanco por una nave aliada equipada con la mejora <strong>Director Krennic</strong> puedes gastar 1 resultado %HIT%, %CRIT% o %FOCUS%. Si lo haces, elige entre: el defensor pierde 1 ficha de Escudos, o el defensor le da la vuelta a 1 de sus cartas de Daño que tenga boca abajo."
     },
-    'I\'ll Show You the Dark Side': {
+    "I'll Show You the Dark Side": {
       display_name: "Yo te mostraré el Lado Oscuro",
       text: "Cuando se asigna esta carta, si no hay ninguna carta de daño boca arriba, el jugador que la asignó busca en el mazo de daños 1 carta de daño de piloto y la coloca boca arriba sobre esta carta. Luego baraja el mazo de daños. Cuando vas a sufrir 1 %CRIT% de daño, en su lugar recibes la carta de daño boca arriba en esta carta. Luego, retire esta carta."
     },
@@ -10466,7 +10466,7 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Enjambre de Droide Zumbador",
       text: "Iniciativa: 0 <br>%AGILITY%: 1 <br>%HULL%: 1 %LINEBREAK% <strong>Tipo:</strong> Nave, Distante %LINEBREAK% <strong>Fase del sistema, activación y resolución:</strong> Sin efecto. %LINEBREAK%<strong>Fase de compromiso:</strong> Cuando te involucres, cada nave enemiga a alcance 0 del Enjambre de Droide Zumbador sufre 1 %CRIT%. %LINEBREAK%<strong>Otras reglas:</strong> Después de que una nave enemiga haya superpuesto o se haya movido a través de un enjambre de droide zumbador, el jugador que controla el enjambre lo coloca ajustando su pestaña entre las ranuras delanteras o traseras de esa nave (la nave está a alcance 0 del enjambre). El enjambre no puede ajustarse entre un par de ranuras si eso lo hace superponerse con un objeto. Si no puede ajustarse entre las ranuras de una nave, su controlador debe ajustarlo entre el otro par de ranuras de la nave. Si no puede ajustarse entre ese otro par de ranuras, el enjambre y la nave que lo ha superpuesto o ha pasado a través de él sufren cada uno 1 daño %HIT%. %LINEBREAK%<i>Errata (1.4): Agilidad aumentada a 3.</i>"
     },
-    'It\'s the Resistance': {
+    "It's the Resistance": {
       display_name: "Es la Resistencia",
       text: "<strong>Configuración:</strong> Comienzas en reserva. %LINEBREAK%Cuando despliegues, colócate completamente a alcance 1 de cualquier borde del área de juego y más allá de alcance 3 de cualquier nave enemiga. %LINEBREAK%Al comienzo de la ronda, si todas las cargas del <b>GA-97</b> aliado están activas, <b>debes</b> desplegarte. Luego, retira esta carta. %LINEBREAK%Después de que el aliado <b>GA-97</b> sea destruido, <b>debes</b> desplegarte. Luego, gana 1 ficha de desarme y retira esta carta."
     },
@@ -10518,7 +10518,7 @@ exportObj.cardLoaders['Español'] = function() {
       display_name: "Deberías Agradecerme",
       text: "Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK%Después de defender, <b>Zam Wesell</b> recupera 1 %CHARGE%. Luego puedes apuntar al atacante. %LINEBREAK%Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta y gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, puedes realizar un ataque adicional. %LINEBREAK%Al comienzo de la fase de sistema, retira este estado."
     },
-    'You\'d Better Mean Business': {
+    "You'd Better Mean Business": {
       display_name: "Deberías Tomarlo en Serio",
       text: "Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK%Después de defender, puedes gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, realiza un ataque adicional contra el atacante. %LINEBREAK%Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta. En ese caso, <b>Zam Wesell</b> recupera 2 %CHARGE%. %LINEBREAK%Al comienzo de la fase de sistema, retira este estado."
     },
@@ -15720,7 +15720,7 @@ exportObj.cardLoaders['Français'] = function() {
       display_name: 'Prototype Optimisé',
       text: 'Tant que vous effectuez une attaque principale %FRONTARC% contre un vaisseau verrouillé par un vaisseau allié qui possède l\'amélioration <strong>Directeur Krennic</strong>, vous pouvez dépenser 1 résultat %HIT%, %CRIT%, ou %FOCUS%. %LINEBREAK%Dans ce cas, choisissez une des options suivantes : le défenseur perd 1 bouclier ou le défenseur retourne 1 de ses cartes Dégât face cachée.'
     },
-    'I\'ll Show You the Dark Side': {
+    "I'll Show You the Dark Side": {
       display_name: 'Je Vous Montrerai le Côté Obscur',
       text: 'Quand cette carte est assignée, s\'il n\'y a pas de carte de dégât face visible sur elle, le joueur qui l\'a assignée cherche 1 carte de dégât <strong>Pilote</strong> dans le paquet de dégâts et la place face visible sur cette carte. Puis mélangez le paquet de dégâts. %LINEBREAK%Lorsque vous êtes censé subir 1 dégât %CRIT%, vous vous voyez attribuer la carte dégât face visible qui est sur cette carte à la place. Puis retirez cette carte d\'état.'
     },
@@ -15760,7 +15760,7 @@ exportObj.cardLoaders['Français'] = function() {
       display_name: 'Nuée De Droïdes Buzz',
       text: 'Initiative : 0 <br>%AGILITY%: 1 <br>%HULL%: 1 %LINEBREAK% <strong>Types :</strong> Engin, Distant %LINEBREAK% <strong>Phase de système, d\'activation et de dénouement :</strong> Pas d\'effet. %LINEBREAK%<strong>Phase d\'engagement :</strong> Lorsque vous vous engagez, chaque vaisseau ennemi à portée 0 de la Nuée de Droïde Buzz subit 1 %CRIT%. %LINEBREAK%<strong>Autres règles :</strong> Après qu\'un vaisseau ennemi a chevauché ou s\'est déplacé à travers une nuée de droïdes buzz, le joueur contrôlant la nuée la repositionne en calant sa languette entre les glissières avant ou arrière de ce vaisseau (le vaisseau est à portée 0 de la nuée). La nuée ne peut pas être calée entre une paire de glissières si cela l\'amène à chevaucher un objet. Si elle ne peut pas être placée entre les glissières d\'un vaisseau, son contrôleur doit la placer entre la paire de glissières située de l\'autre côté du vaisseau. Si elle ne peut pas être placée entre cette autre paire de glissières, la nuée et le vaisseau qui l\'a chevauchée ou qui s\'est déplacé à travers subissent chacun 1 dégât %HIT%. %LINEBREAK%<i>Errata (1.4): Agilité montée à 3.</i>'
     },
-    'It\'s the Resistance': {
+    "It's the Resistance": {
       display_name: 'C’est la Résistance',
       text: '<strong>Mise en place :</strong> Débutez en réserve. %LINEBREAK%Lorsque vous vous déployez, placez-vous intégralement à portée 1 de n\'importe quel bord de la zone de jeu et au-delà de la portée 3 de tout vaisseau ennemi. %LINEBREAK%Au début du round, si toutes les %CHARGE% du <b>GA-97</b> allié sont actives, vous <b>devez</b> vous déployer. Puis retirez cette carte. %LINEBREAK%Après que le <b>GA-97</b> allié a été détruit, vous <b>devez</b> vous déployer. Puis gagner 1 marqueur de désarmement et retirez cette carte.'
     },
@@ -15812,63 +15812,63 @@ exportObj.cardLoaders['Français'] = function() {
       display_name: 'Vous Devriez me Remercier',
       text: 'Cet état est assigné face cachée. Révélez le après avoir défendu. %LINEBREAK%Après avoir défendu, <b>Zam Wesell</b> récupère 1 %CHARGE%. Puis vous pouvez verrouiller l\'attaquant. %LINEBREAK% À la fin de la phase d’engagement, si cette carte est face cachée et si vous êtes dans un arc de tir d\'un vaisseau ennemi, vous pouvez révéler cette carte et dépenser 2 %CHARGE% de <b>Zam Wesell</b>. Dans ce cas, vous pouvez effectuer une attaque bonus. %LINEBREAK%Au début de la phase de système, retirez cet état.'
     },
-    'You\'d Better Mean Business': {
+    "You'd Better Mean Business": {
       display_name: 'Vous Devriez Faire des Affaires',
       text: 'Cet état est assigné face cachée. Révélez le après avoir défendu. %LINEBREAK%Après avoir défendu, vous pouvez dépenser 2 %CHARGE% de <b>Zam Wesell</b>. Dans ce cas, effectuez une attaque bonus contre l\'attaquant. %LINEBREAK%À la fin de la phase d’engagement, si cette carte est face cachée et si vous êtes dans un arc de tir d\'un vaisseau ennemi, vous pouvez révéler cette carte. Dans ce cas <b>Zam Wesell</b> récupère 2 %CHARGE%. %LINEBREAK%Au début de la phase de système, retirez cet état.'
     },
-    'Merciless Pursuit': {
+    "Merciless Pursuit": {
       display_name: 'Poursuite Impitoyable',
       text: 'Après que vous avez effectué une attaque, si le défenseur est équipé avec <b>L\'Enfant</b>, vous pouvez verrouiller le défenseur.'
     },
-    'Marked for Elimination': {
+    "Marked for Elimination": {
       display_name: 'Désigné pour Mourir',
       text: 'Tant que vous défendez, si l\'attaquant est équipé d\'un <b>Capteur de Positionnement</b> et a un verrouillage sur vous, vous ne pouvez pas dépenser de marqueurs verts.'
     },
-    'False Friend': {
+    "False Friend": {
       display_name: 'Faux Frère',
       text: 'Pendant la phase de système, si un vaisseau ennemi ayant l\'amélioration <b>Tal Merrik</b> est à portée 0-2 ou si un engin distant ennemi est à portée 0-2, retournez face visible votre cadran. %LINEBREAK%<strong>Action :</strong> gagnez 1 marqueur d\'épuisement et 1 marqueur de stress pour défausser cet état.'
     },
-    'Trials of the Darksaber': {
+    "Trials of the Darksaber": {
       display_name: 'Épreuves du Sabre Noir',
       text: 'Tant que vous effectuez une attaque à portée d\'attaque 0-2, vous pouvez dépenser 1 résultat %CRIT%. Dans ce cas, si le joueur du vaisseau défenseur a plus de %POINT% marqué que vous, il perd 1 %POINT% marqué. Placez ce %POINT% sur cette carte. %LINEBREAK%Après avoir défendu, si vous êtes détruit par un vaisseau ennemi à portée d\'attaque O-2, assignez à l\'attaquant l\'état <b>Épreuves du Sabre Noir</b> (tous les %POINT% restent sur cette carte). %LINEBREAK%À la fin de la partie, ce vaisseau marque tous les %POINT% sur cette carte.'
     },
-    'Blazer Bomb': {
+    "Blazer Bomb": {
       display_name: 'Bombe Incendiaire',
       text: '<strong>Types :</strong> Engin, Bombe %LINEBREAK%À la fin de la phase d\'activation, cet engin explose. %LINEBREAK%Lorsque cet engin explose, chaque vaisseau et engin distant à portée O-1 lance 1 dé d\'attaque. Chaque vaisseau ou engin distant subit 1 dégât %HIT% pour chaque résultat %HIT%/%CRIT% obtenu. %LINEBREAK%Après que cet engin a explosé, placez un Brasier en calant ses glissières contre la languette de l\'engin distant. %LINEBREAK%Un Brasier est un obstacle. Après le placement de cet obstacle, posez un marqueur d\'amorce dessus. %LINEBREAK%Pendant la phase de dénouement, retirez chaque Brasier sans marqueur d\'amorce dessus, puis retirez un marqueur d\'amorce de chaque Brasier.'
     },
-    'Clan Wren Commandos': {
+    "Clan Wren Commandos": {
       display_name: 'Commandos du Clan Wren',
       text: 'Initiative : 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Portée: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types :</strong> Engin, Distant %LINEBREAK%Après qu\'un vaisseau ennemi vous a chevauché, il gagne 1 marqueur de contrainte. %LINEBREAK% <strong>Phase d\'Activation :</strong> au début de cette phase, vous pouvez vous repositionner en avant en utilisant un gabarit [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK%<strong>Phase d\'Engagement :</strong> vous ne pouvez pas attaquer s\'il y a des vaisseaux ennemis à portée 0. Pour effectuer une attaque vous devez dépenser 1 %CHARGE%. Tant que vous effectuez une attaque, vous pouvez changer 1 résultat %FOCUS% en un résultat %HIT%.'
     },
-    'Death Watch Commandos': {
+    "Death Watch Commandos": {
       display_name: 'Commandos de la Death Watch',
       text: 'Initiative : 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Portée: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types :</strong> Engin, Distant %LINEBREAK%Après qu\'un vaisseau ennemi vous a chevauché, il gagne 1 marqueur de contrainte. %LINEBREAK% <strong>Phase d\'Activation :</strong> au début de cette phase, vous pouvez vous repositionner en avant en utilisant un gabarit [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK%<strong>Phase d\'Engagement :</strong> vous ne pouvez pas attaquer s\'il y a des vaisseaux ennemis à portée 0. Pour effectuer une attaque vous devez dépenser 1 %CHARGE%. Tant que vous effectuez une attaque, vous pouvez changer 1 résultat %FOCUS% en un résultat %HIT%.'
     },
-    'Nite Owl Commandos': {
+    "Nite Owl Commandos": {
       display_name: 'Commandos des Nite Owl',
       text: 'Initiative : 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Portée: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types :</strong> Engin, Distant %LINEBREAK%Après qu\'un vaisseau ennemi vous a chevauché, il gagne 1 marqueur de contrainte. %LINEBREAK% <strong>Phase d\'Activation :</strong> au début de cette phase, vous pouvez vous repositionner en avant en utilisant un gabarit [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK%<strong>Phase d\'Engagement :</strong> vous ne pouvez pas attaquer s\'il y a des vaisseaux ennemis à portée 0. Pour effectuer une attaque vous devez dépenser 1 %CHARGE%. Tant que vous effectuez une attaque, vous pouvez changer 1 résultat %FOCUS% en un résultat %HIT%.'
     },
-    'Imperial Super Commandos': {
+    "Imperial Super Commandos": {
       display_name: 'Super Commandos Impériaux',
       text: 'Initiative : 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Portée: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types :</strong> Engin, Distant %LINEBREAK%Après qu\'un vaisseau ennemi vous a chevauché, il gagne 1 marqueur de contrainte. %LINEBREAK% <strong>Phase d\'Activation :</strong> au début de cette phase, vous pouvez vous repositionner en avant en utilisant un gabarit [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK%<strong>Phase d\'Engagement :</strong> vous ne pouvez pas attaquer s\'il y a des vaisseaux ennemis à portée 0. Pour effectuer une attaque vous devez dépenser 1 %CHARGE%. Tant que vous effectuez une attaque, vous pouvez changer 1 résultat %FOCUS% en un résultat %HIT%.'
     },
-    'Mandalorian Super Commandos': {
+    "Mandalorian Super Commandos": {
       display_name: 'Super Commandos Mandaloriens',
       text: 'Initiative : 2 <br> %FRONTARC%: 2 %RANGEBONUS%, Portée: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types :</strong> Engin, Distant %LINEBREAK%Après qu\'un vaisseau ennemi vous a chevauché, il gagne 1 marqueur de contrainte. %LINEBREAK% <strong>Phase d\'Activation :</strong> au début de cette phase, vous pouvez vous repositionner en avant en utilisant un gabarit [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK%<strong>Phase d\'Engagement :</strong> vous ne pouvez pas attaquer s\'il y a des vaisseaux ennemis à portée 0. Pour effectuer une attaque vous devez dépenser 1 %CHARGE%. Tant que vous effectuez une attaque, vous pouvez changer 1 résultat %FOCUS% en un résultat %HIT%.'
     },
-    'Guarded': {
+    "Guarded": {
       display_name: 'Sous Protection',
       text: 'Tant que vous défendez, si vous n\'êtes pas dans le %BULLSEYEARC% de l\'attaquant, lancez 1 dé de défense supplémentaire pour chaque allié <b>Protecteur Magna Garde</b> calculateur ou esquivant situé dans l\'arc d\'attaque.'
     },
-    'Sickening Maneuver': {
+    "Sickening Maneuver": {
       display_name: 'Manœuvre Écœurante',
       text: 'Vous pouvez exécuter des manœuvres rouges, même si vous êtes stressé. %LINEBREAK%Après avoir révélé une manœuvre de virage sur l\'aile [%BANKLEFT% ou %BANKRIGHT%] ou de virage [%TURNLEFT% ou %TURNRIGHT%], vous <b>devez</b> gagner 1 marqueur de contrainte et exécuter cette manœuvre comme un dérapage. %LINEBREAK%Après avoir révélé une manœuvre en ligne droite [%STRAIGHT%], vous <b>devez</b> exécuter cette manœuvre comme un virage Koiogran [%KTURN%] rouge. %LINEBREAK% Après avoir exécuté une manœuvre, retirez cet état.'
     },
-    'Primed For Speed': {
+    "Primed For Speed": {
       display_name: 'Ivre de Vitesse',
       text: 'Ajoutez une action %SLAM% blanche à votre barre d\'action. %LINEBREAK%Après avoir effectué une action %SLAM%, vous <b>devez</b> subir 1 dégât %HIT% pour retirer 1 marqueur de désarmement.'
     },
-    'Broken Trust': {
+    "Broken Trust": {
       display_name: 'Confiance Brisée',
       text: 'Considérez les vaisseaux alliés comme étant amicaux. %LINEBREAK%Les vaisseaux non-ennemis vous considèrent comme étant amical. %LINEBREAK%Tant que vous effectuez une attaque, avant de déclarer le défenseur, chaque vaisseau amical situé dans l\'arc d\'attaque et qui n\'est pas stressé, gagne 1 marqueur de stress. %LINEBREAK%Après que vous avez défendu ou effectué une attaque, si au moins 1 carte de dégât face visible a été attribuée au défenseur ou s\'il a été détruit, retirez cet état.'
     }
@@ -19621,7 +19621,7 @@ exportObj.cardLoaders.Magyar = function() {
     'Optimized Prototype': {
       text: 'Amikor végrehajtasz egy elsődleges %FRONTARC% támadást egy olyan hajó ellen, amit bemért <strong>Director Krennic</strong> fejlesztéssel felszerelt hajó, elkölthetsz 1&nbsp;%HIT%/%CRIT%/%FOCUS% eredményt. Ha így teszel, választhatsz, hogy a védekező elveszt 1 pajzsot vagy a védekező felfordítja 1 sérüléskártyáját.'
     },
-    'I\'ll Show You the Dark Side': {
+    "I'll Show You the Dark Side": {
       text: 'Mikor ezt a kártyát hozzárendelik egy hajódhoz, ha nincs felfordított sérüléskártya rajta, az ellenfél kikeres a sérüléskártyáidból egy pilóta típusút és felfordítva ráteszi. Aztán megkeveri a paklit. Amikor elszenvednél 1&nbsp;%CRIT% sérülést, ezen a kártyán lévő sérüléskártyát kapod meg. Aztán vedd le ezt a lapot.'
     },
     'Proton Bomb': {
@@ -19648,7 +19648,7 @@ exportObj.cardLoaders.Magyar = function() {
     'Buzz Droid Swarm': {
       text: 'INIT: 0 / MOZGÉKONYSÁG: 3 / HULL: 1 (távérzékelő)<br>Miután egy ellenséges hajó átmozog rajtad vagy átfedésbe kerül veled, átteheted annak első vagy hátsó pöckeihez (ilyenkor 0-ás távolságra vagy a hajótól). Nem lehetsz átfedésbe egy objektummal sem ily módon. Ha nem tudod elhelyezni a pöckökhöz, te és a hajó is elszenvedtek 1 %HIT% sérülést.<br>Ütközet fázis: a kezdeményezésednek megfelelően minden 0-ás távolságba nlévő hajó elszenved 1 %CRIT% sérülést.'
     },
-    'It\'s the Resistance': {
+    "It's the Resistance": {
       text: "<strong>Felhelyezés:</strong> tartalékban kezdesz. <br> Amikor beszállsz a csatába, helyezd a hajót 1-es távolságra a játékterület bármely szélétől és 3-as távolságon túl bármely ellenséges hajótól.<br>A kör kezdetén ha a baráti <strong>GA-97</strong> összes %CHARGE% jelzője aktív, be <strong>kell</strong> szállnod a csatába. Ezután vedd le ezt a kártyát. Miután a baráti <strong>GA-97</strong> megsemmisül, csatába <strong>kell</strong> szállnod, majd kapsz 1 'inaktív fegyvezet' jelzőt és vedd le ezt a kártyát."
     },
     'Electro-Proton Bomb': {
@@ -19681,37 +19681,37 @@ exportObj.cardLoaders.Magyar = function() {
     'You Should Thank Me': {
       text: 'Ez a kártyát lefordítva rendeld a hajóhoz.<br>Védekezés után fordítsd fel.%LINEBREAK%Miután védekeztél <strong>Zam Wesell</strong> visszatölt 1 %CHARGE% jelzőt, majd feltehetsz egy bemérőt a támadóra.%LINEBREAK%Az Ütközet fázis végén, ha ez a kártya le van fordítva és benne vagy egy ellenséges hajó tűzívében, felfedheted ezt a kártyát, hogy elkölts 2 %CHARGE% jelzőt <strong>Zam Wesell</strong>-ről. Ha így teszel, végrehajthatsz egy bónusz támadást.%LINEBREAK%A Rendszer fázis elején távolítsd el ezt az állapotkártyát.'
     },
-    'You\'d Better Mean Business': {
+    "You'd Better Mean Business": {
       text: 'Ez a kártyát lefordítva rendeld a hajóhoz.<br>Védekezés után fordítsd fel.%LINEBREAK%Miután védekeztél, elkölthetsz 2 %CHARGE% jelzőt <strong>Zam Wesell</strong>-ről. Ha így teszel, végrehajthatsz egy bónusz támadást a támadó ellen.%LINEBREAK%Az üzközet fázis végén, ha ez a kártya le van fordítva és benne vagy egy ellenséges hajó tűzívében, felfedheted ezt a kártyát. Ha így teszel <strong>Zam Wesell</strong> visszatölt 2 %CHARGE% jelzőt.%LINEBREAK%A Rendszer fázis elején távolítsd el ezt az állapotkártyát.'
     },
-    'Merciless Pursuit': {
+    "Merciless Pursuit": {
       text: 'Miután végrehajtasz egy támadást, ha a védekező fel van szerelve a <b>The Child</b> fejlesztéssel, feltehetsz egy bemérőt a védekezőre.'
     },
-    'Marked for Elimination': {
+    "Marked for Elimination": {
       text: 'Amikor védekezel, ha a támadó fel van szerelve a <b>Tracking Fob</b> fejlesztéssel és van bemérője rajtad, nem költhetsz zöld jelzőket.'
     },
-    'False Friend': {
+    "False Friend": {
       text: 'A Rendszer fázis alatt ha egy ellenséges hajó <b>Tal Merrik</b> fejlesztéssel vagy egy ellenséges eszköz 0-2-es távolságban van, fordítsd fel a manőver tárcsádat.<br><strong>Akció:</strong> Kapsz 1 \'deplete\' és stressz jelzőt, hogy eldobd ezt az állapotkártyát.'
     },
-    'Trials of the Darksaber': {
+    "Trials of the Darksaber": {
       text: 'Amikor végrehajtasz egy támadást 0-2-es támadási ívben, elkölthetsz 1 %CRIT% eredményt. Ha így teszel, ha a védekező hajó több %POINT% jelzőt kapott, mint te, az elveszít 1 %POINT% jelzőt. Helyezd azt a %POINT% jelzőt erre a kártyára.<br>Miután védekeztél, ha megsemmisültél egy ellenséges hajó 0-2-es támadásától, helyezd a <b>Trials of the Darksaber</b> állapotkártyát a támadóra (az összes %POINT% marad a kártyán).<br>A játék végén ez a hajó megkapja az összes %POINT% jlezőt erről a kártyáról.'
     },
-    'Blazer Bomb': {
+    "Blazer Bomb": {
       text: '<strong>Típusok:</strong> eszköz, bomba<br>Az Aktivációs fázis végén ez az eszköz felrobban.<br>Amikor ez az eszköz felrobban, minden hajó és eszköz 0-1-es távolságban gurít 1 támadókockával. Minden hajó és eszköz elszenved 1 %HIT% sérülést minden %HIT%/%CRIT% eredmény után.<br>Miután ez az eszköz felrobban helyezz egy Blase jelzőt a bomba lapkához igazítva<br>A Blaze akadálynak számít. Miután felhelyezted , tegyél rá 1 időzítő jelzőt.<br>A Vége fázis alatt vegyél le minden időzítő nélüli Blaze jelzőt, aztán vegyél le 1 időzítő jelzőt minden Blaze jelzőről.'
     },
-    'Clan Wren Commandos': {
+    "Clan Wren Commandos": {
       text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."
     },
-    'Death Watch Commandos': {
+    "Death Watch Commandos": {
       text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."
     },
-    'Nite Owl Commandos': {
+    "Nite Owl Commandos": {
       text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."
     },
-    'Imperial Super Commandos': {
+    "Imperial Super Commandos": {
       text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."
     },
-    'Mandalorian Super Commandos': {
+    "Mandalorian Super Commandos": {
       text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."
     }
   };
@@ -26487,7 +26487,7 @@ exportObj.cardLoaders.日本語 = function() {
     'Optimized Prototype': {
       text: '君が<strong>Director Krennic</strong>アップグレードのついた友軍宇宙船にロックされた宇宙船に対して主武装による%FRONTARC%攻撃を実行する時、君は%HIT%%CRIT%あるいは%FOCUS%の結果を1つ消費しても良い。もしそうするなら、1つ選ぶ: 防御者はシールドを失う、あるいは防御者は裏向きのダメージ・カードのうち1つを裏返す。'
     },
-    'I\'ll Show You the Dark Side': {
+    "I'll Show You the Dark Side": {
       text: ' このカードが付けられたとき、もしそれの上に表向きのダメージカードがないなら、それをつけたプレイヤーがダメージデッキからパイロットのダメージカードを1枚探し、このカードの上に表向きで置く。その後、ダメージデッキをシャッフルする。%LINEBREAK%君が%CRIT%ダメージを1つ受けようとする際、君は代わりにこのカードの上の表向きのダメージカードを得る。その後このカードを取り除く。'
     },
     'Proton Bomb': {
@@ -26517,7 +26517,7 @@ exportObj.cardLoaders.日本語 = function() {
     'Buzz Droid Swarm': {
       text: 'イニシアチブ: 0 <br>敏捷値: 1 <br>装甲値: 1 %LINEBREAK% <b>タイプ:</b> デバイス、リモート %LINEBREAK% <b>システム、アクティベーションおよび終了フェイズ:</b> 効果なし。%LINEBREAK%<b>エンゲージメント・フェイズ:</b> 君がエンゲージする時、buzz droid swarmのレンジ0の各敵宇宙船は、%CRIT%ダメージを1つ受ける。%LINEBREAK%<b>その他ルール:</b> 敵宇宙船がbuzz droid swarmに重なるか上を通過した後、swarmをコントロールするプレイヤーは宇宙船の前か後のガイドに合うように再配置する(この宇宙船はswarmのレンジ0にいる)。swarmはオブジェクトに重なるような側の宇宙船のガイドにつけることはできない。もしswarmが選んだガイドの側に置けないなら、それをコントロールするプレイヤーは宇宙船のガイドの別の側につけなければならない。もしそれが別の側にもつけられないなら、swarmと重なるか通過した敵宇宙船はそれぞれ命中ダメージを1つ受ける。'
     },
-    'It\'s the Resistance': {
+    "It's the Resistance": {
       text: '<b>セットアップ:</b> リザーブ状態で開始する。%LINEBREAK%君のデプロイ時、君は任意のテーブルの端のレンジ1内で敵宇宙船からレンジ3よりも離れた場所に置く。%LINEBREAK%ラウンドの開始時、友軍の<strong>GA-97</strong>の全ての%CHARGE%がアクティブなら、君は配置しなければならない。その後このカードを取り除く。友軍の<strong>GA-97</strong>が破壊された後、君は配置しなければならない。その後武装解除トークンを1つ得て、このカードを取り除く。'
     },
     'Electro-Proton Bomb': {
@@ -26556,49 +26556,49 @@ exportObj.cardLoaders.日本語 = function() {
     'You Should Thank Me': {
       text: 'このコンディションは裏向きでつけられる。君が防御した後公開する。%LINEBREAK%君が防御した後、<strong>Zam Wesell</strong>は%CHARGE%を1つ回復する。その後、攻撃者へのロックを得ても良い。%LINEBREAK%エンゲージメント・フェイズの終了時、もしこのカードが裏向きで、君が敵宇宙船のファイアリング・アーク内にいるなら、君はこのカードを公開し、<strong>Zam Wesell</strong>から2%CHARGE%を消費しても良い。もしそうするなら、君はボーナス攻撃を実行しても良い。%LINEBREAK%システム・フェイズの開始時、このコンディションを取り除く。'
     },
-    'You\'d Better Mean Business': {
+    "You'd Better Mean Business": {
       text: 'このコンディションは裏向きでつけられる。君が防御した後公開する。%LINEBREAK%君が防御した後、君は<strong>Zam Wesell</strong>の%CHARGE%を2つ消費しても良い。もしそうするなら、君は攻撃者に対してボーナス攻撃を実行しても良い。%LINEBREAK%エンゲージメント・フェイズの終了時、もしこのカードが裏向きで君が敵宇宙船のファイアリング・アーク内にいるなら、君はこのカードを公開しても良い。もしそうするなら、<strong>Zam Wesell</strong>は%CHARGE%を2つ回復する。%LINEBREAK%システム・フェイズの開始時、このコンディションを取り除く。'
     },
-    'Merciless Pursuit': {
+    "Merciless Pursuit": {
       text: '君が攻撃を実行した後、もし防御者が<b>The Child</b>を装備しているなら、君は防御者へのロックを得ても良い。'
     },
-    'Marked for Elimination': {
+    "Marked for Elimination": {
       text: '君が防御する際、もし攻撃者が<b>Tracking Fob</b>を装備していて、君へのロックを持っているなら、君は緑のトークンを消費できない。'
     },
-    'False Friend': {
+    "False Friend": {
       text: 'システム・フェイズの間、もし<b>Tal Merrik</b>アップグレードのついた敵宇宙船がレンジ0-2にいるか、敵リモートがレンジ0-2にいるなら、君のダイヤルを表にする。 %LINEBREAK% <b>アクション:</b> このカードを捨て札にするために、デプリート・トークン1つとストレス・トークン1つを得る。'
     },
-    'Trials of the Darksaber': {
+    "Trials of the Darksaber": {
       text: '君が攻撃レンジ0-2で攻撃を実行する際、君は%CRIT%の結果を1つ消費しても良い。もし君がそうするなら、もし防御宇宙船のプレイヤーが君よりも%POINT%を獲得しているなら、そのプレイヤーは獲得した%POINT%を1つ失う。その%POINT%をこのカードの上に置く。 %LINEBREAK% 君が防御した後、もし君が敵宇宙船の攻撃レンジ0-2の攻撃で破壊されたなら、攻撃者に<b>Trials of the Darksaber</b>コンディションをつける(このカードの上の全ての%POINT%は残して)。 %LINEBREAK% ゲームの終了時、この宇宙船はこのカードの上の%POINT%を全て獲得する。'
     },
-    'Blazer Bomb': {
+    "Blazer Bomb": {
       text: '<b>タイプ:</b> デバイス, 爆弾 %LINEBREAK% アクティベーション・フェイズの終了時、このデバイスは爆発する。 %LINEBREAK% このデバイスが爆発する時、レンジ0-1の各宇宙船とリモートは攻撃ダイスを1つ振る。各宇宙船とリモートは%HIT%/%CRIT%の結果につき%HIT%ダメージを1つ受ける。 %LINEBREAK% このデバイスが爆発した後、BlazeをBlazeのガイドとデバイスの出っ張りを合わせて置く。 %LINEBREAK% Blazeは障害物である。この障害物が置かれた後、ヒューズ・マーカーをその上に置く。 %LINEBREAK% 終了フェイズの間、ヒューズ・マーカーのないBlazeを取り除き、その後各Blazeからヒューズ・マーカーを1つ取り除く。'
     },
-    'Clan Wren Commandos': {
+    "Clan Wren Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>タイプ:</b> デバイス, リモート %LINEBREAK% <b>アクティベーション・フェイズ:</b> このフェイズの開始時、君は [1 %TURNLEFT%], [2 %STRAIGHT%], あるいは [1 %TURNRIGHT%] テンプレートを使って前方に再配置しても良い。%LINEBREAK% <b>エンゲージメント・フェイズ:</b> もし敵宇宙船がレンジ0にいるなら、君は攻撃ができない。攻撃を実行するために、君は %CHARGE% を1つ消費しなければならない。君が攻撃を実行する際、君は %FOCUS% の結果1つを %HIT% の結果に変更しても良い。'
     },
-    'Death Watch Commandos': {
+    "Death Watch Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>タイプ:</b> デバイス, リモート %LINEBREAK% <b>アクティベーション・フェイズ:</b> このフェイズの開始時、君は [1 %TURNLEFT%], [2 %STRAIGHT%], あるいは [1 %TURNRIGHT%] テンプレートを使って前方に再配置しても良い。%LINEBREAK% <b>エンゲージメント・フェイズ:</b> もし敵宇宙船がレンジ0にいるなら、君は攻撃ができない。攻撃を実行するために、君は %CHARGE% を1つ消費しなければならない。君が攻撃を実行する際、君は %FOCUS% の結果1つを %HIT% の結果に変更しても良い。'
     },
-    'Nite Owl Commandos': {
+    "Nite Owl Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>タイプ:</b> デバイス, リモート %LINEBREAK% <b>アクティベーション・フェイズ:</b> このフェイズの開始時、君は [1 %TURNLEFT%], [2 %STRAIGHT%], あるいは [1 %TURNRIGHT%] テンプレートを使って前方に再配置しても良い。%LINEBREAK% <b>エンゲージメント・フェイズ:</b> もし敵宇宙船がレンジ0にいるなら、君は攻撃ができない。攻撃を実行するために、君は %CHARGE% を1つ消費しなければならない。君が攻撃を実行する際、君は %FOCUS% の結果1つを %HIT% の結果に変更しても良い。'
     },
-    'Imperial Super Commandos': {
+    "Imperial Super Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>タイプ:</b> デバイス, リモート %LINEBREAK% <b>アクティベーション・フェイズ:</b> このフェイズの開始時、君は [1 %TURNLEFT%], [2 %STRAIGHT%], あるいは [1 %TURNRIGHT%] テンプレートを使って前方に再配置しても良い。%LINEBREAK% <b>エンゲージメント・フェイズ:</b> もし敵宇宙船がレンジ0にいるなら、君は攻撃ができない。攻撃を実行するために、君は %CHARGE% を1つ消費しなければならない。君が攻撃を実行する際、君は %FOCUS% の結果1つを %HIT% の結果に変更しても良い。'
     },
-    'Mandalorian Super Commandos': {
+    "Mandalorian Super Commandos": {
       text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>タイプ:</b> デバイス, リモート %LINEBREAK% <b>アクティベーション・フェイズ:</b> このフェイズの開始時、君は [1 %TURNLEFT%], [2 %STRAIGHT%], あるいは [1 %TURNRIGHT%] テンプレートを使って前方に再配置しても良い。%LINEBREAK% <b>エンゲージメント・フェイズ:</b> もし敵宇宙船がレンジ0にいるなら、君は攻撃ができない。攻撃を実行するために、君は %CHARGE% を1つ消費しなければならない。君が攻撃を実行する際、君は %FOCUS% の結果1つを %HIT% の結果に変更しても良い。'
     },
-    'Guarded': {
+    "Guarded": {
       text: '君が防御する際、もし君が攻撃者の %BULLSEYEARC% 内にいないなら、友軍のカリキュレートあるいは回避状態の <b>MagnaGuard Protector</b> につき1つ、防御ダイスを追加で振る。'
     },
-    'Sickening Maneuver': {
+    "Sickening Maneuver": {
       text: '君はたとえストレス状態でも、赤のマニューバを実行できる。 %LINEBREAK% 君がバンク [%BANKLEFT% あるいは %BANKRIGHT%] あるいはターン [%TURNLEFT% あるいは %TURNRIGHT%] マニューバを公開した後、君はストレイン・トークンを1つ得て、そのマニューバをサイドスリップとして実行しなければならない。 %LINEBREAK% 君が直進 [%STRAIGHT%] マニューバを公開した後、君はそのマニューバを赤のコイオグラン・ターン [%KTURN%] として実行しなければならない。 %LINEBREAK% 君がマニューバを実行した後、このコンディションを取り除く。'
     },
-    'Primed For Speed': {
+    "Primed For Speed": {
       text: '君のアクション・バーに白の %SLAM% を追加する。 %LINEBREAK% 君が %SLAM% アクションを実行した後、君は1 %HIT% ダメージを受けて、武装解除トークンを取り除かなければならない。'
     },
-    'Broken Trust': {
+    "Broken Trust": {
       text: '	友軍宇宙船を同盟として扱う。 %LINEBREAK% 敵ではない宇宙船は君を同盟として扱う。 %LINEBREAK% 攻撃を実行する際、防御者を宣言する前に、攻撃アーク内のストレス状態ではない同盟宇宙船は、ストレス・トークンを1つ得る。 %LINEBREAK% 君が防御するか攻撃を実行した後に、もし防御者が表向きのダメージを1枚以上受け取るか、破壊されたなら、このコンディションを取り除く。'
     }
   };
@@ -31747,7 +31747,7 @@ exportObj.cardLoaders.Português = function() {
       display_name: 'Protótipo Otimizado',
       text: 'Quando você realizar um ataque primário %FRONTARC% contra uma nave que esteja mirada por uma nave amiga com a melhoria <strong>Director Krennic</strong>, você pode gastar 1 resultado %HIT%/%CRIT%/%FOCUS%. Se você fizer isso, escolha um: o defensor perde 1 escudo ou o defensor vira uma carta de dano para cima.'
     },
-    'I\'ll Show You the Dark Side': {
+    "I'll Show You the Dark Side": {
       display_name: 'Contemple o Lado Sombrio',
       text: 'Quando esta carta for atribuída, se não houver uma carta de dano virada para cima nela, o jogador que a atribuiu procura no baralho de dano por 1 carta de dano <strong>Piloto</strong> e a coloca virada para cima nesta carta. Então, embaralhe o baralho de dano. Quando você for sofrer 1 dano %CRIT%, você recebe a carta virada para cima sobre esta carta. Então, remova esta carta. '
     },
@@ -31787,7 +31787,7 @@ exportObj.cardLoaders.Português = function() {
       display_name: 'Enxame de Buzz Droids',
       text: 'INI: 0 <br>AGILITY: 1 <br>HULL: 1 %LINEBREAK% <strong>Tipos:</strong> Dispositivo, Remoto %LINEBREAK% <strong>Fase de Sistema, Ativação e Final: Sem efeitos.</strong>%LINEBREAK%<strong>Fase de Engajamento:</strong> Quando você engaja, cada nave inimiga em alcance 0 do enxame de buzz droids sofre 1 dano %CRIT%.%LINEBREAK%<strong>Outras Regras:</strong> Após uma nave inimiga sobrepor ou mover através de um enxame de buzz droids, o jogador que controla o enxame realoca ele alinhando as guias do remoto com as guias frontais ou traseiras da nave (essa nave está em alcance 0 do enxame). O enxame não pode ser alinhado com as guias de uma nave, se isso fizer com que o enxame sobreponha um objeto. Se o enxame não pode ser alinhado com as guias escolhidas, o jogador controlador deve alinhá-lo com o outro conjunto de guias da nave. Se ele não pode ser alinhado nos dois conjuntos de guias, o enxame e a nave inimiga que sobrepôs ou moveu através do enxame sofrem 1 dano %HIT%. %LINEBREAK%<i>Errata (desde RR 1.4): Agilidade ajustada para equilibrio.</i>'
     },
-    'It\'s the Resistance': {
+    "It's the Resistance": {
       display_name: 'É a Resistência',
       text: '<strong>Preparação:</strong> Comece na reserva. %LINEBREAK% Quando você for posicionado, você pode ser colocado no alcance 1 de qualquer borda da mesa e além do alcance 3 de qualquer nave inimiga. %LINEBREAK% No começo da rodada, se todas as %CHARGE% do <strong>GA-97</strong> amigo estiverem ativas você <strong>deve</strong> ser posicionado. Então remova esta carta. Depois que o <strong>GA-97</strong> amigo for destruído, você <strong>deve</strong> ser posicionado. Então receba 1 ficha de desarme e descarte esta carta.'
     },
@@ -31839,63 +31839,63 @@ exportObj.cardLoaders.Português = function() {
       display_name: 'Você Deveria Me Agradecer',
       text: 'Esta condição é atribuída virada para baixo. Revele-a após você defender.%LINEBREAK% Após você defender, <strong>Zam Wesell</strong> recupera 1 %CHARGE%. Então, você pode adquirir uma mira no atacante.%LINEBREAK% No final da Fase de Engajamento, se esta carta estiver virada para baixo e você estiver no arco de tiro de uma nave inimiga, você pode revelar esta carta e gastar 2 %CHARGE% de <strong>Zam Wesell</strong>. Se o fizer, você pode realizar um ataque bônus.%LINEBREAK% No início da Fase de Sistema, remova esta condição.'
     },
-    'You\'d Better Mean Business': {
+    "You'd Better Mean Business": {
       display_name: 'É Melhor Falar Sério',
       text: 'Esta condição é atribuída virada para baixo. Revele-a após você defender.%LINEBREAK% Após você defender, você pode gastar 2 %CHARGE% de <strong>Zam Wesell</strong>. Se o fizer, realize um ataque bônus contra o atacante.%LINEBREAK% No final da Fase de Engajamento, se esta carta estiver virada para baixo e você estiver no arco de tiro de uma nave inimiga, você pode revelar esta carta. Se o fizer, <strong>Zam Wesell</strong> recupera 2 %CHARGE%.%LINEBREAK% No início da Fase de Sistema, remova esta condição.'
     },
-    'Merciless Pursuit': {
+    "Merciless Pursuit": {
       display_name: 'Perseguição Impiedosa',
       text: 'Depois que você realizar um ataque, se o defensor estiver equipado com <strong>A Criança</strong>, você pode adquirir uma mira no defensor.'
     },
-    'Marked for Elimination': {
+    "Marked for Elimination": {
       display_name: 'Marcado para Eliminação',
       text: 'Quando você defender, se o atacante estiver equipado com <strong>Fob de Rastreamento</strong> e possuir uma mira em você, você não pode gastar fichas verdes.'
     },
-    'False Friend': {
+    "False Friend": {
       display_name: 'Falso Amigo',
       text: 'Durante a Fase de Sistema, se uma nave inimiga com a melhoria <strong> Tal Merrik</strong> estiver em alcance 0-2 ou um remoto inimigo estiver em alcance 0-2, Vire seu disco de manobras para cima.%LINEBREAK%<strong>Ação</strong> Receba 1 ficha de desgaste e 1 ficha de estresse para descartar esta condição.'
     },
-    'Trials of the Darksaber': {
+    "Trials of the Darksaber": {
       display_name: 'Testes do Sabre Negro',
       text: 'Quando você realizar um ataque em alcance 0-2, você pode gastar 1 resultado %CRIT%. Se o fizer, se o jogador controlando a nave tiver mais %POINT% que você, ele perde 1 %POINT%. Posicione este %POINT% nesta carta. %LINEBREAK% Depois qeu você defender, se você for destruído por uma nave inimiga em alcance 0-2, atribua a condição <strong>Testes do Sabre Negro</strong> ao atacante (todos os %POINT% permanecem nesta carta).%LINEBREAK% No final do jogo, esta nave pontua todos os %POINT% nesta carta.'
     },
-    'Blazer Bomb': {
+    "Blazer Bomb": {
       display_name: 'Bomba de Labareda',
       text: '<strong>Tipos:</strong> Dispositivo, Bomba %LINEBREAK% No final da Fase de Ativação, este dispositivo detona.%LINEBREAK%Quando este dispositivo detona, cada nave e remoto em alcance 0-1 rolaum dado de ataque. Cada nave ou remoto sofre 1 dano %HIT% para cadaresultado %HIT%/%CRIT%.%LINEBREAK% Após este dispositivo detonar, coloque uma Labareda alinhando as guias daLabareda com o encaixe do dispositivo.%LINEBREAK%Uma Labareda é um obstáculo. Após este obstáculo ser posicionado, coloque um marcador de fuso sobre ele.%LINEBREAK%Durante a Fase Final, remova cada Labareda sem marcadores de fuso, e então remova um marcador de fuso de cada Labareda.'
     },
-    'Clan Wren Commandos': {
+    "Clan Wren Commandos": {
       display_name: 'Comandos do Clã Wren',
       text: 'INI: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, ALCANCE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Dispositivo, Remoto %LINEBREAK% Depois que uma nave inimiga sobrepor você, ela recebe 1 ficha de desgaste.%LINEBREAK%<strong>Fase de Ativação:</strong> No começo dessa fase, você pode realocar para frente usando o gabarito [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK% <strong>Fase de Engajamento:</strong> Você não pode atacar se houver naves inimigas em alcance 0. Para realizar 1 ataque você deve gastar 1 %CHARGE%. Quando você realiza um ataque, você pode mudar 1 resultado %FOCUS% para um resultado %HIT%.'
     },
-    'Death Watch Commandos': {
+    "Death Watch Commandos": {
       display_name: 'Comandos do Olho da Morte',
       text: 'INI: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, ALCANCE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Dispositivo, Remoto %LINEBREAK% Depois que uma nave inimiga sobrepor você, ela recebe 1 ficha de desgaste.%LINEBREAK%<strong>Fase de Ativação:</strong> No começo dessa fase, você pode realocar para frente usando o gabarito [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK% <strong>Fase de Engajamento:</strong> Você não pode atacar se houver naves inimigas em alcance 0. Para realizar 1 ataque você deve gastar 1 %CHARGE%. Quando você realiza um ataque, você pode mudar 1 resultado %FOCUS% para um resultado %HIT%.'
     },
-    'Nite Owl Commandos': {
+    "Nite Owl Commandos": {
       display_name: 'Comandos das Corujas Noturnas',
       text: 'INI: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, ALCANCE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Dispositivo, Remoto %LINEBREAK% Depois que uma nave inimiga sobrepor você, ela recebe 1 ficha de desgaste.%LINEBREAK%<strong>Fase de Ativação:</strong> No começo dessa fase, você pode realocar para frente usando o gabarito [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK% <strong>Fase de Engajamento:</strong> Você não pode atacar se houver naves inimigas em alcance 0. Para realizar 1 ataque você deve gastar 1 %CHARGE%. Quando você realiza um ataque, você pode mudar 1 resultado %FOCUS% para um resultado %HIT%.'
     },
-    'Imperial Super Commandos': {
+    "Imperial Super Commandos": {
       display_name: 'Super Comandos Imperiais',
       text: 'INI: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, ALCANCE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Dispositivo, Remoto %LINEBREAK% Depois que uma nave inimiga sobrepor você, ela recebe 1 ficha de desgaste.%LINEBREAK%<strong>Fase de Ativação:</strong> No começo dessa fase, você pode realocar para frente usando o gabarito [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK% <strong>Fase de Engajamento:</strong> Você não pode atacar se houver naves inimigas em alcance 0. Para realizar 1 ataque você deve gastar 1 %CHARGE%. Quando você realiza um ataque, você pode mudar 1 resultado %FOCUS% para um resultado %HIT%.'
     },
-    'Mandalorian Super Commandos': {
+    "Mandalorian Super Commandos": {
       display_name: 'Super Comandos Mandalorianos',
       text: 'INI: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, ALCANCE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Tipos:</strong> Dispositivo, Remoto %LINEBREAK% Depois que uma nave inimiga sobrepor você, ela recebe 1 ficha de desgaste.%LINEBREAK%<strong>Fase de Ativação:</strong> No começo dessa fase, você pode realocar para frente usando o gabarito [1 %TURNLEFT%], [2 %STRAIGHT%], ou [1 %TURNRIGHT%].%LINEBREAK% <strong>Fase de Engajamento:</strong> Você não pode atacar se houver naves inimigas em alcance 0. Para realizar 1 ataque você deve gastar 1 %CHARGE%. Quando você realiza um ataque, você pode mudar 1 resultado %FOCUS% para um resultado %HIT%.'
     },
-    'Guarded': {
+    "Guarded": {
       display_name: 'Protegido',
       text: 'Quando você defender, se você não estiver no %BULLSEYEARC% do atacante, role 1 dado de defesa adicional para cada <b>Protetor MagnaGuard</b> calculando ou desviando no arco de ataque.'
     },
-    'Sickening Maneuver': {
+    "Sickening Maneuver": {
       display_name: 'Manobra Nauseante',
       text: 'Você pode realizar manobras vermelhas mesmo se estiver estressado. %LINEBREAK% Depois que você revelar uma manobra curva [%BANKLEFT% or %BANKRIGHT%] ou curva fechada [%TURNLEFT% or %TURNRIGHT%], você <b>deve</b> receber 1 ficha de desgaste e realizar a manobra como uma derrapagem.%LINEBREAK%Depois que você revelar uma manobra [%STRAIGHT%], você deve realizar esta manobra como uma manobra Koiogran vermelha [%KTURN%].%LINEBREAK% Depois que você realizar uma manobra, remova esta condição.'
     },
-    'Primed For Speed': {
+    "Primed For Speed": {
       display_name: 'Preparado para Velocidade',
       text: 'Adicione uma ação %SLAM% branca a sua barra de ações. %LINEBREAK% Depois que você realizar um %SLAM%, você deve sofrer 1 dano %HIT% para remover 1 ficha de desarme.'
     },
-    'Broken Trust': {
+    "Broken Trust": {
       display_name: 'Confiança Quebrada',
       text: 'Trate naves amigas como aliadas.%LINEBREAK% Naves não inimigas tratam você como aliada. %LINEBREAK%Quando realizar um ataque, antes de declarar o defensor, cada nave aliada no arco de ataque que não estiver estressada recebe 1 ficha de estresse. Depois que você defender ou realizar um ataque, se o defensor recebeu pelo menos 1 carta de dano virada para cima, ou foi destruído, remova esta condição.'
     }
@@ -37360,59 +37360,59 @@ exportObj.cardLoaders.简体中文 = function() {
       display_name: "你最好是认真的 (You'd Better Mean Business)",
       text: '此状态面朝下分配。在你防御后展示。%LINEBREAK% 在你防御后，你可以选择从 <b>扎姆·韦塞尔</b> 上花费2个%CHARGE%。如此的话，对该攻击者执行一次额外的攻击。%LINEBREAK% 在交战阶段结束时，如果此卡面朝下，且你在一架敌方战机的射界范围，你可以选择展示此卡。如此的话，<b>扎姆·韦塞尔</b>恢复2个%CHARGE%。%LINEBREAK% 在系统阶段开始时，移除此状态。'
     },
-    'Merciless Pursuit': {
+    "Merciless Pursuit": {
       display_name: "无情追击(Merciless Pursuit)",
       text: '在执行攻击后，如果防御者装备了<b>咕咕(The Child)</b>，你可以获得对防御者的锁定。'
     },
-    'Marked for Elimination': {
+    "Marked for Elimination": {
       display_name: "抹杀标记(Marked for Elimination)",
       text: '当你防御时，如果攻击者装备了<b>追踪器(Tracking Fob)</b>并且锁定了你，你无法花费绿色标记。'
     },
-    'False Friend': {
+    "False Friend": {
       display_name: '虚假朋友 (False Friend)',
       text: '在系统阶段中，如果一架带有<b>塔尔•梅里克</b>升级的敌方战机或一个敌方遥控机在你的0-2距离，将你的移动盘翻到正面。%LINEBREAK% <b>行动：</b>获得一个耗竭标记和一个压力标记，移除这状态张卡。'
     },
-    'Trials of the Darksaber': {
+    "Trials of the Darksaber": {
       display_name: '暗剑的试炼 (Trials of the Darksaber)',
       text: '当你执行一个射程为0-2的攻击时，你可以花费一个 %CRIT% 结果。这么做之后，如果防御者上的 %POINT% 比你多，那么它失去一个 %POINT%，并且将该 %POINT% 放在这张卡上。%LINEBREAK% 在你被击败后，如果你在攻击者的射程0-2被击毁，那么将<b>暗剑的试炼</b> (以及上面的 %POINT%)分配给攻击者。在游戏结束时，这架战机获得卡上所有的 %POINT% 。'
     },
-    'Blazer Bomb': {
+    "Blazer Bomb": {
       display_name: "燃烧炸弹(Blazer Bomb)",
       text: '<b>类型:</b> 装置, 炸弹 %LINEBREAK% 在行动阶段结束时，这个装置引爆。%LINEBREAK% 当这个装置引爆时，每架0-1距离内的战机和遥控机投一个攻击骰。每出现一个 %HIT%/%CRIT% 结果，该战机或遥控机受到一个 %HIT% 伤害。%LINEBREAK% 在装置引爆后，沿着炸弹的卡槽放置一个火焰。%LINEBREAK% 火焰是一个障碍物。在放置这个障碍物后，在它上面放一个引信标记。%LINEBREAK% 在结束阶段中，移除所有上面没有引信标记的火焰。然后从每个火焰障碍物上移除一个引信标记。'
     },
-    'Clan Wren Commandos': {
+    "Clan Wren Commandos": {
       display_name: "雷恩氏族突击队(Clan Wren Commandos)",
       text: '先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'
     },
-    'Death Watch Commandos': {
+    "Death Watch Commandos": {
       display_name: "死神卫突击队(Death Watch Commandos)",
       text: '先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'
     },
-    'Nite Owl Commandos': {
+    "Nite Owl Commandos": {
       display_name: "夜鸮突击队(Nite Owl Commandos)",
       text: '先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'
     },
-    'Imperial Super Commandos': {
+    "Imperial Super Commandos": {
       display_name: "帝国超级突击队(Imperial Super Commandos)",
       text: '先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'
     },
-    'Mandalorian Super Commandos': {
+    "Mandalorian Super Commandos": {
       display_name: "曼达洛人超级突击队(Mandalorian Super Commandos)",
       text: '先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'
     },
-    'Guarded': {
+    "Guarded": {
       display_name: '护卫 (Guarded)',
       text: '当你进行防御时，如果你不在攻击者的 %BULLSEYEARC% ，每有一架在攻击范围内进行计算或闪避的友方<b>磁卫保护者</b>，你可以额外投1个防御骰。'
     },
-    'Sickening Maneuver': {
+    "Sickening Maneuver": {
       display_name: '作呕机动 (Sickening Maneuver)',
       text: '即使在有压力的情况下，你也可以进行红色移动。%LINEBREAK% 在你展示倾斜 [%BANKLEFT% 或 %BANKRIGHT%] 或转向 [%TURNLEFT% 或 %TURNRIGHT%] 移动后，你<b>必须</b>获得1个扭力标记，并以侧滑的方式进行该移动。%LINEBREAK% 在你展示一个直线 [%STRAIGHT%] 移动后，你必须以红色掉头移动[%KTURN%]来进行该移动。%LINEBREAK% 在进行一次移动后，移除此状态。'
     },
-    'Primed For Speed': {
+    "Primed For Speed": {
       display_name: '横冲直撞 (Primed for Speed)',
       text: '在你的行动栏中添加一个白色 %SLAM% 行动。%LINEBREAK% 在你执行一次 %SLAM% 行动后，你<b>必须</b>受到1个 %HIT% 伤害来移除一个解除武装标记。'
     },
-    'Broken Trust': {
+    "Broken Trust": {
       display_name: '破碎的信任 (Broken Trust)',
       text: '将友方战机视为盟友。%LINEBREAK% 非敌方战机将你视为盟友。%LINEBREAK% 在你进行攻击时，在宣布防御者之前，射界范围中没有压力的每架同盟战机都会获得1个压力标记。在你防御或进行攻击后，如果防御者受到至少1张正面伤害卡，或被摧毁，则移除此状态。'
     }
