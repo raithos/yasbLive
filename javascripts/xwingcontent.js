@@ -9671,7 +9671,7 @@ exportObj.basicCardData = function() {
         ship_override: {
           actions: ["Focus", "Reinforce", "R-> Coordinate", "Lock", "Coordinate", "Jam", "Rotate Arc"]
         },
-        upgrades: ["Clone Commander Cody", "Point Defense Battery", "Spectre of Nayr (Epic)"]
+        upgrades: ["Clone Commander Cody", "Point Defense Battery (Epic)", "Spectre of Nayr (Epic)"]
       }, {
         name: "Oraf Desyk",
         xwsaddon: "epicsl",
@@ -9719,7 +9719,7 @@ exportObj.basicCardData = function() {
         xwsaddon: "epicsl",
         unique: true,
         id: 690,
-        faction: "Scum and Villainy",
+        faction: "Separatist Alliance",
         ship: "Trident-class Assault Ship",
         skill: 8,
         engagement: 1,
@@ -14730,6 +14730,13 @@ exportObj.basicCardData = function() {
         id: 571,
         standard: true,
         slot: "Talent"
+      }, {
+        name: "Point Defense Battery (Epic)",
+        id: 572,
+        standard: true,
+        slot: "Hardpoint",
+        attackdt: 2,
+        range: "1-2"
       }
     ],
     conditionsById: [
