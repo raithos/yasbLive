@@ -6476,7 +6476,7 @@ class Ship
                 @upgrades.push upgrade
 
     resetAddons: ->
-        await ->
+        await
             for upgrade in @upgrades
                 upgrade.destroy defer() if upgrade?
         @upgrades = []
@@ -7691,7 +7691,7 @@ class GenericAddon
                 @conferredAddons.push addon
                 
     rescindAddons: ->
-        await ->
+        await
             for addon in @conferredAddons
                 addon.destroy defer()
         for addon in @conferredAddons
@@ -7961,6 +7961,7 @@ class exportObj.Upgrade extends GenericAddon
 
 class exportObj.RestrictedUpgrade extends exportObj.Upgrade
     constructor: (args) ->
+        @filter_func = args.filter_func
         super args
         @serialization_code = 'u'
         if args.auto_equip?
