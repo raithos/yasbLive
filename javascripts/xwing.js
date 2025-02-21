@@ -7056,7 +7056,7 @@ exportObj.SquadBuilder = (function() {
       }
     }
 
-    _randomizerLoopBody(data) {
+    async _randomizerLoopBody(data) {
       var addon, available_pilots, available_ships, available_upgrades, expensive_slots, j, l, len, len1, len2, len3, len4, m, new_ship, o, pilot, q, ref, ref1, ref2, ref3, ref4, ship, ship_type, sorted, unused_addons, upgrade;
       if (data.keep_running) {
         if (this.total_points === data.max_points) {
@@ -7102,7 +7102,7 @@ exportObj.SquadBuilder = (function() {
                 }).call(this);
                 if (available_upgrades.length > 0) {
                   upgrade = available_upgrades[$.randomInt(available_upgrades.length)];
-                  addon.setById(upgrade.id);
+                  await addon.setById(upgrade.id);
                 } else {
                   // that slot has only expensive stuff. ignore it in the future!
                   expensive_slots.push(addon);
@@ -8362,7 +8362,7 @@ Ship = class Ship {
               // check if there exits old upgrades for this slot - if so, try to add the first of them
               old_upgrade = ((ref5 = old_upgrades[upgrade.slot]) != null ? ref5 : []).shift();
               if (old_upgrade != null) {
-                upgrade.setById(old_upgrade);
+                await upgrade.setById(old_upgrade);
                 if (!upgrade.lastSetValid) {
                   // failed to add an upgrade, even though the required slot was there - retry later
                   // perhaps another card is providing an required restriction (e.g. an action)
@@ -9333,7 +9333,7 @@ Ship = class Ship {
               for (o = 0, len1 = ref3.length; o < len1; o++) {
                 upgrade_selection = ref3[o];
                 if (exportObj.slotsMatching(upgrade.slot, upgrade_selection.slot) && !upgrade_selection.isOccupied()) {
-                  upgrade_selection.setById(upgrade_id);
+                  await upgrade_selection.setById(upgrade_id);
                   if (upgrade_selection.lastSetValid) {
                     upgrade_ids.splice(i, 1); // added successfully, remove from list
                   }
@@ -10110,7 +10110,7 @@ GenericAddon = class GenericAddon {
       if (this.isStandardized() && !this.ship.hasFixedUpgrades) {
         this.ship.removeStandardizedList(this.data);
       }
-      this.rescindAddons();
+      await this.rescindAddons();
       this.deoccupyOtherUpgrades();
       if (((new_data != null ? new_data.unique : void 0) != null) || ((new_data != null ? new_data.solitary : void 0) != null)) {
         try {
