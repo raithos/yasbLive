@@ -4529,8 +4529,7 @@ exportObj.SquadBuilder = (function() {
           });
         }
       }).on('xwing-backend:squadLoadRequested', (e, squad, cb = $.noop) => {
-        this.onSquadLoadRequested(squad);
-        return cb();
+        return this.onSquadLoadRequested(squad, cb);
       }).on('xwing-backend:squadDirtinessChanged', (e) => {
         return this.onSquadDirtinessChanged();
       }).on('xwing-backend:squadNameChanged', (e) => {
@@ -5001,20 +5000,27 @@ exportObj.SquadBuilder = (function() {
       return cb(this.total_points);
     }
 
-    onSquadLoadRequested(squad) {
-      var ref, ref1;
+    onSquadLoadRequested(squad, cb = $.noop) {
+      var afterLoading, ref;
       this.current_squad = squad;
       this.backend_delete_list_button.removeClass('disabled');
       this.updateObstacleSelect(this.current_squad.additional_data.obstacles);
-      if (squad.serialized.length != null) {
-        this.loadFromSerialized(squad.serialized);
+      afterLoading = () => {
+        var ref, ref1;
+        this.notes.val((ref = squad.additional_data.notes) != null ? ref : '');
+        this.tag.val((ref1 = squad.additional_data.tag) != null ? ref1 : '');
+        this.backend_status.fadeOut('slow');
+        this.current_squad.dirty = false;
+        this.container.trigger('xwing-backend:squadNameChanged');
+        this.container.trigger('xwing-backend:squadDirtinessChanged');
+        return cb();
+      };
+      if (((ref = squad.serialized) != null ? ref.length : void 0) != null) {
+        this.loadFromSerialized(squad.serialized, afterLoading);
       }
-      this.notes.val((ref = squad.additional_data.notes) != null ? ref : '');
-      this.tag.val((ref1 = squad.additional_data.tag) != null ? ref1 : '');
-      this.backend_status.fadeOut('slow');
-      this.current_squad.dirty = false;
-      this.container.trigger('xwing-backend:squadNameChanged');
-      return this.container.trigger('xwing-backend:squadDirtinessChanged');
+      return {
+        else: afterLoading()
+      };
     }
 
     onSquadDirtinessChanged() {
@@ -5187,7 +5193,7 @@ exportObj.SquadBuilder = (function() {
       }
     }
 
-    async loadFromSerialized(serialized) {
+    async loadFromSerialized(serialized, cb = $.noop) {
       var desired_points, g, game_type_abbrev, game_type_and_point_abbrev, j, l, len, len1, matches, new_ship, p, re, ref, s, serialized_ship, serialized_ships, ship, ship_splitter, ships_with_unmet_dependencies, version;
       this.suppress_automatic_new_ship = true;
       // Clear all existing ships
@@ -5258,7 +5264,8 @@ exportObj.SquadBuilder = (function() {
       }
       this.suppress_automatic_new_ship = false;
       // Finally, the unassigned ship
-      return this.addShip();
+      this.addShip();
+      return cb();
     }
 
     select_xws_view() {
@@ -7729,7 +7736,7 @@ exportObj.SquadBuilder = (function() {
     }
 
     loadFromXWS(xws, cb) {
-      var addons, base1, error, gamemode, j, key, l, len, len1, len2, m, new_ship, pilot, pilotxws, possible_pilot, possible_pilots, ref, ref1, ref2, ref3, ref4, serialized_squad, serialized_squad_intro, slot, success, upgrade, upgrade_canonical, upgrade_canonicals, upgrade_type, version_list, x, xws_faction;
+      var addons, afterLoad, base1, error, gamemode, j, key, l, len, len1, len2, m, new_ship, pilot, pilotxws, possible_pilot, possible_pilots, ref, ref1, ref2, ref3, ref4, serialized_squad, serialized_squad_intro, slot, success, upgrade, upgrade_canonical, upgrade_canonicals, upgrade_type, version_list, x, xws_faction;
       success = null;
       error = null;
       if (xws.version != null) {
@@ -7751,7 +7758,7 @@ exportObj.SquadBuilder = (function() {
       }
       switch (false) {
         // Not doing backward compatibility pre-1.x
-        case !(version_list > [0, 1]):
+        case !(version_list > [0, 1] || xws.ruleset === 'XWA'):
           xws_faction = exportObj.fromXWSFaction[xws.faction];
           if (this.faction !== xws_faction) {
             throw new Error(`Attempted to load XWS for ${xws.faction} but builder is ${this.faction}`);
@@ -7769,6 +7776,7 @@ exportObj.SquadBuilder = (function() {
           this.removeAllShips();
           success = true;
           error = "";
+          // we use our current gamemode as default, but switch to standard if we are in XWA but the loaded xws specifies AMG or vice versa
           if (this.isStandard) {
             gamemode = 'h';
           } else if (this.isEpic) {
@@ -7777,6 +7785,11 @@ exportObj.SquadBuilder = (function() {
             gamemode = 'b';
           } else {
             gamemode = 's';
+          }
+          if ((xws.ruleset != null) && xws.ruleset === 'XWA') {
+            gamemode = 'b';
+          } else if ((xws.ruleset != null) && xws.ruleset === 'AMG' && gamemode === 'b') {
+            gamemode = 'h';
           }
           serialized_squad = "";
           ref = xws.pilots;
@@ -7850,10 +7863,21 @@ exportObj.SquadBuilder = (function() {
           serialized_squad_intro = "v9Z" + gamemode + "Z20Z"; // serialization v9, extended squad, 20 points
           // serialization schema SHIPID:UPGRADEID,UPGRADEID,...,UPGRADEID:;SHIPID:UPGRADEID,...
           serialized_squad = serialized_squad_intro + serialized_squad;
-          this.loadFromSerialized(serialized_squad);
-          this.current_squad.dirty = true;
-          this.container.trigger('xwing-backend:squadNameChanged');
-          this.container.trigger('xwing-backend:squadDirtinessChanged');
+          afterLoad = () => {
+            this.current_squad.dirty = true;
+            this.container.trigger('xwing-backend:squadNameChanged');
+            this.container.trigger('xwing-backend:squadDirtinessChanged');
+            return cb({
+              success: success,
+              error: error
+            });
+          };
+          this.loadFromSerialized(serialized_squad, afterLoad);
+          break;
+        default:
+          success = false;
+          error = "Unsupported XWS version";
+          cb(success, error);
       }
       return cb({
         success: success,

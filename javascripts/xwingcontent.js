@@ -4447,6 +4447,7 @@ exportObj.basicCardData = function() {
         slots: ["Talent",
       "Configuration"],
         slotsbeta: ["Talent",
+      "Modification",
       "Configuration"]
       },
       {
