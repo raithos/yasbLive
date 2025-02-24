@@ -4280,7 +4280,7 @@ exportObj.SquadBuilder = (function() {
           this.backend_status.html($.trim(`<i class="fa fa-sync fa-spin"></i>&nbsp;<span class="translated" defaultText="Saving squad..."></span>`));
           this.backend_status.show();
           this.backend_save_list_button.addClass('disabled');
-          return (await this.backend.save(this.serialize(), this.current_squad.id, this.current_squad.name, this.faction, additional_data, function(results) {
+          return (await this.backend.save(this.serialize(), this.current_squad.id, this.current_squad.name, this.faction, additional_data, (results) => {
             if (results.success) {
               this.current_squad.dirty = false;
               if (this.current_squad.id != null) {
