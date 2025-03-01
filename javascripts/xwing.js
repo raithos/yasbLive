@@ -4871,7 +4871,7 @@ exportObj.SquadBuilder = (function() {
     }
 
     onGameTypeChanged(gametype, cb = $.noop) {
-      var oldQuickbuild, old_id;
+      var j, len, oldQuickbuild, old_id, ref, ref1, ship;
       oldQuickbuild = this.isQuickbuild;
       this.isStandard = false;
       this.isBeta = false;
@@ -4906,6 +4906,13 @@ exportObj.SquadBuilder = (function() {
         this.current_squad.id = old_id; // we want to keep the ID, so we allow people to use the save button
       } else {
         old_id = this.current_squad.id;
+        ref = this.ships;
+        for (j = 0, len = ref.length; j < len; j++) {
+          ship = ref[j];
+          if (ship.pilot != null) {
+            ship.setPilotById((ref1 = ship.pilot) != null ? ref1.id : void 0);
+          }
+        }
         this.container.trigger('xwing:pointsUpdated', $.noop);
         this.container.trigger('xwing:shipUpdated');
       }
@@ -7911,6 +7918,7 @@ Ship = class Ship {
     this.wingmates = []; // stores wingmates (quickbuild stuff only) 
     this.destroystate = 0;
     this.uitranslation = this.builder.uitranslation;
+    this.usesBetaSlots = false; // flag if we use beta slots. This is needed, if we switch betwen XWA/AMG points to rebuild the pilot if the slots change
     this.setupUI();
   }
 
@@ -8330,7 +8338,7 @@ Ship = class Ship {
   async setPilot(new_pilot, noautoequip = false) {
     var _, auto_equip_upgrade, autoequip, delayed_upgrades, id, j, l, len, len1, len2, len3, len4, m, name1, o, old_upgrade, old_upgrades, q, ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7, same_ship, standard_check, standard_upgrade_to_check, upgrade, upgrade_name, y;
     // don't call this method directly, unless you know what you do. Use setPilotById for proper quickbuild handling
-    if (new_pilot !== this.pilot) {
+    if (new_pilot !== this.pilot || (this.builder.isBeta && !this.usesBetaSlots && (this.pilot.slotsbeta != null)) || (this.usesBetaSlots && !this.builder.isBeta)) {
       this.builder.current_squad.dirty = true;
       same_ship = (this.pilot != null) && (new_pilot != null ? new_pilot.ship : void 0) === this.pilot.ship;
       old_upgrades = {};
@@ -8438,6 +8446,7 @@ Ship = class Ship {
     if (!this.builder.isQuickbuild) {
       if (this.pilot.upgrades != null) {
         this.hasFixedUpgrades = true;
+        this.usesBetaSlots = false;
         ref1 = (ref = this.pilot.upgrades) != null ? ref : [];
         results1 = [];
         for (j = 0, len = ref1.length; j < len; j++) {
@@ -8461,7 +8470,9 @@ Ship = class Ship {
         this.hasFixedUpgrades = false;
         if (this.builder.isBeta && (this.pilot.slotsbeta != null)) {
           pilotslots = this.pilot.slotsbeta;
+          this.usesBetaSlots = true;
         } else {
+          this.usesBetaSlots = false;
           pilotslots = this.pilot.slots;
         }
         ref2 = pilotslots != null ? pilotslots : [];
@@ -9455,7 +9466,7 @@ Ship = class Ship {
       return true;
     }
     unchanged = true;
-    max_checks = 32; // that's a lot of addons
+    max_checks = 8; // that's a lot of addons
     if (this.builder.isEpic) { //Command Epic adding
       if ((this.pilot.slots != null) && !(indexOf.call(this.pilot.slots, "Command") >= 0)) {
         addCommand = true;
