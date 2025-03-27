@@ -21372,7 +21372,7 @@ String.prototype.serialtoxws = function() {
         if (gamemode === 'xwabeta' && (pilot_data.pointsbeta != null)) {
           points = pilot_data.pointsbeta;
         } else {
-          points = points = pilot_data.points;
+          points = pilot_data.points;
         }
         // if (gamemode == 'xwabeta' and pilot_data.loadoutbeta) then loadout = pilot_data.loadoutbeta else points = points = pilot_data.loadout
         [pilot_id, upgrade_ids] = serialized_ship.split(pilot_splitter);
