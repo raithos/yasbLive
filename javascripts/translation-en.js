@@ -4840,7 +4840,7 @@ exportObj.cardLoaders.English = function() {
     },
     "4-LOM (AaD)": {
       display_name: `4-LOM`,
-      text: `WAt the start of the End Phase, you may spend 1 calculate token and choose an enemy ship at range 0-1. If you do, transfer 1 of your stress tokens to that ship.`
+      text: `At the start of the End Phase, you may spend 1 calculate token and choose an enemy ship at range 0-1. If you do, transfer 1 of your stress tokens to that ship.`
     },
     "Mist Hunter (AaD)": {
       display_name: `Mist Hunter`,
