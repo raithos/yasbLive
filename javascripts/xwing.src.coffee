@@ -3825,7 +3825,7 @@ class exportObj.SquadBuilder
             versioninfo = "09/06/2024"
             rules = "AMG"
             if @isBeta
-                versioninfo = "BV4"
+                versioninfo = "BV5"
                 rules = "XWA"
 
             # Version number
@@ -5926,7 +5926,7 @@ class exportObj.SquadBuilder
         versioninfo = "09/06/2024"
         rules = "AMG"
         if @isBeta
-            versioninfo = "BV4"
+            versioninfo = "BV5"
             rules = "XWA"
 
         xws =
