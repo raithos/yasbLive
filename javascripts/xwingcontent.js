@@ -14400,7 +14400,7 @@ exportObj.basicCardData = function() {
           actions: ["Focus",
       "Lock",
       "R-Boost",
-      "Rotate",
+      "Rotate Arc",
       "R-> Focus"]
         },
         upgrades: ["Chewbacca",
@@ -22113,6 +22113,9 @@ exportObj.standardCheck = function(data, faction = '', shipCheck = false, onlyBa
   var j, len, ref, ref1, ref2, ref3, ship;
   if (shipCheck) {
     if ((ref = data.name, indexOf.call(exportObj.standardPilotExclusions, ref) >= 0)) {
+      return false;
+    }
+    if (data.name.search("(EoD)") > 0 || data.name.search("(AaD)") > 0) { // temporary fix for non amg content
       return false;
     }
     if (onlyBanList === false) {
