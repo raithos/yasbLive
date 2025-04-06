@@ -6147,7 +6147,7 @@ exportObj.SquadBuilder = (function() {
     }
 
     showTooltip(type, data, additional_opts, container = this.info_container, force_update = false) {
-      var addon_count, chargeHTML, chassis_title, cls, count, effective_stats, faction, first, forcerecurring, ini, inis, item, j, l, len, len1, len2, len3, loadout_range_text, m, matching_pilots, missingStuffInfoText, name, o, pilot, pilot_count, point_info, point_range_text, points, possible_costs, possible_inis, possible_loadout, recurringicon, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref21, ref22, ref23, ref24, ref25, ref26, ref27, ref28, ref29, ref3, ref30, ref31, ref32, ref33, ref34, ref35, ref36, ref37, ref38, ref39, ref4, ref40, ref41, ref42, ref43, ref44, ref45, ref46, ref47, ref48, ref49, ref5, ref50, ref51, ref52, ref53, ref54, ref55, ref56, ref57, ref58, ref59, ref6, ref60, ref61, ref62, ref63, ref64, ref65, ref66, ref67, ref68, ref69, ref7, ref70, ref71, ref72, ref73, ref74, ref75, ref76, ref77, ref78, ref79, ref8, ref80, ref81, ref82, ref83, ref84, ref85, ref86, ref87, ref88, ref89, ref9, ref90, ref91, ref92, ref93, ref94, ref95, restriction_info, ship, ship_count, slot, slot_types, source, sources, state, uniquedots, upgrade, well;
+      var addon_count, chargeHTML, chassis_title, cls, count, effective_stats, faction, first, forcerecurring, ini, inis, item, j, l, len, len1, len2, len3, loadout_range_text, m, maneuvers_override, matching_pilots, missingStuffInfoText, name, o, pilot, pilot_count, point_info, point_range_text, points, possible_costs, possible_inis, possible_loadout, recurringicon, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref21, ref22, ref23, ref24, ref25, ref26, ref27, ref28, ref29, ref3, ref30, ref31, ref32, ref33, ref34, ref35, ref36, ref37, ref38, ref39, ref4, ref40, ref41, ref42, ref43, ref44, ref45, ref46, ref47, ref48, ref49, ref5, ref50, ref51, ref52, ref53, ref54, ref55, ref56, ref57, ref58, ref59, ref6, ref60, ref61, ref62, ref63, ref64, ref65, ref66, ref67, ref68, ref69, ref7, ref70, ref71, ref72, ref73, ref74, ref75, ref76, ref77, ref78, ref79, ref8, ref80, ref81, ref82, ref83, ref84, ref85, ref86, ref87, ref88, ref89, ref9, ref90, ref91, ref92, ref93, ref94, ref95, ref96, ref97, restriction_info, ship, ship_count, slot, slot_types, source, sources, state, uniquedots, upgrade, well;
       if (data !== this.tooltip_currently_displaying || force_update) {
         switch (type) {
           case 'Ship':
@@ -6580,7 +6580,8 @@ exportObj.SquadBuilder = (function() {
               }
             }
             container.find('p.info-maneuvers').show();
-            container.find('p.info-maneuvers').html(this.getManeuverTableHTML((ref60 = effective_stats != null ? effective_stats.maneuvers : void 0) != null ? ref60 : ship.maneuvers, ship.maneuvers));
+            maneuvers_override = (ref60 = (ref61 = data.ship_override) != null ? ref61.maneuvers : void 0) != null ? ref60 : ship.maneuvers;
+            container.find('p.info-maneuvers').html(this.getManeuverTableHTML((ref62 = effective_stats != null ? effective_stats.maneuvers : void 0) != null ? ref62 : maneuvers_override, maneuvers_override));
             break;
           case 'Quickbuild':
             container.find('.info-type').text(this.uitranslation('Quickbuild'));
@@ -6610,9 +6611,9 @@ exportObj.SquadBuilder = (function() {
             } else {
               container.find('p.info-restrictions').hide();
             }
-            container.find('p.info-text').html((ref61 = pilot.text) != null ? ref61 : '');
+            container.find('p.info-text').html((ref63 = pilot.text) != null ? ref63 : '');
             container.find('p.info-text').show();
-            container.find('p.info-chassis').html(pilot.chassis != null ? `<strong>${(ref62 = (ref63 = exportObj.chassis[pilot.chassis]) != null ? ref63.display_name : void 0) != null ? ref62 : pilot.chassis}:</strong> ${exportObj.chassis[pilot.chassis].text}` : (ship.chassis != null ? `<strong>${ship.chassis}:</strong> ${exportObj.chassis[ship.chassis].text}` : ""));
+            container.find('p.info-chassis').html(pilot.chassis != null ? `<strong>${(ref64 = (ref65 = exportObj.chassis[pilot.chassis]) != null ? ref65.display_name : void 0) != null ? ref64 : pilot.chassis}:</strong> ${exportObj.chassis[pilot.chassis].text}` : (ship.chassis != null ? `<strong>${ship.chassis}:</strong> ${exportObj.chassis[ship.chassis].text}` : ""));
             container.find('p.info-chassis').show();
             container.find('tr.info-ship td.info-data').text(data.ship);
             container.find('tr.info-ship').show();
@@ -6630,8 +6631,8 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-loadout').hide();
             container.find('tr.info-engagement td.info-data').text(pilot.skill);
             container.find('tr.info-engagement').show();
-            container.find('tr.info-attack td.info-data').text((ref64 = (ref65 = pilot.ship_override) != null ? ref65.attack : void 0) != null ? ref64 : ship.attack);
-            container.find('tr.info-attack').toggle(((ref66 = (ref67 = pilot.data.ship_override) != null ? ref67.attack : void 0) != null ? ref66 : ship.attack) > 0);
+            container.find('tr.info-attack td.info-data').text((ref66 = (ref67 = pilot.ship_override) != null ? ref67.attack : void 0) != null ? ref66 : ship.attack);
+            container.find('tr.info-attack').toggle(((ref68 = (ref69 = pilot.data.ship_override) != null ? ref69.attack : void 0) != null ? ref68 : ship.attack) > 0);
             container.find('tr.info-attack-fullfront td.info-data').text(ship.attackf);
             container.find('tr.info-attack-fullfront').toggle(ship.attackf != null);
             container.find('tr.info-attack-bullseye td.info-data').text(ship.attackbull);
@@ -6646,16 +6647,16 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-attack-turret').toggle(ship.attackt != null);
             container.find('tr.info-attack-doubleturret td.info-data').text(ship.attackdt);
             container.find('tr.info-attack-doubleturret').toggle(ship.attackdt != null);
-            container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass((ref68 = ship.attack_icon) != null ? ref68 : 'xwing-miniatures-font-frontarc');
-            container.find('tr.info-energy td.info-data').text((ref69 = (ref70 = pilot.ship_override) != null ? ref70.energy : void 0) != null ? ref69 : ship.energy);
-            container.find('tr.info-energy').toggle((((ref71 = pilot.ship_override) != null ? ref71.energy : void 0) != null) || (ship.energy != null));
+            container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass((ref70 = ship.attack_icon) != null ? ref70 : 'xwing-miniatures-font-frontarc');
+            container.find('tr.info-energy td.info-data').text((ref71 = (ref72 = pilot.ship_override) != null ? ref72.energy : void 0) != null ? ref71 : ship.energy);
+            container.find('tr.info-energy').toggle((((ref73 = pilot.ship_override) != null ? ref73.energy : void 0) != null) || (ship.energy != null));
             container.find('tr.info-range').hide();
             container.find('td.info-rangebonus').hide();
-            container.find('tr.info-agility td.info-data').text((ref72 = (ref73 = pilot.ship_override) != null ? ref73.agility : void 0) != null ? ref72 : ship.agility);
+            container.find('tr.info-agility td.info-data').text((ref74 = (ref75 = pilot.ship_override) != null ? ref75.agility : void 0) != null ? ref74 : ship.agility);
             container.find('tr.info-agility').show();
-            container.find('tr.info-hull td.info-data').text((ref74 = (ref75 = pilot.ship_override) != null ? ref75.hull : void 0) != null ? ref74 : ship.hull);
+            container.find('tr.info-hull td.info-data').text((ref76 = (ref77 = pilot.ship_override) != null ? ref77.hull : void 0) != null ? ref76 : ship.hull);
             container.find('tr.info-hull').show();
-            container.find('tr.info-shields td.info-data').text((ref76 = (ref77 = pilot.ship_override) != null ? ref77.shields : void 0) != null ? ref76 : ship.shields);
+            container.find('tr.info-shields td.info-data').text((ref78 = (ref79 = pilot.ship_override) != null ? ref79.shields : void 0) != null ? ref78 : ship.shields);
             container.find('tr.info-shields').show();
             if (((effective_stats != null ? effective_stats.force : void 0) != null) || (data.force != null)) {
               recurringicon = '';
@@ -6668,7 +6669,7 @@ exportObj.SquadBuilder = (function() {
                 recurringicon += '<sup><i class="fas fa-caret-up"></i></sup>';
                 ++count;
               }
-              container.find('tr.info-force td.info-data').html(((ref78 = (ref79 = pilot.ship_override) != null ? ref79.force : void 0) != null ? ref78 : pilot.force) + recurringicon);
+              container.find('tr.info-force td.info-data').html(((ref80 = (ref81 = pilot.ship_override) != null ? ref81.force : void 0) != null ? ref80 : pilot.force) + recurringicon);
               container.find('tr.info-force').show();
             } else {
               container.find('tr.info-force').hide();
@@ -6696,15 +6697,15 @@ exportObj.SquadBuilder = (function() {
             } else {
               container.find('tr.info-charge').hide();
             }
-            container.find('tr.info-actions td.info-data').html(this.formatActions((ref80 = (ref81 = pilot.ship_override) != null ? ref81.actions : void 0) != null ? ref80 : exportObj.ships[data.ship].actions, ", ", (ref82 = pilot.keyword) != null ? ref82 : []));
+            container.find('tr.info-actions td.info-data').html(this.formatActions((ref82 = (ref83 = pilot.ship_override) != null ? ref83.actions : void 0) != null ? ref82 : exportObj.ships[data.ship].actions, ", ", (ref84 = pilot.keyword) != null ? ref84 : []));
             container.find('tr.info-actions').show();
             container.find('tr.info-upgrades').show();
             container.find('tr.info-upgrades td.info-data').html(((function() {
-              var len2, m, ref83, ref84, results1;
-              ref84 = (ref83 = data.upgrades) != null ? ref83 : [];
+              var len2, m, ref85, ref86, results1;
+              ref86 = (ref85 = data.upgrades) != null ? ref85 : [];
               results1 = [];
-              for (m = 0, len2 = ref84.length; m < len2; m++) {
-                upgrade = ref84[m];
+              for (m = 0, len2 = ref86.length; m < len2; m++) {
+                upgrade = ref86[m];
                 results1.push(exportObj.upgrades[upgrade].display_name != null ? exportObj.upgrades[upgrade].display_name : upgrade);
               }
               return results1;
@@ -6727,11 +6728,11 @@ exportObj.SquadBuilder = (function() {
               })()).sort().join(', '));
             } else {
               container.find('.info-sources.info-data').text(((function() {
-                var len2, m, ref83, results1;
-                ref83 = data.sources;
+                var len2, m, ref85, results1;
+                ref85 = data.sources;
                 results1 = [];
-                for (m = 0, len2 = ref83.length; m < len2; m++) {
-                  source = ref83[m];
+                for (m = 0, len2 = ref85.length; m < len2; m++) {
+                  source = ref85[m];
                   results1.push(exportObj.translate('sources', source));
                 }
                 return results1;
@@ -6753,8 +6754,8 @@ exportObj.SquadBuilder = (function() {
             } else {
               uniquedots = "";
             }
-            if ((((ref83 = this.collection) != null ? ref83.counts : void 0) != null) && (data.standard == null)) {
-              addon_count = (ref84 = (ref85 = this.collection.counts) != null ? (ref86 = ref85['upgrade']) != null ? ref86[data.name] : void 0 : void 0) != null ? ref84 : 0;
+            if ((((ref85 = this.collection) != null ? ref85.counts : void 0) != null) && (data.standard == null)) {
+              addon_count = (ref86 = (ref87 = this.collection.counts) != null ? (ref88 = ref87['upgrade']) != null ? ref88[data.name] : void 0 : void 0) != null ? ref86 : 0;
               container.find('.info-collection').text(this.uitranslation("collectionContentUpgrades", addon_count));
               container.find('.info-collection').show();
             } else {
@@ -6772,14 +6773,14 @@ exportObj.SquadBuilder = (function() {
                 case "Agility":
                   point_info += this.uitranslation("varPointCostsConditionAgility", (function() {
                     var results1 = [];
-                    for (var m = 0, ref87 = points.length - 1; 0 <= ref87 ? m <= ref87 : m >= ref87; 0 <= ref87 ? m++ : m--){ results1.push(m); }
+                    for (var m = 0, ref89 = points.length - 1; 0 <= ref89 ? m <= ref89 : m >= ref89; 0 <= ref89 ? m++ : m--){ results1.push(m); }
                     return results1;
                   }).apply(this));
                   break;
                 case "Initiative":
                   point_info += this.uitranslation("varPointCostsConditionIni", (function() {
                     var results1 = [];
-                    for (var m = 0, ref88 = points.length - 1; 0 <= ref88 ? m <= ref88 : m >= ref88; 0 <= ref88 ? m++ : m--){ results1.push(m); }
+                    for (var m = 0, ref90 = points.length - 1; 0 <= ref90 ? m <= ref90 : m >= ref90; 0 <= ref90 ? m++ : m--){ results1.push(m); }
                     return results1;
                   }).apply(this));
                   break;
@@ -6801,7 +6802,7 @@ exportObj.SquadBuilder = (function() {
             } else {
               container.find('p.info-restrictions').hide();
             }
-            container.find('p.info-text').html((ref89 = data.text) != null ? ref89 : '');
+            container.find('p.info-text').html((ref91 = data.text) != null ? ref91 : '');
             container.find('p.info-text').show();
             container.find('p.info-chassis').hide();
             container.find('tr.info-ship').hide();
@@ -6962,9 +6963,9 @@ exportObj.SquadBuilder = (function() {
               item = data[m];
               missingStuffInfoText += `<li><strong>${(item.display_name != null ? item.display_name : item.name)}</strong> (`;
               first = true;
-              ref90 = item.sources;
-              for (o = 0, len3 = ref90.length; o < len3; o++) {
-                source = ref90[o];
+              ref92 = item.sources;
+              for (o = 0, len3 = ref92.length; o < len3; o++) {
+                source = ref92[o];
                 if (!first) {
                   missingStuffInfoText += ", ";
                 }
@@ -7004,18 +7005,18 @@ exportObj.SquadBuilder = (function() {
           case 'Damage':
             container.find('.info-type').text(exportObj.translate("types", data.type));
             container.find('.info-sources.info-data').text(((function() {
-              var len4, q, ref91, results1;
-              ref91 = data.sources;
+              var len4, q, ref93, results1;
+              ref93 = data.sources;
               results1 = [];
-              for (q = 0, len4 = ref91.length; q < len4; q++) {
-                source = ref91[q];
+              for (q = 0, len4 = ref93.length; q < len4; q++) {
+                source = ref93[q];
                 results1.push(exportObj.translate('sources', source));
               }
               return results1;
             })()).sort().join(', '));
             container.find('.info-sources').show();
-            if (((ref91 = this.collection) != null ? ref91.counts : void 0) != null) {
-              addon_count = (ref92 = (ref93 = this.collection.counts) != null ? (ref94 = ref93['damage']) != null ? ref94[data.name] : void 0 : void 0) != null ? ref92 : 0;
+            if (((ref93 = this.collection) != null ? ref93.counts : void 0) != null) {
+              addon_count = (ref94 = (ref95 = this.collection.counts) != null ? (ref96 = ref95['damage']) != null ? ref96[data.name] : void 0 : void 0) != null ? ref94 : 0;
               container.find('.info-collection').text(this.uitranslation("collectionContentUpgrades", addon_count));
               container.find('.info-collection').show();
             } else {
@@ -7023,7 +7024,7 @@ exportObj.SquadBuilder = (function() {
             }
             container.find('.info-name').html(`${data.display_name ? data.display_name : data.name} (${data.quantity}x)`);
             container.find('p.info-restrictions').hide();
-            container.find('p.info-text').html((ref95 = data.text) != null ? ref95 : '');
+            container.find('p.info-text').html((ref97 = data.text) != null ? ref97 : '');
             container.find('p.info-text').show();
             container.find('p.info-chassis').hide();
             container.find('tr.info-ship').hide();
@@ -9391,7 +9392,7 @@ Ship = class Ship {
   }
 
   effectiveStats() {
-    var j, l, len, len1, m, new_stats, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref21, ref22, ref23, ref24, ref25, ref26, ref27, ref28, ref29, ref3, ref30, ref31, ref32, ref33, ref34, ref35, ref36, ref37, ref38, ref39, ref4, ref40, ref41, ref42, ref43, ref5, ref6, ref7, ref8, ref9, s, statentry, stats, upgrade;
+    var j, l, len, len1, m, maneuvers_override, new_stats, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref21, ref22, ref23, ref24, ref25, ref26, ref27, ref28, ref29, ref3, ref30, ref31, ref32, ref33, ref34, ref35, ref36, ref37, ref38, ref39, ref4, ref40, ref41, ref42, ref43, ref44, ref5, ref6, ref7, ref8, ref9, s, statentry, stats, upgrade;
     stats = {
       attack: (ref = (ref1 = this.pilot.ship_override) != null ? ref1.attack : void 0) != null ? ref : this.data.attack,
       attackf: (ref2 = (ref3 = this.pilot.ship_override) != null ? ref3.attackf : void 0) != null ? ref2 : this.data.attackf,
@@ -9424,31 +9425,32 @@ Ship = class Ship {
       }
     }
     // need a deep copy of maneuvers array
+    maneuvers_override = (ref37 = (ref38 = this.pilot.ship_override) != null ? ref38.maneuvers : void 0) != null ? ref37 : this.data.maneuvers;
     stats.maneuvers = [];
-    for (s = j = 0, ref37 = ((ref38 = this.data.maneuvers) != null ? ref38 : []).length; (0 <= ref37 ? j < ref37 : j > ref37); s = 0 <= ref37 ? ++j : --j) {
-      stats.maneuvers[s] = this.data.maneuvers[s].slice(0);
+    for (s = j = 0, ref39 = (maneuvers_override != null ? maneuvers_override : []).length; (0 <= ref39 ? j < ref39 : j > ref39); s = 0 <= ref39 ? ++j : --j) {
+      stats.maneuvers[s] = maneuvers_override[s].slice(0);
     }
     // Droid conversion of Focus to Calculate
     if ((this.pilot.keyword != null) && (indexOf.call(this.pilot.keyword, "Droid") >= 0) && (stats.actions != null)) {
       new_stats = [];
-      ref39 = stats.actions;
-      for (l = 0, len = ref39.length; l < len; l++) {
-        statentry = ref39[l];
+      ref40 = stats.actions;
+      for (l = 0, len = ref40.length; l < len; l++) {
+        statentry = ref40[l];
         new_stats.push(statentry.replace("Focus", "Calculate"));
       }
       stats.actions = new_stats;
     }
-    ref40 = this.upgrades;
-    for (m = 0, len1 = ref40.length; m < len1; m++) {
-      upgrade = ref40[m];
-      if ((upgrade != null ? (ref41 = upgrade.data) != null ? ref41.chassis : void 0 : void 0) != null) {
+    ref41 = this.upgrades;
+    for (m = 0, len1 = ref41.length; m < len1; m++) {
+      upgrade = ref41[m];
+      if ((upgrade != null ? (ref42 = upgrade.data) != null ? ref42.chassis : void 0 : void 0) != null) {
         stats.chassis = upgrade.data.chassis;
       }
-      if ((upgrade != null ? (ref42 = upgrade.data) != null ? ref42.modifier_func : void 0 : void 0) != null) {
+      if ((upgrade != null ? (ref43 = upgrade.data) != null ? ref43.modifier_func : void 0 : void 0) != null) {
         upgrade.data.modifier_func(stats);
       }
     }
-    if (((ref43 = this.pilot) != null ? ref43.modifier_func : void 0) != null) {
+    if (((ref44 = this.pilot) != null ? ref44.modifier_func : void 0) != null) {
       this.pilot.modifier_func(stats);
     }
     if ((exportObj.chassis[stats.chassis] != null) && (exportObj.chassis[stats.chassis].modifier_func != null)) {
