@@ -3304,7 +3304,7 @@ exportObj.SquadBuilder = (function() {
       // a squad given in the link is loaded on construction of that builder. It will set all gamemodes of already existing builders accordingly, but we did not exists back than. So we copy over the gamemode
       this.isStandard = (ref = (ref1 = exportObj.builders[0]) != null ? ref1.isStandard : void 0) != null ? ref : true;
       this.isEpic = (ref2 = (ref3 = exportObj.builders[0]) != null ? ref3.isEpic : void 0) != null ? ref2 : false;
-      this.isBeta = (ref4 = (ref5 = exportObj.builders[0]) != null ? ref5.isBeta : void 0) != null ? ref4 : false;
+      this.isXwa = (ref4 = (ref5 = exportObj.builders[0]) != null ? ref5.isXwa : void 0) != null ? ref4 : false;
       this.isQuickbuild = (ref6 = (ref7 = exportObj.builders[0]) != null ? ref7.isQuickbuild : void 0) != null ? ref6 : false;
       this.backend = null;
       this.current_squad = {};
@@ -3404,7 +3404,7 @@ exportObj.SquadBuilder = (function() {
         </div>
         <br class="hide-on-mobile" />
         <select class="game-type-selector">
-            <option value="xwabeta" class="translated" defaultText="XWA Beta">${this.uitranslation("XWA Beta")}</option>
+            <option value="xwa" class="translated" defaultText="XWA">${this.uitranslation("XWA")}</option>
             <option value="standard" class="translated" defaultText="Standard" selected="selected">${this.uitranslation("Standard")}</option>
             <option value="extended" class="translated" defaultText="Extended">${this.uitranslation("Extended")}</option>
             <option value="epic" class="translated" defaultText="Epic">${this.uitranslation("Epic")}</option>
@@ -4708,13 +4708,13 @@ exportObj.SquadBuilder = (function() {
         if (this.isEpic) {
           this.printable_container.find('.squad-name').append(` <i class="xwing-miniatures-font xwing-miniatures-font-energy"></i>`);
         }
-        if (this.isBeta) {
+        if (this.isXwa) {
           this.printable_container.find('.squad-name').append(` <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>`);
         }
         versioninfo = "09/06/2024";
         rules = "AMG";
-        if (this.isBeta) {
-          versioninfo = "BV5";
+        if (this.isXwa) {
+          versioninfo = "R1";
           rules = "XWA";
         }
         // Version number
@@ -4874,13 +4874,13 @@ exportObj.SquadBuilder = (function() {
       var j, len, oldQuickbuild, old_id, ref, ref1, ship;
       oldQuickbuild = this.isQuickbuild;
       this.isStandard = false;
-      this.isBeta = false;
+      this.isXwa = false;
       this.isEpic = false;
       this.isQuickbuild = false;
       this.epic_not_legal_container.toggleClass('d-none', true);
       switch (gametype) {
-        case 'xwabeta':
-          this.isBeta = true;
+        case 'xwa':
+          this.isXwa = true;
           this.desired_points_input.val(20);
           break;
         case 'extended':
@@ -4888,7 +4888,7 @@ exportObj.SquadBuilder = (function() {
           break;
         case 'epic':
           this.isEpic = true;
-          this.isBeta = true;
+          this.isXwa = true;
           this.desired_points_input.val(20);
           this.epic_not_legal_container.toggleClass('d-none', false);
           break;
@@ -4962,8 +4962,8 @@ exportObj.SquadBuilder = (function() {
       } else {
         gamemode = "(Standard)";
       }
-      if (this.isBeta) {
-        gamemode = "(XWA Beta)";
+      if (this.isXwa) {
+        gamemode = "(XWA xwa)";
       }
       if (this.isEpic) {
         gamemode = "(Epic)";
@@ -5171,7 +5171,7 @@ exportObj.SquadBuilder = (function() {
             return 'h';
           case 'extended':
             return 's';
-          case 'xwabeta':
+          case 'xwa':
             return 'b';
           case 'epic':
             return 'e';
@@ -5234,7 +5234,7 @@ exportObj.SquadBuilder = (function() {
             this.changeGameTypeOnSquadLoad('standard');
             break;
           case 'b':
-            this.changeGameTypeOnSquadLoad('xwabeta');
+            this.changeGameTypeOnSquadLoad('xwa');
             break;
           case 'e':
             this.changeGameTypeOnSquadLoad('epic');
@@ -5548,8 +5548,8 @@ exportObj.SquadBuilder = (function() {
             pilot = available_faction_pilots[j];
             results1.push({
               id: pilot.id,
-              text: `${(((ref = exportObj.settings) != null ? ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? pilot.skill + ' - ' : ''}${pilot.display_name ? pilot.display_name : pilot.name} (${(this.isBeta && (pilot.pointsbeta != null)) ? pilot.pointsbeta : pilot.points}${pilot.loadout != null ? ((this.isBeta && (pilot.loadoutbeta != null)) ? `/${pilot.loadoutbeta}` : `/${pilot.loadout}`) : ""})`,
-              points: ((this.isBeta && (pilot.pointsbeta != null)) ? pilot.pointsbeta : pilot.points),
+              text: `${(((ref = exportObj.settings) != null ? ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? pilot.skill + ' - ' : ''}${pilot.display_name ? pilot.display_name : pilot.name} (${(this.isXwa && (pilot.pointsxwa != null)) ? pilot.pointsxwa : pilot.points}${pilot.loadout != null ? ((this.isXwa && (pilot.loadoutxwa != null)) ? `/${pilot.loadoutxwa}` : `/${pilot.loadout}`) : ""})`,
+              points: ((this.isXwa && (pilot.pointsxwa != null)) ? pilot.pointsxwa : pilot.points),
               ship: pilot.ship,
               name: pilot.name,
               display_name: pilot.display_name,
@@ -5806,7 +5806,7 @@ exportObj.SquadBuilder = (function() {
         results1 = [];
         for (upgrade_name in available_upgrades) {
           upgrade = available_upgrades[upgrade_name];
-          if ((indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && ship.standardized_check(upgrade) && ship.restriction_check(((ship.builder.isBeta && (upgrade.restrictionsbeta != null)) ? upgrade.restrictionsbeta : (upgrade.restrictions ? upgrade.restrictions : void 0)), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) && indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((ref = upgrade.slot, indexOf.call(this.uniques_in_use['Slot'], ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
+          if ((indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && ship.standardized_check(upgrade) && ship.restriction_check(((ship.builder.isXwa && (upgrade.restrictionsxwa != null)) ? upgrade.restrictionsxwa : (upgrade.restrictions ? upgrade.restrictions : void 0)), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) && indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((ref = upgrade.slot, indexOf.call(this.uniques_in_use['Slot'], ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
             results1.push(upgrade);
           }
         }
@@ -6169,13 +6169,13 @@ exportObj.SquadBuilder = (function() {
               if (!(ref1 = pilot.skill, indexOf.call(possible_inis, ref1) >= 0)) {
                 possible_inis.push(pilot.skill);
               }
-              if (this.isBeta && (pilot.pointsbeta != null)) {
-                possible_costs.push(pilot.pointsbeta);
+              if (this.isXwa && (pilot.pointsxwa != null)) {
+                possible_costs.push(pilot.pointsxwa);
               } else {
                 possible_costs.push(pilot.points);
               }
-              if (this.isBeta && (pilot.loadoutbeta != null)) {
-                possible_loadout.push(pilot.loadoutbeta);
+              if (this.isXwa && (pilot.loadoutxwa != null)) {
+                possible_loadout.push(pilot.loadoutxwa);
               } else {
                 if (pilot.loadout != null) {
                   possible_loadout.push(pilot.loadout);
@@ -6447,9 +6447,9 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-base').show();
             container.find('tr.info-skill td.info-data').text(data.skill);
             container.find('tr.info-skill').toggle(data.skill != null);
-            container.find('tr.info-points td.info-data').text((this.isBeta && (data.pointsbeta != null) ? data.pointsbeta : data.points));
+            container.find('tr.info-points td.info-data').text((this.isXwa && (data.pointsxwa != null) ? data.pointsxwa : data.points));
             container.find('tr.info-points').show();
-            container.find('tr.info-loadout td.info-data').text((this.isBeta && (data.loadoutbeta != null) ? data.loadoutbeta : data.loadout));
+            container.find('tr.info-loadout td.info-data').text((this.isXwa && (data.loadoutxwa != null) ? data.loadoutxwa : data.loadout));
             if (data.upgrades != null) {
               container.find('tr.info-loadout').hide();
             } else {
@@ -6555,10 +6555,10 @@ exportObj.SquadBuilder = (function() {
               container.find('tr.info-upgrades').hide();
             } else {
               container.find('tr.info-upgrades').show();
-              if (this.isBeta && (data.slotsbeta != null)) {
-                container.find('tr.info-upgrades td.info-data').html(data.slotsbeta != null ? ((function() {
+              if (this.isXwa && (data.slotsxwa != null)) {
+                container.find('tr.info-upgrades td.info-data').html(data.slotsxwa != null ? ((function() {
                   var len2, m, ref60, results1;
-                  ref60 = data.slotsbeta;
+                  ref60 = data.slotsxwa;
                   results1 = [];
                   for (m = 0, len2 = ref60.length; m < len2; m++) {
                     slot = ref60[m];
@@ -6762,8 +6762,8 @@ exportObj.SquadBuilder = (function() {
               container.find('.info-collection').hide();
             }
             container.find('.info-name').html(`${uniquedots}${data.display_name ? data.display_name : data.name}${(exportObj.isReleased(data) || (data.standard != null)) ? "" : ` (${this.uitranslation('unreleased')})`}${data.standard != null ? " (S)" : ""}`);
-            if (this.isBeta && (data.pointsbeta != null)) {
-              points = data.pointsbeta;
+            if (this.isXwa && (data.pointsxwa != null)) {
+              points = data.pointsxwa;
             } else {
               points = data.points;
             }
@@ -7369,14 +7369,14 @@ exportObj.SquadBuilder = (function() {
       uniquetext = comma = othertext = text = '';
       ignoreShip = false;
       standardized = card.standardized != null;
-      if (this.isBeta && (card.standardizedbeta != null)) {
-        standardized = card.standardizedbeta;
+      if (this.isXwa && (card.standardizedxwa != null)) {
+        standardized = card.standardizedxwa;
       }
       if (card.restrictions != null) {
         card_restrictions = card.restrictions;
       }
-      if (this.isBeta && (card.restrictionsbeta != null)) {
-        card_restrictions = card.restrictionsbeta;
+      if (this.isXwa && (card.restrictionsxwa != null)) {
+        card_restrictions = card.restrictionsxwa;
       }
       if (card_restrictions != null) {
         for (j = 0, len = card_restrictions.length; j < len; j++) {
@@ -7622,8 +7622,8 @@ exportObj.SquadBuilder = (function() {
       // Often you will want JSON.stringify(builder.toXWS())
       versioninfo = "09/06/2024";
       rules = "AMG";
-      if (this.isBeta) {
-        versioninfo = "BV5";
+      if (this.isXwa) {
+        versioninfo = "R1";
         rules = "XWA";
       }
       xws = {
@@ -7789,7 +7789,7 @@ exportObj.SquadBuilder = (function() {
             gamemode = 'h';
           } else if (this.isEpic) {
             gamemode = 'e';
-          } else if (this.isBeta) {
+          } else if (this.isXwa) {
             gamemode = 'b';
           } else {
             gamemode = 's';
@@ -7919,7 +7919,7 @@ Ship = class Ship {
     this.wingmates = []; // stores wingmates (quickbuild stuff only) 
     this.destroystate = 0;
     this.uitranslation = this.builder.uitranslation;
-    this.usesBetaSlots = false; // flag if we use beta slots. This is needed, if we switch betwen XWA/AMG points to rebuild the pilot if the slots change
+    this.usesxwaSlots = false; // flag if we use xwa slots. This is needed, if we switch betwen XWA/AMG points to rebuild the pilot if the slots change
     this.setupUI();
   }
 
@@ -8339,7 +8339,7 @@ Ship = class Ship {
   async setPilot(new_pilot, noautoequip = false) {
     var _, auto_equip_upgrade, autoequip, delayed_upgrades, id, j, l, len, len1, len2, len3, len4, m, name1, o, old_upgrade, old_upgrades, q, ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7, same_ship, standard_check, standard_upgrade_to_check, upgrade, upgrade_name, y;
     // don't call this method directly, unless you know what you do. Use setPilotById for proper quickbuild handling
-    if (new_pilot !== this.pilot || (this.builder.isBeta && !this.usesBetaSlots && (this.pilot.slotsbeta != null)) || (this.usesBetaSlots && !this.builder.isBeta)) {
+    if (new_pilot !== this.pilot || (this.builder.isXwa && !this.usesxwaSlots && (this.pilot.slotsxwa != null)) || (this.usesxwaSlots && !this.builder.isXwa)) {
       this.builder.current_squad.dirty = true;
       same_ship = (this.pilot != null) && (new_pilot != null ? new_pilot.ship : void 0) === this.pilot.ship;
       old_upgrades = {};
@@ -8447,7 +8447,7 @@ Ship = class Ship {
     if (!this.builder.isQuickbuild) {
       if (this.pilot.upgrades != null) {
         this.hasFixedUpgrades = true;
-        this.usesBetaSlots = false;
+        this.usesxwaSlots = false;
         ref1 = (ref = this.pilot.upgrades) != null ? ref : [];
         results1 = [];
         for (j = 0, len = ref1.length; j < len; j++) {
@@ -8469,11 +8469,11 @@ Ship = class Ship {
         return results1;
       } else {
         this.hasFixedUpgrades = false;
-        if (this.builder.isBeta && (this.pilot.slotsbeta != null)) {
-          pilotslots = this.pilot.slotsbeta;
-          this.usesBetaSlots = true;
+        if (this.builder.isXwa && (this.pilot.slotsxwa != null)) {
+          pilotslots = this.pilot.slotsxwa;
+          this.usesxwaSlots = true;
         } else {
-          this.usesBetaSlots = false;
+          this.usesxwaSlots = false;
           pilotslots = this.pilot.slots;
         }
         ref2 = pilotslots != null ? pilotslots : [];
@@ -8642,7 +8642,7 @@ Ship = class Ship {
       });
       this.pilot_selector.select2('data', {
         id: this.pilot.id,
-        text: `${(((ref = exportObj.settings) != null ? ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? this.pilot.skill + ' - ' : ''}${this.pilot.display_name ? this.pilot.display_name : this.pilot.name}${this.quickbuildId !== -1 ? exportObj.quickbuildsById[this.quickbuildId].suffix : ""} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)}${(this.quickbuildId !== -1 || (this.pilot.loadout == null)) ? "" : (this.builder.isBeta && (this.pilot.loadoutbeta != null) ? `/${this.pilot.loadoutbeta}` : `/${this.pilot.loadout}`)})`,
+        text: `${(((ref = exportObj.settings) != null ? ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? this.pilot.skill + ' - ' : ''}${this.pilot.display_name ? this.pilot.display_name : this.pilot.name}${this.quickbuildId !== -1 ? exportObj.quickbuildsById[this.quickbuildId].suffix : ""} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)}${(this.quickbuildId !== -1 || (this.pilot.loadout == null)) ? "" : (this.builder.isXwa && (this.pilot.loadoutxwa != null) ? `/${this.pilot.loadoutxwa}` : `/${this.pilot.loadout}`)})`,
         chassis: this.pilot.chassis != null ? this.pilot.chassis : ""
       });
       this.pilot_selector.data('select2').container.show();
@@ -9082,7 +9082,7 @@ Ship = class Ship {
     <div class="pilot-header-text">${this.pilot.display_name ? this.pilot.display_name : this.pilot.name} <i class="xwing-miniatures-ship xwing-miniatures-ship-${this.data.name.canonicalize()}"></i><span class="fancy-ship-type"> ${this.data.display_name ? this.data.display_name : this.data.name}</span></div>
     <div class="mask">
         <div class="outer-circle">
-            <div class="inner-circle pilot-points">${this.quickbuildId !== -1 ? (this.primary ? this.getPoints() : '*') : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)}</div>
+            <div class="inner-circle pilot-points">${this.quickbuildId !== -1 ? (this.primary ? this.getPoints() : '*') : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)}</div>
         </div>
     </div>
 </div>
@@ -9150,7 +9150,7 @@ Ship = class Ship {
     HalfPoints = Math.floor(this.getPoints() / 2);
     Threshold = Math.floor((effective_stats['hull'] + effective_stats['shields']) / 2);
     html += $.trim(`<div class="ship-points-total">
-    <strong>${this.uitranslation("Ship Cost")}: ${this.getPoints()}, ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isBeta && (this.pilot.loadoutbeta != null)) ? `/${this.pilot.loadoutbeta}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")}), ${this.uitranslation("Half Points")}: ${HalfPoints}, ${this.uitranslation("Damage Threshold")}: ${Threshold}</strong> 
+    <strong>${this.uitranslation("Ship Cost")}: ${this.getPoints()}, ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isXwa && (this.pilot.loadoutxwa != null)) ? `/${this.pilot.loadoutxwa}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")}), ${this.uitranslation("Half Points")}: ${HalfPoints}, ${this.uitranslation("Damage Threshold")}: ${Threshold}</strong> 
 </div>`);
     return `<div class="fancy-ship">${html}</div>`;
   }
@@ -9159,7 +9159,7 @@ Ship = class Ship {
     var halfPoints, j, len, points, slotted_upgrades, table_html, threshold, upgrade;
     table_html = $.trim(`<tr class="simple-pilot">
     <td class="name">${this.pilot.display_name ? this.pilot.display_name : this.pilot.name} &mdash; ${this.data.display_name ? this.data.display_name : this.data.name}</td>
-    <td class="points">${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)}</td>
+    <td class="points">${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)}</td>
 </tr>`);
     slotted_upgrades = (function() {
       var j, len, ref, results1;
@@ -9183,14 +9183,14 @@ Ship = class Ship {
     table_html += `<tr class="simple-ship-total"><td colspan="2">${this.uitranslation("Ship Cost")}: ${this.getPoints()}</td></tr>`;
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    table_html += `<tr class="simple-ship-half-points"><td colspan="2">${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isBeta && (this.pilot.loadoutbeta != null)) ? `/${this.pilot.loadoutbeta}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")}) ${this.uitranslation("Half Points")}: ${halfPoints} ${this.uitranslation("Damage Threshold")}: ${threshold}</td></tr>`;
+    table_html += `<tr class="simple-ship-half-points"><td colspan="2">${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isXwa && (this.pilot.loadoutxwa != null)) ? `/${this.pilot.loadoutxwa}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")}) ${this.uitranslation("Half Points")}: ${halfPoints} ${this.uitranslation("Damage Threshold")}: ${threshold}</td></tr>`;
     table_html += '<tr><td>&nbsp;</td><td></td></tr>';
     return table_html;
   }
 
   toSimpleCopy() {
     var halfPoints, j, len, points, simplecopy, simplecopy_upgrades, slotted_upgrades, threshold, upgrade, upgrade_simplecopy;
-    simplecopy = `${this.pilot.display_name} – ${this.data.display_name} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)})    \n`;
+    simplecopy = `${this.pilot.display_name} – ${this.data.display_name} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)})    \n`;
     slotted_upgrades = (function() {
       var j, len, ref, results1;
       ref = this.upgrades;
@@ -9219,13 +9219,13 @@ Ship = class Ship {
     }
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    simplecopy += `${this.uitranslation("Ship Cost")}: ${this.getPoints()}  ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isBeta && (this.pilot.loadoutbeta != null)) ? `/${this.pilot.loadoutbeta}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")})  ${this.uitranslation("Half Points")}: ${halfPoints}  ${this.uitranslation("Damage Threshold")}: ${threshold}    \n    \n`;
+    simplecopy += `${this.uitranslation("Ship Cost")}: ${this.getPoints()}  ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isXwa && (this.pilot.loadoutxwa != null)) ? `/${this.pilot.loadoutxwa}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")})  ${this.uitranslation("Half Points")}: ${halfPoints}  ${this.uitranslation("Damage Threshold")}: ${threshold}    \n    \n`;
     return simplecopy;
   }
 
   toRedditText() {
     var halfPoints, j, len, points, reddit, reddit_upgrades, slotted_upgrades, threshold, upgrade, upgrade_reddit;
-    reddit = `**${this.pilot.name} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)})**    \n`;
+    reddit = `**${this.pilot.name} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)})**    \n`;
     slotted_upgrades = (function() {
       var j, len, ref, results1;
       ref = this.upgrades;
@@ -9252,7 +9252,7 @@ Ship = class Ship {
         }
       }
       reddit += reddit_upgrades.join("    ");
-      reddit += `&nbsp;*${this.uitranslation("Ship Cost")}: ${this.getPoints()}  ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isBeta && (this.pilot.loadoutbeta != null)) ? `/${this.pilot.loadoutbeta}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")})  ${this.uitranslation("Half Points")}: ${halfPoints}  ${this.uitranslation("Damage Threshold")}: ${threshold}*    \n`;
+      reddit += `&nbsp;*${this.uitranslation("Ship Cost")}: ${this.getPoints()}  ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isXwa && (this.pilot.loadoutxwa != null)) ? `/${this.pilot.loadoutxwa}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")})  ${this.uitranslation("Half Points")}: ${halfPoints}  ${this.uitranslation("Damage Threshold")}: ${threshold}*    \n`;
     }
     return reddit;
   }
@@ -9415,13 +9415,13 @@ Ship = class Ship {
       loadout: (ref35 = this.pilot.loadout) != null ? ref35 : 0,
       skill: (ref36 = this.pilot.skill) != null ? ref36 : 0
     };
-    // override when in XWA beta mode
-    if (this.builder.isBeta) {
-      if (this.pilot.pointsbeta != null) {
-        stats.points = this.pilot.pointsbeta;
+    // override when in XWA mode
+    if (this.builder.isXwa) {
+      if (this.pilot.pointsxwa != null) {
+        stats.points = this.pilot.pointsxwa;
       }
-      if (this.pilot.loadoutbeta != null) {
-        stats.loadout = this.pilot.loadoutbeta;
+      if (this.pilot.loadoutxwa != null) {
+        stats.loadout = this.pilot.loadoutxwa;
       }
     }
     // need a deep copy of maneuvers array
@@ -9518,8 +9518,8 @@ Ship = class Ship {
             meets_restrictions = meets_restrictions && (upgrade != null ? (ref10 = upgrade.data) != null ? ref10.validation_func(this, upgrade) : void 0 : void 0);
           }
           // moved occupied slots off of validation func
-          if (this.builder.isBeta && ((upgrade != null ? (ref11 = upgrade.data) != null ? ref11.also_occupies_upgrades_beta : void 0 : void 0) != null)) {
-            ref12 = upgrade.data.also_occupies_upgrades_beta;
+          if (this.builder.isXwa && ((upgrade != null ? (ref11 = upgrade.data) != null ? ref11.also_occupies_upgrades_xwa : void 0 : void 0) != null)) {
+            ref12 = upgrade.data.also_occupies_upgrades_xwa;
             for (q = 0, len2 = ref12.length; q < len2; q++) {
               upgradeslot = ref12[q];
               meets_restrictions = meets_restrictions && upgrade.occupiesAnUpgradeSlot(upgradeslot);
@@ -9759,9 +9759,9 @@ Ship = class Ship {
     var checkstandard, j, l, len, len1, ref, ref1, ref2, restrictions, ship, slotfree, upgrade;
     // condition checks
     checkstandard = false;
-    if (this.builder.isBeta) {
-      if (upgrade_data.standardizedbeta != null) {
-        checkstandard = upgrade_data.standardizedbeta;
+    if (this.builder.isXwa) {
+      if (upgrade_data.standardizedxwa != null) {
+        checkstandard = upgrade_data.standardizedxwa;
       }
     } else {
       if (upgrade_data.standardized != null) {
@@ -9773,9 +9773,9 @@ Ship = class Ship {
       for (j = 0, len = ref.length; j < len; j++) {
         ship = ref[j];
         if (((ship != null ? ship.data : void 0) != null) && ship.data.name === this.data.name) {
-          if (this.builder.isBeta) {
-            if (upgrade_data.restrictionsbeta != null) {
-              restrictions = upgrade_data.restrictionsbeta;
+          if (this.builder.isXwa) {
+            if (upgrade_data.restrictionsxwa != null) {
+              restrictions = upgrade_data.restrictionsxwa;
             } else {
               (upgrade_data.restrictions != null ? restrictions = upgrade_data.restrictions : void 0);
             }
@@ -10023,9 +10023,9 @@ GenericAddon = class GenericAddon {
 
   isStandardized() {
     var ref, ref1;
-    if (this.ship.builder.isBeta) {
-      if (((ref = this.data) != null ? ref.standardizedbeta : void 0) != null) {
-        return this.data.standardizedbeta;
+    if (this.ship.builder.isXwa) {
+      if (((ref = this.data) != null ? ref.standardizedxwa : void 0) != null) {
+        return this.data.standardizedxwa;
       }
     }
     if (((ref1 = this.data) != null ? ref1.standardized : void 0) != null) {
@@ -10285,8 +10285,8 @@ GenericAddon = class GenericAddon {
   getPoints(data = this.data, ship = this.ship) {
     var points, ref, ref1;
     // Moar special case jankiness
-    if (((ref = this.ship) != null ? ref.builder.isBeta : void 0) && ((data != null ? data.pointsbeta : void 0) != null)) {
-      points = data.pointsbeta;
+    if (((ref = this.ship) != null ? ref.builder.isXwa : void 0) && ((data != null ? data.pointsxwa : void 0) != null)) {
+      points = data.pointsxwa;
     } else {
       points = (ref1 = data != null ? data.points : void 0) != null ? ref1 : 0;
     }
@@ -10506,8 +10506,8 @@ ${attackrangebonus}`);
   occupyOtherUpgrades() {
     var checkupgrades, j, len, ref, ref1, ref2, ref3, results1, slot, upgrade;
     checkupgrades = [];
-    if (this.ship.builder.isBeta && (((ref = this.data) != null ? ref.also_occupies_upgrades_beta : void 0) != null)) {
-      checkupgrades = (ref1 = this.data) != null ? ref1.also_occupies_upgrades_beta : void 0;
+    if (this.ship.builder.isXwa && (((ref = this.data) != null ? ref.also_occupies_upgrades_xwa : void 0) != null)) {
+      checkupgrades = (ref1 = this.data) != null ? ref1.also_occupies_upgrades_xwa : void 0;
     } else {
       if (((ref2 = this.data) != null ? ref2.also_occupies_upgrades : void 0) != null) {
         checkupgrades = (ref3 = this.data) != null ? ref3.also_occupies_upgrades : void 0;
