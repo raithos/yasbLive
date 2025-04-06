@@ -1917,22 +1917,22 @@ exportObj.CardBrowser = class CardBrowser {
   }
 
   getPoints(a) {
-    if (this.use_xwa_points.checked && (a.pointsbeta != null)) {
-      return a.pointsbeta;
+    if (this.use_xwa_points.checked && (a.pointsxwa != null)) {
+      return a.pointsxwa;
     }
     return a.points;
   }
 
   getLoadout(a) {
-    if (this.use_xwa_points.checked && (a.loadoutbeta != null)) {
-      return a.loadoutbeta;
+    if (this.use_xwa_points.checked && (a.loadoutxwa != null)) {
+      return a.loadoutxwa;
     }
     return a.loadout;
   }
 
   getSlots(a) {
-    if (this.use_xwa_points.checked && (a.slotsbeta != null)) {
-      return a.slotsbeta;
+    if (this.use_xwa_points.checked && (a.slotsxwa != null)) {
+      return a.slotsxwa;
     }
     return a.slots;
   }
@@ -2101,7 +2101,7 @@ exportObj.CardBrowser = class CardBrowser {
     // Renders multiselect to container
     // Selects previously selected card if there is one
     if (this.use_xwa_points.checked != null) {
-      exportObj.builders[7].isBeta = this.use_xwa_points.checked;
+      exportObj.builders[7].isXwa = this.use_xwa_points.checked;
     }
     if (this.card_selector != null) {
       this.card_selector.empty();
