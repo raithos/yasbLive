@@ -117,7 +117,7 @@ exportObj.translations.English = {
     },
     "unreleased": "unreleased",
     "epic": "Epic",
-    "XWA Beta": "XWA Beta",
+    "XWA": "XWA",
     "Quickbuild": "Quick Build",
     "limited": "limited",
     "Unreleased content warning": "This squad uses unreleased content!",

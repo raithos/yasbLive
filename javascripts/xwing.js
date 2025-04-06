@@ -177,7 +177,7 @@ exportObj.SquadBuilderBackend = class SquadBuilderBackend {
     tag_list = [];
     url = `${this.server}/squads/list`;
     return $.get(url, (data, textStatus, jqXHR) => {
-      var hasNotArchivedSquads, isbeta, j, l, len, len1, len2, li, m, ref, ref1, ref2, ref3, ref4, ref5, ref6, squad, tag, tag_array, tag_button, tag_entry, tagclean;
+      var hasNotArchivedSquads, isxwa, j, l, len, len1, len2, li, m, ref, ref1, ref2, ref3, ref4, ref5, ref6, squad, tag, tag_array, tag_button, tag_entry, tagclean;
       hasNotArchivedSquads = false;
       ref = data[builder.faction];
       for (j = 0, len = ref.length; j < len; j++) {
@@ -201,13 +201,13 @@ exportObj.SquadBuilderBackend = class SquadBuilderBackend {
           hasNotArchivedSquads = true;
         }
         if (squad.serialized.search(/v\d+Zb/) !== -1) {
-          isbeta = ` <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>`;
+          isxwa = ` <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>`;
         } else {
-          isbeta = "";
+          isxwa = "";
         }
         li.append($.trim(`<div class="row">
     <div class="col-md-9">
-        <h4>${squad.name}${isbeta}</h4>
+        <h4>${squad.name}${isxwa}</h4>
     </div>
     <div class="col-md-3">
         <h5>${(ref5 = squad.additional_data) != null ? ref5.points : void 0} ${exportObj.translate('ui', "Points")}</h5>
@@ -670,7 +670,7 @@ exportObj.SquadBuilderBackend = class SquadBuilderBackend {
                 <button class="btn btn-modal btn-inverse show-all-squads translated" defaultText="All"></button>
                 <button class="btn btn-modal show-standard-squads"><span class="d-none d-lg-block translated" defaultText="Standard"></span><span class="d-lg-none"><i class="xwing-miniatures-font xwing-miniatures-font-first-player-1"></i></span></button>
                 <button class="btn btn-modal show-extended-squads"><span class="d-none d-lg-block translated" defaultText="Extended"></span><span class="d-lg-none translated" defaultText="Ext"></span></button>
-                <button class="btn btn-modal show-xwabeta-squads"><span class="d-none d-lg-block translated" defaultText="XWA Beta"></span><span class="d-lg-none"><i class="xwing-miniatures-font xwing-miniatures-font-point" title="Energy"></i></span></button>
+                <button class="btn btn-modal show-xwa-squads"><span class="d-none d-lg-block translated" defaultText="XWA"></span><span class="d-lg-none"><i class="xwing-miniatures-font xwing-miniatures-font-point" title="Energy"></i></span></button>
                 <button class="btn btn-modal show-quickbuild-squads"><span class="d-none d-lg-block translated" defaultText="Quickbuild"></span><span class="d-lg-none translated" defaultText="QB"></span></button>
                 <button class="btn btn-modal show-epic-squads"><span class="d-none d-lg-block translated" defaultText="Epic"></span><span class="d-lg-none" ><i class="xwing-miniatures-font xwing-miniatures-font-energy" title="Energy"></i></span></button>
                 <button class="btn btn-modal show-archived-squads"><span class="d-none d-lg-block translated" defaultText="Archived"></span><span class="d-lg-none translated" defaultText="Arc"></span></button>
@@ -886,13 +886,13 @@ exportObj.SquadBuilderBackend = class SquadBuilderBackend {
         });
       }
     });
-    this.show_xwabeta_squads_button = $(this.squad_list_modal.find('.show-xwabeta-squads'));
-    this.show_xwabeta_squads_button.click((e) => {
-      if (this.squad_display_mode !== 'xwabeta') {
-        this.squad_display_mode = 'xwabeta';
+    this.show_xwa_squads_button = $(this.squad_list_modal.find('.show-xwa-squads'));
+    this.show_xwa_squads_button.click((e) => {
+      if (this.squad_display_mode !== 'xwa') {
+        this.squad_display_mode = 'xwa';
         this.squad_list_modal.find('.squad-display-mode .btn').removeClass('btn-inverse');
         this.squad_list_tags.find('.btn').removeClass('btn-inverse');
-        this.show_xwabeta_squads_button.addClass('btn-inverse');
+        this.show_xwa_squads_button.addClass('btn-inverse');
         return this.squad_list_modal.find('.squad-list li').each(function(idx, elem) {
           return $(elem).toggle($(elem).data().squad.serialized.search(/v\d+Zb/) !== -1);
         });
