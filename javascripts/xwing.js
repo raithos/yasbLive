@@ -3302,9 +3302,9 @@ exportObj.SquadBuilder = (function() {
       };
       this.total_points = 0;
       // a squad given in the link is loaded on construction of that builder. It will set all gamemodes of already existing builders accordingly, but we did not exists back than. So we copy over the gamemode
-      this.isStandard = (ref = (ref1 = exportObj.builders[0]) != null ? ref1.isStandard : void 0) != null ? ref : true;
+      this.isStandard = (ref = (ref1 = exportObj.builders[0]) != null ? ref1.isStandard : void 0) != null ? ref : false;
       this.isEpic = (ref2 = (ref3 = exportObj.builders[0]) != null ? ref3.isEpic : void 0) != null ? ref2 : false;
-      this.isXwa = (ref4 = (ref5 = exportObj.builders[0]) != null ? ref5.isXwa : void 0) != null ? ref4 : false;
+      this.isXwa = (ref4 = (ref5 = exportObj.builders[0]) != null ? ref5.isXwa : void 0) != null ? ref4 : true;
       this.isQuickbuild = (ref6 = (ref7 = exportObj.builders[0]) != null ? ref7.isQuickbuild : void 0) != null ? ref6 : false;
       this.backend = null;
       this.current_squad = {};
@@ -3404,8 +3404,8 @@ exportObj.SquadBuilder = (function() {
         </div>
         <br class="hide-on-mobile" />
         <select class="game-type-selector">
-            <option value="xwa" class="translated" defaultText="XWA">${this.uitranslation("XWA")}</option>
-            <option value="standard" class="translated" defaultText="Standard" selected="selected">${this.uitranslation("Standard")}</option>
+            <option value="xwa" class="translated" defaultText="XWA" selected="selected">${this.uitranslation("XWA")}</option>
+            <option value="standard" class="translated" defaultText="Standard">${this.uitranslation("Standard")}</option>
             <option value="extended" class="translated" defaultText="Extended">${this.uitranslation("Extended")}</option>
             <option value="epic" class="translated" defaultText="Epic">${this.uitranslation("Epic")}</option>
             <option value="quickbuild" class="translated" defaultText="Quickbuild">${this.uitranslation("Standard")}</option>
@@ -4963,7 +4963,7 @@ exportObj.SquadBuilder = (function() {
         gamemode = "(Standard)";
       }
       if (this.isXwa) {
-        gamemode = "(XWA xwa)";
+        gamemode = "(XWA)";
       }
       if (this.isEpic) {
         gamemode = "(Epic)";
