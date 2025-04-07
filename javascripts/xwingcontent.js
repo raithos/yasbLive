@@ -20522,7 +20522,7 @@ exportObj.basicCardData = function() {
         name: "Targeting Relay (EoD)",
         id: 576,
         standard: true,
-        slot: "Modification",
+        slot: "Tech",
         charge: 2
       },
       {
