@@ -3819,7 +3819,7 @@ exportObj.SquadBuilder = (function() {
       });
       this.desired_points_input = $(this.points_container.find('.desired-points'));
       this.desired_points_input.change((e) => {
-        return this.onPointsUpdated($.noop);
+        return this.container.trigger('xwing:pointsUpdated');
       });
       this.points_remaining_span = $(this.points_container.find('.points-remaining'));
       this.points_destroyed_span = $(this.points_container.find('.points-destroyed'));
@@ -8940,7 +8940,7 @@ Ship = class Ship {
           this.points_destroyed_button_span_mobile.text(this.uitranslation("Undamaged"));
           this.points_destroyed_button_span.html('<i class="fas fa-circle"></i>');
       }
-      return this.builder.onPointsUpdated();
+      return this.builder.container.trigger('xwing:pointsUpdated');
     });
     return this.points_destroyed_button.hide();
   }
@@ -9461,8 +9461,8 @@ Ship = class Ship {
     return stats;
   }
 
-  validate() {
-    var addCommand, equipped_upgrades, func, i, j, l, len, len1, len2, len3, m, max_checks, meets_restrictions, o, pilot_func, pilot_upgrades_check, q, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref3, ref4, ref5, ref6, ref7, ref8, ref9, restrictions, unchanged, upgrade, upgradeslot, valid, y;
+  async validate() {
+    var addCommand, equipped_upgrades, func, i, j, l, len, len1, len2, len3, m, max_checks, meets_restrictions, o, pilot_func, pilot_upgrades_check, q, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref21, ref3, ref4, ref5, ref6, ref7, ref8, ref9, restrictions, unchanged, upgrade, upgradeslot, valid, y;
     // Remove addons that violate their validation functions (if any) one by one until everything checks out
     // Returns true, if nothing has been changed, and false otherwise
     // check if we are an empty selection, which is always valid
@@ -9535,14 +9535,14 @@ Ship = class Ship {
               }
             }
           }
-          restrictions = (ref15 = upgrade != null ? (ref16 = upgrade.data) != null ? ref16.restrictions : void 0 : void 0) != null ? ref15 : void 0;
+          restrictions = ((upgrade != null ? (ref15 = upgrade.data) != null ? ref15.restrictionsxwa : void 0 : void 0) != null) && this.builder.isXwa ? upgrade != null ? (ref16 = upgrade.data) != null ? ref16.restrictionsxwa : void 0 : void 0 : (ref17 = upgrade != null ? (ref18 = upgrade.data) != null ? ref18.restrictions : void 0 : void 0) != null ? ref17 : void 0;
           // always perform this check, even if no special restrictions for this upgrade exists, to check for allowed points
           meets_restrictions = meets_restrictions && this.restriction_check(restrictions, upgrade, upgrade.getPoints(), this.upgrade_points_total);
         }
         // ignore those checks if this is a pilot with upgrades or quickbuild
-        if ((!meets_restrictions || (((upgrade != null ? upgrade.data : void 0) != null) && ((ref17 = upgrade.data, indexOf.call(equipped_upgrades, ref17) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !pilot_upgrades_check && !this.builder.isQuickbuild) {
-          console.log(`Invalid upgrade: ${upgrade != null ? (ref18 = upgrade.data) != null ? ref18.name : void 0 : void 0}, check ${(ref19 = this.pilot) != null ? ref19.upgrades : void 0} on pilot ${(ref20 = this.pilot) != null ? ref20.name : void 0}`);
-          upgrade.setById(null);
+        if ((!meets_restrictions || (((upgrade != null ? upgrade.data : void 0) != null) && ((ref19 = upgrade.data, indexOf.call(equipped_upgrades, ref19) >= 0) || ((upgrade.data.faction != null) && !this.builder.isOurFaction(upgrade.data.faction, this.pilot.faction)) || !this.builder.isItemAvailable(upgrade.data)))) && !pilot_upgrades_check && !this.builder.isQuickbuild) {
+          console.log(`Invalid upgrade: ${upgrade != null ? (ref20 = upgrade.data) != null ? ref20.name : void 0 : void 0} on pilot ${(ref21 = this.pilot) != null ? ref21.name : void 0}`);
+          await upgrade.setById(null);
           valid = false;
           unchanged = false;
           break;
@@ -10184,7 +10184,7 @@ GenericAddon = class GenericAddon {
         this.deoccupyOtherUpgrades();
       }
       // this will remove not allowed upgrades (is also done on pointsUpdated). We do it explicitly so we can tell if the setData was successfull
-      this.lastSetValid = this.ship.validate();
+      await (this.lastSetValid = this.ship.validate());
       return this.ship.builder.container.trigger('xwing:pointsUpdated');
     }
   }
