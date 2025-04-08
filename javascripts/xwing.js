@@ -8043,7 +8043,9 @@ Ship = class Ship {
         if (!upgrade.isOccupied()) { // an earlier set double-slot upgrade may already use this slot
           other_upgrade = ((ref6 = other_upgrades[upgrade.slot]) != null ? ref6 : []).shift();
           if (other_upgrade != null) {
-            upgrade.setById(other_upgrade.data.id);
+            await upgrade.setById(other_upgrade.data.id);
+            // it would be cool if upgrade.setById would return whether it succeeded (as promise), so we could attempt to add all
+            // upgrades, wait for all promises to resolve, and then retry the rejected upgrades. Instead, we wait for each upgrade individually.
             if (!upgrade.lastSetValid) {
               delayed_upgrades[other_upgrade.data.id] = upgrade;
             }

@@ -14459,7 +14459,7 @@ exportObj.basicCardData = function() {
       "Rotate Arc",
       "R-> Focus"]
         },
-        upgrades: ["Chewbacca",
+        upgrades: ["Chewbacca (AaD)",
       "L3-37 (AaD)",
       "Tobias Beckett (AaD)",
       "Lando's Millennium Falcon (AaD)"]
@@ -20818,6 +20818,15 @@ exportObj.basicCardData = function() {
         standard: true,
         unique: true,
         slot: "Title"
+      },
+      {
+        name: "Chewbacca (AaD)",
+        id: 618,
+        standard: true,
+        unique: true,
+        slot: "Crew",
+        charge: 2,
+        recurring: 1
       }
     ],
     conditionsById: [

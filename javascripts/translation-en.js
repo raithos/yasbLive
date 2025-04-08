@@ -4863,6 +4863,10 @@ exportObj.cardLoaders.English = function() {
       display_name: `Hound's Tooth`,
       text: `While you perform an attack, if you are reinforced and the defender is in the %FULLFRONTARC% or %FULLREARARC% matching your reinforce token, you may change 1 of your %FOCUS% results to a %HIT% result. If the defender is stressed, you may change 1 of your %focus% results to a %CRIT% result instead.`
     },
+    "Chewbacca (AaD)": {
+      display_name: `Chewbacca`,
+      text: `During the System Phase, you may spend 2 %CHARGE% to repair 1 faceup damage card.`
+    },
     // Epic upgrades
     "Admiral Ozzel": {
       display_name: `Admiral Ozzel`,
