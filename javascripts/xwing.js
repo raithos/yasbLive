@@ -3316,7 +3316,7 @@ exportObj.SquadBuilder = (function() {
       if (this.faction === "All") {
         this.game_type_selector.val("epic").trigger('change');
       } else {
-        this.game_type_selector.val(((ref9 = exportObj.builders[0]) != null ? ref9 : this).game_type_selector.val());
+        this.game_type_selector.val(((ref9 = exportObj.builders[0]) != null ? ref9 : this).game_type_selector.val()).trigger('change');
       }
       this.setupEventHandlers();
       window.setInterval(this.updatePermaLink, 250);
