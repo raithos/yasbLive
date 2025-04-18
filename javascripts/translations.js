@@ -487,7 +487,7 @@ Quick Build Funktionalität: Patrick Mischke</p>
     "Copy URL": "Link kopieren",
     "Reset Obstacles": "Alle löschen",
     "Enable Ban List (Not Standard)": "Bannliste außerhalb von Standard",
-    "Epic Unofficial": "Von AMG wurden keine Punkte für Epische Karten veröffentlicht. Die Werte hier sind unabhängig und willkürlich gewählt, teilweise unausgewogen und werden nicht aktualisiert. ",
+    "Epic Unofficial": "Epische Punkte werden von XWA verwaltet.",
     damageHeader: function(translator, type) {
       return `Schadenskarte (${translator('types', type)})`;
     }

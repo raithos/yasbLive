@@ -5679,8 +5679,8 @@ exportObj.cardLoaders.English = function() {
       text: `You can dock up to 4 small ships.`
     },
     "Resupply Craft": {
-      display_name: "Docking Clamps",
-      text: `You can dock up to 4 small ships.`
+      display_name: "Resupply Craft",
+      text: `After another friendly ship at range 0-1 performs an action, you may spend 1 %ENERGY%. If you do, it removes 1 orange or red token, or recovers 1 shield.`
     },
     "Overdrive Burners": {
       display_name: "Overdrive Burners",
