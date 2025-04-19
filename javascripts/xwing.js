@@ -3280,6 +3280,7 @@ exportObj.SquadBuilder = (function() {
       this.printable_container = $(args.printable_container);
       this.tab = $(args.tab);
       this.show_points_destroyed = false;
+      this.isCurrentlyLoadingSquad = false;
       // internal state
       this.ships = [];
       this.uniques_in_use = {
@@ -5226,6 +5227,7 @@ exportObj.SquadBuilder = (function() {
           this.addShip();
           return;
         }
+        this.isCurrentlyLoadingSquad = true;
         switch (game_type_abbrev) {
           case 's':
             this.changeGameTypeOnSquadLoad('extended');
@@ -5268,10 +5270,12 @@ exportObj.SquadBuilder = (function() {
             ship[0].fromSerialized(version, ship[1]);
           }
         }
+        this.isCurrentlyLoadingSquad = false;
       }
       this.suppress_automatic_new_ship = false;
       // Finally, the unassigned ship
       this.addShip();
+      this.container.trigger('xwing:pointsUpdated');
       return cb();
     }
 
@@ -9463,6 +9467,10 @@ Ship = class Ship {
 
   async validate() {
     var addCommand, equipped_upgrades, func, i, j, l, len, len1, len2, len3, m, max_checks, meets_restrictions, o, pilot_func, pilot_upgrades_check, q, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref21, ref3, ref4, ref5, ref6, ref7, ref8, ref9, restrictions, unchanged, upgrade, upgradeslot, valid, y;
+    // while we load a squad we defer the validation to after everything is loaded, as there might be a lot of mutual dependencies.
+    if (this.builder.isCurrentlyLoadingSquad) {
+      return true;
+    }
     // Remove addons that violate their validation functions (if any) one by one until everything checks out
     // Returns true, if nothing has been changed, and false otherwise
     // check if we are an empty selection, which is always valid
