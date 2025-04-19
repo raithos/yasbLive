@@ -2074,7 +2074,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Kylo Ren (TIE Whisper)": {
       display_name: `Kylo Ren`,
-      text: `Before an enemy ship in your %BULLSEYEARC% is dealt a facedown damage card, you may spend 1 %FORCE%. If you do, that damage card is dealt face up instead. `
+      text: `Before an enemy ship in your %BULLSEYEARC% is dealt a facedown damage card, you may spend 1 %FORCE%. If you do, that damage card is dealt faceup instead. `
     },
     '"Wrath"': {
       text: `After you perform a %BULLSEYEARC% attack, if you have 1 or more non-lock red or orange tokens, you may perform a bonus attack against a different target. `
@@ -2770,7 +2770,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Kylo Ren (EoD)": {
       display_name: `Kylo Ren (EoD)`,
-      text: `Before an enemy ship in your %BULLSEYEARC% is dealt a facedown damage card, you may spend 1 %FORCE%. If you do, that damage card is dealt face up instead.`
+      text: `Before an enemy ship in your %BULLSEYEARC% is dealt a facedown damage card, you may spend 1 %FORCE%. If you do, that damage card is dealt faceup instead.`
     },
     '"Scorch" (EoD)': {
       display_name: `“Scorch” (EoD)`,
