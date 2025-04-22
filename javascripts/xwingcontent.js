@@ -13743,7 +13743,7 @@ exportObj.basicCardData = function() {
       "Fanatical (Epic)",
       "Inferno Squad (Epic)",
       "Twin Missile Launcher (Epic)",
-      "Corvus"]
+      "Corvus (Epic)"]
       },
       {
         name: "Gideon Hask (Raider)",
@@ -17665,7 +17665,13 @@ exportObj.basicCardData = function() {
         unique: true,
         ship: "Raider-class Corvette",
         faction: "Galactic Empire",
-        points: 3
+        points: 3,
+        modifier_func: function(stats) {
+          if (indexOf.call(stats.actions,
+      'Calculate') < 0) {
+            return stats.actions.push('Calculate');
+          }
+        }
       },
       {
         name: "Impetuous",
