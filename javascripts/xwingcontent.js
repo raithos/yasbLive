@@ -20408,7 +20408,9 @@ exportObj.basicCardData = function() {
         id: 559,
         standard: true,
         unique: true,
-        slot: "Crew"
+        slot: "Crew",
+        charge: 2,
+        recurring: true
       },
       {
         name: "Hosnian Lament (Epic)",

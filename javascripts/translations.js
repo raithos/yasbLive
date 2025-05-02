@@ -2774,7 +2774,7 @@ exportObj.cardLoaders.Deutsch = function() {
     },
     "Lieutenant Lorrir": {
       display_name: "Lieutenant Lorrir",
-      text: "Solange du eine Fassrolle fliegst, <strong>musst</strong> du die [%TURNLEFT% oder %TURNRIGHT%]-Schablone statt der [%STRAIGHT%]-Schablone verwenden."
+      text: "Solange du eine Fassrolle fliegst, <strong>musst</strong> du die [%BANKLEFT% oder %BANKRIGHT%]-Schablone statt der [%STRAIGHT%]-Schablone verwenden."
     },
     "Iden Versio (BoY)": {
       display_name: "Iden Versio",
