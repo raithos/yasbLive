@@ -6026,6 +6026,7 @@ exportObj.basicCardData = function() {
       "Missile",
       "Tech",
       "Tech",
+      "Modification",
       "Modification"]
       },
       {
