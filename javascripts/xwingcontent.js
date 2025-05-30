@@ -4213,7 +4213,6 @@ exportObj.basicCardData = function() {
       "Modification"],
         slotsxwa: ["Sensor",
       "Cannon",
-      "Cannon",
       "Crew",
       "Crew",
       "Modification"]
