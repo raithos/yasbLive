@@ -4715,7 +4715,7 @@ exportObj.SquadBuilder = (function() {
         versioninfo = "09/06/2024";
         rules = "AMG";
         if (this.isXwa) {
-          versioninfo = "R1";
+          versioninfo = "R2";
           rules = "XWA";
         }
         // Version number
@@ -7627,7 +7627,7 @@ exportObj.SquadBuilder = (function() {
       versioninfo = "09/06/2024";
       rules = "AMG";
       if (this.isXwa) {
-        versioninfo = "R1";
+        versioninfo = "R2";
         rules = "XWA";
       }
       xws = {

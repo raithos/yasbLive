@@ -193,7 +193,7 @@ exportObj.translations.English = {
 </p>`,
     "Intro Card YASB": `<h2>YASB for X-Wing Miniatures</h2>
 <p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures. For more information about the game or game resources, visit <a href="https://xwhub.com/">XW Hub</a>.</p>
-<p>XWA Version: R1</p>
+<p>XWA Version: R2</p>
 <p>AMG Version: 09/06/2024</p>
 <h5>Credits</h5>
 <p>Built upon the amazing original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
@@ -4861,7 +4861,7 @@ exportObj.cardLoaders.English = function() {
     },
     "Hound's Tooth (AaD)": {
       display_name: `Hound's Tooth`,
-      text: `While you perform an attack, if you are reinforced and the defender is in the %FULLFRONTARC% or %FULLREARARC% matching your reinforce token, you may change 1 of your %FOCUS% results to a %HIT% result. If the defender is stressed, you may change 1 of your %focus% results to a %CRIT% result instead.`
+      text: `While you perform an attack, if you are reinforced and the defender is in the %FULLFRONTARC% or %FULLREARARC% matching your reinforce token, you may change 1 of your %FOCUS% results to a %HIT% result. If the defender is stressed, you may change 1 of your %FOCUS% results to a %CRIT% result instead.`
     },
     "Chewbacca (AaD)": {
       display_name: `Chewbacca`,
