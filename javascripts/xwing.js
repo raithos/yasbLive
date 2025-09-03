@@ -2223,7 +2223,7 @@ exportObj.CardBrowser = class CardBrowser {
       conditions.forEach((condition) => {
         var condition_container;
         condition_container = $(document.createElement('div'));
-        condition_container.addClass('conditions-container d-flex flex-wrap');
+        condition_container.addClass('conditions-container d-flex flex-wrap col-md-9');
         condition_container.append(conditionToHTML(condition));
         return this.card_viewer_conditions_container.append(condition_container);
       });
@@ -4355,7 +4355,7 @@ exportObj.SquadBuilder = (function() {
       });
       // conditions
       this.condition_container = $(document.createElement('div'));
-      this.condition_container.addClass('conditions-container d-flex flex-wrap');
+      this.condition_container.addClass('conditions-container d-flex flex-wrap col-md-9');
       this.container.append(this.condition_container);
       this.mobile_tooltip_modal = $(document.createElement('DIV'));
       this.mobile_tooltip_modal.addClass('modal fade choose-obstacles-modal d-print-none');
@@ -4758,7 +4758,7 @@ exportObj.SquadBuilder = (function() {
     </div>
 </div>`));
           text = JSON.stringify(this.toXWS());
-          console.log(`${text}`);
+          // console.log "#{text}"
           this.printable_container.find('.xws-container .qrcode').qrcode({
             render: 'div',
             ec: 'M',
@@ -6151,7 +6151,7 @@ exportObj.SquadBuilder = (function() {
     }
 
     showTooltip(type, data, additional_opts, container = this.info_container, force_update = false) {
-      var addon_count, chargeHTML, chassis_title, cls, count, effective_stats, faction, first, forcerecurring, ini, inis, item, j, l, len, len1, len2, len3, loadout_range_text, m, maneuvers_override, matching_pilots, missingStuffInfoText, name, o, pilot, pilot_count, point_info, point_range_text, points, possible_costs, possible_inis, possible_loadout, recurringicon, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref21, ref22, ref23, ref24, ref25, ref26, ref27, ref28, ref29, ref3, ref30, ref31, ref32, ref33, ref34, ref35, ref36, ref37, ref38, ref39, ref4, ref40, ref41, ref42, ref43, ref44, ref45, ref46, ref47, ref48, ref49, ref5, ref50, ref51, ref52, ref53, ref54, ref55, ref56, ref57, ref58, ref59, ref6, ref60, ref61, ref62, ref63, ref64, ref65, ref66, ref67, ref68, ref69, ref7, ref70, ref71, ref72, ref73, ref74, ref75, ref76, ref77, ref78, ref79, ref8, ref80, ref81, ref82, ref83, ref84, ref85, ref86, ref87, ref88, ref89, ref9, ref90, ref91, ref92, ref93, ref94, ref95, ref96, ref97, restriction_info, ship, ship_count, slot, slot_types, source, sources, state, uniquedots, upgrade, well;
+      var addon_count, chargeHTML, chassis_title, cls, count, effective_stats, faction, first, forcerecurring, ini, inis, item, j, l, len, len1, len2, len3, loadout_range_text, m, maneuvers_override, matching_pilots, missingStuffInfoText, name, o, pilot, pilot_count, point_info, point_range_text, points, possible_costs, possible_inis, possible_loadout, recurringicon, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref21, ref22, ref23, ref24, ref25, ref26, ref27, ref28, ref29, ref3, ref30, ref31, ref32, ref33, ref34, ref35, ref36, ref37, ref38, ref39, ref4, ref40, ref41, ref42, ref43, ref44, ref45, ref46, ref47, ref48, ref49, ref5, ref50, ref51, ref52, ref53, ref54, ref55, ref56, ref57, ref58, ref59, ref6, ref60, ref61, ref62, ref63, ref64, ref65, ref66, ref67, ref68, ref69, ref7, ref70, ref71, ref72, ref73, ref74, ref75, ref76, ref77, ref78, ref79, ref8, ref80, ref81, ref82, ref83, ref84, ref85, ref86, ref87, ref88, ref89, ref9, ref90, ref91, ref92, ref93, ref94, ref95, ref96, ref97, ref98, restriction_info, ship, ship_count, slot, slot_types, source, sources, state, uniquedots, upgrade, well;
       if (data !== this.tooltip_currently_displaying || force_update) {
         switch (type) {
           case 'Ship':
@@ -6636,7 +6636,7 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-engagement td.info-data').text(pilot.skill);
             container.find('tr.info-engagement').show();
             container.find('tr.info-attack td.info-data').text((ref66 = (ref67 = pilot.ship_override) != null ? ref67.attack : void 0) != null ? ref66 : ship.attack);
-            container.find('tr.info-attack').toggle(((ref68 = (ref69 = pilot.data.ship_override) != null ? ref69.attack : void 0) != null ? ref68 : ship.attack) > 0);
+            container.find('tr.info-attack').toggle(((ref68 = (ref69 = pilot.data) != null ? (ref70 = ref69.ship_override) != null ? ref70.attack : void 0 : void 0) != null ? ref68 : ship.attack) > 0);
             container.find('tr.info-attack-fullfront td.info-data').text(ship.attackf);
             container.find('tr.info-attack-fullfront').toggle(ship.attackf != null);
             container.find('tr.info-attack-bullseye td.info-data').text(ship.attackbull);
@@ -6651,16 +6651,16 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-attack-turret').toggle(ship.attackt != null);
             container.find('tr.info-attack-doubleturret td.info-data').text(ship.attackdt);
             container.find('tr.info-attack-doubleturret').toggle(ship.attackdt != null);
-            container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass((ref70 = ship.attack_icon) != null ? ref70 : 'xwing-miniatures-font-frontarc');
-            container.find('tr.info-energy td.info-data').text((ref71 = (ref72 = pilot.ship_override) != null ? ref72.energy : void 0) != null ? ref71 : ship.energy);
-            container.find('tr.info-energy').toggle((((ref73 = pilot.ship_override) != null ? ref73.energy : void 0) != null) || (ship.energy != null));
+            container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass((ref71 = ship.attack_icon) != null ? ref71 : 'xwing-miniatures-font-frontarc');
+            container.find('tr.info-energy td.info-data').text((ref72 = (ref73 = pilot.ship_override) != null ? ref73.energy : void 0) != null ? ref72 : ship.energy);
+            container.find('tr.info-energy').toggle((((ref74 = pilot.ship_override) != null ? ref74.energy : void 0) != null) || (ship.energy != null));
             container.find('tr.info-range').hide();
             container.find('td.info-rangebonus').hide();
-            container.find('tr.info-agility td.info-data').text((ref74 = (ref75 = pilot.ship_override) != null ? ref75.agility : void 0) != null ? ref74 : ship.agility);
+            container.find('tr.info-agility td.info-data').text((ref75 = (ref76 = pilot.ship_override) != null ? ref76.agility : void 0) != null ? ref75 : ship.agility);
             container.find('tr.info-agility').show();
-            container.find('tr.info-hull td.info-data').text((ref76 = (ref77 = pilot.ship_override) != null ? ref77.hull : void 0) != null ? ref76 : ship.hull);
+            container.find('tr.info-hull td.info-data').text((ref77 = (ref78 = pilot.ship_override) != null ? ref78.hull : void 0) != null ? ref77 : ship.hull);
             container.find('tr.info-hull').show();
-            container.find('tr.info-shields td.info-data').text((ref78 = (ref79 = pilot.ship_override) != null ? ref79.shields : void 0) != null ? ref78 : ship.shields);
+            container.find('tr.info-shields td.info-data').text((ref79 = (ref80 = pilot.ship_override) != null ? ref80.shields : void 0) != null ? ref79 : ship.shields);
             container.find('tr.info-shields').show();
             if (((effective_stats != null ? effective_stats.force : void 0) != null) || (data.force != null)) {
               recurringicon = '';
@@ -6673,7 +6673,7 @@ exportObj.SquadBuilder = (function() {
                 recurringicon += '<sup><i class="fas fa-caret-up"></i></sup>';
                 ++count;
               }
-              container.find('tr.info-force td.info-data').html(((ref80 = (ref81 = pilot.ship_override) != null ? ref81.force : void 0) != null ? ref80 : pilot.force) + recurringicon);
+              container.find('tr.info-force td.info-data').html(((ref81 = (ref82 = pilot.ship_override) != null ? ref82.force : void 0) != null ? ref81 : pilot.force) + recurringicon);
               container.find('tr.info-force').show();
             } else {
               container.find('tr.info-force').hide();
@@ -6701,15 +6701,15 @@ exportObj.SquadBuilder = (function() {
             } else {
               container.find('tr.info-charge').hide();
             }
-            container.find('tr.info-actions td.info-data').html(this.formatActions((ref82 = (ref83 = pilot.ship_override) != null ? ref83.actions : void 0) != null ? ref82 : exportObj.ships[data.ship].actions, ", ", (ref84 = pilot.keyword) != null ? ref84 : []));
+            container.find('tr.info-actions td.info-data').html(this.formatActions((ref83 = (ref84 = pilot.ship_override) != null ? ref84.actions : void 0) != null ? ref83 : exportObj.ships[data.ship].actions, ", ", (ref85 = pilot.keyword) != null ? ref85 : []));
             container.find('tr.info-actions').show();
             container.find('tr.info-upgrades').show();
             container.find('tr.info-upgrades td.info-data').html(((function() {
-              var len2, m, ref85, ref86, results1;
-              ref86 = (ref85 = data.upgrades) != null ? ref85 : [];
+              var len2, m, ref86, ref87, results1;
+              ref87 = (ref86 = data.upgrades) != null ? ref86 : [];
               results1 = [];
-              for (m = 0, len2 = ref86.length; m < len2; m++) {
-                upgrade = ref86[m];
+              for (m = 0, len2 = ref87.length; m < len2; m++) {
+                upgrade = ref87[m];
                 results1.push(exportObj.upgrades[upgrade].display_name != null ? exportObj.upgrades[upgrade].display_name : upgrade);
               }
               return results1;
@@ -6732,11 +6732,11 @@ exportObj.SquadBuilder = (function() {
               })()).sort().join(', '));
             } else {
               container.find('.info-sources.info-data').text(((function() {
-                var len2, m, ref85, results1;
-                ref85 = data.sources;
+                var len2, m, ref86, results1;
+                ref86 = data.sources;
                 results1 = [];
-                for (m = 0, len2 = ref85.length; m < len2; m++) {
-                  source = ref85[m];
+                for (m = 0, len2 = ref86.length; m < len2; m++) {
+                  source = ref86[m];
                   results1.push(exportObj.translate('sources', source));
                 }
                 return results1;
@@ -6758,8 +6758,8 @@ exportObj.SquadBuilder = (function() {
             } else {
               uniquedots = "";
             }
-            if ((((ref85 = this.collection) != null ? ref85.counts : void 0) != null) && (data.standard == null)) {
-              addon_count = (ref86 = (ref87 = this.collection.counts) != null ? (ref88 = ref87['upgrade']) != null ? ref88[data.name] : void 0 : void 0) != null ? ref86 : 0;
+            if ((((ref86 = this.collection) != null ? ref86.counts : void 0) != null) && (data.standard == null)) {
+              addon_count = (ref87 = (ref88 = this.collection.counts) != null ? (ref89 = ref88['upgrade']) != null ? ref89[data.name] : void 0 : void 0) != null ? ref87 : 0;
               container.find('.info-collection').text(this.uitranslation("collectionContentUpgrades", addon_count));
               container.find('.info-collection').show();
             } else {
@@ -6777,14 +6777,14 @@ exportObj.SquadBuilder = (function() {
                 case "Agility":
                   point_info += this.uitranslation("varPointCostsConditionAgility", (function() {
                     var results1 = [];
-                    for (var m = 0, ref89 = points.length - 1; 0 <= ref89 ? m <= ref89 : m >= ref89; 0 <= ref89 ? m++ : m--){ results1.push(m); }
+                    for (var m = 0, ref90 = points.length - 1; 0 <= ref90 ? m <= ref90 : m >= ref90; 0 <= ref90 ? m++ : m--){ results1.push(m); }
                     return results1;
                   }).apply(this));
                   break;
                 case "Initiative":
                   point_info += this.uitranslation("varPointCostsConditionIni", (function() {
                     var results1 = [];
-                    for (var m = 0, ref90 = points.length - 1; 0 <= ref90 ? m <= ref90 : m >= ref90; 0 <= ref90 ? m++ : m--){ results1.push(m); }
+                    for (var m = 0, ref91 = points.length - 1; 0 <= ref91 ? m <= ref91 : m >= ref91; 0 <= ref91 ? m++ : m--){ results1.push(m); }
                     return results1;
                   }).apply(this));
                   break;
@@ -6806,7 +6806,7 @@ exportObj.SquadBuilder = (function() {
             } else {
               container.find('p.info-restrictions').hide();
             }
-            container.find('p.info-text').html((ref91 = data.text) != null ? ref91 : '');
+            container.find('p.info-text').html((ref92 = data.text) != null ? ref92 : '');
             container.find('p.info-text').show();
             container.find('p.info-chassis').hide();
             container.find('tr.info-ship').hide();
@@ -6967,9 +6967,9 @@ exportObj.SquadBuilder = (function() {
               item = data[m];
               missingStuffInfoText += `<li><strong>${(item.display_name != null ? item.display_name : item.name)}</strong> (`;
               first = true;
-              ref92 = item.sources;
-              for (o = 0, len3 = ref92.length; o < len3; o++) {
-                source = ref92[o];
+              ref93 = item.sources;
+              for (o = 0, len3 = ref93.length; o < len3; o++) {
+                source = ref93[o];
                 if (!first) {
                   missingStuffInfoText += ", ";
                 }
@@ -7009,18 +7009,18 @@ exportObj.SquadBuilder = (function() {
           case 'Damage':
             container.find('.info-type').text(exportObj.translate("types", data.type));
             container.find('.info-sources.info-data').text(((function() {
-              var len4, q, ref93, results1;
-              ref93 = data.sources;
+              var len4, q, ref94, results1;
+              ref94 = data.sources;
               results1 = [];
-              for (q = 0, len4 = ref93.length; q < len4; q++) {
-                source = ref93[q];
+              for (q = 0, len4 = ref94.length; q < len4; q++) {
+                source = ref94[q];
                 results1.push(exportObj.translate('sources', source));
               }
               return results1;
             })()).sort().join(', '));
             container.find('.info-sources').show();
-            if (((ref93 = this.collection) != null ? ref93.counts : void 0) != null) {
-              addon_count = (ref94 = (ref95 = this.collection.counts) != null ? (ref96 = ref95['damage']) != null ? ref96[data.name] : void 0 : void 0) != null ? ref94 : 0;
+            if (((ref94 = this.collection) != null ? ref94.counts : void 0) != null) {
+              addon_count = (ref95 = (ref96 = this.collection.counts) != null ? (ref97 = ref96['damage']) != null ? ref97[data.name] : void 0 : void 0) != null ? ref95 : 0;
               container.find('.info-collection').text(this.uitranslation("collectionContentUpgrades", addon_count));
               container.find('.info-collection').show();
             } else {
@@ -7028,7 +7028,7 @@ exportObj.SquadBuilder = (function() {
             }
             container.find('.info-name').html(`${data.display_name ? data.display_name : data.name} (${data.quantity}x)`);
             container.find('p.info-restrictions').hide();
-            container.find('p.info-text').html((ref97 = data.text) != null ? ref97 : '');
+            container.find('p.info-text').html((ref98 = data.text) != null ? ref98 : '');
             container.find('p.info-text').show();
             container.find('p.info-chassis').hide();
             container.find('tr.info-ship').hide();
@@ -8148,8 +8148,8 @@ Ship = class Ship {
         // @linkedShip = null the ghost hera has wingmates and a linked phantom. We can't assume that we are done here...
         this.quickbuildId = id;
         this.builder.current_squad.dirty = true;
-        this.resetPilot();
-        this.resetAddons();
+        await this.resetPilot();
+        await this.resetAddons();
         if ((id != null) && id > -1) {
           quickbuild = exportObj.quickbuildsById[parseInt(id)];
           new_pilot = exportObj.pilots[quickbuild.pilot];
@@ -9531,14 +9531,28 @@ Ship = class Ship {
             ref12 = upgrade.data.also_occupies_upgrades_xwa;
             for (q = 0, len2 = ref12.length; q < len2; q++) {
               upgradeslot = ref12[q];
-              meets_restrictions = meets_restrictions && upgrade.occupiesAnUpgradeSlot(upgradeslot);
+              if (!upgrade.occupiesAnUpgradeSlot(upgradeslot)) {
+                // perhaps the upgrade simply does not occupy the required slots, because the slots
+                // did not (yet) exist when the upgrade was added - so we give it another chance
+                upgrade.deoccupyOtherUpgrades();
+                upgrade.occupyOtherUpgrades();
+                // now we try again and keep the result (if we are not in this if branch, we don't need to change meets_restrictions
+                meets_restrictions = meets_restrictions && upgrade.occupiesAnUpgradeSlot(upgradeslot);
+              }
             }
           } else {
             if ((upgrade != null ? (ref13 = upgrade.data) != null ? ref13.also_occupies_upgrades : void 0 : void 0) != null) {
               ref14 = upgrade.data.also_occupies_upgrades;
               for (y = 0, len3 = ref14.length; y < len3; y++) {
                 upgradeslot = ref14[y];
-                meets_restrictions = meets_restrictions && upgrade.occupiesAnUpgradeSlot(upgradeslot);
+                if (!upgrade.occupiesAnUpgradeSlot(upgradeslot)) {
+                  // perhaps the upgrade simply does not occupy the required slots, because the slots
+                  // did not (yet) exist when the upgrade was added - so we give it another chance
+                  upgrade.deoccupyOtherUpgrades();
+                  upgrade.occupyOtherUpgrades();
+                  // now we try again and keep the result (if we are not in this if branch, we don't need to change meets_restrictions)
+                  meets_restrictions = meets_restrictions && upgrade.occupiesAnUpgradeSlot(upgradeslot);
+                }
               }
             }
           }
@@ -10100,7 +10114,7 @@ GenericAddon = class GenericAddon {
     this.selector.select2(args);
     this.upgrade_query_modal.click((e) => {
       if (this.data) {
-        console.log(`${this.data.name}`);
+        // console.log "#{@data.name}"
         this.ship.builder.showTooltip('Addon', this.data, (this.data != null ? {
           addon_type: this.type
         } : void 0), this.ship.builder.mobile_tooltip_modal, true);

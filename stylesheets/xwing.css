@@ -111,6 +111,9 @@ strong em, em strong {
   .dropdown-menu-right {
     margin-right: 2px;
   }
+  .condition {
+    width: 20em;
+  }
 }
 .flavor_text {
   display: none;
