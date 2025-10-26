@@ -8922,8 +8922,7 @@ exportObj.basicCardData = function() {
       "Gunner",
       "Tech",
       "Tech",
-      "Modification",
-      "Configuration"]
+      "Modification"]
       },
       {
         name: '"Breach"',
