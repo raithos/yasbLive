@@ -1753,7 +1753,7 @@ class exportObj.CardBrowser
             @card_viewer_conditions_container.text ''
             conditions.forEach (condition) =>
                 condition_container = $ document.createElement('div')
-                condition_container.addClass 'conditions-container d-flex flex-wrap'
+                condition_container.addClass 'conditions-container d-flex flex-wrap col-md-9'
                 condition_container.append conditionToHTML(condition)
                 @card_viewer_conditions_container.append condition_container
             @card_viewer_conditions_container.show()
@@ -3507,7 +3507,7 @@ class exportObj.SquadBuilder
 
         # conditions
         @condition_container = $ document.createElement('div')
-        @condition_container.addClass 'conditions-container d-flex flex-wrap'
+        @condition_container.addClass 'conditions-container d-flex flex-wrap col-md-9'
         @container.append @condition_container
 
         @mobile_tooltip_modal = $ document.createElement 'DIV'
@@ -3827,7 +3827,7 @@ class exportObj.SquadBuilder
             versioninfo = "09/06/2024"
             rules = "AMG"
             if @isXwa
-                versioninfo = "R1"
+                versioninfo = "R2"
                 rules = "XWA"
 
             # Version number
@@ -3879,7 +3879,7 @@ class exportObj.SquadBuilder
                 </div>
                 """
                 text = JSON.stringify(@toXWS())
-                console.log "#{text}"
+                # console.log "#{text}"
                 @printable_container.find('.xws-container .qrcode').qrcode
                     render: 'div'
                     ec: 'M'
@@ -4816,7 +4816,7 @@ class exportObj.SquadBuilder
         if data != @tooltip_currently_displaying or force_update
             switch type
                 when 'Ship'
-            # we get all pilots for the ship, to display stuff like available slots which are treated as pilot properties, not ship properties (which makes sense, as they depend on the pilot, e.g. talent or force slots)
+                    # we get all pilots for the ship, to display stuff like available slots which are treated as pilot properties, not ship properties (which makes sense, as they depend on the pilot, e.g. talent or force slots)
                     possible_inis = []
                     possible_costs = []
                     possible_loadout = []
@@ -5222,7 +5222,7 @@ class exportObj.SquadBuilder
                     container.find('tr.info-engagement').show()
 
                     container.find('tr.info-attack td.info-data').text(pilot.ship_override?.attack ? ship.attack)
-                    container.find('tr.info-attack').toggle((pilot.data.ship_override?.attack ? ship.attack) > 0)
+                    container.find('tr.info-attack').toggle((pilot.data?.ship_override?.attack ? ship.attack) > 0)
 
                     container.find('tr.info-attack-fullfront td.info-data').text(ship.attackf)
                     container.find('tr.info-attack-fullfront').toggle(ship.attackf?)
@@ -5931,7 +5931,7 @@ class exportObj.SquadBuilder
         versioninfo = "09/06/2024"
         rules = "AMG"
         if @isXwa
-            versioninfo = "R1"
+            versioninfo = "R2"
             rules = "XWA"
 
         xws =
@@ -6273,8 +6273,8 @@ class Ship
                     # @linkedShip = null the ghost hera has wingmates and a linked phantom. We can't assume that we are done here...
                 @quickbuildId = id
                 @builder.current_squad.dirty = true
-                @resetPilot()
-                @resetAddons()
+                await @resetPilot()
+                await @resetAddons()
                 if id? and id > -1
                     quickbuild = exportObj.quickbuildsById[parseInt id]
                     new_pilot = exportObj.pilots[quickbuild.pilot]
@@ -7301,11 +7301,23 @@ class Ship
                     # moved occupied slots off of validation func
                     if @builder.isXwa and upgrade?.data?.also_occupies_upgrades_xwa?
                         for upgradeslot in upgrade.data.also_occupies_upgrades_xwa
-                            meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
+                            if not upgrade.occupiesAnUpgradeSlot(upgradeslot)
+                                # perhaps the upgrade simply does not occupy the required slots, because the slots
+                                # did not (yet) exist when the upgrade was added - so we give it another chance
+                                upgrade.deoccupyOtherUpgrades()
+                                upgrade.occupyOtherUpgrades()
+                                # now we try again and keep the result (if we are not in this if branch, we don't need to change meets_restrictions
+                                meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
                     else
                         if upgrade?.data?.also_occupies_upgrades?
                             for upgradeslot in upgrade.data.also_occupies_upgrades
-                                meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
+                                if not upgrade.occupiesAnUpgradeSlot(upgradeslot)
+                                    # perhaps the upgrade simply does not occupy the required slots, because the slots
+                                    # did not (yet) exist when the upgrade was added - so we give it another chance
+                                    upgrade.deoccupyOtherUpgrades()
+                                    upgrade.occupyOtherUpgrades()
+                                    # now we try again and keep the result (if we are not in this if branch, we don't need to change meets_restrictions)
+                                    meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
 
                     restrictions = if upgrade?.data?.restrictionsxwa? and @builder.isXwa then upgrade?.data?.restrictionsxwa else upgrade?.data?.restrictions ? undefined
                     # always perform this check, even if no special restrictions for this upgrade exists, to check for allowed points
@@ -7629,7 +7641,7 @@ class GenericAddon
         
         @upgrade_query_modal.click (e) =>
             if @data
-                console.log "#{@data.name}"
+                # console.log "#{@data.name}"
                 @ship.builder.showTooltip 'Addon', @data, ({addon_type: @type} if @data?) , @ship.builder.mobile_tooltip_modal, true
                 @ship.builder.mobile_tooltip_modal.modal 'show'
 
