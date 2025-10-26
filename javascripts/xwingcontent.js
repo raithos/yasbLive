@@ -15197,7 +15197,7 @@ exportObj.basicCardData = function() {
         range: `2-3`,
         rangebonus: true,
         charge: 1,
-        points: 2,
+        points: 3,
         restrictions: [["Action",
       "Calculate"],
       ["Slot",
