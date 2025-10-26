@@ -4020,7 +4020,7 @@ exportObj.basicCardData = function() {
         points: 11,
         loadout: 13,
         slots: ["Crew",
-      "Modification",
+      "Crew",
       "Modification"]
       },
       {
@@ -4756,7 +4756,7 @@ exportObj.basicCardData = function() {
         force: 2,
         keyword: ["Dark Side"],
         points: 16,
-        loadout: 24,
+        loadout: 10,
         applies_condition: `I'll Show You the Dark Side`.canonicalize(),
         slots: ["Force",
       "Tech",
