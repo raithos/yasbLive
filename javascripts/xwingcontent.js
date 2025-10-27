@@ -20661,7 +20661,7 @@ exportObj.restrictedShips = [
   },
   {
     name: '104th Battalion Pilot',
-    limit: 3
+    limit: 2
   },
   {
     name: 'Epsilon Squadron Cadet',
