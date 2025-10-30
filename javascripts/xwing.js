@@ -5715,17 +5715,26 @@ exportObj.SquadBuilder = (function() {
     }
 
     countUpgrades(canonical_name) {
-      var count, j, l, len, len1, ref, ref1, ref2, ref3, ship, upgrade;
+      var count, j, l, len, len1, len2, m, ref, ref1, ref2, ref3, ref4, ship, upgrade, upgradeData;
       // returns number of upgrades with given canonical name equipped
       count = 0;
       ref = this.ships;
       for (j = 0, len = ref.length; j < len; j++) {
         ship = ref[j];
-        if (((ref1 = ship.pilot) != null ? ref1.upgrades : void 0) == null) {
-          ref2 = ship.upgrades;
+        if (((ref1 = ship.pilot) != null ? ref1.upgrades : void 0) != null) {
+          ref2 = ship.pilot.upgrades;
           for (l = 0, len1 = ref2.length; l < len1; l++) {
             upgrade = ref2[l];
-            if ((upgrade != null ? (ref3 = upgrade.data) != null ? ref3.canonical_name : void 0 : void 0) === canonical_name) {
+            upgradeData = exportObj.upgrades[upgrade];
+            if ((upgradeData != null ? upgradeData.canonical_name : void 0) === canonical_name) {
+              count++;
+            }
+          }
+        } else {
+          ref3 = ship.upgrades;
+          for (m = 0, len2 = ref3.length; m < len2; m++) {
+            upgrade = ref3[m];
+            if ((upgrade != null ? (ref4 = upgrade.data) != null ? ref4.canonical_name : void 0 : void 0) === canonical_name) {
               count++;
             }
           }
@@ -5765,7 +5774,7 @@ exportObj.SquadBuilder = (function() {
     }
 
     isCardOverLimit(card, isPilot) {
-      var cardLimit, count;
+      var cardLimit, count, j, len, ref, upgrade, upgradeCount, upgradeData, upgradeLimit;
       cardLimit = 0;
       if (card.unique != null) {
         cardLimit = 1;
@@ -5776,6 +5785,30 @@ exportObj.SquadBuilder = (function() {
       }
       if (isPilot) {
         count = this.countPilots(card.canonical_name);
+        
+        // need to also do upgrade checks...
+        if (card.upgrades != null) {
+          ref = card.upgrades;
+          for (j = 0, len = ref.length; j < len; j++) {
+            upgrade = ref[j];
+            upgradeData = exportObj.upgrades[upgrade];
+            upgradeLimit = 0;
+            upgradeCount = 0;
+            if (upgradeData.unique != null) {
+              upgradeLimit = 1;
+            } else if (upgradeData.restricted != null) {
+              upgradeLimit = upgradeData.restricted;
+            } else if (upgradeData.max_per_squad != null) {
+              upgradeLimit = upgradeData.max_per_squad;
+            }
+            if (upgradeLimit > 0) {
+              upgradeCount = this.countUpgrades(upgradeData.canonical_name);
+              if (upgradeCount >= upgradeLimit) {
+                return true;
+              }
+            }
+          }
+        }
       } else {
         count = this.countUpgrades(card.canonical_name);
       }
