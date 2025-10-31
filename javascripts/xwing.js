@@ -5794,9 +5794,7 @@ exportObj.SquadBuilder = (function() {
             upgradeData = exportObj.upgrades[upgrade];
             upgradeLimit = 0;
             upgradeCount = 0;
-            if (upgradeData.unique != null) {
-              upgradeLimit = 1;
-            } else if (upgradeData.restricted != null) {
+            if (upgradeData.restricted != null) {
               upgradeLimit = upgradeData.restricted;
             } else if (upgradeData.max_per_squad != null) {
               upgradeLimit = upgradeData.max_per_squad;
@@ -6464,7 +6462,6 @@ exportObj.SquadBuilder = (function() {
               }
               uniquedots = uniquedots.concat("&nbsp;");
             } else if (data.restricted != null) {
-              console.log("Found restricted tag");
               count = 0;
               while (count < data.restricted) {
                 uniquedots = uniquedots.concat("&#9672;");

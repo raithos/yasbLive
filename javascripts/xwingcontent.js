@@ -11101,8 +11101,7 @@ exportObj.basicCardData = function() {
         points: 7,
         loadout: 7,
         keyword: ["Clone"],
-        slots: ["Talent",
-      "Missile",
+        slots: ["Missile",
       "Modification",
       "Modification"]
       },
