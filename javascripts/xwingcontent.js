@@ -2648,7 +2648,6 @@ exportObj.basicCardData = function() {
         loadout: 8,
         keyword: ["Mandalorian"],
         slots: ["Talent",
-      "Talent",
       "Torpedo",
       "Modification",
       "Modification"]
@@ -9924,8 +9923,7 @@ exportObj.basicCardData = function() {
         points: 7,
         loadout: 5,
         keyword: ["Clone"],
-        slots: ["Talent",
-      "Sensor",
+        slots: ["Sensor",
       "Modification",
       "VersatileShip"]
       },
