@@ -6283,6 +6283,7 @@ exportObj.basicCardData = function() {
         points: 10,
         loadout: 12,
         slots: ["Talent",
+      "Talent",
       "Torpedo",
       "Sensor",
       "Astromech",
@@ -8293,6 +8294,7 @@ exportObj.basicCardData = function() {
         points: 17,
         loadout: 11,
         slots: ["Talent",
+      "Talent",
       "Sensor",
       "Cannon",
       "Missile",
@@ -8510,6 +8512,7 @@ exportObj.basicCardData = function() {
         points: 10,
         loadout: 8,
         slots: ["Talent",
+      "Talent",
       "Modification",
       "Configuration"]
       },
