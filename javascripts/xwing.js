@@ -1347,7 +1347,7 @@ exportObj.CardBrowser = class CardBrowser {
                                 <span class="translated" defaultText="from"></span> <input type="number" class="minimum-point-cost advanced-search-number-input" value="0" /> 
                             </label>
                             <label class = "advanced-search-label set-maximum-points">
-                                <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="20" /> 
+                                <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="50" /> 
                             </label>
                         </div>
                         <div class = "advanced-search-loadout-selection-container">
@@ -2452,7 +2452,7 @@ exportObj.CardBrowser = class CardBrowser {
       }
     }
     // check if point costs matches
-    if (this.minimum_point_costs.value > 0 || this.maximum_point_costs.value < 20) {
+    if (this.minimum_point_costs.value > 0 || this.maximum_point_costs.value < 50) {
       if (!((this.getPoints(card.data) >= this.minimum_point_costs.value && this.getPoints(card.data) <= this.maximum_point_costs.value) || (card.data.variablepoints != null))) {
         return false;
       }
@@ -5209,7 +5209,7 @@ exportObj.SquadBuilder = (function() {
         // v9: X-Wing 2.5 points rework. Due to the massive change in points structure, previous versions will no longer be supported
         ship_splitter = version > 7 ? 'Y' : ';';
         // parse out game type
-        [game_type_abbrev, desired_points, serialized_ships] = version > 7 ? ([g, p, s] = matches[2].split('Z'), [g, parseInt(p), s]) : ([game_type_and_point_abbrev, s] = matches[2].split('!'), parseInt(game_type_and_point_abbrev.split('=')[1]) ? p = parseInt(game_type_and_point_abbrev.split('=')[1]) : p = 20, g = game_type_and_point_abbrev.split('=')[0], [g, p, s]);
+        [game_type_abbrev, desired_points, serialized_ships] = version > 7 ? ([g, p, s] = matches[2].split('Z'), [g, parseInt(p), s]) : ([game_type_and_point_abbrev, s] = matches[2].split('!'), parseInt(game_type_and_point_abbrev.split('=')[1]) ? p = parseInt(game_type_and_point_abbrev.split('=')[1]) : p = 50, g = game_type_and_point_abbrev.split('=')[0], [g, p, s]);
         if (version < 8) { // old version are no longer supported
           this.old_version_container.toggleClass('d-none', false);
           this.suppress_automatic_new_ship = false;
