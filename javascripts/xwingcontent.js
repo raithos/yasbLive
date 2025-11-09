@@ -20749,6 +20749,10 @@ exportObj.restrictedUpgrades = [
   {
     name: 'Veteran Turret Gunner',
     limit: 3
+  },
+  {
+    name: 'Battle Meditation',
+    limit: 3
   }
 ];
 
