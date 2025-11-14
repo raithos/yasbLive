@@ -20699,11 +20699,11 @@ exportObj.restrictedUpgrades = [
     limit: 2
   },
   {
-    name: 'Homing Missile',
+    name: 'Homing Missiles',
     limit: 2
   },
   {
-    name: 'Homing Torpedo',
+    name: 'Homing Torpedoes',
     limit: 2
   },
   {

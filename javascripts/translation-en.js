@@ -2405,7 +2405,7 @@ exportObj.cardLoaders.English = function() {
     },
     '"Odd Ball" (SoC)': {
       display_name: `“Odd Ball” (SoC)`,
-      text: `After you fully execute a red maneuver or perform a red action, you camy choose a friendly ship at range 0-3 and an enemy at range 0-1. The chosen frendly ship gains a lock on the enemy ship.`
+      text: `After you fully execute a red maneuver or perform a red action, you may choose a friendly ship at range 0-3 and an enemy at range 0-1. The chosen frendly ship gains a lock on the enemy ship.`
     },
     '"Wolffe" (SoC)': {
       display_name: `“Wolffe” (SoC)`,
