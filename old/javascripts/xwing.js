@@ -1347,7 +1347,7 @@ exportObj.CardBrowser = class CardBrowser {
                                 <span class="translated" defaultText="from"></span> <input type="number" class="minimum-point-cost advanced-search-number-input" value="0" /> 
                             </label>
                             <label class = "advanced-search-label set-maximum-points">
-                                <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="20" /> 
+                                <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="50" /> 
                             </label>
                         </div>
                         <div class = "advanced-search-loadout-selection-container">
@@ -2452,7 +2452,7 @@ exportObj.CardBrowser = class CardBrowser {
       }
     }
     // check if point costs matches
-    if (this.minimum_point_costs.value > 0 || this.maximum_point_costs.value < 20) {
+    if (this.minimum_point_costs.value > 0 || this.maximum_point_costs.value < 50) {
       if (!((this.getPoints(card.data) >= this.minimum_point_costs.value && this.getPoints(card.data) <= this.maximum_point_costs.value) || (card.data.variablepoints != null))) {
         return false;
       }
@@ -3296,7 +3296,7 @@ exportObj.SquadBuilder = (function() {
       this.tooltip_currently_displaying = null;
       this.randomizer_options = {
         sources: null,
-        points: 20,
+        points: 50,
         ship_limit: 0,
         collection_only: true,
         fill_zero_pts: false
@@ -3305,7 +3305,7 @@ exportObj.SquadBuilder = (function() {
       // a squad given in the link is loaded on construction of that builder. It will set all gamemodes of already existing builders accordingly, but we did not exists back than. So we copy over the gamemode
       this.isStandard = (ref = (ref1 = exportObj.builders[0]) != null ? ref1.isStandard : void 0) != null ? ref : false;
       this.isEpic = (ref2 = (ref3 = exportObj.builders[0]) != null ? ref3.isEpic : void 0) != null ? ref2 : false;
-      this.isXwa = (ref4 = (ref5 = exportObj.builders[0]) != null ? ref5.isXwa : void 0) != null ? ref4 : true;
+      this.isBeta = (ref4 = (ref5 = exportObj.builders[0]) != null ? ref5.isBeta : void 0) != null ? ref4 : true;
       this.isQuickbuild = (ref6 = (ref7 = exportObj.builders[0]) != null ? ref7.isQuickbuild : void 0) != null ? ref6 : false;
       this.backend = null;
       this.current_squad = {};
@@ -3388,7 +3388,7 @@ exportObj.SquadBuilder = (function() {
 
     setupUI() {
       var DEFAULT_RANDOMIZER_POINTS, DEFAULT_RANDOMIZER_SHIP_LIMIT, DEFAULT_RANDOMIZER_TIMEOUT_SEC, content_container, expansion, j, len, obstacleFormat, opt, ref;
-      DEFAULT_RANDOMIZER_POINTS = 20;
+      DEFAULT_RANDOMIZER_POINTS = 50;
       DEFAULT_RANDOMIZER_TIMEOUT_SEC = 4;
       DEFAULT_RANDOMIZER_SHIP_LIMIT = 0;
       this.status_container = $(document.createElement('DIV'));
@@ -3406,18 +3406,17 @@ exportObj.SquadBuilder = (function() {
         <br class="hide-on-mobile" />
         <select class="game-type-selector">
             <option value="xwa" class="translated" defaultText="XWA" selected="selected">${this.uitranslation("XWA")}</option>
-            <option value="standard" class="translated" defaultText="Standard">${this.uitranslation("Standard")}</option>
-            <option value="extended" class="translated" defaultText="Extended">${this.uitranslation("Extended")}</option>
             <option value="epic" class="translated" defaultText="Epic">${this.uitranslation("Epic")}</option>
-            <option value="quickbuild" class="translated" defaultText="Quickbuild">${this.uitranslation("Standard")}</option>
+            <option value="quickbuild" class="translated" defaultText="Quickbuild">${this.uitranslation("Quickbuild")}</option>
+            <option value="beta" class="translated" defaultText="BETA">${this.uitranslation("BETA")}</option>
         </select>
     </div>
     <div class="col-md-4 points-display-container">
-        Points: <span class="total-points">0</span> / <input type="number" class="desired-points" value="20">
+        Points: <span class="total-points">0</span> / <input type="number" class="desired-points" value="50">
         <span class="points-remaining-container">(<span class="points-remaining"></span>&nbsp;left) <span class="points-destroyed red"></span></span>
         <span class="content-warning unreleased-content-used d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Unreleased content warning"></span></span>
         <span class="content-warning loading-failed-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Broken squad link warning"></span></span>
-        <span class="content-warning old-version-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="This squad was created for an older version of X-Wing."></span></span>
+        <span class="content-warning old-version-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="This squad was created for an older version of X-Wing. It may not load with the correct points or at all."></span></span>
         <span class="content-warning collection-invalid d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Collection warning"></span></span>
         <span class="content-warning ship-number-invalid-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Ship number warning"></span></span>
         <span class="content-warning multi-faction-warning-container d-none"><br /><i class="fa fa-exclamation-circle"></i>&nbsp;<span class="translated" defaultText="Multi-Faction warning"></span></span>
@@ -4709,15 +4708,11 @@ exportObj.SquadBuilder = (function() {
         if (this.isEpic) {
           this.printable_container.find('.squad-name').append(` <i class="xwing-miniatures-font xwing-miniatures-font-energy"></i>`);
         }
-        if (this.isXwa) {
+        if (this.isBeta) {
           this.printable_container.find('.squad-name').append(` <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>`);
         }
-        versioninfo = "09/06/2024";
-        rules = "AMG";
-        if (this.isXwa) {
-          versioninfo = "R2";
-          rules = "XWA";
-        }
+        versioninfo = "50P-1.0";
+        rules = "XWA";
         // Version number
         this.printable_container.find('.fancy-under-header').append($.trim(`<div class="version">Points Version: ${rules} - ${versioninfo}</div>`));
         
@@ -4875,22 +4870,22 @@ exportObj.SquadBuilder = (function() {
       var j, len, oldQuickbuild, old_id, ref, ref1, ship;
       oldQuickbuild = this.isQuickbuild;
       this.isStandard = false;
-      this.isXwa = false;
+      this.isBeta = false;
       this.isEpic = false;
       this.isQuickbuild = false;
       this.epic_not_legal_container.toggleClass('d-none', true);
       switch (gametype) {
-        case 'xwa':
-          this.isXwa = true;
-          this.desired_points_input.val(20);
+        case 'beta':
+          this.isBeta = true;
+          this.desired_points_input.val(50);
           break;
-        case 'extended':
-          this.desired_points_input.val(20);
+        case 'xwa':
+          this.desired_points_input.val(50);
           break;
         case 'epic':
           this.isEpic = true;
-          this.isXwa = true;
-          this.desired_points_input.val(20);
+          this.isBeta = true;
+          this.desired_points_input.val(100);
           this.epic_not_legal_container.toggleClass('d-none', false);
           break;
         case 'quickbuild':
@@ -4899,7 +4894,7 @@ exportObj.SquadBuilder = (function() {
           break;
         default:
           this.isStandard = true;
-          this.desired_points_input.val(20);
+          this.desired_points_input.val(50);
       }
       if (oldQuickbuild !== this.isQuickbuild) {
         old_id = this.current_squad.id;
@@ -4959,12 +4954,12 @@ exportObj.SquadBuilder = (function() {
       this.points_remaining_container.toggleClass('red', points_left < 0);
       this.unreleased_content_used_container.toggleClass('d-none', !unreleased_content_used);
       if (this.isStandard === false) {
-        gamemode = "(Extended)";
-      } else {
-        gamemode = "(Standard)";
-      }
-      if (this.isXwa) {
         gamemode = "(XWA)";
+      } else {
+        gamemode = "(HYPERSPACE)";
+      }
+      if (this.isBeta) {
+        gamemode = "(BETA)";
       }
       if (this.isEpic) {
         gamemode = "(Epic)";
@@ -5165,14 +5160,14 @@ exportObj.SquadBuilder = (function() {
 
     serialize() {
       var game_type_abbrev, selected_points, serialization_version, ship;
-      serialization_version = 9;
+      serialization_version = 10;
       game_type_abbrev = (function() {
         switch (this.game_type_selector.val()) {
-          case 'standard':
-            return 'h';
-          case 'extended':
-            return 's';
           case 'xwa':
+            return 's';
+          case 'hyperspace':
+            return 'h';
+          case 'beta':
             return 'b';
           case 'epic':
             return 'e';
@@ -5214,8 +5209,8 @@ exportObj.SquadBuilder = (function() {
         // v9: X-Wing 2.5 points rework. Due to the massive change in points structure, previous versions will no longer be supported
         ship_splitter = version > 7 ? 'Y' : ';';
         // parse out game type
-        [game_type_abbrev, desired_points, serialized_ships] = version > 7 ? ([g, p, s] = matches[2].split('Z'), [g, parseInt(p), s]) : ([game_type_and_point_abbrev, s] = matches[2].split('!'), parseInt(game_type_and_point_abbrev.split('=')[1]) ? p = parseInt(game_type_and_point_abbrev.split('=')[1]) : p = 20, g = game_type_and_point_abbrev.split('=')[0], [g, p, s]);
-        if (version < 9) { // old version are no longer supported
+        [game_type_abbrev, desired_points, serialized_ships] = version > 7 ? ([g, p, s] = matches[2].split('Z'), [g, parseInt(p), s]) : ([game_type_and_point_abbrev, s] = matches[2].split('!'), parseInt(game_type_and_point_abbrev.split('=')[1]) ? p = parseInt(game_type_and_point_abbrev.split('=')[1]) : p = 50, g = game_type_and_point_abbrev.split('=')[0], [g, p, s]);
+        if (version < 8) { // old version are no longer supported
           this.old_version_container.toggleClass('d-none', false);
           this.suppress_automatic_new_ship = false;
           this.addShip();
@@ -5227,16 +5222,19 @@ exportObj.SquadBuilder = (function() {
           this.addShip();
           return;
         }
+        if (version === 9) { // These may load but we will put the warning up just in case.
+          this.old_version_container.toggleClass('d-none', false);
+        }
         this.isCurrentlyLoadingSquad = true;
         switch (game_type_abbrev) {
           case 's':
-            this.changeGameTypeOnSquadLoad('extended');
+            this.changeGameTypeOnSquadLoad('xwa');
             break;
           case 'h':
-            this.changeGameTypeOnSquadLoad('standard');
+            this.changeGameTypeOnSquadLoad('hyperspace');
             break;
           case 'b':
-            this.changeGameTypeOnSquadLoad('xwa');
+            this.changeGameTypeOnSquadLoad('beta');
             break;
           case 'e':
             this.changeGameTypeOnSquadLoad('epic');
@@ -5444,7 +5442,7 @@ exportObj.SquadBuilder = (function() {
 
     isItemAvailable(item_data, shipCheck = false) {
       var ref, ref1;
-      // this method is not even invoked by most quickbuild stuff to check availability for quickbuild squads, as the method was formerly just telling apart extended/standard
+      // this method is not even invoked by most quickbuild stuff to check availability for quickbuild squads, as the method was formerly just telling apart normal play
       if (this.isQuickbuild) {
         return true;
       } else if (this.isStandard) {
@@ -5528,14 +5526,15 @@ exportObj.SquadBuilder = (function() {
           }
           return results1;
         }).call(this);
+        // eligible_faction_pilots = (pilot for pilot_name, pilot of available_faction_pilots when (not pilot.unique? or pilot not in @uniques_in_use['Pilot'] or pilot.canonical_name.getXWSBaseName() == include_pilot?.canonical_name.getXWSBaseName()) and (not pilot.max_per_squad? or @countPilots(pilot.canonical_name) < pilot.max_per_squad or pilot.canonical_name.getXWSBaseName() == include_pilot?.canonical_name.getXWSBaseName()) and (not pilot.restricted? or @countPilots(pilot.canonical_name) < pilot.restricted or pilot.canonical_name.getXWSBaseName() == include_pilot?.canonical_name.getXWSBaseName()) and (not pilot.upgrades? or @standard_restriction_check(pilot, include_pilot)) and (not pilot.restriction_func? or pilot.restriction_func((builder: @) , pilot)))
         eligible_faction_pilots = (function() {
-          var results1;
+          var ref, ref1, results1;
           results1 = [];
           for (pilot_name in available_faction_pilots) {
             pilot = available_faction_pilots[pilot_name];
-            if (((pilot.unique == null) || indexOf.call(this.uniques_in_use['Pilot'], pilot) < 0 || pilot.canonical_name.getXWSBaseName() === (include_pilot != null ? include_pilot.canonical_name.getXWSBaseName() : void 0)) && ((pilot.max_per_squad == null) || this.countPilots(pilot.canonical_name) < pilot.max_per_squad || pilot.canonical_name.getXWSBaseName() === (include_pilot != null ? include_pilot.canonical_name.getXWSBaseName() : void 0)) && ((pilot.upgrades == null) || this.standard_restriction_check(pilot, include_pilot)) && ((pilot.restriction_func == null) || pilot.restriction_func({
+            if (((pilot != null ? (ref = pilot.canonical_name) != null ? ref.getXWSBaseName() : void 0 : void 0) === (include_pilot != null ? (ref1 = include_pilot.canonical_name) != null ? ref1.getXWSBaseName() : void 0 : void 0)) || (((pilot.unique == null) || indexOf.call(this.uniques_in_use['Pilot'], pilot) < 0) && !this.isCardOverLimit(pilot, true) && ((pilot.upgrades == null) || this.standard_restriction_check(pilot, include_pilot)) && ((pilot.restriction_func == null) || pilot.restriction_func({
               builder: this
-            }, pilot))) {
+            }, pilot)))) {
               results1.push(pilot);
             }
           }
@@ -5552,8 +5551,8 @@ exportObj.SquadBuilder = (function() {
             pilot = available_faction_pilots[j];
             results1.push({
               id: pilot.id,
-              text: `${(((ref = exportObj.settings) != null ? ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? pilot.skill + ' - ' : ''}${pilot.display_name ? pilot.display_name : pilot.name} (${(this.isXwa && (pilot.pointsxwa != null)) ? pilot.pointsxwa : pilot.points}${pilot.loadout != null ? ((this.isXwa && (pilot.loadoutxwa != null)) ? `/${pilot.loadoutxwa}` : `/${pilot.loadout}`) : ""})`,
-              points: ((this.isXwa && (pilot.pointsxwa != null)) ? pilot.pointsxwa : pilot.points),
+              text: `${(((ref = exportObj.settings) != null ? ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? pilot.skill + ' - ' : ''}${pilot.display_name ? pilot.display_name : pilot.name} (${(this.isBeta && (pilot.pointsbeta != null)) ? pilot.pointsbeta : pilot.points}${pilot.loadout != null ? ((this.isBeta && (pilot.loadoutbeta != null)) ? `/${pilot.loadoutbeta}` : `/${pilot.loadout}`) : ""})`,
+              points: ((this.isBeta && (pilot.pointsbeta != null)) ? pilot.pointsbeta : pilot.points),
               ship: pilot.ship,
               name: pilot.name,
               display_name: pilot.display_name,
@@ -5716,17 +5715,26 @@ exportObj.SquadBuilder = (function() {
     }
 
     countUpgrades(canonical_name) {
-      var count, j, l, len, len1, ref, ref1, ref2, ref3, ship, upgrade;
+      var count, j, l, len, len1, len2, m, ref, ref1, ref2, ref3, ref4, ship, upgrade, upgradeData;
       // returns number of upgrades with given canonical name equipped
       count = 0;
       ref = this.ships;
       for (j = 0, len = ref.length; j < len; j++) {
         ship = ref[j];
-        if (((ref1 = ship.pilot) != null ? ref1.upgrades : void 0) == null) {
-          ref2 = ship.upgrades;
+        if (((ref1 = ship.pilot) != null ? ref1.upgrades : void 0) != null) {
+          ref2 = ship.pilot.upgrades;
           for (l = 0, len1 = ref2.length; l < len1; l++) {
             upgrade = ref2[l];
-            if ((upgrade != null ? (ref3 = upgrade.data) != null ? ref3.canonical_name : void 0 : void 0) === canonical_name) {
+            upgradeData = exportObj.upgrades[upgrade];
+            if ((upgradeData != null ? upgradeData.canonical_name : void 0) === canonical_name) {
+              count++;
+            }
+          }
+        } else {
+          ref3 = ship.upgrades;
+          for (m = 0, len2 = ref3.length; m < len2; m++) {
+            upgrade = ref3[m];
+            if ((upgrade != null ? (ref4 = upgrade.data) != null ? ref4.canonical_name : void 0 : void 0) === canonical_name) {
               count++;
             }
           }
@@ -5742,7 +5750,7 @@ exportObj.SquadBuilder = (function() {
       ref = this.ships;
       for (j = 0, len = ref.length; j < len; j++) {
         ship = ref[j];
-        if ((ship != null ? (ref1 = ship.pilot) != null ? ref1.canonical_name.getXWSBaseName() : void 0 : void 0) === canonical_name.getXWSBaseName()) {
+        if ((ship != null ? (ref1 = ship.pilot) != null ? ref1.canonical_name.getXWSBaseName() : void 0 : void 0) === (canonical_name != null ? canonical_name.getXWSBaseName() : void 0)) {
           count++;
         }
       }
@@ -5763,6 +5771,49 @@ exportObj.SquadBuilder = (function() {
       } else {
         return ship === name;
       }
+    }
+
+    isCardOverLimit(card, isPilot) {
+      var cardLimit, count, j, len, ref, upgrade, upgradeCount, upgradeData, upgradeLimit;
+      cardLimit = 0;
+      if (card.unique != null) {
+        cardLimit = 1;
+      } else if (card.restricted != null) {
+        cardLimit = card.restricted;
+      } else if (card.max_per_squad != null) {
+        cardLimit = card.max_per_squad;
+      }
+      if (isPilot) {
+        count = this.countPilots(card.canonical_name);
+        
+        // need to also do upgrade checks...
+        if (card.upgrades != null) {
+          ref = card.upgrades;
+          for (j = 0, len = ref.length; j < len; j++) {
+            upgrade = ref[j];
+            upgradeData = exportObj.upgrades[upgrade];
+            upgradeLimit = 0;
+            upgradeCount = 0;
+            if (upgradeData.restricted != null) {
+              upgradeLimit = upgradeData.restricted;
+            } else if (upgradeData.max_per_squad != null) {
+              upgradeLimit = upgradeData.max_per_squad;
+            }
+            if (upgradeLimit > 0) {
+              upgradeCount = this.countUpgrades(upgradeData.canonical_name);
+              if (upgradeCount >= upgradeLimit) {
+                return true;
+              }
+            }
+          }
+        }
+      } else {
+        count = this.countUpgrades(card.canonical_name);
+      }
+      if ((cardLimit !== 0) && (count >= cardLimit)) {
+        return true;
+      }
+      return false;
     }
 
     getAvailableUpgradesIncluding(slot, include_upgrade, ship, this_upgrade_obj, term = '', filter_func = this.dfl_filter_func, sorted = true) {
@@ -5810,7 +5861,7 @@ exportObj.SquadBuilder = (function() {
         results1 = [];
         for (upgrade_name in available_upgrades) {
           upgrade = available_upgrades[upgrade_name];
-          if ((indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && ship.standardized_check(upgrade) && ship.restriction_check(((ship.builder.isXwa && (upgrade.restrictionsxwa != null)) ? upgrade.restrictionsxwa : (upgrade.restrictions ? upgrade.restrictions : void 0)), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) && indexOf.call(upgrades_in_use, upgrade) < 0 && ((upgrade.max_per_squad == null) || ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) && ((upgrade.solitary == null) || ((ref = upgrade.slot, indexOf.call(this.uniques_in_use['Slot'], ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
+          if ((indexOf.call(this.uniques_in_use['Upgrade'], upgrade) < 0) && ship.standardized_check(upgrade) && ship.restriction_check(((ship.builder.isXwa && (upgrade.restrictionsxwa != null)) ? upgrade.restrictionsxwa : (upgrade.restrictions ? upgrade.restrictions : void 0)), this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) && indexOf.call(upgrades_in_use, upgrade) < 0 && (!this.isCardOverLimit(upgrade, false)) && ((upgrade.solitary == null) || ((ref = upgrade.slot, indexOf.call(this.uniques_in_use['Slot'], ref) < 0) || ((include_upgrade != null ? include_upgrade.solitary : void 0) != null)))) {
             results1.push(upgrade);
           }
         }
@@ -6173,13 +6224,13 @@ exportObj.SquadBuilder = (function() {
               if (!(ref1 = pilot.skill, indexOf.call(possible_inis, ref1) >= 0)) {
                 possible_inis.push(pilot.skill);
               }
-              if (this.isXwa && (pilot.pointsxwa != null)) {
-                possible_costs.push(pilot.pointsxwa);
+              if (this.isBeta && (pilot.pointsbeta != null)) {
+                possible_costs.push(pilot.pointsbeta);
               } else {
                 possible_costs.push(pilot.points);
               }
-              if (this.isXwa && (pilot.loadoutxwa != null)) {
-                possible_loadout.push(pilot.loadoutxwa);
+              if (this.isBeta && (pilot.loadoutbeta != null)) {
+                possible_loadout.push(pilot.loadoutbeta);
               } else {
                 if (pilot.loadout != null) {
                   possible_loadout.push(pilot.loadout);
@@ -6400,18 +6451,23 @@ exportObj.SquadBuilder = (function() {
               effective_stats = additional_opts.effectiveStats();
             }
             //logic to determine how many dots to use for uniqueness
+            uniquedots = "";
             if (data.unique != null) {
               uniquedots = "&middot;&nbsp;";
             } else if (data.max_per_squad != null) {
               count = 0;
-              uniquedots = "";
               while (count < data.max_per_squad) {
                 uniquedots = uniquedots.concat("&middot;");
                 ++count;
               }
               uniquedots = uniquedots.concat("&nbsp;");
-            } else {
-              uniquedots = "";
+            } else if (data.restricted != null) {
+              count = 0;
+              while (count < data.restricted) {
+                uniquedots = uniquedots.concat("&#9672;");
+                ++count;
+              }
+              uniquedots = uniquedots.concat("&nbsp;");
             }
             container.find('.info-name').html(`${uniquedots}${data.display_name ? data.display_name : data.name}${exportObj.isReleased(data) ? "" : ` (${exportObj.translate('ui', 'unreleased')})`}`);
             restriction_info = this.restriction_text(data) + this.upgrade_effect(data);
@@ -6451,9 +6507,9 @@ exportObj.SquadBuilder = (function() {
             container.find('tr.info-base').show();
             container.find('tr.info-skill td.info-data').text(data.skill);
             container.find('tr.info-skill').toggle(data.skill != null);
-            container.find('tr.info-points td.info-data').text((this.isXwa && (data.pointsxwa != null) ? data.pointsxwa : data.points));
+            container.find('tr.info-points td.info-data').text((this.isBeta && (data.pointsbeta != null) ? data.pointsbeta : data.points));
             container.find('tr.info-points').show();
-            container.find('tr.info-loadout td.info-data').text((this.isXwa && (data.loadoutxwa != null) ? data.loadoutxwa : data.loadout));
+            container.find('tr.info-loadout td.info-data').text((this.isBeta && (data.loadoutbeta != null) ? data.loadoutbeta : data.loadout));
             if (data.upgrades != null) {
               container.find('tr.info-loadout').hide();
             } else {
@@ -6559,10 +6615,10 @@ exportObj.SquadBuilder = (function() {
               container.find('tr.info-upgrades').hide();
             } else {
               container.find('tr.info-upgrades').show();
-              if (this.isXwa && (data.slotsxwa != null)) {
-                container.find('tr.info-upgrades td.info-data').html(data.slotsxwa != null ? ((function() {
+              if (this.isBeta && (data.slotsbeta != null)) {
+                container.find('tr.info-upgrades td.info-data').html(data.slotsbeta != null ? ((function() {
                   var len2, m, ref60, results1;
-                  ref60 = data.slotsxwa;
+                  ref60 = data.slotsbeta;
                   results1 = [];
                   for (m = 0, len2 = ref60.length; m < len2; m++) {
                     slot = ref60[m];
@@ -6594,18 +6650,23 @@ exportObj.SquadBuilder = (function() {
             pilot = exportObj.pilots[data.pilot];
             ship = exportObj.ships[data.ship];
             //logic to determine how many dots to use for uniqueness
+            uniquedots = "";
             if (pilot.unique != null) {
               uniquedots = "&middot;&nbsp;";
             } else if (pilot.max_per_squad != null) {
               count = 0;
-              uniquedots = "";
               while (count < data.max_per_squad) {
                 uniquedots = uniquedots.concat("&middot;");
                 ++count;
               }
               uniquedots = uniquedots.concat("&nbsp;");
-            } else {
-              uniquedots = "";
+            } else if (data.restricted != null) {
+              count = 0;
+              while (count < data.restricted) {
+                uniquedots = uniquedots.concat("&#9672;");
+                ++count;
+              }
+              uniquedots = uniquedots.concat("&nbsp;");
             }
             container.find('.info-name').html(`${uniquedots}${pilot.display_name ? pilot.display_name : pilot.name}${data.suffix != null ? data.suffix : ""}${exportObj.isReleased(pilot) ? "" : ` (${exportObj.translate('ui', 'unreleased')})`}`);
             restriction_info = this.restriction_text(data) + this.upgrade_effect(data);
@@ -6745,18 +6806,23 @@ exportObj.SquadBuilder = (function() {
             container.find('.info-sources').show();
             
             //logic to determine how many dots to use for uniqueness
+            uniquedots = "";
             if (data.unique != null) {
               uniquedots = "&middot;&nbsp;";
             } else if (data.max_per_squad != null) {
               count = 0;
-              uniquedots = "";
               while (count < data.max_per_squad) {
                 uniquedots = uniquedots.concat("&middot;");
                 ++count;
               }
               uniquedots = uniquedots.concat("&nbsp;");
-            } else {
-              uniquedots = "";
+            } else if (data.restricted != null) {
+              count = 0;
+              while (count < data.restricted) {
+                uniquedots = uniquedots.concat("&#9672;");
+                ++count;
+              }
+              uniquedots = uniquedots.concat("&nbsp;");
             }
             if ((((ref86 = this.collection) != null ? ref86.counts : void 0) != null) && (data.standard == null)) {
               addon_count = (ref87 = (ref88 = this.collection.counts) != null ? (ref89 = ref88['upgrade']) != null ? ref89[data.name] : void 0 : void 0) != null ? ref87 : 0;
@@ -6766,8 +6832,8 @@ exportObj.SquadBuilder = (function() {
               container.find('.info-collection').hide();
             }
             container.find('.info-name').html(`${uniquedots}${data.display_name ? data.display_name : data.name}${(exportObj.isReleased(data) || (data.standard != null)) ? "" : ` (${this.uitranslation('unreleased')})`}${data.standard != null ? " (S)" : ""}`);
-            if (this.isXwa && (data.pointsxwa != null)) {
-              points = data.pointsxwa;
+            if (this.isBeta && (data.pointsbeta != null)) {
+              points = data.pointsbeta;
             } else {
               points = data.points;
             }
@@ -7210,7 +7276,7 @@ exportObj.SquadBuilder = (function() {
       };
     }
 
-    randomSquad(max_points = 200, allowed_sources = null, timeout_ms = 1000, ship_limit = 0, collection_only = true, fill_zero_pts = false) {
+    randomSquad(max_points = 50, allowed_sources = null, timeout_ms = 1000, ship_limit = 0, collection_only = true, fill_zero_pts = false) {
       var data, stopHandler;
       this.backend_status.fadeOut('slow');
       this.suppress_automatic_new_ship = true;
@@ -7373,14 +7439,14 @@ exportObj.SquadBuilder = (function() {
       uniquetext = comma = othertext = text = '';
       ignoreShip = false;
       standardized = card.standardized != null;
-      if (this.isXwa && (card.standardizedxwa != null)) {
-        standardized = card.standardizedxwa;
+      if (this.isBeta && (card.standardizedbeta != null)) {
+        standardized = card.standardizedbeta;
       }
       if (card.restrictions != null) {
         card_restrictions = card.restrictions;
       }
-      if (this.isXwa && (card.restrictionsxwa != null)) {
-        card_restrictions = card.restrictionsxwa;
+      if (this.isBeta && (card.restrictionsbeta != null)) {
+        card_restrictions = card.restrictionsbeta;
       }
       if (card_restrictions != null) {
         for (j = 0, len = card_restrictions.length; j < len; j++) {
@@ -7624,12 +7690,8 @@ exportObj.SquadBuilder = (function() {
     toXWS() {
       var _, candidate, j, l, last_id, len, len1, len2, len3, m, match, matches, multisection_id_to_pilots, name1, o, obstacles, pilot, q, ref, ref1, ref2, ref3, rules, ship, unmatched, unmatched_pilot, versioninfo, xws;
       // Often you will want JSON.stringify(builder.toXWS())
-      versioninfo = "09/06/2024";
-      rules = "AMG";
-      if (this.isXwa) {
-        versioninfo = "R2";
-        rules = "XWA";
-      }
+      versioninfo = "50P-1.0";
+      rules = "XWA";
       xws = {
         description: this.getNotes(),
         faction: exportObj.toXWSFaction[this.faction],
@@ -7638,7 +7700,7 @@ exportObj.SquadBuilder = (function() {
         points: this.total_points,
         vendor: {
           yasb: {
-            builder: 'YASB - X-Wing 2.5',
+            builder: 'YASB - X-Wing 2.5 XWA',
             builder_url: window.location.href.split('?')[0],
             link: this.getPermaLink()
           }
@@ -7770,7 +7832,7 @@ exportObj.SquadBuilder = (function() {
       }
       switch (false) {
         // Not doing backward compatibility pre-1.x
-        case !(version_list > [0, 1] || xws.ruleset === 'XWA'):
+        case !(version_list > [0, 1] || xws.ruleset === 'BETA'):
           xws_faction = exportObj.fromXWSFaction[xws.faction];
           if (this.faction !== xws_faction) {
             throw new Error(`Attempted to load XWS for ${xws.faction} but builder is ${this.faction}`);
@@ -7788,17 +7850,17 @@ exportObj.SquadBuilder = (function() {
           this.removeAllShips();
           success = true;
           error = "";
-          // we use our current gamemode as default, but switch to standard if we are in XWA but the loaded xws specifies AMG or vice versa
+          // we use our current gamemode as default, but switch to standard if we are in BETA but the loaded xws specifies AMG or vice versa
           if (this.isStandard) {
             gamemode = 'h';
           } else if (this.isEpic) {
             gamemode = 'e';
-          } else if (this.isXwa) {
+          } else if (this.isBeta) {
             gamemode = 'b';
           } else {
             gamemode = 's';
           }
-          if ((xws.ruleset != null) && xws.ruleset === 'XWA') {
+          if ((xws.ruleset != null) && xws.ruleset === 'BETA') {
             gamemode = 'b';
           } else if ((xws.ruleset != null) && xws.ruleset === 'AMG' && gamemode === 'b') {
             gamemode = 'h';
@@ -7872,7 +7934,7 @@ exportObj.SquadBuilder = (function() {
             }
             serialized_squad += "XY";
           }
-          serialized_squad_intro = "v9Z" + gamemode + "Z20Z"; // serialization v9, extended squad, 20 points
+          serialized_squad_intro = "v9Z" + gamemode + "Z50Z"; // serialization v9, extended squad, 50 points
           // serialization schema SHIPID:UPGRADEID,UPGRADEID,...,UPGRADEID:;SHIPID:UPGRADEID,...
           serialized_squad = serialized_squad_intro + serialized_squad;
           afterLoad = () => {
@@ -7923,7 +7985,7 @@ Ship = class Ship {
     this.wingmates = []; // stores wingmates (quickbuild stuff only) 
     this.destroystate = 0;
     this.uitranslation = this.builder.uitranslation;
-    this.usesxwaSlots = false; // flag if we use xwa slots. This is needed, if we switch betwen XWA/AMG points to rebuild the pilot if the slots change
+    this.usesbetaSlots = false; // flag if we use beta slots. This is needed, if we switch betwen BETA/AMG points to rebuild the pilot if the slots change
     this.setupUI();
   }
 
@@ -7959,7 +8021,7 @@ Ship = class Ship {
   }
 
   async copyFrom(other) {
-    var available_pilots, delayed_upgrades, id, j, l, len, len1, len2, len3, m, name1, no_uniques_involved, o, other_upgrade, other_upgrades, pilot_data, ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7, ref8, upgrade;
+    var available_pilots, delayed_upgrades, id, j, l, len, len1, len2, len3, m, name1, no_uniques_involved, o, other_upgrade, other_upgrades, pilot_data, ref, ref1, ref2, ref3, ref4, ref5, ref6, upgrade;
     if (other === this) {
       throw new Error("Cannot copy from self");
     }
@@ -7970,13 +8032,13 @@ Ship = class Ship {
     //console.log "Setting pilot to ID=#{other.pilot.id}"
     if (this.builder.isQuickbuild) {
       // check if pilot is unique. In that case the whole ship may not be copied, but the cheapest alternative will be selected
-      no_uniques_involved = !(other.pilot.unique || ((other.pilot.max_per_squad != null) && this.builder.countPilots(other.pilot.canonical_name) >= other.pilot.max_per_squad));
+      no_uniques_involved = !this.builder.isCardOverLimit(other.pilot, true);
       if (no_uniques_involved) {
         ref = other.upgrades;
         // also check all upgrades
         for (j = 0, len = ref.length; j < len; j++) {
           upgrade = ref[j];
-          if (((((ref1 = upgrade.data) != null ? ref1.unique : void 0) != null) && upgrade.data.unique) || ((((ref2 = upgrade.data) != null ? ref2.max_per_squad : void 0) != null) && this.builder.countUpgrades(upgrade.data.canonical_name) >= upgrade.data.max_per_squad) || (((ref3 = upgrade.data) != null ? ref3.solitary : void 0) != null)) {
+          if (this.builder.isCardOverLimit(upgrade, false) || (((ref1 = upgrade.data) != null ? ref1.solitary : void 0) != null)) {
             no_uniques_involved = false;
           }
         }
@@ -7987,11 +8049,11 @@ Ship = class Ship {
       } else {
         // try to select another pilot for the same ship instead
         available_pilots = (function() {
-          var l, len1, ref4, results1;
-          ref4 = this.builder.getAvailablePilotsForShipIncluding(other.data.name);
+          var l, len1, ref2, results1;
+          ref2 = this.builder.getAvailablePilotsForShipIncluding(other.data.name);
           results1 = [];
-          for (l = 0, len1 = ref4.length; l < len1; l++) {
-            pilot_data = ref4[l];
+          for (l = 0, len1 = ref2.length; l < len1; l++) {
+            pilot_data = ref2[l];
             if (!pilot_data.disabled) {
               results1.push(pilot_data);
             }
@@ -8005,14 +8067,14 @@ Ship = class Ship {
         }
       }
     } else {
-      if (other.pilot.unique || ((other.pilot.max_per_squad != null) && this.builder.countPilots(other.pilot.canonical_name) >= other.pilot.max_per_squad)) {
+      if (this.builder.isCardOverLimit(other.pilot, true)) {
         // Look for cheapest generic or available unique, otherwise do nothing
         available_pilots = (function() {
-          var l, len1, ref4, results1;
-          ref4 = this.builder.getAvailablePilotsForShipIncluding(other.data.name);
+          var l, len1, ref2, results1;
+          ref2 = this.builder.getAvailablePilotsForShipIncluding(other.data.name);
           results1 = [];
-          for (l = 0, len1 = ref4.length; l < len1; l++) {
-            pilot_data = ref4[l];
+          for (l = 0, len1 = ref2.length; l < len1; l++) {
+            pilot_data = ref2[l];
             if (!pilot_data.disabled) {
               results1.push(pilot_data);
             }
@@ -8029,10 +8091,10 @@ Ship = class Ship {
       }
       // filter out upgrades that can be copied
       other_upgrades = {};
-      ref4 = other.upgrades;
-      for (l = 0, len1 = ref4.length; l < len1; l++) {
-        upgrade = ref4[l];
-        if (((upgrade != null ? upgrade.data : void 0) != null) && !upgrade.isStandardized() && (upgrade.data.standard == null) && !upgrade.data.unique && ((upgrade.data.max_per_squad == null) || this.builder.countUpgrades(upgrade.data.canonical_name) < upgrade.data.max_per_squad)) {
+      ref2 = other.upgrades;
+      for (l = 0, len1 = ref2.length; l < len1; l++) {
+        upgrade = ref2[l];
+        if (((upgrade != null ? upgrade.data : void 0) != null) && !upgrade.isStandardized() && (upgrade.data.standard == null) && !this.builder.isCardOverLimit(upgrade.data, false)) {
           if (other_upgrades[name1 = upgrade.slot] == null) {
             other_upgrades[name1] = [];
           }
@@ -8041,11 +8103,11 @@ Ship = class Ship {
       }
       // set them aside any upgrades that don't fill requirements due to additional slots and then attempt to fill them
       delayed_upgrades = {};
-      ref5 = this.upgrades;
-      for (m = 0, len2 = ref5.length; m < len2; m++) {
-        upgrade = ref5[m];
+      ref3 = this.upgrades;
+      for (m = 0, len2 = ref3.length; m < len2; m++) {
+        upgrade = ref3[m];
         if (!upgrade.isOccupied()) { // an earlier set double-slot upgrade may already use this slot
-          other_upgrade = ((ref6 = other_upgrades[upgrade.slot]) != null ? ref6 : []).shift();
+          other_upgrade = ((ref4 = other_upgrades[upgrade.slot]) != null ? ref4 : []).shift();
           if (other_upgrade != null) {
             await upgrade.setById(other_upgrade.data.id);
             // it would be cool if upgrade.setById would return whether it succeeded (as promise), so we could attempt to add all
@@ -8060,12 +8122,12 @@ Ship = class Ship {
         upgrade = delayed_upgrades[id];
         upgrade.setById(id);
       }
-      ref7 = this.upgrades;
+      ref5 = this.upgrades;
       // Do one final pass on upgrades to see if there are any more upgrades we can assign
-      for (o = 0, len3 = ref7.length; o < len3; o++) {
-        upgrade = ref7[o];
+      for (o = 0, len3 = ref5.length; o < len3; o++) {
+        upgrade = ref5[o];
         if (!upgrade.isOccupied()) {
-          other_upgrade = ((ref8 = other_upgrades[upgrade.slot]) != null ? ref8 : []).shift();
+          other_upgrade = ((ref6 = other_upgrades[upgrade.slot]) != null ? ref6 : []).shift();
           if (other_upgrade != null) {
             upgrade.setById(other_upgrade.data.id);
           }
@@ -8344,7 +8406,7 @@ Ship = class Ship {
   async setPilot(new_pilot, noautoequip = false) {
     var _, auto_equip_upgrade, autoequip, delayed_upgrades, id, j, l, len, len1, len2, len3, len4, m, name1, o, old_upgrade, old_upgrades, q, ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7, same_ship, standard_check, standard_upgrade_to_check, upgrade, upgrade_name, y;
     // don't call this method directly, unless you know what you do. Use setPilotById for proper quickbuild handling
-    if (new_pilot !== this.pilot || (this.builder.isXwa && !this.usesxwaSlots && (this.pilot.slotsxwa != null)) || (this.usesxwaSlots && !this.builder.isXwa)) {
+    if (new_pilot !== this.pilot || (this.builder.isBeta && !this.usesbetaSlots && (this.pilot.slotsbeta != null)) || (this.usesbetaSlots && !this.builder.isBeta)) {
       this.builder.current_squad.dirty = true;
       same_ship = (this.pilot != null) && (new_pilot != null ? new_pilot.ship : void 0) === this.pilot.ship;
       old_upgrades = {};
@@ -8452,7 +8514,7 @@ Ship = class Ship {
     if (!this.builder.isQuickbuild) {
       if (this.pilot.upgrades != null) {
         this.hasFixedUpgrades = true;
-        this.usesxwaSlots = false;
+        this.usesbetaSlots = false;
         ref1 = (ref = this.pilot.upgrades) != null ? ref : [];
         results1 = [];
         for (j = 0, len = ref1.length; j < len; j++) {
@@ -8474,11 +8536,11 @@ Ship = class Ship {
         return results1;
       } else {
         this.hasFixedUpgrades = false;
-        if (this.builder.isXwa && (this.pilot.slotsxwa != null)) {
-          pilotslots = this.pilot.slotsxwa;
-          this.usesxwaSlots = true;
+        if (this.builder.isBeta && (this.pilot.slotsbeta != null)) {
+          pilotslots = this.pilot.slotsbeta;
+          this.usesbetaSlots = true;
         } else {
-          this.usesxwaSlots = false;
+          this.usesbetaSlots = false;
           pilotslots = this.pilot.slots;
         }
         ref2 = pilotslots != null ? pilotslots : [];
@@ -8647,7 +8709,7 @@ Ship = class Ship {
       });
       this.pilot_selector.select2('data', {
         id: this.pilot.id,
-        text: `${(((ref = exportObj.settings) != null ? ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? this.pilot.skill + ' - ' : ''}${this.pilot.display_name ? this.pilot.display_name : this.pilot.name}${this.quickbuildId !== -1 ? exportObj.quickbuildsById[this.quickbuildId].suffix : ""} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)}${(this.quickbuildId !== -1 || (this.pilot.loadout == null)) ? "" : (this.builder.isXwa && (this.pilot.loadoutxwa != null) ? `/${this.pilot.loadoutxwa}` : `/${this.pilot.loadout}`)})`,
+        text: `${(((ref = exportObj.settings) != null ? ref.initiative_prefix : void 0) != null) && exportObj.settings.initiative_prefix ? this.pilot.skill + ' - ' : ''}${this.pilot.display_name ? this.pilot.display_name : this.pilot.name}${this.quickbuildId !== -1 ? exportObj.quickbuildsById[this.quickbuildId].suffix : ""} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)}${(this.quickbuildId !== -1 || (this.pilot.loadout == null)) ? "" : (this.builder.isBeta && (this.pilot.loadoutbeta != null) ? `/${this.pilot.loadoutbeta}` : `/${this.pilot.loadout}`)})`,
         chassis: this.pilot.chassis != null ? this.pilot.chassis : ""
       });
       this.pilot_selector.data('select2').container.show();
@@ -9087,7 +9149,7 @@ Ship = class Ship {
     <div class="pilot-header-text">${this.pilot.display_name ? this.pilot.display_name : this.pilot.name} <i class="xwing-miniatures-ship xwing-miniatures-ship-${this.data.name.canonicalize()}"></i><span class="fancy-ship-type"> ${this.data.display_name ? this.data.display_name : this.data.name}</span></div>
     <div class="mask">
         <div class="outer-circle">
-            <div class="inner-circle pilot-points">${this.quickbuildId !== -1 ? (this.primary ? this.getPoints() : '*') : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)}</div>
+            <div class="inner-circle pilot-points">${this.quickbuildId !== -1 ? (this.primary ? this.getPoints() : '*') : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)}</div>
         </div>
     </div>
 </div>
@@ -9155,7 +9217,7 @@ Ship = class Ship {
     HalfPoints = Math.floor(this.getPoints() / 2);
     Threshold = Math.floor((effective_stats['hull'] + effective_stats['shields']) / 2);
     html += $.trim(`<div class="ship-points-total">
-    <strong>${this.uitranslation("Ship Cost")}: ${this.getPoints()}, ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isXwa && (this.pilot.loadoutxwa != null)) ? `/${this.pilot.loadoutxwa}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")}), ${this.uitranslation("Half Points")}: ${HalfPoints}, ${this.uitranslation("Damage Threshold")}: ${Threshold}</strong> 
+    <strong>${this.uitranslation("Ship Cost")}: ${this.getPoints()}, ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isBeta && (this.pilot.loadoutbeta != null)) ? `/${this.pilot.loadoutbeta}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")}), ${this.uitranslation("Half Points")}: ${HalfPoints}, ${this.uitranslation("Damage Threshold")}: ${Threshold}</strong> 
 </div>`);
     return `<div class="fancy-ship">${html}</div>`;
   }
@@ -9164,7 +9226,7 @@ Ship = class Ship {
     var halfPoints, j, len, points, slotted_upgrades, table_html, threshold, upgrade;
     table_html = $.trim(`<tr class="simple-pilot">
     <td class="name">${this.pilot.display_name ? this.pilot.display_name : this.pilot.name} &mdash; ${this.data.display_name ? this.data.display_name : this.data.name}</td>
-    <td class="points">${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)}</td>
+    <td class="points">${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)}</td>
 </tr>`);
     slotted_upgrades = (function() {
       var j, len, ref, results1;
@@ -9188,14 +9250,14 @@ Ship = class Ship {
     table_html += `<tr class="simple-ship-total"><td colspan="2">${this.uitranslation("Ship Cost")}: ${this.getPoints()}</td></tr>`;
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    table_html += `<tr class="simple-ship-half-points"><td colspan="2">${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isXwa && (this.pilot.loadoutxwa != null)) ? `/${this.pilot.loadoutxwa}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")}) ${this.uitranslation("Half Points")}: ${halfPoints} ${this.uitranslation("Damage Threshold")}: ${threshold}</td></tr>`;
+    table_html += `<tr class="simple-ship-half-points"><td colspan="2">${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isBeta && (this.pilot.loadoutbeta != null)) ? `/${this.pilot.loadoutbeta}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")}) ${this.uitranslation("Half Points")}: ${halfPoints} ${this.uitranslation("Damage Threshold")}: ${threshold}</td></tr>`;
     table_html += '<tr><td>&nbsp;</td><td></td></tr>';
     return table_html;
   }
 
   toSimpleCopy() {
     var halfPoints, j, len, points, simplecopy, simplecopy_upgrades, slotted_upgrades, threshold, upgrade, upgrade_simplecopy;
-    simplecopy = `${this.pilot.display_name} – ${this.data.display_name} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)})    \n`;
+    simplecopy = `${this.pilot.display_name} – ${this.data.display_name} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)})    \n`;
     slotted_upgrades = (function() {
       var j, len, ref, results1;
       ref = this.upgrades;
@@ -9224,13 +9286,13 @@ Ship = class Ship {
     }
     halfPoints = Math.floor(this.getPoints() / 2);
     threshold = Math.floor((this.effectiveStats()['hull'] + this.effectiveStats()['shields']) / 2);
-    simplecopy += `${this.uitranslation("Ship Cost")}: ${this.getPoints()}  ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isXwa && (this.pilot.loadoutxwa != null)) ? `/${this.pilot.loadoutxwa}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")})  ${this.uitranslation("Half Points")}: ${halfPoints}  ${this.uitranslation("Damage Threshold")}: ${threshold}    \n    \n`;
+    simplecopy += `${this.uitranslation("Ship Cost")}: ${this.getPoints()}  ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isBeta && (this.pilot.loadoutbeta != null)) ? `/${this.pilot.loadoutbeta}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")})  ${this.uitranslation("Half Points")}: ${halfPoints}  ${this.uitranslation("Damage Threshold")}: ${threshold}    \n    \n`;
     return simplecopy;
   }
 
   toRedditText() {
     var halfPoints, j, len, points, reddit, reddit_upgrades, slotted_upgrades, threshold, upgrade, upgrade_reddit;
-    reddit = `**${this.pilot.name} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isXwa && (this.pilot.pointsxwa != null)) ? this.pilot.pointsxwa : this.pilot.points)})**    \n`;
+    reddit = `**${this.pilot.name} (${this.quickbuildId !== -1 ? (this.primary ? exportObj.quickbuildsById[this.quickbuildId].threat : 0) : ((this.builder.isBeta && (this.pilot.pointsbeta != null)) ? this.pilot.pointsbeta : this.pilot.points)})**    \n`;
     slotted_upgrades = (function() {
       var j, len, ref, results1;
       ref = this.upgrades;
@@ -9257,7 +9319,7 @@ Ship = class Ship {
         }
       }
       reddit += reddit_upgrades.join("    ");
-      reddit += `&nbsp;*${this.uitranslation("Ship Cost")}: ${this.getPoints()}  ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isXwa && (this.pilot.loadoutxwa != null)) ? `/${this.pilot.loadoutxwa}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")})  ${this.uitranslation("Half Points")}: ${halfPoints}  ${this.uitranslation("Damage Threshold")}: ${threshold}*    \n`;
+      reddit += `&nbsp;*${this.uitranslation("Ship Cost")}: ${this.getPoints()}  ${this.uitranslation("Loadout")}: (${this.upgrade_points_total}${(this.builder.isBeta && (this.pilot.loadoutbeta != null)) ? `/${this.pilot.loadoutbeta}` : (this.pilot.loadout != null ? `/${this.pilot.loadout}` : "")})  ${this.uitranslation("Half Points")}: ${halfPoints}  ${this.uitranslation("Damage Threshold")}: ${threshold}*    \n`;
     }
     return reddit;
   }
@@ -9331,10 +9393,12 @@ Ship = class Ship {
         // v 1-3 are 1st Ed
         // v 4-8 are 2nd Ed 
         // v 9+ are 2.5 Ed 
+        // v 10 are XWA 50 points structure
         console.log("Incorrect Version!");
         this.old_version_container.toggleClass('d-none', false);
         break;
       case 9:
+      case 10:
         pilot_splitter = 'X';
         upgrade_splitter = 'W';
         [pilot_id, upgrade_ids, conferredaddon_pairs] = serialized.split(pilot_splitter);
@@ -9420,13 +9484,13 @@ Ship = class Ship {
       loadout: (ref35 = this.pilot.loadout) != null ? ref35 : 0,
       skill: (ref36 = this.pilot.skill) != null ? ref36 : 0
     };
-    // override when in XWA mode
-    if (this.builder.isXwa) {
-      if (this.pilot.pointsxwa != null) {
-        stats.points = this.pilot.pointsxwa;
+    // override when in BETA mode
+    if (this.builder.isBeta) {
+      if (this.pilot.pointsbeta != null) {
+        stats.points = this.pilot.pointsbeta;
       }
-      if (this.pilot.loadoutxwa != null) {
-        stats.loadout = this.pilot.loadoutxwa;
+      if (this.pilot.loadoutbeta != null) {
+        stats.loadout = this.pilot.loadoutbeta;
       }
     }
     // need a deep copy of maneuvers array
@@ -9527,8 +9591,8 @@ Ship = class Ship {
             meets_restrictions = meets_restrictions && (upgrade != null ? (ref10 = upgrade.data) != null ? ref10.validation_func(this, upgrade) : void 0 : void 0);
           }
           // moved occupied slots off of validation func
-          if (this.builder.isXwa && ((upgrade != null ? (ref11 = upgrade.data) != null ? ref11.also_occupies_upgrades_xwa : void 0 : void 0) != null)) {
-            ref12 = upgrade.data.also_occupies_upgrades_xwa;
+          if (this.builder.isBeta && ((upgrade != null ? (ref11 = upgrade.data) != null ? ref11.also_occupies_upgrades_beta : void 0 : void 0) != null)) {
+            ref12 = upgrade.data.also_occupies_upgrades_beta;
             for (q = 0, len2 = ref12.length; q < len2; q++) {
               upgradeslot = ref12[q];
               if (!upgrade.occupiesAnUpgradeSlot(upgradeslot)) {
@@ -9556,7 +9620,7 @@ Ship = class Ship {
               }
             }
           }
-          restrictions = ((upgrade != null ? (ref15 = upgrade.data) != null ? ref15.restrictionsxwa : void 0 : void 0) != null) && this.builder.isXwa ? upgrade != null ? (ref16 = upgrade.data) != null ? ref16.restrictionsxwa : void 0 : void 0 : (ref17 = upgrade != null ? (ref18 = upgrade.data) != null ? ref18.restrictions : void 0 : void 0) != null ? ref17 : void 0;
+          restrictions = ((upgrade != null ? (ref15 = upgrade.data) != null ? ref15.restrictionsbeta : void 0 : void 0) != null) && this.builder.isBeta ? upgrade != null ? (ref16 = upgrade.data) != null ? ref16.restrictionsbeta : void 0 : void 0 : (ref17 = upgrade != null ? (ref18 = upgrade.data) != null ? ref18.restrictions : void 0 : void 0) != null ? ref17 : void 0;
           // always perform this check, even if no special restrictions for this upgrade exists, to check for allowed points
           meets_restrictions = meets_restrictions && this.restriction_check(restrictions, upgrade, upgrade.getPoints(), this.upgrade_points_total);
         }
@@ -9756,7 +9820,7 @@ Ship = class Ship {
             }
             break;
           case "isUnique":
-            if (r[1] !== ((this.pilot.unique != null) || (this.pilot.max_per_squad != null))) {
+            if (r[1] !== ((this.pilot.unique != null) || (this.pilot.max_per_squad != null) || (this.pilot.restricted != null))) {
               return false;
             }
             break;
@@ -9782,9 +9846,9 @@ Ship = class Ship {
     var checkstandard, j, l, len, len1, ref, ref1, ref2, restrictions, ship, slotfree, upgrade;
     // condition checks
     checkstandard = false;
-    if (this.builder.isXwa) {
-      if (upgrade_data.standardizedxwa != null) {
-        checkstandard = upgrade_data.standardizedxwa;
+    if (this.builder.isBeta) {
+      if (upgrade_data.standardizedbeta != null) {
+        checkstandard = upgrade_data.standardizedbeta;
       }
     } else {
       if (upgrade_data.standardized != null) {
@@ -9796,9 +9860,9 @@ Ship = class Ship {
       for (j = 0, len = ref.length; j < len; j++) {
         ship = ref[j];
         if (((ship != null ? ship.data : void 0) != null) && ship.data.name === this.data.name) {
-          if (this.builder.isXwa) {
-            if (upgrade_data.restrictionsxwa != null) {
-              restrictions = upgrade_data.restrictionsxwa;
+          if (this.builder.isBeta) {
+            if (upgrade_data.restrictionsbeta != null) {
+              restrictions = upgrade_data.restrictionsbeta;
             } else {
               (upgrade_data.restrictions != null ? restrictions = upgrade_data.restrictions : void 0);
             }
@@ -10046,9 +10110,9 @@ GenericAddon = class GenericAddon {
 
   isStandardized() {
     var ref, ref1;
-    if (this.ship.builder.isXwa) {
-      if (((ref = this.data) != null ? ref.standardizedxwa : void 0) != null) {
-        return this.data.standardizedxwa;
+    if (this.ship.builder.isBeta) {
+      if (((ref = this.data) != null ? ref.standardizedbeta : void 0) != null) {
+        return this.data.standardizedbeta;
       }
     }
     if (((ref1 = this.data) != null ? ref1.standardized : void 0) != null) {
@@ -10308,8 +10372,8 @@ GenericAddon = class GenericAddon {
   getPoints(data = this.data, ship = this.ship) {
     var points, ref, ref1;
     // Moar special case jankiness
-    if (((ref = this.ship) != null ? ref.builder.isXwa : void 0) && ((data != null ? data.pointsxwa : void 0) != null)) {
-      points = data.pointsxwa;
+    if (((ref = this.ship) != null ? ref.builder.isBeta : void 0) && ((data != null ? data.pointsbeta : void 0) != null)) {
+      points = data.pointsbeta;
     } else {
       points = (ref1 = data != null ? data.points : void 0) != null ? ref1 : 0;
     }
@@ -10529,8 +10593,8 @@ ${attackrangebonus}`);
   occupyOtherUpgrades() {
     var checkupgrades, j, len, ref, ref1, ref2, ref3, results1, slot, upgrade;
     checkupgrades = [];
-    if (this.ship.builder.isXwa && (((ref = this.data) != null ? ref.also_occupies_upgrades_xwa : void 0) != null)) {
-      checkupgrades = (ref1 = this.data) != null ? ref1.also_occupies_upgrades_xwa : void 0;
+    if (this.ship.builder.isBeta && (((ref = this.data) != null ? ref.also_occupies_upgrades_beta : void 0) != null)) {
+      checkupgrades = (ref1 = this.data) != null ? ref1.also_occupies_upgrades_beta : void 0;
     } else {
       if (((ref2 = this.data) != null ? ref2.also_occupies_upgrades : void 0) != null) {
         checkupgrades = (ref3 = this.data) != null ? ref3.also_occupies_upgrades : void 0;
