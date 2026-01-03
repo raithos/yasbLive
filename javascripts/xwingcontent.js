@@ -6488,7 +6488,6 @@ exportObj.basicCardData = function() {
         loadout: 19,
         slots: ["Tech",
       "Cannon",
-      "Cannon",
       "Torpedo",
       "Crew",
       "Crew",
