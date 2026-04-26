@@ -19579,7 +19579,7 @@ exportObj.basicCardData = function() {
         xwsaddon: "legendsandrelics",
         unique: true,
         points: 6,
-        faction: "Scum",
+        faction: "Scum and Villainy",
         slot: "Crew",
         charge: 2
       },
@@ -21135,39 +21135,19 @@ exportObj.restrictedShips = [
 
 exportObj.restrictedUpgrades = [
   {
-    name: 'Intimidation',
-    limit: 1
-  },
-  {
-    name: 'Sense',
-    limit: 1
+    name: 'Battle Meditation',
+    limit: 3
   },
   {
     name: 'Autoblasters',
     limit: 2
   },
   {
-    name: 'Barrage Rockets',
-    limit: 2
-  },
-  {
-    name: 'Ensnare',
-    limit: 2
-  },
-  {
-    name: 'Homing Missiles',
-    limit: 2
-  },
-  {
-    name: 'Homing Torpedoes',
-    limit: 2
+    name: 'Sense',
+    limit: 1
   },
   {
     name: 'Hotshot Gunner',
-    limit: 2
-  },
-  {
-    name: 'Juke',
     limit: 2
   },
   {
@@ -21175,24 +21155,40 @@ exportObj.restrictedUpgrades = [
     limit: 2
   },
   {
-    name: 'Trajectory Simulator',
-    limit: 2
+    name: 'Veteran Turret Gunner',
+    limit: 3
   },
   {
     name: 'False Transponder Codes',
     limit: 3
   },
   {
-    name: 'Proton Rockets',
-    limit: 3
+    name: 'Barrage Rockets',
+    limit: 2
   },
   {
-    name: 'Proton Torpedoes',
+    name: 'Homing Missiles',
+    limit: 2
+  },
+  {
+    name: 'Proton Rockets',
     limit: 3
   },
   {
     name: 'Proximity Mines',
     limit: 3
+  },
+  {
+    name: 'Trajectory Simulator',
+    limit: 2
+  },
+  {
+    name: 'Intimidation',
+    limit: 1
+  },
+  {
+    name: 'Juke',
+    limit: 2
   },
   {
     name: 'Snap Shot',
@@ -21203,12 +21199,20 @@ exportObj.restrictedUpgrades = [
     limit: 3
   },
   {
-    name: 'Veteran Turret Gunner',
+    name: 'Homing Torpedoes',
+    limit: 2
+  },
+  {
+    name: 'Proton Torpedoes',
     limit: 3
   },
   {
-    name: 'Battle Meditation',
-    limit: 3
+    name: 'Energy-Shell Charges',
+    limit: 4
+  },
+  {
+    name: 'Ensnare',
+    limit: 2
   }
 ];
 
