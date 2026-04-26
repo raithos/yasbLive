@@ -4711,7 +4711,7 @@ exportObj.SquadBuilder = (function() {
         if (this.isBeta) {
           this.printable_container.find('.squad-name').append(` <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>`);
         }
-        versioninfo = "50P-1.0";
+        versioninfo = "50P-1.1";
         rules = "XWA";
         // Version number
         this.printable_container.find('.fancy-under-header').append($.trim(`<div class="version">Points Version: ${rules} - ${versioninfo}</div>`));
@@ -7690,7 +7690,7 @@ exportObj.SquadBuilder = (function() {
     toXWS() {
       var _, candidate, j, l, last_id, len, len1, len2, len3, m, match, matches, multisection_id_to_pilots, name1, o, obstacles, pilot, q, ref, ref1, ref2, ref3, rules, ship, unmatched, unmatched_pilot, versioninfo, xws;
       // Often you will want JSON.stringify(builder.toXWS())
-      versioninfo = "50P-1.0";
+      versioninfo = "50P-1.1";
       rules = "XWA";
       xws = {
         description: this.getNotes(),
@@ -7934,7 +7934,7 @@ exportObj.SquadBuilder = (function() {
             }
             serialized_squad += "XY";
           }
-          serialized_squad_intro = "v9Z" + gamemode + "Z50Z"; // serialization v9, extended squad, 50 points
+          serialized_squad_intro = "v10Z" + gamemode + "Z50Z"; // serialization v9, extended squad, 50 points
           // serialization schema SHIPID:UPGRADEID,UPGRADEID,...,UPGRADEID:;SHIPID:UPGRADEID,...
           serialized_squad = serialized_squad_intro + serialized_squad;
           afterLoad = () => {
