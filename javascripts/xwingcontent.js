@@ -19571,8 +19571,12 @@ exportObj.basicCardData = function() {
         slot: "Crew",
         charge: 2,
         recurring: 1,
-        restrictions: [["Action",
-      "R-Jam"]]
+        modifier_func: function(stats) {
+          if (indexOf.call(stats.actions,
+      'R-Jam') < 0) {
+            return stats.actions.push('R-Jam');
+          }
+        }
       },
       {
         name: "Fennec Shand",
@@ -19595,7 +19599,13 @@ exportObj.basicCardData = function() {
         charge: 1,
         recurring: 1,
         restrictions: [["Action",
-      "Jam"]]
+      "Jam"]],
+        modifier_func: function(stats) {
+          if (indexOf.call(stats.actions,
+      'Jam') < 0) {
+            return stats.actions.push('Jam');
+          }
+        }
       },
       {
         name: "Wedge Antilles",
