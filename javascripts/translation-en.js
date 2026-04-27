@@ -1796,6 +1796,9 @@ exportObj.cardLoaders.English = function() {
     "Lieutenant LeHuse": {
       text: `While you perform an attack, you may spend another friendly ship's lock on the defender to reroll any number of your results. `
     },
+    "Logistics Division Pilot": {
+      text: ` `
+    },
     "Bossk (Z-95 Headhunter)": {
       display_name: `Bossk`,
       text: `While you perform a primary attack, after the Neutralize Results step, you may spend 1 %CRIT% result to add 2 %HIT% results.`

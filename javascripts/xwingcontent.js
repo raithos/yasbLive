@@ -13331,7 +13331,8 @@ exportObj.basicCardData = function() {
       "Astromech",
       "Modification",
       "Tech",
-      "Configuration"]
+      "Configuration",
+      "HardpointShip"]
       },
       {
         name: "Tamara Ryvora",
@@ -19992,7 +19993,8 @@ exportObj.basicCardData = function() {
       },
       {
         name: `Guarded`,
-        id: 40
+        id: 40,
+        unique: true
       },
       {
         name: `Sickening Maneuver`,
