@@ -9852,18 +9852,19 @@ Ship = class Ship {
         checkstandard = true;
       }
     }
+    if (upgrade_data.restrictions != null) {
+      restrictions = upgrade_data.restrictions;
+    }
+    if (this.builder.isBeta) {
+      if (upgrade_data.restrictionsbeta != null) {
+        restrictions = upgrade_data.restrictionsbeta;
+      }
+    }
     if (checkstandard) {
       ref = this.builder.ships;
       for (j = 0, len = ref.length; j < len; j++) {
         ship = ref[j];
         if (((ship != null ? ship.data : void 0) != null) && ship.data.name === this.data.name) {
-          if (this.builder.isBeta) {
-            if (upgrade_data.restrictionsbeta != null) {
-              restrictions = upgrade_data.restrictionsbeta;
-            } else {
-              (upgrade_data.restrictions != null ? restrictions = upgrade_data.restrictions : void 0);
-            }
-          }
           if ((restrictions != null) && ship.restriction_check(restrictions, upgrade_data) && !(((ref1 = ship.pilot) != null ? ref1.upgrades : void 0) != null)) {
             if ((ship.pilot.loadout != null) && (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)) {
               return false;
