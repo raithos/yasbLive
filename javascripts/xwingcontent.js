@@ -13296,6 +13296,7 @@ exportObj.basicCardData = function() {
         force: 1,
         points: 12,
         loadout: 4,
+        keyword: ["Dark Side"],
         slots: ["Force",
       "Modification",
       "Configuration"]

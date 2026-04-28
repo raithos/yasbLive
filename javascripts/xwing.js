@@ -8486,9 +8486,6 @@ Ship = class Ship {
               standard_check = true;
             }
           }
-          if ((standard_upgrade_to_check != null) && (standard_check === false)) {
-            this.removeStandardizedList(standard_upgrade_to_check);
-          }
         }
       } else {
         this.copy_button.hide();
@@ -10232,7 +10229,11 @@ GenericAddon = class GenericAddon {
         });
       }
       if (this.isStandardized() && !this.ship.hasFixedUpgrades) {
-        this.ship.removeStandardizedList(this.data);
+        if (this.data.restrictions != null) {
+          if (this.ship.restriction_check(this.data.restrictions, this.data)) {
+            this.ship.removeStandardizedList(this.data);
+          }
+        }
       }
       await this.rescindAddons();
       this.deoccupyOtherUpgrades();
