@@ -8404,7 +8404,7 @@ Ship = class Ship {
   }
 
   async setPilot(new_pilot, noautoequip = false) {
-    var _, auto_equip_upgrade, autoequip, delayed_upgrades, id, j, l, len, len1, len2, len3, len4, m, name1, o, old_upgrade, old_upgrades, q, ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7, same_ship, standard_check, standard_upgrade_to_check, upgrade, upgrade_name, y;
+    var _, auto_equip_upgrade, autoequip, delayed_upgrades, id, j, l, len, len1, len2, len3, m, name1, name2, o, old_upgrade, old_upgrades, q, ref, ref1, ref2, ref3, ref4, ref5, ref6, same_ship, standard_upgrade_to_check, upgrade, upgrade_name;
     // don't call this method directly, unless you know what you do. Use setPilotById for proper quickbuild handling
     if (new_pilot !== this.pilot || (this.builder.isBeta && !this.usesbetaSlots && (this.pilot.slotsbeta != null)) || (this.usesbetaSlots && !this.builder.isBeta)) {
       this.builder.current_squad.dirty = true;
@@ -8452,15 +8452,27 @@ Ship = class Ship {
             }
           }
         }
+        // check if we need to add a standard upgrade
+        // see if ship is supposed to be standardized
+        standard_upgrade_to_check = this.checkStandardizedList(this.pilot.ship);
+        if (standard_upgrade_to_check != null) {
+          if (old_upgrades[name2 = standard_upgrade_to_check.slot] == null) {
+            old_upgrades[name2] = [];
+          }
+          if (ref4 = standard_upgrade_to_check.id, indexOf.call(old_upgrades[standard_upgrade_to_check.slot], ref4) < 0) {
+            // if that upgrade was not present in the old upgrades, but is required now, we add it at first position
+            old_upgrades[standard_upgrade_to_check.slot].unshift(standard_upgrade_to_check.id);
+          }
+        }
         if (same_ship && (this.pilot.upgrades == null)) {
 // two cycles, in case an old upgrade is adding slots that are required for other old upgrades
           for (_ = o = 1; o <= 2; _ = ++o) {
             delayed_upgrades = {};
-            ref4 = this.upgrades;
-            for (q = 0, len3 = ref4.length; q < len3; q++) {
-              upgrade = ref4[q];
+            ref5 = this.upgrades;
+            for (q = 0, len3 = ref5.length; q < len3; q++) {
+              upgrade = ref5[q];
               // check if there exits old upgrades for this slot - if so, try to add the first of them
-              old_upgrade = ((ref5 = old_upgrades[upgrade.slot]) != null ? ref5 : []).shift();
+              old_upgrade = ((ref6 = old_upgrades[upgrade.slot]) != null ? ref6 : []).pop();
               if (old_upgrade != null) {
                 await upgrade.setById(old_upgrade);
                 if (!upgrade.lastSetValid) {
@@ -8475,19 +8487,9 @@ Ship = class Ship {
               upgrade.setById(id);
             }
           }
-          // last check for standardized
-          // see if ship is supposed to be standardized
-          standard_upgrade_to_check = this.checkStandardizedList(this.pilot.ship);
-          standard_check = false;
-          ref6 = this.upgrades;
-          for (y = 0, len4 = ref6.length; y < len4; y++) {
-            upgrade = ref6[y];
-            if ((standard_upgrade_to_check != null) && (((upgrade != null ? (ref7 = upgrade.data) != null ? ref7.name : void 0 : void 0) != null) && (upgrade.data.name === standard_upgrade_to_check.name))) {
-              standard_check = true;
-            }
-          }
         }
       } else {
+        // last check for standardized
         this.copy_button.hide();
       }
       this.row.removeClass('unsortable');
@@ -9864,6 +9866,9 @@ Ship = class Ship {
       ref = this.builder.ships;
       for (j = 0, len = ref.length; j < len; j++) {
         ship = ref[j];
+        if (ship === this) {
+          continue;
+        }
         if (((ship != null ? ship.data : void 0) != null) && ship.data.name === this.data.name) {
           if ((restrictions != null) && ship.restriction_check(restrictions, upgrade_data) && !(((ref1 = ship.pilot) != null ? ref1.upgrades : void 0) != null)) {
             if ((ship.pilot.loadout != null) && (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)) {
