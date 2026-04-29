@@ -18958,6 +18958,7 @@ exportObj.basicCardData = function() {
       },
       {
         name: "C-3PO (Epic)",
+        xwsaddon: "epicsl",
         id: 536,
         standard: true,
         unique: true,
