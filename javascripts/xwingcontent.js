@@ -5698,7 +5698,6 @@ exportObj.basicCardData = function() {
         points: 16,
         loadout: 24,
         slots: ["Sensor",
-      "Sensor",
       "Tech",
       "Crew",
       "Gunner",
