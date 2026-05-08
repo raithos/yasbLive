@@ -10239,6 +10239,8 @@ GenericAddon = class GenericAddon {
           if (this.ship.restriction_check(this.data.restrictions, this.data)) {
             this.ship.removeStandardizedList(this.data);
           }
+        } else {
+          this.ship.removeStandardizedList(this.data);
         }
       }
       await this.rescindAddons();

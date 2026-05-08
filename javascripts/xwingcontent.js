@@ -13985,7 +13985,7 @@ exportObj.basicCardData = function() {
         name: "Sabine Wren",
         id: 57,
         slot: "Crew",
-        points: 5,
+        points: 6,
         unique: true,
         faction: "Rebel Alliance"
       },
