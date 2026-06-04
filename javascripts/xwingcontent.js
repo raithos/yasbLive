@@ -1718,7 +1718,7 @@ exportObj.basicCardData = function() {
         points: 17,
         loadout: 14,
         slots: ["Missile",
-      "Gunner",
+      "Crew",
       "Illicit",
       "Illicit",
       "Modification"],
