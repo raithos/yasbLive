@@ -6743,20 +6743,23 @@ class Ship
                 query.callback(data)
             minimumResultsForSearch: if $.isMobile() then -1 else 0
             formatResultCssClass: (obj) =>
-                console.log "colletion = #{@builder.collection?}"
-                console.log "colletion = #{@builder.collection.checks.collectioncheck}"
-                if @builder.collection? and (@builder.collection.checks.collectioncheck == "true")
-                    console.log "inside collection check loop"
-                    not_in_collection = false
-                    if @pilot? and obj.id == exportObj.ships[@pilot.ship].id
-                        # Currently selected ship; mark as not in collection if it's neither
-                        # on the shelf nor on the table
-                        unless (@builder.collection.checkShelf('ship', obj.name) or @builder.collection.checkTable('pilot', obj.name))
-                            not_in_collection = true
+                if @builder.collection?
+                    console.log "collection detected"
+                    if @builder.collection.checks.collectioncheck == "true"
+                        console.log "inside collection check loop"
+                        not_in_collection = false
+                        if @pilot? and obj.id == exportObj.ships[@pilot.ship].id
+                            # Currently selected ship; mark as not in collection if it's neither
+                            # on the shelf nor on the table
+                            unless (@builder.collection.checkShelf('ship', obj.name) or @builder.collection.checkTable('pilot', obj.name))
+                                not_in_collection = true
+                        else
+                            # Not currently selected; check shelf only
+                            not_in_collection = not @builder.collection.checkShelf('ship', obj.name)
+                        if not_in_collection then 'select2-result-not-in-collection' else ''
                     else
-                        # Not currently selected; check shelf only
-                        not_in_collection = not @builder.collection.checkShelf('ship', obj.name)
-                    if not_in_collection then 'select2-result-not-in-collection' else ''
+                        console.log "outside collection check loop"
+                        ''
                 else
                     ''
             formatResult: shipResultFormatter
