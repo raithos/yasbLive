@@ -8809,28 +8809,22 @@ Ship = class Ship {
       minimumResultsForSearch: $.isMobile() ? -1 : 0,
       formatResultCssClass: (obj) => {
         var not_in_collection;
-        if (this.builder.collection != null) {
-          console.log("collection detected");
-          if (this.builder.collection.checks.collectioncheck === "true") {
-            console.log("inside collection check loop");
-            not_in_collection = false;
-            if ((this.pilot != null) && obj.id === exportObj.ships[this.pilot.ship].id) {
-              // Currently selected ship; mark as not in collection if it's neither
-              // on the shelf nor on the table
-              if (!(this.builder.collection.checkShelf('ship', obj.name) || this.builder.collection.checkTable('pilot', obj.name))) {
-                not_in_collection = true;
-              }
-            } else {
-              // Not currently selected; check shelf only
-              not_in_collection = !this.builder.collection.checkShelf('ship', obj.name);
-            }
-            if (not_in_collection) {
-              return 'select2-result-not-in-collection';
-            } else {
-              return '';
+        if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === "true")) {
+          console.log("inside collection check loop");
+          not_in_collection = false;
+          if ((this.pilot != null) && obj.id === exportObj.ships[this.pilot.ship].id) {
+            // Currently selected ship; mark as not in collection if it's neither
+            // on the shelf nor on the table
+            if (!(this.builder.collection.checkShelf('ship', obj.name) || this.builder.collection.checkTable('pilot', obj.name))) {
+              not_in_collection = true;
             }
           } else {
-            console.log("outside collection check loop");
+            // Not currently selected; check shelf only
+            not_in_collection = !this.builder.collection.checkShelf('ship', obj.name);
+          }
+          if (not_in_collection) {
+            return 'select2-result-not-in-collection';
+          } else {
             return '';
           }
         } else {

@@ -12877,12 +12877,12 @@ exportObj.Collection = class Collection {
       return $(exportObj).trigger('xwing-collection:changed', this);
     }));
     $(this.modal.find('.check-collection').change((e) => {
+      this.checks.collectioncheck = true;
       if (this.modal.find('.check-collection').prop('checked') === false) {
         this.modal_status.text(`Collection Tracking Disabled`);
         this.checks.collectioncheck = false;
       } else {
         this.modal_status.text(`Collection Tracking Active`);
-        this.checks.collectioncheck = true;
       }
       this.modal_status.fadeIn(100, () => {
         return this.modal_status.fadeOut(1000);
