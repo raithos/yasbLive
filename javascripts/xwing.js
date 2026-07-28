@@ -8808,8 +8808,7 @@ Ship = class Ship {
       },
       minimumResultsForSearch: $.isMobile() ? -1 : 0,
       formatResultCssClass: (obj) => {
-        var not_in_collection, ref;
-        console.log(`colletion check = ${(ref = this.builder.collection) != null ? ref.checks.collectioncheck : void 0}`);
+        var not_in_collection;
         if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === "true")) {
           not_in_collection = false;
           if ((this.pilot != null) && obj.id === exportObj.ships[this.pilot.ship].id) {
@@ -8822,6 +8821,7 @@ Ship = class Ship {
             // Not currently selected; check shelf only
             not_in_collection = !this.builder.collection.checkShelf('ship', obj.name);
           }
+          console.log(`colletion check = ${not_in_collection}`);
           if (not_in_collection) {
             return 'select2-result-not-in-collection';
           } else {
