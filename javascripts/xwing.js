@@ -8810,7 +8810,6 @@ Ship = class Ship {
       formatResultCssClass: (obj) => {
         var not_in_collection;
         if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === "true")) {
-          console.log("inside collection check loop");
           not_in_collection = false;
           if ((this.pilot != null) && obj.id === exportObj.ships[this.pilot.ship].id) {
             // Currently selected ship; mark as not in collection if it's neither

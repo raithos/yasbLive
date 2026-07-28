@@ -12886,6 +12886,7 @@ exportObj.Collection = class Collection {
       this.modal_status.fadeIn(100, () => {
         return this.modal_status.fadeOut(1000);
       });
+      console.log(`${this.checks.collectioncheck}`);
       return $(exportObj).trigger('xwing-collection:changed', this);
     }));
     $(this.modal.find('.reset-collection').click((e) => {
