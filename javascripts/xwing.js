@@ -8808,7 +8808,8 @@ Ship = class Ship {
       },
       minimumResultsForSearch: $.isMobile() ? -1 : 0,
       formatResultCssClass: (obj) => {
-        var not_in_collection;
+        var not_in_collection, ref;
+        console.log(`colletion check = ${(ref = this.builder.collection) != null ? ref.checks.collectioncheck : void 0}`);
         if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === "true")) {
           not_in_collection = false;
           if ((this.pilot != null) && obj.id === exportObj.ships[this.pilot.ship].id) {

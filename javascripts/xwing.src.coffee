@@ -6743,6 +6743,7 @@ class Ship
                 query.callback(data)
             minimumResultsForSearch: if $.isMobile() then -1 else 0
             formatResultCssClass: (obj) =>
+                console.log "colletion check = #{@builder.collection?.checks.collectioncheck}"
                 if @builder.collection? and (@builder.collection.checks.collectioncheck == "true")
                     not_in_collection = false
                     if @pilot? and obj.id == exportObj.ships[@pilot.ship].id
