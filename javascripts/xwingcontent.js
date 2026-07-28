@@ -19325,14 +19325,14 @@ exportObj.basicCardData = function() {
         id: 587,
         standard: true,
         unique: true,
-        slot: "Tech"
+        slot: "Crew"
       },
       {
         name: "Black Squadron R4 (EoD)",
         id: 588,
         standard: true,
         unique: true,
-        slot: "Tech",
+        slot: "Astromech",
         charge: 2
       },
       {
