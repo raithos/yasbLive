@@ -5472,7 +5472,7 @@ exportObj.SquadBuilder = (function() {
         ship_data = ref[ship_name];
         if (this.isOurFaction(ship_data.factions) && (this.matcher(ship_data.name, term) || (ship_data.display_name && this.matcher(ship_data.display_name, term)))) {
           if (this.isItemAvailable(ship_data, true)) {
-            if (!collection_only || ((this.collection != null) && (this.collection.checks.collectioncheck === "true") && this.collection.checkShelf('ship', ship_data.name))) {
+            if (!collection_only || ((this.collection != null) && (this.collection.checks.collectioncheck === true) && this.collection.checkShelf('ship', ship_data.name))) {
               ships.push({
                 id: ship_data.name,
                 text: ship_data.display_name ? ship_data.display_name : ship_data.name,
@@ -7296,7 +7296,7 @@ exportObj.SquadBuilder = (function() {
         ship_limit: ship_limit,
         keep_running: true,
         allowed_sources: allowed_sources != null ? allowed_sources : exportObj.expansions,
-        collection_only: (this.collection != null) && (this.collection.checks.collectioncheck === "true") && collection_only,
+        collection_only: (this.collection != null) && (this.collection.checks.collectioncheck === true) && collection_only,
         fill_zero_pts: fill_zero_pts
       };
       stopHandler = () => {
@@ -7629,7 +7629,7 @@ exportObj.SquadBuilder = (function() {
       if (Object.keys((ref = (ref1 = this.collection) != null ? ref1.expansions : void 0) != null ? ref : {}).length === 0) {
         // console.log "collection not ready or is empty"
         return [true, []];
-      } else if (((ref2 = this.collection) != null ? ref2.checks.collectioncheck : void 0) !== "true") {
+      } else if (((ref2 = this.collection) != null ? ref2.checks.collectioncheck : void 0) !== true) {
         // console.log "collection check not enabled"
         return [true, []];
       }
@@ -8809,7 +8809,7 @@ Ship = class Ship {
       minimumResultsForSearch: $.isMobile() ? -1 : 0,
       formatResultCssClass: (obj) => {
         var not_in_collection;
-        if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === "true")) {
+        if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === true)) {
           not_in_collection = false;
           if ((this.pilot != null) && obj.id === exportObj.ships[this.pilot.ship].id) {
             // Currently selected ship; mark as not in collection if it's neither
@@ -8868,7 +8868,7 @@ Ship = class Ship {
       minimumResultsForSearch: $.isMobile() ? -1 : 0,
       formatResultCssClass: (obj) => {
         var name, not_in_collection, ref, ref1, ref2;
-        if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === "true")) {
+        if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === true)) {
           not_in_collection = false;
           name = "";
           if (this.builder.isQuickbuild) {

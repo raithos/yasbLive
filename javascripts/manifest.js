@@ -12739,7 +12739,7 @@ exportObj.Collection = class Collection {
     this.modal_status = $(this.modal.find('.collection-status'));
     this.modal.find('#reset-check').hide();
     if (this.checks.collectioncheck != null) {
-      if (this.checks.collectioncheck !== "false") {
+      if (this.checks.collectioncheck !== false) {
         this.modal.find('.check-collection').prop('checked', true);
       }
     } else {
@@ -12878,7 +12878,7 @@ exportObj.Collection = class Collection {
     }));
     $(this.modal.find('.check-collection').change((e) => {
       this.checks.collectioncheck = this.modal.find('.check-collection').prop('checked');
-      if (this.modal.find('.check-collection').prop('checked') === false) {
+      if (this.checks.collectioncheck === false) {
         this.modal_status.text(`Collection Tracking Disabled`);
       } else {
         this.modal_status.text(`Collection Tracking Active`);
@@ -12886,7 +12886,6 @@ exportObj.Collection = class Collection {
       this.modal_status.fadeIn(100, () => {
         return this.modal_status.fadeOut(1000);
       });
-      console.log(`${this.checks.collectioncheck}`);
       return $(exportObj).trigger('xwing-collection:changed', this);
     }));
     $(this.modal.find('.reset-collection').click((e) => {
