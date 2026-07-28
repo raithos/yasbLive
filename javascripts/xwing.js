@@ -8809,7 +8809,10 @@ Ship = class Ship {
       minimumResultsForSearch: $.isMobile() ? -1 : 0,
       formatResultCssClass: (obj) => {
         var not_in_collection;
+        console.log(`colletion = ${this.builder.collection != null}`);
+        console.log(`colletion = ${this.builder.collection.checks.collectioncheck}`);
         if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === "true")) {
+          console.log("inside collection check loop");
           not_in_collection = false;
           if ((this.pilot != null) && obj.id === exportObj.ships[this.pilot.ship].id) {
             // Currently selected ship; mark as not in collection if it's neither
@@ -8821,7 +8824,6 @@ Ship = class Ship {
             // Not currently selected; check shelf only
             not_in_collection = !this.builder.collection.checkShelf('ship', obj.name);
           }
-          console.log(`colletion check = ${not_in_collection}`);
           if (not_in_collection) {
             return 'select2-result-not-in-collection';
           } else {

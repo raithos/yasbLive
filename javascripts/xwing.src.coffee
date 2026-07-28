@@ -6743,7 +6743,10 @@ class Ship
                 query.callback(data)
             minimumResultsForSearch: if $.isMobile() then -1 else 0
             formatResultCssClass: (obj) =>
+                console.log "colletion = #{@builder.collection?}"
+                console.log "colletion = #{@builder.collection.checks.collectioncheck}"
                 if @builder.collection? and (@builder.collection.checks.collectioncheck == "true")
+                    console.log "inside collection check loop"
                     not_in_collection = false
                     if @pilot? and obj.id == exportObj.ships[@pilot.ship].id
                         # Currently selected ship; mark as not in collection if it's neither
@@ -6753,7 +6756,6 @@ class Ship
                     else
                         # Not currently selected; check shelf only
                         not_in_collection = not @builder.collection.checkShelf('ship', obj.name)
-                    console.log "colletion check = #{not_in_collection}"
                     if not_in_collection then 'select2-result-not-in-collection' else ''
                 else
                     ''
