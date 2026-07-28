@@ -12739,8 +12739,12 @@ exportObj.Collection = class Collection {
     this.modal_status = $(this.modal.find('.collection-status'));
     this.modal.find('#reset-check').hide();
     if (this.checks.collectioncheck != null) {
-      if (this.checks.collectioncheck !== false) {
+      if (this.checks.collectioncheck === "true") {
+        this.checks.collectioncheck = true;
         this.modal.find('.check-collection').prop('checked', true);
+      } else {
+        this.checks.collectioncheck = false;
+        this.modal.find('.check-collection').prop('checked', false);
       }
     } else {
       this.checks.collectioncheck = true;
