@@ -12302,6 +12302,161 @@ exportObj.manifestByExpansion = {
       name: "Zuckuss (AaD)",
       type: 'pilot',
       count: 1
+    },
+    {
+      name: "Hera Syndulla (LaR)",
+      type: 'pilot',
+      count: 1
+    },
+    {
+      name: "Carnor Jax",
+      type: 'pilot',
+      count: 1
+    },
+    {
+      name: "Thweek",
+      type: 'pilot',
+      count: 1
+    },
+    {
+      name: "Kazuda Xiono (LaR)",
+      type: 'pilot',
+      count: 1
+    },
+    {
+      name: "Tamara Ryvora",
+      type: 'pilot',
+      count: 1
+    },
+    {
+      name: "Quinlan Vos",
+      type: 'pilot',
+      count: 1
+    },
+    {
+      name: "Ursa Wren",
+      type: 'pilot',
+      count: 1
+    },
+    {
+      name: "DIS-L9B2",
+      type: 'pilot',
+      count: 1
+    },
+    {
+      name: "Ahsoka Tano (LaR)",
+      type: 'upgrade',
+      count: 1
+    },
+    {
+      name: "Thrawn",
+      type: 'upgrade',
+      count: 1
+    },
+    {
+      name: "Fennec Shand",
+      type: 'upgrade',
+      count: 1
+    },
+    {
+      name: "Zorii Bliss",
+      type: 'upgrade',
+      count: 1
+    },
+    {
+      name: "Wedge Antilles",
+      type: 'upgrade',
+      count: 1
+    },
+    {
+      name: "Captive",
+      type: 'upgrade',
+      count: 1
+    },
+    {
+      name: "Gravitic Well",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "R7-T1",
+      type: 'upgrade',
+      count: 1
+    },
+    {
+      name: "Modified R4-P Unit",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Flight-Assist Astromech",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Unhinged Astromech",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Roiling Anger",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Seeker Missiles",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Targeting Matrix",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Retrofitted Autothrusters",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Automated Loaders",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Parting Gift",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Blindspot Targeter",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Targeting Relay",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "T-SJ1A Targeting Computer",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Winged Reversal",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Precision-Tuned Cannons",
+      type: 'upgrade',
+      count: 8
+    },
+    {
+      name: "Burst Laser Turret",
+      type: 'upgrade',
+      count: 8
     }
   ]
 };
@@ -12584,8 +12739,12 @@ exportObj.Collection = class Collection {
     this.modal_status = $(this.modal.find('.collection-status'));
     this.modal.find('#reset-check').hide();
     if (this.checks.collectioncheck != null) {
-      if (this.checks.collectioncheck !== "false") {
+      if (this.checks.collectioncheck === "true") {
+        this.checks.collectioncheck = true;
         this.modal.find('.check-collection').prop('checked', true);
+      } else {
+        this.checks.collectioncheck = false;
+        this.modal.find('.check-collection').prop('checked', false);
       }
     } else {
       this.checks.collectioncheck = true;
@@ -12722,15 +12881,12 @@ exportObj.Collection = class Collection {
       return $(exportObj).trigger('xwing-collection:changed', this);
     }));
     $(this.modal.find('.check-collection').change((e) => {
-      var result;
-      if (this.modal.find('.check-collection').prop('checked') === false) {
-        result = false;
+      this.checks.collectioncheck = this.modal.find('.check-collection').prop('checked');
+      if (this.checks.collectioncheck === false) {
         this.modal_status.text(`Collection Tracking Disabled`);
       } else {
-        result = true;
         this.modal_status.text(`Collection Tracking Active`);
       }
-      this.checks.collectioncheck = result;
       this.modal_status.fadeIn(100, () => {
         return this.modal_status.fadeOut(1000);
       });

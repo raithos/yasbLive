@@ -4711,7 +4711,7 @@ exportObj.SquadBuilder = (function() {
         if (this.isBeta) {
           this.printable_container.find('.squad-name').append(` <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>`);
         }
-        versioninfo = "50P-1.1";
+        versioninfo = "50P-2.0";
         rules = "XWA";
         // Version number
         this.printable_container.find('.fancy-under-header').append($.trim(`<div class="version">Points Version: ${rules} - ${versioninfo}</div>`));
@@ -5472,7 +5472,7 @@ exportObj.SquadBuilder = (function() {
         ship_data = ref[ship_name];
         if (this.isOurFaction(ship_data.factions) && (this.matcher(ship_data.name, term) || (ship_data.display_name && this.matcher(ship_data.display_name, term)))) {
           if (this.isItemAvailable(ship_data, true)) {
-            if (!collection_only || ((this.collection != null) && (this.collection.checks.collectioncheck === "true") && this.collection.checkShelf('ship', ship_data.name))) {
+            if (!collection_only || ((this.collection != null) && (this.collection.checks.collectioncheck === true) && this.collection.checkShelf('ship', ship_data.name))) {
               ships.push({
                 id: ship_data.name,
                 text: ship_data.display_name ? ship_data.display_name : ship_data.name,
@@ -7296,7 +7296,7 @@ exportObj.SquadBuilder = (function() {
         ship_limit: ship_limit,
         keep_running: true,
         allowed_sources: allowed_sources != null ? allowed_sources : exportObj.expansions,
-        collection_only: (this.collection != null) && (this.collection.checks.collectioncheck === "true") && collection_only,
+        collection_only: (this.collection != null) && (this.collection.checks.collectioncheck === true) && collection_only,
         fill_zero_pts: fill_zero_pts
       };
       stopHandler = () => {
@@ -7629,7 +7629,7 @@ exportObj.SquadBuilder = (function() {
       if (Object.keys((ref = (ref1 = this.collection) != null ? ref1.expansions : void 0) != null ? ref : {}).length === 0) {
         // console.log "collection not ready or is empty"
         return [true, []];
-      } else if (((ref2 = this.collection) != null ? ref2.checks.collectioncheck : void 0) !== "true") {
+      } else if (((ref2 = this.collection) != null ? ref2.checks.collectioncheck : void 0) !== true) {
         // console.log "collection check not enabled"
         return [true, []];
       }
@@ -7690,7 +7690,7 @@ exportObj.SquadBuilder = (function() {
     toXWS() {
       var _, candidate, j, l, last_id, len, len1, len2, len3, m, match, matches, multisection_id_to_pilots, name1, o, obstacles, pilot, q, ref, ref1, ref2, ref3, rules, ship, unmatched, unmatched_pilot, versioninfo, xws;
       // Often you will want JSON.stringify(builder.toXWS())
-      versioninfo = "50P-1.1";
+      versioninfo = "50P-2.0";
       rules = "XWA";
       xws = {
         description: this.getNotes(),
@@ -8404,7 +8404,7 @@ Ship = class Ship {
   }
 
   async setPilot(new_pilot, noautoequip = false) {
-    var _, auto_equip_upgrade, autoequip, delayed_upgrades, id, j, l, len, len1, len2, len3, len4, m, name1, o, old_upgrade, old_upgrades, q, ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7, same_ship, standard_check, standard_upgrade_to_check, upgrade, upgrade_name, y;
+    var _, auto_equip_upgrade, autoequip, delayed_upgrades, id, j, l, len, len1, len2, len3, m, name1, name2, o, old_upgrade, old_upgrades, q, ref, ref1, ref2, ref3, ref4, ref5, ref6, same_ship, standard_upgrade_to_check, upgrade, upgrade_name;
     // don't call this method directly, unless you know what you do. Use setPilotById for proper quickbuild handling
     if (new_pilot !== this.pilot || (this.builder.isBeta && !this.usesbetaSlots && (this.pilot.slotsbeta != null)) || (this.usesbetaSlots && !this.builder.isBeta)) {
       this.builder.current_squad.dirty = true;
@@ -8452,15 +8452,27 @@ Ship = class Ship {
             }
           }
         }
+        // check if we need to add a standard upgrade
+        // see if ship is supposed to be standardized
+        standard_upgrade_to_check = this.checkStandardizedList(this.pilot.ship);
+        if (standard_upgrade_to_check != null) {
+          if (old_upgrades[name2 = standard_upgrade_to_check.slot] == null) {
+            old_upgrades[name2] = [];
+          }
+          if (ref4 = standard_upgrade_to_check.id, indexOf.call(old_upgrades[standard_upgrade_to_check.slot], ref4) < 0) {
+            // if that upgrade was not present in the old upgrades, but is required now, we add it at first position
+            old_upgrades[standard_upgrade_to_check.slot].unshift(standard_upgrade_to_check.id);
+          }
+        }
         if (same_ship && (this.pilot.upgrades == null)) {
 // two cycles, in case an old upgrade is adding slots that are required for other old upgrades
           for (_ = o = 1; o <= 2; _ = ++o) {
             delayed_upgrades = {};
-            ref4 = this.upgrades;
-            for (q = 0, len3 = ref4.length; q < len3; q++) {
-              upgrade = ref4[q];
+            ref5 = this.upgrades;
+            for (q = 0, len3 = ref5.length; q < len3; q++) {
+              upgrade = ref5[q];
               // check if there exits old upgrades for this slot - if so, try to add the first of them
-              old_upgrade = ((ref5 = old_upgrades[upgrade.slot]) != null ? ref5 : []).shift();
+              old_upgrade = ((ref6 = old_upgrades[upgrade.slot]) != null ? ref6 : []).pop();
               if (old_upgrade != null) {
                 await upgrade.setById(old_upgrade);
                 if (!upgrade.lastSetValid) {
@@ -8475,22 +8487,9 @@ Ship = class Ship {
               upgrade.setById(id);
             }
           }
-          // last check for standardized
-          // see if ship is supposed to be standardized
-          standard_upgrade_to_check = this.checkStandardizedList(this.pilot.ship);
-          standard_check = false;
-          ref6 = this.upgrades;
-          for (y = 0, len4 = ref6.length; y < len4; y++) {
-            upgrade = ref6[y];
-            if ((standard_upgrade_to_check != null) && (((upgrade != null ? (ref7 = upgrade.data) != null ? ref7.name : void 0 : void 0) != null) && (upgrade.data.name === standard_upgrade_to_check.name))) {
-              standard_check = true;
-            }
-          }
-          if ((standard_upgrade_to_check != null) && (standard_check === false)) {
-            this.removeStandardizedList(standard_upgrade_to_check);
-          }
         }
       } else {
+        // last check for standardized
         this.copy_button.hide();
       }
       this.row.removeClass('unsortable');
@@ -8810,7 +8809,7 @@ Ship = class Ship {
       minimumResultsForSearch: $.isMobile() ? -1 : 0,
       formatResultCssClass: (obj) => {
         var not_in_collection;
-        if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === "true")) {
+        if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === true)) {
           not_in_collection = false;
           if ((this.pilot != null) && obj.id === exportObj.ships[this.pilot.ship].id) {
             // Currently selected ship; mark as not in collection if it's neither
@@ -8869,7 +8868,7 @@ Ship = class Ship {
       minimumResultsForSearch: $.isMobile() ? -1 : 0,
       formatResultCssClass: (obj) => {
         var name, not_in_collection, ref, ref1, ref2;
-        if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === "true")) {
+        if ((this.builder.collection != null) && (this.builder.collection.checks.collectioncheck === true)) {
           not_in_collection = false;
           name = "";
           if (this.builder.isQuickbuild) {
@@ -9855,18 +9854,22 @@ Ship = class Ship {
         checkstandard = true;
       }
     }
+    if (upgrade_data.restrictions != null) {
+      restrictions = upgrade_data.restrictions;
+    }
+    if (this.builder.isBeta) {
+      if (upgrade_data.restrictionsbeta != null) {
+        restrictions = upgrade_data.restrictionsbeta;
+      }
+    }
     if (checkstandard) {
       ref = this.builder.ships;
       for (j = 0, len = ref.length; j < len; j++) {
         ship = ref[j];
+        if (ship === this) {
+          continue;
+        }
         if (((ship != null ? ship.data : void 0) != null) && ship.data.name === this.data.name) {
-          if (this.builder.isBeta) {
-            if (upgrade_data.restrictionsbeta != null) {
-              restrictions = upgrade_data.restrictionsbeta;
-            } else {
-              (upgrade_data.restrictions != null ? restrictions = upgrade_data.restrictions : void 0);
-            }
-          }
           if ((restrictions != null) && ship.restriction_check(restrictions, upgrade_data) && !(((ref1 = ship.pilot) != null ? ref1.upgrades : void 0) != null)) {
             if ((ship.pilot.loadout != null) && (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)) {
               return false;
@@ -10232,7 +10235,13 @@ GenericAddon = class GenericAddon {
         });
       }
       if (this.isStandardized() && !this.ship.hasFixedUpgrades) {
-        this.ship.removeStandardizedList(this.data);
+        if (this.data.restrictions != null) {
+          if (this.ship.restriction_check(this.data.restrictions, this.data)) {
+            this.ship.removeStandardizedList(this.data);
+          }
+        } else {
+          this.ship.removeStandardizedList(this.data);
+        }
       }
       await this.rescindAddons();
       this.deoccupyOtherUpgrades();

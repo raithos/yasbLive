@@ -3823,7 +3823,7 @@ class exportObj.SquadBuilder
             if @isBeta
                 @printable_container.find('.squad-name').append """ <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>""" 
 
-            versioninfo = "50P-1.1"
+            versioninfo = "50P-2.0"
             rules = "XWA"
 
             # Version number
@@ -4414,7 +4414,7 @@ class exportObj.SquadBuilder
         for ship_name, ship_data of exportObj.ships
             if @isOurFaction(ship_data.factions) and (@matcher(ship_data.name, term) or (ship_data.display_name and @matcher(ship_data.display_name, term)))
                 if (@isItemAvailable(ship_data, true))
-                    if (not collection_only or (@collection? and (@collection.checks.collectioncheck == "true") and @collection.checkShelf('ship', ship_data.name)))
+                    if (not collection_only or (@collection? and (@collection.checks.collectioncheck == true) and @collection.checkShelf('ship', ship_data.name)))
                         ships.push
                             id: ship_data.name
                             text: if ship_data.display_name then ship_data.display_name else ship_data.name
@@ -5735,7 +5735,7 @@ class exportObj.SquadBuilder
             ship_limit: ship_limit
             keep_running: true
             allowed_sources: allowed_sources ? exportObj.expansions
-            collection_only: @collection? and (@collection.checks.collectioncheck == "true") and collection_only
+            collection_only: @collection? and (@collection.checks.collectioncheck == true) and collection_only
             fill_zero_pts: fill_zero_pts
         stopHandler = () =>
             #console.log "*** TIMEOUT *** TIMEOUT *** TIMEOUT ***"
@@ -5943,7 +5943,7 @@ class exportObj.SquadBuilder
         if Object.keys(@collection?.expansions ? {}).length == 0
             # console.log "collection not ready or is empty"
             return [true, []]
-        else if @collection?.checks.collectioncheck != "true"
+        else if @collection?.checks.collectioncheck != true
             # console.log "collection check not enabled"
             return [true, []]
         @collection.reset()
@@ -5978,7 +5978,7 @@ class exportObj.SquadBuilder
 
     toXWS: ->
         # Often you will want JSON.stringify(builder.toXWS())
-        versioninfo = "50P-1.1"
+        versioninfo = "50P-2.0"
         rules = "XWA"
 
         xws =
@@ -6474,13 +6474,22 @@ class Ship
                         for upgrade in @upgrades
                             if exportObj.slotsMatching(upgrade.slot, auto_equip_upgrade.slot)
                                 upgrade.setData auto_equip_upgrade
+                # check if we need to add a standard upgrade
+                # see if ship is supposed to be standardized
+                standard_upgrade_to_check = @checkStandardizedList(@pilot.ship)
+                if standard_upgrade_to_check?
+                    old_upgrades[standard_upgrade_to_check.slot] ?= []
+                    if standard_upgrade_to_check.id not in old_upgrades[standard_upgrade_to_check.slot]
+                        # if that upgrade was not present in the old upgrades, but is required now, we add it at first position
+                        old_upgrades[standard_upgrade_to_check.slot].unshift standard_upgrade_to_check.id
+                
                 if same_ship and not @pilot.upgrades?
                     # two cycles, in case an old upgrade is adding slots that are required for other old upgrades
                     for _ in [1..2]
                         delayed_upgrades = {}
                         for upgrade in @upgrades
                             # check if there exits old upgrades for this slot - if so, try to add the first of them
-                            old_upgrade = (old_upgrades[upgrade.slot] ? []).shift()
+                            old_upgrade = (old_upgrades[upgrade.slot] ? []).pop()
                             if old_upgrade?
                                 await upgrade.setById old_upgrade
                                 if not upgrade.lastSetValid
@@ -6490,15 +6499,6 @@ class Ship
                         for id, upgrade of delayed_upgrades
                             upgrade.setById id
                         # last check for standardized
-                    # see if ship is supposed to be standardized
-                    standard_upgrade_to_check = @checkStandardizedList(@pilot.ship)
-                    standard_check = false
-                    for upgrade in @upgrades
-                        if standard_upgrade_to_check? and (upgrade?.data?.name? and (upgrade.data.name == standard_upgrade_to_check.name))
-                            standard_check = true                         
-                    if standard_upgrade_to_check? and (standard_check == false)
-                        @removeStandardizedList(standard_upgrade_to_check)
-
             else
                 @copy_button.hide()
             @row.removeClass('unsortable')
@@ -6743,7 +6743,7 @@ class Ship
                 query.callback(data)
             minimumResultsForSearch: if $.isMobile() then -1 else 0
             formatResultCssClass: (obj) =>
-                if @builder.collection? and (@builder.collection.checks.collectioncheck == "true")
+                if @builder.collection? and (@builder.collection.checks.collectioncheck == true)
                     not_in_collection = false
                     if @pilot? and obj.id == exportObj.ships[@pilot.ship].id
                         # Currently selected ship; mark as not in collection if it's neither
@@ -6780,7 +6780,7 @@ class Ship
                 query.callback(data)
             minimumResultsForSearch: if $.isMobile() then -1 else 0
             formatResultCssClass: (obj) =>
-                if @builder.collection? and (@builder.collection.checks.collectioncheck == "true")
+                if @builder.collection? and (@builder.collection.checks.collectioncheck == true)
                     not_in_collection = false
                     name = ""
                     if @builder.isQuickbuild
@@ -7486,12 +7486,14 @@ class Ship
         else 
             if upgrade_data.standardized?
                 checkstandard = true
+        if upgrade_data.restrictions? then restrictions = upgrade_data.restrictions
+        if @builder.isBeta
+            if upgrade_data.restrictionsbeta? then restrictions = upgrade_data.restrictionsbeta
 
         if checkstandard
             for ship in @builder.ships
+                if ship == this then continue
                 if ship?.data? and ship.data.name == @data.name
-                    if @builder.isBeta
-                        if upgrade_data.restrictionsbeta? then restrictions = upgrade_data.restrictionsbeta else (if upgrade_data.restrictions? then restrictions = upgrade_data.restrictions)
                     if restrictions? and ship.restriction_check(restrictions, upgrade_data) and not (ship.pilot?.upgrades?)
                         if ship.pilot.loadout? and (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)
                             return false
@@ -7719,7 +7721,12 @@ class GenericAddon
             if @data?.unique? or @data?.solitary?
                 await new Promise((resolve,reject) => @ship.builder.container.trigger 'xwing:releaseUnique', [ @unadjusted_data, @type, resolve ])
             if @isStandardized() and not @ship.hasFixedUpgrades
-                @ship.removeStandardizedList(@data)
+                if @data.restrictions?
+                    if @ship.restriction_check(@data.restrictions, @data)
+                        @ship.removeStandardizedList(@data)
+                else
+                    @ship.removeStandardizedList(@data)
+                        
             await @rescindAddons()
             @deoccupyOtherUpgrades()
             if new_data?.unique? or new_data?.solitary?
