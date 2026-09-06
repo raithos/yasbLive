@@ -8408,7 +8408,6 @@ exportObj.basicCardData = function() {
       "Torpedo",
       "Astromech",
       "Device",
-      "Illicit",
       "Modification"]
       },
       {
