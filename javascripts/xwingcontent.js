@@ -4437,7 +4437,6 @@ exportObj.basicCardData = function() {
         slots: ["Talent",
       "Gunner",
       "Device",
-      "Modification",
       "Modification"]
       },
       {
