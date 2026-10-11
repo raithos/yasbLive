@@ -17795,6 +17795,7 @@ exportObj.basicCardData = function() {
         slot: "Configuration",
         points: 0,
         ship: "TIE/wi Whisper Modified Interceptor",
+        standardized: true,
         restrictions: [["Slot",
       "Tech"]],
         also_occupies_upgrades: ["Tech"],
