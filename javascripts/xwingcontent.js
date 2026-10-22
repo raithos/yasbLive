@@ -5414,7 +5414,6 @@ exportObj.basicCardData = function() {
         keyword: ["Jedi",
       "Light Side"],
         slots: ["Force",
-      "Force",
       "Astromech",
       "Modification",
       "Modification",
